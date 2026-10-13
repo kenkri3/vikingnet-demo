@@ -22,6 +22,23 @@ document.querySelectorAll('.feature, .svc, .gal, .step, .om-media, .om-copy').fo
   io.observe(el);
 });
 
+// Mobile menu
+const navToggle = document.getElementById('navToggle');
+const navMobile = document.getElementById('navMobile');
+if (navToggle && navMobile) {
+  navToggle.addEventListener('click', () => {
+    const open = navMobile.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Lukk meny' : 'Åpne meny');
+  });
+  navMobile.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      navMobile.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
 // Contact form — static hosting has no backend, so hand off to the mail client.
 const form = document.getElementById('leadForm');
 const note = document.getElementById('formNote');
