@@ -7,13 +7,13 @@
 <meta name="description" content="Galik Bygg AS utfører tømrer-, murer- og renoveringsarbeid i Vestfold. Etablert 2011. Fagbrev i tømrer- og murerfaget. Be om uforpliktende tilbud." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header class="nav">
+<header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="logo" href="#top">
       <span class="logo-mark">G</span>
@@ -21,8 +21,8 @@
     </a>
     <nav class="nav-links">
       <a href="#tjenester">Tjenester</a>
+      <a href="#prosjekter">Prosjekter</a>
       <a href="#om">Om oss</a>
-      <a href="#slik">Slik jobber vi</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
     <a href="tel:+4746386534" class="btn btn-primary btn-sm">Ring 463 86 534</a>
@@ -30,6 +30,10 @@
 </header>
 
 <section class="hero" id="top">
+  <div class="hero-media">
+    <img src="img/hero.jpg" alt="Tømrer fra Galik Bygg måler opp bjelke på byggeplass" />
+    <div class="hero-scrim"></div>
+  </div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
       <div class="eyebrow">Etablert 2011 · Åsgårdstrand</div>
@@ -40,30 +44,13 @@
       </p>
       <div class="hero-cta">
         <a href="#kontakt" class="btn btn-primary">Be om uforpliktende tilbud</a>
-        <a href="#tjenester" class="btn btn-ghost">Se hva vi gjør</a>
+        <a href="#prosjekter" class="btn btn-glass">Se prosjekter</a>
       </div>
       <ul class="trust">
         <li><strong>2011</strong><span>Etablert</span></li>
         <li><strong>2</strong><span>Fagbrev</span></li>
         <li><strong>Vestfold</strong><span>Lokalt</span></li>
       </ul>
-    </div>
-
-    <div class="hero-visual">
-      <div class="visual-frame">
-        <div class="visual-stripe"></div>
-        <div class="visual-body">
-          <div class="visual-tag">Pågående prosjekt</div>
-          <div class="visual-title">Totalrenovering · Åsgårdstrand</div>
-          <div class="visual-bars">
-            <div class="bar"><span>Riving</span><i style="--w:100%"></i></div>
-            <div class="bar"><span>Råbygg</span><i style="--w:100%"></i></div>
-            <div class="bar"><span>Innvendig</span><i style="--w:72%"></i></div>
-            <div class="bar"><span>Ferdigstilling</span><i style="--w:38%"></i></div>
-          </div>
-          <div class="visual-note">Oppdatert av byggeleder · i dag</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -83,26 +70,36 @@
       <h2>Hva vi gjør</h2>
       <p class="muted">Bredt spekter innen renovering og ferdigstilling — ett firma, ett ansvar.</p>
     </div>
-    <div class="card-grid">
-      <article class="card svc">
-        <div class="svc-icon">▤</div>
-        <h3>Tømrerarbeid</h3>
-        <p class="muted">Nybygg, tilbygg, påbygg, terrasse, kledning og innvendig snekkerarbeid.</p>
+
+    <div class="feature-grid">
+      <article class="feature">
+        <div class="feature-media"><img src="img/hero.jpg" alt="Tømrerarbeid" loading="lazy" /></div>
+        <div class="feature-body">
+          <h3>Tømrerarbeid</h3>
+          <p class="muted">Nybygg, tilbygg, påbygg, terrasse, kledning og innvendig snekkerarbeid.</p>
+        </div>
       </article>
+      <article class="feature">
+        <div class="feature-media"><img src="img/flis.jpg" alt="Flislegging av bad" loading="lazy" /></div>
+        <div class="feature-body">
+          <h3>Bad &amp; våtrom</h3>
+          <p class="muted">Komplett baderomsprosjekt med membran, flis og rørleggerkoordinering.</p>
+        </div>
+      </article>
+      <article class="feature">
+        <div class="feature-media"><img src="img/renovering.jpg" alt="Renovering av stue" loading="lazy" /></div>
+        <div class="feature-body">
+          <h3>Renovering</h3>
+          <p class="muted">Totalrenovering av bolig, enkeltrom eller næringsbygg. Vi tar hele løpet.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="card-grid more">
       <article class="card svc">
         <div class="svc-icon">▦</div>
         <h3>Murerarbeid</h3>
         <p class="muted">Puss, flislegging, støp og murarbeid — utført med fagbrev i faget.</p>
-      </article>
-      <article class="card svc">
-        <div class="svc-icon">◧</div>
-        <h3>Renovering</h3>
-        <p class="muted">Totalrenovering av bolig, enkeltrom eller næringsbygg. Vi tar hele løpet.</p>
-      </article>
-      <article class="card svc">
-        <div class="svc-icon">◈</div>
-        <h3>Bad &amp; våtrom</h3>
-        <p class="muted">Komplett baderomsprosjekt med membran, flis og rørleggerkoordinering.</p>
       </article>
       <article class="card svc">
         <div class="svc-icon">◐</div>
@@ -118,8 +115,42 @@
   </div>
 </section>
 
-<section class="section dark-band" id="om">
+<section class="section dark-band" id="prosjekter">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Fra våre prosjekter</h2>
+      <p class="muted">Et utvalg av arbeid vi har utført i Vestfold.</p>
+    </div>
+    <div class="gallery">
+      <figure class="gal gal-wide">
+        <img src="img/terrasse.jpg" alt="Ferdigstilt terrasse på bolig" loading="lazy" />
+        <figcaption>Terrasse · Husøysund</figcaption>
+      </figure>
+      <figure class="gal">
+        <img src="img/renovering.jpg" alt="Renovering av stue" loading="lazy" />
+        <figcaption>Totalrenovering · Åsgårdstrand</figcaption>
+      </figure>
+      <figure class="gal">
+        <img src="img/flis.jpg" alt="Flislegging av baderom" loading="lazy" />
+        <figcaption>Våtrom · Tønsberg</figcaption>
+      </figure>
+      <figure class="gal gal-wide">
+        <img src="img/hero.jpg" alt="Tømrerarbeid på byggeplass" loading="lazy" />
+        <figcaption>Råbygg · Vestfold</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="om">
   <div class="wrap om-grid">
+    <div class="om-media">
+      <img src="img/terrasse.jpg" alt="Håndverk fra Galik Bygg" loading="lazy" />
+      <div class="om-badge">
+        <strong>2011</strong>
+        <span>Etablert på det norske markedet</span>
+      </div>
+    </div>
     <div class="om-copy">
       <h2>Håndverk med røtter</h2>
       <p>
@@ -140,18 +171,16 @@
         «Jeg er nøye med utførelsen av alle oppgaver jeg får i oppdrag, og satser på høy kvalitet
         i tjenestene jeg yter.»
       </div>
-    </div>
-    <div class="om-facts card">
-      <div class="fact"><span class="fact-lbl">Etablert</span><strong>2011</strong></div>
-      <div class="fact"><span class="fact-lbl">Aksjeselskap siden</span><strong>2014</strong></div>
-      <div class="fact"><span class="fact-lbl">Fagbrev</span><strong>Tømrer &amp; murer</strong></div>
-      <div class="fact"><span class="fact-lbl">Base</span><strong>Åsgårdstrand</strong></div>
-      <div class="fact"><span class="fact-lbl">Område</span><strong>Vestfold</strong></div>
+      <div class="om-facts">
+        <div class="fact"><span class="fact-lbl">Aksjeselskap siden</span><strong>2014</strong></div>
+        <div class="fact"><span class="fact-lbl">Fagbrev</span><strong>Tømrer &amp; murer</strong></div>
+        <div class="fact"><span class="fact-lbl">Base</span><strong>Åsgårdstrand</strong></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="slik">
+<section class="section dark-band" id="slik">
   <div class="wrap">
     <div class="section-head">
       <h2>Slik jobber vi</h2>
@@ -182,7 +211,7 @@
   </div>
 </section>
 
-<section class="section dark-band" id="kontakt">
+<section class="section contact-section" id="kontakt">
   <div class="wrap contact-grid">
     <div class="contact-copy">
       <h2>Be om uforpliktende tilbud</h2>

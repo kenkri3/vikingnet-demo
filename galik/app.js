@@ -1,18 +1,30 @@
 // Galik Bygg — interactions
 
-// Progress bars animate in on load
-window.addEventListener('load', () => {
-  document.querySelectorAll('.bar i').forEach((el, i) => {
-    const target = el.style.getPropertyValue('--w');
-    el.style.setProperty('--w', '0%');
-    setTimeout(() => el.style.setProperty('--w', target), 150 + i * 120);
+// Nav turns solid once you scroll past the hero
+const nav = document.getElementById('nav');
+const hero = document.querySelector('.hero');
+function syncNav() {
+  const past = window.scrollY > (hero.offsetHeight - 90);
+  nav.classList.toggle('on-hero', !past);
+}
+syncNav();
+window.addEventListener('scroll', syncNav, { passive: true });
+window.addEventListener('resize', syncNav);
+
+// Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
   });
+}, { threshold: 0.12 });
+document.querySelectorAll('.feature, .svc, .gal, .step, .om-media, .om-copy').forEach((el) => {
+  el.classList.add('reveal');
+  io.observe(el);
 });
 
 // Contact form — static hosting has no backend, so hand off to the mail client.
 const form = document.getElementById('leadForm');
 const note = document.getElementById('formNote');
-const submitBtn = document.getElementById('leadSubmit');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
