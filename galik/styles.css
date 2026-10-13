@@ -3,7 +3,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ===== Nav ===== */
 .nav {
-  position: sticky; top: 0; z-index: 60;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 60;
   backdrop-filter: blur(16px);
   background: color-mix(in srgb, var(--background) 88%, transparent);
   border-bottom: 1px solid var(--border);
@@ -49,7 +49,7 @@ img { display: block; max-width: 100%; height: auto; }
 .btn.full { width: 100%; margin-top: .5rem; }
 
 /* ===== Hero ===== */
-.hero { position: relative; min-height: 640px; display: flex; align-items: center; overflow: hidden; }
+.hero { position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden; }
 .hero-media { position: absolute; inset: 0; z-index: 0; }
 .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 40%; }
 .hero-scrim {
@@ -58,7 +58,7 @@ img { display: block; max-width: 100%; height: auto; }
     linear-gradient(100deg, rgba(12,10,8,.94) 0%, rgba(12,10,8,.82) 38%, rgba(12,10,8,.35) 68%, rgba(12,10,8,.15) 100%),
     linear-gradient(0deg, rgba(12,10,8,.6) 0%, transparent 45%);
 }
-.hero-inner { position: relative; z-index: 1; padding: 6rem 1.25rem 5rem; }
+.hero-inner { position: relative; z-index: 1; padding: 8rem 1.25rem 5rem; }
 .hero-copy { max-width: 40rem; }
 .eyebrow {
   display: inline-block; font-size: .76rem; font-weight: 700; letter-spacing: .12em;
@@ -123,7 +123,7 @@ img { display: block; max-width: 100%; height: auto; }
 /* ===== Gallery ===== */
 .gallery { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 @media (min-width: 700px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .gallery { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1000px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
 .gal { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; }
 @media (min-width: 1000px) { .gal-wide { grid-column: span 2; aspect-ratio: 8 / 3; } }
 .gal img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
