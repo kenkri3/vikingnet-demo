@@ -1,0 +1,93 @@
+/* Vikingnet brand theme — dark navy + electric purple */
+:root {
+  --background: #ffffff;
+  --foreground: #0A192F;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+  --card: #ffffff;
+  --card-foreground: #0A192F;
+  --popover: #ffffff;
+  --popover-foreground: #0A192F;
+  --border: #e2e8f0;
+  --ring: #9D00FF;
+  --primary: #0A192F;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0A192F;
+  --accent: #f3e8ff;
+  --accent-foreground: #7c00cc;
+  --destructive: #fee2e2;
+  --destructive-foreground: #b91c1c;
+  --success: #dcfce7;
+  --success-foreground: #15803d;
+  --warning: #fef3c7;
+  --warning-foreground: #b45309;
+  --chart-1: #9D00FF;
+  --chart-2: #3B82F6;
+  --chart-3: #06b6d4;
+  --chart-4: #f59e0b;
+  --chart-5: #ec4899;
+  --radius: 14px;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --brand-purple: #9D00FF;
+  --brand-blue: #3B82F6;
+  --brand-navy: #0A192F;
+}
+
+.dark {
+  --background: #060d1a;
+  --foreground: #e8eefc;
+  --muted: #0f1b30;
+  --muted-foreground: #94a3b8;
+  --card: #0b1526;
+  --card-foreground: #e8eefc;
+  --popover: #0b1526;
+  --popover-foreground: #e8eefc;
+  --border: #1e2d47;
+  --ring: #9D00FF;
+  --primary: #9D00FF;
+  --primary-foreground: #ffffff;
+  --secondary: #12203a;
+  --secondary-foreground: #e8eefc;
+  --accent: #1a1030;
+  --accent-foreground: #c084fc;
+  --destructive: #3b1414;
+  --destructive-foreground: #fca5a5;
+  --success: #0f2e1c;
+  --success-foreground: #6ee7a8;
+  --warning: #33260a;
+  --warning-foreground: #fcd34d;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { margin: 0; line-height: 1.6; }
+
+.muted { color: var(--muted-foreground); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.table-wrapper { overflow-x: auto; }
+
+h1, h2, h3, h4 { line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
+
+a { color: inherit; text-decoration: none; }
