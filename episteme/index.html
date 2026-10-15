@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Systemhuset Episteme AS — Skreddersydd programvare</title>
+<meta name="description" content="Episteme — forslag til ny nettside.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav on-hero" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="dot"></span>Episteme</a>
+    <nav class="nav-links"><a href="#historie">Historie</a><a href="#losninger">Løsninger</a><a href="#kontakt">Kontakt</a><a class="btn nav-cta" href="#kontakt">Be om samtale</a></nav>
+    <button class="burger" id="navToggle" aria-label="Åpne meny" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile" id="navMobile"><a href="#historie">Historie</a><a href="#losninger">Løsninger</a><a href="#kontakt">Kontakt</a><a href="#kontakt">Be om samtale</a></div>
+</header>
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <p class="eyebrow">Systemhuset Episteme AS · siden 1994</p>
+    <h1>Skreddersydd programvare, bygget i små bolker</h1>
+    <p class="lead">Vi lærer prosessene deres før vi skriver kode. Da kan vi lage det som trengs — og endre det underveis, i takt med behov og budsjett.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#kontakt">Be om en samtale</a>
+      <a class="btn ghost" href="#historie">Vår historie</a>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&auto=format&fit=crop" alt="Team i samarbeid"></div>
+  </div>
+</section>
+
+<section id="historie">
+  <div class="wrap">
+    <p class="eyebrow">Vår historie</p>
+    <h2>Kundetilpasset utvikling siden 1994</h2>
+    <p class="lead">Vi ble grunnlagt med ett mål: å levere skreddersydde programvareløsninger av høy kvalitet. Siden har vi jobbet med alt fra enmannsbedrifter til internasjonale konsern, i bransjer som offshore, boligbygging, catering, nettbutikk, telekom, radiologi, lager og engrossalg.</p>
+    <ol class="timeline">
+      <li class="reveal"><span>1994</span><div><h3>Grunnlagt</h3><p>Oppstart med fokus på kundetilpasset programvareutvikling.</p></div></li>
+      <li class="reveal"><span>2000-tallet</span><div><h3>Utviklingspartner</h3><p>Service- og supportsenter for blant annet Fox, Microsoft og Sybase.</p></div></li>
+      <li class="reveal"><span>I dag</span><div><h3>Skreddersøm og SuperOffice</h3><p>Tilpassede løsninger, gradvis implementering og support hele døgnet.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="losninger">
+  <div class="wrap">
+    <p class="eyebrow">Løsninger</p>
+    <h2>Det vi leverer</h2>
+    <div class="cards">
+      <article class="card reveal"><h3>Skreddersydd programvare</h3><p>Systemet bygges rundt prosessene deres, ikke omvendt.</p></article>
+      <article class="card reveal"><h3>Tilpasset løsning</h3><p>Vi tilpasser eksisterende systemer der det er billigere enn å bygge nytt.</p></article>
+      <article class="card reveal"><h3>Alltid tilgjengelig</h3><p>Kundene våre får tak i oss 24/7 — support, bugfix og andre samtaler.</p></article>
+      <article class="card reveal"><h3>Gradvis implementering</h3><p>Vi bygger i små bolker, slik at løsningen kan justeres underveis.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Be om en samtale</h2>
+      <p class="lead">Fortell kort hva systemet skal gjøre, så tar vi en prat om hva som er mulig.</p>
+      <ul class="contact-list">
+        <li><span>E-post</span><a href="mailto:simon@episteme.no">simon@episteme.no</a></li>
+        <li><span>Telefon</span><a href="tel:+4721995050">21 99 50 50</a></li>
+        <li><span>Nettside</span><a href="https://episteme.no">episteme.no</a></li>
+      </ul>
+    </div>
+    <form class="form reveal" id="leadForm" data-mail="simon@episteme.no">
+      <div class="field"><label for="n">Navn</label><input id="n" name="name" required></div>
+      <div class="field"><label for="e">E-post</label><input id="e" type="email" name="email" required></div>
+      <div class="field"><label for="p">Telefon</label><input id="p" name="phone"></div>
+      <div class="field"><label for="i">Gjelder</label>
+        <select id="i" name="interest"><option>Skreddersydd programvare</option><option>Tilpasning av eksisterende system</option><option>SuperOffice</option><option>Support</option></select></div>
+      <div class="field"><label for="m">Melding</label><textarea id="m" name="message"></textarea></div>
+      <button class="btn" type="submit">Send henvendelse</button>
+      <p class="form-note" id="formNote">Skjemaet åpner e-postklienten din — ingen data lagres på siden.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap foot-in">
+    <div>Episteme · <span id="year"></span></div>
+    <div>Forslag utarbeidet av Vikingnet · <a href="mailto:simon@episteme.no">simon@episteme.no</a></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
