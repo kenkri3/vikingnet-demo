@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ADV Finance — Finansieringsløsninger</title>
+<meta name="description" content="ADV Finance — forslag til ny nettside.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav on-hero" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="dot"></span>ADV Finance</a>
+    <nav class="nav-links"><a href="#tjenester">Tjenester</a><a href="#kunder">Kunder</a><a href="#kontakt">Kontakt</a><a class="btn nav-cta" href="#kontakt">Gratis konsultasjon</a></nav>
+    <button class="burger" id="navToggle" aria-label="Åpne meny" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile" id="navMobile"><a href="#tjenester">Tjenester</a><a href="#kunder">Kunder</a><a href="#kontakt">Kontakt</a><a href="#kontakt">Gratis konsultasjon</a></div>
+</header>
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">ADV Finance · uavhengig rådgivning</p>
+      <h1>Riktig finansiering, innvilget</h1>
+      <p class="lead">Vi har ingen bindende avtaler med finansieringsaktører. Det betyr at vi alltid søker den løsningen som passer din bedrift — ikke den som passer oss.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#kontakt">Gratis konsultasjon</a>
+        <a class="btn ghost" href="#tjenester">Se tjenester</a>
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80&auto=format&fit=crop" alt="Forretningsmøte"></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap stat-grid">
+    <div class="stat reveal"><strong>6,07 mrd</strong><span>kroner i kundefinansiering</span></div>
+    <div class="stat reveal"><strong>4 200</strong><span>gjennomførte kundeprosjekter</span></div>
+    <div class="stat reveal"><strong>2025</strong><span>antall kunder i året som gikk</span></div>
+    <div class="stat reveal"><strong>0</strong><span>bindende avtaler med aktørene</span></div>
+  </div>
+</section>
+
+<section id="tjenester">
+  <div class="wrap">
+    <p class="eyebrow">Tjenester</p>
+    <h2>Finansiering for hele virksomheten</h2>
+    <div class="cards">
+      <article class="card reveal"><h3>Topplinjefinansiering</h3><p>Kapital knyttet til fakturerte krav, så veksten ikke stopper på likviditet.</p></article>
+      <article class="card reveal"><h3>Leasing og investering</h3><p>Utstyr og maskiner finansiert over tid, tilpasset kontantstrømmen deres.</p></article>
+      <article class="card reveal"><h3>Kreditter</h3><p>Kassekreditt og driftskreditt med vilkår som faktisk er til å leve med.</p></article>
+      <article class="card reveal"><h3>Eierlån</h3><p>Langsiktig finansiering av næringseiendom og større investeringer.</p></article>
+      <article class="card reveal"><h3>Garantier</h3><p>Bankgarantier og annen sikkerhetsstillelse for anbud og kontrakter.</p></article>
+      <article class="card reveal"><h3>Bankbytte og refinansiering</h3><p>Vi går gjennom dagens betingelser og henter inn tilbud fra flere aktører.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="kunder">
+  <div class="wrap">
+    <p class="eyebrow">Kunder</p>
+    <h2>Hva kundene sier</h2>
+    <div class="quotes">
+      <blockquote class="reveal"><p>«Stor kunnskap og bankfaglig innsikt gjennom rådgivningsprosessen, som endte med en svært god løsning. Ønsket resultat ble oppnådd, og ny bankforbindelse er etablert.»</p><cite>Roar Krossen, Ole Moe AS og Connies Interiør AS</cite></blockquote>
+      <blockquote class="reveal"><p>«Vi fikk en gjennomgang av hele finansieringen og konkrete alternativer å velge mellom — uten at noen presset oss mot en bestemt bank.»</p><cite>Daglig leder, entreprenørvirksomhet</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Gratis konsultasjon</h2>
+      <p class="lead">Vi tar en uforpliktende prat om hva dere trenger, og hva som er realistisk å få innvilget.</p>
+      <ul class="contact-list">
+        <li><span>Kontakt</span><a href="mailto:tord.ornum@advfinance.no">tord.ornum@advfinance.no</a></li>
+        <li><span>Nettside</span><a href="https://advfinance.no">advfinance.no</a></li>
+      </ul>
+    </div>
+    <form class="form reveal" id="leadForm" data-mail="tord.ornum@advfinance.no">
+      <div class="field"><label for="n">Navn</label><input id="n" name="name" required></div>
+      <div class="field"><label for="e">E-post</label><input id="e" type="email" name="email" required></div>
+      <div class="field"><label for="p">Telefon</label><input id="p" name="phone"></div>
+      <div class="field"><label for="i">Gjelder</label>
+        <select id="i" name="interest"><option>Topplinjefinansiering</option><option>Leasing</option><option>Kreditt</option><option>Eierlån</option><option>Garanti</option><option>Refinansiering</option></select></div>
+      <div class="field"><label for="m">Melding</label><textarea id="m" name="message"></textarea></div>
+      <button class="btn" type="submit">Be om konsultasjon</button>
+      <p class="form-note" id="formNote">Skjemaet åpner e-postklienten din — ingen data lagres på siden.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap foot-in">
+    <div>ADV Finance · <span id="year"></span></div>
+    <div>Forslag utarbeidet av Vikingnet · <a href="mailto:tord.ornum@advfinance.no">tord.ornum@advfinance.no</a></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
