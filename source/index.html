@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Source AS — Utviklingsteam og rådgivning</title>
+<meta name="description" content="Source — forslag til ny nettside.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav on-hero" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="dot"></span>Source</a>
+    <nav class="nav-links"><a href="#tjenester">Tjenester</a><a href="#prosess">Prosess</a><a href="#ansatte">Team</a><a href="#kontakt">Kontakt</a><a class="btn nav-cta" href="#kontakt">Ta kontakt</a></nav>
+    <button class="burger" id="navToggle" aria-label="Åpne meny" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile" id="navMobile"><a href="#tjenester">Tjenester</a><a href="#prosess">Prosess</a><a href="#ansatte">Team</a><a href="#kontakt">Kontakt</a><a href="#kontakt">Ta kontakt</a></div>
+</header>
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Source AS · etablert 2017</p>
+      <h1>Erfarne utviklingsteam til markedsledende pris</h1>
+      <p class="lead">Utviklingsteam ledet av norsk seniorutvikler, til svært gunstige timepriser. Vi jobber med utvikling, teknisk arkitektur og IT-rådgivning — for både offentlig og privat sektor.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#kontakt">Ta kontakt</a>
+        <a class="btn ghost" href="#tjenester">Se hva vi gjør</a>
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80&auto=format&fit=crop" alt="Digital infrastruktur"></div>
+  </div>
+</section>
+
+<section id="tjenester">
+  <div class="wrap">
+    <p class="eyebrow">Tjenester</p>
+    <h2>Fra idé til ferdig løsning</h2>
+    <div class="cards">
+      <article class="card reveal"><h3>Arkitektur og rådgivning</h3><p>Vi hjelper dere å velge riktig teknologi før noe bygges, og følger prosjektet hele veien.</p></article>
+      <article class="card reveal"><h3>Systemutvikling</h3><p>Alle hos oss har lang erfaring som utviklere. Vi bistår fra analyse til drift.</p></article>
+      <article class="card reveal"><h3>Apputvikling</h3><p>Native apper til iOS og Android, bygget på .NET og Xamarin.</p></article>
+      <article class="card reveal"><h3>Konsulentutleie</h3><p>Erfarne utviklere som går rett inn i teamet deres og leverer fra dag én.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="prosess">
+  <div class="wrap split">
+    <div class="reveal media"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80&auto=format&fit=crop" alt="Kode og utvikling"></div>
+    <div class="reveal">
+      <p class="eyebrow">Prosess</p>
+      <h2>Smidig gjennomføring, reduserte kostnader</h2>
+      <p class="lead">Med erfarne konsulenter sikrer vi en smidig gjennomføring og lavere totalkostnad. Vi tar ansvar for at sluttresultatet blir et solid produkt — ikke bare en leveranse.</p>
+      <ul class="ticks">
+        <li>Analyse og teknologivalg</li>
+        <li>Utvikling i tette, korte løp</li>
+        <li>Testing og kvalitetssikring</li>
+        <li>Drift og videreutvikling</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="ansatte">
+  <div class="wrap">
+    <p class="eyebrow">Teamet</p>
+    <h2>Erfarne folk, kort vei til beslutning</h2>
+    <div class="team">
+      <div class="person reveal"><strong>Axel Anders Kvale</strong><span>Utvikling og arkitektur</span><a href="mailto:axel@source.no">axel@source.no</a></div>
+      <div class="person reveal"><strong>Bjørn</strong><span>Systemutvikling</span><a href="mailto:bjorn@source.no">bjorn@source.no</a></div>
+      <div class="person reveal"><strong>Geir</strong><span>Rådgivning</span><a href="mailto:geir@source.no">geir@source.no</a></div>
+      <div class="person reveal"><strong>Ronny</strong><span>Utvikling og drift</span><a href="mailto:ronny@source.no">ronny@source.no</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="kontakt">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Ta kontakt for en prat</h2>
+      <p class="lead">Fortell kort om prosjektet, så finner vi den beste løsningen for din bedrift.</p>
+      <ul class="contact-list">
+        <li><span>E-post</span><a href="mailto:axel@source.no">axel@source.no</a></li>
+        <li><span>Telefon</span><a href="tel:+4748130384">+47 481 30 384</a></li>
+        <li><span>Nettside</span><a href="https://source.no">source.no</a></li>
+      </ul>
+    </div>
+    <form class="form reveal" id="leadForm" data-mail="axel@source.no">
+      <div class="field"><label for="n">Navn</label><input id="n" name="name" required></div>
+      <div class="field"><label for="e">E-post</label><input id="e" type="email" name="email" required></div>
+      <div class="field"><label for="p">Telefon</label><input id="p" name="phone"></div>
+      <div class="field"><label for="i">Gjelder</label>
+        <select id="i" name="interest"><option>Arkitektur og rådgivning</option><option>Systemutvikling</option><option>Apputvikling</option><option>Konsulentutleie</option></select></div>
+      <div class="field"><label for="m">Melding</label><textarea id="m" name="message"></textarea></div>
+      <button class="btn" type="submit">Send henvendelse</button>
+      <p class="form-note" id="formNote">Skjemaet åpner e-postklienten din — ingen data lagres på siden.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap foot-in">
+    <div>Source · <span id="year"></span></div>
+    <div>Forslag utarbeidet av Vikingnet · <a href="mailto:axel@source.no">axel@source.no</a></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

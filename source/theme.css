@@ -1,0 +1,9 @@
+:root{
+  --background:#0b1220;--foreground:#e8eef7;--muted:#101a2c;--muted-foreground:#93a3bb;
+  --card:#101a2c;--border:#1e2c44;--primary:#3d8bfd;--primary-foreground:#06101f;
+  --accent:#12233d;--accent-foreground:#6fb0ff;
+  --success:#0f2e22;--success-foreground:#5fd08a;
+  --radius:12px;--font-sans:'Inter',system-ui,sans-serif;--font-display:'Space Grotesk',system-ui,sans-serif;--font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --display-weight:700;--display-tracking:-.02em;
+  --hero-img:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80&auto=format&fit=crop');
+}
