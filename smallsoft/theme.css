@@ -1,0 +1,9 @@
+:root{
+  --background:#fbfaf7;--foreground:#1f2328;--muted:#f1eee8;--muted-foreground:#6b6459;
+  --card:#ffffff;--border:#e4ded4;--primary:#1f2328;--primary-foreground:#ffffff;
+  --accent:#fdf1dc;--accent-foreground:#b06a12;
+  --success:#e6f4ea;--success-foreground:#1d6f42;
+  --radius:10px;--font-sans:'IBM Plex Sans',system-ui,sans-serif;--font-display:'Space Grotesk',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --display-weight:700;--display-tracking:-.02em;
+  --hero-img:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80&auto=format&fit=crop');
+}

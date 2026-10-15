@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmallSoft AS — Systemutvikling i Tromsø</title>
+<meta name="description" content="SmallSoft — forslag til ny nettside.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav on-hero" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="dot"></span>SmallSoft</a>
+    <nav class="nav-links"><a href="#tjenester">Tjenester</a><a href="#spesialiteter">Spesialiteter</a><a href="#kunder">Kunder</a><a href="#kontakt">Kontakt</a><a class="btn nav-cta" href="#kontakt">Ta kontakt</a></nav>
+    <button class="burger" id="navToggle" aria-label="Åpne meny" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile" id="navMobile"><a href="#tjenester">Tjenester</a><a href="#spesialiteter">Spesialiteter</a><a href="#kunder">Kunder</a><a href="#kontakt">Kontakt</a><a href="#kontakt">Ta kontakt</a></div>
+</header>
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <p class="eyebrow">SmallSoft AS · Tromsø</p>
+    <h1>Systemer som svarer på under ett sekund</h1>
+    <p class="lead">Vi har bygget programvare siden 1990-tallet — bookingsystemer, søkemotorer, Android-apper og systemer for telekom. Når alt er sagt og gjort, er det noen som må bygge systemet ditt. Det gjør vi.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#kontakt">Ta kontakt</a>
+      <a class="btn ghost" href="#tjenester">Hva vi gjør</a>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&auto=format&fit=crop" alt="Utviklere i arbeid"></div>
+  </div>
+</section>
+
+<section id="tjenester">
+  <div class="wrap">
+    <p class="eyebrow">Tjenester</p>
+    <h2>Utvikling, drift og spesialsystemer</h2>
+    <div class="rows">
+      <div class="row reveal"><h3>Systemutvikling</h3><p>Java, Android, Linux og web. Vi tar ansvar fra kravspesifikasjon til produksjon.</p></div>
+      <div class="row reveal"><h3>Booking- og ressurssystemer</h3><p>iBooking brukes av treningssentre og kursleverandører — med app, SMS-varsling og resepsjonsterminal.</p></div>
+      <div class="row reveal"><h3>Søkemotorer</h3><p>«Spot» gir lynrask jobbsøk. Vi har levert søk til blant annet Legejobb.no og Jobbportalen.</p></div>
+      <div class="row reveal"><h3>Systemintegrasjon</h3><p>Vi kobler systemer sammen og henter tilbake kontrollen over løsninger andre har sluppet.</p></div>
+      <div class="row reveal"><h3>Rådgivning</h3><p>Systemdesign, arkitektur og innsourcing — kort sagt: hjelp til å velge riktig vei før koden skrives.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="spesialiteter">
+  <div class="wrap split">
+    <div class="reveal media"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80&auto=format&fit=crop" alt="Elektronikk og kretskort"></div>
+    <div class="reveal">
+      <p class="eyebrow">Spesialiteter</p>
+      <h2>Vi reparerer også det andre har gitt opp</h2>
+      <p class="lead">Vi har eget elektronikklabor og reparerer synthesizere — særlig vintage-modeller. Vi fikser og designer også andre elektroniske enheter.</p>
+      <ul class="ticks">
+        <li>Treningssenter- og bookingsystemer</li>
+        <li>Android- og iPhone-løsninger</li>
+        <li>Webbaserte systemer og telekom-støtte</li>
+        <li>Raske søkesystemer og romfartssystemer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="kunder">
+  <div class="wrap">
+    <p class="eyebrow">Kunder og referanser</p>
+    <h2>Langsiktige oppdrag</h2>
+    <div class="logos">
+      <div class="logo reveal">iBooking, Bodø</div>
+      <div class="logo reveal">Telenor Key Partner</div>
+      <div class="logo reveal">CompTel</div>
+      <div class="logo reveal">Statens vegvesen — klimadata, 10 år</div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="kontakt">
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="eyebrow">Kontakt</p>
+      <h2>Snakk med en utvikler, ikke en selger</h2>
+      <p class="lead">Send oss en kort beskrivelse av systemet du trenger, så svarer vi med hva vi tror er realistisk.</p>
+      <ul class="contact-list">
+        <li><span>Nils Halvard</span><a href="mailto:nils@smallsoft.no">nils@smallsoft.no</a> · +47 934 22 070</li>
+        <li><span>Johannes</span><a href="mailto:johs@smallsoft.no">johs@smallsoft.no</a></li>
+        <li><span>Sted</span>Tromsø, Norge</li>
+      </ul>
+    </div>
+    <form class="form reveal" id="leadForm" data-mail="nils@smallsoft.no">
+      <div class="field"><label for="n">Navn</label><input id="n" name="name" required></div>
+      <div class="field"><label for="e">E-post</label><input id="e" type="email" name="email" required></div>
+      <div class="field"><label for="p">Telefon</label><input id="p" name="phone"></div>
+      <div class="field"><label for="i">Gjelder</label>
+        <select id="i" name="interest"><option>Systemutvikling</option><option>Booking-system</option><option>Søkemotor</option><option>Integrasjon</option><option>Rådgivning</option></select></div>
+      <div class="field"><label for="m">Melding</label><textarea id="m" name="message"></textarea></div>
+      <button class="btn" type="submit">Send henvendelse</button>
+      <p class="form-note" id="formNote">Skjemaet åpner e-postklienten din — ingen data lagres på siden.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap foot-in">
+    <div>SmallSoft · <span id="year"></span></div>
+    <div>Forslag utarbeidet av Vikingnet · <a href="mailto:nils@smallsoft.no">nils@smallsoft.no</a></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
