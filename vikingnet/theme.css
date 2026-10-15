@@ -1,0 +1,86 @@
+/* Vikingnet — brand theme. Mørk, teknisk profil med elektrisk blå/cyan accent. */
+:root {
+  --background: #ffffff;
+  --foreground: #0b1220;
+  --muted: #f4f7fb;
+  --muted-foreground: #5b6b82;
+  --card: #ffffff;
+  --card-foreground: #0b1220;
+  --border: #e2e8f2;
+  --ring: #2563eb;
+  --primary: #0b1220;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f7fb;
+  --secondary-foreground: #0b1220;
+  --accent: #e8f0ff;
+  --accent-foreground: #1d4ed8;
+  --destructive: #fee2e2;
+  --destructive-foreground: #b91c1c;
+  --success: #dcfce7;
+  --success-foreground: #15803d;
+  --warning: #fef3c7;
+  --warning-foreground: #b45309;
+  --chart-1: #2563eb;
+  --chart-2: #06b6d4;
+  --chart-3: #7c3aed;
+  --chart-4: #0b1220;
+  --chart-5: #5b6b82;
+  --radius: 14px;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --brand-blue: #2563eb;
+  --brand-cyan: #06b6d4;
+  --brand-violet: #7c3aed;
+  --brand-ink: #0b1220;
+  --brand-deep: #060b16;
+}
+
+.dark {
+  --background: #060b16;
+  --foreground: #eaf1fb;
+  --muted: #0d1526;
+  --muted-foreground: #93a4bd;
+  --card: #0b1220;
+  --card-foreground: #eaf1fb;
+  --border: #1b2740;
+  --ring: #3b82f6;
+  --primary: #3b82f6;
+  --primary-foreground: #04101f;
+  --secondary: #101a2e;
+  --secondary-foreground: #eaf1fb;
+  --accent: #10203c;
+  --accent-foreground: #7dd3fc;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { margin: 0; line-height: 1.6; }
+
+.muted { color: var(--muted-foreground); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.table-wrapper { overflow-x: auto; }
+
+h1, h2, h3, h4 { line-height: 1.1; margin: 0; }
+
+a { color: inherit; text-decoration: none; }
