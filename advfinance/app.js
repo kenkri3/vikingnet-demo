@@ -1,46 +1,16 @@
+// ADV Finance demo — interactions
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.card,.split-media,.split-copy,.sec-head,.quote,.trust').forEach(el=>{el.classList.add('reveal');io.observe(el)});
 
-// Felles interaksjon for demosiden
-const nav = document.getElementById('nav');
-const hero = document.querySelector('.hero');
-function syncNav(){
-  if(!nav||!hero) return;
-  const past = window.scrollY > (hero.offsetHeight - 90);
-  nav.classList.toggle('on-hero', !past);
-  nav.classList.toggle('solid', past);
-}
-syncNav();
-window.addEventListener('scroll', syncNav, {passive:true});
-window.addEventListener('resize', syncNav);
+const t=document.getElementById('navToggle'),m=document.getElementById('navMobile');
+if(t&&m){t.addEventListener('click',()=>{const o=m.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false')});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')))}
 
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const f=document.getElementById('leadForm'),n=document.getElementById('formNote');
+if(f){f.addEventListener('submit',(e)=>{e.preventDefault();
+  const d=Object.fromEntries(new FormData(f).entries());
+  const body=['Navn: '+(d.name||''),'E-post: '+(d.email||''),'Firma: '+(d.company||''),'Finansieringsbehov: '+(d.amount||''),'',''+(d.message||'')].join('\n');
+  window.location.href='mailto:post@advfinance.no?subject='+encodeURIComponent('Forespørsel om finansiering')+'&body='+encodeURIComponent(body);
+  if(n)n.textContent='E-postklienten din åpnes med forespørselen klar.'})}
 
-const t = document.getElementById('navToggle');
-const m = document.getElementById('navMobile');
-if(t&&m){
-  t.addEventListener('click',()=>{
-    const open = m.classList.toggle('open');
-    t.setAttribute('aria-expanded', open?'true':'false');
-  });
-  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
-}
-
-const form = document.getElementById('leadForm');
-const note = document.getElementById('formNote');
-if(form){
-  form.addEventListener('submit',(e)=>{
-    e.preventDefault();
-    const d = Object.fromEntries(new FormData(form).entries());
-    const body = ['Navn: '+(d.name||''),'E-post: '+(d.email||''),'Telefon: '+(d.phone||''),
-      'Gjelder: '+(d.interest||''),'',(d.message||'')].join('\n');
-    window.location.href = 'mailto:'+form.dataset.mail
-      + '?subject='+encodeURIComponent('Henvendelse fra nettsiden')
-      + '&body='+encodeURIComponent(body);
-    note.className='form-note ok';
-    note.textContent='Åpner e-postklienten din med opplysningene fylt inn.';
-  });
-}
-const y = document.getElementById('year');
-if(y) y.textContent = new Date().getFullYear();
+const y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
