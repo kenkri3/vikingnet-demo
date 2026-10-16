@@ -1,1 +1,6 @@
-PLACEHOLDER_THEME
+:root{
+  --bg:#f7f5f1; --fg:#12233a; --muted:#5d6b7d; --card:#ffffff; --border:#e2ddd4;
+  --accent:#9a7b3f; --accent-fg:#ffffff; --deep:#0e1c2e; --radius:4px;
+  --font-sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --font-serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+}
