@@ -1,0 +1,12 @@
+:root{
+  --bg:#ffffff; --fg:#14181f; --muted:#f5f7fa; --muted-fg:#5b6675; --card:#fff;
+  --border:#e4e8ee; --primary:#f26522; --primary-fg:#fff; --accent:#0f4c81;
+  --radius:8px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Archivo',Inter,sans-serif;
+  --orange:#f26522; --navy:#0f4c81; --slate:#5b6675;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);font-family:var(--font-sans);scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;line-height:1.65}
+h1,h2,h3,h4{font-family:var(--font-display);margin:0;line-height:1.14;font-weight:700;letter-spacing:-.015em}
+a{color:inherit;text-decoration:none}
+.muted{color:var(--muted-fg)}
