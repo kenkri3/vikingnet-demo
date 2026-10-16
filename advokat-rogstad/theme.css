@@ -1,0 +1,7 @@
+:root{
+  --bg:#fbfaf7; --fg:#1d2a26; --muted:#5f6f69; --card:#ffffff; --border:#e4e1d8;
+  --accent:#1f5c4a; --accent-2:#c2703d; --accent-fg:#ffffff; --ink:#14201c;
+  --radius:10px;
+  --font-display:'DM Serif Display',Georgia,serif;
+  --font-sans:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
