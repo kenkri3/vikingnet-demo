@@ -1,0 +1,12 @@
+:root{
+  --bg:#0d1117; --fg:#e9eef5; --muted:#161c26; --muted-fg:#93a1b5; --card:#141b25;
+  --border:#232c3a; --primary:#3ea6ff; --primary-fg:#06121f; --accent:#7c5cff;
+  --radius:10px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Space Grotesk',Inter,sans-serif;
+  --sky:#3ea6ff; --violet:#7c5cff; --ink:#0d1117; --line:#232c3a;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);font-family:var(--font-sans);scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;line-height:1.65}
+h1,h2,h3,h4{font-family:var(--font-display);margin:0;line-height:1.1;font-weight:600;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.muted{color:var(--muted-fg)}
