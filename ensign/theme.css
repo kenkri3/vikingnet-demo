@@ -1,0 +1,12 @@
+:root{
+  --bg:#ffffff; --fg:#0b1f2a; --muted:#eef4f7; --muted-fg:#4d6472; --card:#fff;
+  --border:#dbe6ec; --primary:#0b6b8f; --primary-fg:#fff; --accent:#12a3c9;
+  --radius:6px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Sora',Inter,sans-serif;
+  --deep:#0b1f2a; --teal:#0b6b8f; --aqua:#12a3c9;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);font-family:var(--font-sans);scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;line-height:1.65}
+h1,h2,h3,h4{font-family:var(--font-display);margin:0;line-height:1.12;font-weight:600;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.muted{color:var(--muted-fg)}
