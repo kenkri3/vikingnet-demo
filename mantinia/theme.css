@@ -1,0 +1,12 @@
+:root{
+  --bg:#fdfbf7; --fg:#2a2419; --muted:#f4efe4; --muted-fg:#6f6552; --card:#fff;
+  --border:#e6ddc9; --primary:#8c5a2b; --primary-fg:#fff; --accent:#c8a06a;
+  --radius:4px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Playfair Display',Georgia,serif;
+  --ink:#2a2419; --clay:#8c5a2b; --sand:#f4efe4; --olive:#5c6647;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);font-family:var(--font-sans);scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{margin:0;line-height:1.7}
+h1,h2,h3,h4{font-family:var(--font-display);margin:0;line-height:1.16;font-weight:500}
+a{color:inherit;text-decoration:none}
+.muted{color:var(--muted-fg)}
