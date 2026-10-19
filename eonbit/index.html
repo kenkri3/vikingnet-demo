@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eonbit — utvikling og drift av forretningssystemer</title>
+<meta name="description" content="Eonbit bygger og drifter digitale forretningssystemer: integrasjoner, automatisering og datainnsikt for norske virksomheter.">
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#top">eonbit<i>.</i></a>
+  <nav class="links" id="links">
+    <a href="#tjenester">Tjenester</a><a href="#slik">Slik jobber vi</a><a href="#om">Om</a><a href="#kontakt">Kontakt</a>
+    <a class="cta" href="#kontakt">Book en prat</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Meny" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="mono">Systemutvikling · Integrasjon · Automatisering</div>
+  <h1 style="margin-top:18px">Vi bygger systemene som holder driften i gang.</h1>
+  <p class="lead">Eonbit utvikler og drifter digitale forretningssystemer for norske virksomheter. Vi kobler sammen systemene dere allerede bruker, automatiserer det som gjentas, og gir dere dataene i ett grensesnitt.</p>
+  <div class="btns"><a class="cta" href="#kontakt">Book en prat</a><a class="ghost" href="#tjenester">Se tjenester</a></div>
+  <div class="term reveal">
+    <div class="term-bar"><i></i><i></i><i></i></div>
+    <pre><b>$</b> eonbit status
+  integrasjoner   <b>ok</b>   (ERP, CRM, regnskap)
+  automatisering  <b>ok</b>   (14 flyter i drift)
+  datainnsikt     <b>ok</b>   (daglig oppdatert)
+  responstid      <b>ok</b>   (under 200 ms)</pre>
+  </div>
+</div></section>
+
+<section id="tjenester"><div class="wrap">
+  <div class="mono">Tjenester</div>
+  <h2 style="margin-top:14px">Tre ting vi gjør godt.</h2>
+  <div class="grid3">
+    <article class="card reveal"><h3>Integrasjon</h3><p>Vi kobler ERP, CRM, regnskap og egenutviklede systemer sammen, slik at data flyter uten manuell punching.</p></article>
+    <article class="card reveal"><h3>Automatisering</h3><p>Gjentatte arbeidsflyter — godkjenninger, rapporter, varsler og avstemminger — kjører av seg selv, med logg.</p></article>
+    <article class="card reveal"><h3>Datainnsikt</h3><p>Én oversikt over tallene som betyr noe, oppdatert daglig og tilgjengelig der beslutningene tas.</p></article>
+  </div>
+</div></section>
+
+<section class="alt" id="slik"><div class="wrap two">
+  <div class="reveal">
+    <div class="mono">Slik jobber vi</div>
+    <h2 style="margin:14px 0 22px">Fra behov til drift, i fire steg.</h2>
+    <ol class="steps">
+      <li><div><strong>Kartlegging</strong>Vi går gjennom systemene og finner hvor tiden forsvinner.</li>
+      <li><div><strong>Prioritering</strong>Vi velger de tiltakene som gir målbar effekt først.</li>
+      <li><div><strong>Bygging</strong>Korte leveranser, testet sammen med brukerne underveis.</li>
+      <li><div><strong>Drift</strong>Overvåking, support og videreutvikling etter at løsningen er i bruk.</li>
+    </ol>
+  </div>
+  <div class="reveal"><img src="img/eonbit-1.jpg" alt="Utvikler foran skjerm" loading="lazy"></div>
+</div></section>
+
+<section id="om"><div class="wrap two">
+  <div class="reveal"><img src="img/eonbit-2.jpg" alt="Teknisk infrastruktur" loading="lazy"></div>
+  <div class="reveal">
+    <div class="mono">Om Eonbit</div>
+    <h2 style="margin:14px 0 18px">Teknisk tyngde, uten unødvendig kompleksitet.</h2>
+    <p>Vi er et lite, sammensveiset team av utviklere og systemarkitekter. Vi tar ansvar for hele veien — fra første skisse til løsningen står støtt i produksjon.</p>
+    <p>Ingen store rammeverk, ingen lange prosjektplaner. Vi leverer i biter dere kan ta i bruk med en gang.</p>
+  </div>
+</div></section>
+
+<section class="alt" id="kontakt"><div class="wrap two">
+  <div class="reveal">
+    <div class="mono">Kontakt</div>
+    <h2 style="margin:14px 0 16px">Fortell oss hva som står i veien.</h2>
+    <p>Send en kort beskrivelse av utfordringen, så tar vi en prat om hva som er mulig å få til.</p>
+    <p style="color:var(--fg)">E-post: kontaktoss@eonbit.com</p>
+  </div>
+  <form id="leadForm" class="reveal" novalidate>
+    <div><label for="name">Navn</label><input id="name" name="name" required></div>
+    <div><label for="email">E-post</label><input id="email" name="email" type="email" required></div>
+    <div><label for="phone">Telefon</label><input id="phone" name="phone" type="tel"></div>
+    <div><label for="message">Melding</label><textarea id="message" name="message" rows="4"></textarea></div>
+    <button class="cta" type="submit">Send henvendelse</button>
+    <div class="note" id="note" role="status"></div>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div>© <span id="year"></span> Eonbit</div>
+  <div><a href="mailto:kontaktoss@eonbit.com">kontaktoss@eonbit.com</a></div>
+</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
