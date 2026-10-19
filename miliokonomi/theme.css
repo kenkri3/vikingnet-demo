@@ -1,0 +1,12 @@
+:root{
+  --bg:#fbfaf7; --fg:#1f2420; --muted:#6a736a; --card:#ffffff; --border:#e6e3da;
+  --brand:#1f4d3a; --brand-2:#2f6b52; --accent:#c9a227; --accent-ink:#3a2f00;
+  --radius:14px; --sans:'Inter',system-ui,sans-serif; --display:'Fraunces',Georgia,serif;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{margin:0;line-height:1.7}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0;font-weight:600}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{width:min(1120px,92vw);margin-inline:auto}
