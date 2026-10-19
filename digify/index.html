@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Digify — automatiserte online løsninger</title>
+<meta name="description" content="Digify bygger automatiserte online løsninger som fjerner manuelt arbeid: skjema, dataflyt, integrasjoner og kundeportaler.">
+<link rel="stylesheet" href="theme.css"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#top"><b>Digify</b></a>
+  <nav class="links" id="links">
+    <a href="#losninger">Løsninger</a><a href="#slik">Slik virker det</a><a href="#om">Om</a><a href="#kontakt">Kontakt</a>
+    <a class="btn" href="#kontakt">Kom i gang</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Meny" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="pill">Automatiserte online løsninger</span>
+    <h1>Mindre manuelt arbeid. Mer tid til kundene.</h1>
+    <p class="lead">Digify setter opp automatiserte løsninger som samler inn data, flytter dem videre i systemene deres og holder alle oppdatert — uten at noen må kopiere mellom skjermer.</p>
+    <div class="hero-cta"><a class="btn" href="#kontakt">Kom i gang</a><a class="btn-ghost" href="#losninger">Se løsninger</a></div>
+  </div>
+  <div class="hero-img reveal"><img src="img/digify-2.jpg" alt="Digitalt arbeid ved skjerm" loading="lazy"></div>
+</div></section>
+
+<div class="logos"><div class="wrap"><p>Skjema · Dataflyt · Integrasjoner · Kundeportal</p></div></div>
+
+<section id="losninger"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="pill">Løsninger</span>
+    <h2>Vi automatiserer det som gjentas hver dag.</h2>
+    <p>Fra første henvendelse til ferdig registrert sak — vi bygger flyten slik at den passer prosessene deres, ikke omvendt.</p>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><div class="ico"></div><h3>Skjema og innsamling</h3><p>Digitale skjema som validerer dataene ved inntasting, så feil ikke havner i systemene.</p></article>
+    <article class="card reveal"><div class="ico"></div><h3>Automatisk dataflyt</h3><p>Data flyttes mellom systemer etter regler dere bestemmer, med varsling når noe krever oppfølging.</p></article>
+    <article class="card reveal"><div class="ico"></div><h3>Integrasjoner</h3><p>Vi kobler på regnskap, CRM, e-post og fagsystemer — og holder dem synkronisert.</p></article>
+    <article class="card reveal"><div class="ico"></div><h3>Kundeportal</h3><p>Et enkelt sted der kundene deres ser status, laster opp dokumenter og følger saken sin.</p></article>
+  </div>
+</div></section>
+
+<section class="alt" id="slik"><div class="wrap two">
+  <div class="reveal">
+    <span class="pill">Slik virker det</span>
+    <h2 style="margin-bottom:18px">Fra skjema til ferdig sak — automatisk.</h2>
+    <p>Kunden fyller ut et skjema på nettsiden. Opplysningene valideres, saken opprettes i fagsystemet, ansvarlig får varsel, og kunden får bekreftelse. Ingen manuell registrering, ingen dobbeltføring.</p>
+    <div class="stats">
+      <div><b>0</b><small>manuelle registreringer</small></div>
+      <div><b>24/7</b><small>mottak av henvendelser</small></div>
+      <div><b>1</b><small>kilde til sannheten</small></div>
+    </div>
+  </div>
+  <div class="reveal"><img src="img/digify-3.jpg" alt="Automatisert arbeidsflyt" loading="lazy"></div>
+</div></section>
+
+<section id="om"><div class="wrap two">
+  <div class="reveal"><img src="img/digify-4.jpg" alt="Moderne kontor" loading="lazy"></div>
+  <div class="reveal">
+    <span class="pill">Om Digify</span>
+    <h2 style="margin-bottom:18px">Vi bygger løsningene selv, og drifter dem.</h2>
+    <p>Digify er et norsk miljø for automatisering og systemintegrasjon. Vi tar ansvar for hele løsningen — design, bygging, drift og videreutvikling.</p>
+    <p>Det betyr at dere slipper å forholde dere til flere leverandører når noe skal endres.</p>
+  </div>
+</div></section>
+
+<section class="alt" id="kontakt"><div class="wrap two">
+  <div class="reveal">
+    <span class="pill">Kontakt</span>
+    <h2 style="margin-bottom:16px">Hva bruker dere mest tid på?</h2>
+    <p>Fortell oss om arbeidsoppgaven som stjeler mest tid, så viser vi hvordan den kan automatiseres.</p>
+    <p style="color:var(--ink)">E-post: nilsarne@digify.no</p>
+  </div>
+  <form id="leadForm" class="reveal" novalidate>
+    <div><label for="name">Navn</label><input id="name" name="name" required></div>
+    <div><label for="email">E-post</label><input id="email" name="email" type="email" required></div>
+    <div><label for="company">Virksomhet</label><input id="company" name="company"></div>
+    <div><label for="message">Melding</label><textarea id="message" name="message" rows="4"></textarea></div>
+    <button class="btn" type="submit">Send henvendelse</button>
+    <div class="note" id="note" role="status"></div>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <div>© <span id="year"></span> Digify</div>
+  <div><a href="mailto:nilsarne@digify.no">nilsarne@digify.no</a></div>
+</div></footer>
+<script src="app.js"></script>
+</body>
+</html>

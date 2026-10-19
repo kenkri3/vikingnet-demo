@@ -1,0 +1,7 @@
+:root{
+ --bg:#ffffff; --bg-2:#f6f5ff; --ink:#120a2a; --ink-2:#4a4270;
+ --acc:#6d3bf5; --acc-2:#00c2d1; --line:#e6e2f5;
+ --radius:20px; --maxw:1180px;
+ --font-head:"Poppins","Segoe UI",system-ui,sans-serif;
+ --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
