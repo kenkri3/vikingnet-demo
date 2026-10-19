@@ -1,0 +1,7 @@
+:root{
+ --ink:#141b2e; --ink-2:#3a4560; --paper:#fbfaf7; --paper-2:#f2efe8;
+ --acc:#1f4bd8; --acc-soft:#e8edfd; --amber:#c98a12; --line:#e4e0d6;
+ --radius:16px; --maxw:1120px;
+ --font-head:"Fraunces","Iowan Old Style",Georgia,serif;
+ --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
