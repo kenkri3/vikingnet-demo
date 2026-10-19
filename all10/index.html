@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All10 – bemanning til bygg og industri</title>
+<meta name="description" content="All10 leverer dyktige arbeidere til bygg og industri. Rask levering, god kvalitet i alle ledd, avdelinger i Oslo, Stavanger og Bergen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#">All<i>10</i></a>
+    <div class="navlinks">
+      <a href="#fagomrader">Fagområder</a><a href="#arbeidsgivere">For arbeidsgivere</a><a href="#ansatte">For ansatte</a><a href="#aktuelt">Aktuelt</a><a href="#kontakt">Kontakt</a>
+    </div>
+    <a class="cta-top" href="#kontakt">51 73 27 00</a>
+    <button class="burger" id="burger" aria-label="Åpne meny" aria-expanded="false">&#9776;</button>
+  </div>
+  <div class="wrap"><div class="mobile" id="mobile">
+    <a href="#fagomrader">Fagområder</a><a href="#arbeidsgivere">For arbeidsgivere</a><a href="#ansatte">For ansatte</a><a href="#aktuelt">Aktuelt</a><a href="#kontakt">Kontakt</a>
+  </div></div>
+</header>
+
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow" style="color:#bff5ef">Bemanning til bygg og industri</div>
+      <h1>Få en god opplevelse – og folk som leverer</h1>
+      <p>Vi skaffer dyktige arbeidere til bygg og industri, med rask levering og god kvalitet i alle ledd. Det har vært varemerket vårt siden starten.</p>
+      <a class="btn" href="#kontakt">Bestill arbeidskraft</a>
+      <a class="btn ghost" href="#ansatte">Se ledige stillinger</a>
+    </div>
+    <img src="img/hero.jpg" alt="Arbeidere på byggeplass">
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="audience">
+    <div class="aud" id="arbeidsgivere">
+      <h3>For arbeidsgivere</h3>
+      <p>Du trenger folk som kan begynne raskt og som holder kvaliteten gjennom hele oppdraget. Vi matcher fagfolk mot behovet ditt.</p>
+      <a href="#kontakt">Be om bemanning &rarr;</a>
+    </div>
+    <div class="aud" id="ansatte">
+      <h3>For ansatte</h3>
+      <p>Vi har oppdrag i bygg og industri over hele landet. Registrer deg, så tar vi kontakt når noe passer profilen din.</p>
+      <a href="#kontakt">Registrer deg &rarr;</a>
+    </div>
+  </div>
+</div>
+
+<section id="fagomrader">
+  <div class="wrap">
+    <div class="eyebrow">Fagområder</div>
+    <h2>Folk med den kompetansen oppdraget krever</h2>
+    <p class="lead">Vi leverer til prosjekter i hele landet, fra enkeltmannsoppdrag til større bemanningsbehov over tid.</p>
+    <div class="fag">
+      <div><h3>Bygg</h3><p>Tømrere, betongarbeidere, stillasmontører og hjelpearbeidere.</p></div>
+      <div><h3>Industri</h3><p>Operatører, mekanikere og produksjonsmedarbeidere.</p></div>
+      <div><h3>Anlegg</h3><p>Maskinførere og anleggsarbeidere til infrastrukturprosjekter.</p></div>
+      <div><h3>Service</h3><p>Renhold, lager og logistikk der det trengs folk på kort varsel.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--card)">
+  <div class="wrap two">
+    <img src="img/work.jpg" alt="Fagarbeider i arbeid">
+    <div>
+      <div class="eyebrow">Slik jobber vi</div>
+      <h2>Rask levering med god kvalitet i alle ledd</h2>
+      <p class="lead">Vi kartlegger behovet, foreslår kandidater og følger opp gjennom hele oppdraget. Du får en fast kontaktperson, og vi løser utfordringene før de blir problemer.</p>
+      <p class="lead">Alle vi sender ut har dokumentert kompetanse og gyldige sertifikater der faget krever det.</p>
+    </div>
+  </div>
+</section>
+
+<section id="aktuelt">
+  <div class="wrap">
+    <div class="eyebrow">Aktuelt</div>
+    <h2>Nyheter fra All10</h2>
+    <div class="news">
+      <article><h3>Ny avdelingsleder i Oslo</h3><p>Vi styrker Oslo-avdelingen for å møte økende etterspørsel i bygg.</p></article>
+      <article><h3>Nytt kontoransatt i Stavanger</h3><p>Stavanger-avdelingen utvides for å håndtere flere oppdrag i regionen.</p></article>
+      <article><h3>Ledige stillinger</h3><p>Vi rekrutterer løpende til prosjekter innen bygg, anlegg og industri.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" style="background:var(--card)">
+  <div class="wrap">
+    <div class="eyebrow">Kontakt</div>
+    <h2>Fortell oss hva du trenger</h2>
+    <div class="contact" style="margin-top:2rem">
+      <form id="leadForm">
+        <div><label for="name">Navn</label><input id="name" name="name" required></div>
+        <div><label for="company">Firma</label><input id="company" name="company"></div>
+        <div><label for="phone">Telefon</label><input id="phone" name="phone" type="tel"></div>
+        <div><label for="email">E-post</label><input id="email" name="email" type="email" required></div>
+        <div><label for="interest">Jeg er</label><input id="interest" name="interest" placeholder="Arbeidsgiver eller jobbsøker"></div>
+        <div><label for="message">Melding</label><textarea id="message" name="message"></textarea></div>
+        <button type="submit">Send henvendelse</button>
+        <p class="note" id="formNote">Skjemaet åpner e-postklienten din med opplysningene fylt inn.</p>
+      </form>
+      <div class="info">
+        <h3 style="color:var(--brand);margin-bottom:1rem">All10</h3>
+        <dl>
+          <dt>Telefon</dt><dd>51 73 27 00</dd>
+          <dt>E-post</dt><dd>post@all10.no</dd>
+          <dt>Avdelinger</dt><dd>Oslo, Stavanger, Bergen</dd>
+        </dl>
+        <p class="lead" style="margin-top:1.5rem">Vi svarer normalt innen en virkedag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>All10 – bemanning til bygg og industri</span>
+  <span>&copy; <span id="year"></span> All10</span>
+</div></footer>
+<script src="app.js"></script>
+</body>
+</html>

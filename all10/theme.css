@@ -1,0 +1,12 @@
+:root{
+  --bg:#ffffff; --fg:#0d1b2a; --muted:#5a6b7b; --card:#f7f9fb; --border:#e3e9ef;
+  --brand:#0b4f9e; --brand-2:#0a6fd1; --accent:#00b8a9; --accent-ink:#003a35;
+  --radius:10px; --sans:'Inter',system-ui,sans-serif; --display:'Archivo',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{margin:0;line-height:1.65}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.wrap{width:min(1160px,92vw);margin-inline:auto}
