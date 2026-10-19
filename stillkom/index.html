@@ -1,1 +1,122 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stillas Kompetanse AS – solid UE for stillas og reisverk</title>
+<meta name="description" content="Stillas Kompetanse AS leverer stillas og reisverk til entreprenører i hele landet. Godkjent UE, HMS-kort og sertifiserte montører.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Godkjent underentreprenør – stillas og reisverk</span><span>post@stillkom.no &nbsp;|&nbsp; 936 24 859</span></div></div>
+<nav class="main">
+  <div class="wrap">
+    <a class="logo" href="#">Still<span>kom</span></a>
+    <div class="navlinks">
+      <a href="#tjenester">Tjenester</a><a href="#hvorfor">Hvorfor oss</a><a href="#om">Om oss</a><a href="#kontakt">Kontakt</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Åpne meny" aria-expanded="false">&#9776;</button>
+  </div>
+  <div class="wrap"><div class="mobile" id="mobile">
+    <a href="#tjenester">Tjenester</a><a href="#hvorfor">Hvorfor oss</a><a href="#om">Om oss</a><a href="#kontakt">Kontakt</a>
+  </div></div>
+</nav>
+
+<header class="hero">
+  <img src="img/hero.jpg" alt="Stillas montert på byggeplass">
+  <div class="wrap">
+    <h1>Stillas og reisverk som holder prosjektet i rute</h1>
+    <p>Vi er en solid underentreprenør for stillasentreprenører og byggherrer. Riktig rigg, sertifiserte montører og dokumentasjon som tåler tilsyn.</p>
+    <a class="btn" href="#kontakt">Be om befaring</a>
+    <a class="btn ghost" href="#tjenester">Se tjenester</a>
+  </div>
+</header>
+
+<div class="strip"><div class="wrap">
+  <div><b>UE</b>Godkjent underentreprenør</div>
+  <div><b>HMS</b>Kort og kurs i orden</div>
+  <div><b>Hele landet</b>Rask mobilisering</div>
+</div></div>
+
+<section id="tjenester">
+  <div class="wrap">
+    <div class="eyebrow">Tjenester</div>
+    <h2>Alt innen stillas og reisverk</h2>
+    <p class="lead">Vi tar jobben fra prosjektering til nedrigg, og leverer dokumentasjonen som kreves underveis.</p>
+    <div class="svcs">
+      <div class="svc"><h3>Stillas</h3><p>Fasade-, innvendig- og spesialstillas tilpasset bygget og fremdriften.</p></div>
+      <div class="svc"><h3>Reisverk</h3><p>Oppsetting og nedtaking av reisverk for alle typer bygg og anlegg.</p></div>
+      <div class="svc"><h3>Rigg og sikring</h3><p>Fallskjerm, netting og sikring som holder HMS-kravene i alle faser.</p></div>
+      <div class="svc"><h3>Befaring og prosjektering</h3><p>Vi vurderer behovet på stedet og setter opp en plan som passer fremdriften.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="hvorfor">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow" style="color:var(--accent)">Hvorfor oss</div>
+      <h2>En UE som gjør det enkelt for hovedentreprenøren</h2>
+      <p class="lead">Vi vet at stillas sjelden er det største problemet på byggeplassen – men det blir det hvis riggen kommer for sent eller dokumentasjonen mangler.</p>
+      <ul class="checks">
+        <li>Sertifiserte montører med gyldig HMS-kort</li>
+        <li>Fast kontaktperson gjennom hele prosjektet</li>
+        <li>Dokumentasjon levert for tilsyn og sluttbefaring</li>
+        <li>Rask mobilisering i hele landet</li>
+      </ul>
+    </div>
+    <img src="img/work.jpg" alt="Montør arbeider på stillas">
+  </div>
+</section>
+
+<section id="om">
+  <div class="wrap split">
+    <img src="img/team.jpg" alt="Teamet i Stillas Kompetanse">
+    <div>
+      <div class="eyebrow">Om oss</div>
+      <h2>Stillas Kompetanse AS</h2>
+      <p class="lead">Vi er et spesialisert stillasfirma som jobber som underentreprenør for entreprenører og byggherrer. Fagkunnskapen er vår, og vi stiller med mannskap som kjenner kravene i NS 9700 og HMS-forskriftene.</p>
+      <p class="lead">Kontakt oss tidlig i prosjektet, så planlegger vi riggen sammen med dere.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" style="background:#eef1f4">
+  <div class="wrap">
+    <div class="eyebrow">Kontakt</div>
+    <h2>Be om befaring eller tilbud</h2>
+    <div class="contact" style="margin-top:2rem">
+      <form id="leadForm">
+        <div><label for="name">Navn</label><input id="name" name="name" required></div>
+        <div><label for="company">Firma</label><input id="company" name="company"></div>
+        <div><label for="phone">Telefon</label><input id="phone" name="phone" type="tel"></div>
+        <div><label for="email">E-post</label><input id="email" name="email" type="email" required></div>
+        <div><label for="interest">Gjelder</label><input id="interest" name="interest" placeholder="Stillas, reisverk, befaring"></div>
+        <div><label for="message">Melding</label><textarea id="message" name="message"></textarea></div>
+        <button type="submit">Send henvendelse</button>
+        <p class="note" id="formNote">Skjemaet åpner e-postklienten din med opplysningene fylt inn.</p>
+      </form>
+      <div class="info">
+        <h3 style="color:var(--brand);margin-bottom:1rem">Kontaktinformasjon</h3>
+        <dl>
+          <dt>Telefon</dt><dd>936 24 859</dd>
+          <dt>E-post</dt><dd>post@stillkom.no</dd>
+          <dt>Administrasjon</dt><dd>tt@stillkom.no</dd>
+          <dt>Prosjekt</dt><dd>thn@stillkom.no</dd>
+        </dl>
+        <p class="lead" style="margin-top:1.5rem">Vi svarer normalt innen en virkedag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <span>Stillas Kompetanse AS</span>
+  <span>&copy; <span id="year"></span> Stillas Kompetanse AS</span>
+</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
