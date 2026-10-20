@@ -47,10 +47,10 @@
     manus: 'Manus og hooks',
     produksjon: 'Videoproduksjon',
     redigering: 'Klipping',
-    annonsering: 'Betalt annonsering',
+    annonsering: 'Annonsering',
     analyse: 'Teknisk analyse',
-    iterasjon: 'Iterasjon og skalering',
-    rapportering: 'Månedlig rapportering',
+    iterasjon: 'Iterasjon',
+    rapportering: 'Rapportering',
     team: 'Dedikert team',
     lipsync: 'AI-lipsync',
     ai: 'AI-varianter'
@@ -205,13 +205,18 @@
     resultatInnhold.hidden = false;
     resultatInnhold.textContent = '';
 
+    /* Vis den bredeste riggen først, så kombinasjonen leses som hovedrigg pluss tillegg. */
+    valgt = valgt.slice().sort(function (a, b) {
+      return RIGGER[b].dekker.length - RIGGER[a].dekker.length;
+    });
+
     var navn = valgt.map(function (id) {
       return RIGGER[id].navn;
     });
 
     var topp = el('div', 'resultat__topp');
+    topp.appendChild(el('p', 'resultat__tag', valgt.length === 1 ? RIGGER[valgt[0]].tag : 'Kombinasjon'));
     topp.appendChild(el('h3', null, navn.join(' + ')));
-    topp.appendChild(el('span', 'resultat__tag', valgt.length === 1 ? RIGGER[valgt[0]].tag : 'Kombinasjon'));
     resultatInnhold.appendChild(topp);
 
     if (valgt.length > 1) {
@@ -236,9 +241,11 @@
     resultatInnhold.appendChild(liste);
 
     resultatInnhold.appendChild(el('p', 'resultat__meta', 'Involvering fra din side: ' +
-      valgt.map(function (id) {
-        return RIGGER[id].navn + ' ' + RIGGER[id].involvering;
-      }).join(' · ')));
+      (valgt.length === 1
+        ? RIGGER[valgt[0]].involvering
+        : valgt.map(function (id) {
+          return RIGGER[id].involvering + ' (' + RIGGER[id].navn + ')';
+        }).join(' · '))));
 
     var merknad = el('p', 'resultat__merknad',
       'Anbefalingen bygger bare på hva riggene inneholder på fulciomedia.no. Endelig omfang avtales i en samtale.');
