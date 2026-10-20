@@ -84,6 +84,15 @@ main a:not(.knapp),
   outline-color: var(--rod);
 }
 
+/* ========== Anker og rulling ==========
+   Sticky topp stjeler 72 px: både ankerlenker og scrollIntoView må vite det. */
+
+section[id],
+#foresporsel-kort,
+.kvittering {
+  scroll-margin-top: calc(var(--header-h) + 14px);
+}
+
 /* ========== Topp ========== */
 
 .topp {

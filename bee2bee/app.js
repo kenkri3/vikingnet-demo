@@ -8,31 +8,7 @@
 (function () {
   'use strict';
 
-  var root = document.documentElement;
-
-  /* ============ 1. Myk inngang på seksjonene ============ */
-  (function () {
-    var roligBevegelse = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (roligBevegelse || !('IntersectionObserver' in window) || !document.querySelector('.reveal')) return;
-    try {
-      root.classList.add('js');
-      var obs = new IntersectionObserver(function (oppforinger) {
-        oppforinger.forEach(function (o) {
-          if (o.isIntersecting) {
-            o.target.classList.add('is-visible');
-            obs.unobserve(o.target);
-          }
-        });
-      }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
-      Array.prototype.forEach.call(document.querySelectorAll('.reveal'), function (el) {
-        obs.observe(el);
-      });
-    } catch (feil) {
-      root.classList.remove('js');
-    }
-  })();
-
-  /* ============ 2. Mobilmeny ============ */
+  /* ============ 1. Mobilmeny ============ */
   (function () {
     var knapp = document.getElementById('navToggle');
     var nav = document.getElementById('nav');
@@ -48,6 +24,10 @@
       sett(nav.hidden);
     });
 
+    /* Uten JavaScript står menyen åpen i markupen. På mobil lukker vi den
+       med én gang scriptet kjører, så den ikke dekker forsiden. */
+    if (window.innerWidth <= 900) sett(false);
+
     nav.addEventListener('click', function (e) {
       if (e.target.closest('a')) sett(false);
     });
@@ -60,9 +40,13 @@
     });
 
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 900 && nav.hidden) {
-        nav.hidden = false;
-        knapp.setAttribute('aria-expanded', 'false');
+      if (window.innerWidth > 900) {
+        if (nav.hidden) {
+          nav.hidden = false;
+          knapp.setAttribute('aria-expanded', 'false');
+        }
+      } else if (!nav.hidden) {
+        sett(false);
       }
     });
   })();

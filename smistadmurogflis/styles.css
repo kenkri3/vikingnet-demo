@@ -86,6 +86,11 @@ h1 {
   transform: translateY(-160%);
 }
 
+/* Ankerhopp skal ikke havne under den klebrige headeren. */
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 18px);
+}
+
 .skip:focus {
   transform: none;
 }
@@ -127,6 +132,12 @@ h1 {
   gap: 0 1.4rem;
 }
 
+@media (max-width: 700px) {
+  .toppstripe__merke {
+    display: none;
+  }
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -150,6 +161,8 @@ h1 {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
+  min-height: 44px;
+  padding-block: 0.15rem;
   text-decoration: none;
   flex: 0 0 auto;
 }
@@ -201,7 +214,8 @@ h1 {
 .site-nav a {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
+  padding-inline: 0.5rem;
   font-size: 0.96rem;
   font-weight: 500;
   color: var(--blekk);
@@ -687,10 +701,11 @@ h1 {
 .prosjekt figcaption {
   position: absolute;
   inset: auto 0 0;
-  padding: 1.6rem 1rem 0.85rem;
-  background: linear-gradient(to top, rgb(10 11 12 / 88%), rgb(10 11 12 / 0%));
+  padding: 2.4rem 1rem 0.85rem;
+  background: linear-gradient(to top, rgb(8 9 10 / 96%) 34%, rgb(8 9 10 / 74%) 62%, rgb(8 9 10 / 0%));
   font-size: var(--t-sm);
-  color: rgb(244 240 232 / 82%);
+  color: rgb(244 240 232 / 88%);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 45%);
 }
 
 .prosjekt figcaption strong {
@@ -703,21 +718,18 @@ h1 {
 
 @media (min-width: 820px) {
   .prosjekt-grid {
-    grid-template-columns: 1.35fr 1fr;
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: repeat(3, clamp(150px, 14.5vw, 205px));
   }
 
   .prosjekt-grid .prosjekt:first-child {
-    grid-row: span 2;
+    grid-row: span 3;
   }
 
   .prosjekt img {
-    max-height: none;
-  }
-
-  .prosjekt-grid .prosjekt:first-child img {
     height: 100%;
-    min-height: 100%;
+    max-height: none;
+    min-height: 0;
   }
 }
 
@@ -1113,11 +1125,12 @@ h1 {
 }
 
 .person__linje {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 0.92rem;
   color: var(--blekk);
   text-decoration: none;
-  padding: 0.15rem 0;
 }
 
 .person__linje:hover {

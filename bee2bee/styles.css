@@ -88,7 +88,8 @@
   color: var(--gull-dyp);
 }
 
-.nav__cta {
+.nav__cta,
+.nav a.nav__cta {
   padding-inline: 1.15rem !important;
   color: var(--paa-navy);
   border-radius: var(--radius-sm);
@@ -99,7 +100,7 @@
   margin-block: 0.5rem;
 }
 
-.nav__cta:hover {
+.nav a.nav__cta:hover {
   background: var(--navy-dyp);
   color: #fff;
 }
@@ -165,7 +166,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(0.9rem, 2vw, 1.6rem);
-  margin: 0;
+  margin: clamp(1.8rem, 4vw, 3rem) 0 0;
   padding-top: clamp(1.1rem, 2.4vw, 1.6rem);
   border-top: 1px solid var(--line-sterk);
 }
@@ -189,6 +190,8 @@
 /* Kortet i heroen: der henvendelsen starter */
 .hero__kort {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: var(--navy);
   color: var(--paa-navy);
   border-radius: var(--radius);
@@ -229,8 +232,8 @@
 }
 
 .hero__kort-note {
-  margin: 1rem 0 0;
-  padding-top: 0.9rem;
+  margin-top: auto;
+  padding-top: 1.2rem;
   border-top: 1px solid color-mix(in srgb, var(--paa-navy) 18%, transparent);
   font-size: 0.86rem;
   color: var(--paa-navy-dempet);
@@ -560,11 +563,14 @@
   max-width: 34ch;
 }
 
+.sitat blockquote .sitat__merke,
 .sitat__merke {
+  font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  line-height: 1.5;
   color: color-mix(in srgb, var(--navy-dyp) 72%, transparent);
   margin: 0 0 0.9rem;
 }
@@ -586,6 +592,14 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1.2rem, 2.6vw, 2.2rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team__grid > li {
+  margin: 0;
+  list-style: none;
 }
 
 .person__bilde {

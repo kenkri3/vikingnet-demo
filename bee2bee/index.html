@@ -76,7 +76,7 @@
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="nav" id="nav" aria-label="Hovedmeny" hidden>
+    <nav class="nav" id="nav" aria-label="Hovedmeny">
       <a href="#tjenester">Tjenester</a>
       <a href="#slik">Slik jobber vi</a>
       <a href="#team">Team</a>
@@ -89,49 +89,52 @@
 
   <!-- ============ Hero ============ -->
   <section class="hero" aria-labelledby="hero-tittel">
-    <div class="wrap hero__grid">
-      <div class="hero__kopi">
-        <p class="eyebrow">Rekruttering og bemanning · Tistedal i Halden</p>
-        <h1 id="hero-tittel">Mennesker i <span class="aksent">full blomst</span>.</h1>
-        <p class="hero__ingress">
-          Bee2Bee Talent Solutions handler om å koble mennesker og virksomheter på en
-          smart og effektiv måte. Vi finner talentene som skaper vekst, og hjelper
-          selskaper med å bygge sterke team og fremtidsrettede organisasjoner.
-        </p>
-        <div class="hero__cta">
-          <a class="btn" href="#book">Book en samtale</a>
-          <a class="btn btn--linje" href="#tjenester">Se tjenestene</a>
+    <div class="wrap">
+      <div class="hero__grid">
+        <div class="hero__kopi">
+          <p class="eyebrow">Rekruttering og bemanning · Tistedal i Halden</p>
+          <h1 id="hero-tittel">Mennesker i <span class="aksent">full blomst</span>.</h1>
+          <p class="hero__ingress">
+            Bee2Bee Talent Solutions handler om å koble mennesker og virksomheter på en
+            smart og effektiv måte. Vi finner talentene som skaper vekst, og hjelper
+            selskaper med å bygge sterke team og fremtidsrettede organisasjoner.
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#book">Book en samtale</a>
+            <a class="btn btn--linje" href="#tjenester">Se tjenestene</a>
+          </div>
         </div>
-        <dl class="hero__fakta">
-          <div>
-            <dt>Etablert</dt>
-            <dd>2013, av Frode Grosvold</dd>
+
+        <aside class="hero__kort" aria-labelledby="kort-tittel">
+          <h2 class="hero__kort-tittel" id="kort-tittel">Hva trenger dere hjelp med?</h2>
+          <p class="hero__kort-tekst">Velg tjenesten det gjelder, så starter vi henvendelsen med riktig utgangspunkt.</p>
+          <div class="chips" role="group" aria-label="Velg tjeneste">
+            <button class="chip" type="button" data-tjeneste="Search &amp; Selection" aria-pressed="false">Search &amp; Selection</button>
+            <button class="chip" type="button" data-tjeneste="Executive Search" aria-pressed="false">Executive Search</button>
+            <button class="chip" type="button" data-tjeneste="People Works" aria-pressed="false">People Works</button>
+            <button class="chip" type="button" data-tjeneste="Leadership Network" aria-pressed="false">Leadership Network</button>
+            <button class="chip" type="button" data-tjeneste="Annet" aria-pressed="false">Annet</button>
           </div>
-          <div>
-            <dt>Sertifisering</dt>
-            <dd>DNV-sertifiserte rekrutterere</dd>
-          </div>
-          <div>
-            <dt>Base</dt>
-            <dd>Høstbakken 11, Tistedal</dd>
-          </div>
-        </dl>
+          <p class="hero__kort-note">
+            eller ring <a href="tel:+4748957500">+47 48 95 75 00</a>.
+          </p>
+        </aside>
       </div>
 
-      <aside class="hero__kort" aria-labelledby="kort-tittel">
-        <h2 class="hero__kort-tittel" id="kort-tittel">Hva trenger dere hjelp med?</h2>
-        <p class="hero__kort-tekst">Velg tjenesten det gjelder, så starter vi henvendelsen med riktig utgangspunkt.</p>
-        <div class="chips" role="group" aria-label="Velg tjeneste">
-          <button class="chip" type="button" data-tjeneste="Search &amp; Selection" aria-pressed="false">Search &amp; Selection</button>
-          <button class="chip" type="button" data-tjeneste="Executive Search" aria-pressed="false">Executive Search</button>
-          <button class="chip" type="button" data-tjeneste="People Works" aria-pressed="false">People Works</button>
-          <button class="chip" type="button" data-tjeneste="Leadership Network" aria-pressed="false">Leadership Network</button>
-          <button class="chip" type="button" data-tjeneste="Annet" aria-pressed="false">Annet</button>
+      <dl class="hero__fakta">
+        <div>
+          <dt>Etablert</dt>
+          <dd>2013, av Frode Grosvold</dd>
         </div>
-        <p class="hero__kort-note">
-          eller ring <a href="tel:+4748957500">+47 48 95 75 00</a>.
-        </p>
-      </aside>
+        <div>
+          <dt>Sertifisering</dt>
+          <dd>DNV-sertifiserte rekrutterere</dd>
+        </div>
+        <div>
+          <dt>Base</dt>
+          <dd>Høstbakken 11, Tistedal</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
@@ -152,7 +155,7 @@
   <!-- ============ Tjenester ============ -->
   <section class="section" id="tjenester" aria-labelledby="tjenester-tittel">
     <div class="wrap">
-      <div class="hode reveal">
+      <div class="hode">
         <div>
           <p class="eyebrow">01 · Tjenester</p>
           <h2 id="tjenester-tittel">Fire tjenester — og en på vei</h2>
@@ -246,7 +249,7 @@
                 <span class="tj__merke">Kommer</span>
               </div>
               <p class="tj__beskrivelse">
-                Egen tjeneste under etablering. Foreløpig ikke åpen for henvendelser.
+                Egen tjeneste under etablering.
               </p>
             </div>
           </div>
@@ -258,7 +261,7 @@
   <!-- ============ Slik jobber vi ============ -->
   <section class="section prosess band" id="slik" aria-labelledby="slik-tittel">
     <div class="wrap">
-      <div class="hode reveal">
+      <div class="hode">
         <div>
           <p class="eyebrow eyebrow--lys">02 · Slik jobber vi</p>
           <h2 id="slik-tittel">Fra behov til ansettelse</h2>
@@ -280,7 +283,7 @@
             <span class="steg__nr" aria-hidden="true">01</span>
             <div>
               <h3>Behovsanalyse og jobbanalyse</h3>
-              <p>Vi starter med behovsanalyse og jobbanalyse, og blir enige om hva rollen skal løse.</p>
+              <p>Behovsanalyse og jobbanalyse — grunnlaget for hele rekrutteringsprosessen.</p>
             </div>
           </li>
           <li class="steg">
@@ -305,7 +308,7 @@
   <!-- ============ Verdier ============ -->
   <section class="section" id="derfor" aria-labelledby="derfor-tittel">
     <div class="wrap">
-      <div class="hode reveal">
+      <div class="hode">
         <div>
           <p class="eyebrow">03 · Derfor Bee2Bee</p>
           <h2 id="derfor-tittel">Kvalitet, fleksibilitet og skreddersøm</h2>
@@ -371,15 +374,14 @@
   <!-- ============ Team ============ -->
   <section class="section" id="team" aria-labelledby="team-tittel">
     <div class="wrap">
-      <div class="hode reveal">
+      <div class="hode">
         <div>
           <p class="eyebrow">04 · Teamet</p>
           <h2 id="team-tittel">Folkene dere møter</h2>
         </div>
         <p class="lead">
           Vårt hovedfokus er at både medarbeider og arbeidsgiver skal oppleve en
-          rikere arbeidsdag. Hos oss er det de samme tre personene som tar
-          henvendelsen, prosessen og oppfølgingen.
+          rikere arbeidsdag. Dette er teamet vårt.
         </p>
       </div>
 
