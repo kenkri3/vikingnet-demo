@@ -1,0 +1,61 @@
+/*
+  Framtidsfylket — eigen palett og typografi.
+  Fargene er henta frå deira eigne profilfarger på framtidsfylket.no:
+  djup teal (#006263), mint (#c5e5d3), bleikrosa (#fce3ed), korall (#fd6262)
+  og smørgul (#fff2c4). Logoen deira er svart i kvit, så blekk er nesten svart.
+
+  Rekkjefølgje i <head>: ../kit/base.css  →  theme.css  →  styles.css
+*/
+
+:root {
+  color-scheme: light;
+
+  --bg: #f7f8f4;
+  --bg-soft: #edf2ec;
+  --fg: #0b1614;
+  --muted: #4c5d58;
+  --line: #d8e2da;
+
+  --accent: #006263;
+  --accent-fg: #ffffff;
+  --accent-soft: #c5e5d3;
+  --coral: #fd6262;
+  --coral-deep: #b8333f;
+  --pink: #fce3ed;
+  --butter: #fff2c4;
+
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+
+  --radius: 22px;
+  --radius-sm: 12px;
+  --shadow: 0 1px 2px rgb(6 32 30 / 4%), 0 20px 48px rgb(6 32 30 / 8%);
+  --wrap: 1160px;
+  --header-h: 76px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+}
+
+h1 { line-height: 0.98; }
+
+h1 em,
+h2 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--fg);
+}

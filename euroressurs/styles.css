@@ -1,0 +1,1591 @@
+/*
+  euroRessurs AS — layout og komponenter.
+  Lastes etter kit/base.css og theme.css. Ingen avhengigheter, ingen sporing.
+
+  Rekkefølgen på siden er med vilje: bevis først (referanseprosjekter),
+  deretter hvem vi leverer, hva de kan, hvordan det foregår, og til slutt
+  forespørselen. Alt kan brukes uten JavaScript; skriptet legger bare på
+  bevegelse, meny og kvittering.
+*/
+
+/* ------------------------------------------------------------------ *
+ * Grunnlag
+ * ------------------------------------------------------------------ */
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-size: var(--t-base);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: var(--t-h2);
+  line-height: 1.05;
+}
+
+h2 em,
+h1 em {
+  font-style: italic;
+}
+
+p a {
+  color: var(--navy);
+}
+
+.lead {
+  font-size: var(--t-lead);
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* Etikett over overskrifter: mørk tekst, lime firkant som merke.
+   Lime som tekst på papir blir for lyst til å leses. */
+.eyebrow {
+  color: var(--navy);
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  gap: 0.55rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--lime);
+  flex: none;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.2rem, 3vw, 3rem);
+  align-items: end;
+  margin-bottom: clamp(1.8rem, 3.4vw, 3rem);
+}
+
+.section-head h2 {
+  margin-bottom: 0;
+}
+
+.section-head .lead {
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 860px) {
+  .section-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+/* Hopp til innhold: utenfor skjermen, men ikke til venstre for den —
+   da ville den blitt målt som «utenfor» i QA. */
+.skip {
+  position: absolute;
+  top: -120px;
+  left: 1rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.75rem 1.1rem;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+}
+
+.skip:focus-visible {
+  top: 0.6rem;
+  outline-color: var(--lime);
+}
+
+/* ------------------------------------------------------------------ *
+ * Knapper
+ * ------------------------------------------------------------------ */
+
+.btn {
+  min-height: 48px;
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  background: var(--navy);
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background: var(--navy-soft);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.btn--lime {
+  background: var(--lime);
+  color: var(--navy-deep);
+}
+
+.btn--lime:hover {
+  background: #6ad90a;
+  color: var(--navy-deep);
+}
+
+.btn--outline {
+  background: transparent;
+  color: #eef1ea;
+  border: 1px solid rgb(255 255 255 / 34%);
+}
+
+.btn--outline:hover {
+  background: rgb(255 255 255 / 8%);
+  color: #fff;
+}
+
+.btn--line {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--line-2);
+}
+
+.btn--line:hover {
+  background: var(--surface);
+  color: var(--navy);
+}
+
+.btn--small {
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  font-size: 0.88rem;
+}
+
+/* Fokus skal synes både på papir og på marineblått. */
+:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
+
+.on-dark :focus-visible,
+.behov :focus-visible,
+.hero :focus-visible,
+.steder :focus-visible,
+.footer :focus-visible {
+  outline-color: var(--lime);
+}
+
+/* ------------------------------------------------------------------ *
+ * Header
+ * ------------------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--line);
+  background: color-mix(in srgb, var(--paper) 98%, transparent);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 44px;
+  width: auto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.9rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-list a:hover {
+  border-bottom-color: var(--lime);
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
+}
+
+.nav-toggle[aria-expanded='true'] span {
+  box-shadow: none;
+  transform: rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] span::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 980px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: absolute;
+    inset: var(--header-h) 0 auto;
+    display: none;
+    padding: 0.4rem clamp(18px, 4vw, 32px) 1.4rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  .nav.is-open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-list a {
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 0;
+  }
+
+  .header-cta .btn {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Hero — bilde i full bredde, med et dokumentpanel som overlapper
+ * ------------------------------------------------------------------ */
+
+.hero {
+  background: var(--paper);
+  padding-bottom: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.hero-media {
+  position: relative;
+  height: clamp(300px, 44vw, 540px);
+  overflow: hidden;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 52% 42%;
+}
+
+.hero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0 22 64 / 12%) 0%, rgb(0 22 64 / 46%) 100%);
+  pointer-events: none;
+}
+
+.hero .wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(-84px, -6vw, -44px);
+}
+
+.hero-panel {
+  position: relative;
+  background: var(--navy);
+  border-top: 4px solid var(--lime);
+  padding: clamp(1.4rem, 3.4vw, 3.2rem);
+  color: #eef1ea;
+}
+
+.hero-panel h1 {
+  color: #fff;
+  font-size: var(--t-h1);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  margin-bottom: clamp(1.2rem, 2.4vw, 2rem);
+  max-width: 24ch;
+}
+
+.hero-panel .eyebrow {
+  color: #cfd8e8;
+}
+
+.hero-panel h1 em {
+  color: var(--lime);
+}
+
+.hero-foot {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+  align-items: end;
+  border-top: 1px solid rgb(255 255 255 / 16%);
+  padding-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+.hero-lead {
+  color: #c6d0e2;
+  font-size: var(--t-lead);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 54ch;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 860px) {
+  .hero .wrap {
+    margin-top: -1px;
+  }
+
+  .hero-foot {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-cta {
+    justify-content: flex-start;
+  }
+
+  .hero-panel {
+    border-top-width: 5px;
+  }
+
+  .hero-media {
+    height: clamp(220px, 52vw, 340px);
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Fakta — tynn linje med tall, som et datablad
+ * ------------------------------------------------------------------ */
+
+.fakta {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding-top: clamp(1.4rem, 3vw, 2.2rem);
+}
+
+.fakta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+}
+
+.fakta-item {
+  padding: 0 clamp(0.9rem, 2vw, 1.6rem) clamp(1rem, 2vw, 1.5rem) ;
+  border-left: 1px solid var(--line);
+}
+
+.fakta-item:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.fakta-num {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  line-height: 1;
+  color: var(--navy);
+  font-variant-numeric: lining-nums tabular-nums;
+  margin: 0;
+}
+
+.fakta-label {
+  margin: 0.35rem 0 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.fakta-note {
+  margin: 0;
+  padding-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .fakta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem 0;
+  }
+
+  .fakta-item:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Referanser — en oppdragsjournal, ikke kort med skygger
+ * ------------------------------------------------------------------ */
+
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.ref-card {
+  background: var(--paper);
+  padding: clamp(1.1rem, 2.4vw, 1.9rem);
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  transition: background 0.2s ease;
+}
+
+.ref-card:hover {
+  background: var(--surface);
+}
+
+.ref-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ref-top h3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  line-height: 1.1;
+  margin: 0;
+  color: var(--navy);
+}
+
+.ref-periode {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.ref-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+.ref-meta div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.ref-meta dt {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ref-meta dd {
+  margin: 0;
+  font-size: 0.93rem;
+  color: var(--ink);
+}
+
+.ref-note {
+  margin: clamp(1.2rem, 2.4vw, 1.8rem) 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.ref-kunder {
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.ref-kunder p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.ref-kunder strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .ref-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Roller
+ * ------------------------------------------------------------------ */
+
+.roller {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.roller-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(1.6rem, 5vw, 4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.rolle {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: 0.2rem 0.9rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.rolle-num {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--lime-deep);
+  line-height: 1.5;
+}
+
+.rolle h3 {
+  font-size: var(--t-h3);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  margin: 0 0 0.2rem;
+  color: var(--navy);
+}
+
+.rolle p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  grid-column: 2;
+}
+
+@media (max-width: 760px) {
+  .roller-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Fagområder — mørk seksjon med bilde
+ * ------------------------------------------------------------------ */
+
+.fag {
+  background: var(--navy);
+  color: #eef1ea;
+}
+
+.fag .eyebrow {
+  color: #cfd8e8;
+}
+
+.fag h2 {
+  color: #fff;
+}
+
+.fag .lead {
+  color: #bcc8dd;
+}
+
+.fag-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(1.6rem, 4vw, 3.4rem);
+  align-items: start;
+}
+
+.fag-fig {
+  margin: 0;
+  position: relative;
+}
+
+.fag-fig img {
+  width: 100%;
+  height: clamp(320px, 46vw, 560px);
+  object-fit: cover;
+  object-position: 50% 45%;
+}
+
+.fag-fig figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  color: #a9b7cf;
+  line-height: 1.45;
+}
+
+.fag-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem clamp(1.2rem, 3vw, 2.4rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fag-item {
+  border-top: 1px solid rgb(255 255 255 / 18%);
+  padding-top: 0.85rem;
+}
+
+.fag-num {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--lime);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.fag-item h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.25rem;
+  letter-spacing: 0;
+}
+
+.fag-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #b3c0d6;
+}
+
+@media (max-width: 900px) {
+  .fag-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fag-fig img {
+    height: clamp(220px, 44vw, 340px);
+  }
+}
+
+@media (max-width: 560px) {
+  .fag-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Slik jobber vi
+ * ------------------------------------------------------------------ */
+
+.prosess-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(1.6rem, 4vw, 3.6rem);
+  align-items: start;
+}
+
+.prosess-fig {
+  margin: 0;
+}
+
+.prosess-fig img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+.prosess-fig figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  gap: 0.3rem 1rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.step-num {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: var(--lime);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+}
+
+.step h3 {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0.55rem 0 0.15rem;
+  letter-spacing: 0;
+}
+
+.step p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.godkj {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.godkj h3 {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.godkj ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.godkj li {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--line-2);
+  background: var(--surface);
+  font-size: 0.82rem;
+  color: var(--navy);
+}
+
+@media (max-width: 860px) {
+  .prosess-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Bemanningsforespørsel — skjema og kvittering
+ * ------------------------------------------------------------------ */
+
+.behov {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+
+.behov-head {
+  margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+  max-width: 72ch;
+}
+
+.behov-head h2 {
+  max-width: 30ch;
+}
+
+.behov-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: clamp(1.4rem, 3vw, 3rem);
+  align-items: start;
+}
+
+.skjema-kort {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.1rem, 2.4vw, 1.9rem);
+  box-shadow: var(--shadow);
+}
+
+.behov-form {
+  display: grid;
+  gap: 1.15rem;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+.felt {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.felt > .felt-label,
+.felt > span:first-child {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.felt select,
+.felt input,
+.felt textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.felt textarea {
+  min-height: 88px;
+}
+
+.felt select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%),
+    linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(50% + 2px), calc(100% - 14px) calc(50% + 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.4rem;
+}
+
+.felt input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  max-width: 5.4rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.felt input[type='number']::-webkit-outer-spin-button,
+.felt input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.felt input:focus-visible,
+.felt select:focus-visible,
+.felt textarea:focus-visible {
+  border-color: var(--navy);
+}
+
+.felt[data-invalid] select,
+.felt[data-invalid] input,
+.felt[data-invalid] textarea {
+  border-color: #b3261e;
+  background: #fdf3f2;
+}
+
+.felt-feil {
+  font-size: 0.83rem;
+  color: #8f1d16;
+  min-height: 0;
+}
+
+.felt-feil:empty {
+  display: none;
+}
+
+.felt-rad {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) auto;
+  gap: 0.9rem;
+  align-items: end;
+}
+
+.teller {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.teller-knapp {
+  flex: none;
+  width: 44px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.teller-knapp:hover {
+  background: var(--surface);
+  border-color: var(--navy);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--navy);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+.chip[aria-pressed='true']::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--lime);
+  flex: none;
+}
+
+.skjema-handling {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+  padding-top: 0.2rem;
+}
+
+.form-status {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--navy);
+  line-height: 1.45;
+}
+
+/* Låst skjema etter registrering: fortsatt lesbart, tydelig utilgjengelig. */
+.felt input:disabled,
+.felt select:disabled,
+.felt textarea:disabled {
+  background: var(--paper);
+  color: #46505b;
+  border-color: var(--line);
+  cursor: not-allowed;
+}
+
+.chip:disabled,
+.teller-knapp:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.chip[aria-pressed='true']:disabled {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+  opacity: 1;
+}
+
+.btn:disabled {
+  background: var(--paper-2);
+  color: #46505b;
+  border: 1px solid var(--line-2);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+.form-status.is-error {
+  color: #8f1d16;
+}
+
+.skjema-note {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+  border-top: 1px dashed var(--line-2);
+  padding-top: 0.8rem;
+}
+
+/* Kvitteringen */
+
+.kvittering {
+  position: sticky;
+  top: calc(var(--header-h) + 1.2rem);
+  background: var(--surface);
+  border: 1px solid var(--navy);
+  border-radius: var(--radius);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+}
+
+.kv-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px dashed var(--line-2);
+}
+
+.kv-top h3 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin: 0;
+}
+
+.kv-stempel {
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line-2);
+  padding: 0.2rem 0.45rem;
+  transform: rotate(-2deg);
+  white-space: nowrap;
+}
+
+.kvittering.is-done .kv-stempel {
+  color: var(--navy-deep);
+  background: var(--lime);
+  border-color: var(--lime);
+}
+
+.kv-rader {
+  display: grid;
+  margin: 0;
+  gap: 0;
+}
+
+.kv-rad {
+  display: grid;
+  grid-template-columns: 6.6rem minmax(0, 1fr);
+  gap: 0.6rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dotted var(--line);
+}
+
+.kv-rad:last-child {
+  border-bottom: 0;
+}
+
+.kv-rad dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.12rem;
+}
+
+.kv-rad dd {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.kv-rad dd.is-tom {
+  color: #9aa4ad;
+}
+
+.kv-referanse {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.7rem 0.8rem;
+  background: var(--paper-2);
+  border-radius: var(--radius-sm);
+}
+
+.kv-referanse span {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kv-referanse strong {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+}
+
+.kv-handlinger {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.kv-handlinger .btn {
+  width: 100%;
+}
+
+.kv-handlinger[hidden] {
+  display: none;
+}
+
+.kv-fot {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.behov-side {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.behov-fig {
+  margin: 0;
+}
+
+.behov-fig img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.behov-fig figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+@media (max-width: 940px) {
+  .behov-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kvittering {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .felt-rad {
+    grid-template-columns: 1fr;
+  }
+
+  .kv-rad {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Folk
+ * ------------------------------------------------------------------ */
+
+.folk {
+  background: var(--paper);
+}
+
+.folk-om {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.4rem, 3vw, 3rem);
+  align-items: start;
+  margin-bottom: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.folk-om h2 {
+  margin-bottom: 0;
+}
+
+.folk-om p {
+  margin-bottom: 0.7rem;
+  color: var(--muted);
+}
+
+.folk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.folk-card {
+  background: var(--surface);
+  padding: clamp(1rem, 2vw, 1.6rem);
+  display: grid;
+  align-content: start;
+  gap: 0.15rem;
+}
+
+.folk-rolle {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--lime-deep);
+  margin: 0;
+}
+
+.folk-navn {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.15;
+  color: var(--navy);
+  margin: 0.15rem 0 0.6rem;
+}
+
+.folk-lenker {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.folk-lenker a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.9rem;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.folk-lenker a:hover {
+  border-bottom-color: var(--lime);
+}
+
+@media (max-width: 860px) {
+  .folk-om {
+    grid-template-columns: 1fr;
+  }
+
+  .folk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Steder
+ * ------------------------------------------------------------------ */
+
+.steder {
+  background: var(--navy);
+  color: #dfe6f2;
+}
+
+.steder h2 {
+  color: #fff;
+}
+
+.steder .lead {
+  color: #bcc8dd;
+}
+
+.steder .eyebrow {
+  color: #cfd8e8;
+}
+
+.steder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: rgb(255 255 255 / 16%);
+  border: 1px solid rgb(255 255 255 / 16%);
+}
+
+.sted {
+  background: var(--navy);
+  padding: clamp(1.2rem, 2.6vw, 2.2rem);
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+}
+
+.sted-land {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lime);
+  margin: 0;
+}
+
+.sted address {
+  font-style: normal;
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  line-height: 1.35;
+  color: #fff;
+}
+
+.sted-lenker {
+  display: grid;
+  gap: 0.1rem;
+  margin-top: 0.3rem;
+}
+
+.sted-lenker a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  font-size: 0.95rem;
+  color: #dbe3f1;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.sted-lenker a:hover {
+  color: #fff;
+  border-bottom-color: var(--lime);
+}
+
+.sted-note {
+  margin: 0.4rem 0 0;
+  font-size: 0.82rem;
+  color: #a9b7cf;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .steder-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Footer
+ * ------------------------------------------------------------------ */
+
+.footer {
+  background: var(--navy-deep);
+  color: #93a3bd;
+  padding-block: clamp(2.2rem, 4vw, 3.4rem) 1.6rem;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #dbe3f1;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--lime);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 0.85fr));
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+}
+
+.footer-brand img {
+  height: 46px;
+  width: auto;
+  margin-bottom: 0.9rem;
+}
+
+.footer p {
+  margin: 0 0 0.35rem;
+  max-width: 34ch;
+}
+
+.footer h3 {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f0f3f8;
+  margin: 0 0 0.5rem;
+}
+
+.footer address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer-lenker {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-lenker a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6rem 1.4rem;
+  font-size: 0.8rem;
+  color: #7f90ac;
+}
+
+.footer-bottom p {
+  margin: 0;
+  max-width: none;
+}
+
+@media (max-width: 760px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

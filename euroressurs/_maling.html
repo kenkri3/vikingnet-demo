@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<title>maling</title>
+<style>
+  html,body{margin:0;background:#101418;color:#e8eef4;font:13px/1.45 ui-monospace,Consolas,monospace}
+  #ut{padding:14px 18px;white-space:pre-wrap}
+  iframe{position:absolute;left:-20000px;top:0;border:0;background:#fff}
+  .feil{color:#ff9b93}.ok{color:#7ee2a8}
+</style>
+</head>
+<body>
+<div id="ut">måler …</div>
+<iframe id="ramme" src="index.html" width="390" height="900" title="demo"></iframe>
+<script>
+(function () {
+  var w = Number(new URLSearchParams(location.search).get('w') || 390);
+  var ramme = document.getElementById('ramme');
+  var ut = document.getElementById('ut');
+  ramme.width = w;
+
+  function navn(el) {
+    var tekst = (el.innerText || el.value || el.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim().slice(0, 34);
+    return el.tagName.toLowerCase() + (el.className ? '.' + String(el.className).split(/\s+/).slice(0, 2).join('.') : '') +
+      ' «' + tekst + '» ' + (el.getAttribute('href') || '');
+  }
+
+  ramme.onload = function () {
+    setTimeout(function () {
+      var d = ramme.contentDocument;
+      var bredde = d.documentElement.clientWidth;
+      var linjer = ['bredde=' + bredde + ' scrollWidth=' + d.documentElement.scrollWidth, ''];
+      var el = d.body.querySelectorAll('a, button, input, select, textarea, [role="button"]');
+      for (var i = 0; i < el.length; i++) {
+        var r = el[i].getBoundingClientRect();
+        if (r.width === 0 && r.height === 0) continue;
+        if (r.height < 40 || r.width < 40) {
+          linjer.push('LITEN ' + Math.round(r.width) + '×' + Math.round(r.height) + '  ' + navn(el[i]));
+        }
+      }
+      var utenfor = [];
+      var alle = d.body.querySelectorAll('*');
+      for (var j = 0; j < alle.length; j++) {
+        var rr = alle[j].getBoundingClientRect();
+        if (rr.width === 0 && rr.height === 0) continue;
+        if (rr.right > bredde + 2 || rr.left < -2) utenfor.push(Math.round(rr.left) + '..' + Math.round(rr.right) + ' ' + navn(alle[j]));
+      }
+      linjer.push('', 'UTENFOR (' + utenfor.length + '):');
+      linjer = linjer.concat(utenfor.slice(0, 12));
+      var felt = d.querySelectorAll('input, select, textarea');
+      var sma = [];
+      for (var k = 0; k < felt.length; k++) {
+        var fs = parseFloat(ramme.contentWindow.getComputedStyle(felt[k]).fontSize);
+        if (fs < 16) sma.push(fs + 'px ' + navn(felt[k]));
+      }
+      linjer.push('', 'FELT <16px: ' + (sma.length ? sma.join(' | ') : 'ingen'));
+      ut.textContent = linjer.join('\n');
+    }, 700);
+  };
+})();
+</script>
+</body>
+</html>

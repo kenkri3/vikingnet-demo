@@ -1,0 +1,1285 @@
+/*
+  Catos Betongsaging AS — layout.
+  Rekkefølge: base.css → theme.css → styles.css
+  Prinsipp: hårfine streker, tette tabeller og luft mellom sonene. Ingen
+  negative marger, ingen faste bredder som kan gi horisontal scroll.
+*/
+
+/* ---------- Topp ---------- */
+
+.topp {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--bg) 93%, transparent);
+  backdrop-filter: blur(9px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topp__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  color: var(--blekk);
+  text-decoration: none;
+}
+
+.brand__merke {
+  display: grid;
+  place-items: center;
+  color: var(--skog);
+}
+
+.brand__tekst {
+  display: grid;
+  line-height: 1;
+}
+
+.brand__navn {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+}
+
+.brand__undertittel {
+  margin-top: 0.22rem;
+  font-size: 0.59rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.topp__nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.7rem);
+}
+
+.topp__nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding-inline: 0.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--dempet);
+  text-decoration: none;
+}
+
+.topp__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 9px;
+  height: 2px;
+  background: var(--skog);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.18s ease;
+}
+
+.topp__nav a:hover,
+.topp__nav a:focus-visible {
+  color: var(--blekk);
+}
+
+.topp__nav a:hover::after,
+.topp__nav a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.topp__handlinger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.topp__telefon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
+  color: var(--blekk);
+  text-decoration: none;
+  line-height: 1.15;
+}
+
+.topp__telefon-merke {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.topp__telefon-nummer {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  letter-spacing: 0.02em;
+}
+
+.topp__cta {
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  font-size: 0.78rem;
+}
+
+.meny-knapp {
+  display: none;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--hvit);
+  color: var(--blekk);
+  cursor: pointer;
+}
+
+.meny-knapp span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  margin: 4px auto;
+  background: currentColor;
+  transition: transform 0.18s ease;
+}
+
+.meny-knapp[aria-expanded="true"] span:first-child {
+  transform: translateY(3px) rotate(45deg);
+}
+
+.meny-knapp[aria-expanded="true"] span:last-child {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+.mobilmeny {
+  position: absolute;
+  inset: 100% 0 auto;
+  padding: 0.3rem clamp(18px, 4vw, 32px) 1rem;
+  background: var(--hvit);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.mobilmeny nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobilmeny a {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+  color: var(--blekk);
+  text-decoration: none;
+}
+
+.mobilmeny__telefon {
+  color: var(--skog);
+  font-weight: 600;
+}
+
+/* Ankerlenker skal ikke havne under den faste toppen. */
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 8px);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: clamp(2rem, 4.5vw, 3.6rem);
+  background: var(--kalk);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgb(23 26 24 / 7%) 0 1px,
+    transparent 1px 25%
+  );
+  opacity: 0.55;
+}
+
+.hero__rutenett {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.06fr 0.94fr;
+  gap: clamp(1.6rem, 4vw, 3.8rem);
+  align-items: start;
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}.hero__ingress {
+  max-width: 45ch;
+  margin-bottom: 1.6rem;
+  font-size: var(--t-lead);
+  color: var(--dempet);
+}
+
+.hero__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.hero__apningstid {
+  margin: 0;
+  font-size: 0.83rem;
+  color: var(--dempet);
+}
+
+/* Innlinjelenker trenger 44 px trefflate uten å sprenge linjeboksen. */
+.lenke {
+  color: var(--blekk);
+  padding-block: 0.82rem;
+  margin-block: -0.82rem;
+}
+
+/* ---------- Forespørsel ---------- */
+
+.soknad {
+  position: relative;
+  scroll-margin-top: calc(var(--header-h) + 14px);
+  padding: clamp(1.05rem, 1.7vw, 1.55rem);
+  background: var(--hvit);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.soknad::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--skog);
+}
+
+.soknad__hode {
+  margin-bottom: 1.1rem;
+}
+
+.soknad__merke {
+  margin: 0 0 0.2rem;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--skog);
+}
+
+.soknad__tittel {
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.22rem, 1rem + 0.7vw, 1.55rem);
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.steg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.steg__punkt {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.steg__nummer {
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border: 1px solid var(--kalk-mork);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0;
+  color: var(--dempet);
+}
+
+.steg__punkt.is-aktiv {
+  color: var(--blekk);
+}
+
+.steg__punkt.is-aktiv .steg__nummer {
+  border-color: var(--skog);
+  background: var(--skog);
+  color: #fff;
+}
+
+.soknad__steg {
+  display: grid;
+  gap: 0.75rem;
+}
+
+/* Stegene får fokus programmatisk; ringen ville lagt en ramme rundt hele
+   kortet. Synlig fokus beholdes på alle interaktive elementer. */
+.soknad__steg:focus {
+  outline: none;
+}
+
+.soknad__steg[hidden] {
+  display: none;
+}
+
+.soknad__valgfelt {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.soknad__valgfelt legend {
+  padding: 0;
+  margin-bottom: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.valg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.valg__knapp {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--blekk);
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.valg__knapp::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  margin-right: 0.45rem;
+  border: 1px solid var(--kalk-mork);
+  background: #fff;
+}
+
+.valg__knapp:hover {
+  border-color: var(--dempet);
+}
+
+.valg__knapp[aria-checked="true"] {
+  border-color: var(--skog);
+  background: var(--skog-lys);
+  color: var(--skog-dyp);
+  font-weight: 600;
+}
+
+.valg__knapp[aria-checked="true"]::before {
+  border-color: var(--skog);
+  background: var(--skog);
+}
+
+.soknad__par {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.soknad__par label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.soknad__par input,
+.soknad__par textarea {
+  background: #fff;
+}
+
+.soknad__par input[aria-invalid="true"],
+.soknad__par textarea[aria-invalid="true"] {
+  border-color: var(--feil);
+  box-shadow: inset 0 0 0 1px var(--feil);
+}
+
+.soknad__par textarea {
+  min-height: 104px;
+}
+
+.feil {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--feil);
+}
+
+.soknad__neste {
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+.soknad__knapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.soknad__knapper .btn {
+  flex: 1 1 auto;
+}
+
+/* Kvittering */
+
+.soknad__steg--kvittering {
+  gap: 0.8rem;
+}
+
+.kvittering__merke {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--skog);
+}
+
+.kvittering__tittel {
+  margin: 0;
+  font-size: 1.18rem;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.kvittering__liste {
+  margin: 0;
+  padding: 0;
+}
+
+.kvittering__liste > div {
+  display: grid;
+  grid-template-columns: 7.4rem 1fr;
+  gap: 0.5rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.kvittering__liste dt {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dempet);
+  padding-top: 0.15rem;
+}
+
+.kvittering__liste dd {
+  margin: 0;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.kvittering__send {
+  width: 100%;
+}
+
+.kvittering__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.9rem;
+}
+
+.soknad__om {
+  min-height: 44px;
+  padding: 0.4rem 0.2rem;
+  border: 0;
+  background: none;
+  color: var(--dempet);
+  font: inherit;
+  font-size: 0.83rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.soknad__om:hover {
+  color: var(--blekk);
+}
+
+.kvittering__note {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--dempet);
+}
+
+/* ---------- Merkestripe ---------- */
+
+.merker {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--kalk-dyp);
+}
+
+.merker__indre {
+  padding-block: 0.8rem;
+}
+
+.merker__liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.merker__liste li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.merker__liste li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: var(--skog);
+}
+
+/* ---------- Bevis ---------- */
+
+.bevis {
+  background: var(--blekk);
+  color: #e9e6df;
+}
+
+.bevis__rutenett {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  align-items: stretch;
+}
+
+.bevis__figur {
+  margin: 0;
+  min-height: 400px;
+}
+
+.bevis__figur img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9) contrast(1.04);
+}
+
+.bevis__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.8rem, 3.8vw, 3.8rem);
+}
+
+.bevis h2 {
+  color: #f5f3ed;
+  margin-bottom: 0.9rem;
+  max-width: 24ch;
+}
+
+.bevis__tekst {
+  max-width: 46ch;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #b7c0b9;
+}
+
+.tall {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  border-top: 1px solid #39423b;
+}
+
+.tall > div {
+  padding: 0.8rem 0.8rem 0.85rem 0;
+  border-bottom: 1px solid #39423b;
+}
+
+.tall dt {
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8c998f;
+}
+
+.tall dd {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  color: #f5f3ed;
+}
+
+/* ---------- Seksjonshoder ---------- */
+
+.tjenester__hode,
+.oppdrag__hode,
+.ansatte__hode,
+.dok__hode {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1rem, 3vw, 3rem);
+  align-items: end;
+  margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+.tjenester__hode h2,
+.oppdrag__hode h2,
+.ansatte__hode h2,
+.dok__hode h2 {
+  margin-bottom: 0;
+}
+
+.tjenester__hode .lead,
+.oppdrag__hode .lead,
+.ansatte__hode .lead,
+.dok__hode .lead {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+/* ---------- Tjenester ---------- */
+
+.tjenester {
+  background: var(--kalk);
+}
+
+.tjenester__liste {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(1.4rem, 4vw, 3.4rem);
+}
+
+.tjeneste {
+  display: grid;
+  grid-template-columns: 2.4rem 84px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.05rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.tjeneste__nr {
+  padding-top: 0.15rem;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
+  color: var(--skog);
+}
+
+.tjeneste__bilde {
+  width: 84px;
+  height: 63px;
+  object-fit: cover;
+  border-radius: 3px;
+  filter: saturate(0.88);
+}
+
+.tjeneste h3 {
+  margin-bottom: 0.28rem;
+}
+
+.tjeneste p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--dempet);
+}
+
+.tjenester__mer {
+  margin: 1.7rem 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--dempet);
+}
+
+/* ---------- Oppdragslogg ---------- */
+
+.oppdrag {
+  background: var(--hvit);
+}
+
+.logg {
+  border-top: 2px solid var(--blekk);
+}
+
+.logg__rad {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1.1fr;
+  gap: clamp(0.9rem, 2.5vw, 2.2rem);
+  align-items: baseline;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.logg__rad--hode {
+  padding-block: 0.55rem;
+  border-bottom: 1px solid var(--blekk);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.logg__navn {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.logg__kunde,
+.logg__detalj {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.5;
+}
+
+.logg__kunde {
+  color: var(--dempet);
+}
+
+/* ---------- Slik jobber vi ---------- */
+
+.prosess {
+  background: var(--skog-dyp);
+  color: #e6efe7;
+}
+
+.prosess h2 {
+  color: #f4f7f2;
+  max-width: 22ch;
+}
+
+.prosess__liste {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  margin: clamp(1.7rem, 3vw, 2.4rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prosess__steg {
+  margin: 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid #3d6a49;
+}
+
+.prosess__nr {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  line-height: 1;
+  color: #83d29b;
+}
+
+.prosess__steg h3 {
+  margin-bottom: 0.45rem;
+  color: #f4f7f2;
+}
+
+.prosess__steg p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #c2d2c6;
+}
+
+.prosess__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 1rem;
+  margin: clamp(1.7rem, 3vw, 2.4rem) 0 0;
+  font-size: 0.9rem;
+  color: #c2d2c6;
+}
+
+.prosess__cta a:not(.btn) {
+  color: #fff;
+}
+
+/* ---------- Ansatte ---------- */
+
+.ansatte {
+  background: var(--kalk);
+}
+
+.ansatte__liste {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.85rem, 1.8vw, 1.2rem);
+}
+
+.ansatt {
+  background: var(--hvit);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ansatt img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.02);
+}
+
+.ansatt__tekst {
+  padding: 0.85rem 0.95rem 1.05rem;
+}
+
+.ansatt h3 {
+  margin-bottom: 0.22rem;
+  font-size: 0.98rem;
+}
+
+.ansatt__rolle {
+  margin: 0 0 0.45rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--skog);
+}
+
+.ansatt__detalj {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--dempet);
+}
+
+.ansatte__mer {
+  margin: 1.4rem 0 0;
+  font-size: 0.88rem;
+  color: var(--dempet);
+}
+
+/* ---------- Dokumentasjon ---------- */
+
+.dokumentasjon {
+  background: var(--kalk-dyp);
+}
+
+.dok__liste {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.dok__punkt {
+  margin: 0;
+  padding: 1.25rem 1.15rem 1.35rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.dok__punkt h3 {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.35;
+}
+
+.dok__punkt h3::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-top: 0.22rem;
+  border: 1px solid var(--skog);
+  background:
+    linear-gradient(45deg, transparent 45%, var(--skog) 45% 55%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, var(--skog) 45% 55%, transparent 55%);
+  background-size: 60% 2px, 60% 2px;
+  background-position: 40% 65%, 55% 45%;
+  background-repeat: no-repeat;
+}
+
+.dok__punkt p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--dempet);
+}
+
+/* ---------- Kontakt ---------- */
+
+.kontakt {
+  background: var(--blekk);
+  color: #e9e6df;
+  padding-block: clamp(3rem, 6.5vw, 5rem);
+}
+
+.kontakt__rutenett {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.6rem, 4vw, 3.6rem);
+  align-items: start;
+}
+
+.kontakt h2 {
+  color: #f5f3ed;
+  margin-bottom: 0.9rem;
+}
+
+.kontakt__tekst p {
+  max-width: 42ch;
+  margin: 0;
+  color: #b7c0b9;
+}
+
+.kontakt__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.3rem;
+}
+
+.kontakt__kort {
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+  border: 1px solid #3a423c;
+  background: rgb(255 255 255 / 2.5%);
+}
+
+.kontakt__liste {
+  margin: 0;
+}
+
+.kontakt__liste > div {
+  display: grid;
+  grid-template-columns: 7.8rem 1fr;
+  gap: 0.7rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #2f3731;
+  align-items: baseline;
+}
+
+.kontakt__liste > div:last-child {
+  border-bottom: 0;
+}
+
+.kontakt__liste dt {
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8c998f;
+}
+
+.kontakt__liste dd {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #e9e6df;
+}
+
+.kontakt__liste a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 44px;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.kontakt__liste a:hover {
+  color: #a9e3b9;
+}
+
+/* ---------- Bunn ---------- */
+
+.bunn {
+  padding-block: 2.6rem 1.3rem;
+  background: #121514;
+  border-top: 1px solid #2b322c;
+  color: #98a29b;
+  font-size: 0.87rem;
+}
+
+.bunn__rutenett {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 0.85fr;
+  gap: clamp(1.4rem, 3vw, 2.6rem);
+}
+
+.bunn__navn {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #f0eee8;
+}
+
+.bunn__tekst {
+  max-width: 38ch;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #98a29b;
+}
+
+.bunn__tittel {
+  margin: 0 0 0.35rem;
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7d887f;
+}
+
+.bunn__kolonne p {
+  margin: 0;
+}
+
+.bunn__kolonne a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #d6dbd5;
+  text-decoration: none;
+}
+
+.bunn__kolonne a:hover {
+  color: #a9e3b9;
+}
+
+.bunn__slutt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.2rem;
+  margin-top: 1.6rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid #2b322c;
+  font-size: 0.77rem;
+  color: #7d887f;
+}
+
+.bunn__slutt p {
+  margin: 0;
+}
+
+/* ---------- Tilpasning ---------- */
+
+@media (max-width: 1120px) {
+  .topp__telefon {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .hero__rutenett {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__tekst {
+    max-width: 44rem;
+  }
+
+  .soknad {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .topp__nav {
+    display: none;
+  }
+
+  .meny-knapp {
+    display: block;
+  }
+
+  .bevis__rutenett {
+    grid-template-columns: 1fr;
+  }
+
+  .bevis__figur {
+    min-height: 0;
+    height: 320px;
+  }
+
+  .tjenester__hode,
+  .oppdrag__hode,
+  .ansatte__hode,
+  .dok__hode {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .tjenester__liste {
+    grid-template-columns: 1fr;
+  }
+
+  .prosess__liste {
+    grid-template-columns: 1fr;
+  }
+
+  .ansatte__liste {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dok__liste {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kontakt__rutenett {
+    grid-template-columns: 1fr;
+  }
+
+  .bunn__rutenett {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bunn__merke {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .logg__rad {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding: 0.9rem 0;
+  }
+
+  .logg__rad--hode {
+    display: none;
+  }
+
+  .logg__kunde::before,
+  .logg__detalj::before {
+    content: attr(data-label) ": ";
+    font-size: 0.63rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--dempet);
+  }
+
+  .logg__navn {
+    margin-bottom: 0.15rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .tjeneste {
+    grid-template-columns: 1.9rem 70px 1fr;
+    gap: 0.8rem;
+  }
+
+  .tjeneste__bilde {
+    width: 70px;
+    height: 53px;
+  }
+
+  .dok__liste {
+    grid-template-columns: 1fr;
+  }
+
+  .bunn__rutenett {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 430px) {
+  .topp__cta {
+    display: none;
+  }
+
+  .valg {
+    grid-template-columns: 1fr;
+  }
+
+  .kvittering__liste > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .kontakt__liste > div {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}

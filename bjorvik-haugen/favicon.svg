@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Bjørvik &amp; Haugen AS">
+  <rect width="64" height="64" rx="5" fill="#191714"/>
+  <!-- Ett penselstrøk, trukket fra nederst til venstre mot øverst til høyre. -->
+  <path d="M14 51C24 43 35 32 48 15" fill="none" stroke="#c62828" stroke-width="12" stroke-linecap="round"/>
+  <path d="M41 26c4-4 7-8 9-11" fill="none" stroke="#e8555a" stroke-width="2.6" stroke-linecap="round" opacity="0.85"/>
+  <path d="M20 56c3.5-.8 6.6-2.2 9.3-4.1" fill="none" stroke="#c62828" stroke-width="3" stroke-linecap="round"/>
+</svg>

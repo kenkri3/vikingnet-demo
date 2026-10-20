@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="euroRessurs">
+  <rect width="64" height="64" rx="14" fill="#00205b"/>
+  <circle cx="32" cy="34" r="14" fill="none" stroke="#5bc500" stroke-width="6" stroke-linecap="round" stroke-dasharray="68 20" transform="rotate(52 32 34)"/>
+  <path d="M19 34h26" fill="none" stroke="#5bc500" stroke-width="6" stroke-linecap="round"/>
+</svg>

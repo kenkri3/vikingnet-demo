@@ -1,0 +1,68 @@
+/*
+  euroRessurs AS — identitet.
+  Arketype: redaksjonell, med industriell tyngde. Paletten er hentet fra
+  deres eget merke: marineblå #00205B (fargen i ikonene på nettsiden deres)
+  og lime #5BC500 (fargen i logomerket). Kalket papir som flate, blekk som
+  tekst, lime bare som merke — aldri som tekst på papir.
+
+  Typografi: Instrument Serif i overskrifter, Red Hat Text i brødtekst.
+  To familier, ikke flere. Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Merkefarger, hentet fra logo og ikoner */
+  --navy: #00205b;
+  --navy-deep: #001640;
+  --navy-soft: #0a2f73;
+  --lime: #5bc500;
+  --lime-deep: #3c7f00;
+
+  /* Flater og blekk */
+  --paper: #f4f5f0;
+  --paper-2: #e9ece2;
+  --surface: #ffffff;
+  --ink: #0c1a28;
+  --muted: #57636f;
+  --line: #dbdfd4;
+  --line-2: #c6ccbe;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --accent: var(--navy);
+  --accent-fg: #ffffff;
+  --accent-soft: #e5e9f1;
+
+  /* To fonter */
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Red Hat Text', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Rytme: lite avrunding — dette skal lese som dokument, ikke som app */
+  --radius: 8px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 2px rgb(0 32 91 / 5%), 0 18px 40px -28px rgb(0 32 91 / 40%);
+
+  --wrap: 1160px;
+  --header-h: 76px;
+
+  --t-xs: 0.76rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.45vw, 1.26rem);
+  --t-h3: clamp(1.15rem, 1.02rem + 0.55vw, 1.4rem);
+  --t-h2: clamp(1.9rem, 1.3rem + 2.1vw, 3rem);
+  --t-h1: clamp(2.45rem, 1.35rem + 4.4vw, 4.5rem);
+}
+
+/* Instrument Serif har bare 400 — den skal ikke fetes opp, bare settes stort. */
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--navy);
+}

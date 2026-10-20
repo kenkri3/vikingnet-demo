@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Framtidsfylket — rekruttering og trainee i Vestland</title>
+<meta name="description" content="Framtidsfylket hjelper arbeidsgjevarar i Vestland med trainee, medlemskap, møteplassar og rekrutteringskommunikasjon. Still spørsmålet ditt og få svar med ein gong." />
+<meta name="theme-color" content="#f7f8f4" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Framtidsfylket — rekruttering som svarar med ein gong" />
+<meta property="og:description" content="Trainee, medlemskap, møteplassar og rekrutteringskommunikasjon for bedrifter i Vestland. Svarpanelet svarar med innhald frå framtidsfylket.no." />
+<meta property="og:image" content="img/vestland.webp" />
+<meta property="og:image:alt" content="Tre personar i regnklede står saman ute ved fjorden i Vestland" />
+<meta property="og:locale" content="nb_NO" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#hovedinnhald">Til innhaldet</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="#toppen" aria-label="Framtidsfylket — til toppen">
+      <img class="logo__img" src="img/logo.webp" width="1024" height="289" alt="Framtidsfylket" />
+    </a>
+
+    <button class="menu-btn" type="button" data-nav-toggle aria-expanded="false" aria-controls="meny">
+      <span class="menu-btn__txt">Meny</span>
+      <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <nav class="site-nav" id="meny" data-nav aria-label="Hovudmeny">
+      <a href="#tenester">Tilbodet</a>
+      <a href="#trainee">Trainee</a>
+      <a href="#slik">Slik jobbar vi</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="btn header-cta" href="tel:+4799017852">990 17 852</a>
+  </div>
+</header>
+
+<main id="hovedinnhald">
+
+  <section class="hero" id="toppen">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="kicker">For arbeidsgjevarar i Vestland</p>
+        <h1>Rekruttering som <em>svarar</em> med ein gong.</h1>
+        <p class="lead">Framtidsfylket gjer bedrifter i Vestland synlege for framtidas arbeidstakarar — gjennom trainee, medlemskap, møteplassar og rekrutteringskommunikasjon. Spør svarpanelet: der får du svar medan du les, òg når alle her står i arbeid.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#svar">Still eit spørsmål</a>
+          <a class="btn btn--ghost" href="#tenester">Sjå tenestene</a>
+        </div>
+        <p class="hero__note">Framtidsfylket AS · Hafstadvegen 25, 6800 Førde · org.nr 992 403 896</p>
+      </div>
+
+      <div class="talk" id="svar" data-panel>
+        <div class="talk__head">
+          <span class="talk__dot" aria-hidden="true"></span>
+          <span class="talk__label">Svarpanelet</span>
+          <span class="talk__tag">Skisse</span>
+        </div>
+
+        <div class="talk__log" data-log role="log" aria-live="polite" aria-label="Samtale med svarpanelet">
+          <p class="msg msg--bot">Hei! Eg svarar med innhald frå framtidsfylket.no, slik at du slepp å vente på telefon eller e-post. Vel eit spørsmål nedanfor.</p>
+        </div>
+
+        <div class="talk__chips" data-chips>
+          <button class="chip" type="button" data-q="medlem">Kva får vi som medlem?</button>
+          <button class="chip" type="button" data-q="traineebedrift">Korleis blir vi traineebedrift?</button>
+          <button class="chip" type="button" data-q="utlysing">Kor tid lyser de ut traineestillingar?</button>
+          <button class="chip" type="button" data-q="rekkjevidde">Kven når vi ut til?</button>
+        </div>
+
+        <form class="talk__form" data-ask-form action="mailto:post@framtidsfylket.no" method="post" enctype="text/plain">
+          <p class="talk__divider"><span>Eller send oss ein førespurnad</span></p>
+          <label for="namn">Namn
+            <input id="namn" name="namn" type="text" autocomplete="name" required />
+          </label>
+          <label for="epost">E-post
+            <input id="epost" name="epost" type="email" autocomplete="email" required />
+          </label>
+          <label for="bedrift">Bedrift
+            <input id="bedrift" name="bedrift" type="text" autocomplete="organization" required />
+          </label>
+          <label for="emne">Kva gjeld det?
+            <select id="emne" name="emne">
+              <option>Traineebedrift</option>
+              <option>Medlemskap og nettverk</option>
+              <option>Møteplassar og kurs</option>
+              <option>Employer branding</option>
+              <option>Stillingsannonser</option>
+              <option>Rådgjeving</option>
+            </select>
+          </label>
+          <button class="btn talk__send" type="submit">Send førespurnaden</button>
+        </form>
+
+        <div class="talk__receipt" data-receipt hidden>
+          <p class="talk__check" aria-hidden="true">✓</p>
+          <p class="talk__receipt-txt" data-receipt-txt></p>
+          <button class="btn btn--ghost talk__again" type="button" data-again>Ny førespurnad</button>
+        </div>
+
+        <p class="talk__hint">Skissa sender ingen data. I den ferdige løysinga går førespurnaden til post@framtidsfylket.no, og svaret kjem på e-post.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tall" aria-label="Nøkkeltal">
+    <div class="wrap tall__grid">
+      <div class="tall__item">
+        <p class="tall__num">500 000</p>
+        <p class="tall__lab">når vi ut til kvar månad</p>
+      </div>
+      <div class="tall__item">
+        <p class="tall__num">5000</p>
+        <p class="tall__lab">abonnentar på nyheitsbrevet</p>
+      </div>
+      <div class="tall__item">
+        <p class="tall__num">700</p>
+        <p class="tall__lab">søkarar til 25 traineestillingar i 2026</p>
+      </div>
+      <div class="tall__item">
+        <p class="tall__num">400</p>
+        <p class="tall__lab">nyutdanna har starta som trainee gjennom 20 år</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tenester">
+    <div class="wrap">
+      <div class="del__head">
+        <div>
+          <p class="eyebrow">Tilbodet</p>
+          <h2>Seks måtar å bli meir synleg på</h2>
+        </div>
+        <p class="del__innleiing">Ønsker du fleire søkarar på ledige stillingar? Vil du løfte fram det som gjer bedrifta di til ein attraktiv arbeidsplass? Då kan vi i Framtidsfylket hjelpe deg.</p>
+      </div>
+
+      <ol class="liste">
+        <li class="liste__rad">
+          <span class="liste__nr" aria-hidden="true">01</span>
+          <div>
+            <h3>Bli traineebedrift</h3>
+            <p>Tilsett ein nyutdanna med driv og ny kompetanse. Framtidsfylket er anbefalt av bedrifter i Vestland gjennom 20 år.</p>
+          </div>
+        </li>
+        <li class="liste__rad">
+          <span class="liste__nr" aria-hidden="true">02</span>
+          <div>
+            <h3>Medlemskap og nettverk</h3>
+            <p>Som medlem blir du synleg for framtidas arbeidstakarar i Vestland, og du får tilgang til eit unikt nettverk.</p>
+          </div>
+        </li>
+        <li class="liste__rad">
+          <span class="liste__nr" aria-hidden="true">03</span>
+          <div>
+            <h3>Møteplassar og kurs</h3>
+            <p>Møt jobbsøkarane på karrieremesse, få fagleg oppdatering på kursa våre eller delta på rekrutteringskonferanse.</p>
+          </div>
+        </li>
+        <li class="liste__rad">
+          <span class="liste__nr" aria-hidden="true">04</span>
+          <div>
+            <h3>Employer branding</h3>
+            <p>Kva er det som gjer nettopp din arbeidsplass attraktiv? Vi hjelper deg med å finne det og løfte det fram.</p>
+          </div>
+        </li>
+        <li class="liste__rad">
+          <span class="liste__nr" aria-hidden="true">05</span>
+          <div>
+            <h3>Stillingsannonser</h3>
+            <p>Den gode stillingsannonsen kan bety alt. Vi hjelper deg med å finne gullet og utforme annonsen.</p>
+          </div>
+        </li>
+        <li class="liste__rad">
+          <span class="liste__nr" aria-hidden="true">06</span>
+          <div>
+            <h3>Rådgjeving</h3>
+            <p>Korleis kan du bli betre på rekrutteringskommunikasjon? Vi har verktøyskassa og hjelper deg gjerne.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section trainee" id="trainee">
+    <div class="wrap trainee__grid">
+      <div class="trainee__body">
+        <p class="eyebrow">Traineeprogrammet</p>
+        <h2>Eitt år som gir ein heil start på arbeidslivet</h2>
+        <p class="lead">Ein trainee i Framtidsfylket har bachelor-, master- eller fagskuleutdanning og maks tre års arbeidserfaring. I eitt år jobbar traineen i ei bedrift i Vestland som er relevant for fagfeltet.</p>
+        <ul class="fakta">
+          <li>Eitt år med arbeidserfaring i ei vestlandsbedrift</li>
+          <li>Fagleg og sosialt nettverk med andre traineear</li>
+          <li>Mentor i bedrifta som følgjer deg opp gjennom året</li>
+          <li>Turar og samlingar i arbeidstida — fire–fem gonger i året, tre dagar kvar gong</li>
+        </ul>
+        <p class="trainee__meta">Utlysing frå og med desember · oppstart i august · arbeidsgivaren betalar for samlingane</p>
+        <a class="btn" href="#svar">Bli traineebedrift</a>
+      </div>
+
+      <figure class="trainee__figure">
+        <img src="img/trainee.webp" width="683" height="1024" alt="Trainee i ullgensar ser utover fjorden i Vestland" loading="lazy" />
+        <figcaption>Vestlandslivet er ein del av pakka.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="slik">
+    <div class="wrap">
+      <div class="del__head">
+        <div>
+          <p class="eyebrow">Slik jobbar vi</p>
+          <h2>Tre steg frå behov til synlegheit</h2>
+        </div>
+        <p class="del__innleiing">Vår jobb er å gjere deg synleg for folk som allereie er interesserte i arbeidslivet i Vestland — jobbsøkarar, heimeflyttarar, tilflyttarar og dei som søker livsstilen her.</p>
+      </div>
+
+      <ol class="steg">
+        <li class="steg__item">
+          <span class="steg__nr" aria-hidden="true">1</span>
+          <h3>Du fortel kva du treng</h3>
+          <p>Fleire søkarar, eit traineeår, ei karrieremesse eller eit løft i rekrutteringskommunikasjonen. Vi byrjar med behovet ditt.</p>
+        </li>
+        <li class="steg__item">
+          <span class="steg__nr" aria-hidden="true">2</span>
+          <h3>Vi vel kanal</h3>
+          <p>Nettsida vår, sosiale medium, nyheitsbrev, artiklar, kampanjar og møtestadar — vi brukar kanalane der målgruppa allereie er.</p>
+        </li>
+        <li class="steg__item">
+          <span class="steg__nr" aria-hidden="true">3</span>
+          <h3>Du blir synleg i rett kontekst</h3>
+          <p>Som medlem blir du løfta fram i kanalane våre, med rabatterte prisar på karrieremesser, konferansar og andre møteplassar.</p>
+        </li>
+      </ol>
+
+      <figure class="bileband">
+        <img src="img/samling.webp" width="1024" height="683" alt="Trainear hoppar i lufta saman framfor ein foss i Vestland" loading="lazy" />
+        <figcaption>Traineesamling: fire–fem gonger i året, tre dagar kvar gong.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section sitater" aria-label="Sitater frå bedrifter og traineear">
+    <div class="wrap">
+      <h2>Dei som alt har prøvd det</h2>
+      <div class="sitater__grid">
+        <blockquote class="sitat">
+          <p>«For meg var traineeåret ein fantastisk start på arbeidslivet. Eg fekk prøve ut både bedrifta og området under trygge rammer.»</p>
+          <cite>Astrid Myren, SFE</cite>
+        </blockquote>
+        <blockquote class="sitat">
+          <p>«Når du kjem til ein ny plass, er det gull verdt å få eit nettverk med ein gong. I tillegg har du folka som jobbar i Framtidsfylket, viss du treng råd eller berre vil lufte tankar.»</p>
+          <cite>Heine Urnes, Lotteri- og Stiftelsestilsynet</cite>
+        </blockquote>
+        <blockquote class="sitat">
+          <p>«Profesjonelt arrangement og perfekt lokasjon for ei karrieremesse. Vi fekk kontakt med ein del kvalifiserte kandidatar, mellom anna ein nyutdanna arkitekt.»</p>
+          <cite>Børre Sundsøy, Helgesen Tekniske Bygg</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section vestland" id="vestland">
+    <div class="wrap vestland__grid">
+      <div class="vestland__body">
+        <p class="eyebrow">Vestlandslivet</p>
+        <h2>Slagkraft og pusterom, i same region</h2>
+        <p>I Vestland kan du vere med og påverke utviklinga i bransjar som er avgjerande for Noreg og verda. Kvart år takkar erfarne og nyutdanna ja til eit arbeidsliv her. Dei kom for jobben, men blir for naturen, fritida, menneska og moglegheitene.</p>
+        <ul class="regionar" aria-label="Område Framtidsfylket dekkjer">
+          <li>Bergen</li>
+          <li>Hardanger og Voss</li>
+          <li>Nordfjord</li>
+          <li>Nordhordland</li>
+          <li>Sogn</li>
+          <li>Sunnfjord</li>
+          <li>Sunnhordland</li>
+        </ul>
+      </div>
+
+      <figure class="vestland__figure">
+        <img src="img/vestland.webp" width="1536" height="1024" alt="Tre personar i regnklede ler saman ute ved fjorden i Vestland" loading="lazy" />
+      </figure>
+    </div>
+
+    <div class="wrap">
+      <article class="story">
+        <img class="story__img" src="img/sunnfjord.webp" width="1024" height="731" alt="To personar går arm i arm og ler i grønt område i Sunnfjord" loading="lazy" />
+        <div class="story__body">
+          <p class="story__tag">Aktuelt · Trainee</p>
+          <h3>Sunnfjord vart augeopnar for Mikkel og Ayla</h3>
+          <p class="story__tekst">Først fekk Mikkel (28) ei traineestilling og flytta til Sunnfjord. Eitt år seinare gjorde Ayla (27) det same. No snusar sambuarane på småbruk.</p>
+          <p class="story__meta">12/10/2026 · Sunnfjord</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="kontakt" id="kontakt">
+    <div class="wrap kontakt__grid">
+      <div>
+        <p class="eyebrow eyebrow--lys">Kontakt</p>
+        <h2>Snakk med oss</h2>
+        <p class="kontakt__lead">Ring, skriv — eller bruk svarpanelet øvst i sida. Der får du svar med ein gong, og du kan sende ein førespurnad utan å fylle ut eit skjema i eit eige vindauge.</p>
+        <a class="btn btn--lys" href="#svar">Opne svarpanelet</a>
+      </div>
+
+      <div class="kontakt__kort">
+        <div class="kontakt__rad">
+          <p class="kontakt__lab">Telefon</p>
+          <a class="kontakt__verdi" href="tel:+4799017852">+47 990 17 852</a>
+        </div>
+        <div class="kontakt__rad">
+          <p class="kontakt__lab">E-post</p>
+          <a class="kontakt__verdi" href="mailto:post@framtidsfylket.no">post@framtidsfylket.no</a>
+        </div>
+        <div class="kontakt__rad">
+          <p class="kontakt__lab">Besøk</p>
+          <p class="kontakt__verdi">Hafstadvegen 25<br />6800 Førde</p>
+        </div>
+        <div class="kontakt__rad">
+          <p class="kontakt__lab">Organisasjon</p>
+          <p class="kontakt__verdi">Framtidsfylket AS<br />Org.nr 992 403 896</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div class="site-footer__merke">
+      <img class="logo__img" src="img/logo.webp" width="1024" height="289" alt="Framtidsfylket" loading="lazy" />
+      <p>Rekrutteringskommunikasjon og traineeprogram for arbeidslivet i Vestland.</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Bunntekstmeny">
+      <a href="#tenester">Tilbodet</a>
+      <a href="#trainee">Trainee</a>
+      <a href="#slik">Slik jobbar vi</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="site-footer__kontakt">
+      <p>Framtidsfylket AS<br />Hafstadvegen 25, 6800 Førde</p>
+      <p><a href="mailto:post@framtidsfylket.no">post@framtidsfylket.no</a></p>
+      <p>Org.nr 992 403 896</p>
+    </div>
+  </div>
+  <div class="wrap site-footer__bot">
+    <p>© <span data-year>2026</span> Framtidsfylket AS</p>
+    <p>Designa for Vestland.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

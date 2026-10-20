@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dagmamma og barnevakt i hele Norge | Dagmamma.no</title>
+  <meta name="description" content="Foreldre finner dagmamma og barnevakt i hele Norge. Registrer en gratis profil, velg kommune og ta kontakt direkte gjennom meldingstjenesten. BankID er gratis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+  <meta property="og:site_name" content="Dagmamma.no" />
+  <meta property="og:title" content="Dagmamma og barnevakt i hele Norge" />
+  <meta property="og:description" content="Registrer en gratis profil, velg kommune og ta kontakt direkte. Alle kan bekrefte identiteten sin med BankID." />
+  <meta property="og:image" content="img/hero.jpg" />
+  <meta property="og:image:alt" content="Barnepasser som løfter en leende baby" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../kit/base.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Hopp til innhold</a>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#main" aria-label="Dagmamma.no – til toppen av siden">
+        <img class="brand__logo" src="img/logo.png" alt="Dagmamma.no" width="598" height="118" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+        <span class="visually-hidden">Meny</span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Hovedmeny" hidden>
+        <a href="#slik">Slik fungerer det</a>
+        <a href="#finn">Dagmamma og barnevakt</a>
+        <a href="#pris">Priser</a>
+        <a href="#trygghet">Trygghet</a>
+        <a class="btn btn--nav" href="#kontakt">Lag gratis profil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" aria-labelledby="hero-tittel">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Dagmamma AS · siden 2017</p>
+          <h1 id="hero-tittel">Finn dagmamma eller barnevakt der du bor</h1>
+          <p class="lead hero__lead">
+            Registrer en gratis profil, fortell hva du tilbyr eller leter etter, og velg kommune.
+            Familien og barnepasseren tar deretter kontakt direkte gjennom meldingstjenesten — uten mellomledd.
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#pris">Se hva det koster</a>
+            <a class="btn btn--ghost" href="#slik">Slik fungerer det</a>
+          </div>
+          <p class="hero__note">Alle brukere kan bekrefte identiteten sin gratis med BankID.</p>
+        </div>
+
+        <aside class="svar" aria-labelledby="svar-tittel">
+          <div class="svar__top">
+            <span class="svar__dot" aria-hidden="true"></span>
+            <p class="svar__title" id="svar-tittel">Svar med en gang</p>
+            <span class="svar__badge">Skisse</span>
+          </div>
+          <div class="svar__log" id="svar-logg" role="log" aria-live="polite" aria-label="Samtale med svarassistenten">
+            <p class="msg msg--bot">Hei! Jeg svarer med det som står på dagmamma.no sine egne sider. Hva lurer du på?</p>
+          </div>
+          <div class="svar__chips" id="svar-chips">
+            <button type="button" class="chip" data-sporsmal="Hva koster barnevakt?">Hva koster barnevakt?</button>
+            <button type="button" class="chip" data-sporsmal="Hva koster en dagmamma?">Hva koster en dagmamma?</button>
+            <button type="button" class="chip" data-sporsmal="Er profilen ekte?">Er profilen ekte?</button>
+            <button type="button" class="chip" data-sporsmal="Hva koster abonnementet?">Hva koster abonnementet?</button>
+          </div>
+          <form class="svar__form" id="svar-form" autocomplete="off">
+            <label class="visually-hidden" for="svar-input">Skriv et spørsmål</label>
+            <input id="svar-input" name="sporsmal" type="text" inputmode="text" placeholder="Skriv et spørsmål …" />
+            <button class="btn svar__send" type="submit">Send</button>
+          </form>
+          <p class="svar__note">Svarene er hentet fra dagmamma.no sine egne sider. Denne skissen sender ingenting videre.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Dagmamma.no i korte trekk">
+      <div class="wrap strip__grid">
+        <div class="strip__item">
+          <p class="strip__num">100–180 kr</p>
+          <p class="strip__txt">Vanlig timepris for barnevakt i 2026</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__num">ca. 8 700 kr</p>
+          <p class="strip__txt">Tommelfingerregel for dagmamma per måned</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__num">Gratis</p>
+          <p class="strip__txt">BankID-verifisering for alle brukere</p>
+        </div>
+        <div class="strip__item">
+          <p class="strip__num">Hele Norge</p>
+          <p class="strip__txt">Møteplass for foreldre og barnepassere</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="slik" aria-labelledby="slik-tittel">
+      <div class="wrap slik">
+        <div class="slik__copy">
+          <p class="eyebrow">Slik fungerer det</p>
+          <h2 id="slik-tittel">Tre steg, så er dere i kontakt</h2>
+          <ol class="steg">
+            <li class="steg__item">
+              <span class="steg__nr" aria-hidden="true">1</span>
+              <div>
+                <h3>Registrer en gratis profil</h3>
+                <p>Bruk litt tid på profilteksten, så det blir tydelig hva du tilbyr — eller hva du leter etter. Du velger kommune selv.</p>
+              </div>
+            </li>
+            <li class="steg__item">
+              <span class="steg__nr" aria-hidden="true">2</span>
+              <div>
+                <h3>Send melding</h3>
+                <p>Abonnerende medlemmer kan sende ubegrensede meldinger til alle brukere. Alle kan svare gratis på meldinger, også uten abonnement.</p>
+              </div>
+            </li>
+            <li class="steg__item">
+              <span class="steg__nr" aria-hidden="true">3</span>
+              <div>
+                <h3>Avtal direkte</h3>
+                <p>Familie og barnepasser blir enige om tid og pris selv. Kontraktmalen og regelverket for dagmammaer ligger på dagmamma.no, slik at dere kan lese det før dere inngår avtale.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <figure class="slik__fig">
+          <img src="img/slik-fungerer-det.webp" alt="Foreldre og et barn som ser på en bærbar PC sammen" width="1000" height="667" loading="lazy" decoding="async" />
+          <figcaption>Familien registrerer seg hjemmefra, og barnepasseren svarer i meldingstjenesten.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="finn" aria-labelledby="finn-tittel">
+      <div class="wrap">
+        <div class="finn__head">
+          <p class="eyebrow">Fire innganger</p>
+          <h2 id="finn-tittel">Dagmamma, barnevakt eller forelder</h2>
+          <p class="lead">Du registrerer én profil og velger hva du er. Tjenesten er den samme for begge sider av avtalen.</p>
+        </div>
+        <ul class="finn__grid">
+          <li class="finn__card">
+            <span class="finn__nr" aria-hidden="true">01</span>
+            <h3>Ledig dagmamma</h3>
+            <p>Passer barn regelmessig på dagtid, ofte hele dager mens foreldrene er på jobb.</p>
+          </li>
+          <li class="finn__card">
+            <span class="finn__nr" aria-hidden="true">02</span>
+            <h3>Barnevakt</h3>
+            <p>Hjelp til kveld, helg eller enkeltdager — fra studenter til erfarne barnehagelærere.</p>
+          </li>
+          <li class="finn__card">
+            <span class="finn__nr" aria-hidden="true">03</span>
+            <h3>Foreldre</h3>
+            <p>Er du barnepasser? Se familier som søker barnepass nær deg.</p>
+          </li>
+          <li class="finn__card">
+            <span class="finn__nr" aria-hidden="true">04</span>
+            <h3>Guider</h3>
+            <p>Svar om pris, regler, skatt og trygghet når du skal finne eller bli barnepasser.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="pris" aria-labelledby="pris-tittel">
+      <div class="wrap">
+        <div class="pris__head">
+          <p class="eyebrow">Priser</p>
+          <h2 id="pris-tittel">Hva koster det?</h2>
+          <p class="lead">
+            Dagmamma.no fastsetter ingen priser. Barnepasseren setter sin egen pris, og dere avtaler dere imellom.
+            Tallene under er hentet fra prisguiden vår, sist oppdatert 5. oktober 2026.
+          </p>
+        </div>
+
+        <div class="kalk">
+          <form class="kalk__form" id="kalk-form" novalidate>
+            <fieldset class="kalk__type">
+              <legend>Hva vil du regne på?</legend>
+              <label class="seg">
+                <input type="radio" name="kalk-type" value="barnevakt" checked />
+                <span>Barnevakt</span>
+              </label>
+              <label class="seg">
+                <input type="radio" name="kalk-type" value="dagmamma" />
+                <span>Dagmamma</span>
+              </label>
+            </fieldset>
+
+            <div class="kalk__felt" id="kalk-barnevakt">
+              <label for="kalk-kategori">Hvem passer barna?</label>
+              <select id="kalk-kategori">
+                <option value="ungdom" data-min="100" data-maks="100">Ungdom under 18 år, kortere kveldspass</option>
+                <option value="voksen" data-min="150" data-maks="150" selected>Voksen over 18 år</option>
+                <option value="erfaren" data-min="150" data-maks="200">Erfaren barnevakt, flere barn eller legging</option>
+                <option value="byraa" data-min="180" data-maks="180">Profesjonelt barnepassbyrå</option>
+                <option value="ansvar" data-min="200" data-maks="200">Høyt ansvar: spedbarn, særlige behov eller natt</option>
+              </select>
+              <label for="kalk-timer">Antall timer: <output id="kalk-timer-ut" for="kalk-timer">3</output></label>
+              <input type="range" id="kalk-timer" min="1" max="12" step="1" value="3" />
+            </div>
+
+            <div class="kalk__felt" id="kalk-dagmamma" hidden>
+              <p class="small muted">En dagmamma er som regel selvstendig og setter sin egen pris. Mange tar minst det familien får i kontantstøtte, pluss det en barnehageplass ville kostet.</p>
+            </div>
+          </form>
+
+          <div class="kalk__ut" id="kalk-ut" aria-live="polite">
+            <p class="kalk__merkelapp">Prisanslag</p>
+            <p class="kalk__belop" id="kalk-belop">450–450 kr</p>
+            <p class="kalk__detalj" id="kalk-detalj">3 timer × 150 kr per time.</p>
+            <p class="kalk__forklaring small muted" id="kalk-forklaring">Prisen avtales alltid mellom familien og barnepasseren.</p>
+          </div>
+        </div>
+
+        <div class="satser">
+          <div class="satser__blokk">
+            <h3>Timepris for barnevakt</h3>
+            <div class="tabell">
+              <table>
+                <caption class="visually-hidden">Vanlig timepris for barnevakt i 2026</caption>
+                <thead>
+                  <tr><th scope="col">Situasjon</th><th scope="col">Vanlig timepris</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Ungdom under 18 år, kortere kveldspass</th><td>ca. 100 kr</td></tr>
+                  <tr><th scope="row">Voksen over 18 år</th><td>ca. 150 kr</td></tr>
+                  <tr><th scope="row">Erfaren barnevakt, flere barn eller legging</th><td>150–200 kr</td></tr>
+                  <tr><th scope="row">Profesjonelt barnepassbyrå</th><td>ca. 180 kr, ofte med minstetid</td></tr>
+                  <tr><th scope="row">Høyt ansvar: spedbarn, særlige behov, natt</th><td>ca. 200 kr og oppover etter avtale</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small muted">Mediantimepris for barnevakt er ca. 130 kr.</p>
+          </div>
+
+          <div class="satser__blokk">
+            <h3>Referansepunkter for dagmamma</h3>
+            <div class="tabell">
+              <table>
+                <caption class="visually-hidden">Referansepunkter for dagmammapris i 2026</caption>
+                <thead>
+                  <tr><th scope="col">Referansepunkt 2026</th><th scope="col">Beløp per måned</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Full kontantstøtte, barn 13–19 måneder uten barnehageplass</th><td>7 500 kr</td></tr>
+                  <tr><th scope="row">Makspris barnehage, byer og tettsteder</th><td>1 200 kr</td></tr>
+                  <tr><th scope="row">Tommelfingerregel for dagmamma på heltid</th><td>ca. 8 700 kr og oppover</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small muted">En dagmamma på heltid koster ofte rundt 9 000–10 000 kr i måneden eller mer.</p>
+          </div>
+        </div>
+
+        <div class="abo">
+          <div class="abo__copy">
+            <h3>Abonnement for å sende meldinger</h3>
+            <p>Alle kan svare gratis på meldinger. Vil du ta kontakt med medlemmer selv, kjøper du et abonnement, som fornyes til du stopper det.</p>
+          </div>
+          <div class="abo__priser">
+            <div class="abo__pris"><span>Ukentlig, 7 dager</span><strong>99 kr</strong></div>
+            <div class="abo__pris"><span>Månedlig</span><strong>249 kr</strong></div>
+            <div class="abo__pris"><span>Kvartalsvis, 3 måneder</span><strong>499 kr</strong></div>
+            <div class="abo__pris"><span>Årlig</span><strong>899 kr</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trygghet" id="trygghet" aria-labelledby="trygghet-tittel">
+      <div class="wrap trygghet__grid">
+        <div class="trygghet__copy">
+          <p class="eyebrow">Trygghet</p>
+          <h2 id="trygghet-tittel">Trygghet, ikke bare magefølelse</h2>
+          <p class="trygghet__lead">
+            Det er barn vi snakker om. Derfor er identitet, attester og rapportering en del av tjenesten,
+            ikke noe du må be om.
+          </p>
+          <ul class="trygghet__list">
+            <li><strong>BankID.</strong> Alle brukere kan bekrefte identiteten sin gratis, og får logoen på profilen.</li>
+            <li><strong>Politiattest.</strong> Barnepassere kan registrere politiattest, og profiler kontrolleres før de publiseres.</li>
+            <li><strong>Rapportering.</strong> Vi har rapporteringsrutiner i samarbeid med Kripos for bekymringsmeldinger fra brukere.</li>
+            <li><strong>Sperring.</strong> Ved mistanke om falsk profil eller uønsket atferd sperres tilgangen til tjenestene.</li>
+          </ul>
+        </div>
+        <figure class="trygghet__fig">
+          <img src="img/hero.jpg" alt="Barnepasser som holder en leende baby i hendene innendørs" width="1400" height="933" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="om" aria-labelledby="om-tittel">
+      <div class="wrap om">
+        <div class="om__copy">
+          <p class="eyebrow">Om tjenesten</p>
+          <h2 id="om-tittel">Norges møteplass for foreldre og barnepassere</h2>
+          <p>
+            Dagmamma.no drives av Dagmamma AS. Her finner foreldre dagmamma og barnevakt, og her finner
+            barnepassere familier som trenger dem. Foreldre og barnepassere tar kontakt direkte med
+            hverandre gjennom meldingstjenesten, uten mellomledd.
+          </p>
+          <p>
+            Tjenesten finnes på norsk bokmål og engelsk. Guidene lages av redaksjonen — prisguiden er
+            signert Knut Magne Whist / KI-redaksjonen og ble sist oppdatert 5. oktober 2026.
+          </p>
+        </div>
+        <dl class="om__fakta">
+          <div><dt>Foretaksnavn</dt><dd>DAGMAMMA AS</dd></div>
+          <div><dt>Organisasjonsnummer</dt><dd>919 058 404</dd></div>
+          <div><dt>Stiftet</dt><dd>1. april 2017</dd></div>
+          <div><dt>Næringskode</dt><dd>78.100 Rekruttering og formidling av arbeidskraft</dd></div>
+          <div><dt>Adresse</dt><dd>Frognerveien 1B, 0257 Oslo</dd></div>
+          <div><dt>E-post</dt><dd><a href="mailto:post@dagmamma.no">post@dagmamma.no</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="kontakt" aria-labelledby="kontakt-tittel">
+      <div class="wrap kontakt">
+        <div class="kontakt__copy">
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="kontakt-tittel">Lag en gratis profil, eller spør oss først</h2>
+          <p class="lead">
+            Vil du heller snakke med noen? Kundeservice svarer på e-post, og politiattest sendes til
+            Dagmamma AS på Digipost.
+          </p>
+          <ul class="kontakt__punkter">
+            <li><span>E-post</span><a href="mailto:post@dagmamma.no">post@dagmamma.no</a></li>
+            <li><span>Postadresse</span>Dagmamma AS, Frognerveien 1 B Bakgård, 0257 Oslo</li>
+            <li><span>Politiattest</span>Sendes til Dagmamma AS på Digipost</li>
+          </ul>
+        </div>
+
+        <div class="kontakt__kort">
+          <form id="kontakt-skjema" novalidate>
+            <h3>Send en forespørsel</h3>
+            <div class="felt">
+              <label for="navn">Navn</label>
+              <input id="navn" name="navn" type="text" autocomplete="name" required />
+            </div>
+            <div class="felt">
+              <label for="epost">E-post</label>
+              <input id="epost" name="epost" type="email" autocomplete="email" required />
+            </div>
+            <div class="felt">
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel" required />
+            </div>
+            <div class="felt">
+              <label for="kommune">Kommune</label>
+              <input id="kommune" name="kommune" type="text" autocomplete="address-level2" />
+            </div>
+            <div class="felt">
+              <label for="gjelder">Hva gjelder det?</label>
+              <select id="gjelder" name="gjelder">
+                <option>Jeg leter etter dagmamma</option>
+                <option>Jeg leter etter barnevakt</option>
+                <option>Jeg vil bli barnepasser</option>
+                <option>Spørsmål om BankID eller politiattest</option>
+                <option>Noe annet</option>
+              </select>
+            </div>
+            <div class="felt">
+              <label for="melding">Melding</label>
+              <textarea id="melding" name="melding" rows="4"></textarea>
+            </div>
+            <p class="feltfeil" id="feltfeil" role="alert" hidden></p>
+            <button class="btn" type="submit">Lag forespørselen</button>
+            <p class="small muted">Skissen sender ingenting selv. Du får en kvittering du kan sende videre på e-post.</p>
+          </form>
+
+          <div class="kvittering" id="kvittering" role="status" aria-live="polite" hidden>
+            <p class="eyebrow">Kvittering</p>
+            <h3>Forespørselen er klar</h3>
+            <dl id="kvittering-liste"></dl>
+            <div class="kvittering__knapper">
+              <a class="btn" id="kvittering-malia" href="mailto:post@dagmamma.no">Åpne i e-post</a>
+              <button class="btn btn--ghost" type="button" id="kvittering-endre">Endre</button>
+            </div>
+            <p class="small muted">Ingenting er sendt. Kvitteringen ligger bare i denne nettleserfanen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <img src="img/logo.png" alt="Dagmamma.no" width="598" height="118" class="footer__logo" loading="lazy" decoding="async" />
+        <p>Største norske møteplass for foreldre og barnepassere.</p>
+      </div>
+      <div class="footer__kol">
+        <h2 class="footer__tittel">Her finner du</h2>
+        <ul>
+          <li><a href="#finn">Ledig dagmamma</a></li>
+          <li><a href="#finn">Barnevakt</a></li>
+          <li><a href="#finn">Foreldre</a></li>
+          <li><a href="#pris">Priser</a></li>
+        </ul>
+      </div>
+      <div class="footer__kol">
+        <h2 class="footer__tittel">Tjenesten</h2>
+        <ul>
+          <li><a href="#slik">Slik fungerer det</a></li>
+          <li><a href="#trygghet">BankID og politiattest</a></li>
+          <li><a href="#pris">Abonnement</a></li>
+          <li><a href="#om">Om Dagmamma AS</a></li>
+        </ul>
+      </div>
+      <address class="footer__adresse">
+        <h2 class="footer__tittel">Dagmamma AS</h2>
+        <p>Frognerveien 1B<br />0257 Oslo</p>
+        <p>Org.nr. 919 058 404</p>
+        <p><a href="mailto:post@dagmamma.no">post@dagmamma.no</a></p>
+      </address>
+    </div>
+    <div class="wrap footer__bunn">
+      <p>© 2026 Dagmamma AS. Alle rettigheter reservert.</p>
+      <p>Tjenesten finnes på norsk bokmål og engelsk.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

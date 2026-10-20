@@ -1,0 +1,64 @@
+/*
+  SEIE AS — identitet.
+  Arketype: kystnær og operativ, ikke industriell og ikke klinisk.
+  Dyp fjordblå som bærende flate, kritt i brødteksten og isblå fra
+  deres egen logo som eneste sekundærfarge. Fraunces i overskriftene
+  (myk serif, hentet fra ordmerket) og IBM Plex Sans i brødteksten.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f4f7f7;
+  --bg-soft: #e8f0f1;
+  --surface: #ffffff;
+  --navy: #08222e;
+  --navy-2: #0d3241;
+
+  /* Tekst */
+  --fg: #102730;
+  --muted: #50656e;
+  --navy-fg: #eef5f6;
+  --navy-muted: #a9c2ca;
+
+  /* Linjer */
+  --line: #d6e1e3;
+  --line-strong: #b7c9cd;
+
+  /* Fjordblå aksent + isblå fra logoen */
+  --accent: #1f6478;
+  --accent-deep: #164b5a;
+  --accent-fg: #ffffff;
+  --accent-soft: #dcebf0;
+  --ice: #a9cade;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --accent-line: var(--line-strong);
+
+  /* To fonter, ikke flere */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Presis form: mindre avrunding enn kit-standarden */
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgb(8 34 46 / 5%), 0 18px 44px -22px rgb(8 34 46 / 26%);
+
+  /* Typografi */
+  --t-xs: 0.74rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.45vw, 1.28rem);
+  --t-h3: clamp(1.22rem, 1.08rem + 0.62vw, 1.55rem);
+  --t-h2: clamp(1.8rem, 1.35rem + 1.9vw, 2.7rem);
+  --t-h1: clamp(2.35rem, 1.5rem + 3.7vw, 4.1rem);
+
+  --wrap: 1180px;
+  --header-h: 72px;
+}
+
+/* Kit-ens base bruker --bg-soft i flere komponenter; hold dem i temaet. */
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}

@@ -1,0 +1,175 @@
+/*
+  Catos Betongsaging AS — tema.
+
+  Uttrykket er «anleggsbrakke og betongflate»: kalkgrå bakgrunn, blekk som
+  tekst og skogsgrønn som eneste aksent. Fargene er hentet fra firmaets egen
+  nettside (grønn #016721 / #1A833B med lyse gråtoner) og fra logoen, som er
+  gråtonet. Typografien er kondensert Oswald til overskrifter og tall, og
+  IBM Plex Sans til brødtekst.
+
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Råpalett */
+  --kalk: #efeee8;
+  --kalk-dyp: #e6e4da;
+  --kalk-mork: #d8d5c9;
+  --hvit: #fbfaf6;
+  --blekk: #171a18;
+  --blekk-2: #1f2421;
+  --blekk-3: #2b312d;
+  --dempet: #55605a;
+  --skog: #0b6b31;
+  --skog-dyp: #07461f;
+  --skog-lys: #e2efe5;
+  --feil: #9b1c12;
+
+  /* Kobles til demo-kitens prøver */
+  --bg: var(--kalk);
+  --bg-soft: var(--kalk-dyp);
+  --fg: var(--blekk);
+  --muted: var(--dempet);
+  --line: var(--kalk-mork);
+  --accent: var(--skog);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--skog-lys);
+
+  --font-display: 'Oswald', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 0 rgb(23 26 24 / 4%), 0 20px 44px -30px rgb(23 26 24 / 45%);
+  --wrap: 1180px;
+  --header-h: 76px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+}
+
+::selection {
+  background: var(--skog);
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 1.02;
+}
+
+h1 {
+  font-size: clamp(2.35rem, 1.4rem + 4.1vw, 3.95rem);
+  line-height: 0.98;
+  letter-spacing: 0.002em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.9rem);
+  line-height: 1.04;
+}
+
+h3 {
+  font-size: clamp(1.05rem, 0.95rem + 0.45vw, 1.28rem);
+  line-height: 1.16;
+  letter-spacing: 0.015em;
+}
+
+.eyebrow {
+  gap: 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.71rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  color: var(--dempet);
+  margin-bottom: 1rem;
+}
+
+.eyebrow__merke {
+  width: 9px;
+  height: 9px;
+  background: var(--skog);
+  flex: 0 0 auto;
+}
+
+.eyebrow--lys {
+  color: #a7b3aa;
+}
+
+.eyebrow--lys .eyebrow__merke {
+  background: #6fd18d;
+}
+
+.lead {
+  color: var(--dempet);
+}
+
+/* Knapper: tekniske, ikke runde. */
+.btn {
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  min-height: 48px;
+  padding: 0.8rem 1.3rem;
+}
+
+.btn--lys {
+  background: var(--hvit);
+  color: var(--blekk);
+}
+
+.btn--lys:hover {
+  background: #fff;
+}
+
+.btn--kant {
+  background: transparent;
+  color: #efeee8;
+  border-color: #4a544d;
+}
+
+.btn--kant:hover {
+  background: rgb(255 255 255 / 8%);
+}
+
+/* Fokus på mørke flater må være lys, ellers forsvinner den. */
+.bevis :focus-visible,
+.prosess :focus-visible,
+.kontakt :focus-visible,
+.bunn :focus-visible {
+  outline-color: #8fe0a8;
+}
+
+/* Hopp-til-innhold skal være usynlig, men aldri utenfor skjermen: da måler
+   QA-siden den som «element utenfor skjermen». */
+.skip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  min-height: 48px;
+  padding: 0.85rem 1.2rem;
+  background: var(--blekk);
+  color: #fff;
+  text-decoration: none;
+  clip-path: inset(50%);
+}
+
+.skip:focus {
+  clip-path: none;
+}

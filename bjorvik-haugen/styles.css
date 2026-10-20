@@ -1,0 +1,1448 @@
+/*
+  Bjørvik & Haugen AS — layout og komponenter.
+  Ligger etter theme.css. Alt er bygget på kit-ets .wrap, .section og .btn.
+*/
+
+/* ============================================================
+   1. Topplinje og header
+   ============================================================ */
+
+.topbar {
+  background: var(--blekk);
+  color: #e9e4d9;
+  font-size: 0.79rem;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid #2a251f;
+}
+
+.topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 1.4rem;
+  min-height: 42px;
+  padding-block: 4px;
+}
+
+.topbar__group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 1.4rem;
+}
+
+.topbar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 40px;
+  color: #f3efe6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.topbar a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: var(--rod-lys);
+  text-underline-offset: 4px;
+}
+
+.topbar__label {
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: #a49b8c;
+}
+
+.topbar__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--rod-lys);
+  flex: none;
+}
+
+.topbar__note {
+  color: #b8b0a2;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .topbar__note {
+    display: inline;
+  }
+}
+
+.header {
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--lim) 92%, transparent);
+}
+
+.header__inner {
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 48px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: 1.16rem;
+  line-height: 1.05;
+  color: var(--blekk);
+}
+
+.brand:hover {
+  color: var(--blekk);
+}
+
+.brand__mark {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 2px;
+}
+
+.brand__tekst {
+  display: grid;
+  gap: 2px;
+}
+
+.brand__navn {
+  display: block;
+}
+
+.brand__navn span {
+  color: var(--rod);
+}
+
+.brand__under {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.93rem;
+  color: var(--blekk-myk);
+}
+
+.header__cta {
+  min-height: 46px;
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .header__cta {
+    display: inline-flex;
+  }
+}
+
+/* ============================================================
+   2. Hero
+   ============================================================ */
+
+.hero {
+  padding-top: clamp(2.4rem, 5.5vw, 4.4rem);
+  padding-bottom: 0;
+  position: relative;
+}
+
+/* Tynn målebåndslinje øverst: en håndverker flukter før han maler. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--line-sterk) 0 1px,
+    transparent 1px 24px
+  );
+  opacity: 0.75;
+}
+
+.hero__inner {
+  max-width: 880px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 1.35rem;
+  text-wrap: balance;
+}
+
+.hero h1 em {
+  display: block;
+}
+
+.hero__lead {
+  margin-inline: auto;
+  margin-bottom: 1.9rem;
+  max-width: 54ch;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+.hero__cta .btn {
+  min-height: 52px;
+  padding-inline: 1.6rem;
+}
+
+.hero__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 1.7rem;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__chips li {
+  margin: 0;
+}
+
+.hero__chips a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.35rem 0.95rem;
+  border: 1px solid var(--line-sterk);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--papir) 70%, transparent);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--blekk-myk);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.hero__chips a:hover {
+  border-color: var(--rod);
+  background: var(--papir);
+  color: var(--rod);
+}
+
+/* Fullbredde foto under hero: tekstflaten slutter, arbeidet begynner. */
+.hero__media {
+  margin-top: clamp(2.2rem, 5vw, 3.6rem);
+  position: relative;
+  background: var(--lim-dyp);
+  border-top: 3px solid var(--rod);
+}
+
+.hero__fig {
+  margin: 0;
+  position: relative;
+  aspect-ratio: 2.45 / 1;
+  max-height: min(60vh, 500px);
+  overflow: hidden;
+}
+
+.hero__fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+.hero__caption {
+  position: absolute;
+  left: clamp(14px, 4vw, 32px);
+  bottom: clamp(14px, 3vw, 26px);
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.85rem;
+  background: color-mix(in srgb, var(--papir) 94%, transparent);
+  border-left: 3px solid var(--rod);
+  font-size: 0.79rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--blekk-myk);
+  box-shadow: 0 2px 10px rgb(20 16 10 / 12%);
+}
+
+@media (max-width: 640px) {
+  .hero__fig {
+    aspect-ratio: 4 / 3;
+    max-height: none;
+  }
+}
+
+/* ============================================================
+   3. Tre løfter, rett under bildet
+   ============================================================ */
+
+.lofter {
+  border-bottom: 1px solid var(--line);
+  background: var(--papir);
+}
+
+.lofter__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.lofter__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding: 1.15rem clamp(0.75rem, 2vw, 1.5rem);
+  border-left: 1px solid var(--line);
+  font-size: 0.93rem;
+  line-height: 1.4;
+}
+
+.lofter__item:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.lofter__item:last-child {
+  padding-right: 0;
+}
+
+.lofter__nr {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--rod);
+  flex: none;
+  font-variant-numeric: lining-nums;
+}
+
+.lofter__item strong {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+.lofter__item span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+@media (max-width: 760px) {
+  .lofter__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .lofter__item {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-inline: 0;
+  }
+
+  .lofter__item:first-child {
+    border-top: 0;
+  }
+}
+
+/* ============================================================
+   4. Tjenester
+   ============================================================ */
+
+.tjenester__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3.5rem);
+  align-items: end;
+  margin-bottom: clamp(1.8rem, 4vw, 3rem);
+}
+
+.tjenester__head p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .tjenester__head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+.tgrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.35rem);
+}
+
+.tcard {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  background: var(--papir);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.tcard--bred {
+  grid-column: span 6;
+}
+
+.tcard:hover {
+  border-color: var(--line-sterk);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.tcard__fig {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--lim-dyp);
+  border-bottom: 1px solid var(--line);
+}
+
+.tcard--bred .tcard__fig {
+  aspect-ratio: 16 / 9;
+}
+
+.tcard__fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tcard:hover .tcard__fig img {
+  transform: scale(1.03);
+}
+
+.tcard__body {
+  padding: clamp(1rem, 1.8vw, 1.4rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.tcard__body h3 {
+  margin: 0;
+  font-size: 1.16rem;
+  letter-spacing: -0.008em;
+}
+
+.tcard--bred .tcard__body h3 {
+  font-size: 1.34rem;
+}
+
+.tcard__body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+/* Tjenestene uten foto: en strekskravering som leser som underlag. */
+.tcard--uten {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0 9px,
+      rgb(176 26 34 / 4%) 9px 10px
+    ),
+    var(--lim-dyp);
+  justify-content: space-between;
+}
+
+.tcard__merke {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-sterk);
+  border-radius: 50%;
+  background: var(--papir);
+  color: var(--rod);
+  margin-bottom: 0.35rem;
+}
+
+.tcard__merke svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1000px) {
+  .tcard,
+  .tcard--bred {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 620px) {
+  .tcard,
+  .tcard--bred {
+    grid-column: span 12;
+  }
+
+  .tcard__fig,
+  .tcard--bred .tcard__fig {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* ============================================================
+   5. Slik jobber vi
+   ============================================================ */
+
+.prosess {
+  background: var(--papir);
+  border-block: 1px solid var(--line);
+}
+
+.prosess__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1.6rem, 4vw, 3.6rem);
+  align-items: start;
+}
+
+.prosess__lead {
+  margin-bottom: 1.8rem;
+}
+
+.steg {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: steg;
+}
+
+.steg li {
+  position: relative;
+  margin: 0;
+  padding: 0 0 1.5rem 3.4rem;
+  border-left: 1px solid var(--line);
+  margin-left: 1.1rem;
+}
+
+.steg li:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+
+.steg li::before {
+  counter-increment: steg;
+  content: '0' counter(steg);
+  position: absolute;
+  left: -1.15rem;
+  top: -0.35rem;
+  width: 2.3rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 500;
+  color: var(--rod);
+  background: var(--papir);
+  padding-block: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-variant-numeric: lining-nums;
+}
+
+.steg h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.12rem;
+}
+
+.steg p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 44ch;
+}
+
+.prosess__bilder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.7rem, 1.6vw, 1rem);
+}
+
+.prosess__bilde {
+  margin: 0;
+}
+
+.prosess__bilde img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.prosess__bilde figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.prosess__bilde:last-child {
+  transform: translateY(2.2rem);
+}
+
+@media (max-width: 900px) {
+  .prosess__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prosess__bilde:last-child {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   6. Bevis (mørkt bånd)
+   ============================================================ */
+
+.bevis {
+  background: var(--blekk);
+  color: #efeade;
+}
+
+.bevis h2 {
+  color: #f7f3ea;
+}
+
+.bevis .eyebrow {
+  color: #ef8188;
+}
+
+.bevis .eyebrow::before {
+  background: var(--rod-lys);
+}
+
+.bevis__topp {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(1.2rem, 4vw, 3rem);
+  align-items: end;
+  margin-bottom: clamp(2rem, 4vw, 2.8rem);
+}
+
+.bevis__topp p {
+  margin: 0;
+  color: #bdb4a5;
+}
+
+.bevis__tall {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 3vw, 2.4rem);
+  border-top: 1px solid #322c25;
+  padding-top: clamp(1.4rem, 3vw, 2rem);
+}
+
+.tall__nr {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 1.4rem + 3.6vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #fbf7ee;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-variant-numeric: lining-nums;
+}
+
+.tall__nr span {
+  color: var(--rod-lys);
+}
+
+.tall__tekst {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #b6ad9e;
+  max-width: 24ch;
+}
+
+.bevis__merker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: clamp(1.8rem, 4vw, 2.6rem);
+  padding: 0;
+  list-style: none;
+}
+
+.bevis__merker li {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #3a332b;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: #ded6c8;
+}
+
+.bevis__merker li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rod-lys);
+  flex: none;
+}
+
+@media (max-width: 760px) {
+  .bevis__topp {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .bevis__tall {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .tall__nr {
+    font-size: 2.5rem;
+  }
+}
+
+/* ============================================================
+   7. Lange tradisjoner
+   ============================================================ */
+
+.om__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(1.6rem, 4vw, 3.4rem);
+  align-items: start;
+}
+
+.om__tekst p {
+  max-width: 56ch;
+}
+
+.tidslinje {
+  list-style: none;
+  margin: 1.6rem 0 0;
+  padding: 0;
+}
+
+.tidslinje li {
+  display: grid;
+  grid-template-columns: 5.4rem 1fr;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+.tidslinje li:first-child {
+  border-top: 2px solid var(--blekk);
+}
+
+.tidslinje b {
+  font-family: var(--font-display);
+  font-size: 1.28rem;
+  font-weight: 500;
+  color: var(--rod);
+  line-height: 1.1;
+  font-variant-numeric: lining-nums;
+}
+
+.tidslinje span {
+  color: var(--blekk-myk);
+  line-height: 1.5;
+}
+
+.om__fig {
+  margin: 0;
+  position: relative;
+}
+
+.om__fig img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+.om__fig figcaption {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  max-width: 78%;
+  padding: 0.9rem 1.1rem;
+  background: var(--papir);
+  border-top: 3px solid var(--rod);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--blekk-myk);
+  box-shadow: 0 8px 24px -14px rgb(20 16 10 / 40%);
+}
+
+@media (max-width: 900px) {
+  .om__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .om__fig {
+    order: -1;
+  }
+
+  .om__fig img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .om__fig figcaption {
+    position: static;
+    max-width: none;
+    margin-top: 0.75rem;
+    box-shadow: none;
+  }
+}
+
+/* ============================================================
+   8. Forespørsel — skjema + levende arbeidsseddel
+   ============================================================ */
+
+.foresporsel {
+  background: var(--lim-dyp);
+  border-block: 1px solid var(--line);
+}
+
+.foresporsel__intro {
+  max-width: 62ch;
+  margin-bottom: clamp(1.6rem, 3.5vw, 2.4rem);
+}
+
+.req {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: clamp(1.2rem, 3.5vw, 2.6rem);
+  align-items: start;
+}
+
+@media (max-width: 940px) {
+  .req {
+    grid-template-columns: 1fr;
+  }
+}
+
+.req__skjema {
+  background: var(--papir);
+  border: 1px solid var(--line-sterk);
+  border-radius: var(--radius);
+  padding: clamp(1.1rem, 2.6vw, 1.9rem);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 60%) inset;
+}
+
+fieldset {
+  margin: 0 0 1.3rem;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend,
+.felt__label {
+  display: block;
+  padding: 0;
+  margin-bottom: 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: var(--blekk-myk);
+}
+
+.valg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+/* Ekte knapper, ikke skjulte avkrysningsbokser: de kan trykkes på og nås
+   med tastatur, og er alltid minst 44 px høye. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line-sterk);
+  border-radius: 999px;
+  background: var(--lim);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blekk-myk);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.chip::before {
+  content: '+';
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1;
+  transition: transform 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--rod);
+  color: var(--blekk);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--rod);
+  border-color: var(--rod);
+  color: #fff;
+}
+
+.chip[aria-pressed='true']::before {
+  content: '✓';
+  color: #fff;
+  transform: rotate(0deg);
+}
+
+.felt {
+  display: grid;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.felt__to {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+@media (max-width: 560px) {
+  .felt__to {
+    grid-template-columns: 1fr;
+  }
+}
+
+.felt__hjelp {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.felt__valgfri {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--muted);
+}
+
+.felt__feil {
+  margin: 0;
+  min-height: 0;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--rod);
+}
+
+.felt__feil:empty {
+  display: none;
+}
+
+.felt[data-invalid='true'] input,
+.felt[data-invalid='true'] select,
+.felt[data-invalid='true'] textarea {
+  border-color: var(--rod);
+  background: #fdf4f2;
+}
+
+.valg[data-invalid='true'] {
+  outline: 2px solid color-mix(in srgb, var(--rod) 26%, transparent);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.req__send {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.req__send .btn {
+  min-height: 50px;
+  padding-inline: 1.5rem;
+}
+
+.req__send p {
+  margin: 0;
+  font-size: 0.83rem;
+  color: var(--muted);
+  max-width: 30ch;
+}
+
+.skisse {
+  display: flex;
+  gap: 0.55rem;
+  margin-top: 1.1rem;
+  padding: 0.7rem 0.85rem;
+  background: #f6f1e4;
+  border-left: 3px solid var(--line-sterk);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: #5f584c;
+}
+
+.skisse strong {
+  color: var(--blekk);
+}
+
+/* ---- Arbeidsseddelen ---- */
+
+.seddel {
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  background: var(--papir);
+  border: 1px solid var(--line-sterk);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.seddel__topp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px dashed var(--line-sterk);
+  background: var(--lim-dyp);
+}
+
+.seddel__tittel {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--blekk-myk);
+}
+
+.stempel {
+  flex: none;
+  padding: 0.28rem 0.6rem;
+  border: 1.5px solid var(--line-sterk);
+  border-radius: 2px;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transform: rotate(-2.5deg);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.seddel.is-klar .stempel {
+  color: var(--rod);
+  border-color: var(--rod);
+}
+
+.seddel__kropp {
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.seddel__rader {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.seddel__rad {
+  display: grid;
+  grid-template-columns: 7.2rem 1fr;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+
+.seddel__rad dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.seddel__rad dd {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: var(--blekk);
+  overflow-wrap: anywhere;
+}
+
+.seddel__rad dd[data-tom='true'] {
+  color: #a49b8c;
+}
+
+.seddel__kvittering {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--blekk);
+}
+
+.seddel__kvittering p {
+  margin: 0 0 0.8rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--blekk-myk);
+}
+
+.seddel__kvittering .btn {
+  width: 100%;
+  min-height: 48px;
+}
+
+.seddel__kopier {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 0.5rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line-sterk);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--blekk-myk);
+  cursor: pointer;
+}
+
+.seddel__kopier:hover {
+  border-color: var(--blekk);
+  color: var(--blekk);
+}
+
+.seddel__status {
+  margin: 0.6rem 0 0;
+  min-height: 1.1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.seddel__steg {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0.9rem 0 0;
+  border-top: 1px dashed var(--line-sterk);
+}
+
+.seddel__steg li {
+  position: relative;
+  margin: 0 0 0.4rem;
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.seddel__steg li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--rod);
+  font-weight: 700;
+}
+
+.seddel__tid {
+  margin: 0;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  font-variant-numeric: lining-nums;
+}
+
+@media (max-width: 940px) {
+  .seddel {
+    position: static;
+  }
+
+  .seddel__rad {
+    grid-template-columns: 6.4rem 1fr;
+  }
+}
+
+/* ============================================================
+   9. Kontakt
+   ============================================================ */
+
+.kontakt__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(1.6rem, 4vw, 3.4rem);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .kontakt__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kontakt__telefon {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  min-height: 56px;
+  margin: 0.2rem 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 1.3rem + 2.4vw, 2.9rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--blekk);
+  text-decoration: none;
+  line-height: 1.15;
+  font-variant-numeric: lining-nums;
+}
+
+.kontakt__telefon:hover {
+  color: var(--rod);
+}
+
+.kontakt__merkelapp {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.adresse {
+  margin: 0.9rem 0 1.4rem;
+  font-style: normal;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: var(--blekk-myk);
+}
+
+.epostliste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.epostliste li {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.epostliste a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  min-height: 46px;
+  padding: 0.55rem 0;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--blekk-myk);
+  overflow-wrap: anywhere;
+}
+
+.epostliste a:hover {
+  color: var(--rod);
+}
+
+.epostliste a span:first-child {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+.epostliste a span:last-child {
+  font-size: 0.9rem;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+}
+
+.epostliste a:hover span:last-child {
+  color: var(--rod);
+  transform: translateX(3px);
+}
+
+.kontakt__kort {
+  background: var(--papir);
+  border: 1px solid var(--line-sterk);
+  border-top: 3px solid var(--rod);
+  border-radius: var(--radius);
+  padding: clamp(1.2rem, 2.6vw, 1.8rem);
+}
+
+.kontakt__kort h3 {
+  margin-top: 0;
+}
+
+.kontakt__kort ul {
+  padding-left: 1.1rem;
+  margin-bottom: 1.3rem;
+  font-size: 0.94rem;
+  color: var(--blekk-myk);
+}
+
+.kontakt__kort li {
+  margin-bottom: 0.4rem;
+}
+
+.kontakt__kort .btn {
+  width: 100%;
+}
+
+.kontakt__kort-note {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   10. Footer
+   ============================================================ */
+
+.footer {
+  background: var(--lim-dyp);
+  border-top: 1px solid var(--line);
+  padding-block: clamp(2.2rem, 5vw, 3.2rem) 1.6rem;
+  color: var(--blekk-myk);
+  font-size: 0.9rem;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: clamp(1.4rem, 4vw, 3rem);
+  margin-bottom: 1.8rem;
+}
+
+@media (max-width: 760px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+}
+
+.footer__navn {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.015em;
+}
+
+.footer p {
+  margin: 0 0 0.5rem;
+  max-width: 34ch;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.footer h2 {
+  margin: 0 0 0.7rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--blekk-myk);
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin: 0;
+}
+
+.footer li a,
+.footer li span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  font-size: 0.89rem;
+  color: var(--blekk-myk);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer li a:hover {
+  color: var(--rod);
+}
+
+.footer__bunn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.footer__bunn p {
+  margin: 0;
+  max-width: none;
+}
+
+/* ============================================================
+   11. Bevegelse — bare når brukeren ikke har bedt om mindre
+   ============================================================ */
+
+/* Uten JavaScript finnes ikke html.js, og da skal ingenting være skjult. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  html.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
