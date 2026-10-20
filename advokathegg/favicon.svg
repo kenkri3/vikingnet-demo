@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hegg &amp; Co">
+  <rect width="64" height="64" fill="#191b12"/>
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#bab17a" stroke-width="1.5"/>
+  <g fill="#bab17a">
+    <rect x="17" y="16" width="5" height="32"/>
+    <rect x="42" y="16" width="5" height="32"/>
+    <rect x="22" y="29.5" width="20" height="5"/>
+  </g>
+</svg>

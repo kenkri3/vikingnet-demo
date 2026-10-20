@@ -25,6 +25,9 @@ h1, h2, h3 {
 .section--dyp { background: var(--papir-dyp); }
 .section--flate { background: var(--flate); }
 
+#kandidat,
+#kontakt { border-top: 1px solid var(--linje); }
+
 .seksjonstopp {
   max-width: 62ch;
   margin-bottom: clamp(var(--s-5), 4vw, var(--s-6));
@@ -111,6 +114,8 @@ h1, h2, h3 {
 }
 
 .nav__cta { display: none; }
+
+.header--tr .nav a.nav__cta { display: none; }
 
 .header__tlf {
   display: inline-flex;
@@ -199,8 +204,8 @@ h1, h2, h3 {
 .hero h1 {
   color: var(--plum-tekst);
   font-size: var(--t-h1);
-  line-height: 1.02;
-  letter-spacing: -0.025em;
+  line-height: 1.06;
+  letter-spacing: -0.026em;
   max-width: 14ch;
   margin-bottom: var(--s-4);
 }
@@ -730,8 +735,10 @@ select[aria-invalid='true'] {
   position: relative;
   z-index: 1;
   padding-block: clamp(3.5rem, 9vw, 6.5rem);
-  max-width: 46rem;
+  max-width: var(--wrap);
 }
+
+.band__innhold > * { max-width: 46rem; }
 
 .band__merke {
   display: inline-flex;
@@ -1127,6 +1134,8 @@ select[aria-invalid='true'] {
   .prosess__figur { position: static; max-width: 520px; }
   .bevis__rutenett { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ref { grid-template-columns: 1fr; }
+  .tjenester { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tjeneste:last-child { grid-column: 1 / -1; }
 }
 
 @media (max-width: 640px) {
@@ -1143,7 +1152,7 @@ select[aria-invalid='true'] {
     padding-block: 0.9rem;
     border-top: 1px solid rgb(255 255 255 / 10%);
   }
-  .header--tr .nav .nav__cta {
+  .header--tr .nav a.nav__cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1166,4 +1175,6 @@ select[aria-invalid='true'] {
   .steg li { grid-template-columns: 2.4rem minmax(0, 1fr); }
   .bevis__rutenett { grid-template-columns: 1fr; gap: 0.9rem; }
   .footer__topp { flex-direction: column; }
+  .tjenester { grid-template-columns: 1fr; }
+  .tjeneste:last-child { grid-column: auto; }
 }

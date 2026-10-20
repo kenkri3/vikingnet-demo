@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dialog Regnskap AS — regnskap gjort enkelt</title>
+<meta name="description" content="Autorisert regnskapsførerselskap i Oslo. Skybaserte regnskapstjenester med Tripletex for små og mellomstore bedrifter — regnskap, rådgivning og årsoppgjør." />
+<meta name="theme-color" content="#08222f" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Dialog Regnskap AS" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:title" content="Dialog Regnskap AS — regnskap gjort enkelt" />
+<meta property="og:description" content="Skybaserte regnskapstjenester for små og mellomstore bedrifter. Tripletex sertifisert partner. Hoffsveien 1A, Oslo." />
+<meta property="og:image" content="img/og.jpg" />
+<meta property="og:image:alt" content="Tre personer i samtale rundt et bord i et lyst kontor" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Petrona:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Dialog Regnskap AS",
+  "description": "Autorisert regnskapsførerselskap som leverer skybaserte regnskapstjenester til små og mellomstore bedrifter.",
+  "telephone": "+47 959 40 807",
+  "email": "sindre@dialogregnskap.no",
+  "identifier": "923 401 946",
+  "foundingDate": "2019-08-29",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hoffsveien 1A",
+    "postalCode": "0275",
+    "addressLocality": "Oslo",
+    "addressCountry": "NO"
+  },
+  "areaServed": "Norge",
+  "knowsAbout": ["Regnskap", "Bokføring", "Lønn", "Årsoppgjør", "Rådgivning", "Tripletex"]
+}
+</script>
+</head>
+<body id="toppen">
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#toppen" aria-label="Dialog Regnskap — til toppen av siden">
+      <img class="brand__logo" src="img/logo-dialog.png" alt="Dialog Regnskap" width="480" height="133" />
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#system">System</a>
+      <a href="#folk">Om oss</a>
+      <a href="#bytte">Bytt til oss</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="nav__cta" href="#samtale">Bestill samtale</a>
+    </nav>
+
+    <div class="header__handling">
+      <a class="header__tlf" href="tel:+4795940807">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6.5 3.5h3l1.5 4-2 1.5a11 11 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5z" />
+        </svg>
+        <span>959 40 807</span>
+      </a>
+      <a class="btn btn--cyan header__cta" href="#samtale">Bestill samtale</a>
+      <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+        <span class="visually-hidden">Meny</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero: deres egen posisjon, med samtalegrunnlaget som første handling -->
+  <section class="hero" aria-labelledby="hero-tittel">
+    <div class="wrap hero__rutenett">
+      <div class="hero__tekst">
+        <p class="eyebrow eyebrow--lys"><span class="prikk" aria-hidden="true"></span>Autorisert regnskapsførerselskap · Oslo</p>
+        <h1 id="hero-tittel">Regnskap gjort enkelt.</h1>
+        <p class="hero__ingress">Velg en partner som forstår viktigheten av god samhandling.</p>
+        <p class="hero__tekst-avsnitt">Dialog Regnskap leverer skybaserte regnskapstjenester til små og mellomstore bedrifter. Vi jobber til daglig med å gjøre regnskapsprosessen så enkel, effektiv og forståelig som mulig.</p>
+        <div class="hero__knapper">
+          <a class="btn btn--cyan" href="#samtale">Bestill en samtale</a>
+          <a class="btn btn--pa-blekk" href="tel:+4795940807">Ring 959 40 807</a>
+        </div>
+        <ul class="hero__punkter">
+          <li>Tripletex sertifisert partner</li>
+          <li>Medlem i Regnskap Norge</li>
+          <li>Stiftet i 2019</li>
+        </ul>
+      </div>
+
+      <div class="hero__kort" id="samtale">
+        <div class="kort">
+          <div class="kort__hode">
+            <p class="kort__merke">Uforpliktende</p>
+            <h2 class="kort__tittel">Bestill en samtale</h2>
+            <p class="kort__ingress">Tre korte steg. Du får et samtalegrunnlag du kan sende oss på e-post.</p>
+          </div>
+
+          <div class="stegvis">
+            <p class="stegvis__status" id="steg-status" aria-live="polite">Steg 1 av 3: hva vil du ta opp?</p>
+            <div class="stegvis__prikker" aria-hidden="true">
+              <span class="er-aktiv" data-prikk="1"></span><span data-prikk="2"></span><span data-prikk="3"></span>
+            </div>
+          </div>
+
+          <form class="samtale" id="samtale-skjema" novalidate>
+            <fieldset class="steg" data-steg="1">
+              <legend class="steg__legend">Hva vil du ta opp?</legend>
+              <div class="chips" id="tema-liste" role="group" aria-label="Velg ett eller flere tema">
+                <button class="chip" type="button" aria-pressed="false" data-tema="Regnskap og bokføring">Regnskap og bokføring</button>
+                <button class="chip" type="button" aria-pressed="false" data-tema="Lønn">Lønn</button>
+                <button class="chip" type="button" aria-pressed="false" data-tema="Årsoppgjør og skattemelding">Årsoppgjør og skattemelding</button>
+                <button class="chip" type="button" aria-pressed="false" data-tema="Rådgivning">Rådgivning</button>
+                <button class="chip" type="button" aria-pressed="false" data-tema="Bytte av regnskapsfører">Bytte av regnskapsfører</button>
+                <button class="chip" type="button" aria-pressed="false" data-tema="Tripletex og system">Tripletex og system</button>
+              </div>
+              <p class="feil" data-feil="tema" hidden>Velg minst ett tema.</p>
+            </fieldset>
+
+            <fieldset class="steg" data-steg="2" hidden>
+              <legend class="steg__legend">Hvem skal vi snakke med?</legend>
+              <label>Navn
+                <input type="text" name="navn" autocomplete="name" placeholder="Fornavn og etternavn" />
+              </label>
+              <label>Bedrift <span class="valgfritt">(valgfritt)</span>
+                <input type="text" name="bedrift" autocomplete="organization" placeholder="Navnet på virksomheten" />
+              </label>
+              <label>E-post
+                <input type="email" name="epost" autocomplete="email" inputmode="email" placeholder="navn@bedrift.no" />
+              </label>
+              <label>Telefon <span class="valgfritt">(valgfritt)</span>
+                <input type="tel" name="telefon" autocomplete="tel" inputmode="tel" placeholder="Ditt telefonnummer" />
+              </label>
+              <p class="feil" data-feil="navn" hidden>Skriv navnet ditt.</p>
+              <p class="feil" data-feil="epost" hidden>Skriv en e-postadresse vi kan nå deg på.</p>
+            </fieldset>
+
+            <fieldset class="steg" data-steg="3" hidden>
+              <legend class="steg__legend">Samtalegrunnlaget</legend>
+              <dl class="notat" id="notat">
+                <div><dt>Tema</dt><dd id="notat-tema">—</dd></div>
+                <div><dt>Navn</dt><dd id="notat-navn">—</dd></div>
+                <div><dt>Bedrift</dt><dd id="notat-bedrift">—</dd></div>
+                <div><dt>E-post</dt><dd id="notat-epost">—</dd></div>
+                <div><dt>Telefon</dt><dd id="notat-telefon">—</dd></div>
+              </dl>
+              <div class="samtale__handling">
+                <a class="btn" id="notat-send" href="mailto:sindre@dialogregnskap.no">Send som e-post</a>
+                <a class="btn btn--ghost" href="tel:+4795940807">Ring i stedet</a>
+              </div>
+              <p class="samtale__notat">Notatet lages i nettleseren din. Ingenting sendes før du velger e-post eller telefon.</p>
+            </fieldset>
+
+            <div class="samtale__knapper">
+              <button class="btn btn--ghost" type="button" id="tilbake" hidden>Tilbake</button>
+              <button class="btn" type="submit" id="neste">Neste</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bevis: årstallet fra Enhetsregisteret, merkene fra deres egen side -->
+  <section class="bevis" aria-label="Fakta om Dialog Regnskap">
+    <div class="wrap bevis__rutenett">
+      <p class="bevis__punkt">
+        <span class="bevis__tall">2019</span>
+        <span class="bevis__tekst">Stiftet 29. august 2019 og registrert i Foretaksregisteret. Autorisert regnskapsførerselskap med flere års erfaring fra bransjen.</span>
+      </p>
+      <div class="bevis__merke">
+        <img src="img/tripletex-partner.png" alt="Tripletex sertifisert partner" width="400" height="152" loading="lazy" />
+      </div>
+      <div class="bevis__merke">
+        <img src="img/medlem-regnskap-norge.png" alt="Medlem i Regnskap Norge" width="400" height="191" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Tjenester: tre rader, ikke tre kort -->
+  <section class="seksjon tjenester" id="tjenester" aria-labelledby="tjenester-tittel">
+    <div class="wrap">
+      <div class="seksjonshode ">
+        <p class="eyebrow">Tjenester</p>
+        <h2 id="tjenester-tittel">Regnskap, rådgivning og årsoppgjør</h2>
+        <p class="lead">Vi hjelper deg med regnskapsprosessen fra A til Å. Ingen oppgave er for liten eller for stor — og du kan gjøre deler av jobben selv hvis du vil.</p>
+      </div>
+
+      <div class="tjeneste-liste">
+        <article class="tjeneste ">
+          <p class="tjeneste__nr" aria-hidden="true">01</p>
+          <div class="tjeneste__hoved">
+            <h3>Regnskap</h3>
+            <p>Bokføring av bilag, lønnskjøring, avstemming og kontroll — og årsoppgjør når året er omme. Ønsker du å gjøre deler av jobben selv, går det fint: vi finner en fornuftig arbeidsfordeling sammen.</p>
+          </div>
+          <ul class="tjeneste__punkter">
+            <li>Bokføring av bilag</li>
+            <li>Lønnskjøring</li>
+            <li>Avstemming og kontroll</li>
+          </ul>
+        </article>
+
+        <article class="tjeneste ">
+          <p class="tjeneste__nr" aria-hidden="true">02</p>
+          <div class="tjeneste__hoved">
+            <h3>Rådgivning</h3>
+            <p>Analyse og rapportering, og bistand når økonomien reiser spørsmål utover tallene. Vi har samarbeidspartnere med bred erfaring innenfor de fleste regnskapsnære områder.</p>
+          </div>
+          <ul class="tjeneste__punkter">
+            <li>Analyse og rapportering</li>
+            <li>Kapitalforhøyelser og emisjoner</li>
+            <li>Stiftelse av datterselskap</li>
+            <li>Riktige momskoder</li>
+          </ul>
+        </article>
+
+        <article class="tjeneste ">
+          <p class="tjeneste__nr" aria-hidden="true">03</p>
+          <div class="tjeneste__hoved">
+            <h3>Årsoppgjør</h3>
+            <p>Finalen i regnskapsåret: årsregnskap med noter, skattemelding og aksjonærregisteroppgave — samlet i én leveranse.</p>
+          </div>
+          <ul class="tjeneste__punkter">
+            <li>Årsregnskap med noter</li>
+            <li>Skattemelding og ligningspapirer</li>
+            <li>Aksjonærregisteroppgave</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- System: deres eget systemutsagn, med produktbildet på hvit flate -->
+  <section class="seksjon system" id="system" aria-labelledby="system-tittel">
+    <div class="wrap system__rutenett">
+      <div class="system__tekst ">
+        <p class="eyebrow eyebrow--lys"><span class="prikk" aria-hidden="true"></span>System</p>
+        <h2 id="system-tittel">Tripletex sørger for en effektiv regnskapsprosess</h2>
+        <p>Tripletex er et skybasert og fleksibelt økonomisystem som enkelt kan tilpasses din bedrifts rutiner. Automatiske betalingsløsninger, effektiv bilagsregistrering og enkel rollefordeling mellom deg som kunde og oss som regnskapsfører.</p>
+        <p>Systemet er alltid tilgjengelig, både på nett og på mobil, og modulene er sømløst integrert med hverandre. Du velger selv hvilke du vil bruke.</p>
+        <ul class="moduler" aria-label="Moduler i Tripletex">
+          <li>Faktura</li>
+          <li>Regnskap</li>
+          <li>Timeføring</li>
+          <li>Lønn</li>
+          <li>Prosjektstyring</li>
+        </ul>
+        <p class="system__bransje">Tripletex leverer også spesialtilpassede bransjeløsninger for elektrikere og rørleggere.</p>
+      </div>
+
+      <div class="system__flate ">
+        <div class="produkt">
+          <img src="img/system-enheter.webp" alt="Tripletex vist på stasjonær skjerm, nettbrett og mobil" width="960" height="540" loading="lazy" />
+        </div>
+        <p class="produkt__tekst">Skybasert regnskap. Automatiserte prosesser. Enkelt å bruke.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slik jobber vi: tre steg ved siden av ett bilde -->
+  <section class="seksjon slik" id="slik" aria-labelledby="slik-tittel">
+    <div class="wrap slik__rutenett">
+      <figure class="slik__bilde ">
+        <img src="img/samtale.jpg" alt="Tre personer i samtale rundt et bord, den ene holder en telefon" width="1440" height="810" loading="lazy" />
+        <figcaption>God samhandling starter med en samtale om virksomheten din.</figcaption>
+      </figure>
+
+      <div class="slik__tekst">
+        <div class="seksjonshode ">
+          <p class="eyebrow">Slik jobber vi</p>
+          <h2 id="slik-tittel">En dialog, ikke en bilagsfabrikk</h2>
+        </div>
+
+        <ol class="steg-liste">
+          <li class="steg-punkt ">
+            <span class="steg-punkt__nr" aria-hidden="true">1</span>
+            <div>
+              <h3>En uforpliktende prat</h3>
+              <p>Vi vil gjerne møte deg og lære om virksomheten din. Ring, skriv — eller lag samtalegrunnlaget på denne siden og send det til oss.</p>
+            </div>
+          </li>
+          <li class="steg-punkt ">
+            <span class="steg-punkt__nr" aria-hidden="true">2</span>
+            <div>
+              <h3>Sammen om rutinene</h3>
+              <p>Vi blir enige om gode rutiner for å effektivisere regnskapsprosessen i bedriften: hva vi gjør, hva du gjør selv, og hvordan bilagene kommer oss i hende.</p>
+            </div>
+          </li>
+          <li class="steg-punkt ">
+            <span class="steg-punkt__nr" aria-hidden="true">3</span>
+            <div>
+              <h3>Dialog gjennom året</h3>
+              <p>Målet er at regnskapet skal være enkelt, effektivt og forståelig. En vennlig og konstruktiv dialog med kundene våre er noe vi setter pris på.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mennesker: rollekort uten ansikt, navnene er deres egne -->
+  <section class="seksjon folk" id="folk" aria-labelledby="folk-tittel">
+    <div class="wrap">
+      <div class="seksjonshode seksjonshode--senter ">
+        <p class="eyebrow">Om oss</p>
+        <h2 id="folk-tittel">Ansiktene bak Dialog Regnskap</h2>
+        <p class="lead">Et autorisert regnskapsførerselskap med flere års erfaring fra bransjen.</p>
+      </div>
+
+      <div class="folk__rutenett">
+        <article class="person ">
+          <p class="person__monogram" aria-hidden="true">SS</p>
+          <h3 class="person__navn">Sindre Sandblost</h3>
+          <p class="person__rolle">Daglig leder og autorisert regnskapsfører</p>
+        </article>
+        <article class="person ">
+          <p class="person__monogram" aria-hidden="true">TN</p>
+          <h3 class="person__navn">Thomas Netland</h3>
+          <p class="person__rolle">Autorisert regnskapsfører</p>
+        </article>
+        <blockquote class="sitat ">
+          <p>«En vennlig og konstruktiv dialog med våre kunder er noe vi setter pris på.»</p>
+          <footer>Dialog Regnskap</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bytt til oss: deres egne punkter om bankkort og nettbank -->
+  <section class="seksjon bytte" id="bytte" aria-labelledby="bytte-tittel">
+    <div class="wrap bytte__rutenett">
+      <div class="bytte__tekst ">
+        <p class="eyebrow">Bytt til oss</p>
+        <h2 id="bytte-tittel">Aldri mer utlegg</h2>
+        <p class="lead">Bytter du regnskapsfører til oss, får du et smartere, gebyrfritt bankkort som gir full oversikt over alle kjøp i bedriften. Har du kolleger, kan de også få kort.</p>
+        <a class="btn" href="#samtale">Start med en samtale</a>
+      </div>
+
+      <ul class="bytte__liste">
+        <li class="bytte__punkt ">
+          <h3>Varsel når pengene går ut</h3>
+          <p>Du får et varsel når penger går ut av konto. Trykk på varselet og last opp bilde av kvitteringen med en gang — så utsetter du ingenting.</p>
+        </li>
+        <li class="bytte__punkt ">
+          <h3>Nettbank som fører regnskap</h3>
+          <p>En superenkel nettbank som bidrar til regnskapet: du ser hvor pengene går, og hvor de skal i regnskapet.</p>
+        </li>
+        <li class="bytte__punkt ">
+          <h3>Tilgang for regnskapsfører</h3>
+          <p>Vi får tilgang til din konto, så overlevering av kvitteringer og forklaringer faller bort. Alt ligger ferdig sortert og klart.</p>
+        </li>
+        <li class="bytte__punkt ">
+          <h3>Gebyrfri konto</h3>
+          <p>Fri for skjulte avgifter. Du betaler bare for tjenester du kjøper og bruker.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Kontakt: det som faktisk står på deres side, uten oppdiktede åpningstider -->
+  <section class="seksjon kontakt" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap kontakt__rutenett">
+      <div class="kontakt__tekst ">
+        <p class="eyebrow eyebrow--lys"><span class="prikk" aria-hidden="true"></span>Kontakt</p>
+        <h2 id="kontakt-tittel">En uforpliktende prat?</h2>
+        <p>Vi vil gjerne møte deg og lære om virksomheten din. Det er enkelt å bytte regnskapsfører — ta kontakt i dag for en hyggelig og uforpliktende prat.</p>
+        <div class="kontakt__knapper">
+          <a class="btn btn--cyan" href="tel:+4795940807">Ring 959 40 807</a>
+          <a class="btn btn--pa-blekk" href="mailto:sindre@dialogregnskap.no">Send e-post</a>
+        </div>
+      </div>
+
+      <dl class="kontaktkort ">
+        <div>
+          <dt>Besøk</dt>
+          <dd>Hoffsveien 1A<br />0275 Oslo</dd>
+        </div>
+        <div>
+          <dt>Telefon</dt>
+          <dd><a href="tel:+4795940807">+47 959 40 807</a></dd>
+        </div>
+        <div>
+          <dt>E-post</dt>
+          <dd><a href="mailto:sindre@dialogregnskap.no">sindre@dialogregnskap.no</a></dd>
+        </div>
+        <div>
+          <dt>Organisasjon</dt>
+          <dd>Dialog Regnskap AS<br />Org.nr 923 401 946</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__rutenett">
+    <div class="footer__merke">
+      <img src="img/logo-dialog.png" alt="Dialog Regnskap" width="480" height="133" loading="lazy" />
+      <p>Skybaserte regnskapstjenester for små og mellomstore bedrifter.</p>
+    </div>
+    <div class="footer__kolonne">
+      <p class="footer__overskrift">Dialog Regnskap AS</p>
+      <p>Hoffsveien 1A<br />0275 Oslo<br />Org.nr 923 401 946</p>
+    </div>
+    <div class="footer__kolonne">
+      <p class="footer__overskrift">Kontakt</p>
+      <p><a href="tel:+4795940807">+47 959 40 807</a><br /><a href="mailto:sindre@dialogregnskap.no">sindre@dialogregnskap.no</a></p>
+    </div>
+    <div class="footer__kolonne">
+      <p class="footer__overskrift">Siden</p>
+      <p><a href="#tjenester">Tjenester</a><br /><a href="#system">System</a><br /><a href="#bytte">Bytt til oss</a><br /><a href="#kontakt">Kontakt</a></p>
+    </div>
+  </div>
+  <div class="wrap footer__bunn">
+    <p>© <span id="ar">2026</span> Dialog Regnskap AS. Regnskapsføring og bokføring, næringskode 69.202.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

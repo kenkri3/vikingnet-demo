@@ -106,6 +106,7 @@
   var valgteFag = [];
   var valgtVarighet = '';
   var registrert = false;
+  var nullstiller = false;
 
   /* Dagens dato som minste oppstart */
   var iDag = new Date();
@@ -353,6 +354,8 @@
   }
 
   function tilbakestill() {
+    if (nullstiller) return;
+    nullstiller = true;
     skjema.reset();
     valgteFag = [];
     valgtVarighet = '';
@@ -380,6 +383,7 @@
     }
 
     synk();
+    nullstiller = false;
   }
 
   /* ---------------- Hendelser ---------------- */
@@ -440,6 +444,8 @@
   });
 
   skjema.addEventListener('reset', function (event) {
+    // Når vi nullstiller selv, skal nettleseren få gjøre jobben ferdig.
+    if (nullstiller) return;
     event.preventDefault();
     tilbakestill();
   });
@@ -447,7 +453,7 @@
   if (kopierKnapp) {
     kopierKnapp.addEventListener('click', function () {
       var referanse = referanseFelt ? referanseFelt.textContent : '';
-      var tid = tidFelt ? tidFelt.textContent : '';
+      var tid = tidFelt ? tidFelt.textContent.replace(/^Registrert\s*/, '') : '';
       var tekst = kvitteringTekst(referanse, tid);
 
       var kvitter = function () {

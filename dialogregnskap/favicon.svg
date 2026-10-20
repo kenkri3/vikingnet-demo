@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dialog Regnskap">
+  <rect width="64" height="64" rx="13" fill="#08222f"/>
+  <path d="M12 26.5C12 17.9 19.2 11 28.8 11c8.4 0 15 7.1 15 15.9 0 8.8-6.6 15.9-15 15.9-1.1 0-2.2-.1-3.2-.4L15.6 48l1.3-7.5A16.2 16.2 0 0 1 12 26.5Z" fill="#17a6d9"/>
+  <circle cx="28.6" cy="26.6" r="6.1" fill="#08222f"/>
+</svg>

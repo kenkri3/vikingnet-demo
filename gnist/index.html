@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gnist – smidig produktutvikling som fungerer i praksis</title>
+<meta name="description" content="Gnist i Oslo er rundt 30 rådgivere innen agile coaching, produktledelse, teamledelse og teknologiledelse. Book en uforpliktende prat direkte på siden.">
+<meta name="theme-color" content="#171c33">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Gnist">
+<meta property="og:title" content="Gnist – smidig produktutvikling som fungerer i praksis">
+<meta property="og:description" content="Nisjekonsulentselskap i Oslo med rundt 30 rådgivere innen agile coaching, produktledelse og teknologiledelse. Book en uforpliktende prat.">
+<meta property="og:url" content="https://kenkri3.github.io/vikingnet-demo/gnist/">
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/gnist/img/miljofoto-03.jpg">
+<meta property="og:image:alt" content="Rådgivere fra Gnist foran en tavle med lapper under en arbeidsøkt">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Gnist Consulting AS",
+  "alternateName": "Gnist",
+  "url": "https://gnist.as/",
+  "email": "ellen-marie@gnist.as",
+  "telephone": "+47 93 04 30 79",
+  "foundingDate": "2019-03-27",
+  "identifier": "922669570",
+  "description": "Nisjekonsulentselskap i Oslo med rundt 30 rådgivere innen agile coaching, produktledelse, prosjekt- og teamledelse, transformasjonsledelse og Tech Lead.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Tordenskioldsgate 8",
+    "postalCode": "0161",
+    "addressLocality": "Oslo",
+    "addressCountry": "NO"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Iniva"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#hoved">Til innholdet</a>
+
+<header class="header" id="topp">
+  <div class="wrap header__inner">
+    <a class="brand" href="#topp" aria-label="Gnist – til toppen av siden">
+      <img class="brand__logo" src="img/logo-mork.svg" alt="Gnist" width="126" height="24">
+    </a>
+
+    <nav class="nav" id="hovedmeny" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#kompetanse">Kompetanse</a>
+      <a href="#slik">Slik jobber vi</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="btn header__cta" href="#book">Book en prat</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny" aria-label="Åpne meny">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="hoved">
+
+  <!-- ============ HERO med booking ============ -->
+  <section class="hero" aria-labelledby="heroTittel">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow hero__eyebrow">Nisjekonsulent siden 2019 · Oslo</p>
+        <h1 id="heroTittel" class="hero__title">Smidig produktutvikling som fungerer i praksis</h1>
+        <p class="hero__lead">Vi skaper tilpasningsdyktige organisasjoner hvor tverrfaglige produktteam med ende-til-ende eierskap leverer med god kvalitet.</p>
+        <div class="hero__actions">
+          <a class="btn hero__btn" href="#book">Book en uforpliktende prat</a>
+          <a class="btn hero__btn-ghost" href="#tjenester">Se hva vi gjør</a>
+        </div>
+        <ul class="hero__facts">
+          <li><strong>2019</strong>Etablert i Oslo</li>
+          <li><strong>Rundt 30</strong>Rådgivere</li>
+          <li><strong>Iniva</strong>Del av gruppen</li>
+        </ul>
+      </div>
+
+      <div class="book" id="book" role="group" aria-labelledby="bookTittel">
+        <div class="book__head">
+          <div>
+            <h2 class="book__title" id="bookTittel">Book en uforpliktende prat</h2>
+            <p class="book__sub">Tre steg. Du får et ferdig e-postutkast – ingenting sendes automatisk.</p>
+          </div>
+          <div class="book__meter" aria-hidden="true"><span class="is-on"></span><span></span><span></span></div>
+        </div>
+
+        <p class="book__step" id="bookSteg">Steg 1 av 3 · Velg tema</p>
+        <p class="visually-hidden" id="bookLive" aria-live="polite"></p>
+
+        <div class="book__panel" data-panel="1">
+          <h3 class="book__h3">Hva vil du snakke om?</h3>
+          <div class="chips" role="group" aria-label="Tema for samtalen">
+            <button class="chip" type="button" data-tema="Agile coaching" aria-pressed="false">Agile coaching</button>
+            <button class="chip" type="button" data-tema="Transformasjonsledelse" aria-pressed="false">Transformasjonsledelse</button>
+            <button class="chip" type="button" data-tema="Moderne teknologiledelse" aria-pressed="false">Moderne teknologiledelse</button>
+            <button class="chip" type="button" data-tema="Kurs og foredrag" aria-pressed="false">Kurs og foredrag</button>
+          </div>
+        </div>
+
+        <div class="book__panel" data-panel="2" hidden>
+          <h3 class="book__h3">Når passer det?</h3>
+          <div class="dager" id="dager" role="group" aria-label="Velg dag"></div>
+          <p class="book__label" id="tiderLabel">Ledige tider</p>
+          <div class="tider" id="tider" role="group" aria-labelledby="tiderLabel"></div>
+          <p class="book__hint" id="tiderTom">Velg en dag først.</p>
+          <button class="btn btn--ghost book__back" type="button" data-tilbake="1">Tilbake til tema</button>
+        </div>
+
+        <div class="book__panel" data-panel="3" hidden>
+          <h3 class="book__h3">Hvem skal vi snakke med?</h3>
+          <form id="bookSkjema">
+            <label for="navn">Navn<input id="navn" name="navn" type="text" autocomplete="name" required></label>
+            <label for="epost">E-post<input id="epost" name="epost" type="email" autocomplete="email" required></label>
+            <label for="bedrift">Virksomhet <span class="valgfritt">(valgfritt)</span><input id="bedrift" name="bedrift" type="text" autocomplete="organization"></label>
+            <label for="melding">Kort om saken <span class="valgfritt">(valgfritt)</span><textarea id="melding" name="melding" rows="3"></textarea></label>
+            <div class="book__actions">
+              <button class="btn" type="submit">Bekreft forespørsel</button>
+              <button class="btn btn--ghost" type="button" data-tilbake="2">Tilbake</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="book__panel" data-panel="4" hidden>
+          <h3 class="book__h3">Forespørselen er klar</h3>
+          <dl class="receipt">
+            <dt>Tema</dt><dd id="sumTema"></dd>
+            <dt>Dag</dt><dd id="sumDag"></dd>
+            <dt>Klokkeslett</dt><dd id="sumTid"></dd>
+            <dt>Navn</dt><dd id="sumNavn"></dd>
+            <dt>E-post</dt><dd id="sumEpost"></dd>
+            <dt>Virksomhet</dt><dd id="sumBedrift"></dd>
+          </dl>
+          <div class="book__actions">
+            <a class="btn" id="mailtoLenke" href="mailto:ellen-marie@gnist.as">Send til Ellen-Marie</a>
+            <button class="btn btn--ghost" type="button" id="kopier">Kopier oppsummeringen</button>
+            <button class="btn btn--ghost" type="button" data-tilbake="1">Endre</button>
+          </div>
+          <p class="book__fine">Dette er en skisse av en bookingflyt. Den lagrer ingenting, og knappen åpner e-postprogrammet ditt med forespørselen ferdig utfylt.</p>
+        </div>
+
+        <noscript><p class="book__fine">Bookingflyten trenger JavaScript. Ring <a href="tel:+4793043079">93 04 30 79</a> eller send en e-post til <a href="mailto:ellen-marie@gnist.as">ellen-marie@gnist.as</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KUNDEREFERANSER ============ -->
+  <section class="section section--tight stemmer" aria-labelledby="stemmerTittel">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Kundereferanser</p>
+          <h2 id="stemmerTittel">Våre kunder sier</h2>
+        </div>
+        <p class="section-head__lead lead">Sitatene er hentet fra gnist.as, med navn og rolle slik kundene selv er oppgitt.</p>
+      </div>
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote>
+            <p>«Gnist var sentral i arbeidet med å øke teamets eierskap og gjennomføringsevne i en hverdag med både drift og utvikling. Det førte til bedre flyt, kortere ledetid og betydelig økt leveransekapasitet. Den psykologiske tryggheten og tilliten i teamet vokste, samtidig som samarbeidet med brukerne ble styrket.»</p>
+          </blockquote>
+          <figcaption>
+            <span class="quote__name">Bjørn Vidar Saltrø</span>
+            <span class="quote__role">tidligere seksjonsleder Nettverkstjenester</span>
+          </figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>
+            <p>«Gnist jobber sammen med oss for å finne gode løsninger på fremtidens måter å jobbe med utvikling av digitale tjenester. De viser en genuin nysgjerrighet for faget, og utfordrer oss på vårt tankesett. Samtidig er de hyggelige å jobbe med og tenker langsiktighet i samarbeidet.»</p>
+          </blockquote>
+          <figcaption>
+            <span class="quote__name">Ole Martin Gudesen</span>
+            <span class="quote__role">programdirektør i Statens Pensjonskasse</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TJENESTER ============ -->
+  <section class="section" id="tjenester" aria-labelledby="tjenesterTittel">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Tjenester</p>
+          <h2 id="tjenesterTittel">Dette kan vi</h2>
+        </div>
+        <p class="section-head__lead lead">Først og fremst er vi nysgjerrige problemløsere. Dernest er vi rådgivere som er lidenskapelig opptatt av mulighetene som teknologi gir samfunnet vårt.</p>
+      </div>
+
+      <ol class="tjenester">
+        <li class="tjeneste">
+          <p class="tjeneste__nr">01</p>
+          <div>
+            <h3>Agile coaching</h3>
+            <p>Vi leverer coaching på to nivåer: en teamfasilitator eller Team Coach som arbeider direkte med ett eller flere team, og en agile coach som bistår organisasjonen med å se helhet i den smidige transformasjonen fra et selskapsperspektiv. Vi stiller kritiske spørsmål, fasiliterer og rådgir ut fra teamets og organisasjonens modenhet.</p>
+            <p class="tjeneste__meta">Team Coach · Agile Coach</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <p class="tjeneste__nr">02</p>
+          <div>
+            <h3>Transformasjonsledelse</h3>
+            <p>Vi bistår organisasjoner i å gradvis endre måten man jobber sammen på – og i å bygge en driftsmodell og en organisasjonskultur basert på fleksibilitet, samarbeid og selvorganiserende team. Strategi, målstyring, prosesser, teknologi og arkitektur må henge sammen for å levere verdi raskt.</p>
+            <p class="tjeneste__meta">Endringsledelse · Styringsmodell</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <p class="tjeneste__nr">03</p>
+          <div>
+            <h3>Moderne teknologiledelse</h3>
+            <p>Vi kan ta roller som produktleder, teamleder, Tech Lead eller prosjektleder, og går gjerne inn som interim produkteier. Vi har lang erfaring med brukerorientering, brukertesting, Design Thinking, Design Sprint, produktveikart og produktstrategi – og med å knytte dette sammen med teamarbeidet.</p>
+            <p class="tjeneste__meta">Produktledelse · Tech Lead · Prosjektledelse</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <p class="tjeneste__nr">04</p>
+          <div>
+            <h3>Kurs i smidige organisasjoner</h3>
+            <p>Vi tilbyr kurs i hvordan du designer en tilpasningsdyktig organisasjon, og rollespesifikke kurs – blant annet Tech Lead-lederkurs over fire samlinger, praktisk LLM-prompting, Product Discovery og fasilitering. Vi holder også foredrag for ledergrupper og fagmiljøer.</p>
+            <p class="tjeneste__meta">Kurs · Foredrag</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEMER VI LØSER ============ -->
+  <section class="section band" id="problemer" aria-labelledby="problemerTittel">
+    <div class="wrap band__grid">
+      <div>
+        <p class="eyebrow">Problemer vi løser</p>
+        <h2 id="problemerTittel">De vanligste utfordringene vi møter</h2>
+        <p class="lead">Felles for kundene våre er behovet for å lykkes bedre med digital utvikling, samarbeid og endring. Det finnes sjelden én fasit – derfor tilpasser vi løsningene til organisasjonens kontekst, modenhet og ambisjoner.</p>
+        <p><a class="btn" href="#book">Ta en uforpliktende prat</a></p>
+      </div>
+      <ul class="sporsmaal">
+        <li>Hvordan bygge en smidig kultur og et smidig tankesett?</li>
+        <li>Hvordan utvikle myndiggjorte og høytytende team?</li>
+        <li>Hvordan koble strategi og mål for teamene?</li>
+        <li>Hvordan delegere ansvar og beholde nødvendig kontroll?</li>
+        <li>Hvordan organisere produktutvikling og prosjektarbeid sammen?</li>
+        <li>Hvordan levere verdi hyppig uten å gå på kompromiss med kvalitet og sikkerhet?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ KOMPETANSE ============ -->
+  <section class="section" id="kompetanse" aria-labelledby="kompetanseTittel">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Kompetanse</p>
+          <h2 id="kompetanseTittel">Teknologiledelse – fra strategi til kode</h2>
+        </div>
+        <p class="section-head__lead lead">Vi tror på teknologiledelse som et helhetlig ansvar: fra strategi og retning til kode og verdiskaping. Derfor bygger vi kompetansen rundt tre perspektiver.</p>
+      </div>
+
+      <figure class="kompetanse__figur">
+        <img src="img/miljofoto-03.jpg" alt="Rådgivere foran en tavle med fargede lapper under en arbeidsøkt" width="1440" height="756" loading="lazy" decoding="async">
+      </figure>
+
+      <div class="perspektiver">
+        <article class="perspektiv">
+          <p class="perspektiv__nr">01</p>
+          <h3>Strategiske teknologiledere</h3>
+          <p>Kobler teknologi, forretning og organisasjonsutvikling. Rådgivere og ledere som arbeider på virksomhetsnivå med retning, styring og utvikling av organisasjoner.</p>
+          <p class="perspektiv__meta">Strategisk rådgiver · Endringsleder · CTO-rådgiver</p>
+        </article>
+        <article class="perspektiv">
+          <p class="perspektiv__nr">02</p>
+          <h3>Teamnære teknologiledere</h3>
+          <p>Ledelse av team, produkter og prosesser i moderne teknologiorganisasjoner. De sørger for at teknologi, mennesker og arbeidsform fungerer godt sammen.</p>
+          <p class="perspektiv__meta">Produktleder · Teamleder · Smidig coach</p>
+        </article>
+        <article class="perspektiv">
+          <p class="perspektiv__nr">03</p>
+          <h3>Kodende teknologiledere</h3>
+          <p>Teknologisk tyngde kombinert med lederskap og leveransekraft. De kan utvikle løsninger selv og samtidig ta ansvar for tekniske beslutninger, kvalitet og retning.</p>
+          <p class="perspektiv__meta">Tech Lead · Arkitekt · Seniorutvikler</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIK JOBBER VI ============ -->
+  <section class="section section--tight slik" id="slik" aria-labelledby="slikTittel">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Slik jobber vi</p>
+          <h2 id="slikTittel">Tre steg, alltid tilpasset dere</h2>
+        </div>
+        <p class="section-head__lead lead">Vi kombinerer forskning, litteratur og egne erfaringer med det vi ser hos kunden – og jakter hele tiden på forbedring.</p>
+      </div>
+      <ol class="steg">
+        <li class="steg__item">
+          <p class="steg__nr">01</p>
+          <h3>Forstå konteksten</h3>
+          <p>Enhver organisasjon er unik, med sine verdistrømmer, organisasjonsstruktur, sammensetning av mennesker og arkitektur med tilhørende verktøy og prosesser. Vi starter der dere faktisk er.</p>
+        </li>
+        <li class="steg__item">
+          <p class="steg__nr">02</p>
+          <h3>Tilpasse, ikke kopiere</h3>
+          <p>Vi lar oss inspirere av Scrum, Kanban, XP, Lean, DevOps og SAFe, men tilpasser rammeverkene til organisasjonens modenhet og ambisjoner. Metoden skal passe organisasjonen, ikke omvendt.</p>
+        </li>
+        <li class="steg__item">
+          <p class="steg__nr">03</p>
+          <h3>Bygge eierskap i teamene</h3>
+          <p>Målet er autonome team med ende-til-ende eierskap, psykologisk trygghet og kontinuerlig forbedring – slik at endringen står når vi går.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ OM GNIST ============ -->
+  <section class="section om" id="om" aria-labelledby="omTittel">
+    <div class="wrap om__grid">
+      <div>
+        <p class="eyebrow">Om Gnist</p>
+        <h2 id="omTittel">Et nisjekonsulentselskap bygget på tillit</h2>
+        <p>Gnist er et nisjekonsulentselskap etablert i 2019, med rundt 30 rådgivere innen agile coaching, produktledelse, prosjekt- og teamledelse, transformasjonsledelse, Tech Lead og rådgivning. Vi brenner for å skape tilpasningsdyktige organisasjoner og bidra til kontinuerlig verdiskaping hos kundene våre.</p>
+        <p>Initiativtagerne bak Gnist er Marius Mæle, Kenneth Stensrud Olsen og Keyhan Farahaninia, som siden 2012 har bygget opp SOCO. De fikk med seg Ellen-Marie Bjerknes Nygård, Marley K. Singarajah og Petter Enes. Ellen-Marie tiltrådte som daglig leder 20. mai 2019. I dag er Gnist en del av Iniva-gruppen.</p>
+
+        <div class="verdier">
+          <div class="verdi">
+            <h3>Frihet</h3>
+            <p>Gjensidig tillit mellom ansatte, kunder og partnere er fundamentet for hvordan vi jobber – og grunnlaget for frihet.</p>
+          </div>
+          <div class="verdi">
+            <h3>Nysgjerrighet</h3>
+            <p>Vi utfordrer etablerte sannheter, utforsker nye arbeidsformer og søker kontinuerlig bedre måter å skape verdi på.</p>
+          </div>
+          <div class="verdi">
+            <h3>Lidenskap</h3>
+            <p>Vi brenner for faget og for menneskene vi jobber med. Lidenskap gir energi, kvalitet og gjennomføringsevne.</p>
+          </div>
+        </div>
+
+        <p class="hjertesak"><strong>1 %</strong><span>av omsetningen vår går til en hjertesak. Vi bryr oss, og vil at verdiskapingen skal sette spor også utenfor selskapet.</span></p>
+      </div>
+
+      <figure class="om__figur">
+        <img src="img/team-2023.jpg" alt="Rådgiver som gjennomgår kode på en stor skjerm sammen med kolleger" width="1440" height="960" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ FOLKA ============ -->
+  <section class="section section--tight folka" id="folka" aria-labelledby="folkaTittel">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Folka</p>
+          <h2 id="folkaTittel">Gnisterne</h2>
+        </div>
+        <p class="section-head__lead lead">En gjeng nysgjerrige, kunnskapsrike og smidige teknologiledere som brenner for å skape varig endring sammen med kundene.</p>
+      </div>
+      <div class="personer">
+        <article class="person">
+          <span class="person__monogram" aria-hidden="true">EB</span>
+          <div>
+            <span class="person__navn">Ellen-Marie Bjerknes Nygård</span>
+            <span class="person__rolle">Teknologirådgiver, medgründer og daglig leder</span>
+          </div>
+        </article>
+        <article class="person">
+          <span class="person__monogram" aria-hidden="true">AP</span>
+          <div>
+            <span class="person__navn">Ann-Christin Patterson</span>
+            <span class="person__rolle">Produktleder / Agile Coach</span>
+          </div>
+        </article>
+        <article class="person">
+          <span class="person__monogram" aria-hidden="true">AS</span>
+          <div>
+            <span class="person__navn">Arve Søreide</span>
+            <span class="person__rolle">Produktleder / Enterprise Agile Coach</span>
+          </div>
+        </article>
+        <article class="person">
+          <span class="person__monogram" aria-hidden="true">BB</span>
+          <div>
+            <span class="person__navn">Bertil Bøckmann</span>
+            <span class="person__rolle">Prosjektleder</span>
+          </div>
+        </article>
+        <article class="person">
+          <span class="person__monogram" aria-hidden="true">BW</span>
+          <div>
+            <span class="person__navn">Bård Sve Wallentinsen</span>
+            <span class="person__rolle">Teamleder / Agile Coach</span>
+          </div>
+        </article>
+        <article class="person">
+          <span class="person__monogram" aria-hidden="true">CS</span>
+          <div>
+            <span class="person__navn">Cecilia Sjølin</span>
+            <span class="person__rolle">Teknologirådgiver</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="section kontakt" id="kontakt" aria-labelledby="kontaktTittel">
+    <div class="wrap kontakt__grid">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="kontaktTittel">Kan vi hjelpe din bedrift?</h2>
+        <p class="lead">Ønsker du å jobbe med Gnist, eller kan vi hjelpe din bedrift med å løse utfordringer dere har i dag? Vi gleder oss til å høre fra deg.</p>
+        <ul class="kontakt__liste">
+          <li><span>Besøk</span><address>Tordenskioldsgate 8<br>0161 Oslo</address></li>
+          <li><span>Telefon</span><a href="tel:+4793043079">+47 93 04 30 79</a></li>
+          <li><span>E-post</span><a href="mailto:ellen-marie@gnist.as">ellen-marie@gnist.as</a></li>
+          <li><span>Org.nr</span><p>922 669 570</p></li>
+          <li><span>Daglig leder</span><p>Ellen-Marie Bjerknes Nygård</p></li>
+        </ul>
+        <div class="kontakt__actions">
+          <a class="btn" href="#book">Book en uforpliktende prat</a>
+          <a class="btn btn--ghost" href="mailto:ellen-marie@gnist.as">Send e-post</a>
+        </div>
+      </div>
+      <figure class="kontakt__figur">
+        <img src="img/miljofoto-16.jpg" alt="To rådgivere som ser på en laptop sammen i et lyst kontorlokale" width="1440" height="960" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img class="footer__logo" src="img/logo-hvit.svg" alt="Gnist" width="126" height="24">
+        <p class="footer__tittel">Smidig i praksis</p>
+        <p>Nisjekonsulent for tilpasningsdyktige organisasjoner, tverrfaglige produktteam og moderne teknologiledelse.</p>
+      </div>
+      <div>
+        <p class="footer__undertittel">Kontakt</p>
+        <address>
+          Tordenskioldsgate 8<br>
+          0161 Oslo<br>
+          <a href="tel:+4793043079">+47 93 04 30 79</a><br>
+          <a href="mailto:ellen-marie@gnist.as">ellen-marie@gnist.as</a>
+        </address>
+      </div>
+      <div>
+        <p class="footer__undertittel">Selskapet</p>
+        <p>Org.nr 922 669 570<br>Gnist er en del av Iniva</p>
+        <p><a href="#topp">Til toppen</a></p>
+      </div>
+    </div>
+    <div class="footer__bunn">
+      <p>© <span id="year">2026</span> Gnist Consulting AS</p>
+      <p>Tordenskioldsgate 8, 0161 Oslo</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

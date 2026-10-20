@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Fulcio Media">
+  <rect width="32" height="32" rx="7" fill="#17110f"/>
+  <path d="M11 8h12v3.6h-8.2v3.7H22v3.5h-7.2V24H11z" fill="#f4eee4"/>
+  <circle cx="24.2" cy="22.6" r="1.9" fill="#9e2b4e"/>
+</svg>

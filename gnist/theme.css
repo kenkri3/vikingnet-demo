@@ -1,0 +1,79 @@
+/*
+  Gnist — tema.
+  Palett hentet fra deres egen logo (#171c33) og gnist-merket i arrow-red.svg (#f7294f).
+  Typografi: én redaksjonell serif til overskrifter, én nøytral grotesk til tekst.
+*/
+
+:root {
+  /* Blekk og papir */
+  --ink: #171c33;
+  --ink-deep: #10142a;
+  --paper: #f3f3ef;
+  --paper-2: #eaeae4;
+  --paper-3: #e1e1da;
+
+  /* Gnist-rød. --accent brukes på flater med hvit tekst (5:1),
+     --spark bare til store flater og streker. */
+  --accent: #d81e3f;
+  --accent-deep: #a9142f;
+  --accent-soft: #fbe9ec;
+  --spark: #f7294f;
+  --spark-light: #ff9aa9;
+
+  /* Tekst på blekk */
+  --on-ink: #f4f4ee;
+  --on-ink-muted: #bcc1d3;
+
+  /* Grunnvariabler fra kit/base.css */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --fg-soft: #3c445e;
+  --muted: #4f5670;
+  --line: #d7d7cf;
+  --accent-fg: #ffffff;
+  --accent-soft-kit: var(--accent-soft);
+
+  --font-display: 'Libre Caslon Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Hanken Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --wrap: 1180px;
+  --header-h: 72px;
+  --shadow: 0 1px 2px rgb(16 20 42 / 5%), 0 18px 40px -18px rgb(16 20 42 / 22%);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+
+h1 {
+  letter-spacing: -0.02em;
+  line-height: 1.03;
+}
+
+h2 {
+  line-height: 1.08;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}

@@ -1,0 +1,1081 @@
+/*
+  Advokatfirmaet Hegg & Co — layout.
+  Idé: et rolig, redaksjonelt tittelblad. Papir, blekk og tynne gulllinjer.
+  Ett mørkt felt (firmaet) og ett mørkt kort (vakttelefonen) bryter rytmen.
+  Alle trykkflater er minst 44 px, og skjemafelt holder 16 px (base.css).
+*/
+
+[hidden] {
+  display: none !important;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 14px);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
+  padding-block: 0.3rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand__navn {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.brand__beskrivelse {
+  margin-top: 0.28rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav {
+  align-items: stretch;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.15rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--gold-3);
+}
+
+.nav .nav__cta {
+  padding-inline: 1rem;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+}
+
+.nav .nav__cta:hover {
+  background: var(--gold-3);
+  border-color: var(--gold-3);
+  color: var(--paper);
+}
+
+@media (min-width: 901px) {
+  /* Nav ligger skjult i markup for at mobilen ikke skal vise den et øyeblikk. */
+  .nav[hidden] {
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    box-shadow: var(--shadow);
+  }
+
+  .nav .nav__cta {
+    margin-top: 0.5rem;
+    justify-content: center;
+    border-top: 0;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-block: clamp(2.25rem, 5vw, 4.25rem) clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.85fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.hero .eyebrow {
+  color: var(--gold-3);
+  gap: 0.65rem;
+}
+
+.hero .eyebrow::before {
+  content: "";
+  width: 2.2rem;
+  height: 1px;
+  background: var(--gold-2);
+}
+
+.hero h1 {
+  max-width: 16ch;
+  margin-bottom: 1.05rem;
+  font-size: clamp(2.4rem, 1.4rem + 4.6vw, 5rem);
+  line-height: 0.99;
+  letter-spacing: -0.035em;
+}
+
+.hero__lead {
+  max-width: 54ch;
+  margin: 0;
+  font-size: clamp(1.02rem, 0.98rem + 0.35vw, 1.2rem);
+  line-height: 1.62;
+  color: var(--ink-3);
+}
+
+.hero__handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.7rem;
+}
+
+.vakt {
+  padding: clamp(1.2rem, 2.4vw, 1.85rem);
+  background: var(--ink);
+  border-top: 3px solid var(--gold);
+  color: var(--paper);
+}
+
+.vakt__merke {
+  margin: 0 0 0.3rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.vakt__nummer {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.1;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.vakt__epost {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.95rem;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.vakt__epost:hover,
+.vakt__nummer:hover {
+  color: var(--gold);
+}
+
+.vakt__kontor {
+  margin: 1.1rem 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgb(247 244 234 / 18%);
+  list-style: none;
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--paper) 70%, transparent);
+}
+
+.vakt__kontor li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 0.4rem;
+}
+
+.vakt__kontor li:last-child {
+  margin-bottom: 0;
+}
+
+.vakt__kontor span {
+  color: var(--paper);
+}
+
+.vakt a:focus-visible {
+  outline-color: var(--gold);
+}
+
+/* ---------- Bildeband ---------- */
+
+.bildeband {
+  margin: 0;
+  background: var(--paper-3);
+}
+
+.bildeband img {
+  width: 100%;
+  height: clamp(210px, 40vw, 500px);
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.bildeband__tekst {
+  margin: 0;
+  padding-block: 0.7rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+}
+
+/* ---------- Seksjoner ---------- */
+
+.seksjon {
+  padding-block: clamp(2.75rem, 7vw, 5.25rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.seksjon--stripe {
+  background: var(--paper-2);
+  border-bottom-color: var(--line-strong);
+}
+
+.seksjonshode {
+  max-width: 64ch;
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.seksjonshode h2 {
+  margin-bottom: 0.6rem;
+}
+
+.seksjonshode .lead {
+  color: var(--ink-3);
+}
+
+.eyebrow {
+  color: var(--gold-3);
+  letter-spacing: 0.16em;
+}
+
+/* ---------- Kontor ---------- */
+
+.kontor {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 clamp(1rem, 3vw, 2.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.kontor__kort {
+  padding: clamp(1rem, 2vw, 1.4rem) 0 clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.kontor__nr {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  color: var(--gold-2);
+}
+
+.kontor__kort h3 {
+  margin: 0.3rem 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.kontor__adresse {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.kontor__ring {
+  margin: 1.5rem 0 0;
+}
+
+.lenke-stor {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding-block: 0.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-2);
+}
+
+.lenke-stor:hover {
+  color: var(--gold-3);
+}
+
+/* ---------- Rettsområder ---------- */
+
+.omrader {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(1.5rem, 4vw, 3rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.omrade {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.15rem 1rem;
+  padding: clamp(1rem, 2.2vw, 1.45rem) 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.omrade__nr {
+  padding-top: 0.2rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--gold-2);
+}
+
+.omrade h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+
+.omrade p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.flere-omrader {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.flere-omrader__tekst {
+  margin: 0 0 0.75rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  margin: 0;
+  padding: 0.35rem 0.65rem;
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ---------- Firmaet (mørk flate) ---------- */
+
+.firma {
+  background: var(--ink);
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--ink);
+  color: var(--paper);
+}
+
+.firma__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: end;
+}
+
+.firma .eyebrow {
+  color: var(--gold);
+}
+
+.firma h2 {
+  max-width: 26ch;
+  font-size: clamp(1.55rem, 1.15rem + 1.8vw, 2.4rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+.firma__ingress {
+  margin-bottom: 0.7rem;
+  font-size: 1.02rem;
+  color: var(--paper);
+}
+
+.firma__broed {
+  max-width: 46ch;
+  margin: 0;
+  color: color-mix(in srgb, var(--paper) 72%, transparent);
+}
+
+.tall {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1.5rem;
+  margin: 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgb(247 244 234 / 22%);
+}
+
+.tall__enhet dt {
+  margin-bottom: 0.15rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--paper) 62%, transparent);
+}
+
+.tall__enhet dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 1;
+  color: var(--gold);
+}
+
+/* ---------- Medarbeidere ---------- */
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.5rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.person img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 26%;
+  background: var(--paper-3);
+}
+
+.person__navn {
+  margin: 0.8rem 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.person__rolle {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.person__lenker {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.55rem;
+  font-size: 0.85rem;
+}
+
+.person__lenker a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink);
+  text-decoration: none;
+  border-top: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+
+.person__lenker a:hover {
+  color: var(--gold-3);
+}
+
+/* ---------- Salær ---------- */
+
+.salar__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.salar__punkter {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.salar__punkter li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.95rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.salar__punkter strong {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.salar__punkter span {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.salar__notat {
+  max-width: 52ch;
+  margin: 1.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.kalkulator {
+  padding: clamp(1.15rem, 2.4vw, 1.8rem);
+  background: var(--paper);
+  border: 1px solid var(--line-strong);
+  border-top: 3px solid var(--gold-2);
+}
+
+.kalkulator h3 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.sats {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.sats__knapp {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.1rem;
+  min-height: 58px;
+  padding: 0.55rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.sats__knapp span {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.sats__knapp.is-valgt {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.sats__knapp.is-valgt span {
+  color: var(--gold);
+}
+
+.sats__knapp.is-valgt:hover {
+  background: var(--ink-2);
+}
+
+.kalkulator__felt {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.kalkulator__merke {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kalkulator__felt output {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 44px;
+  min-height: 44px;
+  margin: 0.2rem 0 0.7rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  accent-color: var(--gold-3);
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 3px;
+  background: var(--line-strong);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+  margin-top: -11px;
+  background: var(--gold-3);
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 3px;
+  background: var(--line-strong);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--gold-3);
+  border: 2px solid var(--paper);
+  border-radius: 50%;
+}
+
+.kalkulator__ut {
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.kalkulator__linje,
+.kalkulator__sum {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.kalkulator__linje output {
+  color: var(--ink);
+}
+
+.kalkulator__sum {
+  margin-top: 0.2rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line-strong);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.kalkulator__sum output {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.kalkulator__notat {
+  margin: 0.9rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- Henvendelse ---------- */
+
+.henvendelse__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.henvendelse__kontakt {
+  display: grid;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.kontakt-rad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.1rem;
+  min-height: 64px;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.kontakt-rad__merke {
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kontakt-rad__verdi {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  overflow-wrap: anywhere;
+}
+
+.kontakt-rad:hover .kontakt-rad__verdi {
+  color: var(--gold-3);
+}
+
+.skjema-kort {
+  padding: clamp(1.15rem, 2.5vw, 1.9rem);
+  background: var(--paper-2);
+  border: 1px solid var(--line-strong);
+  border-top: 3px solid var(--ink);
+}
+
+.framdrift {
+  margin-bottom: 1.35rem;
+}
+
+.framdrift__tekst {
+  margin: 0 0 0.45rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.framdrift__spor {
+  height: 3px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.framdrift__fyll {
+  display: block;
+  width: 33.333%;
+  height: 100%;
+  background: var(--gold-3);
+  transition: width 0.3s ease;
+}
+
+.steg {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.steg h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.2rem;
+}
+
+.valgfritt {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.to-felt {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.skjema__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
+.feilmelding {
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #8c2f1c;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  background: #fbf1ec;
+  border-color: #8c2f1c;
+}
+
+.sammendrag {
+  display: grid;
+  gap: 0;
+  margin: 0 0 1.1rem;
+}
+
+.sammendrag > div {
+  display: grid;
+  grid-template-columns: minmax(0, 7rem) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.sammendrag dt {
+  padding-top: 0.1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.sammendrag dd {
+  margin: 0;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.kvittering {
+  padding-top: 1.1rem;
+  border-top: 3px solid var(--gold-2);
+}
+
+.kvittering__merke {
+  margin: 0 0 0.3rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-3);
+}
+
+.kvittering h3 {
+  margin: 0 0 0.35rem;
+}
+
+.kvittering__ref {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.kvittering__ref strong {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.kvittering__notat {
+  margin: 1rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding-block: clamp(2.25rem, 5vw, 3.5rem) 1.25rem;
+  background: var(--ink);
+  border-top: 3px solid var(--gold);
+  color: color-mix(in srgb, var(--paper) 78%, transparent);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.footer__navn {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  line-height: 1.25;
+  color: var(--paper);
+}
+
+.footer__org {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.footer__tittel {
+  margin: 0 0 0.3rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.footer__adresse {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--paper);
+}
+
+.footer__lenke {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.98rem;
+  color: var(--paper);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer__lenke:hover {
+  color: var(--gold);
+}
+
+.footer__liten {
+  margin: 0.5rem 0 0;
+  font-size: 0.76rem;
+  color: color-mix(in srgb, var(--paper) 55%, transparent);
+}
+
+.footer__bunn {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding-top: 1rem;
+  border-top: 1px solid rgb(247 244 234 / 15%);
+  font-size: 0.78rem;
+}
+
+.footer__bunn p {
+  margin: 0;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 980px) {
+  .hero__grid,
+  .firma__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1 {
+    max-width: 20ch;
+  }
+
+  .firma {
+    align-items: start;
+  }
+
+  .tall {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .team {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .salar__grid,
+  .henvendelse__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .omrader {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .kontor {
+    grid-template-columns: minmax(0, 1fr);
+    border-top: 0;
+  }
+
+  .kontor__kort {
+    padding-inline: 0;
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .tall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .team {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .person img {
+    aspect-ratio: 16 / 10;
+    object-position: center 24%;
+  }
+
+  .to-felt {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sats {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 400px) {
+  .sammendrag > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+  }
+}

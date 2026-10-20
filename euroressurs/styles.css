@@ -1417,7 +1417,10 @@ legend {
   min-height: 44px;
   font-size: 0.9rem;
   color: var(--navy);
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 32%, transparent);
+  text-underline-offset: 4px;
   border-bottom: 1px solid transparent;
   width: fit-content;
   max-width: 100%;
@@ -1425,7 +1428,8 @@ legend {
 }
 
 .folk-lenker a:hover {
-  border-bottom-color: var(--lime);
+  text-decoration-color: var(--lime-deep);
+  border-bottom-color: transparent;
 }
 
 @media (max-width: 860px) {
@@ -1504,7 +1508,10 @@ legend {
   min-height: 44px;
   font-size: 0.95rem;
   color: #dbe3f1;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgb(255 255 255 / 28%);
+  text-underline-offset: 4px;
   border-bottom: 1px solid transparent;
   width: fit-content;
   max-width: 100%;
@@ -1512,7 +1519,8 @@ legend {
 
 .sted-lenker a:hover {
   color: #fff;
-  border-bottom-color: var(--lime);
+  text-decoration-color: var(--lime);
+  border-bottom-color: transparent;
 }
 
 .sted-note {
@@ -1581,6 +1589,10 @@ legend {
 .footer address {
   font-style: normal;
   line-height: 1.6;
+}
+
+.footer address + address {
+  margin-top: 0.9rem;
 }
 
 .footer-lenker {
