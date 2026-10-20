@@ -1,0 +1,1287 @@
+/*
+  Crisp Ideas — oppsett.
+  Ett prinsipp: siden skal leses som et ingeniørdokument. Hårfine linjer,
+  nummererte ledd, monospaced etiketter, og overdimensjonert grotesk som
+  får ta plassen. Ingen skygger, ingen avrundede hjørner, ingen kortstabler.
+*/
+
+/* ============================================================
+   1. Skall
+   ============================================================ */
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.sec {
+  padding-block: var(--sec);
+}
+
+/* Ankerlenker skal ikke lande under den faste toppen. */
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 1.2rem);
+}
+
+.sec--soft {
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
+}
+
+.skip {
+  position: absolute;
+  top: -100px;
+  left: var(--gutter);
+  z-index: 200;
+  padding: 0.8rem 1.2rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+/* ============================================================
+   2. Topp
+   ============================================================ */
+
+.head {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgb(10 12 9 / 80%);
+  backdrop-filter: blur(16px) saturate(1.3);
+  border-bottom: 1px solid var(--line);
+}
+
+.head__inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.62rem;
+  min-height: 44px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand__mark {
+  display: grid;
+  gap: 3px;
+  width: 10px;
+}
+
+.brand__mark i {
+  display: block;
+  height: 7px;
+  background: var(--accent);
+}
+
+.brand__text {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--fg);
+}
+
+.brand__text em {
+  color: var(--accent);
+}
+
+.hovednav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.9rem, 2vw, 1.75rem);
+  margin-left: auto;
+}
+
+.hovednav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 0.4rem;
+  padding-inline: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--fg-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.hovednav a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.hovednav .hovednav__cta {
+  display: none;
+}
+
+.head__cta {
+  min-height: 44px;
+  padding: 0.62rem 1.15rem;
+  font-size: 0.86rem;
+}
+
+.meny {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+}
+
+.meny span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: currentColor;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 940px) {
+  .hovednav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 0.4rem var(--gutter) 1.4rem;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hovednav.is-open {
+    display: flex;
+  }
+
+  .hovednav a {
+    padding: 1rem 0;
+    font-size: 1.02rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .hovednav a:first-child {
+    border-top: 0;
+  }
+
+  .hovednav .hovednav__cta {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    margin-top: 1.1rem;
+    padding: 0.9rem;
+    background: var(--accent);
+    color: var(--accent-fg);
+    border: 0;
+    border-radius: 2px;
+    font-weight: 700;
+  }
+
+  .head__cta {
+    display: none;
+  }
+
+  .meny {
+    display: inline-flex;
+  }
+
+  .meny[aria-expanded='true'] span:first-child {
+    transform: translateY(3px) rotate(45deg);
+  }
+
+  .meny[aria-expanded='true'] span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+}
+
+/* ============================================================
+   3. Hero — ren typografi, ingen bilde med tekst over
+   ============================================================ */
+
+.hero {
+  padding-top: clamp(2.5rem, 6vw, 4.5rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1.5rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero__place {
+  color: var(--accent);
+}
+
+.hero__title {
+  margin: clamp(1.6rem, 4vw, 3rem) 0 clamp(1.8rem, 4vw, 3.2rem);
+  font-size: var(--t-h1);
+  font-weight: 800;
+  line-height: 0.87;
+  letter-spacing: -0.047em;
+  text-wrap: initial;
+}
+
+.hero__foot {
+  display: grid;
+  gap: clamp(1.6rem, 3vw, 2.6rem);
+  align-items: start;
+}
+
+.hero__lead {
+  margin: 0;
+  max-width: 52ch;
+  font-size: var(--t-lead);
+  line-height: 1.55;
+  color: var(--fg-soft);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  margin: 0;
+  padding-top: clamp(1.2rem, 3vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+.stats__item dt {
+  margin-bottom: 0.35rem;
+}
+
+.stats__item dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.4vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+@media (min-width: 860px) {
+  .hero__foot {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  }
+
+  .hero__cta {
+    grid-column: 1;
+  }
+
+  .stats {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
+  }
+}
+
+/* ============================================================
+   4. Nøkkelordstripe
+   ============================================================ */
+
+.strip {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-soft);
+}
+
+.strip__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.9rem;
+  padding-block: 1.05rem;
+}
+
+.strip__inner span {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--fg-soft);
+}
+
+.strip__inner span::before {
+  content: '/';
+  margin-right: 0.75rem;
+  color: var(--accent);
+}
+
+/* ============================================================
+   5. Bildebånd
+   ============================================================ */
+
+.band {
+  position: relative;
+  margin: 0;
+  background: var(--bg-soft);
+}
+
+.band img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 42vw, 560px);
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.band::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 62%;
+  background: linear-gradient(to top, rgb(6 8 5 / 92%), rgb(6 8 5 / 0%));
+  pointer-events: none;
+}
+
+.band__cap {
+  position: absolute;
+  z-index: 2;
+  left: var(--gutter);
+  right: var(--gutter);
+  bottom: clamp(1.1rem, 3vw, 2.2rem);
+  display: grid;
+  gap: 0.5rem;
+  max-width: min(52ch, 72%);
+}
+
+.band__cap > span:last-child {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--fg);
+}
+
+.band__cap .mono {
+  color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  .band::after {
+    display: none;
+  }
+
+  .band__cap {
+    position: static;
+    max-width: none;
+    padding: 1rem var(--gutter) 1.4rem;
+    background: var(--bg-soft);
+  }
+
+  .band__cap > span:last-child {
+    font-size: 0.92rem;
+    color: var(--fg-soft);
+  }
+}
+
+/* ============================================================
+   6. Utsagn på papir
+   ============================================================ */
+
+.paper {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.paper__inner {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding-block: var(--sec);
+}
+
+.paper__eyebrow {
+  color: var(--on-paper-muted);
+}
+
+.paper__title {
+  margin: 0;
+  font-size: clamp(2.2rem, 7.2vw, 5.4rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.042em;
+  color: var(--ink);
+}
+
+.paper__body p {
+  margin: 0 0 1.1rem;
+  color: #26301f;
+  max-width: 54ch;
+}
+
+.paper__body p:last-child {
+  margin-bottom: 0;
+}
+
+.paper__aside {
+  margin-top: 1.6rem !important;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line-ink);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--on-paper-muted) !important;
+}
+
+.paper__aside .mono {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--accent-deep);
+}
+
+.paper em {
+  color: var(--accent-deep);
+}
+
+@media (min-width: 900px) {
+  .paper__inner {
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .paper__eyebrow {
+    grid-column: 1 / -1;
+  }
+
+  .paper__title {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}
+
+/* ============================================================
+   7. Seksjonshoder
+   ============================================================ */
+
+.sechead {
+  max-width: 68ch;
+  margin-bottom: clamp(2.2rem, 5vw, 3.6rem);
+}
+
+.sechead h2 {
+  margin: 0.9rem 0 0;
+}
+
+.sechead .lead {
+  margin-top: 1.1rem;
+  color: var(--fg-soft);
+}
+
+.sechead > .mono {
+  color: var(--accent);
+}
+
+/* ============================================================
+   8. Tjenester — nummererte rader
+   ============================================================ */
+
+.services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.svc {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr) auto;
+  gap: clamp(0.9rem, 2.6vw, 2.4rem);
+  align-items: start;
+  padding-block: clamp(1.7rem, 3.4vw, 2.7rem);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.22s ease;
+}
+
+.svc:hover {
+  background: var(--accent-soft);
+}
+
+.svc__num {
+  color: var(--muted);
+  padding-top: 0.45rem;
+  transition: color 0.22s ease;
+}
+
+.svc__body h3 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.35rem, 2.6vw, 2.05rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  transition: color 0.22s ease;
+}
+
+.svc__body p {
+  margin: 0;
+  max-width: 68ch;
+  color: var(--fg-soft);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.svc__tag {
+  max-width: 9rem;
+  text-align: right;
+  padding-top: 0.55rem;
+  color: var(--muted);
+}
+
+.svc:hover .svc__num,
+.svc:hover .svc__body h3 {
+  color: var(--accent);
+}
+
+@media (max-width: 760px) {
+  .svc {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    row-gap: 0.9rem;
+  }
+
+  .svc__tag {
+    grid-column: 2;
+    max-width: none;
+    text-align: left;
+    padding-top: 0;
+  }
+}
+
+/* ============================================================
+   9. Verktøykassen
+   ============================================================ */
+
+.tools {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.tools__intro h2 {
+  margin: 0.9rem 0 0;
+}
+
+.tools__intro .lead {
+  margin-top: 1.2rem;
+}
+
+.tools__intro > .mono {
+  color: var(--accent);
+}
+
+.tools__list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.tool {
+  display: grid;
+  gap: 0.3rem;
+  padding-block: clamp(0.9rem, 2vw, 1.15rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.tool dt {
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--fg);
+}
+
+.tool dd {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.tool:hover dt {
+  color: var(--accent);
+}
+
+@media (min-width: 900px) {
+  .tools {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: start;
+  }
+
+  .tools__intro {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}
+
+/* ============================================================
+   10. Slik jobber vi
+   ============================================================ */
+
+.how {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.how__copy > .mono {
+  color: var(--accent);
+}
+
+.how__copy h2 {
+  margin: 0.9rem 0 2rem;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.step {
+  padding-block: clamp(1.1rem, 2.4vw, 1.6rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.step__num {
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.step h3 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.1rem, 1.9vw, 1.32rem);
+}
+
+.step p:last-child {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.58;
+  color: var(--fg-soft);
+  max-width: 56ch;
+}
+
+.how__media {
+  margin: 0;
+}
+
+.how__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 22%;
+  background: var(--bg-soft);
+}
+
+.how__media figcaption {
+  margin-top: 0.8rem;
+}
+
+@media (min-width: 900px) {
+  .how {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: start;
+  }
+
+  .how__media {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}
+
+/* ============================================================
+   11. Oppdrag
+   ============================================================ */
+
+.cases {
+  border-top: 1px solid var(--line);
+}
+
+.case {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr);
+  gap: clamp(0.9rem, 2.6vw, 2.4rem);
+  padding-block: clamp(1.7rem, 3.4vw, 2.6rem);
+  border-bottom: 1px solid var(--line);
+  transition: background 0.22s ease;
+}
+
+.case:hover {
+  background: rgb(242 243 236 / 3%);
+}
+
+.case__num {
+  grid-column: 1;
+  grid-row: 1;
+  color: var(--accent);
+  padding-top: 0.35rem;
+}
+
+.case__title {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  max-width: 44ch;
+}
+
+.case__facts {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.case__facts > div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.case__facts dt {
+  color: var(--muted);
+}
+
+.case__facts dd {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.55;
+  color: var(--fg-soft);
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 620px) {
+  .case {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+  }
+
+  .case__facts > div {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+
+  .case__facts dt {
+    font-size: 0.64rem;
+  }
+}
+
+/* ============================================================
+   12. Team
+   ============================================================ */
+
+.team {
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 3.6rem);
+}
+
+.team__media {
+  margin: 0;
+}
+
+.team__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: grayscale(1) contrast(1.06) brightness(0.96);
+  transition: filter 0.4s ease;
+}
+
+.team__media:hover img {
+  filter: grayscale(0.15) contrast(1.02);
+}
+
+.team__copy > .mono {
+  color: var(--accent);
+}
+
+.team__copy h2 {
+  margin: 0.9rem 0 0.4rem;
+}
+
+.team__role {
+  margin: 0 0 1.4rem;
+  color: var(--accent);
+}
+
+.team__copy p:not(.mono) {
+  max-width: 62ch;
+  color: var(--fg-soft);
+  font-size: 0.99rem;
+  line-height: 1.62;
+}
+
+.team__copy .muted {
+  color: var(--muted);
+}
+
+.team__facts {
+  list-style: none;
+  margin: 1.8rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.team__facts li {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1rem;
+  margin: 0;
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.94rem;
+  color: var(--fg-soft);
+}
+
+.team__facts .mono {
+  color: var(--muted);
+}
+
+@media (min-width: 860px) {
+  .team {
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 520px) {
+  .team__facts li {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+
+/* ============================================================
+   13. Brief-bygger — lime flate, mørk utskrift
+   ============================================================ */
+
+.brief {
+  background: var(--accent);
+  color: var(--ink);
+  padding-block: var(--sec);
+}
+
+.brief .mono {
+  color: #22331b;
+}
+
+.brief__head {
+  max-width: 60ch;
+  margin-bottom: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.brief__head h2 {
+  margin: 0.9rem 0 0;
+  color: var(--ink);
+  font-size: clamp(2.1rem, 6.4vw, 4.6rem);
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+.brief__ingress {
+  margin-top: 1.1rem;
+  max-width: 52ch;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #1c2b16;
+}
+
+.brief__grid {
+  display: grid;
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.q {
+  margin-bottom: 1.5rem;
+}
+
+.q:last-of-type {
+  margin-bottom: 0;
+}
+
+.q__label {
+  margin-bottom: 0.7rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgb(10 12 9 / 38%);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+}
+
+.chip:hover {
+  border-color: var(--ink);
+  background: rgb(10 12 9 / 7%);
+}
+
+.chip[aria-checked='true'] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--accent);
+}
+
+.brief__note {
+  margin-top: 1.4rem;
+  color: #2a3d22;
+}
+
+.brief__out {
+  background: var(--ink);
+  padding: clamp(1rem, 2.4vw, 1.5rem);
+  border-radius: 2px;
+}
+
+.brief__bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgb(242 243 236 / 18%);
+}
+
+.brief__bar .mono:first-child {
+  color: var(--accent);
+}
+
+.brief__bar .mono:last-child {
+  color: #7f887a;
+}
+
+.brief__pre {
+  margin: 0;
+  min-height: 290px;
+  max-height: 56vh;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.62;
+  color: #dfe3d8;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  tab-size: 2;
+}
+
+.brief__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.brief__actions .btn {
+  flex: 1 1 auto;
+  min-height: 48px;
+}
+
+/* Knappene står på den mørke utskriftsflaten, ikke på lime. */
+.brief__out .btn--ink {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+
+.brief__out .btn--ink:hover {
+  background: #85e05f;
+  border-color: #85e05f;
+}
+
+.brief__out .btn--outline-ink {
+  color: var(--fg);
+  border-color: rgb(242 243 236 / 42%);
+  background: transparent;
+}
+
+.brief__out .btn--outline-ink:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+@media (min-width: 980px) {
+  .brief__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+/* ============================================================
+   14. Kontakt
+   ============================================================ */
+
+.contact {
+  display: grid;
+  gap: clamp(1.8rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.contact__copy > .mono {
+  color: var(--accent);
+}
+
+.contact__copy h2 {
+  margin: 0.9rem 0 1.1rem;
+}
+
+.contact__lines {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact__lines li {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  margin: 0;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.98rem;
+}
+
+.contact__lines a {
+  display: inline-flex;
+  align-items: center;
+  justify-self: start;
+  min-height: 44px;
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--line-strong);
+  border-bottom: 0;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+}
+
+.contact__lines a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.lead-form {
+  display: grid;
+  gap: 0.95rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+
+.lead-form__row {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--fg-soft);
+}
+
+.lead-form input,
+.lead-form textarea {
+  background: var(--bg);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  color: var(--fg);
+  font-size: 16px;
+}
+
+.lead-form input:focus,
+.lead-form textarea:focus {
+  border-color: var(--accent);
+}
+
+.lead-form__submit {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.lead-form__note {
+  margin: 0;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: none;
+  font-size: 0.68rem;
+}
+
+.kontor {
+  margin: clamp(2rem, 5vw, 3.6rem) 0 0;
+}
+
+.kontor img {
+  width: 100%;
+  height: clamp(180px, 26vw, 340px);
+  object-fit: cover;
+}
+
+.kontor figcaption {
+  margin-top: 0.75rem;
+}
+
+@media (min-width: 560px) {
+  .lead-form__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .contact {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .contact__lines li {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+
+/* ============================================================
+   15. Bunn
+   ============================================================ */
+
+.foot {
+  padding-block: clamp(2.6rem, 6vw, 4.2rem) 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.foot__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand--foot .brand__text {
+  font-size: 1.18rem;
+}
+
+.foot__tag {
+  margin: 0;
+  max-width: 34ch;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.foot__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.6rem 2rem;
+  padding-block: 1.9rem;
+}
+
+.foot__cols p {
+  margin: 0.4rem 0 0;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--fg-soft);
+}
+
+.foot__cols .mono {
+  color: var(--accent);
+}
+
+.foot__cols a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--fg-soft);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--line-strong);
+  border-bottom: 0;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+}
+
+.foot__cols a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.foot__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+
+/* ============================================================
+   16. Bevegelse
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover,
+  .case:hover,
+  .svc:hover {
+    transform: none;
+  }
+
+  /* base.css setter .reveal til opacity 0; her skal ingenting skjules. */
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

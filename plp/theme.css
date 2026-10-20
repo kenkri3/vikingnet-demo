@@ -1,0 +1,220 @@
+/*
+  Bangstad Consult AS — tema.
+  Redaksjonell profil: dyp skoggjønn som bærende farge, varm papirflate,
+  Spectral i overskriftene og Public Sans i brødteksten.
+  Setter bare identiteten. Layout og komponenter ligger i styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f7f2e8;                 /* papir */
+  --bg-soft: #efe7d7;            /* tint, brukes til paneler */
+  --bg-card: #fbf8f1;
+  --fg: #17201c;                 /* blekk */
+  --muted: #56645b;
+  --line: #dbd1bd;
+  --line-strong: #c3b59b;
+
+  /* Bærende grønn */
+  --accent: #1c4636;
+  --accent-fg: #f7f2e8;
+  --accent-soft: #e5ebdc;
+
+  --skog: #0f2a22;
+  --skog-2: #14342b;
+  --sage: #a9bcac;
+  --sage-dim: #8ea694;
+
+  /* Typografi */
+  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+  --font-body: 'Public Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --t-xs: 0.72rem;
+  --t-sm: 0.875rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.45vw, 1.29rem);
+  --t-h3: clamp(1.22rem, 1.08rem + 0.6vw, 1.52rem);
+  --t-h2: clamp(1.85rem, 1.35rem + 1.95vw, 2.8rem);
+  --t-h1: clamp(2.45rem, 1.35rem + 4.3vw, 4.3rem);
+
+  /* Rom og form */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 0 rgb(23 32 28 / 3%), 0 22px 44px -32px rgb(15 42 34 / 45%);
+  --wrap: 1160px;
+  --header-h: 78px;
+
+  --s-1: 0.5rem;
+  --s-2: 0.75rem;
+  --s-3: 1rem;
+  --s-4: 1.5rem;
+  --s-5: 2rem;
+  --s-6: 3rem;
+  --s-7: 4.5rem;
+  --s-8: 6.5rem;
+}
+
+html {
+  background: var(--bg);
+  color-scheme: light;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.68;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--fg);
+  font-weight: 500;
+}
+
+h1 {
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  font-weight: 500;
+}
+
+h2 {
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  font-weight: 500;
+}
+
+h3 {
+  letter-spacing: -0.012em;
+  line-height: 1.22;
+  font-weight: 500;
+}
+
+p {
+  margin: 0 0 var(--s-3);
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lead {
+  font-size: var(--t-lead);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: var(--t-sm);
+  line-height: 1.55;
+}
+
+/* Knapper: firkantede, ikke pille — redaksjonelt, ikke app. */
+.btn {
+  min-height: 48px;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-color: var(--accent);
+}
+
+.btn:hover {
+  background: var(--skog);
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--line-strong);
+}
+
+.btn--ghost:hover {
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  color: var(--accent);
+}
+
+.btn--paper {
+  background: var(--bg);
+  color: var(--skog);
+  border-color: var(--bg);
+}
+
+.btn--paper:hover {
+  background: #fff;
+  color: var(--skog);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Skjemafelt på papir */
+input,
+select,
+textarea {
+  background: var(--bg-card);
+  border-color: var(--line-strong);
+  border-radius: var(--radius-sm);
+  color: var(--fg);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--sage-dim);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  outline: 2px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  outline-offset: 1px;
+}
+
+label {
+  color: var(--fg);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover {
+    transform: none;
+  }
+}

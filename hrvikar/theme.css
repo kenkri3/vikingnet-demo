@@ -1,0 +1,140 @@
+/*
+  HR Vikar AS — tema.
+  Lys industriell flate: varm grå, blekk, én arbeidsklær-oransje (hentet fra
+  deres egen logo: #FF5A00). Kondensert sans i overskrifter, humanistisk sans
+  i brødtekst. Ligger etter base.css og før styles.css.
+*/
+
+:root {
+  /* Flater og blekk */
+  --bg: #f7f5f2;
+  --bg-soft: #efece6;
+  --surface: #ffffff;
+  --fg: #16181b;
+  --muted: #5a5f66;
+  --line: #e2ddd4;
+  --line-strong: #cfc8bc;
+
+  /* Arbeidsklær-aksent */
+  --accent: #ff5a00;        /* deres egen logo-oransje */
+  --accent-deep: #b84600;   /* tekst og knapper, AA på lys flate */
+  --accent-fg: #ffffff;
+  --accent-soft: #fff1e7;
+
+  /* Mørk flate (footer og bånd) */
+  --ink: #14161a;
+  --ink-soft: #1e2126;
+  --ink-fg: #f4f2ee;
+  --ink-muted: #a9aeb6;
+
+  /* Typografi */
+  --font-display: 'Saira Condensed', 'Arial Narrow', 'Helvetica Neue', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Rytme: strammere radius enn kit-standarden, mer «verksted» enn «kort» */
+  --radius: 6px;
+  --radius-sm: 4px;
+
+  --t-xs: 0.76rem;
+  --t-sm: 0.93rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.45vw, 1.28rem);
+  --t-h3: clamp(1.25rem, 1.05rem + 0.7vw, 1.6rem);
+  --t-h2: clamp(1.9rem, 1.4rem + 2vw, 2.85rem);
+  --t-h1: clamp(2.45rem, 1.6rem + 3.9vw, 4.35rem);
+
+  --wrap: 1180px;
+  --header-h: 74px;
+}
+
+/* Kondensert display: stram linjehøyde og lite bokstavavstand. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.02;
+}
+
+h1 {
+  line-height: 0.96;
+  letter-spacing: 0.002em;
+  text-wrap: balance;
+}
+
+h2 { line-height: 1.0; }
+h3 { line-height: 1.1; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  font-size: var(--t-base);
+  line-height: 1.6;
+}
+
+/* Knapper: mørk-oransje, ikke den lyse logofargen — hvit tekst skal leses. */
+.btn {
+  background: var(--accent-deep);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  min-height: 48px;
+}
+
+.btn:hover {
+  background: #a13c00;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line-strong);
+}
+
+.btn--ghost:hover {
+  background: var(--surface);
+  border-color: var(--fg);
+  box-shadow: none;
+}
+
+.btn--ink {
+  background: var(--ink);
+  color: var(--ink-fg);
+}
+
+.btn--ink:hover {
+  background: #000;
+}
+
+/* Mikro-merkelapp: kondensert, sperret, med en kort oransje strek foran. */
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.2em;
+  color: var(--accent-deep);
+  text-transform: uppercase;
+  gap: 0.65rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--accent);
+  flex: none;
+}
+
+.eyebrow--light { color: #ffb38a; }
+.eyebrow--light::before { background: var(--accent); }
+
+.section { padding-block: clamp(3rem, 7vw, 5.5rem); }
+
+.lead { color: var(--muted); }
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}

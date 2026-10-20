@@ -1,0 +1,156 @@
+/*
+  DNI — Dotnet Internals AS
+  Tema: klinisk/rolig. Nesten hvit flate, grafitt som tekst, én elektrisk blå
+  aksent, geometrisk sans i overskrifter og mono i småetiketter.
+*/
+
+:root {
+  --bg: #fbfbfc;
+  --bg-soft: #f2f4f7;
+  --surface: #ffffff;
+
+  --fg: #15181d;
+  --fg-strong: #0b0d11;
+  --muted: #59616d;
+
+  --line: #e3e6eb;
+  --line-strong: #cbd1da;
+
+  --accent: #1a4bff;
+  --accent-ink: #1439c9;
+  --accent-soft: #eef2ff;
+  --accent-fg: #ffffff;
+
+  --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --t-h1: clamp(1.95rem, 1.2rem + 3.4vw, 3.5rem);
+  --t-h2: clamp(1.8rem, 1.3rem + 2vw, 2.75rem);
+  --t-h3: clamp(1.08rem, 1rem + 0.35vw, 1.28rem);
+  --t-lead: clamp(1.05rem, 0.98rem + 0.42vw, 1.22rem);
+  --t-base: 1.0625rem;
+  --t-sm: 0.9rem;
+  --t-xs: 0.75rem;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --wrap: 1180px;
+  --header-h: 72px;
+  --shadow: 0 1px 2px rgb(11 13 17 / 5%);
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.7;
+  letter-spacing: -0.005em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--fg-strong);
+}
+
+h1 {
+  font-size: var(--t-h1);
+  line-height: 1;
+  letter-spacing: -0.038em;
+}
+
+h2 {
+  font-size: var(--t-h2);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: var(--t-h3);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.7;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+a {
+  color: var(--fg);
+  text-decoration-color: var(--line-strong);
+}
+
+a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  min-height: 46px;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+.btn--primary:hover {
+  background: var(--accent-ink);
+}
+
+.btn--line {
+  background: transparent;
+  border-color: var(--line-strong);
+  color: var(--fg);
+}
+
+.btn--line:hover {
+  background: var(--surface);
+  border-color: var(--fg);
+}
+
+.btn--dark {
+  background: var(--fg-strong);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: #262b34;
+}
+
+input,
+select,
+textarea {
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+:focus-visible {
+  outline-color: var(--accent);
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo-QA — Vikingnet</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 28px 60px; background: #0f1115; color: #e8eaee;
+    font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  h1 { font: 600 20px/1.3 system-ui, sans-serif; margin: 0 0 6px; }
+  p.hint { color: #9aa3b2; margin: 0 0 20px; font: 13px/1.5 system-ui, sans-serif; }
+  #side { color: #ffd479; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 18px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid #232833; vertical-align: top; }
+  th { color: #9aa3b2; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  td.n { color: #9aa3b2; white-space: nowrap; }
+  .ok { color: #57d38c; }
+  .feil { color: #ff7b72; }
+  .sum { padding: 14px 16px; border-radius: 10px; font: 600 16px/1.4 system-ui, sans-serif; }
+  .sum.ok { background: #10301f; color: #7ee2a8; }
+  .sum.feil { background: #331414; color: #ff9b93; }
+  .detalj { color: #c8ceda; font-size: 12.5px; }
+  iframe { position: absolute; left: -10000px; top: 0; border: 0; background: #fff; }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>Demo-QA</h1>
+<p class="hint">Måler demo: <span id="side">(mangler ?side=)</span> i fem bredder. Siden lastes i en usynlig ramme; ingenting sendes.</p>
+<div id="rapport">Kjører …</div>
+<div id="sum"></div>
+
+<script>
+(function () {
+  'use strict';
+  var BREDDER = [360, 390, 768, 1024, 1440];
+  var slug = new URLSearchParams(location.search).get('side') || '';
+  document.getElementById('side').textContent = slug || '(mangler ?side=)';
+
+  var ramme = document.createElement('iframe');
+  ramme.setAttribute('title', 'demo');
+  ramme.height = '900';
+  document.body.appendChild(ramme);
+
+  function lagTabell() {
+    var el = document.getElementById('rapport');
+    el.innerHTML = '<table><thead><tr>' +
+      '<th>Bredde</th><th>Overflyt</th><th>Utenfor</th><th>Trykkflater</th><th>Felt &lt;16px</th><th>Bilder</th><th>Tekst</th>' +
+      '</tr></thead><tbody id="rader"></tbody></table>';
+  }
+
+  function rad(b, feil) {
+    var tbody = document.getElementById('rader');
+    var tr = document.createElement('tr');
+    function celle(innhold, klasse) {
+      var td = document.createElement('td');
+      if (klasse) td.className = klasse;
+      td.innerHTML = innhold;
+      tr.appendChild(td);
+    }
+    celle(b + ' px', 'n');
+    celle(feil.overflyt ? '<span class="feil">' + feil.overflyt + '</span>' : '<span class="ok">nei</span>');
+    celle(feil.utenfor.length ? '<span class="feil">' + feil.utenfor.length + '</span><div class="detalj">' + feil.utenfor.join(', ') + '</div>' : '<span class="ok">0</span>');
+    celle(feil.smaa.length ? '<span class="feil">' + feil.smaa.length + '</span><div class="detalj">' + feil.smaa.join(', ') + '</div>' : '<span class="ok">0</span>');
+    celle(feil.felt.length ? '<span class="feil">' + feil.felt.length + '</span><div class="detalj">' + feil.felt.join(', ') + '</div>' : '<span class="ok">0</span>');
+    celle(feil.bilder.manglerAlt || feil.bilder.manglerDim
+      ? '<span class="feil">alt ' + feil.bilder.manglerAlt + ' / dim ' + feil.bilder.manglerDim + '</span>'
+      : '<span class="ok">' + feil.bilder.antall + ' ok</span>');
+    celle('<span class="detalj">' + feil.tekst + '</span>');
+    tbody.appendChild(tr);
+  }
+
+  function malBredde(b) {
+    return new Promise(function (resolve) {
+      ramme.style.width = b + 'px';
+      ramme.onload = function () {
+        // Vent et par rammer slik at layout og bilder får satt seg.
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            try {
+              var d = ramme.contentDocument;
+              var w = ramme.contentWindow;
+              // Skjermbildet skal vise hele siden, ikke bare første skjermbilde.
+              // Uten dette ville alt som avsløres ved scroll stått usynlig.
+              var stil = d.getElementById('qa-vis');
+              if (!stil) {
+                stil = d.createElement('style');
+                stil.id = 'qa-vis';
+                stil.textContent =
+                  '.reveal{opacity:1!important;transform:none!important}' +
+                  '*,*::before,*::after{animation:none!important;transition:none!important}';
+                (d.head || d.documentElement).appendChild(stil);
+              }
+              var doc = d.documentElement;
+              var bredde = doc.clientWidth;
+              var over = doc.scrollWidth - bredde;
+              var utenfor = [];
+              var smaa = [];
+              var felt = [];
+              var el = d.body ? d.body.querySelectorAll('*') : [];
+              for (var i = 0; i < el.length && (utenfor.length < 6 || smaa.length < 6); i++) {
+                var node = el[i];
+                var r = node.getBoundingClientRect();
+                if (r.width === 0 && r.height === 0) continue;
+                if (utenfor.length < 6 && (r.right > bredde + 2 || r.left < -2)) {
+                  utenfor.push(merk(node));
+                }
+                if (smaa.length < 6 && node.matches('a, button, input, select, textarea, [role="button"]')) {
+                  if (r.height > 0 && (r.height < 40 || r.width < 40)) smaa.push(merk(node) + ' ' + Math.round(r.width) + '×' + Math.round(r.height));
+                }
+              }
+              var feltEl = d.querySelectorAll('input, select, textarea');
+              for (var j = 0; j < feltEl.length && felt.length < 6; j++) {
+                var fs = parseFloat(w.getComputedStyle(feltEl[j]).fontSize) || 0;
+                if (fs < 16) felt.push(merk(feltEl[j]) + ' ' + fs.toFixed(0) + 'px');
+              }
+              var imgs = d.querySelectorAll('img');
+              var manglerAlt = 0, manglerDim = 0;
+              for (var k = 0; k < imgs.length; k++) {
+                if (!imgs[k].getAttribute('alt')) manglerAlt++;
+                if (!imgs[k].getAttribute('width') || !imgs[k].getAttribute('height')) manglerDim++;
+              }
+              var tekst = (d.body ? d.body.innerText : '').replace(/\s+/g, ' ').trim();
+              resolve({
+                bredde: b,
+                overflyt: over > 2 ? over + ' px' : '',
+                utenfor: utenfor,
+                smaa: smaa,
+                felt: felt,
+                bilder: { antall: imgs.length, manglerAlt: manglerAlt, manglerDim: manglerDim },
+                tekst: tekst.length + ' tegn',
+              });
+            } catch (error) {
+              resolve({ bredde: b, feil: String(error && error.message || error) });
+            }
+          });
+        });
+      };
+      ramme.src = '../' + slug + '/?qa=' + b;
+    });
+  }
+
+  function merk(node) {
+    var navn = node.tagName.toLowerCase();
+    var klasse = (node.getAttribute('class') || '').split(/\s+/).filter(Boolean).slice(0, 2).join('.');
+    return klasse ? navn + '.' + klasse : navn;
+  }
+
+  async function kjor() {
+    lagTabell();
+    var feil = 0;
+    for (var i = 0; i < BREDDER.length; i++) {
+      var r = await malBredde(BREDDER[i]);
+      if (r.feil) {
+        feil++;
+        rad(BREDDER[i], { overflyt: 'feil: ' + r.feil, utenfor: [], smaa: [], felt: [], bilder: { antall: 0, manglerAlt: 0, manglerDim: 0 }, tekst: '' });
+        continue;
+      }
+      if (r.overflyt || r.utenfor.length || r.smaa.length || r.felt.length || r.bilder.manglerAlt || r.bilder.manglerDim) feil++;
+      rad(r.bredde, r);
+    }
+    var sum = document.getElementById('sum');
+    sum.className = 'sum ' + (feil === 0 ? 'ok' : 'feil');
+    sum.textContent = feil === 0
+      ? 'PASS — ' + BREDDER.length + ' bredder uten overflyt, små trykkflater eller manglende alt-tekst.'
+      : 'FAIL — ' + feil + ' av ' + BREDDER.length + ' bredder har avvik. Rett dem før lenken brukes.';
+  }
+
+  if (!slug) {
+    document.getElementById('rapport').textContent = 'Legg til ?side=<slug> i adressen.';
+    return;
+  }
+  kjor();
+})();
+</script>
+</body>
+</html>

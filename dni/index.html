@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DNI — automatisert brukeradministrasjon for Microsoft-miljøer</title>
+<meta name="description" content="Dotnet Internals AS automatiserer brukeradministrasjon, tilganger og Microsoft Teams for kommuner og større virksomheter. Provisjonering fra HR til Entra ID, med revisjonsspor på hvert steg." />
+<meta name="theme-color" content="#fbfbfc" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="DNI — brukeradministrasjon som kjører seg selv" />
+<meta property="og:description" content="Norsk programvarehus på Fornebu. Vi automatiserer oppretting og administrasjon av brukere, tilganger og Microsoft Teams for offentlig sektor og større virksomheter." />
+<meta property="og:image" content="img/kontor-terrasse.jpg" />
+<meta property="og:image:alt" content="Ansatte i DNI i møte på takterrassen på hovedkontoret på Fornebu" />
+<meta property="og:locale" content="nb_NO" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<a class="skip" href="#hovedinnhold">Til innholdet</a>
+
+<header class="site-header" id="toppen">
+  <div class="wrap site-header__inner">
+    <a class="wordmark" href="#toppen" aria-label="DNI, Dotnet Internals — til toppen">
+      <svg class="wordmark__mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+        <rect width="13" height="13" fill="#1a4bff" />
+        <rect x="15" width="13" height="13" fill="#15181d" />
+        <rect y="15" width="13" height="13" fill="#15181d" />
+        <rect x="15" y="15" width="13" height="13" fill="#cbd1da" />
+      </svg>
+      <span class="wordmark__text">Dotnet Internals</span>
+    </a>
+
+    <button class="menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="meny">
+      <span class="menu-btn__label">Meny</span>
+      <span class="menu-btn__bars" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <nav class="site-nav" id="meny" aria-label="Hovedmeny">
+      <a href="#plattform">Plattform</a>
+      <a href="#provisjonering">Provisjonering</a>
+      <a href="#selskap">Selskap</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn--primary site-nav__cta" href="#kontakt">Bestill en gjennomgang</a>
+    </nav>
+  </div>
+</header>
+
+<main id="hovedinnhold">
+
+  <section class="hero">
+    <div class="hero__lines" aria-hidden="true"></div>
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="kicker"><span class="kicker__dot" aria-hidden="true"></span>Norsk programvarehus · Fornebu</p>
+        <h1>Brukeradministrasjon som kjører seg selv.</h1>
+        <p class="hero__lead">DNI automatiserer oppretting og administrasjon av brukere, tilganger og Microsoft Teams — for kommuner og større virksomheter. Hver endring havner i revisjonsloggen.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#kontakt">Bestill en gjennomgang <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--line" href="#provisjonering">Se provisjoneringen</a>
+        </div>
+        <p class="hero__note">ISO 27001 og ISO 9001 er under implementering.</p>
+      </div>
+
+      <figure class="hero__figure">
+        <div class="hero__frame">
+          <img src="img/kontor-trapp.webp" width="500" height="500" alt="Ansatte i DNI samlet i trappen i hovedkontoret på Fornebu" fetchpriority="high" />
+        </div>
+        <figcaption><span>Hovedkontor</span> Martin Linges vei 25, Fornebu</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="proof" aria-label="Nøkkeltall">
+    <div class="wrap">
+      <ul class="proof__grid">
+        <li><strong>10+</strong><span>år med erfaring</span></li>
+        <li><strong>~50</strong><span>kommuner</span></li>
+        <li><strong>4+</strong><span>land</span></li>
+        <li><strong>50+</strong><span>mikrotjenester</span></li>
+      </ul>
+      <p class="proof__source">Tall DNI oppgir selv på dni.no</p>
+    </div>
+  </section>
+
+  <section class="section" id="plattform">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker"><span class="kicker__num">01</span> Plattform</p>
+        <h2>Én plattform, mange byggeklosser.</h2>
+        <p class="sec-head__lead">Identitet, tilgang, data og automasjon henger sammen. Ta i bruk det dere trenger nå, og bygg videre med mikrotjenester.</p>
+      </div>
+
+      <div class="products">
+        <article class="product">
+          <p class="product__num">01</p>
+          <h3>DNI IDM</h3>
+          <p>Kontoer opprettes fra HR-systemet og skrives til Active Directory, Entra ID, Exchange eller Google Workspace. Regler for grupper og navn gjenbrukes på tvers av flyter.</p>
+        </article>
+        <article class="product">
+          <p class="product__num">02</p>
+          <h3>DNI IAM</h3>
+          <p>Ledere godkjenner tilgang for teamet sitt selv, uten IT-sak. Rollebaserte regler, egendefinerte godkjenningsløp og full sporbarhet.</p>
+        </article>
+        <article class="product">
+          <p class="product__num">03</p>
+          <h3>Selvbetjent Passord</h3>
+          <p>Brukeren håndterer passordet sitt selv, med identitetsbekreftelse og reviderbare steg.</p>
+        </article>
+        <article class="product">
+          <p class="product__num">04</p>
+          <h3>DNI Datahub</h3>
+          <p>Kobler til datakilder på tvers av on-prem og sky, og deler bare feltene dere velger — via API-er som OData eller JSON.</p>
+        </article>
+        <article class="product">
+          <p class="product__num">05</p>
+          <h3>DNI-automatisering og -integrasjon</h3>
+          <p>Hendelsesdrevne flyter som holder rede på tilstanden til hvert enkelt element — med karantene når data forsvinner fra kilden.</p>
+        </article>
+        <article class="product">
+          <p class="product__num">06</p>
+          <h3>DNI Mikroapplikasjoner</h3>
+          <p>Ferdige små apper bygget på DNI Cloud Platform, koblet til systemene dere allerede bruker.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section runner-section" id="provisjonering">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker"><span class="kicker__num">02</span> Provisjonering</p>
+        <h2>Se flyten, steg for steg.</h2>
+        <p class="sec-head__lead">Velg antall kommuner, team og ansatte. Loggen viser hva en DNI-flyt gjør: henter fra HR, oppretter kontoer, tildeler grupper og setter opp team med kanaler.</p>
+      </div>
+
+      <div class="runner">
+        <div class="runner__controls">
+          <form class="ctl" id="provForm" novalidate>
+            <div class="ctl__row">
+              <label class="ctl__field">
+                <span>Kommuner</span>
+                <select id="antallKommuner" name="kommuner">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </label>
+              <label class="ctl__field">
+                <span>Team per kommune</span>
+                <select id="antallTeam" name="team">
+                  <option value="2">2</option>
+                  <option value="4" selected>4</option>
+                  <option value="6">6</option>
+                  <option value="8">8</option>
+                </select>
+              </label>
+              <label class="ctl__field">
+                <span>Ansatte per team</span>
+                <select id="antallAnsatte" name="ansatte">
+                  <option value="4">4</option>
+                  <option value="8" selected>8</option>
+                  <option value="12">12</option>
+                  <option value="16">16</option>
+                </select>
+              </label>
+            </div>
+
+            <p class="ctl__sum" id="provSum" aria-live="polite">3 kommuner · 12 team · 96 kontoer</p>
+
+            <div class="ctl__actions">
+              <button class="btn btn--primary" type="submit" id="provRun">Kjør provisjonering</button>
+              <button class="btn btn--line" type="button" id="provReset">Nullstill</button>
+            </div>
+          </form>
+
+          <p class="runner__disclaimer">
+            <span class="tag">Skisse</span>
+            Simuleringen kjører lokalt i nettleseren. Ingen data sendes, og ingenting lagres.
+            Tallene regnes ut fra valgene dine — de er ikke kundetall.
+          </p>
+        </div>
+
+        <div class="panel" id="provPanel">
+          <div class="panel__bar">
+            <span class="panel__file">provisjonering.log</span>
+            <span class="panel__flow" aria-hidden="true">HR → Entra ID → Teams</span>
+            <span class="panel__state" id="provState"><span class="live" aria-hidden="true"></span>Klar</span>
+          </div>
+
+          <div class="panel__log" id="provLog" role="log" aria-live="polite" aria-label="Logg fra provisjoneringen">
+            <ol class="log" id="provList">
+              <li class="log__empty">Velg omfang og trykk «Kjør provisjonering» for å se flyten.</li>
+            </ol>
+          </div>
+
+          <div class="panel__foot">
+            <div class="meter" role="progressbar" aria-labelledby="provState" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="provMeter">
+              <span class="meter__fill" id="provFill"></span>
+            </div>
+            <dl class="counts">
+              <div><dt>Kontoer</dt><dd id="tallKontoer">0</dd></div>
+              <div><dt>Team</dt><dd id="tallTeam">0</dd></div>
+              <div><dt>Kanaler</dt><dd id="tallKanaler">0</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="slik">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker"><span class="kicker__num">03</span> Slik settes flyten opp</p>
+        <h2>Tre steg, ingen monolit.</h2>
+        <p class="sec-head__lead">Flytbyggeren er laget for at en driftsavdeling skal kunne gjøre jobben selv, uten et utviklingsprosjekt.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <p class="step__num">01</p>
+          <h3>Koble til kilden</h3>
+          <p>HR-systemet kobles til via CSV, SQL, API eller webhook. Dere velger selv hvilke felt som skal hentes, og hvilke rader som er relevante.</p>
+        </li>
+        <li class="step">
+          <p class="step__num">02</p>
+          <h3>Map mot målet</h3>
+          <p>Navn, e-post, avdeling og stilling mappes mot Active Directory, Entra ID, Exchange eller Google Workspace. Grupper og navnemaler gjenbrukes på tvers av flyter.</p>
+        </li>
+        <li class="step">
+          <p class="step__num">03</p>
+          <h3>Kjør og revider</h3>
+          <p>Flyten går on-demand, planlagt eller på hendelser fra HR, ERP eller sakssystem — med revisjonslogg på hver endring og karantene når kilden svikter.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="selskap">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker"><span class="kicker__num">04</span> Selskap</p>
+        <h2>Norsk programvarehus siden 2009.</h2>
+        <p class="sec-head__lead">Dotnet Internals holder til på Fornebu, med ansatte på flere lokasjoner og kunder i fire land.</p>
+      </div>
+
+      <div class="split">
+        <figure class="split__figure">
+          <img src="img/kontor-terrasse.jpg" width="1110" height="574" alt="Ansatte i DNI i arbeidsmøte med bærbar PC på takterrassen" loading="lazy" />
+          <figcaption>Takterrassen på Fornebu. Foto: DNI</figcaption>
+        </figure>
+
+        <div class="split__body">
+          <p>
+            DNI ble bygget rundt én idé: at brukeradministrasjon skal skje av seg selv. Fra 2009
+            automatiserte On-prem LCS administrasjon og vedlikehold av Active Directory i norske
+            virksomheter. I dag er DNI Cloud Platform en modulær plattform med over 50 mikrotjenester
+            for identitet, tilgang, data og integrasjon.
+          </p>
+          <p>
+            Plattformen er bygget for å kunne tas i bruk stykkevis. Dere kan starte med én flyt fra HR
+            til Active Directory, og legge til tilgangsstyring, datadeling og Teams-automatisering
+            etter hvert som behovet melder seg.
+          </p>
+
+          <ol class="timeline">
+            <li>
+              <span class="timeline__year">2009–2017</span>
+              <span class="timeline__text">On-prem LCS automatiserte Active Directory-administrasjon og ble en markedsledende løsning i Norge.</span>
+            </li>
+            <li>
+              <span class="timeline__year">2018–2024</span>
+              <span class="timeline__text">DNI Cloud ble utviklet sammen med kundene, med internasjonal ekspansjon gjennom partnere.</span>
+            </li>
+            <li>
+              <span class="timeline__year">2025–</span>
+              <span class="timeline__text">Videre vekst på DNI Cloud. Selskapet implementerer ISO 27001 og ISO 9001.</span>
+            </li>
+          </ol>
+
+          <dl class="facts">
+            <div><dt>Daglig leder og eier</dt><dd>Andre Stene-Larsen</dd></div>
+            <div><dt>Ansatte</dt><dd>10</dd></div>
+            <div><dt>Organisasjonsnummer</dt><dd>918 772 693</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kunder">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker"><span class="kicker__num">05</span> Kunder</p>
+        <h2>Kommuner og virksomheter som styrer tilganger med DNI.</h2>
+        <p class="sec-head__lead">Betrodd av organisasjoner som håndterer tusenvis av brukere og millioner av transaksjoner.</p>
+      </div>
+
+      <div class="voices">
+        <figure class="voice">
+          <blockquote>Med løsninger fra DNI har vi automatisert opprettelsen og administrasjonen av Microsoft Teams for våre 3 kommuner.</blockquote>
+          <figcaption><strong>Per Erik Simonsen</strong> IKT-rådgiver, Jarlsberg IKT</figcaption>
+        </figure>
+        <figure class="voice">
+          <blockquote>DNI Cloud Platform passer oss perfekt med sin åpne løsning hvor vi trygt og enkelt kan sette opp og konfigurere løsningen slik vi ønsker det.</blockquote>
+          <figcaption><strong>Jonas Forsberg</strong> IT-konsulent, Horten kommune</figcaption>
+        </figure>
+      </div>
+
+      <ul class="names" aria-label="Et utvalg kunder DNI viser på dni.no">
+        <li>Asker kommune</li>
+        <li>Bodø kommune</li>
+        <li>Drammen kommune</li>
+        <li>Kristiansand kommune</li>
+        <li>Tromsø kommune</li>
+        <li>Sandefjord kommune</li>
+        <li>Porsgrunn kommune</li>
+        <li>Lier kommune</li>
+        <li>Arbeidstilsynet</li>
+        <li>Jarlsberg IKT</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section contact" id="kontakt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="kicker"><span class="kicker__num">06</span> Kontakt</p>
+        <h2>Hva vil dere automatisere først?</h2>
+        <p class="sec-head__lead">Fortell oss hvilke systemer som er i spill, og hvor mange brukere det gjelder. Vi svarer med en konkret flyt — ikke en brosjyre.</p>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__details">
+          <dl class="contact__list">
+            <div>
+              <dt>Telefon</dt>
+              <dd><a href="tel:+4763016710">+47 63 01 67 10</a></dd>
+            </div>
+            <div>
+              <dt>E-post</dt>
+              <dd><a href="mailto:salg@dni.no">salg@dni.no</a></dd>
+            </div>
+            <div>
+              <dt>Besøk</dt>
+              <dd>Technopolis<br />Martin Linges vei 25<br />1364 Fornebu</dd>
+            </div>
+            <div>
+              <dt>Support</dt>
+              <dd>På norsk og engelsk</dd>
+            </div>
+          </dl>
+
+          <p class="contact__meta">
+            <span class="tag">Skisse</span>
+            Siden du ser, er et designforslag. Skjemaet er ikke koblet til et system — det åpner
+            e-postklienten din med meldingen ferdig utfylt.
+          </p>
+
+          <figure class="contact__figure">
+            <img src="img/kontor-lobby.webp" width="850" height="424" alt="Møterom i DNIs lokaler på Fornebu" loading="lazy" />
+            <figcaption>Møterommet på Fornebu. Foto: DNI</figcaption>
+          </figure>
+        </div>
+
+        <form class="contact__form" id="kontaktForm">
+          <div class="contact__row">
+            <label>
+              <span>Navn</span>
+              <input type="text" name="navn" id="feltNavn" autocomplete="name" required />
+            </label>
+            <label>
+              <span>E-post</span>
+              <input type="email" name="epost" id="feltEpost" autocomplete="email" required />
+            </label>
+          </div>
+          <label>
+            <span>Virksomhet</span>
+            <input type="text" name="virksomhet" id="feltVirksomhet" autocomplete="organization" />
+          </label>
+          <label>
+            <span>Hva gjelder det?</span>
+            <textarea name="melding" id="feltMelding" rows="5" required placeholder="For eksempel: 2400 ansatte i to kommuner, HR i Unit4, Microsoft 365 i dag."></textarea>
+          </label>
+          <div class="contact__submit">
+            <button class="btn btn--primary" type="submit">Send henvendelse <span class="arrow" aria-hidden="true">→</span></button>
+            <p class="contact__status" id="kontaktStatus" role="status" aria-live="polite">Åpner e-postklienten — ingenting sendes før du trykker send der.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="#toppen" aria-label="DNI, Dotnet Internals — til toppen">
+          <svg class="wordmark__mark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+            <rect width="13" height="13" fill="#1a4bff" />
+            <rect x="15" width="13" height="13" fill="#15181d" />
+            <rect y="15" width="13" height="13" fill="#15181d" />
+            <rect x="15" y="15" width="13" height="13" fill="#cbd1da" />
+          </svg>
+          <span class="wordmark__text">Dotnet Internals</span>
+        </a>
+        <p>Norsk programvarehus som automatiserer brukeradministrasjon og tilgangsrettigheter for offentlig og privat sektor.</p>
+      </div>
+
+      <div class="site-footer__col">
+        <h3 class="site-footer__head">Kontakt</h3>
+        <p>
+          Technopolis<br />
+          Martin Linges vei 25<br />
+          1364 Fornebu
+        </p>
+        <p>
+          <a href="tel:+4763016710">+47 63 01 67 10</a><br />
+          <a href="mailto:salg@dni.no">salg@dni.no</a>
+        </p>
+      </div>
+
+      <div class="site-footer__col">
+        <h3 class="site-footer__head">Selskap</h3>
+        <p>
+          DotNet Internals AS<br />
+          Org.nr 918 772 693<br />
+          Fornebu, Norge
+        </p>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© 2026 DotNet Internals AS</p>
+      <p class="site-footer__meta">Utviklet av DotNet Internals AS</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

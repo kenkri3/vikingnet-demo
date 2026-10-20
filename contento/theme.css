@@ -1,0 +1,155 @@
+/*
+  Contento — identitet.
+  Arketype: varm/håndverk. Varmt papir, blekk som tekstfarge, én dempet
+  oliven som eneste aksent. Newsreader i overskrifter, Cabin i brødtekst.
+  Ligger etter base.css og før styles.css.
+*/
+
+:root {
+  /* Papir og blekk */
+  --paper: #f8f3ea;
+  --paper-deep: #f1e9da;
+  --ink: #241f19;
+  --ink-soft: #3a332a;
+  --muted: #6a6153;
+  --line: #ded2bd;
+  --line-soft: #e8dfcd;
+
+  /* Én dempet aksent: oliven. Tre styrker, samme farge. */
+  --accent: #5b6a3c;
+  --accent-deep: #3f4a29;
+  --accent-soft: #e9e8d3;
+  --accent-line: #b3b995;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-deep);
+  --fg: var(--ink);
+  --accent-fg: #fbf7ee;
+
+  /* To fonter, ikke flere */
+  --font-display: 'Newsreader', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Cabin', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Lite avrunding: dette skal se håndlaget ut, ikke som et kort-UI */
+  --radius: 5px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(48 38 22 / 5%), 0 22px 48px -26px rgb(48 38 22 / 28%);
+
+  --wrap: 1180px;
+  --header-h: 76px;
+
+  /* Typeskala */
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.12rem, 1.02rem + 0.45vw, 1.3rem);
+  --t-h3: clamp(1.2rem, 1.08rem + 0.5vw, 1.45rem);
+  --t-h2: clamp(1.95rem, 1.35rem + 2.2vw, 3.05rem);
+  --t-h1: clamp(2.4rem, 1.55rem + 3.6vw, 4.1rem);
+}
+
+body {
+  background-color: var(--paper);
+  /* Svak papirkorn: en fargeløs støyflate på 5 % over papirfargen. */
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='180'%20height='180'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.82'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3CfeColorMatrix%20type='saturate'%20values='0'/%3E%3C/filter%3E%3Crect%20width='180'%20height='180'%20filter='url(%23n)'%20opacity='0.05'/%3E%3C/svg%3E");
+  color: var(--ink);
+  font-family: var(--font-body);
+  letter-spacing: 0.003em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  letter-spacing: -0.028em;
+  line-height: 1.03;
+}
+
+h2 {
+  line-height: 1.08;
+}
+
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  line-height: 1.24;
+}
+
+p {
+  max-width: 68ch;
+}
+
+a {
+  text-decoration-color: color-mix(in srgb, var(--accent) 42%, transparent);
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent-deep);
+  text-decoration-color: var(--accent);
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/* Små overskrifter over hver seksjon: en hårfin strek foran, ikke en fargeklatt */
+.eyebrow {
+  color: var(--accent-deep);
+  letter-spacing: 0.17em;
+  font-weight: 600;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--accent-line);
+  flex: none;
+}
+
+.lead {
+  line-height: 1.62;
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.012em;
+}
+
+.btn--ghost {
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: var(--paper-deep);
+  color: var(--ink);
+  border-color: var(--accent-line);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Ankermål skal ikke havne under den klebrige headeren */
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 18px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
