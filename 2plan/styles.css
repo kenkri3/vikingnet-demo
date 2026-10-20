@@ -127,7 +127,6 @@ img { max-width: 100%; display: block; }
 .footer p { color: inherit; margin: 0.2rem 0; }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 
-/* Telefon: alt skal kunne leses uten sideveis scrolling. */
 @media (max-width: 900px) {
   .hero__inner, .grid-two, .cta__inner { grid-template-columns: 1fr; }
   .menu { display: none; }
@@ -138,12 +137,13 @@ img { max-width: 100%; display: block; }
   }
   .menu-btn { display: inline-block; }
   .hero__figure img { aspect-ratio: 3 / 2; }
+  /* Fire tall i fire kolonner blir ujevne når teksten er lang. To og to leser bedre. */
+  .strip__inner { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 640px) {
   .hero__actions .btn { width: 100%; }
   .footer__inner { flex-direction: column; }
-  .strip__inner { grid-template-columns: 1fr 1fr; }
   .strip strong { font-size: 1rem; }
   .form { padding: 1.1rem; }
 }
