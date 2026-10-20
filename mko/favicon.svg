@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Murmestrene Knudsen og Olsen">
+  <rect width="64" height="64" rx="7" fill="#9a4a2e"/>
+  <g stroke="#f6efe8" stroke-width="4" fill="none" stroke-linecap="butt">
+    <path d="M8 25h48M8 45h48"/>
+    <path d="M25 9v16M41 9v16"/>
+    <path d="M17 25v20M36 25v20M51 25v20"/>
+    <path d="M26 45v11M44 45v11"/>
+  </g>
+</svg>

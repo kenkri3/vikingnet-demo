@@ -1,0 +1,1055 @@
+/* Murmestrene Knudsen & Olsen — layout og komponenter. */
+
+/* ---------- Generelt ---------- */
+
+main {
+  display: block;
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
+.seksjonstopp {
+  max-width: 62ch;
+  margin-bottom: clamp(24px, 4vw, 44px);
+}
+
+.seksjonstopp h2 {
+  max-width: 26ch;
+}
+
+.seksjonstopp .lead {
+  margin-bottom: 0;
+}
+
+.etter-liste {
+  margin: 28px 0 0;
+}
+
+/* ---------- Header ---------- */
+
+.header__inner {
+  gap: 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 48px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.brand__merke {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 44px;
+  background: var(--tegl);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  flex: none;
+}
+
+.brand__tekst {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.7rem;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dempet);
+  min-width: 0;
+}
+
+.brand__tekst strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 700;
+  color: var(--blekk);
+  white-space: nowrap;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 2px;
+  color: var(--dempet);
+}
+
+.nav a:hover {
+  color: var(--blekk);
+}
+
+.nav .btn {
+  padding-inline: 1.15rem;
+  color: #ffffff;
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    gap: 0;
+    padding-top: 6px;
+  }
+  .nav a {
+    padding-block: 0.85rem;
+    padding-inline: 0;
+  }
+  .nav .btn {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand__tekst {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+  .brand__tekst strong {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-block: clamp(18px, 3vw, 38px) clamp(34px, 6vw, 76px);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(26px, 4vw, 56px);
+  align-items: center;
+}
+
+.hero__tekst {
+  min-width: 0;
+}
+
+.hero h1 {
+  margin: 0 0 var(--s-3);
+  font-size: clamp(2.15rem, 1.35rem + 3.1vw, 3.85rem);
+  max-width: 20ch;
+}
+
+.hero .lead {
+  margin-bottom: 0;
+  max-width: 46ch;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: var(--s-4);
+}
+
+.hero__fot {
+  margin: var(--s-4) 0 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--linje);
+  font-size: var(--t-sm);
+  color: var(--dempet);
+  max-width: 44ch;
+}
+
+/* Murverket: stort bilde til venstre, to små «skift» til høyre. */
+.mur {
+  display: grid;
+  grid-template-columns: minmax(0, 1.32fr) minmax(0, 0.68fr);
+  gap: 12px;
+  min-width: 0;
+}
+
+.mur figure {
+  margin: 0;
+}
+
+.mur img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mur__stor {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--kalk-dyp);
+}
+
+.mur__side {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 12px;
+  min-width: 0;
+}
+
+.mur__liten {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--kalk-dyp);
+}
+
+.hero__merke {
+  background: var(--tegl);
+  color: #ffffff;
+  padding: clamp(12px, 1.6vw, 18px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+.hero__merke-eyebrow {
+  margin: 0;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fdeee7;
+}
+
+.hero__merke-tall {
+  margin: 0.1rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 1.2rem + 2vw, 2.9rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.hero__merke-tekst {
+  margin: 0.35rem 0 0;
+  font-size: var(--t-xs);
+  line-height: 1.35;
+  color: #fbeae1;
+}
+
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(28px, 5vw, 40px);
+  }
+  .hero h1 {
+    max-width: 24ch;
+  }
+}
+
+@media (max-width: 560px) {
+  .mur {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .mur__stor {
+    aspect-ratio: 4 / 3;
+  }
+  .mur__side {
+    grid-template-rows: none;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .mur__liten {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* ---------- Bånd med godkjenninger ---------- */
+
+.band {
+  background: var(--mork);
+  color: var(--pa-mork);
+  padding-block: clamp(22px, 3.4vw, 38px);
+  position: relative;
+  isolation: isolate;
+}
+
+.band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(255 255 255 / 5%) 0 1px,
+    transparent 1px 132px
+  );
+  pointer-events: none;
+}
+
+.band__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 210px) minmax(0, 1fr);
+  gap: 14px 34px;
+  align-items: center;
+}
+
+.band__innledning {
+  margin: 0;
+  font-size: var(--t-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b9b4a6;
+}
+
+.band__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 26px;
+}
+
+.band__liste li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--pa-mork);
+  line-height: 1.35;
+}
+
+.band__liste li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: var(--tegl);
+  flex: none;
+  align-self: flex-start;
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 760px) {
+  .band__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .band__liste {
+    display: grid;
+    gap: 6px;
+  }
+}
+
+/* ---------- Tjenester ---------- */
+
+.tjenester {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(24px, 4vw, 56px);
+  border-top: 1px solid var(--linje);
+}
+
+.tjeneste {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  column-gap: 8px;
+  padding-block: clamp(18px, 2.4vw, 26px) clamp(16px, 2.2vw, 22px);
+  border-bottom: 1px solid var(--linje);
+  margin: 0;
+}
+
+.tjeneste__nr {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--tegl);
+  padding-top: 0.32rem;
+  letter-spacing: 0.05em;
+}
+
+.tjeneste h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0 0 0.4rem;
+  font-size: 1.22rem;
+}
+
+.tjeneste p {
+  grid-column: 2;
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.6;
+  color: var(--dempet);
+}
+
+@media (max-width: 760px) {
+  .tjenester {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Slik jobber vi ---------- */
+
+.slik {
+  background: var(--kalk-dyp);
+  border-block: 1px solid var(--linje);
+}
+
+.slik__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.slik__punkt {
+  margin: 0;
+  border-top: 2px solid var(--blekk);
+  padding-top: 18px;
+}
+
+.slik__nr {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--tegl);
+  margin-bottom: 0.5rem;
+}
+
+.slik__punkt h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.slik__punkt p {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+@media (max-width: 760px) {
+  .slik__liste {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+}
+
+/* ---------- Galleri ---------- */
+
+.galleri {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(10px, 1.6vw, 18px);
+}
+
+.galleri__kort {
+  margin: 0;
+  min-width: 0;
+}
+
+.galleri__kort--vid {
+  grid-column: span 3;
+}
+
+.galleri__kort--smal {
+  grid-column: span 2;
+}
+
+.galleri__fig {
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.galleri__ramme {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  background: var(--kalk-dyp);
+}
+
+.galleri__kort--smal .galleri__ramme {
+  aspect-ratio: 4 / 3;
+}
+
+.galleri__ramme img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.galleri__kort:hover .galleri__ramme img,
+.galleri__kort:focus-within .galleri__ramme img {
+  transform: scale(1.03);
+}
+
+.galleri__fig figcaption {
+  font-size: var(--t-sm);
+  line-height: 1.4;
+  color: var(--blekk);
+  font-weight: 500;
+}
+
+.galleri__merke {
+  display: block;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tegl);
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+@media (max-width: 760px) {
+  .galleri {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .galleri__kort--vid {
+    grid-column: span 2;
+  }
+  .galleri__kort--smal {
+    grid-column: span 1;
+  }
+  .galleri__kort--smal .galleri__ramme {
+    aspect-ratio: 1 / 1;
+  }
+  .galleri__kort--smal:last-child {
+    grid-column: span 2;
+  }
+  .galleri__kort--smal:last-child .galleri__ramme {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ---------- Om ---------- */
+
+.om {
+  background: var(--kalk-lys);
+  border-block: 1px solid var(--linje);
+}
+
+.om__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  gap: clamp(28px, 4vw, 60px);
+  align-items: start;
+}
+
+.om__tekst h2 {
+  max-width: 24ch;
+}
+
+.om__tekst p {
+  max-width: 58ch;
+  color: var(--dempet);
+}
+
+.om__punkter {
+  list-style: none;
+  margin: var(--s-4) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.om__punkter li {
+  margin: 0;
+  display: flex;
+  gap: 0.6rem;
+  font-size: var(--t-sm);
+  color: var(--blekk);
+  line-height: 1.45;
+}
+
+.om__punkter li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: var(--tegl);
+  flex: none;
+  margin-top: 0.5rem;
+}
+
+.om__folk {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.person {
+  background: var(--puss);
+  border: 1px solid var(--linje);
+  padding: clamp(16px, 2vw, 22px);
+}
+
+.person__initialer {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin: 0 0 14px;
+  background: var(--kalk-dyp);
+  color: var(--tegl);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+
+.person h3 {
+  margin: 0 0 0.15rem;
+  font-size: 1.15rem;
+}
+
+.person__rolle {
+  margin: 0 0 0.6rem;
+  font-size: var(--t-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.person__lenke {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--tegl-dyp);
+  text-decoration-color: color-mix(in srgb, var(--tegl) 45%, transparent);
+}
+
+@media (max-width: 860px) {
+  .om__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .om__folk {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .om__folk {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Befaring ---------- */
+
+.befaring {
+  background: var(--kalk);
+}
+
+.befaring__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  gap: clamp(22px, 3vw, 40px);
+  align-items: start;
+}
+
+.befaring__panel {
+  background: var(--puss);
+  border: 1px solid var(--linje);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 3vw, 34px);
+  min-width: 0;
+}
+
+.befaring__topp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.befaring__topp .eyebrow {
+  margin-bottom: 0;
+}
+
+.befaring__skisse {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--linje);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dempet);
+  white-space: nowrap;
+}
+
+.befaring__panel h2 {
+  margin-top: var(--s-2);
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.1rem);
+}
+
+.befaring__ingress {
+  margin-bottom: var(--s-4);
+  font-size: var(--t-sm);
+  color: var(--dempet);
+  max-width: 48ch;
+}
+
+/* Stegindikator */
+.stegindikator {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0 0 var(--s-4);
+  padding: 0;
+}
+
+.stegindikator li {
+  flex: 1 1 0;
+  margin: 0;
+  min-width: 0;
+  border-top: 3px solid var(--linje);
+  padding-top: 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: var(--t-xs);
+  color: var(--dempet);
+  line-height: 1.3;
+}
+
+.stegindikator__tall {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--dempet);
+}
+
+.stegindikator li.er-aktiv,
+.stegindikator li.er-ferdig {
+  border-top-color: var(--tegl);
+  color: var(--blekk);
+}
+
+.stegindikator li.er-aktiv .stegindikator__tall,
+.stegindikator li.er-ferdig .stegindikator__tall {
+  color: var(--tegl);
+}
+
+/* Skjema */
+.skjema {
+  display: block;
+}
+
+.steg {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.steg[hidden] {
+  display: none;
+}
+
+.feltgruppe {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.feltgruppe legend {
+  padding: 0;
+  margin-bottom: 0.6rem;
+  font-size: var(--t-sm);
+  font-weight: 700;
+  color: var(--blekk);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.valgfritt {
+  font-size: var(--t-xs);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  min-height: 44px;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--linje);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--blekk);
+  font: inherit;
+  font-size: var(--t-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.chip:hover {
+  border-color: color-mix(in srgb, var(--blekk) 35%, transparent);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--blekk);
+  border-color: var(--blekk);
+  color: #ffffff;
+}
+
+.steg__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: var(--s-3);
+}
+
+.steg label {
+  font-weight: 700;
+  color: var(--blekk);
+}
+
+.steg label .valgfritt {
+  font-weight: 400;
+}
+
+.hjelp {
+  margin: 0;
+  font-size: var(--t-xs);
+  color: var(--dempet);
+}
+
+.feilmelding {
+  margin: var(--s-3) 0 0;
+  padding: 0.65rem 0.85rem;
+  border-left: 3px solid var(--tegl);
+  background: var(--tegl-lys);
+  color: var(--tegl-dyp);
+  font-size: var(--t-sm);
+  line-height: 1.45;
+}
+
+.feilmelding[hidden] {
+  display: none;
+}
+
+/* Kvittering */
+.kvittering {
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 2px solid var(--tegl);
+}
+
+.kvittering[hidden] {
+  display: none;
+}
+
+.kvittering__merke {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tegl);
+  font-weight: 700;
+}
+
+.kvittering h3 {
+  margin: 0.25rem 0 var(--s-3);
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.kvittering__liste {
+  margin: 0 0 var(--s-3);
+  display: grid;
+  grid-template-columns: minmax(88px, 130px) minmax(0, 1fr);
+  gap: 0.4rem 1rem;
+  font-size: var(--t-sm);
+}
+
+.kvittering__liste dt {
+  color: var(--dempet);
+}
+
+.kvittering__liste dd {
+  margin: 0;
+  color: var(--blekk);
+  overflow-wrap: anywhere;
+}
+
+.kvittering__hjelp {
+  margin: 0;
+  font-size: var(--t-xs);
+  color: var(--dempet);
+  line-height: 1.5;
+}
+
+.kvittering__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: var(--s-3);
+}
+
+/* Kontaktkortet */
+.befaring__kontakt {
+  background: var(--mork);
+  color: var(--pa-mork);
+  padding: clamp(20px, 3vw, 30px);
+  min-width: 0;
+}
+
+.befaring__kontakt h3 {
+  margin: 0 0 var(--s-3);
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.kontaktblokk {
+  padding-block: 0.85rem;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+}
+
+.kontaktblokk:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.kontaktblokk__merke {
+  margin: 0 0 0.25rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b9b4a6;
+}
+
+.kontaktblokk p {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  color: #e4dfd3;
+}
+
+.kontaktlenke {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--t-sm);
+  color: #ffffff;
+  text-decoration-color: rgb(255 255 255 / 40%);
+}
+
+.kontaktlenke:hover {
+  text-decoration-color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .befaring__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--mork-2);
+  color: #cbc6b8;
+  padding-block: clamp(32px, 4.5vw, 52px) clamp(24px, 3vw, 32px);
+  border-top: 4px solid var(--tegl);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+  gap: clamp(22px, 3vw, 44px);
+  align-items: start;
+}
+
+.footer__merke img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 0.9rem;
+}
+
+.footer__slagord {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: #b4ae9f;
+  max-width: 30ch;
+}
+
+.footer__merke-liten {
+  margin: 0 0 0.4rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a9a396;
+}
+
+.footer__kolonne p {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.55;
+}
+
+.footer__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__liste li {
+  margin: 0;
+}
+
+.footer__liste a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--t-sm);
+  color: #f2ede2;
+  text-decoration-color: rgb(255 255 255 / 30%);
+}
+
+.footer__liste a:hover {
+  text-decoration-color: #ffffff;
+}
+
+.footer__bunn {
+  margin: clamp(24px, 3vw, 36px) 0 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  font-size: var(--t-xs);
+  color: #9c9688;
+}
+
+@media (max-width: 760px) {
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .footer__merke img {
+    width: 168px;
+  }
+}

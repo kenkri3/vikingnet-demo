@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontaktark — demoer</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 20px 24px 40px; background: #0f1115; color: #e8eaee; font: 13px/1.4 ui-monospace, Consolas, monospace; }
+  h1 { font: 600 18px/1.3 system-ui, sans-serif; margin: 0 0 4px; }
+  p.hint { color: #9aa3b2; margin: 0 0 18px; font: 12px/1.5 system-ui, sans-serif; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .kort { background: #161a22; border: 1px solid #232833; border-radius: 10px; overflow: hidden; }
+  .ramme { width: 100%; height: 300px; overflow: hidden; position: relative; background: #fff; }
+  .ramme iframe { position: absolute; top: 0; left: 0; width: 1200px; height: 1720px; border: 0; transform: scale(0.35); transform-origin: top left; }
+  .navn { display: flex; justify-content: space-between; gap: 8px; padding: 7px 10px; border-top: 1px solid #232833; font-size: 12px; color: #c8ceda; }
+  .navn b { color: #ffd479; font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>Kontaktark</h1>
+<p class="hint">Seks sider side ved side, vist i 1200 px og skalert til 35 %. ?slugs=a,b,c,d,e,f</p>
+<div class="grid" id="grid">Kjører …</div>
+<script>
+(function () {
+  'use strict';
+  var slugs = (new URLSearchParams(location.search).get('slugs') || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+  var grid = document.getElementById('grid');
+  if (!slugs.length) { grid.textContent = 'Legg til ?slugs=<slug1>,<slug2>,…'; return; }
+  grid.innerHTML = '';
+  slugs.forEach(function (slug) {
+    var kort = document.createElement('div');
+    kort.className = 'kort';
+    var ramme = document.createElement('div');
+    ramme.className = 'ramme';
+    var iframe = document.createElement('iframe');
+    iframe.src = '../' + slug + '/';
+    iframe.loading = 'eager';
+    iframe.title = slug;
+    ramme.appendChild(iframe);
+    var navn = document.createElement('div');
+    navn.className = 'navn';
+    navn.innerHTML = '<b>' + slug + '</b><span>1200 px</span>';
+    kort.appendChild(ramme);
+    kort.appendChild(navn);
+    grid.appendChild(kort);
+  });
+})();
+</script>
+</body>
+</html>

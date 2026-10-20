@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurora Offshore AS — AHTS- og PSV-fartøy for offshore energimarkedet</title>
+<meta name="description" content="Aurora Offshore AS i Kristiansand eier og drifter AHTS- og PSV-fartøy for offshore energimarkedet. Se hvilke fartøy som er ledige nå, og send en charterforespørsel direkte fra siden.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aurora Offshore AS">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Aurora Offshore AS — AHTS- og PSV-fartøy for offshore energimarkedet">
+<meta property="og:description" content="Elleve fartøy, kommersiell og teknisk drift, og chartering fra Kristiansand og Aberdeen. Se ledig kapasitet og send en forespørsel.">
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/auroraoffshore/img/og.jpg">
+<meta property="og:image:alt" content="Tre offshorefartøy med rødt og hvitt skrog ved kai, fotografert fra luften">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06232c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#topp">
+      <img src="img/logo.png" width="363" height="39" alt="Aurora Offshore">
+      <span class="brand__sted">Kristiansand · Aberdeen</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Åpne meny" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" data-nav aria-label="Hovedmeny" hidden>
+      <a href="#tjenester">Tjenester</a>
+      <a href="#kapasitet">Ledig kapasitet</a>
+      <a href="#flaten">Flåten</a>
+      <a href="#selskapet">Selskapet</a>
+      <a href="#ledelse">Ledelse</a>
+      <a class="btn" href="#kontakt">Be om tilbud</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topp">
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__body">
+        <p class="eyebrow">Aurora Offshore AS · Kristiansand · siden 2021</p>
+        <h1>Høykvalitets AHTS- og PSV-fartøy for energimarkedet.</h1>
+        <p class="lead hero__lead">
+          Vi drifter offshorefartøyene kommersielt og teknisk, og skaffer dem oppdrag
+          gjennom vårt globale charteringnettverk — fra hovedkontoret i Kristiansand
+          og kontoret i Aberdeen.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#kontakt">Be om tilbud</a>
+          <a class="btn btn--ghost" href="#kapasitet">Se ledig kapasitet</a>
+        </div>
+        <div class="hero__meta">
+          <span>AHTS og PSV</span>
+          <span>Kristiansand · Aberdeen</span>
+          <span>Chartervakt hele døgnet</span>
+        </div>
+      </div>
+
+      <figure class="hero__fig">
+        <img class="hero__img" src="img/hero.jpg" width="1600" height="754" fetchpriority="high"
+             alt="Tre offshorefartøy med rødt og hvitt skrog som ligger ved kai, fotografert fra luften">
+        <figcaption class="hero__status">
+          <span class="hero__status-merke">Ledig kapasitet</span>
+          <span class="hero__status-tall">4</span>
+          <span class="hero__status-tekst">fartøy er ledige nå.<br>Oversikten er oppdatert 19.10.2026.</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- 2. Nøkkeltall -->
+    <div class="rail">
+      <div class="wrap rail__grid">
+        <div class="rail__item">
+          <span class="rail__tall">11</span>
+          <span class="rail__tekst">fartøy i flåteoversikten</span>
+        </div>
+        <div class="rail__item">
+          <span class="rail__tall">5</span>
+          <span class="rail__tekst">AHTS — ankerhåndtering og slep</span>
+        </div>
+        <div class="rail__item">
+          <span class="rail__tall">6</span>
+          <span class="rail__tekst">PSV — forsyningsfartøy</span>
+        </div>
+        <div class="rail__item">
+          <span class="rail__tall">2021</span>
+          <span class="rail__tekst">etablert med base i Kristiansand</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Ledig kapasitet (interaksjon: filter + forespørsel) -->
+  <section class="section kapasitet pa-mork" id="kapasitet">
+    <div class="wrap">
+      <div class="kapasitet__topp">
+        <div class="sidehode">
+          <p class="eyebrow">Flåteoversikt</p>
+          <h2>Hvem er ledige, og når.</h2>
+          <p class="lead">
+            Samme oversikt som charteravdelingen jobber etter: hvilke fartøy som er ledige nå,
+            og når de neste blir ledige. Filtrer på type og land, og send forespørselen
+            rett fra raden.
+          </p>
+        </div>
+        <p class="stempel">Sist oppdatert <strong>19. oktober 2026</strong></p>
+      </div>
+
+      <div class="filter">
+        <div class="filter__gruppe" role="group" aria-label="Filtrer på fartøystype">
+          <button class="filter__knapp" type="button" data-type="alle" aria-pressed="true">Alle</button>
+          <button class="filter__knapp" type="button" data-type="AHTS" aria-pressed="false">AHTS</button>
+          <button class="filter__knapp" type="button" data-type="PSV" aria-pressed="false">PSV</button>
+        </div>
+        <label class="filter__felt" for="land">
+          Land
+          <select id="land" data-filter-land>
+            <option value="alle">Alle land</option>
+            <option value="Norge">Norge</option>
+            <option value="Nederland">Nederland</option>
+            <option value="Storbritannia">Storbritannia</option>
+            <option value="Singapore">Singapore</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="filter__teller" aria-live="polite" data-teller>Viser 11 av 11 fartøy</p>
+
+      <ul class="flate" data-flate>
+        <li class="flate__hode" aria-hidden="true">
+          <span>Fartøy</span><span>Spesifikasjon</span><span>Havn</span><span>Ledig</span><span></span>
+        </li>
+
+        <li class="flate__rad" data-type="AHTS" data-land="Norge">
+          <h3 class="flate__navn">Siem Opal<span class="flate__type">AHTS</span></h3>
+          <p class="flate__spes">Bygget 2011 · VS 491 CD · 27 068 BHP · 297 t BP · 813 m² dekk</p>
+          <p class="flate__havn">Bergen<span>Norge</span></p>
+          <p class="flate__status"><span class="merke merke--naa">Ledig nå</span></p>
+          <button class="flate__knapp" type="button" data-velg="Siem Opal">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="AHTS" data-land="Singapore">
+          <h3 class="flate__navn">Siem Topaz<span class="flate__type">AHTS</span></h3>
+          <p class="flate__spes">Bygget 2010 · VS 491 CD · 27 068 BHP · 297 t BP · 813 m² dekk</p>
+          <p class="flate__havn">Singapore<span>Singapore</span></p>
+          <p class="flate__status"><span class="merke merke--naa">Ledig nå</span></p>
+          <button class="flate__knapp" type="button" data-velg="Siem Topaz">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="AHTS" data-land="Nederland">
+          <h3 class="flate__navn">Aurora Challenger<span class="flate__type">AHTS</span></h3>
+          <p class="flate__spes">Bygget 2009 · Havyard 842 · 16 080 BHP · 190 t BP · 530 m² dekk</p>
+          <p class="flate__havn">Rotterdam<span>Nederland</span></p>
+          <p class="flate__status"><span class="merke merke--naa">Ledig nå</span></p>
+          <button class="flate__knapp" type="button" data-velg="Aurora Challenger">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="AHTS" data-land="Norge">
+          <h3 class="flate__navn">Siem Pearl<span class="flate__type">AHTS</span></h3>
+          <p class="flate__spes">Bygget 2009 · VS 491 CD · 27 068 BHP · 270 t BP · 813 m² dekk</p>
+          <p class="flate__havn">Bergen<span>Norge</span></p>
+          <p class="flate__status"><span class="merke"><time datetime="2026-10-23">23. okt. 2026</time></span></p>
+          <button class="flate__knapp" type="button" data-velg="Siem Pearl">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="AHTS" data-land="Nederland">
+          <h3 class="flate__navn">Fram Prince<span class="flate__type">AHTS</span></h3>
+          <p class="flate__spes">Bygget 2021 · MOSS 919 AHTS · 21 760 BHP · 247 t BP · 640 m² dekk</p>
+          <p class="flate__havn">Rotterdam<span>Nederland</span></p>
+          <p class="flate__status"><span class="merke"><time datetime="2026-10-26">26. okt. 2026</time></span></p>
+          <button class="flate__knapp" type="button" data-velg="Fram Prince">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="PSV" data-land="Storbritannia">
+          <h3 class="flate__navn">Spirit of Emden<span class="flate__type">PSV</span></h3>
+          <p class="flate__spes">Bygget 2005 · UT 755 LN · 5 378 BHP · 700 m² dekk · DP II</p>
+          <p class="flate__havn">Aberdeen<span>Storbritannia</span></p>
+          <p class="flate__status"><span class="merke merke--naa">Ledig nå</span></p>
+          <button class="flate__knapp" type="button" data-velg="Spirit of Emden">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="PSV" data-land="Egypt">
+          <h3 class="flate__navn">Aurora Galaxy<span class="flate__type">PSV</span></h3>
+          <p class="flate__spes">Bygget 2016 · Diesel-elektrisk · 8 550 BHP · 830 m² dekk · DP2</p>
+          <p class="flate__havn">Alexandria<span>Egypt</span></p>
+          <p class="flate__status"><span class="merke"><time datetime="2026-11-10">10. nov. 2026</time></span></p>
+          <button class="flate__knapp" type="button" data-velg="Aurora Galaxy">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="PSV" data-land="Egypt">
+          <h3 class="flate__navn">Aurora Horizon<span class="flate__type">PSV</span></h3>
+          <p class="flate__spes">Bygget 2016 · Diesel-elektrisk · 8 550 BHP · 830 m² dekk · DP2</p>
+          <p class="flate__havn">Damietta<span>Egypt</span></p>
+          <p class="flate__status"><span class="merke"><time datetime="2026-11-10">10. nov. 2026</time></span></p>
+          <button class="flate__knapp" type="button" data-velg="Aurora Horizon">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="PSV" data-land="Australia">
+          <h3 class="flate__navn">Siem Thiima<span class="flate__type">PSV</span></h3>
+          <p class="flate__spes">Bygget 2016 · VS 4411 DF · 10 400 BHP · 980 m² dekk · dual fuel LNG</p>
+          <p class="flate__havn">Dampier<span>Australia</span></p>
+          <p class="flate__status"><span class="merke"><time datetime="2026-12-15">15. des. 2026</time></span></p>
+          <button class="flate__knapp" type="button" data-velg="Siem Thiima">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="PSV" data-land="Australia">
+          <h3 class="flate__navn">Siem Symphony<span class="flate__type">PSV</span></h3>
+          <p class="flate__spes">Bygget 2014 · MDO/LNG/batteri · 10 769 BHP · 900 m² dekk · DP2</p>
+          <p class="flate__havn">Dampier<span>Australia</span></p>
+          <p class="flate__status"><span class="merke"><time datetime="2026-12-31">31. des. 2026</time></span></p>
+          <button class="flate__knapp" type="button" data-velg="Siem Symphony">Be om tilbud</button>
+        </li>
+
+        <li class="flate__rad" data-type="PSV" data-land="Norge">
+          <h3 class="flate__navn">Siem Pride<span class="flate__type">PSV</span></h3>
+          <p class="flate__spes">Bygget 2015 · MDO/LNG/batteri · 10 769 BHP · 900 m² dekk · ROV-hangar</p>
+          <p class="flate__havn">Kristiansund<span>Norge</span></p>
+          <p class="flate__status"><span class="merke"><time datetime="2027-01-15">15. jan. 2027</time></span></p>
+          <button class="flate__knapp" type="button" data-velg="Siem Pride">Be om tilbud</button>
+        </li>
+      </ul>
+
+      <p class="flate__tom" data-tomt hidden>Ingen fartøy passer med dette utvalget. Velg et annet land eller «Alle».</p>
+
+      <p class="kapasitet__fot">
+        Kilde: Aurora Offshores egen flåteoversikt. Datoene gjelder per 19. oktober 2026, og
+        «ledig nå» betyr at fartøyet står uten oppdrag i den oversikten.
+      </p>
+    </div>
+  </section>
+
+  <!-- 4. Tjenester -->
+  <section class="section" id="tjenester">
+    <div class="wrap">
+      <div class="sidehode reveal">
+        <p class="eyebrow">Tjenester</p>
+        <h2>Drift, beskjeftigelse og sikkerhet i samme hus.</h2>
+        <p class="lead">
+          Aurora Offshore spesialiserer seg på høykvalitets offshorefartøy mot
+          offshore energimarkedet, og drifter fartøyene kommersielt og teknisk.
+        </p>
+      </div>
+
+      <div class="tjenester reveal" style="margin-top:clamp(1.5rem,3vw,2.25rem)">
+        <article class="tjeneste">
+          <span class="tjeneste__nr">01</span>
+          <h3>Kommersiell drift</h3>
+          <p>Vi markedsfører fartøyene og skaffer dem oppdrag gjennom vårt globale charteringnettverk.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__nr">02</span>
+          <h3>Teknisk drift</h3>
+          <p>Vi drifter og vedlikeholder offshorefartøyene, med sikkerhet og kvalitet som styrende krav.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__nr">03</span>
+          <h3>Chartering</h3>
+          <p>Charteravdelingen sitter i Kristiansand og Aberdeen, med egen vakttelefon utenom kontortid.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__nr">04</span>
+          <h3>Sikkerhet, kvalitet og etikk</h3>
+          <p>Forretningsetikk, sikkerhet og kvalitet er styrende for driften. Selskapet har egen HSEQ-policy.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Flåten -->
+  <section class="section" id="flaten" style="padding-top:0">
+    <div class="wrap">
+      <div class="sidehode reveal">
+        <p class="eyebrow">Flåten</p>
+        <h2>Bygget mellom 2005 og 2021 — og holdt i drift.</h2>
+        <p class="lead">
+          Ankerhåndteringsfartøy og forsyningsfartøy med kjente design, dekkapasitet og
+          lastehåndtering. Fire av dem er vist her; hele oversikten står over.
+        </p>
+      </div>
+
+      <div class="flaaten reveal" style="margin-top:clamp(1.5rem,3vw,2.25rem)">
+        <figure class="fartoy">
+          <img src="img/fartoy-challenger.jpg" width="800" height="502" loading="lazy"
+               alt="AHTS-fartøyet Aurora Challenger med rødt skrog ved kai i Rotterdam">
+          <div class="fartoy__tekst">
+            <div class="fartoy__topp">
+              <h3 class="fartoy__navn">Aurora Challenger</h3>
+              <span class="fartoy__type">AHTS</span>
+            </div>
+            <p class="fartoy__spes">Bygget 2009 · Havyard 842 · 16 080 BHP · 190 t BP</p>
+            <p class="fartoy__status"><span class="prikk"></span>Ledig nå i Rotterdam</p>
+          </div>
+        </figure>
+
+        <figure class="fartoy">
+          <img src="img/fartoy-fram-prince.jpg" width="800" height="450" loading="lazy"
+               alt="AHTS-fartøyet Fram Prince ved en offshoreinstallasjon med rød innretning">
+          <div class="fartoy__tekst">
+            <div class="fartoy__topp">
+              <h3 class="fartoy__navn">Fram Prince</h3>
+              <span class="fartoy__type">AHTS</span>
+            </div>
+            <p class="fartoy__spes">Bygget 2021 · MOSS 919 AHTS · 21 760 BHP · 247 t BP</p>
+            <p class="fartoy__status"><span class="prikk prikk--signal"></span>Ledig 26. okt. 2026 i Rotterdam</p>
+          </div>
+        </figure>
+
+        <figure class="fartoy">
+          <img src="img/fartoy-thiima.jpg" width="800" height="530" loading="lazy"
+               alt="Forsyningsfartøyet Siem Thiima i fart med åpent lastedekk og rødt skrog">
+          <div class="fartoy__tekst">
+            <div class="fartoy__topp">
+              <h3 class="fartoy__navn">Siem Thiima</h3>
+              <span class="fartoy__type">PSV</span>
+            </div>
+            <p class="fartoy__spes">Bygget 2016 · VS 4411 DF · 10 400 BHP · dual fuel LNG</p>
+            <p class="fartoy__status"><span class="prikk prikk--signal"></span>Ledig 15. des. 2026 i Dampier</p>
+          </div>
+        </figure>
+
+        <figure class="fartoy">
+          <img src="img/fartoy-emden.jpg" width="800" height="614" loading="lazy"
+               alt="Forsyningsfartøyet Spirit of Emden fortøyd ved kai med baugen mot kamera">
+          <div class="fartoy__tekst">
+            <div class="fartoy__topp">
+              <h3 class="fartoy__navn">Spirit of Emden</h3>
+              <span class="fartoy__type">PSV</span>
+            </div>
+            <p class="fartoy__spes">Bygget 2005 · UT 755 LN · 5 378 BHP · 700 m² dekk</p>
+            <p class="fartoy__status"><span class="prikk"></span>Ledig nå i Aberdeen</p>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Band -->
+  <section class="band" aria-label="Aurora Offshore om selskapet">
+    <img src="img/dekk.jpg" width="1400" height="286" loading="lazy"
+         alt="To mannskap i verneklær og hjelm arbeider på lastedekket mens sjøen slår inn over rekka">
+    <div class="wrap band__inner">
+      <p class="band__sit">
+        Vi har et sterkt fokus på sikkerhet, kvalitet og forretningsetikk, og skal oppfattes
+        som en av de beste fartøysoperatørene i bransjen.
+      </p>
+      <p class="band__kilde">Aurora Offshore om selskapet</p>
+    </div>
+  </section>
+
+  <!-- 7. Selskapet -->
+  <section class="section" id="selskapet">
+    <div class="wrap selskap">
+      <div class="selskap__tekst reveal">
+        <p class="eyebrow">Selskapet</p>
+        <h2>Et ungt selskap med tunge eiere bak.</h2>
+        <p>
+          Aurora Offshore AS ble etablert i 2021 med hovedkontor i Kristiansand. Selskapet
+          spesialiserer seg på høykvalitets offshorefartøy mot offshore energimarkedet, og
+          drifter fartøyene både kommersielt og teknisk.
+        </p>
+        <p>
+          De to største aksjonærene er Borealis Maritime Group og Siem Offshore AS. Gjennom
+          charteringnettverket skaffer vi fartøyene oppdrag internasjonalt, og vi tilbyr
+          leverandører og kunder en kvalitetsbevisst, fleksibel og pålitelig tjeneste — også
+          i form av alternative pakkeløsninger når oppdraget krever det.
+        </p>
+        <p class="muted small" style="margin-bottom:0">Største aksjonærer</p>
+        <div class="eiere">
+          <span class="eier">Borealis Maritime Group</span>
+          <span class="eier">Siem Offshore AS</span>
+        </div>
+      </div>
+
+      <aside class="fakta reveal" aria-label="Fakta om selskapet">
+        <dl>
+          <div class="fakta__rad">
+            <dt>Etablert</dt>
+            <dd>2021</dd>
+          </div>
+          <div class="fakta__rad">
+            <dt>Hovedkontor</dt>
+            <dd>Gravane 16, 4610 Kristiansand S</dd>
+          </div>
+          <div class="fakta__rad">
+            <dt>Organisasjonsnummer</dt>
+            <dd>927 818 795</dd>
+          </div>
+          <div class="fakta__rad">
+            <dt>Fartøy i oversikten</dt>
+            <dd>11 — fem AHTS og seks PSV</dd>
+          </div>
+          <div class="fakta__rad">
+            <dt>Kontorer</dt>
+            <dd>Kristiansand og Aberdeen</dd>
+          </div>
+          <div class="fakta__rad">
+            <dt>Charter</dt>
+            <dd>chartering@auroraoffshore.com</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 8. Ledelse -->
+  <section class="section" id="ledelse" style="padding-top:0">
+    <div class="wrap">
+      <div class="sidehode reveal">
+        <p class="eyebrow">Mennesker</p>
+        <h2>Ledelsen bak flåten.</h2>
+        <p class="lead">
+          Navn, roller og bakgrunn er hentet fra selskapets egen teamside.
+        </p>
+      </div>
+
+      <div class="laget reveal" style="margin-top:clamp(1.5rem,3vw,2.25rem)">
+        <article class="person">
+          <img src="img/ledelse-steve.jpg" width="150" height="150" loading="lazy"
+               alt="Steve Brackenridge, administrerende direktør i Aurora Offshore">
+          <div>
+            <h3>Steve Brackenridge</h3>
+            <p class="person__rolle">Administrerende direktør</p>
+            <p>Leder teamet i Aurora Offshore, med over 25 års erfaring fra kommersielle stillinger i offshore maritim industri.</p>
+          </div>
+        </article>
+
+        <article class="person">
+          <img src="img/ledelse-engene.jpg" width="150" height="150" loading="lazy"
+               alt="Bjørn-Inge Engene, driftsdirektør i Aurora Offshore">
+          <div>
+            <h3>Bjørn-Inge Engene</h3>
+            <p class="person__rolle">Driftsdirektør · Master Mariner</p>
+            <p>Har ansvar for den daglige driften av flåten, med over 18 års maritim erfaring fra stillinger til sjøs og på land.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="styre reveal">
+        <h3>Styret</h3>
+        <ul class="styre__liste">
+          <li class="styre__post">
+            <img src="img/styre-christoph.jpg" width="150" height="150" loading="lazy"
+                 alt="Christoph E. Toepfer, styremedlem i Aurora Offshore">
+            <span>
+              <span class="styre__navn">Christoph E. Toepfer</span>
+              <span class="styre__rolle">Styremedlem · CEO og partner, Borealis Maritime</span>
+            </span>
+          </li>
+          <li class="styre__post">
+            <img src="img/styre-elias.jpg" width="150" height="150" loading="lazy"
+                 alt="Elias Sakellis, styremedlem i Aurora Offshore">
+            <span>
+              <span class="styre__navn">Elias Sakellis</span>
+              <span class="styre__rolle">Styremedlem · CIO og partner, Borealis Maritime</span>
+            </span>
+          </li>
+          <li class="styre__post">
+            <span class="styre__initialer" aria-hidden="true">KR</span>
+            <span>
+              <span class="styre__navn">Kenneth Ross</span>
+              <span class="styre__rolle">Styremedlem · CEO, Siem Shipping Inc / Siem Car Carriers AS</span>
+            </span>
+          </li>
+          <li class="styre__post">
+            <span class="styre__initialer" aria-hidden="true">GP</span>
+            <span>
+              <span class="styre__navn">Glenn Pettersen</span>
+              <span class="styre__rolle">Styremedlem · Group CFO, Siem Industries Inc</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Kontakt og forespørsel -->
+  <section class="section" id="kontakt">
+    <div class="wrap">
+      <div class="sidehode reveal" style="margin-bottom:clamp(1.5rem,3vw,2.25rem)">
+        <p class="eyebrow">Kontakt</p>
+        <h2>Be om tilbud på fartøy.</h2>
+        <p class="lead">
+          Velg fartøy, oppstart og varighet. Du får en oppsummering du kan sende til
+          charteravdelingen med én e-post — eller ring vakttelefonen direkte.
+        </p>
+      </div>
+
+      <div class="kontakt">
+        <div class="foresporsel">
+          <ol class="steg" aria-label="Steg i forespørselen">
+            <li data-steg="1" aria-current="step"><span class="steg__nr">01</span>Fartøy</li>
+            <li data-steg="2"><span class="steg__nr">02</span>Kontakt</li>
+            <li data-steg="3"><span class="steg__nr">03</span>Kvittering</li>
+          </ol>
+
+          <form data-foresporsel novalidate>
+            <div class="steg-panel" data-panel="1">
+              <label for="fartoy">
+                Fartøy
+                <select id="fartoy" name="fartoy">
+                  <option value="">Ikke bestemt ennå</option>
+                  <option>Siem Opal</option>
+                  <option>Siem Topaz</option>
+                  <option>Aurora Challenger</option>
+                  <option>Siem Pearl</option>
+                  <option>Fram Prince</option>
+                  <option>Spirit of Emden</option>
+                  <option>Aurora Galaxy</option>
+                  <option>Aurora Horizon</option>
+                  <option>Siem Thiima</option>
+                  <option>Siem Symphony</option>
+                  <option>Siem Pride</option>
+                </select>
+              </label>
+
+              <div class="feltpar">
+                <label for="oppstart">
+                  Ønsket oppstart
+                  <input id="oppstart" name="oppstart" type="date" autocomplete="off">
+                </label>
+                <label for="varighet">
+                  Varighet
+                  <select id="varighet" name="varighet">
+                    <option>Spot — under 1 måned</option>
+                    <option>1–3 måneder</option>
+                    <option>3–12 måneder</option>
+                    <option>Over 12 måneder</option>
+                  </select>
+                </label>
+              </div>
+
+              <label for="omrade">
+                Område eller oppdrag
+                <input id="omrade" name="omrade" type="text" placeholder="For eksempel Nordsjøen, PSV-term" autocomplete="off">
+              </label>
+
+              <p class="feilmelding" data-feil="1" role="status"></p>
+              <div class="skjema-fot">
+                <button class="btn" type="button" data-neste="2">Neste: kontaktinfo</button>
+              </div>
+            </div>
+
+            <div class="steg-panel" data-panel="2" hidden>
+              <div class="feltpar">
+                <label for="navn">
+                  Navn
+                  <input id="navn" name="navn" type="text" autocomplete="name" required>
+                </label>
+                <label for="selskap">
+                  Selskap
+                  <input id="selskap" name="selskap" type="text" autocomplete="organization">
+                </label>
+              </div>
+
+              <div class="feltpar">
+                <label for="epost">
+                  E-post
+                  <input id="epost" name="epost" type="email" autocomplete="email" required>
+                </label>
+                <label for="telefon">
+                  Telefon
+                  <input id="telefon" name="telefon" type="tel" autocomplete="tel">
+                </label>
+              </div>
+
+              <label for="melding">
+                Melding
+                <textarea id="melding" name="melding" placeholder="Kort om oppdraget, last, kran eller annet utstyr som trengs"></textarea>
+              </label>
+
+              <p class="feilmelding" data-feil="2" role="status"></p>
+              <div class="skjema-fot">
+                <button class="btn" type="submit">Fullfør forespørsel</button>
+                <button class="btn btn--ghost" type="button" data-tilbake="1">Tilbake</button>
+              </div>
+            </div>
+
+            <div class="steg-panel" data-panel="3" hidden>
+              <div class="kvittering">
+                <div class="kvittering__topp">
+                  <h3>Oppsummering</h3>
+                  <span class="kvittering__ref" data-ref>AO-0000-0000</span>
+                </div>
+
+                <dl>
+                  <div class="kvittering__rad"><dt>Fartøy</dt><dd data-ut="fartoy">—</dd></div>
+                  <div class="kvittering__rad"><dt>Oppstart</dt><dd data-ut="oppstart">—</dd></div>
+                  <div class="kvittering__rad"><dt>Varighet</dt><dd data-ut="varighet">—</dd></div>
+                  <div class="kvittering__rad"><dt>Område</dt><dd data-ut="omrade">—</dd></div>
+                  <div class="kvittering__rad"><dt>Kontakt</dt><dd data-ut="kontakt">—</dd></div>
+                  <div class="kvittering__rad"><dt>Melding</dt><dd data-ut="melding">—</dd></div>
+                </dl>
+
+                <p class="varsel">
+                  Dette er en skisse: opplysningene er ikke sendt noe sted. Bruk e-postknappen
+                  under for å sende forespørselen til chartering@auroraoffshore.com fra din
+                  egen e-postklient.
+                </p>
+
+                <div class="skjema-fot">
+                  <a class="btn" href="mailto:chartering@auroraoffshore.com" data-send-epost>Send på e-post</a>
+                  <button class="btn btn--ghost" type="button" data-tilbake="2">Endre opplysninger</button>
+                  <button class="btn btn--ghost" type="button" data-nullstill>Ny forespørsel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="kontaktinfo">
+          <div class="kontor">
+            <span class="kontor__merke">Hovedkontor</span>
+            <h3>Kristiansand</h3>
+            <address>
+              Gravane 16<br>
+              4610 Kristiansand S<br>
+              Norge
+            </address>
+            <a class="kontor__lenke" href="tel:+4738530680">+47 38 53 06 80</a>
+            <a class="kontor__lenke" href="mailto:chartering@auroraoffshore.com">chartering@auroraoffshore.com</a>
+          </div>
+
+          <div class="kontor">
+            <span class="kontor__merke">Kontor</span>
+            <h3>Aberdeen</h3>
+            <address>
+              Suite 5, First Floor<br>
+              1 Union Row<br>
+              Aberdeen, AB10 1TN<br>
+              Storbritannia
+            </address>
+            <a class="kontor__lenke" href="tel:+4738530680">+47 38 53 06 80</a>
+            <a class="kontor__lenke" href="mailto:chartering@auroraoffshore.com">chartering@auroraoffshore.com</a>
+          </div>
+
+          <div class="vakt">
+            <span class="vakt__merke">Chartervakt utenom kontortid</span>
+            <p><strong>Kasper Fossland</strong></p>
+            <a class="kontor__lenke" href="tel:+4791390752">+47 913 90 752</a>
+            <p><a class="kontor__lenke" href="mailto:kf@auroraoffshore.com">kf@auroraoffshore.com</a></p>
+          </div>
+
+          <div class="kontor">
+            <span class="kontor__merke">Mannskap</span>
+            <h3>Jobb om bord?</h3>
+            <p class="hjelp">Søknader om mannskapsstillinger sendes til crewing.</p>
+            <a class="kontor__lenke" href="mailto:crewing@auroraoffshore.com">crewing@auroraoffshore.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <img src="img/logo.png" width="363" height="39" alt="Aurora Offshore">
+        <p>Aurora Offshore AS</p>
+        <p>Gravane 16, 4610 Kristiansand S</p>
+        <p>Org.nr 927 818 795</p>
+      </div>
+      <div>
+        <p class="footer__tittel">Siden</p>
+        <ul>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#kapasitet">Ledig kapasitet</a></li>
+          <li><a href="#flaten">Flåten</a></li>
+          <li><a href="#selskapet">Selskapet</a></li>
+          <li><a href="#ledelse">Ledelse</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__tittel">Kontakt</p>
+        <ul>
+          <li><a href="tel:+4738530680">+47 38 53 06 80</a></li>
+          <li><a href="mailto:chartering@auroraoffshore.com">chartering@auroraoffshore.com</a></li>
+          <li><a href="mailto:crewing@auroraoffshore.com">crewing@auroraoffshore.com</a></li>
+          <li><a href="tel:+4791390752">Vakt: +47 913 90 752</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bunn">
+      <span>© <span data-year>2026</span> Aurora Offshore AS</span>
+      <span>Kristiansand · Aberdeen</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

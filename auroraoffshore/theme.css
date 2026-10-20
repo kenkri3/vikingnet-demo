@@ -1,0 +1,165 @@
+/*
+  Aurora Offshore — identitet.
+  Paletten er hentet fra selskapets egen logo (lys turkis) og fra fargene på
+  fartøyene deres (dyp sjø, hvitt, signalrødt). Typografien er Schibsted
+  Grotesk til tekst og overskrifter, DM Mono til tall, lister og statusfelt.
+  To familier, ikke flere.
+*/
+
+:root {
+  /* Flater */
+  --frost: #eef3f2;          /* lys sjøtåke, sideflate */
+  --frost-2: #e1eae9;        /* dempet flate, paneler */
+  --deep: #06232c;           /* dyp sjø, mørke seksjoner og header */
+  --deep-2: #0a2f3a;         /* panel i mørk seksjon */
+  --paper: #ffffff;
+
+  /* Blekk */
+  --ink: #0b1f26;
+  --ink-soft: #4d666d;
+  --ink-dark-muted: #a8c2c6;
+
+  /* Aksent */
+  --teal: #0e6f7e;           /* aksent på lys flate, AA mot --frost */
+  --teal-bright: #7fd3de;    /* logofargen, brukt på mørk flate */
+  --signal: #c1281f;         /* signalrød, hentet fra fartøyene */
+  --line: #d3dfdf;
+  --line-dark: rgb(127 211 222 / 18%);
+
+  /* Demo-kitets tokens */
+  --bg: var(--frost);
+  --bg-soft: var(--frost-2);
+  --fg: var(--ink);
+  --muted: var(--ink-soft);
+  --accent: var(--teal);
+  --accent-fg: #ffffff;
+  --accent-soft: #dcebea;
+
+  --font-display: 'Schibsted Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Schibsted Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(6 35 44 / 6%), 0 18px 40px rgb(6 35 44 / 9%);
+  --wrap: 1180px;
+  --header-h: 66px;
+}
+
+body {
+  background: var(--frost);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  line-height: 1.04;
+  color: var(--ink);
+}
+
+h1 { font-weight: 800; }
+
+.eyebrow {
+  font-family: 'DM Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--ink-soft);
+}
+
+.lead { color: var(--ink-soft); }
+
+/* Knapper */
+.btn {
+  border-radius: var(--radius);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  background: var(--teal);
+  color: #fff;
+}
+
+.btn:hover { background: #0b5d69; }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.btn--ghost:hover {
+  background: var(--paper);
+  border-color: var(--ink-soft);
+}
+
+.btn--signal {
+  background: var(--signal);
+}
+
+.btn--signal:hover { background: #a51f17; }
+
+.btn--lys {
+  background: var(--teal-bright);
+  color: var(--deep);
+}
+
+.btn--lys:hover { background: #9ce2ea; }
+
+/* Mørk flate: knapper og fokus må tåle det */
+.pa-mork {
+  color: #eaf4f3;
+}
+
+.pa-mork h1,
+.pa-mork h2,
+.pa-mork h3 { color: #f4fbfa; }
+
+.pa-mork .eyebrow { color: var(--teal-bright); }
+
+.pa-mork .lead { color: var(--ink-dark-muted); }
+
+.pa-mork .btn--ghost {
+  color: #eaf4f3;
+  border-color: var(--line-dark);
+}
+
+.pa-mork .btn--ghost:hover {
+  background: rgb(127 211 222 / 10%);
+  border-color: var(--teal-bright);
+}
+
+.pa-mork :focus-visible {
+  outline-color: var(--teal-bright);
+}
+
+/* Skjema på lys flate */
+input,
+select,
+textarea {
+  border-radius: var(--radius-sm);
+  border-color: #c3d3d2;
+  background: var(--paper);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--teal);
+}
+
+label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+}
+
+::selection {
+  background: var(--teal-bright);
+  color: var(--deep);
+}

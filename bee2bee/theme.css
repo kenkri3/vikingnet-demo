@@ -1,0 +1,318 @@
+/*
+  Bee2Bee Talent Solutions — identitet.
+  Fargene er hentet fra deres egen logo og forside: dyp marineblå #273341
+  og gull #b69b55, på varmt papir. Fraunces i overskriftene, Karla i
+  brødteksten — to fonter, ikke flere.
+
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  /* Flater */
+  --papir: #f8f4ec;
+  --papir-2: #f1ebde;
+  --papir-3: #e8dfcd;
+  --kort: #fffdf8;
+
+  /* Marineblå — deres egen */
+  --navy: #273341;
+  --navy-dyp: #1b242e;
+  --navy-lys: #33414f;
+  --paa-navy: #f6f1e6;
+  --paa-navy-dempet: #b9c1c9;
+
+  /* Gull — deres egen. gull-dyp er den som tåler å stå som tekst på papir. */
+  --gull: #b69b55;
+  --gull-lys: #d9c58d;
+  --gull-dyp: #7d6425;
+  --gull-svak: #f2e8d2;
+
+  /* Blekk og linjer */
+  --blekk: #1d2734;
+  --muted: #58636f;
+  --line: #ddd2be;
+  --line-sterk: #c9b99b;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--papir);
+  --bg-soft: var(--papir-2);
+  --fg: var(--blekk);
+  --accent: var(--gull-dyp);
+  --accent-fg: #fffdf8;
+  --accent-soft: var(--gull-svak);
+
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Editorielt: liten avrunding, ikke app-kort */
+  --radius: 6px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 2px rgb(29 39 52 / 4%), 0 26px 50px -34px rgb(29 39 52 / 38%);
+
+  --wrap: 1160px;
+  --header-h: 78px;
+
+  --t-xs: 0.74rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.1rem, 1.01rem + 0.45vw, 1.28rem);
+  --t-h3: clamp(1.22rem, 1.08rem + 0.6vw, 1.5rem);
+  --t-h2: clamp(1.9rem, 1.32rem + 2.4vw, 3.1rem);
+  --t-h1: clamp(2.55rem, 1.35rem + 5.2vw, 5rem);
+}
+
+html {
+  background: var(--papir);
+  color-scheme: light;
+}
+
+body {
+  background: var(--papir);
+  color: var(--blekk);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.68;
+  letter-spacing: 0.002em;
+}
+
+/* ---------- Typografi ---------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variation-settings: 'SOFT' 0, 'WONK' 0;
+  letter-spacing: -0.018em;
+  line-height: 1.04;
+  color: var(--blekk);
+}
+
+h1 {
+  font-size: var(--t-h1);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: var(--t-h2);
+  line-height: 1.06;
+}
+
+h3 {
+  font-size: var(--t-h3);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+p {
+  margin: 0 0 var(--s-3);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+a {
+  color: var(--blekk);
+  text-decoration-color: color-mix(in srgb, var(--gull-dyp) 45%, transparent);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--gull-dyp);
+  text-decoration-color: var(--gull-dyp);
+}
+
+/* Kursiv gull-aksent, bare i overskrifter — ikke i brødtekst */
+.aksent {
+  font-style: italic;
+  color: var(--gull);
+}
+
+::selection {
+  background: var(--gull);
+  color: var(--navy-dyp);
+}
+
+/* ---------- Småetiketter ---------- */
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--gull-dyp);
+  gap: 0.7rem;
+  margin-bottom: var(--s-3);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 26px;
+  height: 1px;
+  background: var(--gull);
+  flex: none;
+}
+
+.eyebrow--lys {
+  color: var(--gull-lys);
+}
+
+.lead {
+  font-size: var(--t-lead);
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.small {
+  font-size: var(--t-sm);
+  line-height: 1.55;
+}
+
+/* ---------- Knapper ---------- */
+
+.btn {
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+  padding: 0.8rem 1.4rem;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: var(--navy);
+  color: var(--paa-navy);
+  border-color: var(--navy);
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.btn:hover {
+  background: var(--navy-dyp);
+  border-color: var(--navy-dyp);
+  color: #fff;
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.btn--gull {
+  background: var(--gull);
+  border-color: var(--gull);
+  color: var(--navy-dyp);
+}
+
+.btn--gull:hover {
+  background: var(--gull-lys);
+  border-color: var(--gull-lys);
+  color: var(--navy-dyp);
+}
+
+.btn--linje {
+  background: transparent;
+  border-color: var(--line-sterk);
+  color: var(--blekk);
+}
+
+.btn--linje:hover {
+  background: color-mix(in srgb, var(--navy) 5%, transparent);
+  border-color: var(--navy);
+  color: var(--blekk);
+  box-shadow: none;
+}
+
+.btn--paa-navy {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--paa-navy) 34%, transparent);
+  color: var(--paa-navy);
+}
+
+.btn--paa-navy:hover {
+  background: color-mix(in srgb, var(--paa-navy) 10%, transparent);
+  border-color: var(--paa-navy);
+  color: #fff;
+}
+
+/* ---------- Skjemafelt ---------- */
+
+input,
+select,
+textarea {
+  background: var(--kort);
+  border-color: var(--line-sterk);
+  border-radius: var(--radius-sm);
+  color: var(--blekk);
+  font-family: var(--font-body);
+  font-size: 16px;
+  min-height: 48px;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--gull);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: var(--gull-dyp);
+  outline: 2px solid color-mix(in srgb, var(--gull) 45%, transparent);
+  outline-offset: 1px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: color-mix(in srgb, var(--muted) 78%, transparent);
+}
+
+label {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gull-dyp);
+  outline-offset: 3px;
+}
+
+/* ---------- Soner ---------- */
+
+.section {
+  padding-block: clamp(3.4rem, 7vw, 6rem);
+}
+
+.band {
+  background: var(--navy);
+  color: var(--paa-navy);
+}
+
+.band h1,
+.band h2,
+.band h3 {
+  color: var(--paa-navy);
+}
+
+.band .lead {
+  color: var(--paa-navy-dempet);
+}
+
+.band ::selection {
+  background: var(--gull);
+  color: var(--navy-dyp);
+}
+
+.band :focus-visible {
+  outline-color: var(--gull-lys);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}

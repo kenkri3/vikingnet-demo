@@ -1,0 +1,57 @@
+/*
+  Ad.venture — tema.
+  Palett hentet fra kundens eget uttrykk: ordmerket er satt i en tynn,
+  høyoktantserif i stålblått (#597c8e, målt fra ad-venture_logo2.webp), og
+  nettstedets egne variabler bruker #1c2a3a som blekk og #5f8298 som primærfarge.
+  Rosen (#a34c6b) og gullet (#a8843f) er hentet fra deres egne aksentfarger.
+
+  Fonter: Playfair/Bodoni-familien er samme skrifttype som deres eget ordmerke
+  etterligner — vi bruker Bodoni Moda til display og DM Sans (deres egen
+  brødtekstfont) til alt annet. To familier, ikke flere.
+*/
+
+:root {
+  --paper: #f1f4f5;
+  --paper-2: #e6ecee;
+  --paper-3: #fbfcfc;
+  --ink: #172433;
+  --ink-soft: #2c3f52;
+  --muted: #4d6472;          /* 5,68:1 mot papir */
+  --line: #d5dde1;
+  --line-strong: #b9c6cc;
+
+  --steel: #597c8e;          /* ordmerkets farge — dekor og store flater */
+  --steel-deep: #3f5f70;     /* 6,23:1 mot papir */
+  --rose: #a34c6b;           /* 5,05:1 mot papir */
+  --rose-soft: #f7eaee;
+  --gold: #a8843f;
+  --gold-line: #d8c3a0;
+
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --accent: var(--ink);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--paper-2);
+
+  --font-display: 'Bodoni Moda', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(23 36 51 / 5%), 0 24px 50px -34px rgb(23 36 51 / 34%);
+  --wrap: 1180px;
+  --header-h: 72px;
+}
+
+/* Ordmerket er en tynn Didone — overskriftene skal ikke være tykke. */
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.012em;
+}
+
+h1 { letter-spacing: -0.02em; line-height: 1.05; }
+h2 { line-height: 1.06; }
+h3 { font-weight: 500; }

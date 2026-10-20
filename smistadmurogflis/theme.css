@@ -1,0 +1,70 @@
+/*
+  Smistad Mur og Flis AS — identitet.
+  Arketype: materiale. Kalkhvit flate, blekk som tekst og én mursteinsrød
+  aksent hentet fra deres eget merke (#ED1C24, dempet til #B3161C for AA på
+  lys flate). Zilla Slab i overskriftene — slab-serifen kler tegl og stein —
+  og Chivo i brødtekst. Skarpe hjørner: dette er flis, ikke kort-UI.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Kalk og stein */
+  --kalk: #f4f0e8;
+  --kalk-2: #ebe5d9;
+  --kalk-3: #e2dacb;
+  --blekk: #17191a;
+  --grafitt: #222526;
+  --stein: #6a6862;
+  --line: #dcd4c4;
+  --line-sterk: #c6bcaa;
+
+  /* Deres røde */
+  --tegl: #b3161c;
+  --tegl-dyp: #8d1015;
+  --tegl-lys: #f7dfdb;
+  --tegl-merke: #ed1c24;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--kalk);
+  --bg-soft: var(--kalk-2);
+  --fg: var(--blekk);
+  --muted: var(--stein);
+  --accent: var(--tegl);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--tegl-lys);
+
+  /* To fonter, ikke flere */
+  --font-display: 'Zilla Slab', Georgia, 'Times New Roman', serif;
+  --font-body: 'Chivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Skarpe kanter */
+  --radius: 2px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 0 rgb(23 25 26 / 4%), 0 18px 40px -30px rgb(23 25 26 / 40%);
+
+  --wrap: 1180px;
+  --header-h: 74px;
+
+  /* Typeskala */
+  --t-xs: 0.74rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.1rem, 1rem + 0.5vw, 1.28rem);
+  --t-h3: clamp(1.18rem, 1.05rem + 0.5vw, 1.42rem);
+  --t-h2: clamp(1.9rem, 1.35rem + 2.2vw, 2.95rem);
+  --t-h1: clamp(2.4rem, 1.6rem + 3.9vw, 4.35rem);
+}
+
+html {
+  background: var(--kalk);
+}
+
+body {
+  background: var(--kalk);
+  color: var(--blekk);
+}
+
+::selection {
+  background: var(--tegl);
+  color: #fff;
+}

@@ -1,0 +1,138 @@
+/*
+  Murmestrene Knudsen & Olsen — tema.
+  Paletten er hentet fra byggematerialene de jobber i hver dag: kalkpuss,
+  skifer og teglstein. Logoen deres er hvit på gjennomsiktig, altså uten
+  farge å arve — derfor er fargene tatt fra materialene, ikke fra merket.
+  Typografi: Bitter (slab serif) til overskrifter, Karla til brødtekst.
+*/
+
+:root {
+  /* Flater */
+  --kalk: #ece9e2;
+  --kalk-dyp: #e2ded4;
+  --kalk-lys: #f5f3ee;
+  --puss: #faf8f4;
+
+  /* Blekk og linjer */
+  --blekk: #1b1c18;
+  --dempet: #5c5e54;
+  --linje: #d2cec0;
+
+  /* Aksent: teglstein */
+  --tegl: #9a4a2e;
+  --tegl-dyp: #7c3a22;
+  --tegl-lys: #f2e4dc;
+
+  /* Mørke flater */
+  --mork: #1d1f1b;
+  --mork-2: #272a24;
+  --pa-mork: #efebe1;
+
+  /* base.css-tokens */
+  --bg: var(--kalk);
+  --bg-soft: var(--kalk-dyp);
+  --fg: var(--blekk);
+  --muted: var(--dempet);
+  --line: var(--linje);
+  --accent: var(--tegl);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--tegl-lys);
+
+  --font-display: 'Bitter', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius: 3px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 1px rgb(27 28 24 / 5%), 0 14px 34px -18px rgb(27 28 24 / 32%);
+  --wrap: 1180px;
+  --header-h: 72px;
+}
+
+body {
+  background-color: var(--kalk);
+  /* Svak kalkstruktur: to nesten usynlige sjikt, ikke et mønster man ser. */
+  background-image:
+    radial-gradient(circle at 18% 12%, rgb(255 255 255 / 55%), transparent 42%),
+    radial-gradient(circle at 82% 78%, rgb(255 255 255 / 35%), transparent 46%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+}
+
+h1 {
+  line-height: 1.02;
+  letter-spacing: -0.028em;
+}
+
+h2 {
+  line-height: 1.08;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p,
+li,
+dd,
+dt,
+figcaption,
+label,
+input,
+select,
+textarea,
+button {
+  font-family: var(--font-body);
+}
+
+.eyebrow {
+  color: var(--tegl);
+  letter-spacing: 0.16em;
+}
+
+.lead {
+  color: var(--dempet);
+}
+
+/* Knappen er sigende: teglfarget flate, ingen glans. */
+.btn {
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.01em;
+  min-height: 46px;
+}
+
+.btn--accent {
+  background: var(--tegl);
+  color: #ffffff;
+  border-color: var(--tegl);
+}
+
+.btn--accent:hover {
+  background: var(--tegl-dyp);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--blekk) 22%, transparent);
+  color: var(--blekk);
+}
+
+.btn--ghost:hover {
+  background: var(--kalk-dyp);
+}
+
+:focus-visible {
+  outline: 2px solid var(--tegl);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--tegl);
+  color: #fff;
+}
