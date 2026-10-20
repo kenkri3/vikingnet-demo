@@ -1,0 +1,72 @@
+/*
+  Grunnmurspesialisten AS — tema.
+  Paletten er hentet fra firmaets egen logo: kalkgrå, blekk og mint.
+  Uttrykket er «tegning på betong»: harde kanter, hårfine streker,
+  kondensert display og en rolig, teknisk brødtekst.
+  Rekkefølge: base.css → theme.css → styles.css
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Råpalett */
+  --kalk: #efeee8;
+  --kalk-dyp: #e5e3da;
+  --betong: #d4d1c6;
+  --blekk: #1c211f;
+  --blekk-2: #262d2a;
+  --blekk-myk: #4c5651;
+  --mint: #6fbf9f;
+  --mint-dyp: #1f6f59;
+  --mint-lys: #dcefe6;
+
+  /* Kobles til demo-kitens prøver */
+  --bg: var(--kalk);
+  --bg-soft: var(--kalk-dyp);
+  --fg: var(--blekk);
+  --muted: var(--blekk-myk);
+  --line: var(--betong);
+  --accent: var(--mint-dyp);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--mint-lys);
+
+  --font-display: 'Bebas Neue', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Fira Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 5px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 0 rgb(28 33 31 / 5%), 0 22px 44px -28px rgb(28 33 31 / 42%);
+
+  --wrap: 1180px;
+  --header-h: 70px;
+}
+
+/* Bebas Neue finnes bare i 400 — syntetisk fet skrift ville sett billig ut. */
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  letter-spacing: 0.012em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.85rem, 8.6vw, 5.7rem);
+  line-height: 0.88;
+  letter-spacing: 0.006em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4.4vw, 3.3rem);
+  line-height: 0.9;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 1.1rem + 0.7vw, 1.72rem);
+  line-height: 1;
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--blekk);
+}
