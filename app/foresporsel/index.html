@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#f4f6f2" />
+  <title>Forespørsel og status – bestill og følg saken</title>
+  <meta name="description" content="Send en forespørsel, få et referansenummer og følg saken fra mottatt til utført. Uten konto og uten sporing." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-side="kunde">
+  <a class="hopp" href="#hovedinnhold">Hopp til innhold</a>
+
+  <header class="topp">
+    <div class="topp__indre">
+      <a class="merke" href="index.html" aria-label="Til forsiden">
+        <svg class="merke__ikon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="currentColor" />
+          <path d="M8.5 10.5h8M8.5 15h5.5M8.5 19.5h4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+          <path d="M16.5 20.8l2.3 2.3 4.7-5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="merke__tekst">
+          <strong data-kunde-navn>Forespørsel og status</strong>
+          <span data-kunde-slagord>Bestilling og oppfølging</span>
+        </span>
+      </a>
+
+      <nav class="topp__nav" aria-label="Hovedmeny">
+        <a href="#bestill" data-nav-til="skjema">Bestill</a>
+        <a href="#status" data-nav-til="status">Sjekk status</a>
+        <a class="topp__admin" href="admin.html">Operatør</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="hovedinnhold">
+    <!-- ------------------------------------------------------------ skjema -->
+    <section class="visning" data-visning="skjema">
+      <div class="wrap">
+        <div class="helt">
+          <div class="helt__intro">
+            <p class="eyebrow"><span class="eyebrow__prikk"></span>Bestilling og oppfølging</p>
+            <h1 tabindex="-1">Bestill en tjeneste. Følg saken hele veien.</h1>
+            <p class="lead">Send en forespørsel på under ett minutt. Du får et referansenummer med én gang, og kan se når saken er mottatt, planlagt og utført.</p>
+
+            <ul class="punkter">
+              <li>
+                <span class="punkter__ikon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 6.8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div><strong>Svar innen én virkedag</strong><span data-kunde-svartid>Vi svarer normalt innen én virkedag.</span></div>
+              </li>
+              <li>
+                <span class="punkter__ikon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 4.5h10a2 2 0 0 1 2 2v13l-3-2-2 2-2-2-2 2-3-2v-13a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9h6M9 12.5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </span>
+                <div><strong>Ett referansenummer</strong><span>Bruk det for å følge saken – uten konto og uten innlogging.</span></div>
+              </li>
+              <li>
+                <span class="punkter__ikon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5l7 3v5.2c0 4.2-2.9 7.5-7 8.8-4.1-1.3-7-4.6-7-8.8V6.5l7-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2.1 2.1L15.5 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                <div><strong>Opplysningene blir hos oss</strong><span data-personvern-kort>Brukes bare til å behandle forespørselen. Ingen sporing.</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="kort skjema-kort">
+            <div class="skjema-kort__topp">
+              <h2>Send en forespørsel</h2>
+              <p>Feltene merket med <span aria-hidden="true">*</span><span class="visuelt-skjult">stjerne</span> er påkrevd.</p>
+            </div>
+
+            <form id="foresporsel-skjema" novalidate>
+              <div class="felt" data-felt="tjeneste">
+                <label for="tjeneste">Tjeneste <span class="krav" aria-hidden="true">*</span></label>
+                <div class="select-ramme">
+                  <select id="tjeneste" name="tjeneste" required aria-describedby="hjelp-tjeneste feil-tjeneste">
+                    <option value="">Velg tjeneste</option>
+                  </select>
+                </div>
+                <p class="hjelp" id="hjelp-tjeneste">Velg det som passer best. Du kan beskrive mer nedenfor.</p>
+                <p class="feil" id="feil-tjeneste" hidden></p>
+              </div>
+
+              <div class="felt" data-felt="dato">
+                <label for="dato">Ønsket dato <span class="krav" aria-hidden="true">*</span></label>
+                <input id="dato" name="dato" type="date" required aria-describedby="hjelp-dato feil-dato" />
+                <p class="hjelp" id="hjelp-dato">Fra i dag og framover. Vi bekrefter tidspunktet med deg.</p>
+                <p class="feil" id="feil-dato" hidden></p>
+              </div>
+
+              <div class="felt-par">
+                <div class="felt" data-felt="navn">
+                  <label for="navn">Navn <span class="krav" aria-hidden="true">*</span></label>
+                  <input id="navn" name="navn" type="text" autocomplete="name" required aria-describedby="feil-navn" />
+                  <p class="feil" id="feil-navn" hidden></p>
+                </div>
+                <div class="felt" data-felt="telefon">
+                  <label for="telefon">Telefon <span class="krav" aria-hidden="true">*</span></label>
+                  <input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="feil-telefon" />
+                  <p class="feil" id="feil-telefon" hidden></p>
+                </div>
+              </div>
+
+              <div class="felt" data-felt="epost">
+                <label for="epost">E-post <span class="krav" aria-hidden="true">*</span></label>
+                <input id="epost" name="epost" type="email" inputmode="email" autocomplete="email" spellcheck="false" required aria-describedby="hjelp-epost feil-epost" />
+                <p class="hjelp" id="hjelp-epost">Vi bruker adressen til å kontakte deg om saken.</p>
+                <p class="feil" id="feil-epost" hidden></p>
+              </div>
+
+              <div class="felt" data-felt="notat">
+                <div class="etikett-rad">
+                  <label for="notat">Kort beskrivelse <span class="krav" aria-hidden="true">*</span></label>
+                  <span class="teller" id="notat-teller" aria-hidden="true">0 / 1000</span>
+                </div>
+                <textarea id="notat" name="notat" rows="4" maxlength="1000" required aria-describedby="hjelp-notat feil-notat"></textarea>
+                <p class="hjelp" id="hjelp-notat">Hva gjelder det? Adresse og andre detaljer hjelper oss å forberede.</p>
+                <p class="feil" id="feil-notat" hidden></p>
+              </div>
+
+              <button class="knapp knapp--primer knapp--full" type="submit" id="send">
+                <span class="knapp-tekst">Send forespørsel</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+
+              <p class="skjema-melding" id="skjema-melding" role="status" aria-live="polite"></p>
+
+              <p class="finstilt">
+                <span aria-hidden="true">*</span> Påkrevd.
+                <span data-personvern-tekst>Opplysningene brukes bare til å behandle forespørselen.</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <section class="steg-seksjon" aria-labelledby="slik-fungerer-det">
+          <h2 id="slik-fungerer-det">Slik fungerer det</h2>
+          <ol class="steg-liste">
+            <li>
+              <span class="steg-liste__nummer">1</span>
+              <h3>Velg tjeneste og dato</h3>
+              <p>Beskriv kort hva du trenger. Det tar under ett minutt.</p>
+            </li>
+            <li>
+              <span class="steg-liste__nummer">2</span>
+              <h3>Send forespørselen</h3>
+              <p>Du får et referansenummer med én gang, rett på skjermen.</p>
+            </li>
+            <li>
+              <span class="steg-liste__nummer">3</span>
+              <h3>Følg status</h3>
+              <p>Slå opp nummeret når som helst og se om saken er planlagt eller utført.</p>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------- kvittering -->
+    <section class="visning" data-visning="kvittering" hidden>
+      <div class="wrap wrap--smal">
+        <div class="kort kvittering">
+          <div class="kvittering__merke" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.2 4.2L19 6.8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p class="eyebrow"><span class="eyebrow__prikk"></span>Kvittering</p>
+          <h1 id="kvittering-tittel" tabindex="-1">Forespørselen er mottatt</h1>
+          <p class="lead">Vi har registrert forespørselen. Ta vare på referansenummeret – du trenger det for å følge saken.</p>
+
+          <div class="ref-boks">
+            <div>
+              <span class="ref-boks__etikett">Referansenummer</span>
+              <strong class="ref-boks__verdi" id="kvittering-ref"></strong>
+            </div>
+            <button class="knapp knapp--sekundær" type="button" id="kopier-ref">Kopier</button>
+          </div>
+
+          <div class="kvittering__status">
+            <span class="merke merke--mottatt" id="kvittering-merke">Mottatt</span>
+            <span class="kvittering__tid" id="kvittering-tid"></span>
+          </div>
+
+          <dl class="oppsummering" aria-label="Oppsummering av forespørselen">
+            <div><dt>Tjeneste</dt><dd id="kvittering-tjeneste"></dd></div>
+            <div><dt>Ønsket dato</dt><dd id="kvittering-dato"></dd></div>
+            <div><dt>Navn</dt><dd id="kvittering-navn"></dd></div>
+            <div><dt>Kontakt</dt><dd id="kvittering-kontakt"></dd></div>
+            <div><dt>Beskrivelse</dt><dd id="kvittering-notat" class="bevar-linjeskift"></dd></div>
+          </dl>
+
+          <div class="kvittering__handlinger">
+            <a class="knapp knapp--primer" id="kvittering-status-lenke" href="#status">Følg saken</a>
+            <button class="knapp knapp--sekundær" type="button" id="ny-foresporsel">Ny forespørsel</button>
+          </div>
+
+          <p class="finstilt">Status oppdateres av operatør. Du kan når som helst slå opp referansenummeret på statussiden.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- status -->
+    <section class="visning" data-visning="status" hidden>
+      <div class="wrap wrap--smal">
+        <div class="status-hode">
+          <p class="eyebrow"><span class="eyebrow__prikk"></span>Statussjekk</p>
+          <h1 tabindex="-1">Følg forespørselen din</h1>
+          <p class="lead">Skriv inn referansenummeret du fikk da du sendte forespørselen.</p>
+        </div>
+
+        <form id="status-skjema" class="kort status-skjema" novalidate>
+          <div class="felt" data-felt="ref">
+            <label for="status-ref">Referansenummer</label>
+            <div class="status-skjema__rad">
+              <input id="status-ref" name="ref" type="text" autocomplete="off" spellcheck="false" autocapitalize="characters" placeholder="FS-3F7K" aria-describedby="hjelp-ref feil-ref" />
+              <button class="knapp knapp--primer" type="submit" id="status-knapp">Sjekk status</button>
+            </div>
+            <p class="hjelp" id="hjelp-ref">Formatet er FS- og fire tegn, for eksempel FS-3F7K.</p>
+            <p class="feil" id="feil-ref" hidden></p>
+          </div>
+          <p class="skjema-melding" id="status-melding" role="status" aria-live="polite"></p>
+        </form>
+
+        <div id="status-resultat" class="status-resultat" aria-live="polite"></div>
+
+        <p class="finstilt status-finstilt">Finner du ikke nummeret? <a href="#bestill" data-nav-til="skjema">Send en ny forespørsel</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bunn">
+    <div class="wrap bunn__indre">
+      <div class="bunn__om">
+        <p class="bunn__navn" data-kunde-navn>Forespørsel og status</p>
+        <p class="bunn__tekst">Enkel bestilling og oppfølging for tjenestebedrifter. Uten konto, uten sporing.</p>
+      </div>
+      <div class="bunn__meta">
+        <a data-kontakt-epost href="mailto:post@example.com" hidden></a>
+        <a data-kontakt-telefon href="tel:" hidden></a>
+        <span>Ingen informasjonskapsler</span>
+        <span class="drift" data-drift hidden>
+          <span class="drift__prikk" aria-hidden="true"></span>
+          <span data-drift-tekst></span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="noscript">Siden trenger JavaScript for å sende forespørsler og slå opp status. Slå på JavaScript og last siden på nytt.</div>
+  </noscript>
+</body>
+</html>

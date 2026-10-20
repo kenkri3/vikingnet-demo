@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#f4f6f2" />
+  <title>Forespørsler – operatør</title>
+  <meta name="robots" content="noindex" />
+  <meta name="description" content="Operatørside for forespørsler. Demo uten innlogging." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <script src="api.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-side="admin">
+  <a class="hopp" href="#hovedinnhold">Hopp til innhold</a>
+
+  <header class="topp">
+    <div class="topp__indre">
+      <a class="merke" href="index.html" aria-label="Til kundesiden">
+        <svg class="merke__ikon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="9" fill="currentColor" />
+          <path d="M8.5 10.5h8M8.5 15h5.5M8.5 19.5h4.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" />
+          <path d="M16.5 20.8l2.3 2.3 4.7-5" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span class="merke__tekst">
+          <strong data-kunde-navn>Forespørsel og status</strong>
+          <span data-kunde-slagord>Bestilling og oppfølging</span>
+        </span>
+      </a>
+
+      <nav class="topp__nav" aria-label="Hovedmeny">
+        <a href="index.html">Kundeside</a>
+        <a class="topp__admin" href="admin.html" aria-current="page">Operatør</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="hovedinnhold" class="wrap">
+    <div class="admin-hode">
+      <div>
+        <p class="eyebrow"><span class="eyebrow__prikk"></span>Operatør</p>
+        <h1 tabindex="-1">Forespørsler</h1>
+        <p class="lead">Alle saker som er sendt inn. Endre status når saken går videre – kunden ser endringen med én gang.</p>
+      </div>
+      <button class="knapp knapp--sekundær admin-hode__knapp" type="button" id="oppdater">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4.5V10h-5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="knapp-tekst">Oppdater</span>
+      </button>
+    </div>
+
+    <div class="varsel" role="note" aria-labelledby="varsel-tittel">
+      <span class="varsel__ikon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5l8.5 15H3.5L12 3.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9v4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><circle cx="12" cy="16.3" r="1" fill="currentColor"/></svg>
+      </span>
+      <div class="varsel__tekst">
+        <p id="varsel-tittel"><strong>Demo uten innlogging.</strong> Alle som har adressen til denne siden kan se og endre forespørslene. Ikke legg inn ekte personopplysninger.</p>
+        <p class="varsel__drift" id="lagringsmerknad"></p>
+      </div>
+    </div>
+
+    <div class="verktoy">
+      <div class="filter" id="filter" role="group" aria-label="Filtrer forespørsler etter status">
+        <button class="chip" type="button" data-filter="alle" aria-pressed="true">Alle <span class="chip__tall" data-tall="alle">0</span></button>
+        <button class="chip" type="button" data-filter="mottatt" aria-pressed="false">Mottatt <span class="chip__tall" data-tall="mottatt">0</span></button>
+        <button class="chip" type="button" data-filter="planlagt" aria-pressed="false">Planlagt <span class="chip__tall" data-tall="planlagt">0</span></button>
+        <button class="chip" type="button" data-filter="utført" aria-pressed="false">Utført <span class="chip__tall" data-tall="utført">0</span></button>
+      </div>
+
+      <div class="verktoy__hoyre">
+        <p class="sist-oppdatert" id="sist-oppdatert">Laster …</p>
+      </div>
+    </div>
+
+    <p class="feil-boks" id="admin-feil" role="alert" hidden></p>
+
+    <ul class="saker" id="saker" aria-label="Forespørsler">
+      <li class="tom" id="laster-tomt">
+        <p class="tom__tekst">Henter forespørsler …</p>
+      </li>
+    </ul>
+
+    <p class="visuelt-skjult" id="admin-melding" role="status" aria-live="polite"></p>
+
+    <section class="admin-hjelp" aria-labelledby="admin-hjelp-tittel">
+      <h2 id="admin-hjelp-tittel">Slik brukes siden</h2>
+      <div class="admin-hjelp__rutenett">
+        <div>
+          <h3>Statusene</h3>
+          <p><strong>Mottatt</strong> er automatisk på nye saker. <strong>Planlagt</strong> brukes når tidspunkt er avtalt, og <strong>utført</strong> når jobben er ferdig. Hvert bytte lagres med tidsstempel.</p>
+        </div>
+        <div>
+          <h3>Ingen innlogging</h3>
+          <p>Dette er en demo. Siden har ingen pålogging, ingen brukerroller og ingen revisjonslogg utover tidstemplene. Før produksjon må den beskyttes.</p>
+        </div>
+        <div>
+          <h3>Lagring</h3>
+          <p id="admin-lagring">Leser lagringsmodus …</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bunn">
+    <div class="wrap bunn__indre">
+      <div class="bunn__om">
+        <p class="bunn__navn" data-kunde-navn>Forespørsel og status</p>
+        <p class="bunn__tekst">Operatørside for bestilling og oppfølging.</p>
+      </div>
+      <div class="bunn__meta">
+        <a href="index.html">Til kundesiden</a>
+        <span class="drift" data-drift hidden>
+          <span class="drift__prikk" aria-hidden="true"></span>
+          <span data-drift-tekst></span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <noscript>
+    <div class="noscript">Siden trenger JavaScript for å vise og endre forespørsler. Slå på JavaScript og last siden på nytt.</div>
+  </noscript>
+</body>
+</html>

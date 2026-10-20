@@ -1,0 +1,6 @@
+server/data.db
+server/data.db-wal
+server/data.db-shm
+server/*.db
+server/*.db-wal
+server/*.db-shm
