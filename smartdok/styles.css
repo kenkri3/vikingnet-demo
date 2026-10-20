@@ -55,7 +55,7 @@
 }
 
 .brand__merke {
-  width: 17px;
+  width: 19px;
   height: auto;
   flex: none;
 }
@@ -485,6 +485,20 @@
   border-radius: var(--radius);
   padding: clamp(1.15rem, 2.8vw, 2.1rem);
   box-shadow: var(--skygge);
+}
+
+/* Når forespørselen er kvittert ut, tar kortet hele bredden og
+   oppsummeringen på siden forsvinner – den ville bare gjentatt seg selv. */
+.demo__rutenett.er-sendt {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.demo__rutenett.er-sendt .demo__kort {
+  max-width: 46rem;
+}
+
+.demo__rutenett.er-sendt .oppsum {
+  display: none;
 }
 
 .demof label,

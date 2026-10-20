@@ -42,6 +42,7 @@
   /* ---------- Skjema og kvittering ---------- */
 
   var skjema = document.getElementById('demof');
+  var rutenett = document.querySelector('.demo__rutenett');
   var kvittering = document.getElementById('kvittering');
   var kvitteringTittel = document.getElementById('kvittering-tittel');
   var kvitteringListe = document.getElementById('kvittering-liste');
@@ -105,7 +106,7 @@
       var ugyldig = [];
       var forsteFeil = null;
 
-      function sjekk(id, ord, gyldig) {
+      function sjekk(id, ord, gyldig, ordFeil) {
         var el = document.getElementById(id);
         if (!el) return;
         el.removeAttribute('aria-invalid');
@@ -113,7 +114,7 @@
         var ok = gyldig ? gyldig(v) : v.length >= 2;
         if (ok) return;
         el.setAttribute('aria-invalid', 'true');
-        (v ? ugyldig : mangler).push(ord);
+        (v ? ugyldig : mangler).push(v ? (ordFeil || ord) : ord);
         if (!forsteFeil) forsteFeil = el;
       }
 
@@ -121,10 +122,10 @@
       sjekk('f-firma', 'firma');
       sjekk('f-epost', 'e-postadresse', function (v) {
         return /^[^\s@]+@[^\s@]+\.[a-zæøåA-ZÆØÅ0-9]{2,}$/.test(v);
-      });
+      }, 'e-postadressen');
       sjekk('f-telefon', 'telefonnummer', function (v) {
         return v.replace(/[^0-9]/g, '').length >= 8;
-      });
+      }, 'telefonnummeret');
 
       if (mangler.length || ugyldig.length) {
         function ramse(ord) {
@@ -176,6 +177,7 @@
 
     skjema.hidden = true;
     kvittering.hidden = false;
+    if (rutenett) rutenett.classList.add('er-sendt');
     kvittering.focus();
 
     var rolig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -188,6 +190,7 @@
     tilbake.addEventListener('click', function () {
       if (kvittering) kvittering.hidden = true;
       if (skjema) skjema.hidden = false;
+      if (rutenett) rutenett.classList.remove('er-sendt');
       var forste = document.getElementById('f-navn');
       if (forste) forste.focus();
     });

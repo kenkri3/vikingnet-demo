@@ -75,6 +75,13 @@
   border-color: var(--line-sterk);
 }
 
+/* Ankerlenker skal ikke havne under den faste headeren. */
+section[id],
+main[id],
+#kv-tittel {
+  scroll-margin-top: calc(var(--header-h) + 14px);
+}
+
 /* --- Hero --------------------------------------------------------------- */
 
 .hero {
@@ -1105,6 +1112,26 @@
 
 .person a:hover {
   text-decoration: underline;
+}
+
+.kontakt__svar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  padding: 1rem 1.15rem;
+  border: 1px dashed var(--line-sterk);
+  border-radius: 16px;
+  background: color-mix(in srgb, #fff 55%, var(--paper-2));
+}
+
+.kontakt__svar p {
+  margin: 0;
+  max-width: 24ch;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
 /* --- Footer ------------------------------------------------------------- */
