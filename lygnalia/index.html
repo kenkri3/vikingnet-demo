@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lygnalia – byggeklare utsiktstomter på Lygna, en time fra Oslo</title>
+<meta name="description" content="Byggeklare utsiktstomter i felt C Spranglia og felt D Sprangåsen på Lygna. Se ledige tomter med pris og størrelse, og bestill visning etter avtale.">
+<meta name="theme-color" content="#15232f">
+<link rel="canonical" href="https://lygnalia.no/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lygnalia">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Lygnalia – hyttedrømmen en time fra Oslo">
+<meta property="og:description" content="Byggeklare utsiktstomter på Lygna, en time fra Oslo og 45 minutter fra Gardermoen. Se ledige tomter og bestill visning etter avtale.">
+<meta property="og:url" content="https://kenkri3.github.io/vikingnet-demo/lygnalia/">
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/lygnalia/img/hero-hytte.jpg">
+<meta property="og:image:alt" content="Moderne svart hytte med store vindusflater på en fjellknaus i Lygnalia.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=Instrument+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner wrap">
+    <a class="brand" href="#top" aria-label="Lygnalia – til toppen av siden">
+      <svg class="brand__mark" width="26" height="20" viewBox="0 0 34 26" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M2 24a15 15 0 0 1 30 0"/>
+        <path d="M11 24a6 6 0 0 1 12 0"/>
+      </svg>
+      <span class="brand__name">Lygnalia</span>
+    </a>
+
+    <nav class="nav" id="meny" aria-label="Hovedmeny" hidden>
+      <a href="#tomter">Tomter</a>
+      <a href="#omradet">Området</a>
+      <a href="#utleie">Utleie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="header__actions">
+      <a class="header__tel" href="tel:+4793003170">930 03 170</a>
+      <a class="btn btn--sm" href="#kontakt">Bestill visning</a>
+      <button class="nav-toggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="meny">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero: teksten svarer først, bildet bærer drømmen, panelet svarer på budsjett med en gang. -->
+  <section class="hero" aria-labelledby="hero-tittel">
+    <div class="hero__inner wrap">
+      <div class="hero__text">
+        <p class="eyebrow">Lygna · 1 time fra Oslo</p>
+        <h1 id="hero-tittel">Hyttedrømmen, en time fra Oslo.</h1>
+        <p class="hero__lead">Byggeklare utsiktstomter i felt C Spranglia og felt D Sprangåsen, med vei, vann, avløp, strøm og fiber ferdig på plass. Visning hver dag etter avtale.</p>
+
+        <div class="quick">
+          <div class="quick__row">
+            <label for="budsjett">Budsjett</label>
+            <output class="quick__out" id="budsjett-ut" for="budsjett">kr 1 800 000</output>
+          </div>
+          <input type="range" id="budsjett" min="890000" max="1800000" step="10000" value="1800000" aria-describedby="quick-svar">
+          <p class="quick__count" id="quick-svar" aria-live="polite"><strong>30</strong> tomter er ledige innenfor dette budsjettet.</p>
+        </div>
+
+        <p class="hero__meta">
+          <span>Tomtevisning <a href="tel:+4793003170">930 03 170</a></span>
+          <span>post@lygnalia.no</span>
+        </p>
+      </div>
+
+      <figure class="hero__media">
+        <img src="img/hero-hytte.jpg" width="900" height="1125" fetchpriority="high" alt="Moderne svart hytte med store vindusflater og treterrasse på en fjellknaus i Lygnalia.">
+        <figcaption class="hero__badge">
+          <strong>Felt D – Sprangåsen</strong>
+          <span>30 ledige tomter, fra 781 til 1 708 m².</span>
+          <span>Listepris fra kr 890 000.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Nøkkeltall om Lygna">
+    <div class="stats__grid wrap">
+      <div class="stats__item">
+        <span class="stats__num">1 time</span>
+        <span class="stats__lbl">til Oslo</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num">45 min</span>
+        <span class="stats__lbl">til Gardermoen</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num">31</span>
+        <span class="stats__lbl">tomter i tomtevelgeren</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__num">781–1 708 m²</span>
+        <span class="stats__lbl">tomtestørrelser</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tomtematcher: samme priser og størrelser som Lygnalia publiserer selv. -->
+  <section class="section" id="tomter" aria-labelledby="tomter-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Tomter til salgs</p>
+        <h2 id="tomter-tittel">Filtrer på pris og størrelse – svaret kommer med en gang</h2>
+        <p>Tallene er Lygnalias egne, hentet fra tomtevelgeren deres. Alt regnes ut i nettleseren din, så du slipper å vente på e-post for å vite hva som er innenfor budsjettet.</p>
+      </div>
+
+      <div class="matcher">
+        <form class="controls" id="filter" aria-label="Filtrer tomter">
+          <div class="control">
+            <div class="control__head">
+              <label for="budsjett-2">Budsjett</label>
+              <output id="panel-budsjett-ut" for="budsjett-2">kr 1 800 000</output>
+            </div>
+            <input type="range" id="budsjett-2" min="890000" max="1800000" step="10000" value="1800000">
+            <p class="control__hint">Øverste listepris i felt D er kr 1 800 000.</p>
+          </div>
+
+          <div class="control">
+            <div class="control__head">
+              <label for="storrelse">Minste tomt</label>
+              <output id="storrelse-ut" for="storrelse">750 m²</output>
+            </div>
+            <input type="range" id="storrelse" min="750" max="1750" step="25" value="750">
+            <p class="control__hint">Den minste tomta i felt D er 781 m².</p>
+          </div>
+
+          <label class="check" for="bare-ledige">
+            <input type="checkbox" id="bare-ledige" checked>
+            <span class="check__box" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.5 3.5 7-8"/></svg>
+            </span>
+            <span>Bare ledige tomter</span>
+          </label>
+
+          <div class="controls__foot">
+            <button class="btn btn--ghost btn--sm" type="reset" id="nullstill">Nullstill</button>
+          </div>
+        </form>
+
+        <div class="results">
+          <div class="results__head">
+            <p class="results__count" id="treff" aria-live="polite">30 tomter passer</p>
+            <p class="results__ms" id="treff-tid">Beregnet lokalt</p>
+          </div>
+
+          <ul class="plotlist" id="plotlist" aria-label="Tomter som passer filteret"></ul>
+
+          <button class="btn btn--ghost btn--sm" type="button" id="vis-alle" hidden>Vis alle treff</button>
+          <p class="results__note">Kilde: lygnalia.no/tomter/tomtevelger. Lygnalia oppgir selv at avvik kan forekomme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="slik" aria-labelledby="slik-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Slik gjør du det</p>
+        <h2 id="slik-tittel">Fra visning til innflytting</h2>
+        <p>Visning hver dag etter avtale. Ring tomtevisningen, så avtaler dere tid.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <h3>Se på tomta</h3>
+          <p>Visning skjer etter avtale, hver dag i uka. Ring 930 03 170 og avtal et tidspunkt som passer.</p>
+        </div>
+        <div class="step">
+          <h3>Velg og reserver</h3>
+          <p>Felt C Spranglia og felt D Sprangåsen er ferdig opparbeidet med vei, vann, avløp, strøm og fiber. Ta kontakt for å reservere tomta.</p>
+        </div>
+        <div class="step">
+          <h3>Sett opp hytta</h3>
+          <p>Den første hytta i Lygnalia ble satt opp i 2015. Det er derfor kun nye hytter av høy standard i området.</p>
+        </div>
+      </div>
+
+      <div class="duo">
+        <figure class="duo__item">
+          <img src="img/bygg.jpg" width="720" height="900" loading="lazy" alt="Hytte under oppføring med stillas og materialer foran, i sollys.">
+          <figcaption>Hytte under oppføring</figcaption>
+        </figure>
+        <figure class="duo__item">
+          <img src="img/utsikt.jpg" width="860" height="573" loading="lazy" alt="Utsikt over skogkledde åser og snøflekker fra en utsiktsplass med kartbord.">
+          <figcaption>Utsikt fra åsen</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="omradet" aria-labelledby="omradet-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Området</p>
+        <h2 id="omradet-tittel">Oslos nærmeste ski- og sykkeldestinasjon</h2>
+        <p>Lygna ligger ca. 1 time fra Oslo og 45 minutter fra Gardermoen. Området er et yndet reisemål både sommer og vinter, med aktiviteter og fasiliteter i gangavstand fra hytta.</p>
+      </div>
+
+      <figure class="band">
+        <img src="img/flyfoto.jpg" width="1200" height="686" loading="lazy" alt="Flyfoto over Lygna med fiskevann, myr og sammenhengende skog så langt en ser.">
+        <figcaption class="band__cap">
+          <span>Lygna fra lufta</span>
+          <span>Fiskevann, stier og skiløyper i samme landskap</span>
+        </figcaption>
+      </figure>
+
+      <div class="seasons">
+        <article class="season">
+          <img src="img/sommer.jpg" width="860" height="561" loading="lazy" alt="Terrengsykkel på grusvei mellom høye furuer, med hytte og skog i bakgrunnen.">
+          <div class="season__body">
+            <h3>Sommer</h3>
+            <ul>
+              <li>Blåmerkede turstier i DNTs rutenett</li>
+              <li>Fiskevann og sykkelstier</li>
+              <li>Jakt, bær- og soppturer</li>
+              <li>Turorientering hver sommer, med kart fra Hadeland O-lag</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="season">
+          <img src="img/vinter.jpg" width="860" height="573" loading="lazy" alt="To personer på ski i preparerte løyper mellom snøtunge trær i solskinn.">
+          <div class="season__body">
+            <h3>Vinter</h3>
+            <ul>
+              <li>Snøsikkert – snø ofte alt i oktober</li>
+              <li>Sesongen varer til over påske</li>
+              <li>200 km løyper kjørt av Øståsen Skiløyper</li>
+              <li>Klassisk og skøyting i brede traseer</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="season season--facts">
+          <div class="season__body">
+            <h3>Kort vei til alt</h3>
+            <p>Løypenettet på Lygna henger sammen med Skiforeningens nett mot Oslo, Romerike og Gjøvik.</p>
+            <ul>
+              <li>Oslo – ca. 1 time</li>
+              <li>Gardermoen – 45 minutter</li>
+              <li>Skiløyper – 200 km</li>
+              <li>Første hytte – 2015</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="utleie" aria-labelledby="utleie-tittel">
+    <div class="wrap">
+      <div class="split">
+        <figure class="split__media">
+          <img src="img/storstua.jpg" width="800" height="600" loading="lazy" alt="Storstua i Lygnalia, et svart trehus med grastak og åpen veranda, med hytter og gresslette rundt.">
+        </figure>
+        <div>
+          <p class="eyebrow">Utleie</p>
+          <h2 id="utleie-tittel">Prøvebo en hytte før du bygger</h2>
+          <p>Mange hytteeiere på Lygna leier ut hytta når de ikke bruker den selv. Utleien går gjennom Lygna Booking, som tar seg av booking, betaling, vask og levering av nøkler – slik at du som leietaker har en profesjonell part å forholde deg til.</p>
+          <p>Sikre deg en ferieuke eller en helg i en av hyttene deres. Bookingen gjøres på nettsiden, eller du kan få hjelp av medarbeiderne.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://lygnabooking.no/">Til Lygna Booking</a>
+            <a class="link" href="mailto:post@lygnabooking.no">post@lygnabooking.no</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="nyheter" aria-labelledby="nyheter-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Siste nytt</p>
+        <h2 id="nyheter-tittel">Hytteeierne på Lygna</h2>
+        <p>Tre saker fra nyhetsstrømmen på lygnalia.no.</p>
+      </div>
+
+      <div class="news">
+        <article class="news__item">
+          <span class="news__tag">Hyttedrøm</span>
+          <h3>Hun bygger hyttedrømmen fra grunnen av</h3>
+          <p>Signe Krüger Christiansen har brukt god tid på å finne både tomten og løsningen. Nå tar hytta form, med store vindusflater og plass til familie og venner.</p>
+        </article>
+        <article class="news__item">
+          <span class="news__tag">I bruk</span>
+          <h3>Brænderiet på Lygna – en hytte som faktisk blir brukt</h3>
+          <p>Da Solveig så skiltet «Langt igjen til hytta?», visste hun at Lygna kunne være svaret.</p>
+        </article>
+        <article class="news__item">
+          <span class="news__tag">Sprangåsen</span>
+          <h3>Beliggenheten, tomten og hyttermodellen hun drømte om</h3>
+          <p>Anette Holum Solheim fant alt i Sprangåsen: kort reisevei, naturen tett på og ski rett utenfor døra.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="nyttig" aria-labelledby="nyttig-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Nyttig info</p>
+        <h2 id="nyttig-tittel">For deg som allerede har hytte på Lygna</h2>
+        <p>Avfall, håndverkere og hvem du ringer. Alt hentet fra Lygnalias egen informasjonsside.</p>
+      </div>
+
+      <div class="info">
+        <article class="info__card">
+          <h3>Miljøtorget i Lygnalia</h3>
+          <p>HRA åpnet miljøtorg i Lygnalia i februar 2021, med full kildesortering for hyttene: matavfall, papp og papir, glass og metall, plast og restavfall.</p>
+          <p>Miljøtorget ligger nært Storstua. Større gjenstander fraktes til Mohagen gjenvinningsstasjon, en ti minutters kjøretur unna.</p>
+        </article>
+
+        <article class="info__card">
+          <h3>Håndverkere og vakttelefoner</h3>
+          <ul class="rows">
+            <li><span>Elektriker, Minel Ainstall</span><span>40 47 72 00</span></li>
+            <li><span>Rørlegger, Ramsøy</span><span>90 78 04 43</span></li>
+            <li><span>Legevakt</span><span>Lunner &amp; Gran</span></li>
+            <li><span>Tomtevisning</span><span>930 03 170</span></li>
+          </ul>
+        </article>
+
+        <article class="info__card">
+          <h3>Storstua til arrangement</h3>
+          <p>Storstua kan leies til arrangement. Ring 915 912 57 for å høre om ledige datoer.</p>
+          <p>Hyttevelforeningen og vakttelefonene for vann og avløp finnes på Lygnalias nyttig info-side.</p>
+        </article>
+
+        <article class="info__card">
+          <h3>Byggestrøm til byggeprosjektet</h3>
+          <p>Trenger du byggestrøm, kan den bestilles via hadelandelektro.no, nettpartner.no eller laje.no.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="kontakt-tittel">Vil du se på tomtene?</h2>
+          <p class="lead">Leie Storstua til arrangement, eller noe helt annet? Ring eller skriv – visning avtales hver dag.</p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="contact__lbl">Tomtevisning</span>
+              <a class="contact__val" href="tel:+4793003170">930 03 170</a>
+            </li>
+            <li>
+              <span class="contact__lbl">Andre henvendelser</span>
+              <a class="contact__val" href="mailto:post@lygnalia.no">post@lygnalia.no</a>
+            </li>
+            <li>
+              <span class="contact__lbl">Storstua</span>
+              <a class="contact__val" href="tel:+4791591257">915 912 57</a>
+            </li>
+            <li>
+              <span class="contact__lbl">Adresse</span>
+              <span class="contact__val">Halmbråtåvegen 20, 2770 Jaren</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="formcard">
+          <h3>Meld interesse for en tomt</h3>
+          <p class="form__intro">Skjemaet er en skisse og sender ingenting selv. Du får et sammendrag du kan sende som e-post til post@lygnalia.no.</p>
+
+          <form id="interesse" novalidate>
+            <div class="formgrid">
+              <label>Navn
+                <input type="text" id="navn" name="navn" autocomplete="name" placeholder="Fornavn og etternavn" required>
+              </label>
+              <label>E-post
+                <input type="email" id="epost" name="epost" autocomplete="email" placeholder="navn@epost.no" required>
+              </label>
+              <label>Telefon
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="Telefonnummer">
+              </label>
+              <label>Tomt
+                <select id="tomt" name="tomt">
+                  <option value="">Ikke bestemt ennå</option>
+                </select>
+              </label>
+              <label class="full">Melding
+                <textarea id="melding" name="melding" placeholder="Jeg vil gjerne se tomt 722 og høre om vei og fiber."></textarea>
+              </label>
+              <label class="check full" for="samtykke">
+                <input type="checkbox" id="samtykke" name="samtykke" required>
+                <span class="check__box" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8.5l3.5 3.5 7-8"/></svg>
+                </span>
+                <span>Jeg vil bli kontaktet om denne henvendelsen.</span>
+              </label>
+              <p class="form__note full" id="formfeil" role="alert" hidden></p>
+            </div>
+            <button class="btn" type="submit">Forbered forespørsel</button>
+          </form>
+
+          <div class="receipt" id="kvittering" hidden>
+            <h3 class="receipt__title">
+              <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5l3.5 3.5 7.5-8.5"/></svg>
+              Forespørselen er klar
+            </h3>
+            <dl class="receipt__list" id="kvittering-liste"></dl>
+            <p class="form__note">Ingenting er sendt. Åpne e-posten og send den fra din egen innboks, eller ring 930 03 170.</p>
+            <div class="receipt__actions">
+              <a class="btn btn--sm" href="mailto:post@lygnalia.no" id="epost-knapp">Åpne e-post</a>
+              <button class="btn btn--ghost btn--sm" type="button" id="endre">Endre</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="footer__brand" href="#top">
+          <svg class="brand__mark" width="26" height="20" viewBox="0 0 34 26" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <path d="M2 24a15 15 0 0 1 30 0"/>
+            <path d="M11 24a6 6 0 0 1 12 0"/>
+          </svg>
+          Lygnalia
+        </a>
+        <p class="footer__addr">
+          Lygnalia Grunneierlag SA<br>
+          Halmbråtåvegen 20, 2770 Jaren<br>
+          Org.nr 989 883 267
+        </p>
+      </div>
+
+      <div>
+        <p class="footer__h">Sidene</p>
+        <ul class="footer__list">
+          <li><a href="#tomter">Tomter til salgs</a></li>
+          <li><a href="#omradet">Området</a></li>
+          <li><a href="#utleie">Utleie</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__h">Kontakt</p>
+        <ul class="footer__list">
+          <li><a href="tel:+4793003170">Tomtevisning 930 03 170</a></li>
+          <li><a href="tel:+4791591257">Storstua 915 912 57</a></li>
+          <li><a href="mailto:post@lygnalia.no">post@lygnalia.no</a></li>
+          <li><a href="https://lygnabooking.no/">lygnabooking.no</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Lygnalia</span>
+      <span>Priser og tomteinformasjon er hentet fra lygnalia.no</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

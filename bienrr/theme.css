@@ -1,0 +1,131 @@
+/*
+  Bien RR AS — identitet.
+  Arketype: redaksjonell, med et lite «håndverk»-innslag fra birøktingen.
+  Paletten er hentet fra deres eget bimerke: honninggul #FBB800 og blekk
+  #030202, her løftet til en varm papirflate slik at gullet ikke skriker.
+  To fonter: Literata (boksiderif) i overskrifter, Figtree i brødtekst.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --paper: #fdfaf2;          /* varm honningkrem */
+  --paper-2: #f8f2e3;        /* tint, brukes til seksjonsflater */
+  --card: #fffdf7;
+  --voks: #17130d;           /* mørk flate: footer og bånd */
+  --voks-2: #211b12;
+
+  /* Blekk */
+  --ink: #14110b;
+  --fg: #1e1911;
+  --muted: #5b5344;
+  --muted-2: #766d5c;
+
+  /* Linjer */
+  --line: #e7dfcc;
+  --line-2: #d8cdb4;
+
+  /* Honning — deres egen #FBB800 */
+  --honey: #fbb800;
+  --honey-2: #ffcd38;
+  --honey-deep: #7a5300;     /* tekst på lys flate, AA */
+  --honey-soft: #fdf0cb;
+  --honey-line: #eccf8a;
+
+  /* Feilmelding */
+  --feil: #a3270f;
+
+  /* Mørk flate */
+  --pa-mork: #f6f1e6;
+  --pa-mork-muted: #c9bfa9;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --accent: var(--honey);
+  --accent-fg: #14110b;
+  --accent-soft: var(--honey-soft);
+  --radius: 3px;
+  --radius-sm: 2px;
+
+  /* To fonter, ikke flere */
+  --font-display: 'Literata', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Skala */
+  --t-xs: 0.74rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.05rem, 0.98rem + 0.45vw, 1.24rem);
+  --t-h3: clamp(1.14rem, 1.02rem + 0.5vw, 1.38rem);
+  --t-h2: clamp(1.85rem, 1.35rem + 2vw, 2.85rem);
+  --t-h1: clamp(2.3rem, 1.35rem + 4.4vw, 4.35rem);
+
+  --shadow: 0 1px 2px rgb(20 17 11 / 6%), 0 20px 44px -26px rgb(20 17 11 / 38%);
+  --wrap: 1160px;
+  --header-h: 76px;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  background: var(--paper);
+  color: var(--fg);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  line-height: 1.06;
+}
+
+h3 {
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--honey);
+  color: #14110b;
+}
+
+/* Fokusringen må virke både på papir og på honning. */
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.mork :focus-visible {
+  outline-color: var(--honey);
+}
+
+.btn {
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.btn--ghost {
+  border-color: var(--line-2);
+  background: transparent;
+}
+
+.btn--ghost:hover {
+  background: var(--paper-2);
+}

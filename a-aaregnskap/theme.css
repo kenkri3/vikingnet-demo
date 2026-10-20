@@ -1,0 +1,94 @@
+/*
+  A-Å Regnskap AS — identitet.
+  Arketype: redaksjonell, men på kjølig papir i stedet for varmt: regnskapsarket
+  er rillet, ikke kritt. Fargene er hentet fra deres egen logo — den sterke blå
+  (#3a83c5 i merket, #0075bc i kanten) — og gjort om til blekk, marinblå bunn og
+  én blå aksent. Messing brukes bare til tall og småetiketter.
+  Typografi: Fraunces i overskriftene, Instrument Sans i alt annet. To fonter.
+
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  /* Papir og flater */
+  --paper: #eef2f6;
+  --paper-2: #e7edf3;
+  --surface: #ffffff;
+  --surface-soft: #f7f9fb;
+
+  /* Blekk */
+  --ink: #0d2136;
+  --ink-2: #173a55;
+  --fg: #0d2136;
+  --muted: #55677a;
+  --on-ink: #eaf1f7;
+  --on-ink-muted: #a7bccd;
+
+  /* Linjer */
+  --line: #d8e0e8;
+  --line-strong: #bfcbd7;
+  --rule: rgb(13 33 54 / 7%);
+
+  /* Deres blå */
+  --accent: #1c5c92;
+  --accent-deep: #144a77;
+  --accent-bright: #2f7cbe;
+  --accent-soft: #e7f1f9;
+  --accent-fg: #ffffff;
+
+  /* Messing — bare tall og etiketter */
+  --brass: #8a5d22;
+  --brass-soft: #f3e9d8;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--surface);
+  --bg-soft: var(--paper);
+
+  /* Fonter */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Rytme: lite avrunding, dette er papir og tabeller, ikke app-kort */
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgb(13 33 54 / 5%), 0 18px 40px -22px rgb(13 33 54 / 22%);
+  --shadow-flat: 0 1px 2px rgb(13 33 54 / 6%);
+
+  --wrap: 1160px;
+  --header-h: 74px;
+
+  /* Justeringer av kitets skala */
+  --t-h1: clamp(2.05rem, 1.35rem + 2.85vw, 3.2rem);
+  --t-h2: clamp(1.8rem, 1.35rem + 1.9vw, 2.75rem);
+  --t-h3: clamp(1.2rem, 1.06rem + 0.6vw, 1.5rem);
+  --t-lead: clamp(1.06rem, 0.99rem + 0.42vw, 1.24rem);
+  --t-base: 1.0625rem;
+  --t-sm: 0.9rem;
+  --t-xs: 0.75rem;
+}
+
+html {
+  background: var(--surface);
+}
+
+body {
+  background: var(--surface);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.022em;
+}
+
+h1 {
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}

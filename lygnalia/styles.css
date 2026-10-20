@@ -1,0 +1,1199 @@
+/* Lygnalia — layout og komponenter. */
+
+html {
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+
+/* Alle lenker er trykkflater i denne demoen: ingen tjue pikslers tekstlenker. */
+a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+/* ---------- Header ---------- */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.brand__mark {
+  flex: none;
+  color: var(--amber);
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.header__tel {
+  display: none;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--ink-2);
+  padding-inline: 0.35rem;
+}
+
+.header__tel:hover {
+  color: var(--accent);
+}
+
+@media (min-width: 900px) {
+  .header__tel {
+    display: inline-flex;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 5vw, 3.75rem);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.hero__text {
+  max-width: 35rem;
+}
+
+.hero h1 {
+  margin-bottom: var(--s-3);
+}
+
+.hero__lead {
+  font-size: var(--t-lead);
+  color: var(--muted);
+  max-width: 34rem;
+  margin-bottom: 0;
+}
+
+.hero__media {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow);
+  background: var(--snow-3);
+}
+
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 55% 62%;
+}
+
+.hero__badge {
+  position: absolute;
+  inset: auto 0.9rem 0.9rem;
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 14px;
+  background: rgb(255 255 255 / 93%);
+  box-shadow: 0 6px 18px rgb(21 35 47 / 12%);
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: var(--ink-2);
+}
+
+.hero__badge strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin-top: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hero__meta a {
+  color: var(--ink);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Rask svar-panel i hero: samme tilstand som filteret lenger ned. */
+.quick {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.4rem;
+  padding: 0.95rem 1.05rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgb(255 255 255 / 80%);
+  box-shadow: var(--shadow-soft);
+  max-width: 30rem;
+}
+
+.quick__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.quick__out {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.quick__count {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.quick__count strong {
+  color: var(--ink);
+}
+
+/* ---------- Bevis-bånd ---------- */
+
+.stats {
+  background: var(--ink);
+  color: #eef2ed;
+  padding-block: clamp(1.4rem, 3vw, 2.1rem);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stats__item {
+  display: grid;
+  gap: 0.15rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgb(244 246 243 / 20%);
+}
+
+.stats__item:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.stats__num {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1rem + 1.3vw, 1.95rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.stats__lbl {
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #a6bab2;
+}
+
+/* ---------- Seksjonshoder ---------- */
+
+.sec-head {
+  max-width: 47rem;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+
+.sec-head h2 {
+  margin-bottom: 0.6rem;
+}
+
+.sec-head p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* ---------- Tomtematcher ---------- */
+
+.matcher {
+  display: grid;
+  grid-template-columns: minmax(0, 330px) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+}
+
+.controls {
+  display: grid;
+  gap: 1rem;
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.control {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.control__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.control output {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.control__hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+input[type='range'] {
+  width: 100%;
+  min-height: 44px;
+  margin: 0;
+  accent-color: var(--amber);
+  cursor: pointer;
+}
+
+.controls__foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid var(--line);
+}
+
+/* Avkrysning: usynlig 44×44-input oppå en tegnet boks, så trykkflaten er stor. */
+.check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.check input[type='checkbox'] {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.check__box {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 7px;
+  background: #fff;
+  color: #fff;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.check__box svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+}
+
+.check input:checked + .check__box {
+  background: var(--amber);
+  border-color: var(--amber);
+}
+
+.check input:checked + .check__box svg {
+  opacity: 1;
+}
+
+.check input:focus-visible + .check__box {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.results {
+  min-width: 0;
+}
+
+.results__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.results__count {
+  margin: 0;
+  font-weight: 600;
+}
+
+.results__ms {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.plotlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.plotrow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) 6rem 8rem auto 5.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.plotrow:first-child {
+  border-top: 0;
+}
+
+.plotrow__id {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.plotrow__felt {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.plotrow__size,
+.plotrow__price {
+  font-variant-numeric: tabular-nums;
+}
+
+.plotrow__price {
+  font-weight: 600;
+}
+
+.plotrow__status {
+  justify-self: start;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.16rem 0.55rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.pill--ledig {
+  background: #e2eee5;
+  color: #2b4a34;
+}
+
+.pill--reservert {
+  background: #ecedea;
+  color: #5a655e;
+}
+
+.plotrow__action .btn {
+  width: 100%;
+}
+
+.results__note {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.empty {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.btn--sm {
+  min-height: 44px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.88rem;
+}
+
+/* ---------- Slik fungerer det ---------- */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2rem);
+  counter-reset: steg;
+  margin-top: clamp(1rem, 2.5vw, 1.75rem);
+}
+
+.step {
+  position: relative;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--line-strong);
+}
+
+.step::before {
+  counter-increment: steg;
+  content: counter(steg);
+  position: absolute;
+  top: -1.2rem;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.step h3 {
+  font-size: 1.14rem;
+  margin-bottom: 0.4rem;
+}
+
+.step p {
+  margin-bottom: 0;
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+/* ---------- Området ---------- */
+
+.band {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--snow-3);
+}
+
+.band img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 686;
+  object-fit: cover;
+}
+
+.band__cap {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding: 2.75rem 1.1rem 0.85rem;
+  background: linear-gradient(transparent, rgb(21 35 47 / 78%));
+  color: #fff;
+  font-size: 0.82rem;
+}
+
+.seasons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+  margin-top: clamp(1.25rem, 3vw, 1.9rem);
+}
+
+.season {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+}
+
+.season img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.season__body {
+  padding: 1.05rem 1.15rem 1.2rem;
+}
+
+.season h3 {
+  font-size: 1.16rem;
+  margin-bottom: 0.45rem;
+}
+
+.season p {
+  margin-bottom: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.season ul {
+  margin: 0;
+  padding-left: 1.1em;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.season li {
+  margin-bottom: 0.35rem;
+}
+
+.season--facts {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #eef2ed;
+}
+
+.season--facts h3 {
+  color: #fff;
+}
+
+.season--facts p,
+.season--facts ul {
+  color: #c0cdc7;
+}
+
+/* ---------- Utleie ---------- */
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.split__media {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--snow-3);
+}
+
+.split__media img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.3rem;
+}
+
+.link {
+  min-height: 40px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(164 88 31 / 35%);
+}
+
+.link:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Siste nytt ---------- */
+
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.4rem);
+}
+
+.news__item {
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.news__tag {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-size: 0.71rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.news__item h3 {
+  font-size: 1.06rem;
+  line-height: 1.3;
+  margin-bottom: 0.45rem;
+}
+
+.news__item p {
+  margin-bottom: 0;
+  font-size: 0.91rem;
+  color: var(--muted);
+}
+
+/* ---------- Nyttig info ---------- */
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.4rem);
+}
+
+.info__card {
+  padding: 1.15rem 1.2rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.info__card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.45rem;
+}
+
+.info__card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.info__card p:last-child {
+  margin-bottom: 0;
+}
+
+.rows {
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rows li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.91rem;
+}
+
+.rows li:first-child {
+  border-top: 0;
+}
+
+.rows span:last-child {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* ---------- Kontakt ---------- */
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.contact__list {
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact__lbl {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact__val {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a.contact__val {
+  min-height: 40px;
+}
+
+a.contact__val:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.formcard {
+  padding: clamp(1.1rem, 2.5vw, 1.7rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.formcard h3 {
+  margin-bottom: 0.3rem;
+}
+
+.formcard input,
+.formcard select,
+.formcard textarea {
+  background: #fff;
+}
+
+.form__intro {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.formgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.formgrid .full {
+  grid-column: 1 / -1;
+}
+
+.form__note {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.receipt {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 1px solid #c9dcca;
+  border-radius: 14px;
+  background: #f1f7f0;
+}
+
+.receipt__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.receipt__title svg {
+  flex: none;
+  color: var(--moss);
+}
+
+.receipt__list {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  font-size: 0.91rem;
+}
+
+.receipt__list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px dashed rgb(21 35 47 / 16%);
+}
+
+.receipt__list dt {
+  margin: 0;
+  color: var(--muted);
+}
+
+.receipt__list dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.receipt__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--ink);
+  color: #c5d1cb;
+  border-top: 0;
+  padding-block: clamp(2rem, 4vw, 2.9rem) 1.4rem;
+}
+
+.footer a {
+  color: #eef2ed;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+
+.footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__brand .brand__mark {
+  color: #e2b48c;
+}
+
+.footer__addr {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.footer__h {
+  margin: 0.25rem 0 0;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #9db0a8;
+}
+
+.footer__list {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.05rem;
+  font-size: 0.92rem;
+}
+
+.footer__list a {
+  min-height: 40px;
+  min-width: 44px;
+  text-decoration: none;
+}
+
+/* Korte ord som «Utleie» skal fortsatt være en trygg trykkflate. */
+.nav a {
+  min-width: 44px;
+}
+
+.footer__list a:hover {
+  text-decoration: underline;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-top: 1.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(244 246 243 / 14%);
+  font-size: 0.82rem;
+  color: #9db0a8;
+}
+
+/* ---------- To bilder side om side ---------- */
+
+.duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.1rem);
+  margin-top: clamp(1.4rem, 3vw, 2.1rem);
+}
+
+.duo__item {
+  position: relative;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--snow-3);
+}
+
+.duo__item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.duo__item figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 1.6rem 0.85rem 0.6rem;
+  background: linear-gradient(transparent, rgb(21 35 47 / 72%));
+  color: #fff;
+  font-size: 0.79rem;
+}
+
+/* ---------- Elementer som skjules med attributt ---------- */
+
+form[hidden],
+.receipt[hidden],
+.btn[hidden],
+p[hidden] {
+  display: none;
+}
+
+/* På brede skjermer skal menyen alltid vises, uansett hidden-attributt. */
+@media (min-width: 901px) {
+  .nav[hidden] {
+    display: flex;
+  }
+}
+
+/* ---------- Bevegelse ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__text > * {
+    animation: lyft-inn 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  .hero__text > :nth-child(2) {
+    animation-delay: 0.05s;
+  }
+
+  .hero__text > :nth-child(3) {
+    animation-delay: 0.1s;
+  }
+
+  .hero__text > :nth-child(4) {
+    animation-delay: 0.15s;
+  }
+
+  .hero__media {
+    animation: tone-inn 0.9s ease both;
+  }
+}
+
+@keyframes lyft-inn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes tone-inn {
+  from {
+    opacity: 0;
+    transform: scale(1.015);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Responsivt ---------- */
+
+@media (max-width: 980px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__text {
+    order: 1;
+    max-width: none;
+  }
+
+  .hero__media {
+    order: 2;
+    aspect-ratio: 16 / 10;
+  }
+
+  .hero__media img {
+    object-position: 55% 55%;
+  }
+
+  .matcher {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+
+  .seasons,
+  .news,
+  .info,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    gap: 2rem;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .plotrow {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.3rem 0.75rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .plotrow__id {
+    grid-column: 1;
+  }
+
+  .plotrow__price {
+    grid-column: 2;
+    text-align: right;
+  }
+
+  .plotrow__size {
+    grid-column: 1;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+
+  .plotrow__status {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .plotrow__action {
+    grid-column: 1 / -1;
+    margin-top: 0.25rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .formgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats__item {
+    padding-left: 0.85rem;
+  }
+
+  .header__inner {
+    gap: 0.5rem;
+  }
+
+  .brand__name {
+    font-size: 1.15rem;
+  }
+
+  .header .btn--sm {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .duo {
+    grid-template-columns: 1fr;
+  }
+}

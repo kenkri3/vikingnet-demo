@@ -1,0 +1,1293 @@
+/*
+  A-Å Regnskap AS — layout og komponenter.
+  Ligger etter kit/base.css og theme.css.
+  Bærende idé: regnskapsarket. Rillede flater, tynne dobbeltlinjer mellom
+  seksjonene, tall i messing, og én blå aksent som bare brukes der noe er
+  handling eller kobling.
+*/
+
+/* ---------- Grunn ---------- */
+
+.eyebrow--blue {
+  color: var(--accent-deep);
+}
+
+.eyebrow__prikk {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-bright);
+  display: inline-block;
+  flex: none;
+}
+
+.papir {
+  background: var(--paper);
+}
+
+.dobbel {
+  border: 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.dobbel::after {
+  content: '';
+  position: absolute;
+  inset: 4px 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.seksjon-hode {
+  max-width: 62ch;
+  margin-bottom: clamp(var(--s-5), 4vw, var(--s-6));
+}
+
+.seksjon-hode h2 {
+  max-width: 22ch;
+}
+
+.seksjon-hode p:last-child {
+  margin-bottom: 0;
+}
+
+.tall {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.lenke {
+  color: var(--accent-deep);
+  text-decoration-color: color-mix(in srgb, var(--accent-bright) 45%, transparent);
+}
+
+.lenke:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Anker under den faste headeren */
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 14px);
+}
+
+/* ---------- Header ---------- */
+
+.topp {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter: saturate(140%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topp__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  min-height: var(--header-h);
+}
+
+.merke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 46px;
+  text-decoration: none;
+}
+
+.merke img {
+  width: auto;
+  height: 34px;
+  flex: none;
+}
+
+.merke__tekst {
+  display: grid;
+  line-height: 1.1;
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.merke__tekst small {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.15rem;
+}
+
+.topp__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.topp__cta .btn {
+  min-height: 44px;
+  padding: 0.6rem 1.05rem;
+  font-size: var(--t-sm);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--paper);
+  padding-block: clamp(var(--s-6), 7vw, 5.5rem) clamp(var(--s-6), 7vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 31px,
+    var(--rule) 31px 32px
+  );
+  opacity: 0.75;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: -20% -10% auto auto;
+  width: 46rem;
+  height: 46rem;
+  z-index: -1;
+  background: radial-gradient(circle, rgb(255 255 255 / 92%) 0%, rgb(255 255 255 / 0%) 62%);
+  pointer-events: none;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: clamp(var(--s-4), 4.5vw, 4rem);
+  align-items: center;
+}
+
+.hero__tekst h1 {
+  margin-bottom: var(--s-3);
+}
+
+.hero__tekst h1 em {
+  font-style: normal;
+  color: var(--accent-deep);
+  white-space: nowrap;
+}
+
+.hero__ingress {
+  font-size: var(--t-lead);
+  color: #3c4d5f;
+  max-width: 44ch;
+  margin-bottom: var(--s-5);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-bottom: var(--s-5);
+}
+
+.hero__cta .btn {
+  min-height: 48px;
+}
+
+.hero__fakta {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.hero__fakta li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.hero__fakta li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--brass);
+  flex: none;
+}
+
+/* Månedskortet */
+
+.maaned {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0;
+  overflow: hidden;
+}
+
+.maaned__topp {
+  padding: 1.1rem clamp(1rem, 2.4vw, 1.4rem) 0.9rem;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--surface-soft), var(--surface));
+}
+
+.maaned__topp h2 {
+  font-size: 1.22rem;
+  margin: 0 0 0.15rem;
+  letter-spacing: -0.02em;
+}
+
+.maaned__topp p {
+  margin: 0;
+  font-size: var(--t-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  font-weight: 600;
+}
+
+.maaned__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.maaned__rad {
+  display: grid;
+  grid-template-columns: 2.1rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.85rem clamp(1rem, 2.4vw, 1.4rem);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.maaned__rad:last-child {
+  border-bottom: 0;
+}
+
+.maaned__nr {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--brass);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.55;
+}
+
+.maaned__navn {
+  display: block;
+  font-weight: 600;
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.maaned__hva {
+  display: block;
+  font-size: var(--t-sm);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.maaned__fot {
+  margin: 0;
+  padding: 0.95rem clamp(1rem, 2.4vw, 1.4rem);
+  background: var(--paper);
+  border-top: 1px solid var(--line-strong);
+  font-size: var(--t-sm);
+  color: #3c4d5f;
+}
+
+/* ---------- Bevis-båndet ---------- */
+
+.bevis {
+  background: var(--ink);
+  color: var(--on-ink);
+  padding-block: clamp(var(--s-5), 5vw, var(--s-6));
+}
+
+.bevis__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(var(--s-4), 4vw, var(--s-6));
+  align-items: start;
+}
+
+.bevis__tall {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.4rem + 1.8vw, 2.9rem);
+  font-weight: 500;
+  line-height: 1;
+  color: #d9b47a;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.bevis__tekst {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.55;
+  color: var(--on-ink-muted);
+  max-width: 32ch;
+}
+
+.bevis__merke {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.bevis__merke img {
+  width: 78px;
+  height: auto;
+  flex: none;
+}
+
+.bevis__merke strong {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--on-ink);
+}
+
+.bevis__org {
+  font-family: var(--font-body);
+  font-size: var(--t-sm);
+  color: var(--on-ink-muted);
+  margin: 0.15rem 0 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Tjenester ---------- */
+
+.tjenester {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.tjenester__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(var(--s-3), 2.4vw, var(--s-4));
+}
+
+.tjeneste {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.15rem, 2.6vw, 1.9rem);
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+  position: relative;
+  box-shadow: var(--shadow-flat);
+}
+
+.tjeneste__nr {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brass);
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.tjeneste h3 {
+  margin: 0;
+  font-size: 1.32rem;
+  letter-spacing: -0.02em;
+}
+
+.tjeneste p {
+  margin: 0;
+  color: #3c4d5f;
+  font-size: 0.99rem;
+  line-height: 1.6;
+}
+
+.tjeneste__punkter {
+  list-style: none;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tjeneste__punkter li {
+  margin: 0;
+  font-size: var(--t-xs);
+  letter-spacing: 0.02em;
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: #3c4d5f;
+  line-height: 1.5;
+}
+
+/* ---------- Erfaring ---------- */
+
+.erfaring__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: clamp(var(--s-4), 5vw, 4.5rem);
+  align-items: center;
+}
+
+.erfaring h2 {
+  max-width: 20ch;
+}
+
+.erfaring__bransjer {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-4) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.erfaring__bransjer li {
+  margin: 0;
+  font-size: var(--t-sm);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  color: #2c3e50;
+  line-height: 1.5;
+}
+
+.erfaring__foto {
+  position: relative;
+  margin: 0;
+}
+
+.erfaring__foto img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--paper-2);
+  border-radius: var(--radius);
+  border: 1px solid var(--line-strong);
+}
+
+.erfaring__foto::before {
+  content: '';
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border: 1px solid var(--accent-bright);
+  border-radius: var(--radius);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ---------- Slik jobber vi ---------- */
+
+.jobb {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.jobb__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(var(--s-4), 3.5vw, var(--s-6));
+  counter-reset: steg;
+}
+
+.steg {
+  border-top: 2px solid var(--ink);
+  padding-top: var(--s-3);
+  position: relative;
+}
+
+.steg::before {
+  counter-increment: steg;
+  content: '0' counter(steg);
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--brass);
+  margin-bottom: 0.5rem;
+}
+
+.steg h3 {
+  font-size: 1.22rem;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.steg p {
+  margin: 0;
+  font-size: 0.96rem;
+  color: #3c4d5f;
+  line-height: 1.6;
+}
+
+/* ---------- Booking ---------- */
+
+.booking-seksjon {
+  background: var(--surface);
+}
+
+.booking__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(var(--s-4), 4.5vw, 4rem);
+  align-items: start;
+}
+
+.booking__tekst h2 {
+  max-width: 16ch;
+}
+
+.booking__punkter {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-4) 0 var(--s-4);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.booking__punkter li {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  gap: 0.7rem;
+  margin: 0;
+  font-size: 0.97rem;
+  color: #3c4d5f;
+  line-height: 1.55;
+}
+
+.booking__punkter li::before {
+  content: '→';
+  color: var(--accent-bright);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.booking__ring {
+  font-size: var(--t-sm);
+  color: var(--muted);
+  margin: 0;
+}
+
+.booking__ring a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent-deep);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Selve verktøyet */
+
+.verktoy {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.verktoy__topp {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2);
+  padding: 1rem clamp(1rem, 2.6vw, 1.5rem);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.verktoy__steg {
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.verktoy__merke {
+  font-size: var(--t-xs);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.verktoy__kropp {
+  padding: clamp(1rem, 2.6vw, 1.5rem);
+}
+
+.verktoy__sporsmal {
+  font-family: var(--font-display);
+  font-size: 1.14rem;
+  font-weight: 600;
+  margin: 0 0 0.9rem;
+  letter-spacing: -0.015em;
+}
+
+.verktoy__kropp p.small {
+  color: var(--muted);
+  margin: -0.5rem 0 1rem;
+}
+
+.valg {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: var(--s-3);
+}
+
+.valg--to {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.valg__knapp {
+  display: grid;
+  gap: 0.15rem;
+  text-align: left;
+  min-height: 54px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.valg__knapp small {
+  display: block;
+  font-size: var(--t-xs);
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.valg__knapp:hover {
+  border-color: var(--accent-bright);
+  background: var(--surface-soft);
+}
+
+.valg__knapp[aria-pressed='true'] {
+  border-color: var(--accent-deep);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent-deep);
+}
+
+.valg__knapp[aria-pressed='true'] small {
+  color: #2c4a63;
+}
+
+.valg__knapp:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.dager {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-bottom: var(--s-3);
+}
+
+.dag {
+  min-height: 58px;
+  padding: 0.4rem 0.2rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.dag strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.dag span {
+  display: block;
+  font-size: var(--t-xs);
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 0.1rem;
+}
+
+.dag:hover {
+  border-color: var(--accent-bright);
+  background: var(--surface-soft);
+}
+
+.dag[aria-pressed='true'] {
+  border-color: var(--accent-deep);
+  background: var(--accent-deep);
+  color: #fff;
+  box-shadow: none;
+}
+
+.dag[aria-pressed='true'] span {
+  color: #d6e6f3;
+}
+
+.tider {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.45rem;
+  margin-bottom: var(--s-3);
+}
+
+.tid {
+  min-height: 48px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.tid:hover:not(:disabled) {
+  border-color: var(--accent-bright);
+  background: var(--surface-soft);
+}
+
+.tid[aria-pressed='true'] {
+  border-color: var(--accent-deep);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent-deep);
+}
+
+.tid:disabled {
+  color: var(--muted);
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--surface-soft) 0 4px,
+    var(--paper) 4px 8px
+  );
+  cursor: not-allowed;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.verktoy__fot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: var(--s-2);
+}
+
+.verktoy__fot .btn {
+  min-height: 46px;
+}
+
+.verktoy__fot .btn--tekst {
+  min-height: 44px;
+  padding: 0.4rem 0.5rem;
+  background: none;
+  border: 0;
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  box-shadow: none;
+  transform: none;
+}
+
+.verktoy__fot .btn--tekst:hover {
+  box-shadow: none;
+  color: var(--accent-deep);
+}
+
+.verktoy__hjelp {
+  margin: var(--s-3) 0 0;
+  font-size: var(--t-xs);
+  color: var(--muted);
+  line-height: 1.5;
+  border-top: 1px dashed var(--line-strong);
+  padding-top: 0.7rem;
+}
+
+/* Kvittering */
+
+.kvittering {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.kvittering__flagg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1c6b45;
+}
+
+.kvittering__flagg::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1c6b45;
+}
+
+.kvittering h3 {
+  margin: 0;
+  font-size: 1.28rem;
+}
+
+.kvittering dl {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 0.5rem 0.8rem;
+  margin: 0;
+  padding: 0.9rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+.kvittering dt {
+  color: var(--muted);
+  font-size: var(--t-sm);
+}
+
+.kvittering dd {
+  margin: 0;
+  font-weight: 600;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.kvittering p {
+  margin: 0;
+  font-size: 0.94rem;
+  color: #3c4d5f;
+  line-height: 1.6;
+}
+
+.kvittering__handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.kvittering__handlinger .btn {
+  min-height: 46px;
+}
+
+/* ---------- Mennesker ---------- */
+
+.folk {
+  background: var(--paper);
+  border-block: 1px solid var(--line);
+}
+
+.folk__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(var(--s-3), 2.4vw, var(--s-4));
+}
+
+.person {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.2rem, 2.6vw, 1.9rem);
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+  box-shadow: var(--shadow-flat);
+}
+
+.person__merke {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.2rem;
+}
+
+.person__initial {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid #cfe0ee;
+}
+
+.person h3 {
+  margin: 0;
+  font-size: 1.24rem;
+  letter-spacing: -0.02em;
+}
+
+.person__rolle {
+  margin: 0;
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+.person p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #3c4d5f;
+  line-height: 1.6;
+}
+
+.person__kontakt {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.5rem;
+}
+
+.person__kontakt li {
+  margin: 0;
+}
+
+.person__kontakt a {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 44px;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.person__kontakt a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.person__kontakt a span {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: var(--t-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Kontakt ---------- */
+
+.kontakt__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: clamp(var(--s-3), 2.4vw, var(--s-4));
+  align-items: start;
+}
+
+.adresse {
+  border-top: 2px solid var(--ink);
+  padding-top: var(--s-3);
+}
+
+.adresse h3 {
+  font-size: 1rem;
+  margin: 0 0 0.45rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.adresse p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: #3c4d5f;
+}
+
+.adresse .tel {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent-deep);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.kontakt__merknad {
+  margin: var(--s-4) 0 0;
+  font-size: var(--t-sm);
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* ---------- Footer ---------- */
+
+.bunn {
+  background: var(--ink);
+  color: var(--on-ink-muted);
+  padding-block: clamp(var(--s-5), 6vw, var(--s-7));
+  font-size: var(--t-sm);
+}
+
+.bunn__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(var(--s-4), 4vw, var(--s-6));
+}
+
+.bunn__merke {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.bunn__merke img {
+  width: auto;
+  height: 30px;
+  background: #fff;
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.bunn__merke strong {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: var(--on-ink);
+  letter-spacing: -0.01em;
+}
+
+.bunn p {
+  margin: 0 0 0.4rem;
+  line-height: 1.6;
+}
+
+.bunn h3 {
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--on-ink);
+  margin: 0 0 0.6rem;
+}
+
+.bunn a {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 44px;
+  color: var(--on-ink);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.bunn a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bunn__liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+}
+
+.bunn__liste li {
+  margin: 0;
+}
+
+.bunn__bunn {
+  margin-top: clamp(var(--s-5), 5vw, var(--s-6));
+  padding-top: var(--s-3);
+  border-top: 1px solid rgb(234 241 247 / 14%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem var(--s-3);
+  font-size: var(--t-xs);
+  color: #8ea6b8;
+}
+
+/* ---------- Responsivt ---------- */
+
+@media (max-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-5);
+  }
+
+  .hero__tekst h1 {
+    max-width: 22ch;
+  }
+
+  .booking__grid,
+  .erfaring__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-5);
+  }
+
+  .erfaring__foto {
+    max-width: 560px;
+  }
+
+  .kontakt__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bunn__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .topp__cta .btn--topp {
+    display: none;
+  }
+
+  .nav a {
+    min-height: 52px;
+  }
+}
+
+@media (max-width: 780px) {
+  .bevis__grid,
+  .jobb__grid,
+  .tjenester__grid,
+  .folk__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bevis__tall {
+    margin-bottom: 0.35rem;
+  }
+
+  .dager {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tider {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .merke__tekst {
+    font-size: 0.98rem;
+  }
+
+  .merke__tekst small {
+    font-size: 0.62rem;
+  }
+
+  .merke img {
+    height: 30px;
+  }
+
+  .hero {
+    padding-block: var(--s-5) var(--s-6);
+  }
+
+  .hero__cta {
+    display: grid;
+    gap: 0.6rem;
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+  }
+
+  .valg--to {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dager {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kvittering dl {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+
+  .kvittering dt {
+    margin-top: 0.45rem;
+  }
+
+  .kontakt__grid,
+  .bunn__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .erfaring__foto::before {
+    inset: 8px -8px -8px 8px;
+  }
+}

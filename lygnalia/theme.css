@@ -1,0 +1,96 @@
+/*
+  Lygnalia — identitet.
+
+  Paletten er hentet fra deres eget materiale: midnattblå fra ordmerket i
+  logoen (#1e2b3e), snøhvitt fra flyfotoene, og en bjørkebrun aksent som
+  finnes i terrenget rundt hyttene. To fonter: Fraunces til overskrifter,
+  Instrument Sans til tekst.
+*/
+
+:root {
+  /* Grunnfarger */
+  --ink: #15232f;          /* midnattblå, fra logoen */
+  --ink-2: #22374a;
+  --ink-3: #3a5064;
+  --snow: #f4f6f3;         /* snø, kjølig og litt grønn */
+  --snow-2: #e9eee7;
+  --snow-3: #dde4db;
+
+  /* Aksenter */
+  --amber: #a4581f;        /* bjørkebrun */
+  --amber-soft: #f8ede1;
+  --moss: #3c5a46;         /* ledig-status */
+  --sky: #4b6f86;          /* kjølig støttefarge */
+
+  /* Demo-kitets variabler */
+  --bg: var(--snow);
+  --bg-soft: var(--snow-2);
+  --fg: var(--ink);
+  --fg-soft: var(--ink-2);
+  --muted: #55665f;
+  --line: #d3ddd4;
+  --line-strong: #bccabd;
+  --accent: var(--amber);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--amber-soft);
+
+  /* Typografi */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Rom og former */
+  --radius: 20px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+  --shadow: 0 1px 2px rgb(21 35 47 / 5%), 0 18px 40px rgb(21 35 47 / 8%);
+  --shadow-soft: 0 1px 0 rgb(21 35 47 / 4%), 0 10px 24px rgb(21 35 47 / 6%);
+  --wrap: 1180px;
+  --header-h: 72px;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 85% -10%, rgb(164 88 31 / 7%), transparent 70%),
+    var(--bg);
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  font-variation-settings: 'SOFT' 40, 'WONK' 0;
+  letter-spacing: -0.022em;
+  line-height: 1.02;
+}
+
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 1.5rem + 4.2vw, 4.4rem);
+}
+
+h2 {
+  font-size: clamp(1.9rem, 1.3rem + 2.2vw, 3rem);
+}
+
+.eyebrow {
+  color: var(--amber);
+  letter-spacing: 0.16em;
+  font-weight: 600;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--amber);
+  color: #fff;
+}

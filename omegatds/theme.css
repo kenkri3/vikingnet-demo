@@ -1,0 +1,56 @@
+/*
+  Omega TDS — identitet.
+  Paletten er hentet fra logoen: ren oransje (#d85000) og svart blekk,
+  satt på en kjølig betonggrå bunn. Det oransje er signalet — det brukes
+  på kontrollpunkter, nummer og handlinger, aldri som bakgrunnsflate.
+  To fonter: Sora (teknisk, geometrisk display) og Manrope (body).
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Flater */
+  --paper: #eff0ec;
+  --paper-deep: #e5e7e1;
+  --card: #fafaf7;
+  --ink: #11161a;
+  --ink-deep: #0c1113;
+
+  /* Tekst */
+  --fg: var(--ink);
+  --fg-soft: #2b343a;
+  --muted: #5b656b;
+  --on-ink: #f2f3ef;
+  --on-ink-muted: #a9b2b5;
+
+  /* Linjer */
+  --line: #d7d9d1;
+  --line-strong: #bfc3b7;
+  --line-ink: rgb(242 243 239 / 14%);
+
+  /* Signal */
+  --accent: #d85000;
+  --accent-deep: #b03f00;
+  --accent-bright: #f2702a;
+  --accent-fg: #ffffff;
+  --accent-soft: #fbe8db;
+
+  --bg: var(--paper);
+  --bg-soft: var(--paper-deep);
+
+  --font-display: 'Sora', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  --shadow: 0 1px 2px rgb(17 22 26 / 5%), 0 14px 34px rgb(17 22 26 / 7%);
+  --shadow-ink: 0 18px 44px rgb(12 17 19 / 26%);
+  --wrap: 1180px;
+  --header-h: 72px;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}

@@ -1,0 +1,53 @@
+/*
+  Asker oppmåling AS — tema.
+  Paletten er hentet fra firmamerket: en grågrønn «sage» (#b2b2a3) i trekanten
+  og sirkelen, svart i teksten. Resten er kalk, blekk og én dyp oliven.
+  To fontfamilier: Barlow Condensed til overskrifter og tall, Barlow til tekst.
+*/
+
+:root {
+  /* Grunnflater */
+  --kalk: #f3f2ed;
+  --kalk-dyp: #e8e8df;
+  --hvit: #ffffff;
+
+  /* Blekk */
+  --blekk: #171a16;
+  --blekk-2: #2b2f28;
+  --dempet: #5d6358;
+
+  /* Linjer og merke */
+  --linje: #d8d9cf;
+  --linje-sterk: #bcbfae;
+  --sage: #b2b2a3;
+  /* Mørkere sage til små etiketter: #767d6c ga bare 3,8:1 mot kalk. */
+  --sage-dyp: #59614f;
+
+  /* Aksent */
+  --oliven: #3f4a35;
+  --oliven-lys: #e6e9dc;
+
+  /* base.css-variabler */
+  --bg: var(--kalk);
+  --bg-soft: var(--kalk-dyp);
+  --fg: var(--blekk);
+  --muted: var(--dempet);
+  --line: var(--linje);
+  --accent: var(--oliven);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--oliven-lys);
+
+  --font-display: 'Barlow Condensed', 'Arial Narrow', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Barlow', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 6px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(23 26 22 / 5%), 0 14px 34px rgb(23 26 22 / 7%);
+
+  --wrap: 1180px;
+  --header-h: 68px;
+  --band-h: 10px;
+  --kant: clamp(18px, 4vw, 32px);
+
+  color-scheme: light;
+}

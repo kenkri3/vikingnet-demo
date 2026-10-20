@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js');</script>
+<title>Asker oppmåling AS — oppmåling for bygg, anlegg og bolig</title>
+<meta name="description" content="Landmåling siden 1986: entreprenøroppgaver, laserskanning, drone, 3D-modellering og målebrev. 20 ansatte på Hvalstad utenfor Asker. Send oppdragsbeskrivelsen din.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Asker oppmåling AS">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Asker oppmåling AS — oppmåling for bygg, anlegg og bolig">
+<meta property="og:description" content="Ett av de største firmaene i Norge som kun arbeider med oppmålingssaker. Entreprenør, laserskanning, drone og målebrev — siden 1986.">
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/askeroppm/img/hero-frognerparken.jpg">
+<meta property="og:image:alt" content="Totalstasjon på stativ i Frognerparken, klargjort for oppmåling">
+<meta name="theme-color" content="#f3f2ed">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top">
+      <svg class="brand__merke" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M2 38 18 6v14H8Z" fill="currentColor"></path>
+        <circle cx="27" cy="19" r="12" fill="none" stroke="currentColor" stroke-width="4"></circle>
+        <path d="M27 4v30M12 19h30" stroke="currentColor" stroke-width="2.4"></path>
+      </svg>
+      <span class="brand__tekst">
+        <span class="brand__navn">Asker oppmåling</span>
+        <span class="brand__slag">Landmåling siden 1986</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Åpne meny" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" data-nav aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#prosjekter">Prosjekter</a>
+      <a href="#om">Om oss</a>
+      <a class="header__tlf" href="tel:+4766799980">66 79 99 80</a>
+      <a class="btn" href="#foresporsel">Send oppdrag</a>
+    </nav>
+  </div>
+  <div class="maaleband" aria-hidden="true"></div>
+</header>
+
+<main id="top">
+
+  <!-- Hero: tekst til venstre, foto med kant til høyre -->
+  <section class="hero">
+    <div class="wrap hero__rutenett">
+      <div class="hero__tekst">
+        <p class="eyebrow">Asker oppmåling as · siden 1986</p>
+        <h1 class="hero__h1">Oppmåling for bygg, anlegg og bolig</h1>
+        <p class="lead hero__lead">
+          Vi er 20 ansatte og ett av de største firmaene i bransjen som kun arbeider
+          med oppmålingssaker. Fra Hvalstad måler vi ut for entreprenører, utbyggere
+          og privatkunder i Asker, Bærum og Oslo.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#foresporsel">Send oppdragsbeskrivelse</a>
+          <a class="btn btn--ghost" href="#tjenester">Se tjenestene</a>
+        </div>
+        <p class="hero__meta">
+          Sentral godkjenning i tiltaksklasse 3 · Medlem i Startbank
+        </p>
+      </div>
+
+      <figure class="hero__figur">
+        <img src="img/hero-frognerparken.jpg" alt="Totalstasjon på stativ i Frognerparken, klargjort for oppmåling" width="1600" height="900" fetchpriority="high">
+        <figcaption>Frognerparken — ett av prosjektene våre.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Datastripe: tall hentet fra deres egen side og Enhetsregisteret -->
+  <section class="stripe" aria-label="Asker oppmåling i tall">
+    <div class="wrap stripe__rutenett">
+      <div class="stripe__celle">
+        <span class="stripe__tall">1986</span>
+        <span class="stripe__navn">Etablert av Rolf Myhre</span>
+      </div>
+      <div class="stripe__celle">
+        <span class="stripe__tall">20</span>
+        <span class="stripe__navn">Ansatte</span>
+      </div>
+      <div class="stripe__celle">
+        <span class="stripe__tall">2 000</span>
+        <span class="stripe__navn">Prosjekter årlig</span>
+      </div>
+      <div class="stripe__celle">
+        <span class="stripe__tall">3</span>
+        <span class="stripe__navn">Tiltaksklasse, sentral godkjenning</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 Tjenester -->
+  <section class="section seksjon" id="tjenester">
+    <div class="wrap seksjon__rutenett">
+      <div class="seksjon__kolonne">
+        <p class="seksjon__nummer">01</p>
+        <h2 class="seksjon__tittel">Tjenester</h2>
+        <p class="seksjon__notat">Alt vi gjør, er oppmåling — ikke noe annet.</p>
+      </div>
+
+      <div class="seksjon__innhold">
+        <div class="tjenester">
+          <article class="tjeneste reveal">
+            <p class="tjeneste__nr">For privatkunder</p>
+            <h3>Privat / bolig</h3>
+            <p>Oppmåling av tomt, grenser og bygg for deg som eier eiendommen. Privatkunder har egen adresse: bolig@askeroppm.no.</p>
+          </article>
+
+          <article class="tjeneste reveal">
+            <p class="tjeneste__nr">For entreprenører</p>
+            <h3>Entreprenør</h3>
+            <p>Vi utfører alle oppgaver som kreves for byggeplassen. Utstyret er Trimble totalstasjoner, og detaljene stikkes ut fra aktive digitale tegninger i måleboken.</p>
+          </article>
+
+          <article class="tjeneste reveal">
+            <p class="tjeneste__nr">Presisjon</p>
+            <h3>Laserskanning</h3>
+            <p>Skanneren måler ca. 1 000 000 punkter pr. sekund og kan gjengi punktene i farger. Nøyaktighet ±5 mm, avhengig av avstand og ønske.</p>
+          </article>
+
+          <article class="tjeneste reveal">
+            <p class="tjeneste__nr">Fra lufta</p>
+            <h3>Drone</h3>
+            <p>Med kopter (UAV) flyr vi over store områder og lager 3D-modell og orthofoto — et måleriktig bilde i koordinatsystem.</p>
+          </article>
+
+          <article class="tjeneste reveal">
+            <p class="tjeneste__nr">Etter skanning</p>
+            <h3>3D-modellering</h3>
+            <p>Vi lager 3D-modeller og målsatte plan- og snittegninger ut fra skannede bygg og situasjoner.</p>
+          </article>
+
+          <article class="tjeneste reveal">
+            <p class="tjeneste__nr">Dokumentasjon</p>
+            <h3>Mengder / målebrev</h3>
+            <p>Masseberegning for private og entreprenører som vil vite hvor mange m³ løsmasser og fjell som blir tatt ut av byggegropa.</p>
+          </article>
+        </div>
+
+        <p class="tjenester__flere">
+          <strong>Og ellers:</strong> nivellement, monitorering, vei og VA (AutoCAD Civil3D
+          med FocusCAT Veg), maskinstyring med fjernsupport, FKB–NVDB og terrengmodeller.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Oppdrag: interaksjonen -->
+  <section class="section seksjon seksjon--oppdrag" id="foresporsel">
+    <div class="wrap seksjon__rutenett">
+      <div class="seksjon__kolonne">
+        <p class="seksjon__nummer">02</p>
+        <h2 class="seksjon__tittel">Send oppdraget</h2>
+        <p class="seksjon__notat">Henvendelsen havner hos oss — ikke i en tom e-postklient.</p>
+      </div>
+
+      <div class="seksjon__innhold oppdrag">
+        <div class="oppdrag__hjelp">
+          <p class="oppdrag__ingress">
+            Beskriv oppdraget i tre steg. Du får en kvittering med alt samlet, og en
+            ferdig e-post til riktig adresse: bolig@ for privatkunder, firmapost@ for
+            bedrifter.
+          </p>
+          <ol class="stegliste">
+            <li>
+              <span class="stegliste__nr">1</span>
+              <div>
+                <h3>Hvem og hva</h3>
+                <p>Privat eller bedrift, og hvilken tjeneste det gjelder.</p>
+              </div>
+            </li>
+            <li>
+              <span class="stegliste__nr">2</span>
+              <div>
+                <h3>Hvor og når</h3>
+                <p>Adresse eller område, ønsket oppstart og noen ord om oppdraget.</p>
+              </div>
+            </li>
+            <li>
+              <span class="stegliste__nr">3</span>
+              <div>
+                <h3>Kontakt</h3>
+                <p>Navn, e-post og telefon — slik vi kan svare med spørsmål.</p>
+              </div>
+            </li>
+          </ol>
+          <p class="oppdrag__telefon">
+            Vil du heller snakke? <a class="lenke" href="tel:+4766799980">Ring 66 79 99 80</a>
+          </p>
+        </div>
+
+        <div class="skjema" data-oppdrag>
+          <div class="skjema__topp">
+            <p class="skjema__merke">Oppdragsbeskrivelse</p>
+            <ol class="skjema__steg" data-stegviser aria-label="Steg">
+              <li class="er-aktiv" data-punkt="1"><span>1</span> Hvem</li>
+              <li data-punkt="2"><span>2</span> Oppdrag</li>
+              <li data-punkt="3"><span>3</span> Kontakt</li>
+            </ol>
+          </div>
+
+          <form class="skjema__form" data-skjema novalidate>
+            <fieldset class="skjema__steginnhold" data-steg="1">
+              <legend class="visually-hidden">Hvem gjelder oppdraget</legend>
+              <p class="skjema__sporsmal">Hvem gjelder oppdraget?</p>
+              <div class="valg">
+                <label class="valg__kort">
+                  <input type="radio" name="kundetype" value="Privat / bolig" required>
+                  <span>
+                    <strong>Privat / bolig</strong>
+                    <span>Tomt, grenser, bolig — går til bolig@askeroppm.no</span>
+                  </span>
+                </label>
+                <label class="valg__kort">
+                  <input type="radio" name="kundetype" value="Bedrift / entreprenør" required>
+                  <span>
+                    <strong>Bedrift / entreprenør</strong>
+                    <span>Byggeplass, anlegg — går til firmapost@askeroppm.no</span>
+                  </span>
+                </label>
+              </div>
+
+              <label class="felt">
+                Tjeneste
+                <select name="tjeneste" required>
+                  <option value="">Velg tjeneste</option>
+                  <option>Entreprenør / utstikking</option>
+                  <option>Laserskanning</option>
+                  <option>Drone og orthofoto</option>
+                  <option>3D-modellering</option>
+                  <option>Mengder / målebrev</option>
+                  <option>Nivellement</option>
+                  <option>Monitorering</option>
+                  <option>Vei / VA</option>
+                  <option>Maskinstyring</option>
+                  <option>FKB – NVDB</option>
+                  <option>Terrengmodell</option>
+                  <option>Vet ikke ennå</option>
+                </select>
+              </label>
+            </fieldset>
+
+            <fieldset class="skjema__steginnhold" data-steg="2" hidden>
+              <legend class="visually-hidden">Hvor og når</legend>
+              <label class="felt">
+                Adresse eller område
+                <input type="text" name="sted" autocomplete="street-address" placeholder="Gateadresse, gårds- og bruksnummer eller område" required>
+              </label>
+              <label class="felt">
+                Ønsket oppstart
+                <select name="oppstart" required>
+                  <option value="">Velg</option>
+                  <option>Snarest</option>
+                  <option>Innen to uker</option>
+                  <option>Om en til tre måneder</option>
+                  <option>Vet ikke ennå</option>
+                </select>
+              </label>
+              <label class="felt">
+                Kort om oppdraget
+                <textarea name="beskrivelse" rows="4" placeholder="Hva skal måles, og hva trenger du levert?"></textarea>
+              </label>
+            </fieldset>
+
+            <fieldset class="skjema__steginnhold" data-steg="3" hidden>
+              <legend class="visually-hidden">Kontakt</legend>
+              <label class="felt">
+                Navn
+                <input type="text" name="navn" autocomplete="name" required>
+              </label>
+              <label class="felt">
+                E-post
+                <input type="email" name="epost" autocomplete="email" inputmode="email" required>
+              </label>
+              <label class="felt">
+                Telefon
+                <input type="tel" name="telefon" autocomplete="tel" inputmode="tel" required>
+              </label>
+            </fieldset>
+
+            <p class="skjema__feil" data-feil role="status" aria-live="polite"></p>
+
+            <div class="skjema__knapper">
+              <button class="btn btn--ghost" type="button" data-tilbake hidden>Tilbake</button>
+              <button class="btn" type="button" data-neste>Neste</button>
+              <button class="btn" type="button" data-kvitter hidden>Se kvittering</button>
+            </div>
+          </form>
+
+          <div class="kvittering" data-kvittering hidden tabindex="-1">
+            <p class="kvittering__merke">Kvittering</p>
+            <h3 class="kvittering__tittel">Oppdraget er samlet</h3>
+            <dl class="kvittering__liste" data-sammendrag></dl>
+            <p class="kvittering__merke">Dette skjer videre</p>
+            <ol class="kvittering__videre">
+              <li>Oppsummeringen ligger klar som e-postutkast til <strong data-mottaker>firmapost@askeroppm.no</strong>.</li>
+              <li>Referansen står i emnefeltet, så henvendelsen kan følges opp uten å lete i innboksen.</li>
+              <li>Vi svarer med spørsmål eller avtaler befaring.</li>
+            </ol>
+            <div class="kvittering__knapper">
+              <a class="btn" href="mailto:firmapost@askeroppm.no" data-send>Åpne e-postutkast</a>
+              <button class="btn btn--ghost" type="button" data-kopier>Kopier oppsummering</button>
+              <button class="btn btn--ghost" type="button" data-ny>Ny henvendelse</button>
+            </div>
+            <p class="kvittering__notat">
+              Dette er en skisse. Den sender ingenting av seg selv og lagrer ingenting —
+              e-postutkastet åpnes i din egen e-postklient.
+            </p>
+            <p class="kvittering__status" data-kopiert role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Slik jobber vi -->
+  <section class="section seksjon" id="jobb">
+    <div class="wrap seksjon__rutenett">
+      <div class="seksjon__kolonne">
+        <p class="seksjon__nummer">03</p>
+        <h2 class="seksjon__tittel">Slik jobber vi</h2>
+        <p class="seksjon__notat">Fra fastmerke til ferdig dokumentasjon.</p>
+      </div>
+
+      <div class="seksjon__innhold">
+        <ol class="arbeidsflyt">
+          <li class="reveal">
+            <span class="arbeidsflyt__nr">01</span>
+            <h3>Fastmerker i riktig system</h3>
+            <p>Ved oppstart av prosjektet oppretter vi fastmerker i aktuelt koordinatsystem, slik at alt som måles senere treffer samme referanse.</p>
+          </li>
+          <li class="reveal">
+            <span class="arbeidsflyt__nr">02</span>
+            <h3>Aktive tegninger i måleboken</h3>
+            <p>På byggeplassen bruker vi for det meste aktive digitale tegninger for utstikking av vegger, søyler, utsparinger, stålplater og oppstikk. Formatet er DXF.</p>
+          </li>
+          <li class="reveal">
+            <span class="arbeidsflyt__nr">03</span>
+            <h3>Dokumentasjon du kan bruke</h3>
+            <p>Vi leverer det oppdraget krever: målebrev, mengder i m³ løsmasser og fjell, ferdig 3D-modell eller målsatte plan- og snittegninger.</p>
+          </li>
+        </ol>
+
+        <figure class="arbeidsflyt__figur">
+          <img src="img/anlegg-entreprenor.jpg" alt="Anleggsplass med tårnkraner, forskaling og betongarbeider under oppføring" width="1200" height="800" loading="lazy">
+          <figcaption>Entreprenøroppdrag: utstikking følger byggeplassen fra første fastmerke.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Prosjekter -->
+  <section class="section seksjon" id="prosjekter">
+    <div class="wrap seksjon__rutenett">
+      <div class="seksjon__kolonne">
+        <p class="seksjon__nummer">04</p>
+        <h2 class="seksjon__tittel">Prosjekter</h2>
+        <p class="seksjon__notat">Et utvalg fra prosjektlista vår.</p>
+      </div>
+
+      <div class="seksjon__innhold">
+        <div class="prosjekter">
+          <figure class="prosjekt reveal">
+            <img src="img/prosjekt-lakkegata.jpg" alt="Lakkegata 19-23: kontorbygg i glass med lys i vinduene en vinterkveld" width="900" height="600" loading="lazy">
+            <figcaption><strong>Lakkegata 19-23</strong><span>Oslo</span></figcaption>
+          </figure>
+          <figure class="prosjekt reveal">
+            <img src="img/prosjekt-nesoya-skole.jpg" alt="Nesøya skole: mørkt teglbygg med inngangsparti og snø foran" width="900" height="600" loading="lazy">
+            <figcaption><strong>Nesøya skole</strong><span>Asker</span></figcaption>
+          </figure>
+          <figure class="prosjekt reveal">
+            <img src="img/prosjekt-roa-bad.jpg" alt="Røa Bad: hvitt boligbygg med balkonger i sollys" width="900" height="600" loading="lazy">
+            <figcaption><strong>Røa Bad</strong><span>Oslo</span></figcaption>
+          </figure>
+          <figure class="prosjekt reveal">
+            <img src="img/prosjekt-tjuvholmen.jpg" alt="Tjuvholmen hus 84: boligblokk i glass og betong ved vannet" width="900" height="600" loading="lazy">
+            <figcaption><strong>Tjuvholmen hus 84</strong><span>Oslo</span></figcaption>
+          </figure>
+        </div>
+
+        <p class="prosjekter__flere">
+          <strong>Ellers i prosjektlista:</strong> Landsneshage i Asker, Bekkestua senter,
+          Adaxparken i Svelvik, Lilleakervn 16, Rykkinn nærsenter, Malerhaugveien 34,
+          Frognerparken og Bærum idrettspark.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Laserskanning -->
+  <section class="section skanning" id="skanning">
+    <div class="wrap skanning__rutenett">
+      <div class="skanning__tekst">
+        <p class="seksjon__nummer skanning__nummer">05</p>
+        <h2>Alt i synsfeltet, ned til millimeteren</h2>
+        <p>
+          Skanneren måler ca. 1 000 000 punkter pr. sekund. Den får med seg alle detaljer
+          i sitt synsfelt, med en nøyaktighet på ±5 mm avhengig av avstand og ønske — og
+          kan gjengi punktene i farger.
+        </p>
+        <p>
+          Vi har blant annet skannet fasader med noe innvendig i Solbråveien i Asker
+          (300 meter langt bygg), en fjellhall med alle installasjoner for Statnett
+          (500 × 150 × 20 meter) og Nordstrand kirke.
+        </p>
+        <ul class="skanning__tall">
+          <li><span>1 000 000</span> punkter pr. sekund</li>
+          <li><span>±5 mm</span> nøyaktighet</li>
+          <li><span>300 m</span> fasade skannet i Solbråveien</li>
+        </ul>
+      </div>
+      <figure class="skanning__figur">
+        <img src="img/laserskanning-punktsky.jpg" alt="Punktsky fra laserskanning av et bygg i gateplan, med fasade, biler og gategulv i farger" width="1000" height="667" loading="lazy">
+        <figcaption>Punktsky fra laserskanning.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 06 Om oss -->
+  <section class="section seksjon" id="om">
+    <div class="wrap seksjon__rutenett">
+      <div class="seksjon__kolonne">
+        <p class="seksjon__nummer">06</p>
+        <h2 class="seksjon__tittel">Om oss</h2>
+        <p class="seksjon__notat">Etablert 1986. Aksjeselskap siden 1998.</p>
+      </div>
+
+      <div class="seksjon__innhold om">
+        <div class="om__tekst">
+          <p>
+            Firmaet ble etablert av Rolf Myhre som et enkeltmannsforetak i 1986.
+            1. januar 1998 ble det gjort om til aksjeselskap. I dag er vi 20 ansatte og
+            ett av de største firmaene i bransjen som kun arbeider med oppmålingssaker.
+          </p>
+          <p>
+            Vi holder til i Ravnsborgveien 52 på Hvalstad i Asker, nær E18. Vi er alltid
+            på jakt etter nye medarbeidere — søknad og CV sendes til firmapost@askeroppm.no.
+            Søkere må snakke norsk flytende.
+          </p>
+        </div>
+
+        <div class="om__kort">
+          <article class="merkerkort">
+            <p class="merkerkort__merke">Sentral godkjenning</p>
+            <h3>Tiltaksklasse 3</h3>
+            <p>Asker oppmåling AS har sentral godkjenning i tiltaksklasse 3 — den høyeste klassen.</p>
+          </article>
+          <article class="merkerkort">
+            <p class="merkerkort__merke">Startbank</p>
+            <h3>Leverandørregister</h3>
+            <p>Vi er medlem i Startbank, bygg- og anleggsnæringens leverandørregister, etablert i samarbeid med BNL.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 Kontakt -->
+  <section class="section seksjon seksjon--kontakt" id="kontakt">
+    <div class="wrap seksjon__rutenett">
+      <div class="seksjon__kolonne">
+        <p class="seksjon__nummer">07</p>
+        <h2 class="seksjon__tittel">Kontakt</h2>
+        <p class="seksjon__notat">To adresser, samme firma.</p>
+      </div>
+
+      <div class="seksjon__innhold kontakt">
+        <div class="kontakt__blokk">
+          <p class="kontakt__merke">Bedriftskunder</p>
+          <a class="kontakt__stor" href="mailto:firmapost@askeroppm.no">firmapost@askeroppm.no</a>
+          <p class="kontakt__merke">Privatkunder</p>
+          <a class="kontakt__stor" href="mailto:bolig@askeroppm.no">bolig@askeroppm.no</a>
+          <p class="kontakt__merke">Telefon</p>
+          <a class="kontakt__stor" href="tel:+4766799980">66 79 99 80</a>
+        </div>
+
+        <div class="kontakt__blokk kontakt__blokk--adresse">
+          <p class="kontakt__merke">Besøksadresse</p>
+          <p class="kontakt__adresse">Ravnsborgveien 52<br>1395 Hvalstad, Asker<br><span>nær E18</span></p>
+          <p class="kontakt__merke">Postadresse</p>
+          <p class="kontakt__adresse">Boks 83<br>1378 Nesbru</p>
+          <p class="kontakt__merke">Org.nr</p>
+          <p class="kontakt__adresse">979 488 254</p>
+        </div>
+
+        <div class="kontakt__blokk kontakt__blokk--cta">
+          <h3>Klar for et oppdrag?</h3>
+          <p>Beskriv det i tre steg, og få en kvittering med alt samlet.</p>
+          <a class="btn" href="#foresporsel">Send oppdragsbeskrivelse</a>
+        </div>
+      </div>
+    </div>
+    <div class="maaleband maaleband--stor" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__rutenett">
+    <div class="footer__merke">
+      <svg class="footer__ikon" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <path d="M2 38 18 6v14H8Z" fill="currentColor"></path>
+        <circle cx="27" cy="19" r="12" fill="none" stroke="currentColor" stroke-width="4"></circle>
+        <path d="M27 4v30M12 19h30" stroke="currentColor" stroke-width="2.4"></path>
+      </svg>
+      <p class="footer__navn">Asker oppmåling AS</p>
+      <p>Org.nr 979 488 254<br>Ravnsborgveien 52, 1395 Hvalstad</p>
+    </div>
+    <div class="footer__kolonne">
+      <p class="footer__merke">Kontakt</p>
+      <ul>
+        <li><a href="mailto:firmapost@askeroppm.no">firmapost@askeroppm.no</a></li>
+        <li><a href="mailto:bolig@askeroppm.no">bolig@askeroppm.no</a></li>
+        <li><a href="tel:+4766799980">66 79 99 80</a></li>
+      </ul>
+    </div>
+    <div class="footer__kolonne">
+      <p class="footer__merke">Siden</p>
+      <ul>
+        <li><a href="#tjenester">Tjenester</a></li>
+        <li><a href="#prosjekter">Prosjekter</a></li>
+        <li><a href="#foresporsel">Send oppdrag</a></li>
+        <li><a href="#top">Til toppen</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__bunn">
+    <p>© <span data-year>2026</span> Asker oppmåling AS</p>
+    <p>Landmåling siden 1986</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/*
+  Bilagsfeber — identitet.
+  Fargene er hentet fra deres eget ordmerke: marineblå «B!lagsfeber»
+  (#111c4e) og den magenta utropstegnet (#d6006d). Arketypen er
+  redaksjonell, men kjølig og tallmessig: hvit flate, blekk, én
+  aksentfarge og en termoskala som går fra magenta til marineblått.
+
+  To fonter, begge hentet fra deres egen side: Epilogue i overskrifter,
+  Lato i brødtekst. Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Deres egne farger */
+  --navy: #111c4e;
+  --navy-dyp: #0a1338;
+  --magenta: #d6006d;
+  --magenta-dyp: #a80056;
+  --magenta-lys: #ff5c9e; /* samme farge, lysnet for tekst på mørk flate */
+
+  /* Flater */
+  --bg: #ffffff;
+  --bg-soft: #f2f4fa;
+  --bg-kald: #e9edf6;
+  --flate: #ffffff;
+
+  /* Blekk */
+  --fg: #101736;
+  --muted: #545d78;
+  --muted-lys: #a9b1c8;
+  --lys: #f4f6fb;
+
+  /* Linjer */
+  --line: #e2e5f0;
+  --line-sterk: #ccd2e2;
+  --line-mork: rgb(255 255 255 / 16%);
+
+  /* Aksent — kit-navnene, slik at base.css virker uendret */
+  --accent: var(--magenta);
+  --accent-fg: #ffffff;
+  --accent-soft: #fdeaf3;
+  --accent-deep: var(--magenta-dyp);
+
+  /* Typografi: to familier, ikke flere */
+  --font-display: 'Epilogue', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Rytme: litt strammere enn kit-standarden — dette skal se ført ut */
+  --radius: 8px;
+  --radius-sm: 5px;
+  --shadow: 0 1px 2px rgb(16 23 54 / 6%), 0 18px 40px -24px rgb(16 23 54 / 34%);
+  --shadow-kort: 0 1px 2px rgb(16 23 54 / 5%), 0 24px 50px -30px rgb(16 23 54 / 40%);
+
+  --wrap: 1160px;
+  --header-h: 72px;
+
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.42vw, 1.28rem);
+  --t-h3: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+  --t-h2: clamp(1.85rem, 1.35rem + 2vw, 2.85rem);
+  --t-h1: clamp(2.4rem, 1.6rem + 3.6vw, 4.1rem);
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.022em;
+  font-weight: 600;
+}
+
+h1 { letter-spacing: -0.03em; }
+
+::selection {
+  background: var(--magenta);
+  color: #ffffff;
+}

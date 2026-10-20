@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="Asker oppmåling AS">
+  <rect width="40" height="40" rx="6" fill="#171a16"/>
+  <path d="M4 34 17 8v11H9Z" fill="#b2b2a3"/>
+  <circle cx="25.5" cy="21" r="9.5" fill="none" stroke="#b2b2a3" stroke-width="3.4"/>
+  <path d="M25.5 9v24M13.5 21h24" stroke="#b2b2a3" stroke-width="2"/>
+</svg>

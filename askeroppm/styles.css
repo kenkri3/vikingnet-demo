@@ -1,0 +1,1204 @@
+/* ==========================================================================
+   Asker oppmåling AS — layout.
+   Prinsipp: et målebrev. Tall i margen, tynne linjer, korte setninger.
+   ========================================================================== */
+
+/* --- Header ------------------------------------------------------------- */
+
+.header {
+  background: color-mix(in srgb, var(--kalk) 92%, transparent);
+  border-bottom: 0;
+}
+
+.header__inner {
+  min-height: var(--header-h);
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--blekk);
+}
+
+.brand__merke {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  color: var(--sage);
+  transition: color 0.2s ease;
+}
+
+.brand:hover .brand__merke { color: var(--sage-dyp); }
+
+.brand__tekst {
+  display: grid;
+  gap: 0.15rem;
+  line-height: 1;
+}
+
+.brand__navn {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.brand__slag {
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.header .nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.header__tlf {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  color: var(--blekk) !important;
+  white-space: nowrap;
+}
+
+.nav a.btn {
+  color: var(--accent-fg);
+  font-size: 0.88rem;
+  min-height: 46px;
+  padding: 0.6rem 1.1rem;
+  white-space: nowrap;
+}
+
+.nav a.btn:hover { color: #fff; }
+
+/* Målebåndet: en tynn skala under headeren, som på en tommestokk. */
+.maaleband {
+  height: var(--band-h);
+  border-top: 1px solid var(--linje);
+  background-color: var(--kalk);
+  background-image:
+    repeating-linear-gradient(to right, var(--sage-dyp) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(to right, var(--sage) 0 1px, transparent 1px 12px);
+  background-size: 100% 9px, 100% 4px;
+  background-repeat: repeat-x;
+  background-position: 0 0, 0 0;
+}
+
+.maaleband--stor {
+  height: 14px;
+  background-size: 100% 13px, 100% 6px;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--linje);
+  border-bottom: 0;
+}
+
+/* --- Hero --------------------------------------------------------------- */
+
+.hero {
+  padding-block: clamp(1.75rem, 4.5vw, 3.5rem) clamp(2rem, 5vw, 4rem);
+}
+
+.hero__rutenett {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.hero__tekst { min-width: 0; }
+
+.hero__h1 {
+  font-size: clamp(2.5rem, 1.5rem + 5.2vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+  max-width: 15ch;
+}
+
+.hero__lead {
+  max-width: 44ch;
+  margin-bottom: clamp(1.25rem, 3vw, 1.9rem);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero__meta {
+  margin: clamp(1.2rem, 3vw, 1.8rem) 0 0;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--sage);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--dempet);
+  max-width: 34ch;
+}
+
+.hero__figur {
+  margin: 0;
+  min-width: 0;
+  background: var(--hvit);
+  border: 1px solid var(--linje-sterk);
+  border-radius: var(--radius-sm);
+  padding: 7px;
+  box-shadow: var(--shadow);
+}
+
+.hero__figur img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.hero__figur figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.2rem 0.15rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  color: var(--dempet);
+}
+
+.hero__figur figcaption::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: var(--sage);
+  flex: none;
+}
+
+/* --- Datastripe --------------------------------------------------------- */
+
+.stripe {
+  background: var(--blekk);
+  color: #ecebdf;
+  padding-block: clamp(1.4rem, 3.5vw, 2.2rem);
+}
+
+.stripe__rutenett {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem 1rem;
+}
+
+.stripe__celle { min-width: 0; }
+
+.stripe__tall {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 1.3rem + 2.2vw, 3rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.stripe__navn {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: #b7bbab;
+}
+
+/* --- Seksjonsramme ------------------------------------------------------ */
+
+.seksjon { padding-block: clamp(2.75rem, 7vw, 5rem); }
+
+.seksjon__rutenett {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.seksjon__kolonne { min-width: 0; }
+
+.seksjon__nummer {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--sage-dyp);
+}
+
+.seksjon__nummer::after {
+  content: "";
+  flex: 1;
+  max-width: 40px;
+  height: 1px;
+  background: var(--sage);
+}
+
+.seksjon__tittel {
+  font-size: clamp(1.55rem, 1.15rem + 1.5vw, 2.15rem);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  line-height: 1.02;
+  margin-bottom: 0.5rem;
+}
+
+.seksjon__notat {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--dempet);
+  max-width: 30ch;
+}
+
+.seksjon__innhold { min-width: 0; }
+
+/* --- 01 Tjenester ------------------------------------------------------- */
+
+.tjenester {
+  display: grid;
+  gap: 0;
+  column-gap: clamp(1.1rem, 2.6vw, 2rem);
+}
+
+.tjeneste {
+  border-top: 2px solid var(--sage);
+  padding-block: 1.25rem 1.5rem;
+  min-width: 0;
+}
+
+.tjeneste__nr {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage-dyp);
+}
+
+.tjeneste h3 {
+  margin: 0.35rem 0 0.45rem;
+  font-size: clamp(1.3rem, 1.1rem + 0.7vw, 1.55rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.tjeneste p:last-child {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--blekk-2);
+}
+
+.tjenester__flere {
+  margin: clamp(1.4rem, 3vw, 2rem) 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--linje);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--dempet);
+}
+
+.tjenester__flere strong { color: var(--blekk); }
+
+/* --- 02 Oppdrag --------------------------------------------------------- */
+
+.seksjon--oppdrag {
+  background: var(--hvit);
+  border-block: 1px solid var(--linje);
+}
+
+.oppdrag {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: start;
+}
+
+.oppdrag__ingress {
+  margin: 0 0 1.4rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--blekk-2);
+  max-width: 42ch;
+}
+
+.stegliste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.05rem;
+}
+
+.stegliste li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+  margin: 0;
+}
+
+.stegliste__nr {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--sage);
+  border-radius: 3px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--oliven);
+}
+
+.stegliste h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stegliste p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--dempet);
+}
+
+.oppdrag__telefon {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--dempet);
+}
+
+.lenke {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--oliven);
+  font-weight: 600;
+}
+
+/* Skjemaet */
+
+.skjema {
+  background: var(--kalk);
+  border: 1px solid var(--linje-sterk);
+  border-radius: var(--radius);
+  padding: clamp(1.05rem, 3vw, 1.75rem);
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.skjema__merke {
+  margin: 0 0 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage-dyp);
+}
+
+.skjema__steg {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.35rem;
+  padding: 0;
+}
+
+.skjema__steg li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.32rem 0.6rem;
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+  background: var(--hvit);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--dempet);
+}
+
+.skjema__steg li span {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sage-dyp);
+}
+
+.skjema__steg li.er-aktiv {
+  border-color: var(--oliven);
+  background: var(--oliven-lys);
+  color: var(--blekk);
+}
+
+.skjema__steg li.er-aktiv span { color: var(--oliven); }
+
+.skjema__steg li.er-ferdig { color: var(--blekk); border-color: var(--sage); }
+.skjema__steg li.er-ferdig span { color: var(--sage-dyp); }
+
+.skjema__form { display: block; }
+
+/* .btn er display:inline-flex og slår den innebygde [hidden]-regelen, så
+   skjulte knapper og skjulte paneler må skjules eksplisitt. */
+.skjema__form[hidden],
+.skjema__knapper .btn[hidden],
+.kvittering[hidden],
+.kvittering__knapper .btn[hidden] { display: none; }
+
+.skjema__steginnhold {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.95rem;
+  min-width: 0;
+}
+
+.skjema__steginnhold[hidden] { display: none; }
+
+.skjema__sporsmal {
+  margin: 0 0 -0.15rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.valg {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.valg__kort {
+  position: relative;
+  display: block;
+  padding: 0.9rem 0.95rem 0.9rem 2.9rem;
+  border: 1px solid var(--linje-sterk);
+  border-radius: 4px;
+  background: var(--hvit);
+  font-size: 0.85rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.valg__kort:hover { border-color: var(--sage-dyp); }
+
+/* Selve radioknappen ligger usynlig i kortet; ringen under er den synlige
+   knappen. Da blir hele kortet trykkflaten, ikke en 18 px sirkel. */
+.valg__kort input[type="radio"] {
+  position: absolute;
+  top: 1.05rem;
+  left: 1rem;
+  width: 0;
+  height: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+}
+
+.valg__kort::before {
+  content: "";
+  position: absolute;
+  top: 1.05rem;
+  left: 1rem;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--linje-sterk);
+  border-radius: 50%;
+  background: var(--hvit);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.valg__kort:has(input:checked)::before {
+  border-color: var(--oliven);
+  box-shadow: inset 0 0 0 4px var(--oliven);
+}
+
+.valg__kort:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.valg__kort strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.valg__kort span span {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--dempet);
+}
+
+.valg__kort:has(input:checked) {
+  border-color: var(--oliven);
+  background: var(--oliven-lys);
+  box-shadow: inset 0 0 0 1px var(--oliven);
+}
+
+.felt {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--blekk-2);
+}
+
+.skjema__feil {
+  min-height: 1.3em;
+  margin: 0.6rem 0 0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #8c2f1f;
+}
+
+.skjema__feil:empty { margin-top: 0; }
+
+.skjema__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin-top: 1.15rem;
+}
+
+.skjema__knapper .btn { flex: 0 1 auto; }
+
+/* Kvittering */
+
+.kvittering { outline: none; }
+
+.kvittering__tittel {
+  margin: 0 0 1rem;
+  font-size: clamp(1.4rem, 1.15rem + 0.9vw, 1.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.kvittering__tittel:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.kvittering__liste {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.55rem;
+  margin: 0 0 1.35rem;
+  padding-block: 0.95rem;
+  border-block: 1px solid var(--linje);
+}
+
+.kvittering__liste dt {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage-dyp);
+}
+
+.kvittering__liste dd {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: var(--blekk);
+  overflow-wrap: anywhere;
+}
+
+.kvittering__videre {
+  list-style: none;
+  counter-reset: videre;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.kvittering__videre li {
+  counter-increment: videre;
+  position: relative;
+  padding-left: 1.8rem;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--blekk-2);
+}
+
+.kvittering__videre li::before {
+  content: counter(videre);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--sage);
+  border-radius: 50%;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--oliven);
+}
+
+.kvittering__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1.35rem;
+}
+
+.kvittering__notat {
+  margin: 1.1rem 0 0;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--sage);
+  font-size: 0.81rem;
+  line-height: 1.5;
+  color: var(--dempet);
+}
+
+.kvittering__status {
+  min-height: 1.3em;
+  margin: 0.5rem 0 0;
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: var(--oliven);
+}
+
+/* --- 03 Slik jobber vi -------------------------------------------------- */
+
+.arbeidsflyt {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.35rem;
+}
+
+.arbeidsflyt li {
+  margin: 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--linje-sterk);
+  min-width: 0;
+}
+
+.arbeidsflyt__nr {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--sage-dyp);
+}
+
+.arbeidsflyt h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.16rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.05;
+}
+
+.arbeidsflyt p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--blekk-2);
+}
+
+.arbeidsflyt__figur {
+  margin: clamp(1.5rem, 3.5vw, 2.25rem) 0 0;
+}
+
+.arbeidsflyt__figur img {
+  width: 100%;
+  height: clamp(210px, 30vw, 360px);
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.arbeidsflyt__figur figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: var(--dempet);
+}
+
+.arbeidsflyt__figur figcaption::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: var(--sage);
+  flex: none;
+}
+
+/* --- 04 Prosjekter ------------------------------------------------------ */
+
+.prosjekter {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+}
+
+.prosjekt { margin: 0; min-width: 0; }
+
+.prosjekt img {
+  width: 100%;
+  height: clamp(190px, 24vw, 270px);
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--kalk-dyp);
+}
+
+.prosjekt figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+  margin-top: 0.55rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--linje);
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.prosjekt figcaption strong { font-weight: 600; }
+
+.prosjekt figcaption span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage-dyp);
+}
+
+.prosjekter__flere {
+  margin: clamp(1.4rem, 3vw, 2rem) 0 0;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--linje);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--dempet);
+}
+
+.prosjekter__flere strong { color: var(--blekk); }
+
+/* --- 05 Laserskanning --------------------------------------------------- */
+
+.skanning {
+  background: var(--blekk);
+  color: #e7e6db;
+}
+
+.skanning__rutenett {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  align-items: center;
+}
+
+.skanning__nummer { color: var(--sage); }
+.skanning__nummer::after { background: var(--sage-dyp); }
+
+.skanning h2 {
+  color: #fff;
+  font-size: clamp(1.75rem, 1.3rem + 1.9vw, 2.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.02;
+  max-width: 18ch;
+  margin-bottom: 0.9rem;
+}
+
+.skanning__tekst p {
+  font-size: 0.98rem;
+  line-height: 1.62;
+  color: #cdd0c2;
+  max-width: 46ch;
+}
+
+.skanning__tall {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.skanning__tall li {
+  margin: 0;
+  font-size: 0.79rem;
+  letter-spacing: 0.02em;
+  color: #b3b7a6;
+}
+
+.skanning__tall span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 1.2rem + 1vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.skanning__figur { margin: 0; min-width: 0; }
+
+.skanning__figur img {
+  width: 100%;
+  height: clamp(210px, 30vw, 340px);
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgb(255 255 255 / 14%);
+}
+
+.skanning__figur figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  color: #a8ac9b;
+}
+
+/* --- 06 Om oss ---------------------------------------------------------- */
+
+.om {
+  display: grid;
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  align-items: start;
+}
+
+.om__tekst p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--blekk-2);
+  max-width: 46ch;
+}
+
+.om__tekst p:last-child { margin-bottom: 0; }
+
+.om__kort {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.merkerkort {
+  background: var(--hvit);
+  border: 1px solid var(--linje-sterk);
+  border-left: 3px solid var(--sage);
+  border-radius: var(--radius-sm);
+  padding: 1.05rem 1.15rem;
+}
+
+.merkerkort__merke {
+  margin: 0 0 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage-dyp);
+}
+
+.merkerkort h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.18rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.merkerkort p:last-child {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--dempet);
+}
+
+/* --- 07 Kontakt --------------------------------------------------------- */
+
+.seksjon--kontakt {
+  background: var(--hvit);
+  border-top: 1px solid var(--linje);
+  padding-bottom: 0;
+}
+
+.kontakt {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  align-items: start;
+}
+
+.kontakt__blokk { min-width: 0; }
+
+.kontakt__merke {
+  margin: 1.1rem 0 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sage-dyp);
+}
+
+.kontakt__blokk > .kontakt__merke:first-child { margin-top: 0; }
+
+.kontakt__stor {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  max-width: 100%;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--blekk);
+  text-decoration: none;
+  border-bottom: 1px solid var(--linje-sterk);
+  overflow-wrap: anywhere;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.kontakt__stor:hover {
+  color: var(--oliven);
+  border-bottom-color: var(--oliven);
+}
+
+.kontakt__adresse {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  color: var(--blekk-2);
+}
+
+.kontakt__adresse span { color: var(--dempet); font-size: 0.85rem; }
+
+.kontakt__blokk--cta {
+  background: var(--kalk);
+  border: 1px solid var(--linje);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.kontakt__blokk--cta h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.kontakt__blokk--cta p {
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+  color: var(--dempet);
+}
+
+/* --- Footer ------------------------------------------------------------- */
+
+.footer {
+  background: var(--blekk);
+  color: #cdd1c3;
+  padding-block: clamp(2rem, 4vw, 3rem) 1.4rem;
+  border-top: 0;
+}
+
+.footer__rutenett {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.footer__ikon {
+  width: 30px;
+  height: 30px;
+  color: var(--sage);
+  margin-bottom: 0.8rem;
+}
+
+.footer__navn {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #b6baab;
+  margin: 0 0 0.3rem;
+}
+
+.footer__merke {
+  font-size: 0.68rem !important;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--sage) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li { margin: 0; }
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.88rem;
+  color: #e4e6da;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(255 255 255 / 16%);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  border-bottom-color: var(--sage);
+}
+
+.footer__bunn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.3rem 1rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  padding-top: 1.1rem;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+}
+
+.footer__bunn p {
+  margin: 0;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  color: #9ba18e;
+}
+
+/* --- Bredder ------------------------------------------------------------ */
+
+@media (max-width: 1119px) {
+  .header__tlf { display: none; }
+}
+
+/* base.css legger mobilmenyen rett under headeren; her må den under målebåndet. */
+@media (max-width: 900px) {
+  .header .nav {
+    top: calc(var(--header-h) + var(--band-h));
+    background: var(--kalk);
+    box-shadow: var(--shadow);
+  }
+
+  .header .nav a:not(.btn) {
+    border-top: 1px solid var(--linje);
+    padding: 0.9rem 0;
+  }
+
+  .header .nav a.btn {
+    margin-top: 0.9rem;
+    align-self: flex-start;
+    border-top: 0;
+  }
+
+  .seksjon__notat { max-width: 44ch; }
+}
+
+@media (min-width: 560px) {
+  .stripe__rutenett {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .stripe__celle {
+    padding-inline: clamp(0.6rem, 1.6vw, 1.3rem);
+    border-left: 1px solid rgb(255 255 255 / 16%);
+  }
+
+  .stripe__celle:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .valg { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .skanning__tall { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+  .prosjekter { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .kontakt { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .kvittering__liste {
+    grid-template-columns: 140px minmax(0, 1fr);
+    align-items: baseline;
+  }
+
+  .kvittering__liste dd { margin-bottom: 0; }
+}
+
+@media (min-width: 700px) {
+  .arbeidsflyt { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .footer__rutenett { grid-template-columns: 1.5fr 1fr 1fr; }
+}
+
+@media (min-width: 760px) {
+  .tjenester { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 920px) {
+  .hero__rutenett {
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .oppdrag {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    align-items: start;
+  }
+
+  .skanning__rutenett {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  }
+
+  .om {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .seksjon__rutenett {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: clamp(1.75rem, 4vw, 3.25rem);
+  }
+
+  .seksjon__kolonne {
+    position: sticky;
+    top: calc(var(--header-h) + var(--band-h) + 1.75rem);
+    align-self: start;
+  }
+}
+
+@media (min-width: 1040px) {
+  .tjenester { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .kontakt { grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr) minmax(0, 1.05fr); }
+}

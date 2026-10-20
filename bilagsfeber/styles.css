@@ -1,0 +1,1118 @@
+/*
+  Bilagsfeber — layout og komponenter.
+  Ligger etter kit/base.css og theme.css. Ingenting her setter farger som
+  ikke kommer fra theme.css.
+*/
+
+/* ---------- Grunnbrikker ---------- */
+
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 18px);
+}
+
+.seksjonstopp {
+  max-width: 62ch;
+  margin-bottom: clamp(1.7rem, 4vw, 2.9rem);
+}
+
+.seksjonstopp h2 {
+  margin-bottom: var(--s-2);
+}
+
+.seksjonstopp .lead {
+  margin: 0;
+}
+
+.seksjonstopp--delt {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  align-items: end;
+  gap: 1rem clamp(1.5rem, 4vw, 3.5rem);
+  max-width: none;
+}
+
+.seksjonstopp--delt .lead {
+  max-width: 42ch;
+}
+
+.eyebrow {
+  color: var(--muted);
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  border-bottom: 1px solid var(--line);
+  background: rgb(255 255 255 / 92%);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding-block: 6px;
+}
+
+.brand img {
+  height: 30px;
+  width: auto;
+}
+
+.nav a:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav a:not(.btn):hover {
+  color: var(--navy);
+}
+
+.btn--nav {
+  min-height: 44px;
+  padding: 0.55rem 1.05rem;
+  font-size: var(--t-sm);
+}
+
+.nav .btn--nav {
+  color: var(--accent-fg);
+}
+
+@media (min-width: 901px) {
+  .nav[hidden] {
+    display: flex;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--lys);
+  padding-block: clamp(2.4rem, 6vw, 4.6rem) clamp(2.8rem, 7vw, 5.4rem);
+}
+
+.hero__rutenett {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgb(255 255 255 / 5%) 0 1px,
+    transparent 1px 46px
+  );
+  mask-image: linear-gradient(180deg, #000 0%, #000 62%, transparent 100%);
+}
+
+.hero__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  align-items: center;
+  gap: clamp(1.8rem, 5vw, 4rem);
+}
+
+.hero__eyebrow {
+  color: var(--magenta-lys);
+}
+
+.hero__tittel {
+  font-size: clamp(2.55rem, 1.5rem + 4.2vw, 4.5rem);
+  line-height: 1.02;
+  color: #ffffff;
+  margin-bottom: var(--s-3);
+}
+
+.hero__tittel em {
+  font-style: normal;
+  color: var(--magenta-lys);
+  text-decoration: underline;
+  text-decoration-color: rgb(255 92 158 / 45%);
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.1em;
+}
+
+.hero__lead {
+  font-size: var(--t-lead);
+  color: rgb(255 255 255 / 82%);
+  max-width: 44ch;
+  margin-bottom: var(--s-5);
+}
+
+.hero__handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: var(--s-4);
+}
+
+.btn--lys {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgb(255 255 255 / 36%);
+}
+
+.btn--lys:hover {
+  background: rgb(255 255 255 / 10%);
+  box-shadow: none;
+}
+
+.hero__merknad {
+  margin: 0;
+  font-size: var(--t-sm);
+  letter-spacing: 0.02em;
+  color: rgb(255 255 255 / 62%);
+}
+
+/* Målekortet i hero */
+
+.gauge {
+  background: #ffffff;
+  color: var(--fg);
+  border-radius: 12px;
+  border-top: 4px solid var(--magenta);
+  padding: clamp(1.2rem, 3vw, 1.85rem);
+  box-shadow: var(--shadow-kort);
+}
+
+.gauge__kicker {
+  margin: 0 0 0.35rem;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.gauge__tall {
+  margin: 0 0 1.15rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 1.3rem + 1.7vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+}
+
+.gauge__tall span {
+  display: block;
+  margin-top: 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.gauge__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.gauge__liste li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.65rem;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.gauge__liste li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--magenta);
+  font-weight: 700;
+}
+
+.term {
+  margin-top: 1.25rem;
+  padding-top: 1.05rem;
+  border-top: 1px dashed var(--line-sterk);
+}
+
+.term__skala {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.term__merke {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.term__stripe {
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #d6006d 0%,
+    #c4006b 30%,
+    #7a2f8f 62%,
+    #2b3480 84%,
+    #111c4e 100%
+  );
+}
+
+.term__tekst {
+  margin: 0.6rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- Det vi fikser ---------- */
+
+.tjenester {
+  background: var(--bg);
+}
+
+.spor {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(1rem, 2.4vw, 1.6rem);
+  align-items: start;
+}
+
+.spor__kort {
+  border-radius: 10px;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.spor__kort--fikser {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--magenta);
+  box-shadow: var(--shadow);
+}
+
+.spor__kort--svar {
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+}
+
+.spor__kort h3 {
+  margin-bottom: var(--s-2);
+}
+
+.spor__kort p {
+  font-size: 0.97rem;
+}
+
+.spor__fot {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-sterk);
+  color: var(--muted);
+  font-size: 0.93rem;
+  margin-bottom: 0;
+}
+
+.sjekkliste {
+  list-style: none;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 0.75rem;
+}
+
+.sjekkliste li {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  font-size: 0.93rem;
+  line-height: 1.35;
+}
+
+.sjekkliste li::before {
+  content: "✓";
+  flex: 0 0 18px;
+  height: 18px;
+  margin-top: 0.05rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--magenta-dyp);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+/* ---------- Slik jobber vi ---------- */
+
+.slik {
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
+}
+
+.steg-liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2.4vw, 1.6rem);
+}
+
+.steg {
+  margin: 0;
+  padding: clamp(1.15rem, 2.6vw, 1.7rem);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.steg__nummer {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--navy);
+  opacity: 0.24;
+}
+
+.steg h3 {
+  font-size: 1.13rem;
+  margin-bottom: 0.5rem;
+}
+
+.steg p {
+  margin: 0;
+  font-size: 0.96rem;
+  color: var(--muted);
+}
+
+/* ---------- Temperatur ---------- */
+
+.temp {
+  background: var(--bg);
+}
+
+.temp__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2.4vw, 1.6rem);
+}
+
+.temp__bilde {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.temp__bilde img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.temp__bilde figcaption {
+  padding: 0.95rem 1.1rem 1.1rem;
+  border-top: 1px solid var(--line);
+  background: var(--bg-soft);
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+
+.temp__merke {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.15rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.temp__merke--hoy {
+  background: var(--accent-soft);
+  color: var(--magenta-dyp);
+}
+
+.temp__merke--lav {
+  background: var(--bg-kald);
+  color: var(--navy);
+}
+
+/* ---------- Snikskryt ---------- */
+
+.skryt {
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
+}
+
+.sitater {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2.4vw, 1.5rem);
+}
+
+.sitat {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: clamp(1.15rem, 2.6vw, 1.6rem);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.sitat blockquote {
+  position: relative;
+  margin: 0;
+  padding-top: 1.7rem;
+}
+
+.sitat blockquote::before {
+  content: "«";
+  position: absolute;
+  top: 0.15rem;
+  left: -0.1rem;
+  font-family: var(--font-display);
+  font-size: 3.1rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--magenta);
+  opacity: 0.32;
+}
+
+.sitat blockquote p {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.55;
+}
+
+.sitat figcaption {
+  display: grid;
+  gap: 0.1rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.89rem;
+}
+
+.sitat figcaption strong {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.sitat figcaption span {
+  color: var(--muted);
+}
+
+/* ---------- Om oss ---------- */
+
+.om {
+  background: var(--bg);
+}
+
+.om__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.om__tekst p {
+  font-size: 1rem;
+  max-width: 56ch;
+}
+
+.om__tekst p:last-child {
+  margin-bottom: 0;
+}
+
+.ess {
+  background: var(--navy);
+  color: rgb(255 255 255 / 78%);
+  border-radius: 12px;
+  padding: clamp(1.3rem, 3vw, 1.85rem);
+}
+
+.ess h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.ess__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.ess__liste li {
+  margin: 0;
+  padding: 0.85rem 0;
+  border-top: 1px solid rgb(255 255 255 / 14%);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.ess__liste li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.ess__liste strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--magenta-lys);
+}
+
+/* ---------- Tilbud ---------- */
+
+.tilbud {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  color: var(--lys);
+}
+
+.tilbud::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgb(255 255 255 / 4%) 0 1px,
+    transparent 1px 46px
+  );
+  mask-image: linear-gradient(180deg, transparent 0%, #000 40%, #000 100%);
+}
+
+.tilbud .wrap {
+  position: relative;
+}
+
+.tilbud__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.tilbud__intro .eyebrow {
+  color: var(--magenta-lys);
+}
+
+.tilbud__intro h2 {
+  color: #ffffff;
+}
+
+.tilbud__intro .lead {
+  color: rgb(255 255 255 / 78%);
+  max-width: 42ch;
+}
+
+.tilbud__punkter {
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.tilbud__punkter li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.65rem;
+  font-size: 0.97rem;
+  color: rgb(255 255 255 / 84%);
+}
+
+.tilbud__punkter li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--magenta-lys);
+  font-weight: 700;
+}
+
+.tilbud__demo {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 16%);
+  font-size: 0.86rem;
+  color: rgb(255 255 255 / 55%);
+  max-width: 42ch;
+}
+
+/* Skjemakortet */
+
+.skjema {
+  background: #ffffff;
+  color: var(--fg);
+  border-radius: 12px;
+  padding: clamp(1.15rem, 3vw, 1.85rem);
+  box-shadow: var(--shadow-kort);
+}
+
+.fremdrift {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.fremdrift__steg {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--line);
+  transition: background 0.2s ease;
+}
+
+.fremdrift__steg.er {
+  background: var(--magenta);
+}
+
+.fremdrift__steg.ferdig {
+  background: var(--navy);
+}
+
+.skjema form[hidden],
+.steg-panel[hidden],
+.kvittering[hidden] {
+  display: none;
+}
+
+.steg-panel__merke {
+  margin: 0 0 0.35rem;
+  font-size: 0.71rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.steg-panel__tittel {
+  font-size: 1.32rem;
+  margin-bottom: 1.05rem;
+}
+
+.steg-panel__hjelp {
+  margin: 0.9rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.steg-panel__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.3rem;
+}
+
+.valg {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.15rem;
+}
+
+.valg__knapp {
+  display: grid;
+  gap: 0.15rem;
+  width: 100%;
+  min-height: 74px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--fg);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.valg__knapp:hover {
+  border-color: var(--line-sterk);
+  background: var(--bg-soft);
+}
+
+.valg__knapp[aria-pressed="true"] {
+  border-color: var(--magenta);
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--magenta);
+}
+
+.valg__navn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.valg__tekst {
+  font-size: 0.87rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.felt {
+  margin: 0 0 0.9rem;
+}
+
+.felt:last-child {
+  margin-bottom: 0;
+}
+
+.felt-par {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 0.75rem;
+}
+
+.valgfritt {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+.feilmelding {
+  margin: 0.5rem 0 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  background: #fdecef;
+  color: #93104b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.feilmelding[hidden] {
+  display: none;
+}
+
+.sammendrag {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 9rem) minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  margin: 0 0 1.1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  font-size: 0.92rem;
+}
+
+.sammendrag dt {
+  color: var(--muted);
+}
+
+.sammendrag dd {
+  margin: 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+/* Kvitteringen */
+
+.kvittering {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--magenta);
+  border-radius: 10px;
+  padding: 1.15rem 1.2rem 1.35rem;
+  background: #ffffff;
+}
+
+.kvittering:focus {
+  outline: 2px solid var(--magenta);
+  outline-offset: 4px;
+}
+
+.kvittering__stempel {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--magenta);
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--magenta-dyp);
+}
+
+.kvittering h3 {
+  font-size: 1.28rem;
+  margin-bottom: 0.9rem;
+}
+
+.kvittering__merknad {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.kvittering__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+}
+
+.kvittering__nytt {
+  margin-top: 0.65rem;
+  min-height: 44px;
+  padding: 0.5rem 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.kvittering__nytt:hover {
+  color: var(--navy);
+}
+
+.kvittering__status {
+  margin: 0.5rem 0 0;
+  min-height: 1.3em;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--magenta-dyp);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--navy-dyp);
+  color: rgb(255 255 255 / 68%);
+  border-top: 0;
+  padding-block: clamp(2.2rem, 5vw, 3.4rem) 1.6rem;
+  font-size: 0.93rem;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.6rem, 4vw, 3rem);
+}
+
+.footer__merketekst {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.footer__merketekst span {
+  color: var(--magenta-lys);
+}
+
+.footer__merke p {
+  max-width: 34ch;
+  margin-bottom: 0.8rem;
+}
+
+.footer__liten {
+  font-size: 0.85rem;
+  color: rgb(255 255 255 / 52%);
+  margin: 0;
+}
+
+.footer__tittel {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 55%);
+}
+
+.footer__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__liste li {
+  margin: 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__liste a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #ffffff;
+  text-decoration-color: rgb(255 255 255 / 35%);
+}
+
+.footer__liste a:hover {
+  text-decoration-color: var(--magenta-lys);
+  color: var(--magenta-lys);
+}
+
+.footer__bunn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.35rem 1.5rem;
+  margin-top: clamp(1.6rem, 4vw, 2.6rem);
+  padding-top: 1.2rem;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  font-size: 0.84rem;
+  color: rgb(255 255 255 / 48%);
+}
+
+.footer__bunn p {
+  margin: 0;
+}
+
+/* ---------- Bevegelse ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__copy > *,
+  .gauge {
+    animation: stig-inn 0.6s ease both;
+  }
+
+  .hero__copy > :nth-child(2) { animation-delay: 0.06s; }
+  .hero__copy > :nth-child(3) { animation-delay: 0.12s; }
+  .hero__copy > :nth-child(4) { animation-delay: 0.18s; }
+  .hero__copy > :nth-child(5) { animation-delay: 0.24s; }
+  .gauge { animation-delay: 0.16s; }
+}
+
+@keyframes stig-inn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Bredder ---------- */
+
+@media (max-width: 980px) {
+  .hero__grid,
+  .spor,
+  .om__grid,
+  .tilbud__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sitater {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .seksjonstopp--delt {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 880px) {
+  .steg-liste {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .footer__merke {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .temp__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .sjekkliste {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .felt-par {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sammendrag {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+  }
+
+  .sammendrag dd {
+    margin-bottom: 0.55rem;
+  }
+
+  .kvittering__knapper .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .btn--nav {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .nav a:not(.btn) {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__handlinger .btn {
+    width: 100%;
+  }
+}
