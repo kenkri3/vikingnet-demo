@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="nb" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>boost.ai — conversational AI for regulerte bransjer</title>
+<meta name="description" content="boost.ai leverer en conversational AI-plattform for finans, forsikring, telekom og offentlig sektor: AI-agenter for kundeservice og intern støtte, med tale og meldinger i samme løsning.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="boost.ai">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="boost.ai — conversational AI for regulerte bransjer">
+<meta property="og:description" content="AI-agenter for kundeservice og intern støtte, bygget for compliance-tunge miljøer. Tale og meldinger i samme plattform.">
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/boost/img/acorn.jpg">
+<meta property="og:image:alt" content="Person som bruker mobilen på toget — bilde fra boost.ai">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#59195d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#top" aria-label="boost.ai — til toppen av siden">
+      <img class="brand__logo" src="img/logo.svg" width="652" height="174" alt="boost.ai">
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Åpne meny" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" data-nav aria-label="Hovedmeny">
+      <a href="#plattform">Plattformen</a>
+      <a href="#bruksomrader">Bruksområder</a>
+      <a href="#kunder">Kunder</a>
+      <a href="#kom-igang">Kom i gang</a>
+      <a class="btn" href="#demo">Book en demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero: teksten til venstre, en svarpanel-skisse til høyre.
+       Poenget er å vise på tre sekunder at siden svarer, ikke bare fortelle. -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__body">
+        <p class="eyebrow">Conversational AI for regulerte bransjer</p>
+        <h1>Svar på sekunder. <em>Kontroll</em> på hvert ord.</h1>
+        <p class="lead hero__lead">
+          boost.ai leverer en conversational AI-plattform for finans, forsikring, telekom
+          og offentlig sektor: AI-agenter som håndterer kundeservice og intern støtte,
+          med tale og meldinger i samme løsning.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#demo">Book en demo</a>
+          <a class="btn btn--ghost" href="#plattform">Se hva plattformen gjør</a>
+        </div>
+        <p class="hero__aside">
+          Prøv svarskissen selv — den svarer bare med det boost.ai selv har publisert.
+        </p>
+      </div>
+
+      <div class="hero__panel">
+        <section class="agent" aria-labelledby="agent-title">
+          <div class="agent__bar">
+            <span class="agent__dot" aria-hidden="true"></span>
+            <span class="agent__title" id="agent-title">Svarskisse</span>
+            <span class="agent__meta">skisse · ikke produksjon</span>
+          </div>
+
+          <div class="agent__log" id="agent-log" role="log" aria-live="polite">
+            <div class="msg msg--bot">
+              <p>Hei. Jeg er en skisse av boost.ai-agenten. Velg et spørsmål under, så svarer jeg med det boost.ai selv har skrevet på sine sider.</p>
+            </div>
+          </div>
+
+          <div class="agent__chips" id="agent-chips">
+            <button class="chip" type="button" data-q="plattform">Hva gjør boost.ai?</button>
+            <button class="chip" type="button" data-q="bransjer">Hvilke bransjer?</button>
+            <button class="chip" type="button" data-q="trygghet">Er det trygt i regulerte bransjer?</button>
+            <button class="chip" type="button" data-q="bygg">Kan vi bygge agentene selv?</button>
+            <button class="chip" type="button" data-q="kontor">Hvor har dere kontor?</button>
+            <button class="chip" type="button" data-q="demo">Hvordan ber jeg om demo?</button>
+          </div>
+
+          <p class="agent__note">Skisse uten backend. Ingen data forlater nettleseren.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nøkkeltallene de selv oppgir, som en statuslinje under heroen. -->
+  <section class="band" aria-label="Nøkkeltall fra boost.ai">
+    <div class="wrap band__grid">
+      <div class="stat">
+        <p class="stat__num">4,8<span>/5</span></p>
+        <p class="stat__lbl">stjerner på kundetilfredshet</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">94<span> %</span></p>
+        <p class="stat__lbl">vil anbefale boost.ai</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">ISO 27001</p>
+        <p class="stat__lbl">sertifisert, også ISO 27701</p>
+      </div>
+      <div class="stat">
+        <p class="stat__num">7</p>
+        <p class="stat__lbl">kontorer i Europa og USA</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="plattform">
+    <div class="wrap">
+      <div class="shead">
+        <p class="eyebrow">Plattformen</p>
+        <h2>Bygget for å gjøre jobben, ikke bare svare.</h2>
+        <p class="lead">
+          Plattformen kombinerer prøvd NLU med generative og agentiske egenskaper i én
+          hybrid arkitektur: autonomi der det er trygt, kontroll der det er kritisk.
+        </p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <p class="card__tag">01 · Hybrid AI</p>
+          <h3>Prøvd NLU, ikke bare generativt</h3>
+          <p>En hybrid arkitektur gir bedriften autonomi der det er trygt og kontroll der det er kritisk — uten å bytte ut det som allerede virker.</p>
+        </article>
+        <article class="card">
+          <p class="card__tag">02 · Agentisk</p>
+          <h3>Agenter som handler</h3>
+          <p>AI-agentene planlegger, tar beslutninger og utfører handlinger på tvers av kanaler og systemer — de gir utfall, ikke bare svar.</p>
+        </article>
+        <article class="card">
+          <p class="card__tag">03 · Tale og melding</p>
+          <h3>Tale er innebygd, ikke påmontert</h3>
+          <p>Kjøresenterautomasjon og digitale kanaler kjører i samme plattform, slik at kunden møter én sammenhengende tjeneste.</p>
+        </article>
+        <article class="card">
+          <p class="card__tag">04 · Bygg</p>
+          <h3>Uten utviklere</h3>
+          <p>No-code-byggeren lager avanserte samtaleflyt på minutter, og ferdige bransjemoduler gir brukstilfeller, kunnskapskilder og guardrails fra dag én.</p>
+        </article>
+        <article class="card">
+          <p class="card__tag">05 · Test</p>
+          <h3>Test før lansering</h3>
+          <p>Test Studio simulerer ekte brukere, avdekker jailbreak-forsøk og validerer guardrails. Eget teststudio automatiserer testanrop for tale.</p>
+        </article>
+        <article class="card">
+          <p class="card__tag">06 · Innsikt</p>
+          <h3>Analyser som peker videre</h3>
+          <p>Innebygd analyse og AI-drevet samtalegjennomgang finner forbedringspunktene i hver samtale, slik at teamet vet hva som skal endres.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft" id="bruksomrader">
+    <div class="wrap">
+      <div class="shead">
+        <p class="eyebrow">Bruksområder</p>
+        <h2>Tre steder å starte</h2>
+        <p class="lead">Samme plattform, tre innganger — avhengig av om målet er kunden, de ansatte eller kundebehandleren.</p>
+      </div>
+
+      <div class="usecases">
+        <article class="usecase">
+          <figure class="usecase__fig">
+            <img src="img/self-service.jpg" width="600" height="338" loading="lazy" decoding="async"
+                 alt="Kvinne med briller som sitter i sofaen med en laptop og leser på skjermen.">
+          </figure>
+          <h3>Selvbetjening</h3>
+          <p>Kunden får svar i kanalen den allerede bruker, og enklere saker treffer ikke køen hos menneskene.</p>
+        </article>
+
+        <article class="usecase">
+          <figure class="usecase__fig">
+            <img src="img/internal-support.jpg" width="600" height="338" loading="lazy" decoding="async"
+                 alt="Anleggsarbeider med hjelm og refleksvest som fører notater på et skjema og holder mobilen i hånden.">
+          </figure>
+          <h3>Intern støtte</h3>
+          <p>Ansatte får svar fra interne systemer og rutiner uten å vente på en saksbehandler eller lete i håndbøker.</p>
+        </article>
+
+        <article class="usecase">
+          <figure class="usecase__fig">
+            <img src="img/agent-assist.jpg" width="600" height="338" loading="lazy" decoding="async"
+                 alt="To kundebehandlere med headset foran dataskjermer i et åpent kontorlandskap.">
+          </figure>
+          <h3>Agent-assist</h3>
+          <p>Kundebehandleren får forslag og kontekst mens samtalen pågår, og slipper å lete etter neste steg.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="kunder">
+    <div class="wrap">
+      <div class="shead">
+        <p class="eyebrow">Kunder</p>
+        <h2>De som allerede har tatt den i bruk</h2>
+      </div>
+
+      <div class="proof">
+        <figure class="quote quote--feature">
+          <blockquote>
+            <p>«boost.ai leverer conversational AI i verdensklasse. Løsningen gjør det enkelt for oss å utvikle virtuelle agenter internt som er kraftfulle, intelligente og holder de høye servicekravene vi setter oss.»</p>
+          </blockquote>
+          <figcaption class="quote__by">
+            <img class="quote__portrait" src="img/benjamin-maxim.jpg" width="600" height="600" loading="lazy" decoding="async"
+                 alt="Benjamin Maxim, Chief Digital Strategy and Innovation Officer i MSU Federal Credit Union.">
+            <span>
+              <strong>Benjamin Maxim</strong>
+              Chief Digital Strategy and Innovation Officer, MSU Federal Credit Union
+            </span>
+          </figcaption>
+        </figure>
+
+        <article class="case">
+          <figure class="case__fig">
+            <img src="img/acorn.jpg" width="640" height="360" loading="lazy" decoding="async"
+                 alt="Person som står på et fullt tog, holder i en stropp og leser på mobilen.">
+          </figure>
+          <div class="case__body">
+            <p class="card__tag">Kundesak</p>
+            <h3>Acorn Insurance</h3>
+            <p>Bygget en conversational AI-motor for service og skadeoppgjør ende-til-ende.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote>
+            <p>«Test Studio hjelper oss å skalere bruken av generativ AI i kundeinteraksjoner. Det bygger tillit i ledelsen og støtter videre utvidelse av GenAI-bruken.»</p>
+          </blockquote>
+          <figcaption class="quote__by quote__by--plain">
+            <span><strong>Alex Philbrook</strong>Platform Owner, Sage</span>
+          </figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>
+            <p>«Med de nye AI-drevne CX Insights får vi umiddelbar og handlingsrettet innsikt direkte fra kundeinteraksjonene. Det endrer måten vi leverer kundeopplevelse på.»</p>
+          </blockquote>
+          <figcaption class="quote__by quote__by--plain">
+            <span><strong>Olav A. Sell</strong>Developer &amp; AI Trainer, Telenor Norge</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft" id="kom-igang">
+    <div class="wrap">
+      <div class="shead">
+        <p class="eyebrow">Kom i gang</p>
+        <h2>Fra modul til produksjon</h2>
+        <p class="lead">Tre steg, i den rekkefølgen plattformen selv legger opp til: bygg, test, optimaliser.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <p class="step__num">01</p>
+          <h3>Last inn en bransjemodul</h3>
+          <p>Ferdige moduler gir brukstilfeller, kunnskapskilder og compliance-guardrails som utgangspunkt, i stedet for en tom skisse.</p>
+        </li>
+        <li class="step">
+          <p class="step__num">02</p>
+          <h3>Bygg flyten uten kode</h3>
+          <p>Teamet setter opp samtaleflyt, integrasjoner og handlinger i byggeren — koblet til systemene som allerede står i drift.</p>
+        </li>
+        <li class="step">
+          <p class="step__num">03</p>
+          <h3>Test, lanser og optimaliser</h3>
+          <p>Test Studio prøver agenten før lansering. Etterpå viser analysen hvilke samtaler som bør forbedres, og hva som skal endres.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="security" id="sikkerhet">
+    <div class="wrap security__grid">
+      <div class="security__body">
+        <p class="eyebrow eyebrow--light">Sikkerhet og etterlevelse</p>
+        <h2>Regulerte bransjer krever mer enn et godt svar.</h2>
+        <p class="security__lead">
+          Plattformen er sertifisert etter ISO 27001 og 27701, og bygget for GDPR og OWASP,
+          med innebygde kontroller for datalagring, kryptering og personvern.
+        </p>
+        <ul class="pills">
+          <li>ISO 27001</li>
+          <li>ISO 27701</li>
+          <li>GDPR</li>
+          <li>OWASP</li>
+          <li>Datalagring</li>
+          <li>Kryptering</li>
+        </ul>
+      </div>
+
+      <figure class="security__quote">
+        <blockquote>
+          <p>«Sikkerhet og etterlevelse er en kjernedel av hvem vi er og hva vi leverer. Målet har alltid vært å lage den beste løsningen for virksomheter, og da må du også være best i klassen på sikkerhet og etterlevelse.»</p>
+        </blockquote>
+        <figcaption>Jerry Haywood, CEO i boost.ai</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="demo">
+    <div class="wrap demo__grid">
+      <div class="demo__body">
+        <p class="eyebrow">Book en demo</p>
+        <h2>Snakk med noen som har gjort det før</h2>
+        <p class="lead">
+          boost.ai holder til i Sandnes og Oslo, og har kontorer i Stockholm, København,
+          Helsingfors, Boston og London. Fortell oss hva dere vil automatisere, så tar
+          teamet det videre.
+        </p>
+
+        <h3 class="offices__hd">Kontorer</h3>
+        <ul class="offices">
+          <li><strong>Sandnes</strong><span>Grenseveien 21, 4313 Sandnes</span></li>
+          <li><strong>Oslo</strong><span>Nedre Vollgate 3, 0158 Oslo</span></li>
+          <li><strong>Stockholm</strong><span>Malmskillnadsgatan 44A, 111 57 Stockholm</span></li>
+          <li><strong>København</strong><span>Amager Strandvej 390-392, 2770 Kastrup</span></li>
+          <li><strong>Helsingfors</strong><span>Sofiankatu 4 C, 00170 Helsinki</span></li>
+          <li><strong>Boston</strong><span>50 Milk Street, Boston, MA 02108</span></li>
+          <li><strong>London</strong><span>87A Worship Street, Shoreditch, EC2A 2BE</span></li>
+        </ul>
+      </div>
+
+      <div class="demo__panel">
+        <form class="demo-form" id="demo-form" action="#demo">
+          <h3 class="demo-form__hd">Demo-forespørsel</h3>
+
+          <div class="field-row">
+            <label for="f-navn">Navn
+              <input id="f-navn" name="navn" type="text" autocomplete="name" required>
+            </label>
+            <label for="f-bedrift">Bedrift
+              <input id="f-bedrift" name="bedrift" type="text" autocomplete="organization" required>
+            </label>
+          </div>
+
+          <label for="f-epost">Jobb-e-post
+            <input id="f-epost" name="epost" type="email" autocomplete="email" required>
+          </label>
+
+          <label for="f-bransje">Bransje
+            <select id="f-bransje" name="bransje" required>
+              <option value="">Velg bransje</option>
+              <option value="finans">Finans</option>
+              <option value="forsikring">Forsikring</option>
+              <option value="telekom">Telekom</option>
+              <option value="offentlig">Offentlig sektor</option>
+              <option value="annet">Annet</option>
+            </select>
+          </label>
+
+          <label for="f-melding">Hva vil dere automatisere?
+            <textarea id="f-melding" name="melding" rows="4" placeholder="For eksempel: kundeservice på chat og telefon, eller intern støtte for de ansatte."></textarea>
+          </label>
+
+          <button class="btn demo-form__btn" type="submit">Send demo-forespørsel</button>
+          <p class="demo-form__note">Skissen sender ingenting. Alt skjer i nettleseren din.</p>
+        </form>
+
+        <div class="receipt" id="receipt" hidden>
+          <p class="receipt__mark" aria-hidden="true">✓</p>
+          <h3>Forespørselen er registrert</h3>
+          <p class="receipt__lead" id="receipt-lead">Takk. I denne skissen er forespørselen bare vist her — ingenting er sendt.</p>
+          <dl class="receipt__list">
+            <div><dt>Referanse</dt><dd id="receipt-ref">—</dd></div>
+            <div><dt>Bedrift</dt><dd id="receipt-company">—</dd></div>
+            <div><dt>Bransje</dt><dd id="receipt-industry">—</dd></div>
+            <div><dt>Kontakt</dt><dd id="receipt-contact">—</dd></div>
+          </dl>
+          <button class="btn btn--ghost receipt__again" type="button" data-reset>Fyll ut på nytt</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <a class="brand brand--footer" href="#top" aria-label="boost.ai — til toppen av siden">
+        <img class="brand__logo" src="img/logo.svg" width="652" height="174" alt="boost.ai">
+      </a>
+      <p class="footer__txt">Conversational AI-plattform for finans, forsikring, telekom og offentlig sektor. Tale og meldinger i samme løsning.</p>
+    </div>
+
+    <div>
+      <p class="footer__hd">Selskap</p>
+      <p class="footer__txt">Boost AI AS<br>Org.nr. 917 362 394<br>Grenseveien 21, 4313 Sandnes</p>
+    </div>
+
+    <div>
+      <p class="footer__hd">Siden</p>
+      <ul class="footer__links">
+        <li><a href="#plattform">Plattformen</a></li>
+        <li><a href="#bruksomrader">Bruksområder</a></li>
+        <li><a href="#kunder">Kunder</a></li>
+        <li><a href="#demo">Book en demo</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer__bottom">
+    <p>© 2026 boost.ai</p>
+    <p>Kilder: boost.ai og Enhetsregisteret.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

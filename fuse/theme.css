@@ -1,0 +1,140 @@
+/*
+  Fuse — identitet.
+  Paletten er hentet fra fuse.no: fiolett #7f56d9, dyp fiolett #4d3483,
+  nesten-svart med fiolettstikk #16102a og en lys lilla flate #f3eefd.
+  Én font: Figtree, samme familie som kunden bruker selv.
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Flater */
+  --paper: #faf8ff;
+  --paper-2: #f3eefd;
+  --paper-3: #ece4fb;
+  --kort: #ffffff;
+
+  /* Blekk */
+  --ink: #16102a;
+  --ink-2: #221737;
+  --fg: #171129;
+  --muted: #5b5372;
+
+  /* Streker */
+  --line: #e6dff5;
+  --line-sterk: #d5c9ee;
+
+  /* Aksent */
+  --accent: #7f56d9;
+  --accent-deep: #4d3483;
+  --accent-soft: #ede6fd;
+  --accent-fg: #ffffff;
+  --lilla-lys: #cbb5f8;
+  --lilla-dempet: #b9aed3;
+
+  /* Grunnmuren i base.css */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --radius: 20px;
+  --radius-sm: 12px;
+  --wrap: 1180px;
+  --header-h: 70px;
+  --shadow: 0 1px 2px rgb(23 16 42 / 5%), 0 22px 48px rgb(23 16 42 / 10%);
+
+  /* To fonter er grensen — her holder vi oss til én familie. */
+  --font-display: 'Figtree', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Figtree', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-tall: 'Figtree', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--paper);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  letter-spacing: -0.015em;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+a {
+  color: var(--accent-deep);
+  text-decoration-color: color-mix(in srgb, var(--accent-deep) 35%, transparent);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Aksentfargen er mørk nok til tekst på lys flate, men knapper bruker
+   den fiolette grunnfargen med hvit tekst. */
+:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 3px;
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  min-height: 48px;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 1px 1px rgb(23 16 42 / 6%);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgb(77 52 131 / 22%);
+}
+
+.btn--ghost {
+  border-color: var(--line-sterk);
+  color: var(--fg);
+  box-shadow: none;
+}
+
+.btn--ghost:hover {
+  background: var(--paper-2);
+  box-shadow: 0 10px 24px rgb(23 16 42 / 8%);
+}
+
+.eyebrow {
+  letter-spacing: 0.16em;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.eyebrow--lys {
+  color: var(--lilla-lys);
+}
+
+.lead {
+  color: var(--muted);
+}
+
+/* Mørke flater gjenbruker blekkfargen og får lysere fokusring. */
+.hero :focus-visible,
+.sitater :focus-visible,
+.footer :focus-visible {
+  outline-color: #e8ddff;
+}

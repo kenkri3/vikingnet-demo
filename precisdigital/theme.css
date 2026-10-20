@@ -1,0 +1,80 @@
+/*
+  Precis (precisdigital) — tema.
+
+  Arketype: redaksjonell, men kjølig. Blekk og kald, lys blågrå flate —
+  fargene er hentet fra deres eget materiale: ordmerket er #232332, prikken
+  over «i» er #00dc41, og de lyse flatene på forsiden ligger rundt #e7e9f2.
+
+  Én aksent: deres egen signalgrønn. Den brukes som prikk, markør og på
+  primærknappen (med blekk som tekstfarge, som i ordmerket).
+
+  To fonter: Instrument Serif i store utsagn, Manrope i alt annet.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --paper: #eef1f7;
+  --paper-deep: #e2e7f1;
+  --paper-card: #ffffff;
+  --ink: #232332;
+  --ink-deep: #191926;
+  --ink-soft: #2e2e42;
+
+  /* Tekst */
+  --fg: #232332;
+  --muted: #55576e;
+  --line: #d2d8e4;
+  --line-soft: #e1e6ef;
+
+  /* Signalgrønn — deres egen */
+  --green: #00d444;
+  --green-ink: #0a7a33;      /* grønn som tekst på lys flate, AA */
+  --accent: #00c93f;
+  --accent-fg: #0b1d12;
+  --accent-soft: #dcf7e3;
+
+  /* Kit-navn */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-deep);
+  --accent-line: #b9e8c6;
+
+  /* Typografi */
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.1rem, 1.02rem + 0.4vw, 1.28rem);
+  --t-h3: clamp(1.3rem, 1.15rem + 0.7vw, 1.7rem);
+  --t-h2: clamp(2rem, 1.45rem + 2.1vw, 3.15rem);
+  --t-h1: clamp(2.6rem, 1.55rem + 4.4vw, 5rem);
+
+  /* Form: lite avrunding på flater, pill på knapper */
+  --radius: 12px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgb(25 25 38 / 5%), 0 18px 40px -24px rgb(25 25 38 / 26%);
+  --wrap: 1200px;
+  --header-h: 74px;
+
+  --focus: var(--ink);
+  color-scheme: light;
+}
+
+html {
+  background: var(--paper);
+}
+
+/* Instrument Serif har bare 400 — syntetisk fet er stygt i store grader. */
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.012em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}

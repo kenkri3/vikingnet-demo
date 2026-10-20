@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Precis — markedsføring som henger sammen</title>
+<meta name="description" content="Precis er et teknologidrevet markedsbyrå i Oslo. Medier, kreativt, data og vår egen plattform Alvie som én tjeneste — siden 2012." />
+<meta name="theme-color" content="#eef1f7" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Precis" />
+<meta property="og:title" content="Precis — markedsføring som henger sammen" />
+<meta property="og:description" content="Medier, kreativt, teknologi og data som én tjeneste. 13 kontorer, Oslo-kontoret i Møllergata 12." />
+<meta property="og:image" content="img/og.jpg" />
+<meta property="og:image:alt" content="Fem fargede kuler på rad mot en lys blå flate" />
+<meta property="og:locale" content="nb_NO" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Precis",
+  "legalName": "Precis Digital AS",
+  "url": "https://www.precis.com/",
+  "description": "Teknologidrevet markedsbyrå med medier, kreativt, data og egen attribusjonsplattform.",
+  "foundingDate": "2012",
+  "identifier": "914744504",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Møllergata 12",
+    "postalCode": "0179",
+    "addressLocality": "Oslo",
+    "addressCountry": "NO"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#toppen" aria-label="Precis — til toppen av siden">
+      Precis<span class="brand__dot" aria-hidden="true"></span>
+    </a>
+
+    <nav class="nav" id="meny" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#sammenheng">Slik henger det sammen</a>
+      <a href="#bevis">Bevis</a>
+      <a href="#kontor">Kontor</a>
+      <a class="btn nav__cta" href="#kontakt">Snakk med oss</a>
+    </nav>
+
+    <button class="nav-toggle" id="menyKnapp" type="button" aria-expanded="false" aria-controls="meny" aria-label="Åpne meny">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="toppen">
+
+  <!-- 1. Hero: utsagnet til venstre, det levende svarpanelet til høyre. -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="prikk" aria-hidden="true"></span>Markedsbyrå · Oslo · siden 2012</p>
+        <h1 class="hero__title">Markedsføring som <em>henger sammen</em>.</h1>
+        <p class="lead">Medier, kreativt, teknologi og data som én tjeneste — for merkevarer som må kunne vise at markedsføringen gir avkastning.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#kontakt">Snakk med oss</a>
+          <a class="btn btn--ghost" href="#tjenester">Se tjenestene</a>
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Siden</dt>
+            <dd>2012</dd>
+          </div>
+          <div>
+            <dt>Kontorer</dt>
+            <dd>13</dd>
+          </div>
+          <div>
+            <dt>Ansatte i Oslo</dt>
+            <dd>31</dd>
+          </div>
+          <div>
+            <dt>Egen plattform</dt>
+            <dd>Alvie</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="svar" aria-labelledby="svar-tittel">
+        <div class="svar__head">
+          <div>
+            <p class="svar__kicker"><span class="prikk" aria-hidden="true"></span>Svar direkte</p>
+            <h2 class="svar__title" id="svar-tittel">Spør — du får svar nå</h2>
+          </div>
+          <span class="svar__badge">Skisse</span>
+        </div>
+
+        <div class="svar__log" id="svar-logg" role="log" aria-live="polite">
+          <p class="msg msg--bot">Hei! Jeg svarer ut fra det som står på Precis’ egne sider. Hva vil du vite?</p>
+        </div>
+
+        <div class="svar__chips" id="svar-chips">
+          <button class="chip" type="button" data-sporsmal="Hva gjør dere?">Hva gjør dere?</button>
+          <button class="chip" type="button" data-sporsmal="Hvor sitter dere?">Hvor sitter dere?</button>
+          <button class="chip" type="button" data-sporsmal="Hvilke kunder har dere?">Hvilke kunder?</button>
+          <button class="chip" type="button" data-sporsmal="Hvordan måler dere effekt?">Effektmåling</button>
+          <button class="chip" type="button" data-sporsmal="Hva koster det?">Pris</button>
+        </div>
+
+        <form class="svar__form" id="svar-skjema">
+          <label class="visually-hidden" for="svar-felt">Skriv et spørsmål</label>
+          <input id="svar-felt" name="sporsmal" type="text" autocomplete="off" placeholder="Skriv et spørsmål …" />
+          <button class="btn" type="submit">Send</button>
+        </form>
+
+        <p class="svar__note">Skisse: svarene er hentet fra Precis’ egne sider. Ingenting sendes eller lagres.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Klientbånd: navnene de selv viser fram. -->
+  <section class="klienter" aria-label="Selskaper vi har jobbet med">
+    <div class="wrap klienter__inner">
+      <p class="klienter__label">Selskaper vi har jobbet med</p>
+      <ul class="klienter__list">
+        <li>Volvo</li>
+        <li>Fjällräven</li>
+        <li>Voi</li>
+        <li>Matas</li>
+        <li>Åhléns</li>
+        <li>Amazon</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Problemet, i deres egne ord. -->
+  <section class="band">
+    <div class="wrap band__grid">
+      <h2>Markedsføring er rotete. Vi gjør den forståelig.</h2>
+      <div>
+        <p class="band__quote">«Annonseplattformene automatiserer. Kostnadene stiger. Attribusjonen er ødelagt.»</p>
+        <p class="band__src">Slik beskriver vi selv utfordringen i medietjenesten.</p>
+        <p>Siloer gjør det vanskelig å måle hva som faktisk skaper inntekter. Vi kobler teknologi, kreativt, søk, medier og vår egen plattform Alvie, og fjerner gjettingen fra attribusjonen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Tjenestene. -->
+  <section class="section" id="tjenester">
+    <div class="wrap">
+      <div class="seksjon-topp">
+        <p class="eyebrow">Tjenester</p>
+        <h2>Seks områder, ett team</h2>
+        <p class="lead">Hvert område har egne spesialister, og de jobber mot samme strategi — for B2B, e-handel, retail og app.</p>
+      </div>
+
+      <div class="tjenester">
+        <article class="tjeneste">
+          <p class="tjeneste__nr">01</p>
+          <h3>Medier</h3>
+          <p class="tjeneste__slag">Bruk budsjettet smartere i alle kanaler.</p>
+          <ul class="tjeneste__liste">
+            <li>Mediestrategi</li>
+            <li>Betalt søk</li>
+            <li>Betalt sosialt</li>
+            <li>Programmatisk og direktekjøp</li>
+          </ul>
+        </article>
+
+        <article class="tjeneste">
+          <p class="tjeneste__nr">02</p>
+          <h3>Data og analyse</h3>
+          <p class="tjeneste__slag">Beslutninger med kunnskap, ikke antakelser.</p>
+          <ul class="tjeneste__liste">
+            <li>Datastrategi og styring</li>
+            <li>Datateknikk</li>
+            <li>Datavitenskap</li>
+            <li>Sporing</li>
+          </ul>
+        </article>
+
+        <article class="tjeneste">
+          <p class="tjeneste__nr">03</p>
+          <h3>Alvie</h3>
+          <p class="tjeneste__slag">Vår egen plattform for attribusjon.</p>
+          <ul class="tjeneste__liste">
+            <li>Data Insights</li>
+            <li>Bidding Signals</li>
+            <li>Alvie Attribution</li>
+          </ul>
+        </article>
+
+        <article class="tjeneste">
+          <p class="tjeneste__nr">04</p>
+          <h3>SEO og CRO</h3>
+          <p class="tjeneste__slag">Slå konkurrentene i søk.</p>
+          <ul class="tjeneste__liste">
+            <li>Innholdsstrategi og produksjon</li>
+            <li>SXO</li>
+            <li>AEO</li>
+            <li>Teknisk SEO</li>
+          </ul>
+        </article>
+
+        <article class="tjeneste">
+          <p class="tjeneste__nr">05</p>
+          <h3>Kreativt</h3>
+          <p class="tjeneste__slag">Kreativt som presterer, i skala.</p>
+          <ul class="tjeneste__liste">
+            <li>Annonsekreativ</li>
+            <li>Tilpasset hver kanal</li>
+            <li>Forankret i data</li>
+          </ul>
+        </article>
+
+        <article class="tjeneste">
+          <p class="tjeneste__nr">06</p>
+          <h3>AEO og GEO</h3>
+          <p class="tjeneste__slag">Sikre svarene i den nye søkealderen.</p>
+          <ul class="tjeneste__liste">
+            <li>AEO-revisjon og rapportering</li>
+            <li>AEO-innholdsstrategi</li>
+            <li>LLM-autoritet</li>
+            <li>Teknisk SEO for LLM</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Arbeidsmåten: tre steg med deres egne bilder. -->
+  <section class="section section--tight" id="sammenheng">
+    <div class="wrap">
+      <div class="seksjon-topp">
+        <p class="eyebrow">Slik henger det sammen</p>
+        <h2>Tre grep, i denne rekkefølgen</h2>
+        <p class="lead">Vi forenkler, samler og driver resultatene — slik beskriver vi selv arbeidsmåten.</p>
+      </div>
+
+      <div class="steg">
+        <div class="steg__media">
+          <img src="img/forenkle.jpg" width="1400" height="788" loading="lazy" alt="To blå baner med kuler som møtes i ett spor mot en lys blå flate" />
+        </div>
+        <div class="steg__tekst">
+          <p class="steg__nr">Steg 01</p>
+          <h3>Forenkle det komplekse</h3>
+          <p>Vi oversetter innviklede data og begreper til klare, gjennomførbare tiltak.</p>
+        </div>
+      </div>
+
+      <div class="steg steg--snudd">
+        <div class="steg__media">
+          <img src="img/samle.jpg" width="1400" height="788" loading="lazy" alt="Fem kuler i ulike farger på rad mot en lys blå flate" />
+        </div>
+        <div class="steg__tekst">
+          <p class="steg__nr">Steg 02</p>
+          <h3>Samle markedsføringen</h3>
+          <p>Medier, kreativt, teknologi, data og analyse under én strategi som snakker til målgruppen.</p>
+        </div>
+      </div>
+
+      <div class="steg">
+        <div class="steg__media">
+          <img src="img/effekt.jpg" width="1400" height="788" loading="lazy" alt="En grønn kule i enden av en sikksakk-bane mot en lys blå flate" />
+        </div>
+        <div class="steg__tekst">
+          <p class="steg__nr">Steg 03</p>
+          <h3>Drive resultatene som betyr noe</h3>
+          <p>Finne effektivisering, optimalisere ytelsen og bevise effekten av hvert markedsføringsgrep.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Bevis: priser, partnerskap, sitat og case. -->
+  <section class="section" id="bevis">
+    <div class="wrap">
+      <div class="seksjon-topp">
+        <p class="eyebrow">Bevis</p>
+        <h2>Priser, partnerskap og kunder</h2>
+        <p class="lead">Utmerkelser vi har fått, partnerstatusene vi jobber under, og noen av casene våre.</p>
+      </div>
+
+      <div class="bevis">
+        <div>
+          <ul class="utmerkelser">
+            <li><span>Global Search Awards</span><span class="utmerkelser__ar">2020 · 2024 · 2025 · 2026</span></li>
+            <li><span>European Search Awards</span><span class="utmerkelser__ar">2017–2026</span></li>
+            <li><span>Google Premier Partner Awards</span><span class="utmerkelser__ar">2017 · 2018 · 2019</span></li>
+            <li><span>Great Place to Work</span><span class="utmerkelser__ar">2017–2023</span></li>
+          </ul>
+
+          <h3>Case</h3>
+          <ul class="utmerkelser">
+            <li><span>Fjällräven</span><span class="utmerkelser__ar">DOOH med geolokalisert targetering</span></li>
+            <li><span>Care by Volvo</span><span class="utmerkelser__ar">Brukerreise og innholdsstrategi</span></li>
+            <li><span>Voi</span><span class="utmerkelser__ar">Digital modning og lønnsom vekst</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <blockquote class="sitat">
+            <p>«It’s been a pure joy working with Precis. Together, we work as one team to use data as a guiding star to set our strategic direction.»</p>
+            <cite><strong>Emelie Överdahl</strong>Volvo Cars</cite>
+          </blockquote>
+
+          <div class="partnere">
+            <h3>Partnere</h3>
+            <ul>
+              <li>Google Premier Partner</li>
+              <li>Meta Business Partner</li>
+              <li>Microsoft Elite Partner</li>
+              <li>HubSpot Platinum Partner</li>
+              <li>TikTok Marketing Partner</li>
+              <li>LinkedIn Marketing Partner</li>
+              <li>Smartly Certified Partner</li>
+              <li>Profound Partner</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Kontoret i Oslo, og de andre byene. -->
+  <section class="section kontor" id="kontor">
+    <div class="wrap">
+      <div class="seksjon-topp">
+        <p class="eyebrow">Kontor</p>
+        <h2>Oslo, og tolv byer til</h2>
+        <p class="lead">Oslo-kontoret ligger i Møllergata 12. Resten av byrået sitter i Norden, Europa og Nord-Amerika.</p>
+      </div>
+
+      <div class="kontor__grid">
+        <div class="oslokort">
+          <img src="img/oslo.jpg" width="900" height="900" loading="lazy" alt="Operahuset i Oslo sett fra sjøsiden, i overskyet vær" />
+          <div class="oslokort__tekst">
+            <h3>Oslo</h3>
+            <address>
+              Precis Digital AS<br />
+              Møllergata 12<br />
+              0179 Oslo
+            </address>
+            <p class="oslokort__merknad">31 ansatte i Norge, ifølge Enhetsregisteret.</p>
+          </div>
+        </div>
+
+        <ul class="byraer">
+          <li><strong>Stockholm</strong><span>Åsögatan 121, 116 24 Stockholm</span></li>
+          <li><strong>Göteborg</strong><span>Norra Allégatan 5, 413 01 Göteborg</span></li>
+          <li><strong>København</strong><span>Struenseegade 9, 3. th, 2200 København N</span></li>
+          <li><strong>Aarhus</strong><span>Viborgvej 161A, 8210 Aarhus V</span></li>
+          <li><strong>Helsingfors</strong><span>Siltasaarenkatu 12C, 00530 Helsingfors</span></li>
+          <li><strong>London</strong><span>3–7 Herbal Hill, EC1R 5EJ London</span></li>
+          <li><strong>Berlin</strong><span>Kottbusser Damm 79C, 10967 Berlin</span></li>
+          <li><strong>Madrid</strong><span>Avenida de Brasil 17, 4D, 28020 Madrid</span></li>
+          <li><strong>Barcelona</strong><span>C/ de Ramon Turró 169 A, 08005 Barcelona</span></li>
+          <li><strong>Milano</strong><span>Via Arcivescovo Calabania 6, 20139 Milano</span></li>
+          <li><strong>Pietrasanta</strong><span>Via Aurelia Sud 23/E, 55045 Pietrasanta</span></li>
+          <li><strong>Austin</strong><span>Nord-Amerika</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Kontakt: skjema med e-post og telefon, og kvittering i nettleseren. -->
+  <section class="section" id="kontakt">
+    <div class="wrap">
+      <div class="kontakt__grid">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Fortell oss hva dere vil oppnå</h2>
+          <p class="lead">Skriv noen ord om merkevaren, kanalene og målet. Vi svarer fra Oslo-kontoret.</p>
+
+          <img class="kontakt__bilde" src="img/kontor.jpg" width="1100" height="825" loading="lazy" alt="To kolleger i samtale med hver sin kaffekopp i et lyst kontorlokale" />
+
+          <ul class="kontakt__liste">
+            <li><strong>Besøk</strong><span>Møllergata 12, 0179 Oslo</span></li>
+            <li><strong>Post</strong><span>Precis Digital AS, Møllergata 12, 0179 Oslo</span></li>
+            <li><strong>Flere kontakter</strong><span>Skjemaet på precis.com/contact</span></li>
+          </ul>
+        </div>
+
+        <div class="kontakt__kort">
+          <form id="kontakt-skjema" novalidate>
+            <h3>Forespørsel</h3>
+            <div class="grid-2">
+              <div class="field">
+                <label for="navn">Navn</label>
+                <input id="navn" name="navn" type="text" autocomplete="name" placeholder="Fornavn og etternavn" />
+                <p class="field__error" data-feil-for="navn"></p>
+              </div>
+              <div class="field">
+                <label for="epost">E-post</label>
+                <input id="epost" name="epost" type="email" autocomplete="email" placeholder="navn@virksomhet.no" />
+                <p class="field__error" data-feil-for="epost"></p>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="field">
+                <label for="telefon">Telefon</label>
+                <input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="Mobil eller direkte" />
+                <p class="field__error" data-feil-for="telefon"></p>
+              </div>
+              <div class="field">
+                <label for="tema">Hva gjelder det?</label>
+                <select id="tema" name="tema">
+                  <option value="Medier">Medier</option>
+                  <option value="Data og analyse">Data og analyse</option>
+                  <option value="Alvie">Alvie</option>
+                  <option value="SEO og CRO">SEO og CRO</option>
+                  <option value="Kreativt">Kreativt</option>
+                  <option value="AEO og GEO">AEO og GEO</option>
+                  <option value="Annet">Annet</option>
+                </select>
+                <p class="field__error" data-feil-for="tema"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="melding">Melding</label>
+              <textarea id="melding" name="melding" placeholder="Hva vil dere oppnå, og hva har dere prøvd så langt?"></textarea>
+              <p class="field__error" data-feil-for="melding"></p>
+            </div>
+
+            <button class="btn" type="submit">Send forespørsel</button>
+            <p class="kontakt__note">Skissen sender ingenting: alt skjer i nettleseren din, og ingen opplysninger lagres.</p>
+          </form>
+
+          <div class="kvittering" id="kvittering" role="status" aria-live="polite" hidden>
+            <p class="kvittering__merke"><span class="prikk" aria-hidden="true"></span>Registrert lokalt</p>
+            <h3>Takk — forespørselen er notert</h3>
+            <p class="kvittering__ref" id="kvittering-ref">PR-0000-0000</p>
+            <dl id="kvittering-innhold"></dl>
+            <button class="btn btn--ghost" type="button" id="ny-foresporsel">Send en ny</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="footer__brand" href="#toppen">Precis<span class="brand__dot" aria-hidden="true"></span></a>
+        <address>
+          Precis Digital AS<br />
+          Møllergata 12, 0179 Oslo<br />
+          Org.nr 914 744 504
+        </address>
+      </div>
+      <nav aria-label="Bunnmeny">
+        <ul class="footer__nav">
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#sammenheng">Slik henger det sammen</a></li>
+          <li><a href="#bevis">Bevis</a></li>
+          <li><a href="#kontor">Kontor</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__bunn">
+      <p>© <span id="ar">2026</span> Precis</p>
+      <p>precis.com</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

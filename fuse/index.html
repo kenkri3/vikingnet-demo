@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fuse – skreddersydde digitale produkter, bygget og driftet i Oslo</title>
+<meta name="description" content="Fuse utvikler og drifter skreddersydde digitale produkter for selskaper som trenger sterke brukeropplevelser, kort tid til markedet og lav teknisk risiko. Tollbugata 17, Oslo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Fuse – produkter som lanseres, samarbeid som varer">
+<meta property="og:description" content="Studio, App, Web, Pay, Engage og Core: Fuse bygger og drifter digitale produkter med over ti års erfaring. Svar på tre spørsmål og se hvilken kombinasjon som passer dere.">
+<meta property="og:image" content="img/hero-fuse.webp">
+<meta property="og:image:alt" content="Skisser av Fuse-grensesnittet med dashbord, booking, betaling og appvisning i fiolett">
+<meta name="theme-color" content="#16102a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#toppen">fuse<span class="brand__punkt" aria-hidden="true"></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny" aria-label="Åpne meny">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="hovedmeny" aria-label="Hovedmeny">
+      <a href="#produkter">Produkter</a>
+      <a href="#kundecaser">Kundecaser</a>
+      <a href="#prosess">Slik jobber vi</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn" href="#svar">Svar på tre spørsmål</a>
+    </nav>
+  </div>
+</header>
+
+<main id="toppen">
+
+  <section class="hero" aria-labelledby="hero-tittel">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="wrap hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow eyebrow--lys">Din partner på tech · Tollbugata 17, Oslo</p>
+        <h1 id="hero-tittel">Produkter som lanseres.<em>Samarbeid som varer.</em></h1>
+        <p class="hero__lead">Fuse har over ti års erfaring med å utvikle og drifte skreddersydde digitale produkter. Vi hjelper selskaper som trenger sterke digitale brukeropplevelser, kort tid til markedet og lav teknisk risiko.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#svar">Svar på tre spørsmål</a>
+          <a class="btn btn--ghost" href="tel:+4724022727">Ring +47 24 02 27 27</a>
+        </div>
+        <p class="hero__note">Svarskissen regner i nettleseren din. Ingenting sendes.</p>
+      </div>
+      <div class="hero__media">
+        <figure class="hero__figure">
+          <img src="img/hero-fuse.webp" alt="Skisser av Fuse-grensesnittet: dashbord, booking, betaling og appvisning i fiolett" width="1200" height="1146" fetchpriority="high" decoding="async">
+        </figure>
+        <div class="svar-kort" aria-hidden="true">
+          <p class="svar-kort__merke">Skissen svarer</p>
+          <p class="svar-kort__sporsmal">«Booking og betaling i app»</p>
+          <p class="svar-kort__svar">Fuse App + Fuse Pay<span>med Fuse Studio bak</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <dl class="tall" aria-label="Fuse i korte trekk">
+      <div><dt>Stiftet</dt><dd>2011</dd></div>
+      <div><dt>Ansatte</dt><dd>18</dd></div>
+      <div><dt>Produkter</dt><dd>6</dd></div>
+      <div><dt>Kundecaser</dt><dd>10</dd></div>
+    </dl>
+    <p class="tall__kilde">Stiftetår og antall ansatte er hentet fra Enhetsregisteret for FUSETOOLS AS.</p>
+  </div>
+
+  <!-- Interaksjonen: tre spørsmål, ett svar, ingen innsending. -->
+  <section class="section svar" id="svar" aria-labelledby="svar-tittel">
+    <div class="wrap svar__grid">
+      <div class="svar__intro">
+        <p class="eyebrow">Svar med en gang</p>
+        <h2 id="svar-tittel">Tre spørsmål. Et svar du kan ta med videre.</h2>
+        <p class="lead">Velg hva løsningen skal gjøre, hvor dere står i dag, og hvem dere er. Skissen setter sammen Fuse-produktene som dekker behovet – mens dere sitter der, uten e-post fram og tilbake.</p>
+        <p class="svar__skisse">Dette er en skisse av flyten. Alt regnes ut lokalt i nettleseren, og ingenting sendes til Fuse eller noen andre.</p>
+      </div>
+
+      <div class="svar__panel">
+        <ol class="steg-ind" id="steg-ind">
+          <li data-steg="1" data-aktiv="ja"><span class="steg-ind__nr">1</span>Behov</li>
+          <li data-steg="2"><span class="steg-ind__nr">2</span>Situasjon</li>
+          <li data-steg="3"><span class="steg-ind__nr">3</span>Kontakt</li>
+        </ol>
+
+        <form id="svar-skjema" novalidate>
+          <fieldset class="steg" data-steg="1">
+            <legend class="steg__legend" tabindex="-1">Hva skal løsningen gjøre?</legend>
+            <p class="steg__hjelp">Velg ett eller flere behov.</p>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="behov" value="web"><span class="chip__boks" aria-hidden="true"></span>Nettsted eller webapp</label>
+              <label class="chip"><input type="checkbox" name="behov" value="app"><span class="chip__boks" aria-hidden="true"></span>App i App Store og Google Play</label>
+              <label class="chip"><input type="checkbox" name="behov" value="studio"><span class="chip__boks" aria-hidden="true"></span>Booking, kunder og innhold i ett grensesnitt</label>
+              <label class="chip"><input type="checkbox" name="behov" value="pay"><span class="chip__boks" aria-hidden="true"></span>Betalinger på nett eller i app</label>
+              <label class="chip"><input type="checkbox" name="behov" value="engage"><span class="chip__boks" aria-hidden="true"></span>E-post, push og SMS</label>
+              <label class="chip"><input type="checkbox" name="behov" value="core"><span class="chip__boks" aria-hidden="true"></span>Drift, hosting og forvaltning</label>
+            </div>
+            <div class="knapper">
+              <button class="btn" type="button" data-neste>Neste</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="steg" data-steg="2" hidden>
+            <legend class="steg__legend" tabindex="-1">Hvor står dere i dag?</legend>
+            <p class="steg__hjelp">Velg det som ligner mest.</p>
+            <div class="valg-liste">
+              <label class="valg"><input type="radio" name="status" value="ingenting"><span class="valg__prikk" aria-hidden="true"></span>Vi har ingenting i dag</label>
+              <label class="valg"><input type="radio" name="status" value="videre"><span class="valg__prikk" aria-hidden="true"></span>Vi har noe som skal videreutvikles</label>
+              <label class="valg"><input type="radio" name="status" value="drift"><span class="valg__prikk" aria-hidden="true"></span>Vi har en løsning som må driftes</label>
+            </div>
+            <div class="knapper">
+              <button class="btn btn--tilbake" type="button" data-tilbake>Tilbake</button>
+              <button class="btn" type="button" data-neste>Neste</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="steg" data-steg="3" hidden>
+            <legend class="steg__legend" tabindex="-1">Hvem er dere?</legend>
+            <p class="steg__hjelp">Navnet brukes bare i oppsummeringen på denne skjermen.</p>
+            <label class="felt"><span>Navn</span>
+              <input type="text" name="navn" autocomplete="name" placeholder="Fornavn og etternavn">
+            </label>
+            <label class="felt"><span>Selskap</span>
+              <input type="text" name="selskap" autocomplete="organization" placeholder="Navn på selskapet">
+            </label>
+            <label class="felt"><span>E-post <span class="felt__hint">(valgfritt)</span></span>
+              <input type="email" name="epost" autocomplete="email" placeholder="navn@selskap.no">
+            </label>
+            <div class="knapper">
+              <button class="btn btn--tilbake" type="button" data-tilbake>Tilbake</button>
+              <button class="btn" type="submit">Vis svaret</button>
+            </div>
+          </fieldset>
+
+          <p class="svar__feil" id="svar-feil" role="alert" aria-live="polite"></p>
+        </form>
+
+        <div class="kvittering" id="kvittering" hidden>
+          <p class="kvittering__merke">Skisse · ikke sendt</p>
+          <h3 id="kv-tittel" tabindex="-1">Deres kombinasjon</h3>
+          <p class="kvittering__ingress" id="kv-ingress"></p>
+          <ul class="kvittering__liste" id="kv-liste"></ul>
+          <dl class="kvittering__meta" id="kv-meta"></dl>
+          <p class="kvittering__grunnlag"><strong>Fuse Core er grunnlaget for alle Fuse-produkter.</strong> Infrastruktur, hosting, overvåking og feilretting kan ligge hos Fuse, slik at dere slipper et sittende team når løsningen er i drift.</p>
+          <div class="kvittering__knapper">
+            <a class="btn" href="tel:+4724022727">Ring +47 24 02 27 27</a>
+            <a class="btn btn--ghost" href="mailto:stine@fuse.no?subject=Behov%20fra%20svarskissen%20p%C3%A5%20fuse.no">Send til Stine</a>
+            <button class="btn btn--ghost" type="button" id="kopier">Kopier oppsummeringen</button>
+            <button class="knapp-tekst" type="button" id="nullstill">Begynn på nytt</button>
+          </div>
+          <p class="kvittering__status" id="kv-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section produkter" id="produkter" aria-labelledby="produkter-tittel">
+    <div class="wrap">
+      <header class="seksjon-topp">
+        <p class="eyebrow">Plattformen</p>
+        <h2 id="produkter-tittel">Alt du trenger for å lykkes</h2>
+        <p class="lead">Vi kombinerer tverrfaglig erfaring og ekspertise med metodikk og teknologi i et sammensatt system. Fuse inkluderer tjenestene, infrastrukturen, programvaren og rutinene dere trenger for å lykkes med komplekse digitale produkter.</p>
+      </header>
+
+      <div class="grid produkter__grid">
+        <article class="produkt">
+          <div class="produkt__topp">
+            <p class="produkt__nr">01</p>
+            <span class="produkt__ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+          </div>
+          <h3>Fuse Studio</h3>
+          <p>Fuse Studio samler all data på ett sted. Et grensesnitt hvor alle ansatte får god oversikt over kunder, kampanjer, bookinger, innhold, med muligheter til å samarbeide i sanntid.</p>
+        </article>
+
+        <article class="produkt">
+          <div class="produkt__topp">
+            <p class="produkt__nr">02</p>
+            <span class="produkt__ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></span>
+          </div>
+          <h3>Fuse App</h3>
+          <p>Fuse App tar deg ut på iOS og Android raskt og kostnadseffektivt. Design og brukeropplevelse tilpasses ned til minste detalj.</p>
+        </article>
+
+        <article class="produkt">
+          <div class="produkt__topp">
+            <p class="produkt__nr">03</p>
+            <span class="produkt__ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2.5"/><path d="M2.5 8.5h19M6 12h5"/></svg></span>
+          </div>
+          <h3>Fuse Web</h3>
+          <p>Fuse Web gir deg full fleksibilitet over moderne webapper helt tilpasset dine behov. Alt du trenger for å nå ut til og interagere med kundene dine på nett.</p>
+        </article>
+
+        <article class="produkt">
+          <div class="produkt__topp">
+            <p class="produkt__nr">04</p>
+            <span class="produkt__ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4"/></svg></span>
+          </div>
+          <h3>Fuse Pay</h3>
+          <p>Fuse Pay dekker alle behov knyttet til netthandel og digitale betalinger. Ta imot engangs- eller gjentakende betalinger via nettside eller i app. En fullintegrert løsning med konkurransedyktige priser.</p>
+        </article>
+
+        <article class="produkt">
+          <div class="produkt__topp">
+            <p class="produkt__nr">05</p>
+            <span class="produkt__ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 10.5 13.5M21 3l-6.5 18-4-7.5L3 9.5 21 3Z"/></svg></span>
+          </div>
+          <h3>Fuse Engage</h3>
+          <p>Fuse Engage lar deg bygge personlige brukerreiser og øke konverteringer. Automatiser e-post, push-varsler, SMS og innhold i appen direkte fra Fuse Studio.</p>
+        </article>
+
+        <article class="produkt">
+          <div class="produkt__topp">
+            <p class="produkt__nr">06</p>
+            <span class="produkt__ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20 6v5.5c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-3.5Z"/><path d="m8.75 12 2.25 2.25 4.25-4.5"/></svg></span>
+          </div>
+          <h3>Fuse Core</h3>
+          <p>Fuse Core gjør at du slipper å ha et sittende team når løsningen er i drift. Vi tar ende-til-ende ansvar for alt av forvaltning, hosting, lisenser, feilretting, teknologi, aktiv feilsøking, overvåking, infrastruktur.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section kunder" id="kundecaser" aria-labelledby="kunder-tittel">
+    <div class="wrap">
+      <header class="seksjon-topp">
+        <p class="eyebrow">Kundecaser</p>
+        <h2 id="kunder-tittel">Noen av kundene våre</h2>
+        <p class="lead">Fuse har bygget og driftet løsninger for strømmetjenester, alarmselskaper, hotell, aktivitetsparker og strømselskaper. Her er seks av dem.</p>
+      </header>
+
+      <div class="kunde-grid">
+        <figure class="kunde">
+          <img src="img/fabel.webp" alt="Fabel-logoen i mørkegrønt på lys grønn bakgrunn" width="760" height="917" loading="lazy" decoding="async">
+          <figcaption>
+            <p class="kunde__navn">Fabel</p>
+            <p class="kunde__tekst">En av Norges største strømmetjenester for lydbøker</p>
+          </figcaption>
+        </figure>
+
+        <figure class="kunde">
+          <img src="img/bildusjen.webp" alt="Hånd med svamp vasker frontruten på en bil" width="760" height="663" loading="lazy" decoding="async">
+          <figcaption>
+            <p class="kunde__navn">Bildusjen</p>
+            <p class="kunde__tekst">En sømløs og automatisert bilvaskopplevelse</p>
+          </figcaption>
+        </figure>
+
+        <figure class="kunde">
+          <img src="img/funplays.webp" alt="Funplays-logoen i hvitt på fiolett bakgrunn" width="760" height="917" loading="lazy" decoding="async">
+          <figcaption>
+            <p class="kunde__navn">Funplays</p>
+            <p class="kunde__tekst">Aktivitetspark for barn og hvileplass for foreldre</p>
+          </figcaption>
+        </figure>
+
+        <figure class="kunde">
+          <img src="img/selvaag.webp" alt="Leilighetsinteriør i varmt lys, med Selvaag Pluss-logoen i gult" width="760" height="916" loading="lazy" decoding="async">
+          <figcaption>
+            <p class="kunde__navn">Selvaag</p>
+            <p class="kunde__tekst">En blanding av leilighet og hotell</p>
+          </figcaption>
+        </figure>
+
+        <figure class="kunde">
+          <img src="img/elvia.webp" alt="Elvia-logoen i hvitt på mørk bakgrunn" width="760" height="916" loading="lazy" decoding="async">
+          <figcaption>
+            <p class="kunde__navn">Elvia</p>
+            <p class="kunde__tekst">Gir over to millioner kunder oversikt over strømforbruk og fakturaer</p>
+          </figcaption>
+        </figure>
+
+        <figure class="kunde">
+          <img src="img/ohma.webp" alt="Person som leser på et nettbrett i en trehytte, med Ohma-logoen over bildet" width="760" height="916" loading="lazy" decoding="async">
+          <figcaption>
+            <p class="kunde__navn">Ohma</p>
+            <p class="kunde__tekst">Et litt annerledes alarmselskap</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sitater" aria-labelledby="sitater-tittel">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--lys">Samarbeid som varer</p>
+      <h2 id="sitater-tittel">Vi brenner for å holde kundene våre fornøyde</h2>
+      <p class="sitater__lead">Som et utvidet produktteam er vi med på alle opp- og nedturer. To av kundene sier det slik:</p>
+
+      <div class="sitater__grid">
+        <figure class="sitat">
+          <blockquote>
+            <p>«Vi valgte Fuse fremfor Salesforce. Fuse kombinerer forretningsdata, markedsføring og operasjonelt innhold, slik at vi fremstår konsistente på nett, i app, booking og fysisk.»</p>
+          </blockquote>
+          <figcaption class="sitat__person">
+            <img src="img/claus-skovfoged.webp" alt="Portrett av Claus Skovfoged" width="384" height="384" loading="lazy" decoding="async">
+            <span>
+              <span class="sitat__navn">Claus Skovfoged</span>
+              <span class="sitat__rolle">CEO, Funplays</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <figure class="sitat">
+          <blockquote>
+            <p>«Fuse tilbyr en forfriskende forretnings- og leveransemodell som vi kunne teste med lav risiko. Nå føler vi oss trygge på at våre mobile behov blir håndtert av Fuse, og vi er svært fornøyde med resultatene.»</p>
+          </blockquote>
+          <figcaption class="sitat__person">
+            <img src="img/erik-fillipsveen.webp" alt="Portrett av Erik Fillipsveen" width="384" height="384" loading="lazy" decoding="async">
+            <span>
+              <span class="sitat__navn">Erik Fillipsveen</span>
+              <span class="sitat__rolle">Head of IT Development, Elvia</span>
+            </span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section prosess" id="prosess" aria-labelledby="prosess-tittel">
+    <div class="wrap prosess__grid">
+      <div>
+        <p class="eyebrow">Slik jobber vi</p>
+        <h2 id="prosess-tittel">Fra behov til drift, med samme team</h2>
+        <p class="lead">Når dere jobber med Fuse, får dere tilgang til et powerhouse med utviklere, designere, rådgivere og prosjektledere. Vi setter sammen riktig kompetanse tilpasset deres behov, akkurat når det trengs.</p>
+      </div>
+      <ol class="steg-liste">
+        <li>
+          <span class="steg-liste__nr">01</span>
+          <h3>Behov og datamodell</h3>
+          <p>Fuse Studio tilpasses deres unike datamodell og forretningsregler, og samler kunder, kampanjer, bookinger og innhold på ett sted.</p>
+        </li>
+        <li>
+          <span class="steg-liste__nr">02</span>
+          <h3>Bygg og integrasjon</h3>
+          <p>App, web og betalinger bygges på samme plattform. Integrasjoner mot kildesystemene gjør at data flyter uten dobbeltføring, og manuelle steg fjernes.</p>
+        </li>
+        <li>
+          <span class="steg-liste__nr">03</span>
+          <h3>Test, lansering og drift</h3>
+          <p>Vi har modne QA-prosesser med automatisert testing, manuell testing og akseptansetesting. Etter lansering tar Fuse Core ansvar for hosting, skalering, overvåking og feilretting.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section kontakt" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap kontakt__grid">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="kontakt-tittel">Lurer du på om Fuse passer for deg?</h2>
+        <p class="lead">Vi tar gjerne en prat og viser deg mulighetene.</p>
+        <ul class="kontakt-liste">
+          <li>
+            <span class="kontakt-liste__merke">Besøk</span>
+            Tollbugata 17, 0152 Oslo
+          </li>
+          <li>
+            <span class="kontakt-liste__merke">Telefon</span>
+            <a href="tel:+4724022727">+47 24 02 27 27</a>
+          </li>
+          <li>
+            <span class="kontakt-liste__merke">Org.nr</span>
+            997 001 877 (FUSETOOLS AS)
+          </li>
+        </ul>
+      </div>
+
+      <div class="personer">
+        <article class="person">
+          <img src="img/anders-lassen.webp" alt="Portrett av Anders Lassen" width="620" height="655" loading="lazy" decoding="async">
+          <div>
+            <h3>Anders Lassen</h3>
+            <p class="person__rolle">CEO</p>
+            <a href="mailto:anders@fuse.no">anders@fuse.no</a>
+          </div>
+        </article>
+        <article class="person">
+          <img src="img/stine-norum.webp" alt="Portrett av Stine Norum" width="620" height="652" loading="lazy" decoding="async">
+          <div>
+            <h3>Stine Norum</h3>
+            <p class="person__rolle">VP Business Development</p>
+            <a href="mailto:stine@fuse.no">stine@fuse.no</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <p class="brand">fuse<span class="brand__punkt" aria-hidden="true"></span></p>
+        <p>Skreddersydde digitale produkter, bygget og driftet fra Oslo.</p>
+      </div>
+      <div>
+        <p class="footer__tittel">Adresse</p>
+        <p>Tollbugata 17<br>0152 Oslo</p>
+        <p><a href="tel:+4724022727">+47 24 02 27 27</a></p>
+      </div>
+      <div>
+        <p class="footer__tittel">Selskap</p>
+        <p>FUSETOOLS AS<br>Org.nr 997 001 877</p>
+        <p><a href="mailto:anders@fuse.no">anders@fuse.no</a></p>
+      </div>
+    </div>
+    <div class="footer__bunn">
+      <p>© 2026 Fuse</p>
+      <p>Tollbugata 17, 0152 Oslo</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

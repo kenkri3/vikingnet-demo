@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Smart Norway">
+  <rect width="64" height="64" rx="13" fill="#204050"/>
+  <path d="M34 25a13 13 0 0 1 26 0Z" fill="#f0a060"/>
+  <text x="12" y="48" font-family="Montserrat, 'Segoe UI', system-ui, sans-serif" font-size="38" font-weight="700" fill="#fff">s</text>
+</svg>

@@ -1,0 +1,66 @@
+/*
+  boost.ai — identitet.
+  Arketype: klinisk/rolig, teknisk variant. Mye luft, geometrisk display
+  (Sora) og en nøytral humanistisk brødtekst (Instrument Sans). Fargen er
+  hentet fra deres eget ordmerke: dyp plomme #59195D. Plommen er eneste
+  aksent; alt annet er papir, blekk og hårfine linjer.
+
+  Ligger etter ../kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #fbf8fc;
+  --bg-soft: #f5eef8;
+  --surface: #ffffff;
+  --surface-2: #fdfbfe;
+
+  /* Blekk */
+  --fg: #1b121e;
+  --fg-strong: #120a14;
+  --muted: #625a69;
+
+  /* Linjer */
+  --line: #e7ddeb;
+  --line-strong: #d3c4d9;
+
+  /* Deres egen plomme */
+  --accent: #59195d;
+  --accent-deep: #3a0d3e;
+  --accent-bright: #a962b1;
+  --accent-soft: #f1e5f3;
+  --accent-fg: #ffffff;
+
+  /* Mørkt bånd */
+  --ink: #200a23;
+  --ink-2: #2c0f30;
+  --ink-fg: #f8f2f9;
+  --ink-muted: #c6b5cc;
+
+  /* Status i svarskissen */
+  --signal: #3fae7c;
+
+  /* To fonter, ikke flere */
+  --font-display: 'Sora', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Instrument Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgb(32 10 35 / 4%), 0 18px 44px -22px rgb(32 10 35 / 22%);
+  --wrap: 1160px;
+  --header-h: 74px;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  color: var(--fg);
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}

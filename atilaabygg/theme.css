@@ -1,0 +1,80 @@
+/*
+  A Til Å Bygg AS — identitet.
+  Paletten er hentet rett ut av logoen deres: oksidrød (#a82020 i logofila,
+  dempet til #9c1f1f for å holde AA på linpapir) og blekk, på varmt papir.
+  To fonter: Fraunces til overskrifter, Karla til alt annet.
+  Arketype: varm/håndverk — lite radius, tynne streker, mye luft.
+*/
+
+:root {
+  --papir: #f8f2e8;
+  --papir-dyp: #eee4d4;
+  --blekk: #191614;
+  --blekk-los: #57504a;
+  --strek: #dcd0bd;
+  --strek-mork: #c9b9a1;
+
+  --oxide: #9c1f1f;
+  --oxide-mork: #7a1616;
+  --oxide-lys: #f3e2da;
+
+  --natt: #191614;
+  --natt-tekst: #f4eee4;
+  --natt-strek: #3b332c;
+
+  /* Demo-kitets variabler */
+  --bg: var(--papir);
+  --bg-soft: var(--papir-dyp);
+  --fg: var(--blekk);
+  --muted: var(--blekk-los);
+  --line: var(--strek);
+  --accent: var(--oxide);
+  --accent-fg: #fff8f0;
+  --accent-soft: var(--oxide-lys);
+
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-body: 'Karla', 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(25 22 20 / 5%), 0 18px 40px -24px rgb(25 22 20 / 35%);
+
+  --wrap: 1160px;
+  --header-h: 72px;
+}
+
+::selection {
+  background: var(--oxide);
+  color: #fff8f0;
+}
+
+body {
+  background-color: var(--papir);
+  /* Et svakt linmønster i stedet for flat hvit: papir, ikke skjerm. */
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(25 22 20 / 1.6%) 0 1px,
+    transparent 1px 7px
+  );
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1,
+h2 {
+  font-optical-sizing: auto;
+}
+
+.eyebrow {
+  color: var(--oxide);
+  letter-spacing: 0.18em;
+}
+
+.lead {
+  color: var(--blekk-los);
+}

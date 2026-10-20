@@ -1,0 +1,83 @@
+/*
+  OIKO AS — identitet.
+  Arketype: kreativ trykksak / redaksjonell. Kald sjøgrå papirflate, blekk som
+  tekstfarge, én mursteinsrød aksent — samme farge familien finner i trykk og
+  ikke i deres monokrome logo. Bricolage Grotesque i overskrifter, DM Sans i
+  brødtekst. To fonter, ikke flere.
+
+  Lastes etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #eef1ef;
+  --bg-soft: #e4e9e6;
+  --surface: #fbfcfb;
+
+  /* Blekk */
+  --fg: #0f1416;
+  --fg-soft: #263134;
+  --muted: #55615f;
+
+  /* Linjer */
+  --line: #cfd7d3;
+  --line-strong: #a9b4af;
+
+  /* Én aksent: mursteinsrød */
+  --accent: #b5342a;
+  --accent-deep: #8a241c;
+  --accent-soft: #f3ddd8;
+  --accent-fg: #fff9f7;
+
+  /* Mørk flate (brief-bandet) */
+  --ink: #0c1113;
+  --ink-soft: #171e21;
+  --ink-fg: #eef1ef;
+  --ink-muted: #a3aeab;
+
+  /* Typografi */
+  --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --t-h1: clamp(2.3rem, 1.15rem + 5vw, 4.7rem);
+  --t-h2: clamp(1.8rem, 1.25rem + 2.4vw, 3rem);
+  --t-h3: clamp(1.15rem, 1.05rem + 0.45vw, 1.4rem);
+  --t-lead: clamp(1.05rem, 0.99rem + 0.38vw, 1.26rem);
+  --t-base: 1.0625rem;
+  --t-sm: 0.92rem;
+  --t-xs: 0.76rem;
+
+  /* Form: skarpe kanter, som trykk på papir */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(12 17 19 / 5%), 0 18px 40px -28px rgb(12 17 19 / 40%);
+
+  --wrap: 1180px;
+  --header-h: 74px;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-variant-numeric: tabular-nums;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+h1 {
+  font-weight: 620;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
