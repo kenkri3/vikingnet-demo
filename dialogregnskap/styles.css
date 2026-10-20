@@ -523,6 +523,7 @@ html.js .hero__kort {
 }
 
 .bevis__merke {
+  justify-self: start;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -530,7 +531,7 @@ html.js .hero__kort {
 }
 
 .bevis__merke img {
-  height: clamp(26px, 3.4vw, 34px);
+  height: clamp(28px, 3.6vw, 38px);
   width: auto;
 }
 
@@ -686,12 +687,22 @@ html.js .hero__kort {
 
 .slik__bilde {
   margin: 0;
+  align-self: start;
+}
+
+@media (min-width: 981px) {
+  /* Bildet følger stegene når man scroller — ellers ville kolonnen stått tom */
+  .slik__bilde {
+    position: sticky;
+    top: calc(var(--header-h) + 28px);
+  }
 }
 
 .slik__bilde img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
+  object-position: 50% 42%;
   border-radius: var(--radius);
 }
 
@@ -1056,16 +1067,20 @@ html.js .hero__kort {
 @media (max-width: 900px) {
   .nav {
     gap: 0;
+    padding-top: 0.4rem;
+    background: var(--ink);
+    border-bottom: 1px solid var(--linje-blekk);
+    box-shadow: 0 34px 54px -26px rgb(0 0 0 / 60%);
   }
 
   .nav a {
     min-height: 48px;
-    border-bottom: 1px solid var(--line);
-    color: var(--fg);
+    border-bottom: 1px solid var(--linje-blekk);
+    color: var(--pa-blekk);
   }
 
   .nav a:first-child {
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--linje-blekk);
   }
 
   .nav a.nav__cta {
@@ -1082,6 +1097,12 @@ html.js .hero__kort {
 
   .nav a.nav__cta:hover {
     background: #3fb9e4;
+  }
+
+  .nav-toggle {
+    background: transparent;
+    border-color: rgb(234 243 247 / 30%);
+    color: var(--pa-blekk);
   }
 }
 
@@ -1132,6 +1153,13 @@ html.js .hero__kort {
 
   .bevis__tall {
     font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
   }
 }
 

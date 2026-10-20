@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fjorden Regnskap AS – regnskap, lønn og skatt på Gol og i Porsgrunn</title>
+<meta name="description" content="Erfarent regnskapsbyrå på Gol og i Porsgrunn. Regnskapsføring, firmaetablering, lønn, skatt, rådgivning og fakturering. Send henvendelsen i tre steg.">
+<meta name="theme-color" content="#0A1B24">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Fjorden Regnskap AS">
+<meta property="og:title" content="Fjorden Regnskap AS – regnskap, lønn og skatt">
+<meta property="og:description" content="Vi holder til i Porsgrunn sentrum og på Gol. Velg tjeneste og system, og send henvendelsen i tre steg – kvittering med referanse.">
+<meta property="og:image" content="img/golsfjellet-skogshorn.jpg">
+<meta property="og:image:alt" content="Skogshorn sett fra Golsfjellet, vinter">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap">
+
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="topp">
+  <div class="wrap topp__inner">
+    <a class="brand" href="#topp">
+      <img src="img/logo.png" alt="Fjorden Regnskap AS" width="317" height="86">
+      <span class="brand__tekst">Fjorden Regnskap<small>Gol · Porsgrunn</small></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny" aria-label="Åpne meny">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav nav--lukket" id="hovedmeny" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#henvendelse">Henvendelse</a>
+      <a href="#systemer">Systemer</a>
+      <a href="#om">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="btn btn--ring" href="tel:+4790732115">
+      <svg class="ikon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.7 3.2h2.1l1.5 3.8-1.9 1.3a12.3 12.3 0 0 0 5.9 5.9l1.3-1.9 3.8 1.5v2.1a2.6 2.6 0 0 1-2.8 2.6C10 18 6 14 5.5 7.4A2.6 2.6 0 0 1 6.7 3.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      907 32 115
+    </a>
+  </div>
+</header>
+
+<main id="topp">
+
+  <!-- Hero: rolig tekstfelt til venstre, ett stille bilde til høyre -->
+  <section class="hero" aria-labelledby="hero-tittel">
+    <div class="wrap hero__grid">
+      <div class="hero__tekst">
+        <p class="eyebrow">Regnskap · Lønn · Skatt — Gol og Porsgrunn</p>
+        <h1 id="hero-tittel">Regnskap, lønn og skatt — fra Gol og Porsgrunn.</h1>
+        <p class="hero__ingress">Vi er et erfarent regnskapsbyrå. Profesjonalitet og nøyaktighet er viktig for oss, og vi skreddersyr løsningene etter kundens behov.</p>
+
+        <div class="hero__handlinger">
+          <a class="btn" href="#henvendelse">Send en henvendelse</a>
+          <a class="btn btn--ghost" href="tel:+4790732115">Ring 907 32 115</a>
+        </div>
+
+        <dl class="fakta">
+          <div>
+            <dt>Stiftet</dt>
+            <dd>2017</dd>
+          </div>
+          <div>
+            <dt>Medlem av</dt>
+            <dd>Regnskap Norge</dd>
+          </div>
+          <div>
+            <dt>Adresse</dt>
+            <dd>Livegen 26, Gol</dd>
+          </div>
+        </dl>
+      </div>
+
+      <figure class="hero__bilde">
+        <img src="img/golsfjellet-skogshorn.jpg" alt="Snødekt fjell sett fra Golsfjellet en klar vinterdag" width="768" height="960" fetchpriority="high">
+        <figcaption>Skogshorn sett fra Golsfjellet. Foto: a.froese, Wikimedia Commons (CC BY-SA 2.0).</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Henvendelsen: interaksjonen, tidlig i siden -->
+  <section class="henv-seksjon section" id="henvendelse" aria-labelledby="henv-tittel">
+    <div class="wrap">
+      <div class="henv__topp reveal">
+        <div>
+          <p class="eyebrow">Henvendelsen</p>
+          <h2 id="henv-tittel">Henvendelsen havner hos oss — ikke i en tom innboks.</h2>
+        </div>
+        <p class="lead">Tre steg: hva det gjelder, hvilket system dere bruker i dag, og hvordan vi når deg. Kvitteringen med referanse kommer med en gang.</p>
+      </div>
+
+      <div class="henv__grid">
+        <div class="henv__panel reveal">
+          <form id="henv-skjema" novalidate>
+            <div class="stegtopp">
+              <div class="steglinje" aria-hidden="true">
+                <span data-prikk="1" class="er-aktiv"></span>
+                <span data-prikk="2"></span>
+                <span data-prikk="3"></span>
+              </div>
+              <p class="stegtekst">Steg <span id="steg-nr">1</span> av 3 · <span id="steg-navn">Hva gjelder det</span></p>
+            </div>
+
+            <div class="panel" data-panel="1" role="group" aria-labelledby="panel-1-tittel">
+              <h3 id="panel-1-tittel">Hva gjelder henvendelsen?</h3>
+              <div class="valg" role="group" aria-label="Velg tjeneste">
+                <button type="button" class="valg__knapp" data-tjeneste="Regnskapsføring" aria-pressed="false">Regnskapsføring</button>
+                <button type="button" class="valg__knapp" data-tjeneste="Firmaetablering" aria-pressed="false">Firmaetablering</button>
+                <button type="button" class="valg__knapp" data-tjeneste="Lønnstjenester" aria-pressed="false">Lønnstjenester</button>
+                <button type="button" class="valg__knapp" data-tjeneste="Skatterådgivning" aria-pressed="false">Skatterådgivning</button>
+                <button type="button" class="valg__knapp" data-tjeneste="Økonomisk rådgivning" aria-pressed="false">Økonomisk rådgivning</button>
+                <button type="button" class="valg__knapp" data-tjeneste="Faktureringstjenester" aria-pressed="false">Faktureringstjenester</button>
+              </div>
+              <p class="feil" id="feil-tjeneste" role="alert" hidden>Velg hva henvendelsen gjelder.</p>
+            </div>
+
+            <div class="panel" data-panel="2" role="group" aria-labelledby="panel-2-tittel" hidden>
+              <h3 id="panel-2-tittel">System og selskap</h3>
+              <label class="felt">
+                <span>Regnskapssystem i dag</span>
+                <select id="system" name="system" required>
+                  <option value="">Velg system</option>
+                  <option>Visma eAccounting</option>
+                  <option>Tripletex</option>
+                  <option>Fiken</option>
+                  <option>Agro24</option>
+                  <option>DataLex</option>
+                  <option>Duett</option>
+                  <option>Conta</option>
+                  <option>Papirbasert regnskap</option>
+                  <option>Ingen systemer i dag</option>
+                </select>
+              </label>
+              <p class="feil" id="feil-system" role="alert" hidden>Velg systemet dere bruker i dag.</p>
+
+              <label class="felt">
+                <span>Organisasjonsnummer <span class="felt__hjelp">(valgfritt)</span></span>
+                <input id="org" name="org" type="text" inputmode="numeric" autocomplete="off" placeholder="Ni siffer" aria-describedby="hjelp-org">
+              </label>
+              <p class="felt__hjelp" id="hjelp-org">La stå tomt hvis selskapet ikke er registrert ennå.</p>
+              <p class="feil" id="feil-org" role="alert" hidden>Organisasjonsnummeret skal ha ni siffer.</p>
+            </div>
+
+            <div class="panel" data-panel="3" role="group" aria-labelledby="panel-3-tittel" hidden>
+              <h3 id="panel-3-tittel">Hvordan når vi deg?</h3>
+              <label class="felt">
+                <span>Navn</span>
+                <input id="navn" name="navn" type="text" autocomplete="name" required>
+              </label>
+              <p class="feil" id="feil-navn" role="alert" hidden>Skriv navnet ditt.</p>
+
+              <label class="felt">
+                <span>E-post</span>
+                <input id="epost" name="epost" type="email" autocomplete="email" required>
+              </label>
+              <p class="feil" id="feil-epost" role="alert" hidden>Skriv en gyldig e-postadresse.</p>
+
+              <label class="felt">
+                <span>Telefon</span>
+                <input id="telefon" name="telefon" type="tel" autocomplete="tel" required>
+              </label>
+              <p class="feil" id="feil-telefon" role="alert" hidden>Skriv et telefonnummer vi kan nå deg på.</p>
+
+              <label class="felt">
+                <span>Melding <span class="felt__hjelp">(valgfritt)</span></span>
+                <textarea id="melding" name="melding" rows="4"></textarea>
+              </label>
+            </div>
+
+            <div class="skjema__nav">
+              <button type="button" class="btn btn--ghost" id="tilbake" hidden>Tilbake</button>
+              <button type="button" class="btn" id="neste">Neste</button>
+              <button type="submit" class="btn" id="send" hidden>Send henvendelsen</button>
+            </div>
+
+            <p class="skisse">Skisse: skjemaet er en demonstrasjon. Det sender ingenting og lagrer ingenting.</p>
+          </form>
+
+          <div class="kvittering" id="kvittering" role="status" tabindex="-1" hidden>
+            <p class="eyebrow">Kvittering</p>
+            <h3>Henvendelsen er registrert.</h3>
+            <p class="kvittering__tekst" id="kvittering-tekst"></p>
+            <p class="kvittering__ref"><span>Referanse</span> <strong id="kvittering-ref"></strong></p>
+            <dl class="kvittering__liste">
+              <div><dt>Tjeneste</dt><dd id="kvittering-tjeneste"></dd></div>
+              <div><dt>System</dt><dd id="kvittering-system"></dd></div>
+              <div><dt>Registrert</dt><dd id="kvittering-tid"></dd></div>
+            </dl>
+            <button type="button" class="btn btn--ghost" id="ny-henvendelse">Ny henvendelse</button>
+          </div>
+        </div>
+
+        <aside class="sammendrag" aria-labelledby="sammendrag-tittel">
+          <h3 id="sammendrag-tittel">Sammendrag</h3>
+          <dl>
+            <div>
+              <dt>Tjeneste</dt>
+              <dd id="sum-tjeneste">Ikke valgt</dd>
+            </div>
+            <div>
+              <dt>System</dt>
+              <dd id="sum-system">Ikke valgt</dd>
+            </div>
+            <div>
+              <dt>Organisasjonsnummer</dt>
+              <dd id="sum-org">Ikke oppgitt</dd>
+            </div>
+            <div>
+              <dt>Kontakt</dt>
+              <dd id="sum-kontakt">Ikke oppgitt</dd>
+            </div>
+          </dl>
+          <p class="sammendrag__fot">Alt du fyller ut, havner i én henvendelse med referanse — ikke i fire e-poster.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tjenester: nummerert liste, hele raden er en knapp inn i henvendelsen -->
+  <section class="tjenester section" id="tjenester" aria-labelledby="tjenester-tittel">
+    <div class="wrap">
+      <div class="seksjonstopp reveal">
+        <div>
+          <p class="eyebrow">Tjenester</p>
+          <h2 id="tjenester-tittel">Det vi gjør, i den rekkefølgen vi møter det.</h2>
+        </div>
+        <p class="lead">Trykk på en tjeneste for å ta den med inn i henvendelsen. Du kan bytte underveis.</p>
+      </div>
+
+      <div class="tjeneste-liste reveal">
+        <button type="button" class="tjeneste" data-velg-tjeneste="Regnskapsføring">
+          <span class="tjeneste__nr">01</span>
+          <span class="tjeneste__tekst"><span class="tjeneste__navn">Regnskapsføring</span><span class="tjeneste__beskrivelse">Bokføring, avstemming og rapportering gjennom året.</span></span>
+          <span class="tjeneste__hint">Bruk i henvendelsen →</span>
+        </button>
+        <button type="button" class="tjeneste" data-velg-tjeneste="Firmaetablering">
+          <span class="tjeneste__nr">02</span>
+          <span class="tjeneste__tekst"><span class="tjeneste__navn">Firmaetablering</span><span class="tjeneste__beskrivelse">Etablering av firma, med regnskapet på plass fra første bilag.</span></span>
+          <span class="tjeneste__hint">Bruk i henvendelsen →</span>
+        </button>
+        <button type="button" class="tjeneste" data-velg-tjeneste="Lønnstjenester">
+          <span class="tjeneste__nr">03</span>
+          <span class="tjeneste__tekst"><span class="tjeneste__navn">Lønnstjenester</span><span class="tjeneste__beskrivelse">Lønn, a-melding og det som hører til de ansatte.</span></span>
+          <span class="tjeneste__hint">Bruk i henvendelsen →</span>
+        </button>
+        <button type="button" class="tjeneste" data-velg-tjeneste="Skatterådgivning">
+          <span class="tjeneste__nr">04</span>
+          <span class="tjeneste__tekst"><span class="tjeneste__navn">Skatterådgivning</span><span class="tjeneste__beskrivelse">Skatteberegning og spørsmål om skatt for selskap og eier.</span></span>
+          <span class="tjeneste__hint">Bruk i henvendelsen →</span>
+        </button>
+        <button type="button" class="tjeneste" data-velg-tjeneste="Økonomisk rådgivning">
+          <span class="tjeneste__nr">05</span>
+          <span class="tjeneste__tekst"><span class="tjeneste__navn">Økonomisk rådgivning</span><span class="tjeneste__beskrivelse">Tallene dine brukt til å ta beslutninger, ikke bare til å rapportere.</span></span>
+          <span class="tjeneste__hint">Bruk i henvendelsen →</span>
+        </button>
+        <button type="button" class="tjeneste" data-velg-tjeneste="Faktureringstjenester">
+          <span class="tjeneste__nr">06</span>
+          <span class="tjeneste__tekst"><span class="tjeneste__navn">Faktureringstjenester</span><span class="tjeneste__beskrivelse">Vi sender fakturaene og følger opp det som skal inn.</span></span>
+          <span class="tjeneste__hint">Bruk i henvendelsen →</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Systemer -->
+  <section class="systemer section" id="systemer" aria-labelledby="systemer-tittel">
+    <div class="wrap">
+      <div class="seksjonstopp reveal">
+        <div>
+          <p class="eyebrow">Systemer</p>
+          <h2 id="systemer-tittel">Vi jobber i systemene dere allerede bruker.</h2>
+        </div>
+        <p class="lead">Står deres system ikke på listen, tar vi en prat om det. Har dere ingenting i dag, fører vi regnskapet papirbasert.</p>
+      </div>
+
+      <div class="systemer__grid reveal">
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>Visma eAccounting</p>
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>Tripletex</p>
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>Fiken (opprydding)</p>
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>Papirbasert regnskap</p>
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>Agro24</p>
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>DataLex</p>
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>Duett</p>
+        <p class="system"><span class="system__prikk" aria-hidden="true"></span>Conta</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Om oss + sitatbånd -->
+  <section class="om section" id="om" aria-labelledby="om-tittel">
+    <div class="wrap">
+      <div class="om__grid">
+        <div class="reveal">
+          <p class="eyebrow">Om oss</p>
+          <h2 id="om-tittel">Et erfarent byrå — på to steder.</h2>
+          <p>Vi holder til i Porsgrunn sentrum og på Gol. Adressen i Enhetsregisteret er Livegen 26 på Gol.</p>
+          <p>Fjorden Regnskap AS ble stiftet i 2017 og er medlem av Regnskap Norge. Næringskoden er 69.202 — regnskapsføring og bokføring.</p>
+          <ul class="om__punkter">
+            <li><span>Org.nr</span> 919 724 471</li>
+            <li><span>Stiftet</span> 27. september 2017</li>
+            <li><span>Medlem</span> Regnskap Norge</li>
+          </ul>
+        </div>
+
+        <aside class="rolle reveal">
+          <div class="rolle__monogram" aria-hidden="true">OA</div>
+          <p class="rolle__navn">Ole Amundsli</p>
+          <p class="rolle__rolle">Daglig leder og styrets leder</p>
+          <p class="rolle__kilde">Rolle oppgitt i Enhetsregisteret. Vi viser ingen portretter vi ikke har fra byrået selv.</p>
+        </aside>
+      </div>
+
+      <figure class="band reveal">
+        <div class="band__ramme">
+          <img src="img/golsfjellet-vinter.jpg" alt="Vinterlandskap på Golsfjellet med snødekte fjell i bakgrunnen" width="1280" height="483" loading="lazy">
+          <blockquote class="band__sitat">
+            <p>«Med mange år i bransjen kan vi garantere deg at vi utfører våre tjenester med beste servicegrad.»</p>
+            <cite>Fjorden Regnskap AS, forsiden</cite>
+          </blockquote>
+        </div>
+        <figcaption>På Golsfjellet. Foto: m.prinke, Wikimedia Commons (CC BY-SA 2.0).</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="kontakt section" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap">
+      <div class="seksjonstopp reveal">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="kontakt-tittel">Ring, skriv eller stikk innom.</h2>
+        </div>
+        <p class="lead">Vil du heller snakke med noen med en gang, ringer du. Skjemaet over er for deg som vil ha det skriftlig.</p>
+      </div>
+
+      <dl class="kontakt__grid reveal">
+        <div class="kontakt__blokk">
+          <dt>Besøk</dt>
+          <dd>Livegen 26<br>3550 Gol</dd>
+        </div>
+        <div class="kontakt__blokk">
+          <dt>Telefon</dt>
+          <dd><a href="tel:+4790732115">907 32 115</a></dd>
+        </div>
+        <div class="kontakt__blokk">
+          <dt>E-post</dt>
+          <dd><a href="mailto:ole@fjordenregnskap.no">ole@fjordenregnskap.no</a></dd>
+        </div>
+        <div class="kontakt__blokk">
+          <dt>Organisasjon</dt>
+          <dd>919 724 471<br>Regnskap Norge</dd>
+        </div>
+      </dl>
+
+      <div class="kontakt__cta reveal">
+        <p>Henvendelsen blir liggende med referanse hos oss — også når den kommer utenfor kontortid.</p>
+        <a class="btn" href="#henvendelse">Send en henvendelse</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bunn">
+  <div class="wrap bunn__grid">
+    <div class="bunn__merke">
+      <a class="brand brand--bunn" href="#topp">
+        <img src="img/logo.png" alt="Fjorden Regnskap AS" width="317" height="86" loading="lazy">
+      </a>
+      <p class="bunn__tekst">Regnskap, lønn og skatt — fra Gol og Porsgrunn.</p>
+      <p class="bunn__tekst">Org.nr 919 724 471 · Medlem av Regnskap Norge</p>
+    </div>
+
+    <div>
+      <p class="bunn__tittel">Kontakt</p>
+      <p class="bunn__tekst">Livegen 26<br>3550 Gol</p>
+      <p><a href="tel:+4790732115">907 32 115</a></p>
+      <p><a href="mailto:ole@fjordenregnskap.no">ole@fjordenregnskap.no</a></p>
+    </div>
+
+    <div>
+      <p class="bunn__tittel">Sider</p>
+      <p><a href="#tjenester">Tjenester</a></p>
+      <p><a href="#henvendelse">Henvendelse</a></p>
+      <p><a href="#systemer">Systemer</a></p>
+      <p><a href="#om">Om oss</a></p>
+    </div>
+  </div>
+
+  <div class="wrap bunn__slutt">
+    <p>© 2026 Fjorden Regnskap AS</p>
+    <p>Foto: a.froese og m.prinke / Wikimedia Commons, CC BY-SA 2.0</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

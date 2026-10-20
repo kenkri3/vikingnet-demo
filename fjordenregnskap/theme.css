@@ -1,0 +1,89 @@
+/*
+  Fjorden Regnskap — identitet.
+  Blåfargene er hentet fra logoen deres (#0070C0, #2088C8, #30A8E0).
+  Resten er kjølig papir, blekk og hårfine streker: rolig, presist, mye luft.
+  Rekkefølge: base.css → theme.css → styles.css
+*/
+
+:root {
+  --blekk: #0a1b24;
+  --blekk-2: #4c6270;
+  --is: #f2f7fa;
+  --is-2: #e4eff5;
+  --strek: #d6e4eb;
+  --strek-2: #e9f1f5;
+  --fjord: #0a6eb4;
+  --fjord-dyp: #0b3f5f;
+  --fjord-lys: #3fa6dc;
+
+  --bg: #ffffff;
+  --bg-soft: var(--is);
+  --fg: var(--blekk);
+  --muted: var(--blekk-2);
+  --line: var(--strek);
+  --accent: var(--fjord);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--is-2);
+
+  --font-display: 'Jost', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --wrap: 1180px;
+  --header-h: 78px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  line-height: 1.08;
+}
+
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  color: var(--fjord);
+  letter-spacing: 0.16em;
+  font-size: 0.73rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--fjord-lys);
+}
+
+.lead {
+  color: var(--blekk-2);
+  max-width: 46ch;
+}
+
+::selection {
+  background: var(--is-2);
+  color: var(--fjord-dyp);
+}
+
+strong {
+  font-weight: 600;
+}
