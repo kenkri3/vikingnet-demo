@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Billink – salgs- og markedsføringssystem for bilforhandlere</title>
+<meta name="description" content="Billink samler markedsføring, salg og økonomi for bilforhandlere i ett system: annonser til AutoDB.no, Finn.no og egen nettside, kjøpsavtale med elektronisk signering og dokumenter på hvert kjøretøy. Over 1000 forhandlere, ingen bindingstid." />
+<meta name="theme-color" content="#0b1418" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Billink" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:title" content="Billink – ta salget ditt til neste nivå" />
+<meta property="og:description" content="Et enkelt og effektivt salgssystem for alle bilforhandlere. Markedsføring, salg og økonomi på ett sted." />
+<meta property="og:image" content="img/hero-bolge.jpg" />
+<meta property="og:image:alt" content="Mørk teal-bølge fra Billinks eget bakgrunnsbilde" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Billink AS",
+  "url": "https://billink.no/",
+  "email": "support@billink.no",
+  "telephone": "+47 63 87 80 00",
+  "description": "Salgs- og markedsføringssystem for bilforhandlere.",
+  "foundingDate": "2011-02-08",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "organisasjonsnummer",
+    "value": "996 528 324"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Vestvollveien 30C",
+    "postalCode": "2019",
+    "addressLocality": "Skedsmokorset",
+    "addressCountry": "NO"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#topp" aria-label="Billink – til toppen">bill<span class="brand__hale">ink</span></a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Åpne meny">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Hovedmeny">
+      <a href="#produkt">Produkt</a>
+      <a href="#kanaler">Kanaler</a>
+      <a href="#pakker">Pakker</a>
+      <a href="#sporsmal">Spørsmål</a>
+      <a class="btn header__cta" href="#kontakt">Book demo</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topp">
+
+  <section class="hero" aria-labelledby="hero-tittel">
+    <img class="hero__bg" src="img/hero-bolge.jpg" alt="Mørk teal-bølge fra Billinks eget bakgrunnsbilde" width="1600" height="900" fetchpriority="high" decoding="async" />
+    <span class="hero__slør" aria-hidden="true"></span>
+    <div class="wrap hero__inner">
+      <p class="eyebrow eyebrow--lys">Salgs- og markedsføringssystem for bilforhandlere</p>
+      <h1 id="hero-tittel">Ta salget ditt<br />til neste nivå</h1>
+      <p class="hero__ingress">Et enkelt og effektivt salgssystem for alle bilforhandlere. Skalere sømløst, uansett hvor raskt du vokser.</p>
+      <div class="hero__cta">
+        <a class="btn btn--lys" href="#kontakt">Book demo</a>
+        <a class="btn btn--omriss" href="#pakker">Kom i gang gratis</a>
+      </div>
+      <p class="hero__notat">Bil · Bobil · Campingvogn · Båt · MC · Tilhenger</p>
+    </div>
+  </section>
+
+  <section class="valg" id="valg" aria-labelledby="valg-tittel">
+    <div class="wrap">
+      <div class="valg__kort">
+        <div class="valg__topp">
+          <p class="eyebrow">Prøv publiseringen</p>
+          <h2 id="valg-tittel">Sett sammen en annonse</h2>
+          <p class="valg__ingress">Velg kjøretøytype og hvilke flater annonsen skal ut på. Billink lager annonsen én gang og synkroniserer den videre.</p>
+        </div>
+        <div class="valg__kropp">
+          <fieldset class="valg__felt valg__felt--type">
+            <legend class="valg__legend">Kjøretøytype</legend>
+            <div class="chips">
+              <button class="chip" type="button" data-type="Bil" aria-pressed="true">Bil</button>
+              <button class="chip" type="button" data-type="Bobil" aria-pressed="false">Bobil</button>
+              <button class="chip" type="button" data-type="Campingvogn" aria-pressed="false">Campingvogn</button>
+              <button class="chip" type="button" data-type="Båt" aria-pressed="false">Båt</button>
+              <button class="chip" type="button" data-type="MC" aria-pressed="false">MC</button>
+              <button class="chip" type="button" data-type="Tilhenger" aria-pressed="false">Tilhenger</button>
+            </div>
+          </fieldset>
+          <fieldset class="valg__felt valg__felt--kanal">
+            <legend class="valg__legend">Publiser til</legend>
+            <div class="chips">
+              <button class="chip" type="button" data-kanal="AutoDB.no" aria-pressed="true">AutoDB.no</button>
+              <button class="chip" type="button" data-kanal="Finn.no" aria-pressed="true">Finn.no</button>
+              <button class="chip" type="button" data-kanal="egen nettside" aria-pressed="true">Egen nettside</button>
+              <button class="chip" type="button" data-kanal="storskjerm" aria-pressed="false">Storskjerm</button>
+              <button class="chip" type="button" data-kanal="nettaviser" aria-pressed="false">Nettaviser</button>
+              <button class="chip" type="button" data-kanal="Facebook" aria-pressed="false">Facebook</button>
+              <button class="chip" type="button" data-kanal="Instagram" aria-pressed="false">Instagram</button>
+            </div>
+          </fieldset>
+          <div class="resultat" aria-live="polite">
+            <p class="resultat__tall"><span id="antallFlater">3</span><span class="resultat__enhet">flater</span></p>
+            <p class="resultat__linje" id="resultatLinje">Bil publiseres til AutoDB.no, Finn.no og egen nettside.</p>
+            <p class="resultat__merke" id="resultatGratis">AutoDB.no: publisering er gratis</p>
+            <p class="resultat__notat">Én registrering i Billink – annonsen synkroniseres til flatene du velger.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tall" aria-label="Billink i korte trekk">
+    <div class="wrap tall__grid">
+      <div class="tall__post">
+        <p class="tall__verdi">1000+</p>
+        <p class="tall__tekst">forhandlere bruker Billink</p>
+      </div>
+      <div class="tall__post">
+        <p class="tall__verdi">Gratis</p>
+        <p class="tall__tekst">å komme i gang med Light</p>
+      </div>
+      <div class="tall__post">
+        <p class="tall__verdi">7</p>
+        <p class="tall__tekst">flater å publisere annonser på</p>
+      </div>
+      <div class="tall__post">
+        <p class="tall__verdi">Ingen</p>
+        <p class="tall__tekst">bindingstid, aldri hatt det</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section produkt" id="produkt" aria-labelledby="produkt-tittel">
+    <div class="wrap">
+      <div class="topp">
+        <p class="eyebrow">Produktet</p>
+        <h2 id="produkt-tittel">Tre moduler, ett system</h2>
+        <p class="lead">Med Billink får du et moderne og kraftig salgs- og markedsføringssystem som er skreddersydd for alle typer bilforhandlere. Full oversikt over salg, lager og kunder – alt på ett sted.</p>
+      </div>
+      <ol class="moduler">
+        <li class="modul">
+          <p class="modul__nr">01</p>
+          <h3>Markedsføring</h3>
+          <p>Opprett og publiser annonser gratis på Autodb.no. Synkroniser annonsene dine til Finn.no og din egen nettside.</p>
+          <p class="modul__nokkel">AutoDB · Finn.no · egen nettside</p>
+        </li>
+        <li class="modul">
+          <p class="modul__nr">02</p>
+          <h3>Salg</h3>
+          <p>Tilbudet eller kjøpsavtalen opprettes direkte fra kjøretøyet. Systemet støtter elektronisk signering. Alt for å sikre avtalen.</p>
+          <p class="modul__nokkel">Tilbud · kjøpsavtale · e-signering</p>
+        </li>
+        <li class="modul">
+          <p class="modul__nr">03</p>
+          <h3>Økonomi</h3>
+          <p>All informasjon lagres på hvert kjøretøy, og alle dokumenter og kvitteringer er lett tilgjengelige for å forenkle og sikre regnskapsføringen.</p>
+          <p class="modul__nokkel">Dokumenter · kvitteringer</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section inte" id="kanaler" aria-labelledby="kanaler-tittel">
+    <div class="wrap">
+      <div class="topp topp--delt">
+        <div>
+          <p class="eyebrow">Kanaler og integrasjoner</p>
+          <h2 id="kanaler-tittel">Der kundene ser bilen</h2>
+        </div>
+        <p class="lead">Vi støtter AutoDB.no, Finn.no, egen nettside, slideshow på storskjerm, nettaviser og sosiale medier. Garanti og finansiering bestilles rett fra kjøretøykontrakten.</p>
+      </div>
+      <div class="inte__grid">
+        <article class="inte__kort">
+          <h3>Annonsering</h3>
+          <ul class="merker">
+            <li>AutoDB.no</li>
+            <li>Finn.no</li>
+            <li>Egen nettside</li>
+            <li>Storskjerm</li>
+            <li>Nettaviser</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+          </ul>
+          <p class="inte__notat">Annonser publiseres gratis på AutoDB.no og synkroniseres videre.</p>
+        </article>
+        <article class="inte__kort">
+          <h3>Garanti</h3>
+          <ul class="merker">
+            <li>Fragus</li>
+            <li>CarProtect</li>
+          </ul>
+          <p class="inte__notat">Bestilles rett fra kjøretøykontrakten.</p>
+        </article>
+        <article class="inte__kort">
+          <h3>Finansiering</h3>
+          <ul class="merker">
+            <li>Santander</li>
+            <li>Brage</li>
+          </ul>
+          <p class="inte__notat">Synkroniseres direkte fra kjøpekontrakten.</p>
+        </article>
+      </div>
+      <div class="kjoretoy">
+        <h3>Kjøretøyene dere selger</h3>
+        <ul class="merker merker--store">
+          <li>Bil</li>
+          <li>Bobil</li>
+          <li>Campingvogn</li>
+          <li>Båt</li>
+          <li>MC</li>
+          <li>Tilhenger</li>
+        </ul>
+        <p class="inte__notat">Vi støtter alle merker og modeller, og kan lese inn lister av opsjoner og utstyr.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="band-tittel">
+    <span class="band__bg" aria-hidden="true"></span>
+    <div class="wrap band__inner">
+      <p class="eyebrow eyebrow--lys">I drift</p>
+      <h2 id="band-tittel">Gjør som over 1000 forhandlere.</h2>
+      <p class="band__tekst">Hos oss har det aldri vært bindingstid. Du kan prøve løsningen og oppgradere eller nedgradere pakken din når som helst.</p>
+      <a class="btn btn--lys" href="#pakker">Se pakkene</a>
+    </div>
+  </section>
+
+  <section class="section pakker" id="pakker" aria-labelledby="pakker-tittel">
+    <div class="wrap">
+      <div class="topp">
+        <p class="eyebrow">Pakker</p>
+        <h2 id="pakker-tittel">Velg nivået som passer butikken</h2>
+        <p class="lead">Du kan prøve løsningen vår og oppgradere eller nedgradere pakken din når som helst.</p>
+      </div>
+      <div class="pakke-grid">
+        <article class="pakke">
+          <h3 class="pakke__navn">Light</h3>
+          <p class="pakke__hva">For de minste butikkene eller deg i oppstartsfasen. Her får du basisfunksjonaliteten helt gratis. Hold oversikt over dine kjøretøy og publiser gratis til AutoDB.</p>
+          <a class="btn btn--ghost pakke__cta" href="#kontakt" data-pakke="Light">Kom i gang gratis</a>
+        </article>
+        <article class="pakke pakke--standard">
+          <h3 class="pakke__navn">Standard</h3>
+          <p class="pakke__hva">For små og mellomstore forhandlere. I denne pakken får du alt du trenger, og en hånd å holde i hvis det skulle være noe. Publisering til AutoDB og Finn.</p>
+          <a class="btn btn--mint pakke__cta" href="#kontakt" data-pakke="Standard">Book demo</a>
+        </article>
+        <article class="pakke">
+          <h3 class="pakke__navn">Plus</h3>
+          <p class="pakke__hva">For deg som må ha markedets beste produkt. Her har vi lagt ned mye energi for å tilby det lille ekstra. Vi utfordrer deg til å finne noe denne pakken mangler.</p>
+          <p class="pakke__snart">Kommer snart</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="sporsmal" aria-labelledby="faq-tittel">
+    <div class="wrap faq__wrap">
+      <div class="topp faq__topp">
+        <p class="eyebrow">Spørsmål og svar</p>
+        <h2 id="faq-tittel">Det forhandlere spør om</h2>
+      </div>
+      <div class="faq__liste">
+        <details class="faq__post">
+          <summary>Kan vi bruke Billink til å selge nye kjøretøy?</summary>
+          <p>Ja, vi støtter alle merker og modeller. Vi kan lese inn lister av opsjoner og utstyr.</p>
+        </details>
+        <details class="faq__post">
+          <summary>Tilbyr dere flere kjøretøykategorier enn bil?</summary>
+          <p>Ja, vi har også støtte for bobil, campingvogn, båt, MC og tilhenger.</p>
+        </details>
+        <details class="faq__post">
+          <summary>Hvilke annonseplattformer støtter dere?</summary>
+          <p>Vi støtter AutoDB.no, Finn.no, egen nettside, slideshow på storskjerm, nettaviser og sosiale medier (Facebook og Instagram).</p>
+        </details>
+        <details class="faq__post">
+          <summary>Har dere bindingstid?</summary>
+          <p>Nei. Hos oss har det aldri vært bindingstid. Kun fornøyde brukere.</p>
+        </details>
+        <details class="faq__post">
+          <summary>Kan jeg bestille garantier i Billink?</summary>
+          <p>Ja, du kan bestille Fragus- og CarProtect-garanti rett fra kjøretøykontrakten.</p>
+        </details>
+        <details class="faq__post">
+          <summary>Er Billink koblet opp mot finansieringsselskap?</summary>
+          <p>Ja, vi synkroniserer direkte fra kjøpekontrakt mot Santander og Brage finansiering.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section kontakt" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap kontakt__grid">
+      <div class="kontakt__info">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="kontakt-tittel">Book en uforpliktende samtale</h2>
+        <p class="lead">Fyll ut skjemaet, så kontakter vi deg for en uforpliktende samtale om hvordan Billink kan hjelpe din bedrift.</p>
+        <ul class="kontakt__linjer">
+          <li>
+            <span class="kontakt__merke">E-post</span>
+            <a class="kontakt__lenke" href="mailto:support@billink.no">support@billink.no</a>
+          </li>
+          <li>
+            <span class="kontakt__merke">Telefon</span>
+            <a class="kontakt__lenke" href="tel:+4763878000">63 87 80 00</a>
+          </li>
+          <li>
+            <span class="kontakt__merke">Besøk</span>
+            <span class="kontakt__verdi">Vestvollveien 30C<br />2019 Skedsmokorset</span>
+          </li>
+          <li>
+            <span class="kontakt__merke">Org.nr</span>
+            <span class="kontakt__verdi">996 528 324</span>
+          </li>
+        </ul>
+        <div class="hjelp">
+          <img src="img/billink-ikon.png" alt="Illustrasjon av en hånd som løfter en pil oppover" width="570" height="570" loading="lazy" decoding="async" />
+          <div>
+            <h3>Trenger du hjelp til å komme i gang?</h3>
+            <p>Ring 63 87 80 00, eller skriv til support@billink.no.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kontakt__skjema">
+        <h3 class="skjema__tittel">Få Billink i dag</h3>
+        <p class="skjema__ingress" id="skjemaIngress">Fyll ut skjemaet nedenfor, så kontakter vi deg.</p>
+        <form id="demoSkjema" novalidate>
+          <label for="firma">Bedriftsnavn
+            <input type="text" id="firma" name="firma" autocomplete="organization" />
+          </label>
+          <label for="orgnr">Org. nummer
+            <input type="text" id="orgnr" name="orgnr" inputmode="numeric" autocomplete="off" />
+          </label>
+          <label for="kontaktperson">Kontaktperson
+            <input type="text" id="kontaktperson" name="kontaktperson" autocomplete="name" />
+          </label>
+          <label for="epost">E-post
+            <input type="email" id="epost" name="epost" autocomplete="email" />
+          </label>
+          <label for="telefon">Telefon
+            <input type="tel" id="telefon" name="telefon" autocomplete="tel" />
+          </label>
+          <label for="pakke">Pakke
+            <select id="pakke" name="pakke">
+              <option value="Light">Light</option>
+              <option value="Standard" selected>Standard</option>
+              <option value="Plus">Plus</option>
+            </select>
+          </label>
+          <label class="samtykke" for="samtykke">
+            <input type="checkbox" id="samtykke" name="samtykke" />
+            <span class="samtykke__tekst">Jeg godtar at Billink kontakter meg og lagrer informasjonen jeg sender inn.</span>
+          </label>
+          <p class="skjema__feil" id="skjemaFeil" role="alert" hidden></p>
+          <button class="btn skjema__send" type="submit">Send inn søknad</button>
+          <p class="skjema__notat">Skjemaet ligger bare i nettleseren din. Ingenting sendes til en server før du selv sender e-posten.</p>
+        </form>
+
+        <div class="kvittering" id="kvittering" hidden>
+          <h4 class="kvittering__tittel" id="kvitteringTittel" tabindex="-1">Slik ser søknaden ut</h4>
+          <p class="kvittering__ingress">Kontroller opplysningene og send dem videre med e-post.</p>
+          <dl class="kvittering__liste">
+            <div><dt>Bedriftsnavn</dt><dd id="kvFirma">–</dd></div>
+            <div><dt>Org. nummer</dt><dd id="kvOrg">–</dd></div>
+            <div><dt>Kontaktperson</dt><dd id="kvKontakt">–</dd></div>
+            <div><dt>E-post</dt><dd id="kvEpost">–</dd></div>
+            <div><dt>Telefon</dt><dd id="kvTelefon">–</dd></div>
+            <div><dt>Pakke</dt><dd id="kvPakke">–</dd></div>
+          </dl>
+          <a class="btn" id="sendEpost" href="mailto:support@billink.no">Send med e-post</a>
+          <button class="btn btn--ghost" id="endre" type="button">Endre opplysningene</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__merke">
+      <p class="brand brand--stor">bill<span class="brand__hale">ink</span></p>
+      <p class="footer__tekst">Salgs- og markedsføringssystem for bilforhandlere.</p>
+    </div>
+    <div>
+      <h2 class="footer__tittel">Kontakt</h2>
+      <ul class="footer__liste">
+        <li><a class="footer__lenke" href="mailto:support@billink.no">support@billink.no</a></li>
+        <li><a class="footer__lenke" href="tel:+4763878000">63 87 80 00</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer__tittel">Besøk</h2>
+      <p class="footer__verdi">Vestvollveien 30C<br />2019 Skedsmokorset</p>
+      <p class="footer__verdi">Org.nr 996 528 324</p>
+    </div>
+    <div>
+      <h2 class="footer__tittel">Sider</h2>
+      <ul class="footer__liste">
+        <li><a class="footer__lenke" href="#produkt">Produkt</a></li>
+        <li><a class="footer__lenke" href="#kanaler">Kanaler</a></li>
+        <li><a class="footer__lenke" href="#pakker">Pakker</a></li>
+        <li><a class="footer__lenke" href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__bunn">
+    <p>© <span id="ar">2026</span> Billink AS</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

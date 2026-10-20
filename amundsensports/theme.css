@@ -1,0 +1,235 @@
+/*
+  Amundsen Sports — identitet.
+
+  Arketype: redaksjonell, men med en kald grunn: "vinterblå" natt som
+  ramme om en varm papirflate, og messing som eneste aksent. Fargene er
+  hentet fra deres egen butikk i Oslo (mørk vegg, eik, bein ull) og fra
+  vinterbildene på amundsen.com. Logoen deres er svart/hvit, så aksenten
+  holdes til linjer, tall og små etiketter — aldri til brødtekst.
+
+  To fonter: Cormorant Garamond i overskrifter (nær ordmerket deres, som er
+  serif med bred sporing), Jost i brødtekst og etiketter.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Papir og natt */
+  --paper: #f2ece1;
+  --paper-deep: #e9e0d0;
+  --paper-soft: #f8f4ec;
+  --ink: #111a1d;
+  --ink-soft: #1b2b31;
+  --night: #0d181c;
+  --night-2: #12232a;
+  --night-3: #182f37;
+
+  /* Tekst på mørk flate */
+  --on-night: #efe9dd;
+  --on-night-soft: #aebbba;
+
+  /* Messing — eneste aksent */
+  --brass: #c9a26c;
+  --brass-strong: #9a6f34;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-deep);
+  --fg: var(--ink);
+  --muted: #5b6562;
+  --line: #d7ccba;
+  --accent: #9a6f34;
+  --accent-fg: #fffdf7;
+  --accent-soft: #efe5d3;
+
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Jost', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Rett avrunding: et veveri, ikke et kort-UI */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(17 26 29 / 5%), 0 26px 60px -34px rgb(17 26 29 / 38%);
+  --wrap: 1200px;
+  --header-h: 74px;
+
+  --t-h1: clamp(2.55rem, 1.45rem + 4.4vw, 4.7rem);
+  --t-h2: clamp(1.9rem, 1.35rem + 2.1vw, 3rem);
+  --t-h3: clamp(1.12rem, 1.02rem + 0.5vw, 1.4rem);
+  --t-lead: clamp(1.04rem, 0.99rem + 0.4vw, 1.22rem);
+  --t-base: 1.0625rem;
+  --t-sm: 0.9rem;
+  --t-xs: 0.72rem;
+}
+
+html {
+  background: var(--night);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.04;
+}
+
+h1 {
+  font-size: var(--t-h1);
+}
+
+h2 {
+  font-size: var(--t-h2);
+}
+
+h3 {
+  font-size: var(--t-h3);
+  line-height: 1.2;
+  letter-spacing: -0.004em;
+}
+
+strong,
+b {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
+}
+
+p a,
+li a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--brass);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass-strong);
+  outline-offset: 3px;
+}
+
+/* Mørk flate får lysere fokusring, ellers forsvinner den */
+.on-dark :focus-visible,
+.site-foot :focus-visible {
+  outline-color: var(--brass);
+}
+
+/* Etiketter: små, sporede, messing */
+.eyebrow {
+  color: var(--brass-strong);
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  gap: 0.7rem;
+}
+
+.on-dark .eyebrow,
+.site-foot .eyebrow {
+  color: var(--brass);
+}
+
+.eyebrow__num {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.on-dark .lead,
+.on-dark p {
+  color: var(--on-night-soft);
+}
+
+/* Knapper: blekk som primær, hårstrek som sekundær */
+.btn {
+  min-height: 46px;
+  padding: 0.72rem 1.4rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper-soft);
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: var(--ink-soft);
+  transform: none;
+  box-shadow: 0 18px 34px -22px rgb(0 0 0 / 55%);
+}
+
+.btn--line {
+  background: transparent;
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--ink) 34%, transparent);
+}
+
+.btn--line:hover {
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.on-dark .btn {
+  background: var(--brass);
+  color: #161f22;
+}
+
+.on-dark .btn:hover {
+  background: color-mix(in srgb, var(--brass) 86%, white);
+}
+
+.on-dark .btn--line {
+  background: transparent;
+  color: var(--on-night);
+  border-color: color-mix(in srgb, var(--on-night) 34%, transparent);
+}
+
+.on-dark .btn--line:hover {
+  background: color-mix(in srgb, var(--on-night) 10%, transparent);
+}
+
+/* Skjemafelt: kit-set 16px, vi bare legger på flaten */
+input,
+select,
+textarea {
+  border-radius: var(--radius-sm);
+  border-color: color-mix(in srgb, var(--ink) 22%, transparent);
+  background: var(--paper-soft);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--brass-strong);
+}
+
+label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.card {
+  border-radius: var(--radius);
+  border-color: color-mix(in srgb, var(--ink) 16%, transparent);
+}

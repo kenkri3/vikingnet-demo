@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amundsen Sports — klær for det evige friluftslivet</title>
+<meta name="description" content="Amundsen Sports lager klær for norsk friluftsliv, i naturmaterialer fra europeiske veverier. Se kolleksjonen, materialene, butikkenes åpningstider og reparasjonsordningen." />
+<meta name="author" content="Amundsen Sports AS" />
+<meta name="theme-color" content="#0d181c" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:site_name" content="Amundsen Sports" />
+<meta property="og:title" content="Amundsen Sports — klær for det evige friluftslivet" />
+<meta property="og:description" content="Klær for fjell, fjord og hverdag, i vokset bomull, kordfløyel, loden og norsk ull. Fem butikker, fem års garanti og reparasjon for 200 kr per skadepunkt." />
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/amundsensports/img/hero.jpg" />
+<meta property="og:image:alt" content="Skiløper med slede over en tåkefylt innsjø i blå morgendemring" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('js');
+  }
+</script>
+</head>
+<body>
+
+<a class="skip" href="#hovedinnhold">Hopp til innhold</a>
+
+<div class="ribbon">
+  <div class="wrap ribbon__inner">
+    <p class="ribbon__item">Fri frakt over 2 000 kr</p>
+    <p class="ribbon__item">30 dagers åpent kjøp</p>
+    <p class="ribbon__item">5 års garanti</p>
+    <p class="ribbon__item">Toll og avgifter inkludert</p>
+  </div>
+</div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#toppen" aria-label="Amundsen Sports — til toppen av siden">
+      <svg class="brand__mark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4" />
+        <ellipse cx="12" cy="12" rx="4.4" ry="9" fill="none" stroke="currentColor" stroke-width="1.1" />
+        <path d="M3 12h18M4.7 7.4h14.6M4.7 16.6h14.6" fill="none" stroke="currentColor" stroke-width="1.1" />
+      </svg>
+      <span>
+        <span class="brand__name">Amundsen</span>
+        <span class="brand__sub">Sports</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Hovedmeny">
+      <a href="#kolleksjonen">Kolleksjonen</a>
+      <a href="#materialer">Materialene</a>
+      <a href="#service">Service</a>
+      <a href="#butikker">Butikker</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="head-cta">
+      <a class="btn" href="#butikker">Finn butikk</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="hovedinnhold">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="toppen" aria-labelledby="hero-tittel">
+    <div class="hero__media">
+      <img class="hero__img" src="img/hero.jpg" alt="Skiløper med slede over en tåkefylt innsjø i blå morgendemring" width="1600" height="1073" fetchpriority="high" decoding="async" />
+      <div class="hero__veil" aria-hidden="true"></div>
+    </div>
+    <div class="wrap hero__wrap">
+      <div class="hero__card">
+        <p class="eyebrow">Norsk friluftsliv · Oslo</p>
+        <h1 id="hero-tittel">Klær for det <em>evige</em> friluftslivet.</h1>
+        <p class="hero__lead">Amundsen Sports lager klær for fjell, fjord og hverdag. Naturmaterialene kommer fra europeiske veverier, og plaggene er bygget for å vare i generasjoner.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#butikker">Finn butikken</a>
+          <a class="btn btn--line" href="#materialer">Se materialene</a>
+        </div>
+        <a class="status" id="heroStatus" href="#butikker">
+          <span class="status__dot" aria-hidden="true"></span>
+          <span class="status__txt"><strong>Oslo-butikken</strong> <span data-hero-status>sjekker åpningstiden</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="places">
+    <div class="wrap places__inner">
+      <p class="places__lbl">Butikker</p>
+      <ul class="places__list">
+        <li>Oslo</li>
+        <li>New York</li>
+        <li>Boulder</li>
+        <li>Verbier</li>
+        <li>Kragerø</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ 01 KOLLEKSJONEN ============ -->
+  <section class="section" id="kolleksjonen" aria-labelledby="kol-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span class="eyebrow__num">01</span> Kolleksjonen</p>
+        <h2 id="kol-tittel">Fire innganger, samme materialer.</h2>
+        <p class="sec-head__lead">Herre og dame har egne snitt, sko og tilbehør følger resten. Alt bygger på de samme veveriene — vokset bomull, kordfløyel, loden og norsk ull.</p>
+      </div>
+
+      <ol class="rows">
+        <li class="row">
+          <span class="row__num" aria-hidden="true">01</span>
+          <div class="row__body">
+            <h3>Herre</h3>
+            <p>Jakker og anorakker, sweaters og fleece, bukser, shorts og knickerbockers — og Hero's Hide-baselaget i merino når det skal ligge nærmest kroppen.</p>
+          </div>
+          <ul class="row__tags">
+            <li>Jakker</li>
+            <li>Sweaters</li>
+            <li>Fleece</li>
+            <li>Bukser</li>
+            <li>Baselag</li>
+          </ul>
+        </li>
+        <li class="row">
+          <span class="row__num" aria-hidden="true">02</span>
+          <div class="row__body">
+            <h3>Dame</h3>
+            <p>Huntress-fleece, 3incher loden-shorts og skjørt, ved siden av jakker, sweaters og baselag i merino. Samme stoffer, eget snitt.</p>
+          </div>
+          <ul class="row__tags">
+            <li>Jakker</li>
+            <li>Sweaters</li>
+            <li>Skjørt</li>
+            <li>Baselag</li>
+          </ul>
+        </li>
+        <li class="row">
+          <span class="row__num" aria-hidden="true">03</span>
+          <div class="row__body">
+            <h3>Sko</h3>
+            <p>Field Mucks, Winter Mucks og Mountain Mucks. Mountain Mucks er håndlaget i Montebelluna i vegetabilsk garvet fullnarvslær, med en egen innerstøvel som gjør at støvelen tørker raskere.</p>
+          </div>
+          <ul class="row__tags">
+            <li>Field Mucks</li>
+            <li>Winter Mucks</li>
+            <li>Mountain Mucks</li>
+            <li>Sneakers</li>
+          </ul>
+        </li>
+        <li class="row">
+          <span class="row__num" aria-hidden="true">04</span>
+          <div class="row__body">
+            <h3>Tilbehør</h3>
+            <p>Bager, hodeplagg, belter og sokker — detaljene som blir med ut, og som holder like lenge som resten.</p>
+          </div>
+          <ul class="row__tags">
+            <li>Bager</li>
+            <li>Hodeplagg</li>
+            <li>Belter</li>
+            <li>Sokker</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 02 MATERIALENE ============ -->
+  <section class="section materials" id="materialer" aria-labelledby="mat-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span class="eyebrow__num">02</span> Materialene</p>
+        <h2 id="mat-tittel">Et plagg er aldri bedre enn stoffet.</h2>
+        <p class="sec-head__lead">Amundsen henter stoffene fra veverier som har bevist seg over tid. Seks av dem, med årstallene Amundsen selv oppgir.</p>
+      </div>
+
+      <div class="mat__grid">
+        <figure class="mat__fig">
+          <img src="img/ull.jpg" alt="Person i hvit, ribbestrikket ullgenser med olivengrønn brystlomme, med skitrekk og solnedgang over åsen bak" width="1600" height="1066" loading="lazy" decoding="async" />
+          <figcaption class="mat__figcap">Norsk ull, strikket i Italia. Bilde: Amundsen Sports</figcaption>
+        </figure>
+
+        <ul class="mat__list">
+          <li class="mat__item">
+            <span class="mat__st">Skottland</span>
+            <div>
+              <h3>Vokset bomull</h3>
+              <p>Halley Stevensons (1864) og British Millerain (1880) leverer vokset bomull. Skotske sildefiskere begynte å mette seilduk med olje og fett på 1400-tallet; voksen kan fylles på igjen, og stoffet blir bare penere med bruk.</p>
+            </div>
+          </li>
+          <li class="mat__item">
+            <span class="mat__st">Frankrike</span>
+            <div>
+              <h3>Kordfløyel</h3>
+              <p>Cosserat i Amiens har laget kordfløyel siden 1794, og er verdens eldste produsent av stoffet. Det går til jakker, bukser og shorts.</p>
+            </div>
+          </li>
+          <li class="mat__item">
+            <span class="mat__st">Sveits</span>
+            <div>
+              <h3>Ventile</h3>
+              <p>Utviklet før andre verdenskrig for britiske jagerflygere som trengte noe tørt og pustende om de måtte ned i Nordsjøen. Bomullen dyrkes i California, fibrene lages i Sveits.</p>
+            </div>
+          </li>
+          <li class="mat__item">
+            <span class="mat__st">Østerrike</span>
+            <div>
+              <h3>Loden</h3>
+              <p>Leichtfried fra 1884 er Østerrikes eldste lodenveveri. Ullen veves i Tyrol og støter vann av seg, slik den gjorde for gjetere og bønder i alpene.</p>
+            </div>
+          </li>
+          <li class="mat__item">
+            <span class="mat__st">Norge</span>
+            <div>
+              <h3>Norsk råull</h3>
+              <p>Ull fra frittgående sauer i Hallingdal, klippet mellom juni og september. Garnet spinnes og strikkes i Italia.</p>
+            </div>
+          </li>
+          <li class="mat__item">
+            <span class="mat__st">Italia</span>
+            <div>
+              <h3>Merino</h3>
+              <p>Merinoullen kommer fra Biella Yarn (1966) i Biella, og all merino Amundsen bruker er mulesingfri.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BILDEBÅND ============ -->
+  <figure class="band">
+    <img src="img/friluftsliv.jpg" alt="Brettseiler i solnedgang på en fjord, med bratte fjell som silhuett bak" width="1600" height="1073" loading="lazy" decoding="async" />
+    <div class="wrap band__capwrap">
+      <figcaption class="band__cap">
+        <span>Friluftsliv året rundt</span>
+        <span>Fjord, fjell og vær. Amundsen tester plaggene i felt, fra Arktis til Alpene. Bilde: Amundsen Sports</span>
+      </figcaption>
+    </div>
+  </figure>
+
+  <!-- ============ 03 SERVICE ============ -->
+  <section class="section service on-dark" id="service" aria-labelledby="svc-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span class="eyebrow__num">03</span> Service</p>
+        <h2 id="svc-tittel">Laget for å repareres, ikke kastes.</h2>
+        <p class="sec-head__lead">Alle produkter har fem års garanti. Er plagget utenfor garanti, koster en reparasjon 200 kr per skadepunkt — uansett hvor stort skadepunktet er. Reparasjonene gjøres av Sømhuset AS, som har gjort dette i over 30 år.</p>
+      </div>
+
+      <div class="svc__grid">
+        <div class="calc" aria-labelledby="calc-tittel">
+          <p class="eyebrow">Reparasjonskalkulator</p>
+          <h3 id="calc-tittel">Regn ut reparasjonen</h3>
+          <div class="calc__row">
+            <button class="calc__btn" id="calcMinus" type="button" aria-label="Ett skadepunkt mindre">−</button>
+            <p class="calc__verdi"><strong id="calcAntall">1</strong> skadepunkt</p>
+            <button class="calc__btn" id="calcPluss" type="button" aria-label="Ett skadepunkt mer">+</button>
+          </div>
+          <p class="calc__sum" id="calcSum" aria-live="polite">200 kr</p>
+          <p class="calc__note">Satsen er Amundsens egen: 200 kr per skadepunkt. Frakt kommer i tillegg, og ordningen gjelder kunder i Norge. Bor du utenfor Norge, hjelper kundeservice deg med å arrangere reparasjonen.</p>
+        </div>
+
+        <ul class="svc__facts">
+          <li>
+            <strong>5 år</strong>
+            <span>garanti på alle produkter — kvitteringen må følge med</span>
+          </li>
+          <li>
+            <strong>30 dager</strong>
+            <span>åpent kjøp. Retur koster 100 kr, og i butikk kan du levere i Oslo, Boulder og New York</span>
+          </li>
+          <li>
+            <strong>2 000 kr</strong>
+            <span>fri frakt over. Under det koster frakten 100 kr, med toll og avgifter inkludert</span>
+          </li>
+          <li>
+            <strong>2–3 dager</strong>
+            <span>er leveringstiden Amundsen oppgir i Norge, med Posten eller Bring</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 BUTIKKENE ============ -->
+  <section class="section stores on-dark" id="butikker" aria-labelledby="st-tittel">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow"><span class="eyebrow__num">04</span> Butikkene</p>
+        <h2 id="st-tittel">Fem butikker. Se hvilken som er åpen nå.</h2>
+        <p class="sec-head__lead">Åpningstidene er Amundsens egne. Statusen regnes ut i nettleseren din, i butikkens egen tidssone — også når butikken ligger i New York eller Boulder.</p>
+      </div>
+
+      <div class="st__grid">
+        <figure class="st__fig">
+          <img src="img/butikk-oslo.jpg" alt="Interiøret i Amundsens butikk i Oslo, med mørk grønn vegg, eikehyller fylt av ullplagg og en montert hjort" width="1400" height="1080" loading="lazy" decoding="async" />
+          <figcaption class="st__figcap">Oslo-butikken i Underhaugsveien. Bilde: Amundsen Sports</figcaption>
+        </figure>
+
+        <div class="st__panel">
+          <div class="tabs" role="tablist" aria-label="Velg butikk">
+            <button class="tab" type="button" role="tab" id="tab-oslo" aria-selected="true" aria-controls="butikkPanel" data-butikk="oslo">Oslo</button>
+            <button class="tab" type="button" role="tab" id="tab-newyork" aria-selected="false" aria-controls="butikkPanel" data-butikk="newyork" tabindex="-1">New York</button>
+            <button class="tab" type="button" role="tab" id="tab-boulder" aria-selected="false" aria-controls="butikkPanel" data-butikk="boulder" tabindex="-1">Boulder</button>
+            <button class="tab" type="button" role="tab" id="tab-verbier" aria-selected="false" aria-controls="butikkPanel" data-butikk="verbier" tabindex="-1">Verbier</button>
+            <button class="tab" type="button" role="tab" id="tab-kragero" aria-selected="false" aria-controls="butikkPanel" data-butikk="kragero" tabindex="-1">Kragerø</button>
+          </div>
+
+          <div class="store" id="butikkPanel" role="tabpanel" aria-labelledby="tab-oslo" tabindex="0">
+            <p class="store__status"><span class="store__dot" aria-hidden="true"></span><span data-status>Åpningstidene står under</span></p>
+            <h3 class="store__name">Oslo</h3>
+            <p class="store__addr">Underhaugsveien 28<br />0354 Oslo, Norge</p>
+            <table class="hours">
+              <caption class="visually-hidden">Åpningstider for Oslo-butikken</caption>
+              <tbody>
+                <tr><th scope="row">Mandag</th><td>10–19</td></tr>
+                <tr><th scope="row">Tirsdag</th><td>10–19</td></tr>
+                <tr><th scope="row">Onsdag</th><td>10–19</td></tr>
+                <tr><th scope="row">Torsdag</th><td>10–20</td></tr>
+                <tr><th scope="row">Fredag</th><td>10–19</td></tr>
+                <tr><th scope="row">Lørdag</th><td>10–17</td></tr>
+                <tr><th scope="row">Søndag</th><td>Stengt</td></tr>
+              </tbody>
+            </table>
+            <div class="store__actions">
+              <a class="btn" href="tel:+4767110100">Ring 67 11 01 00</a>
+            </div>
+            <p class="store__meta">Lokal tid i Oslo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRESSE ============ -->
+  <section class="press" aria-labelledby="presse-lbl">
+    <div class="wrap press__inner">
+      <p class="press__lbl" id="presse-lbl">Omtalt i</p>
+      <ul class="press__list">
+        <li>Robb Report</li>
+        <li>Financial Times HTSI</li>
+        <li>The New York Times Style Magazine</li>
+        <li>Monocle</li>
+        <li>Travel + Leisure</li>
+        <li>Inc.</li>
+        <li>Grazia</li>
+        <li>Field Mag</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 05 KONTAKT ============ -->
+  <section class="section" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap contact__grid">
+      <div class="contact__info">
+        <p class="eyebrow"><span class="eyebrow__num">05</span> Kontakt</p>
+        <h2 id="kontakt-tittel">Spør om størrelse, reparasjon eller ordre.</h2>
+        <p>Kundeservice svarer på e-post. Butikken i Oslo svarer på telefon i åpningstiden, og du kan legge igjen en forespørsel i skjemaet.</p>
+        <dl class="contact__dl">
+          <div>
+            <dt>Kundeservice</dt>
+            <dd><a href="mailto:service@amundsen.com">service@amundsen.com</a></dd>
+          </div>
+          <div>
+            <dt>Generelt</dt>
+            <dd><a href="mailto:customer@amundsensports.com">customer@amundsensports.com</a></dd>
+          </div>
+          <div>
+            <dt>Oslo-butikken</dt>
+            <dd><a href="tel:+4767110100">67 11 01 00</a></dd>
+          </div>
+          <div>
+            <dt>Besøk</dt>
+            <dd>Underhaugsveien 28, 0354 Oslo</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="contact__form">
+        <form id="kontaktForm" novalidate>
+          <label for="fNavn">Navn
+            <input id="fNavn" name="navn" type="text" autocomplete="name" required />
+          </label>
+          <label for="fEpost">E-post
+            <input id="fEpost" name="epost" type="email" autocomplete="email" required />
+          </label>
+          <label for="fGjelder">Gjelder
+            <select id="fGjelder" name="gjelder">
+              <option>Reparasjon og garanti</option>
+              <option>Størrelse og passform</option>
+              <option>Ordre og levering</option>
+              <option>Retur og bytte</option>
+              <option>Butikkbesøk</option>
+            </select>
+          </label>
+          <label for="fMelding">Melding
+            <textarea id="fMelding" name="melding" rows="4" required></textarea>
+          </label>
+          <button class="btn" type="submit">Lag forespørselen</button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="receipt" id="kvittering" hidden>
+          <h3>Forespørselen er klar</h3>
+          <p class="receipt__ref" id="kvitteringRef"></p>
+          <dl id="kvitteringInnhold"></dl>
+          <div class="receipt__actions">
+            <a class="btn" id="kvitteringSend" href="mailto:service@amundsen.com">Send med e-post</a>
+            <button class="btn btn--line" id="kvitteringNullstill" type="button">Skriv en ny</button>
+          </div>
+          <p class="form__note">Siden har ingen server: knappen åpner et ferdig utfylt utkast i din egen e-postklient, til service@amundsen.com. Ingenting er sendt før du trykker send der.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot__inner">
+    <div>
+      <p class="foot__brand">Amundsen Sports</p>
+      <p class="foot__meta">Amundsen Sports AS<br />Org.nr 995 318 784<br />Bogstadveien 11, 0355 Oslo</p>
+    </div>
+    <ul class="foot__links">
+      <li><a href="mailto:service@amundsen.com">service@amundsen.com</a></li>
+      <li><a href="tel:+4767110100">67 11 01 00</a></li>
+      <li><a href="#butikker">Butikkene</a></li>
+      <li><a href="#service">Service</a></li>
+    </ul>
+    <p class="foot__copy">© 2026 Amundsen Sports AS</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

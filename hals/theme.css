@@ -1,0 +1,44 @@
+/*
+  Hals Advokatfellesskap — identitet.
+  Aksentfargen er hentet fra deres egen logo: et dypt karmosinrødt merke
+  (#d31028). Resten er en redaksjonell, papirfarget flate med skarpe kanter,
+  hårfine streker og én mørk seksjon der henvendelsen behandles.
+  To fonter: Bodoni Moda (overskrifter og tall) og Instrument Sans (tekst).
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Papir, blekk og flater */
+  --bg: #f5f2ec;
+  --bg-soft: #ebe5da;
+  --surface: #ffffff;
+  --fg: #1b1713;
+  --muted: #6a6157;
+  --line: #ded5c7;
+  --line-strong: #c3b7a3;
+
+  /* Deres røde — tre styrker, samme farge */
+  --accent-bright: #d31028;
+  --accent: #a80f1d;
+  --accent-deep: #6e0a14;
+  --accent-fg: #ffffff;
+  --accent-soft: #f7e4e2;
+
+  /* Mørk flate */
+  --ink: #171210;
+  --ink-2: #241a16;
+  --on-ink: #f4ece3;
+  --on-ink-muted: #c6b7a9;
+
+  --font-display: 'Bodoni Moda', Georgia, 'Times New Roman', serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --t-h1: clamp(2.25rem, 1.15rem + 4.5vw, 4.3rem);
+  --t-h2: clamp(1.8rem, 1.35rem + 2vw, 2.9rem);
+  --t-h3: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
+
+  --radius: 2px;
+  --radius-sm: 2px;
+  --shadow: 0 18px 40px -28px rgb(23 18 16 / 45%);
+  --header-h: 76px;
+}

@@ -1496,6 +1496,11 @@ main {
     position: static;
   }
 
+  /* Når kolonnene stables skal teksten komme før kartet. */
+  .loc__body {
+    order: -1;
+  }
+
   .extra {
     grid-template-columns: minmax(0, 1fr);
   }

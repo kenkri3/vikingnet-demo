@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tønsberg Vaskeri — alt i vask og rens, hentet og levert</title>
+<meta name="description" content="Tønsberg Vaskeri vasker og renser arbeidstøy, kjeledresser, kokketøy, duker, matter, dyner og private plagg. Vi henter og leverer i Tønsberg, Horten, Holmestrand og Stokke." />
+<meta name="theme-color" content="#0a1a2b" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:site_name" content="Tønsberg Vaskeri" />
+<meta property="og:title" content="Tønsberg Vaskeri — alt i vask og rens, hentet og levert" />
+<meta property="og:description" content="Arbeidstøy, kokketøy, duker, matter og private plagg. Henting og levering i Tønsberg, Horten, Holmestrand, Stokke og omegn. Storgaten 42, Tønsberg." />
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/tonsbergvaskeri/img/rens.jpg" />
+<meta property="og:image:alt" content="Renset tøy henger i plast på et stativ, med lapper festet til plaggene" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Tønsberg Vaskeri",
+  "description": "Vaskeri og renseri i Tønsberg. Arbeidstøy, kjeledresser, kokketøy, lege- og tannlegetøy, matter, mopper, duker, gardiner, dyner, puter, tepper og privat renseri.",
+  "telephone": ["+47 33 31 91 38", "+47 90 19 20 01"],
+  "email": "ole@tonsbergvaskeri.no",
+  "identifier": "926542990",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Storgaten 42",
+    "postalCode": "3126",
+    "addressLocality": "Tønsberg",
+    "addressCountry": "NO"
+  },
+  "areaServed": ["Tønsberg", "Horten", "Holmestrand", "Stokke"]
+}
+</script>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#topp">
+      <span class="brand__name">Tønsberg Vaskeri</span>
+      <span class="brand__sub">alt i vask og rens</span>
+    </a>
+
+    <nav class="nav" id="hovedmeny" data-nav aria-label="Hovedmeny" hidden>
+      <a href="#tjenester">Tjenester</a>
+      <a href="#bestill">Bestilling</a>
+      <a href="#sted">Sted</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="btn header__cta" href="#bestill">Bestill henting</a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="hovedmeny">
+      <span></span><span></span><span></span>
+      <span class="visually-hidden">Meny</span>
+    </button>
+  </div>
+</header>
+
+<main id="topp">
+
+  <!-- Hero: tekst på frostet lin, foto av ferdig renset tøy i en vaskelapp-ramme -->
+  <section class="hero">
+    <div class="hero__vev" aria-hidden="true"></div>
+    <div class="wrap hero__grid">
+      <div class="hero__tekst">
+        <p class="eyebrow">Vaskeri og renseri · Storgaten 42</p>
+        <h1>Alt i vask og rens, <em>hentet og levert</em></h1>
+        <p class="lead">Arbeidstøy, kjeledresser, kokketøy, duker og private plagg. Vi henter og leverer i Tønsberg, Horten, Holmestrand, Stokke og omegn.</p>
+        <div class="hero__knapper">
+          <a class="btn" href="#bestill">Bestill henting</a>
+          <a class="btn btn--ghost" href="tel:+4733319138">Ring 33 31 91 38</a>
+        </div>
+        <ul class="hero__etiketter">
+          <li>Skjorteservice · kr 45,- pr. stk.</li>
+          <li>Henting i Tønsberg og omegn</li>
+          <li>Leie av matter, mopper og duker</li>
+        </ul>
+      </div>
+
+      <figure class="hero__fig">
+        <img src="img/rens.jpg" alt="Renset tøy henger i tynne plasttrekk på et stativ, med papirlapp festet til det ene plagget." width="860" height="1075" fetchpriority="high" decoding="async" />
+        <figcaption class="etikett">Renseriet · klart til henting</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <ul class="strip__liste">
+        <li><span class="strip__k">Org.nr</span><span class="strip__v">926 542 990</span></li>
+        <li><span class="strip__k">Innlevering</span><span class="strip__v">Storgaten 42, Tønsberg</span></li>
+        <li><span class="strip__k">Henting</span><span class="strip__v">Tønsberg, Horten, Holmestrand og Stokke</span></li>
+        <li><span class="strip__k">Telefon</span><span class="strip__v">33 31 91 38</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tjenester: hentet ordrett fra deres egen liste, gruppert -->
+  <section class="section" id="tjenester">
+    <div class="wrap">
+      <div class="seksjon-topp reveal">
+        <p class="eyebrow">Det vi tar imot</p>
+        <h2>Alt som skal vaskes eller renses</h2>
+        <p class="lead">Fra arbeidstøy og kjeledresser til dresser, kjoler og tepper. Tar dere tøyet med til Storgaten 42, eller vil dere at vi henter det?</p>
+      </div>
+
+      <div class="tjenester">
+        <article class="tjeneste reveal">
+          <p class="tjeneste__nr">01</p>
+          <h3>Arbeidstøy og verneklær</h3>
+          <p>Arbeidstøy, kjeledresser, kokketøy og lege- og tannlegetøy.</p>
+        </article>
+
+        <article class="tjeneste reveal">
+          <p class="tjeneste__nr">02</p>
+          <h3>Bedriftsservice</h3>
+          <p>Fast vask og rens for bedrifter, med henting og levering i Tønsberg, Horten, Holmestrand og Stokke.</p>
+        </article>
+
+        <article class="tjeneste reveal">
+          <p class="tjeneste__nr">03</p>
+          <h3>Matter, mopper og duker</h3>
+          <p>Leiematter, leiemopper og leieduker tas imot til vask.</p>
+        </article>
+
+        <article class="tjeneste reveal">
+          <p class="tjeneste__nr">04</p>
+          <h3>Gardiner, dyner og puter</h3>
+          <p>Gardiner, sengeunderlag, dyner og puter. Tepper tar vi til vask og rens i alle typer.</p>
+        </article>
+
+        <article class="tjeneste reveal">
+          <p class="tjeneste__nr">05</p>
+          <h3>Skjorteservice</h3>
+          <p>Skjorter tas imot stykkevis, til kr 45,- pr. stk.</p>
+        </article>
+
+        <article class="tjeneste reveal">
+          <p class="tjeneste__nr">06</p>
+          <h3>Privat renseri</h3>
+          <p>Dresser, kjoler, kåper, frakker og skinnjakker.</p>
+        </article>
+      </div>
+
+      <div class="skjortekalk reveal">
+        <div class="skjortekalk__hode">
+          <p class="eyebrow">Skjorteservice</p>
+          <p class="skjortekalk__sats">kr 45,- <span>pr. stk.</span></p>
+        </div>
+        <div class="skjortekalk__kalk">
+          <label class="kalk__merke" for="skjorter">Antall skjorter</label>
+          <div class="kalk__rad">
+            <input class="kalk__felt" id="skjorter" name="skjorter" type="number" inputmode="numeric" min="1" max="500" step="1" value="10" />
+            <span class="kalk__enhet">stk.</span>
+          </div>
+          <p class="kalk__svar" aria-live="polite"><span data-kalk-antall>10</span> skjorter = <strong><span data-kalk-sum>450</span> kr</strong></p>
+          <p class="hjelp">Legg inn antall, så regner vi ut summen med satsen over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prosess: mørk label-flate, tre nummererte steg -->
+  <section class="section prosess" id="slik">
+    <div class="wrap">
+      <div class="seksjon-topp seksjon-topp--lys reveal">
+        <p class="eyebrow">Slik fungerer hentingen</p>
+        <h2>Tre steg fra skittent til rent</h2>
+      </div>
+
+      <ol class="steg-liste">
+        <li class="steg reveal">
+          <span class="steg__nr" aria-hidden="true">01</span>
+          <h3>Si fra hva som skal vaskes</h3>
+          <p>Fyll ut bestillingen her, eller ring 33 31 91 38 eller 90 19 20 01.</p>
+        </li>
+        <li class="steg reveal">
+          <span class="steg__nr" aria-hidden="true">02</span>
+          <h3>Vi henter der dere er</h3>
+          <p>Henting og levering i Tønsberg, Horten, Holmestrand, Stokke og omegn.</p>
+        </li>
+        <li class="steg reveal">
+          <span class="steg__nr" aria-hidden="true">03</span>
+          <h3>Tøyet kommer tilbake</h3>
+          <p>Vasket og renset. Har dere levert i Storgaten 42, hentes det der.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Interaksjon: tre steg, kvittering, mailto. Alt client-side. -->
+  <section class="section" id="bestill">
+    <div class="wrap bestilling">
+      <div class="bestilling__intro reveal">
+        <p class="eyebrow">Når telefonen ringer</p>
+        <h2>Bestillingen kan komme inn mens dere står i arbeid</h2>
+        <p class="lead">Kunden velger hva som skal vaskes, hvor det skal hentes og når — og får en kvittering å se på med én gang. Ingenting sendes av seg selv: bestillingen ligger i nettleseren til den åpnes som e-post til vaskeriet.</p>
+        <ul class="bestilling__punkter">
+          <li>Tre steg, ingen konto, ingen innlogging.</li>
+          <li>Kvittering med referansenummer før kunden sender.</li>
+          <li>Bestillingen går til ole@tonsbergvaskeri.no.</li>
+        </ul>
+      </div>
+
+      <div class="skjema-panel reveal">
+        <div class="skjema-panel__topp">
+          <h3>Bestill henting</h3>
+          <p class="skjema-panel__steg" aria-live="polite">Steg <span data-steg-nr>1</span> av 3</p>
+        </div>
+
+        <ol class="framdrift" aria-hidden="true">
+          <li data-fram="1" class="er-her">Hva</li>
+          <li data-fram="2">Hvor</li>
+          <li data-fram="3">Hvem</li>
+        </ol>
+
+        <form class="bestillingsskjema" data-bestilling novalidate>
+          <fieldset class="felt-gruppe" data-steg="1">
+            <legend class="felt-gruppe__tittel">Hva skal vaskes?</legend>
+            <p class="hjelp">Velg ett eller flere.</p>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="vare" value="Arbeidstøy og kjeledresser" /><span>Arbeidstøy og kjeledresser</span></label>
+              <label class="chip"><input type="checkbox" name="vare" value="Kokketøy og lege-/tannlegetøy" /><span>Kokketøy og lege-/tannlegetøy</span></label>
+              <label class="chip"><input type="checkbox" name="vare" value="Matter, mopper og duker (leie)" /><span>Matter, mopper og duker</span></label>
+              <label class="chip"><input type="checkbox" name="vare" value="Gardiner, dyner, puter og tepper" /><span>Gardiner, dyner, puter og tepper</span></label>
+              <label class="chip"><input type="checkbox" name="vare" value="Skjorter (kr 45,- pr. stk.)" /><span>Skjorter</span></label>
+              <label class="chip"><input type="checkbox" name="vare" value="Dress, kjole, kåpe eller skinnjakke" /><span>Dress, kjole, kåpe eller skinnjakke</span></label>
+            </div>
+            <p class="feilmelding" data-feil role="alert" hidden></p>
+          </fieldset>
+
+          <fieldset class="felt-gruppe" data-steg="2" hidden>
+            <legend class="felt-gruppe__tittel">Hvor og når?</legend>
+
+            <div class="felt">
+              <label for="poststed">Hvor skal vi hente?</label>
+              <select id="poststed" name="poststed">
+                <option value="">Velg sted</option>
+                <option value="Tønsberg">Tønsberg</option>
+                <option value="Horten">Horten</option>
+                <option value="Holmestrand">Holmestrand</option>
+                <option value="Stokke">Stokke</option>
+                <option value="Annet i omegnen">Annet i omegnen</option>
+              </select>
+            </div>
+
+            <div class="felt">
+              <label for="adresse">Adresse</label>
+              <input id="adresse" name="adresse" type="text" autocomplete="street-address" placeholder="Gate, nummer og postnummer" />
+            </div>
+
+            <fieldset class="felt felt--gruppe">
+              <legend class="felt__tittel">Hvem henter vi for?</legend>
+              <div class="chips chips--sm">
+                <label class="chip chip--sm"><input type="radio" name="kunde" value="Bedrift" checked /><span>Bedrift</span></label>
+                <label class="chip chip--sm"><input type="radio" name="kunde" value="Privat" /><span>Privat</span></label>
+              </div>
+            </fieldset>
+
+            <div class="felt">
+              <label for="dato">Ønsket hentedag</label>
+              <input id="dato" name="dato" type="date" />
+              <p class="hjelp">Står feltet tomt, avtaler vi dagen.</p>
+            </div>
+
+            <p class="feilmelding" data-feil role="alert" hidden></p>
+          </fieldset>
+
+          <fieldset class="felt-gruppe" data-steg="3" hidden>
+            <legend class="felt-gruppe__tittel">Hvem skal vi kontakte?</legend>
+
+            <div class="felt">
+              <label for="navn">Navn</label>
+              <input id="navn" name="navn" type="text" autocomplete="name" />
+            </div>
+
+            <div class="to-felt">
+              <div class="felt">
+                <label for="telefon">Telefon</label>
+                <input id="telefon" name="telefon" type="tel" inputmode="tel" autocomplete="tel" />
+              </div>
+              <div class="felt">
+                <label for="epost">E-post</label>
+                <input id="epost" name="epost" type="email" autocomplete="email" />
+              </div>
+            </div>
+            <p class="hjelp">Fyll ut telefon eller e-post — vi trenger én vei tilbake.</p>
+
+            <div class="felt">
+              <label for="merknad">Merknad</label>
+              <textarea id="merknad" name="merknad" rows="3" placeholder="Antall plagg, merking, nøkkel eller når det passer"></textarea>
+            </div>
+
+            <p class="feilmelding" data-feil role="alert" hidden></p>
+          </fieldset>
+
+          <div class="skjema-knapper">
+            <button class="btn btn--ghost" type="button" data-tilbake hidden>Tilbake</button>
+            <button class="btn" type="button" data-neste>Neste</button>
+            <button class="btn" type="button" data-lagre hidden>Lag bestilling</button>
+          </div>
+          <p class="skjema-notat small">Skisse: opplysningene blir liggende i nettleseren din, og du sender dem selv som e-post.</p>
+        </form>
+
+        <div class="kvittering" data-kvittering hidden tabindex="-1" aria-labelledby="kv-tittel">
+          <p class="kvittering__merke">Kvittering · ikke sendt</p>
+          <h3 id="kv-tittel">Bestilling <span class="kvittering__ref" data-kv-ref>TV-000000-000</span></h3>
+          <div class="kvittering__rader" data-kv-rader></div>
+          <p class="kvittering__tekst">Vil du sende den nå, åpner knappen e-postprogrammet med alt utfylt til ole@tonsbergvaskeri.no. Ingenting er sendt ennå.</p>
+          <div class="skjema-knapper">
+            <a class="btn" data-kv-send href="mailto:ole@tonsbergvaskeri.no">Send som e-post</a>
+            <button class="btn btn--ghost" type="button" data-kv-endre>Endre</button>
+            <button class="btn btn--ghost" type="button" data-kv-ny>Ny bestilling</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sted: Storgaten 42 -->
+  <section class="section" id="sted">
+    <div class="wrap sted">
+      <figure class="sted__fig reveal">
+        <img src="img/storgaten.jpg" alt="Storgaten i Tønsberg: nummer 42 står på den gule fasaden til venstre, og gaten går videre mot byen." width="760" height="1061" loading="lazy" decoding="async" />
+        <figcaption>Storgaten i Tønsberg. Nummer 42 står på gavlen til venstre i bildet.</figcaption>
+      </figure>
+
+      <div class="sted__tekst reveal">
+        <p class="eyebrow">Innlevering</p>
+        <h2>Midt i Tønsberg sentrum</h2>
+        <p class="lead">Vi holder til i Storgaten 42. Inngangen er fra den store P-plassen ved siden av Hotell Klubben.</p>
+
+        <dl class="opplysninger">
+          <div class="opplysning">
+            <dt>Adresse</dt>
+            <dd>Storgaten 42, 3126 Tønsberg</dd>
+          </div>
+          <div class="opplysning">
+            <dt>Inngang</dt>
+            <dd>Fra stor P-plass ved siden av Hotell Klubben</dd>
+          </div>
+          <div class="opplysning">
+            <dt>Henting</dt>
+            <dd>Tønsberg, Horten, Holmestrand, Stokke og omegn</dd>
+          </div>
+          <div class="opplysning">
+            <dt>Telefon</dt>
+            <dd><a class="lenke" href="tel:+4733319138">33 31 91 38</a> <a class="lenke" href="tel:+4790192001">90 19 20 01</a></dd>
+          </div>
+          <div class="opplysning">
+            <dt>E-post</dt>
+            <dd><a class="lenke" href="mailto:ole@tonsbergvaskeri.no">ole@tonsbergvaskeri.no</a></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section class="section" id="kontakt">
+    <div class="wrap kontakt">
+      <div class="kontakt__tekst reveal">
+        <p class="eyebrow">Kontakt</p>
+        <h2>Ring, eller send bestillingen</h2>
+        <p class="lead">Telefonen er 33 31 91 38 eller 90 19 20 01. Bestillingen kan fylles ut når som helst — også når vi står i arbeid — og sendes som e-post til ole@tonsbergvaskeri.no.</p>
+      </div>
+
+      <div class="kontakt__kort reveal">
+        <a class="kontakt__rad" href="tel:+4733319138">
+          <span class="kontakt__merke">Telefon</span>
+          <span class="kontakt__verdi">33 31 91 38</span>
+        </a>
+        <a class="kontakt__rad" href="tel:+4790192001">
+          <span class="kontakt__merke">Telefon</span>
+          <span class="kontakt__verdi">90 19 20 01</span>
+        </a>
+        <a class="kontakt__rad" href="mailto:ole@tonsbergvaskeri.no">
+          <span class="kontakt__merke">E-post</span>
+          <span class="kontakt__verdi kontakt__verdi--liten">ole@tonsbergvaskeri.no</span>
+        </a>
+        <p class="kontakt__org">Tønsberg Vaskeri · org.nr 926 542 990 · Storgaten 42, 3126 Tønsberg</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap fot">
+    <div class="fot__merke">
+      <span class="fot__navn">Tønsberg Vaskeri</span>
+      <span class="fot__slag">alt i vask og rens</span>
+    </div>
+
+    <div class="fot__kol">
+      <p class="fot__tittel">Adresse</p>
+      <p>Storgaten 42<br />3126 Tønsberg</p>
+    </div>
+
+    <div class="fot__kol">
+      <p class="fot__tittel">Kontakt</p>
+      <a href="tel:+4733319138">33 31 91 38</a>
+      <a href="tel:+4790192001">90 19 20 01</a>
+      <a href="mailto:ole@tonsbergvaskeri.no">ole@tonsbergvaskeri.no</a>
+    </div>
+
+    <div class="fot__kol">
+      <p class="fot__tittel">Org.nr</p>
+      <p>926 542 990</p>
+      <p class="small">Vaskeri- og renserivirksomhet</p>
+    </div>
+  </div>
+
+  <div class="wrap fot__bunn">
+    <p>© <span data-year>2026</span> Tønsberg Vaskeri</p>
+    <p class="small">Innhold hentet fra tonsbergvaskeri.no og Enhetsregisteret. Foto: Simon Law (CC BY-SA 2.0) og Peter Fiskerstrand (CC BY-SA 4.0), via Wikimedia Commons.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

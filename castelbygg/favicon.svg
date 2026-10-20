@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Castel Bygg">
+  <rect width="64" height="64" rx="13" fill="#14110e"/>
+  <g fill="#c9a46a">
+    <path d="M13 46V29.2L19 24v22z"/>
+    <path d="M24.5 46V21.2L30.5 16v30z"/>
+    <path d="M36 46V29.2L42 24v22z"/>
+  </g>
+  <path d="M13 51h29" stroke="#e3c795" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

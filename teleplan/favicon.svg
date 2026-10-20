@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Teleplan">
+  <rect width="32" height="32" fill="#f2f2ed"/>
+  <g fill="none" stroke="#131311">
+    <circle cx="16" cy="17.4" r="12.6" stroke-width="1.7"/>
+    <path d="M5.6 17.4h20.8M9.4 23.2h13.2M12 12.6h8" stroke-width="1"/>
+  </g>
+  <path d="M2.8 12.2h26.4" stroke="#131311" stroke-width="4.2"/>
+  <path d="M16 12.2v17.2" stroke="#131311" stroke-width="4.2"/>
+</svg>

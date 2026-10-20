@@ -1,0 +1,113 @@
+/*
+  Tønsberg Vaskeri — identitet.
+
+  Arketype: varm/håndverk i flaten, men med kjølig lys: frost-hvit lin som
+  bakgrunn, dyp marineblå som blekk, og vaskeriets egen blå (#00579b, hentet
+  fra deres eget stilark vaskeri_styles.css) som eneste aksent. Ordmotivet er
+  vaskelappen: stiplede rammer, små nummererte etiketter og en vevd rutenetting
+  i bakgrunnen — ikke kort-UI.
+
+  To fonter: Playfair Display (deres eget ordmerke er en serif) og Karla.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f3f6f8;
+  --bg-soft: #e7edf1;
+  --surface: #ffffff;
+
+  /* Blekk */
+  --fg: #0b1b2b;
+  --fg-soft: #23384b;
+  --muted: #54697b;
+
+  /* Linjer og søm */
+  --line: #d3dde4;
+  --line-strong: #b7c6d2;
+  --stitch: #a4bac9;
+
+  /* Deres egen blå */
+  --accent: #00579b;
+  --accent-deep: #00406f;
+  --accent-soft: #e2eef7;
+  --accent-fg: #ffffff;
+
+  /* Mørk label-flate (prosess, kontakt, footer) */
+  --ink: #0a1a2b;
+  --ink-soft: #122a40;
+  --ink-line: #274159;
+  --ink-fg: #eef4f8;
+  --ink-muted: #a9bfce;
+
+  /* Typografi */
+  --font-display: 'Playfair Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --t-xs: 0.76rem;
+  --t-sm: 0.93rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.42vw, 1.28rem);
+  --t-h3: clamp(1.18rem, 1.06rem + 0.55vw, 1.42rem);
+  --t-h2: clamp(1.9rem, 1.4rem + 1.95vw, 2.85rem);
+  --t-h1: clamp(2.4rem, 1.5rem + 3.5vw, 3.85rem);
+
+  /* Form: lite avrunding, dette skal se trykt ut */
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(10 26 43 / 5%), 0 20px 46px -32px rgb(10 26 43 / 45%);
+
+  --wrap: 1160px;
+  --header-h: 76px;
+}
+
+html {
+  background: var(--bg);
+  color-scheme: light;
+}
+
+body {
+  letter-spacing: 0.002em;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+
+h1 {
+  line-height: 1.02;
+}
+
+h2 {
+  line-height: 1.06;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* Etiketteks: små, spredte majuskler — som trykket på en vaskelapp. */
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.lead {
+  max-width: 56ch;
+}

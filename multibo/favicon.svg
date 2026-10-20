@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="MultiBO">
+  <rect width="32" height="32" fill="#0e1a26"/>
+  <path d="M3 27V14L10 4l7 10v13" fill="none" stroke="#eaf0f6" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M17 27V14l6-7 6 7v13" fill="none" stroke="#5d8bc7" stroke-width="2.6" stroke-linejoin="round"/>
+</svg>

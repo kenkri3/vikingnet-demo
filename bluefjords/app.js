@@ -333,6 +333,10 @@
 
     form.hidden = true;
     kvittering.hidden = false;
+    merker.forEach(function (merke) {
+      merke.classList.add('is-done');
+      merke.removeAttribute('aria-current');
+    });
     kvittering.focus({ preventScroll: true });
     kvittering.scrollIntoView({ block: 'center' });
     live.textContent = 'Forespørsel registrert med referanse ' + ref + '.';

@@ -1,0 +1,911 @@
+/* ==========================================================================
+   Hals Advokatfellesskap — layout og komponenter.
+   Ligger etter kit/base.css og theme.css. Bare denne filen bestemmer rytmen.
+   ========================================================================== */
+
+/* --- Grunnrytme ---------------------------------------------------------- */
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.75rem 1rem;
+  background: var(--ink);
+  color: var(--on-ink);
+  text-decoration: none;
+  transform: translateY(-130%);
+}
+
+.skip:focus {
+  transform: none;
+}
+
+section[id],
+main[id] {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.eyebrow .rule {
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  background: var(--accent-bright);
+  flex: none;
+}
+
+.eyebrow--onink {
+  color: var(--on-ink-muted);
+}
+
+.eyebrow--onink .rule {
+  background: var(--accent-bright);
+}
+
+.sectionhead {
+  max-width: 62ch;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: var(--t-sm);
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.link-arrow span {
+  transition: transform 0.18s ease;
+}
+
+.link-arrow:hover span {
+  transform: translateX(3px);
+}
+
+/* --- Header -------------------------------------------------------------- */
+
+.header {
+  background: var(--surface);
+}
+
+.header__inner {
+  min-height: var(--header-h);
+}
+
+.brand img {
+  height: 44px;
+  width: auto;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.btn--sm {
+  min-height: 44px;
+  padding: 0.55rem 1rem;
+  font-size: var(--t-sm);
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  padding-block: clamp(2rem, 4.5vw, 3.5rem) clamp(1.5rem, 4vw, 2.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(1.5rem, 4vw, 3.25rem);
+  align-items: end;
+}
+
+.hero__title h1 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.018em;
+}
+
+.hero__aside {
+  padding-left: clamp(1rem, 2.5vw, 1.75rem);
+  border-left: 1px solid var(--line-strong);
+  padding-bottom: 0.35rem;
+}
+
+.hero__aside .lead {
+  margin-bottom: var(--s-4);
+  font-size: var(--t-lead);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.hero__media {
+  position: relative;
+  margin: clamp(1.75rem, 4vw, 2.75rem) 0 0;
+}
+
+.hero__media img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: 50% 55%;
+  border-radius: var(--radius);
+}
+
+.hero__caption {
+  position: absolute;
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  bottom: clamp(0.75rem, 2vw, 1.5rem);
+  max-width: 34ch;
+  padding: 0.85rem 1rem;
+  background: var(--surface);
+  border-left: 3px solid var(--accent-bright);
+  box-shadow: var(--shadow);
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  color: var(--fg);
+}
+
+.hero__caption-kicker {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Båndet med de fire fakta */
+
+.facts {
+  margin-top: clamp(1.25rem, 3vw, 1.75rem);
+  background: var(--ink);
+  color: var(--on-ink);
+  border-top: 3px solid var(--accent-bright);
+  border-radius: var(--radius);
+}
+
+.facts__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  list-style: none;
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 1.9rem) clamp(1.15rem, 3vw, 2rem);
+}
+
+.facts__list li {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+  align-content: start;
+}
+
+.facts__value {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.facts__label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--on-ink-muted);
+}
+
+/* --- Om ------------------------------------------------------------------ */
+
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(1.75rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.about__text h2 {
+  max-width: 24ch;
+}
+
+.about__text p {
+  max-width: 58ch;
+}
+
+.pullquote {
+  margin: clamp(1.25rem, 3vw, 1.75rem) 0;
+  padding-left: clamp(0.9rem, 2vw, 1.25rem);
+  border-left: 3px solid var(--accent-bright);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  max-width: 30ch;
+}
+
+.about__media {
+  margin: 0;
+}
+
+.about__media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 42% 40%;
+  border-radius: var(--radius);
+}
+
+.about__media figcaption {
+  margin-top: 0.6rem;
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* --- Fagområder ---------------------------------------------------------- */
+
+.fields {
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
+}
+
+.fields__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(1.75rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.fields__intro h2 {
+  max-width: 18ch;
+}
+
+.fields__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.field__num {
+  padding-top: 0.3rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.field h3 {
+  margin: 0 0 0.15rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+.field p {
+  margin: 0;
+  max-width: 48ch;
+  font-size: var(--t-sm);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* --- Advokatene ---------------------------------------------------------- */
+
+.lawyers__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lawyer {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+  margin: 0;
+  padding: clamp(1.15rem, 2.5vw, 1.6rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent-bright);
+  border-radius: var(--radius);
+}
+
+.lawyer__mono {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.lawyer h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.lawyer__role {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.lawyer__firm {
+  margin: 0.15rem 0 0;
+  font-size: var(--t-sm);
+  color: var(--fg);
+}
+
+.lawyer__contact {
+  display: grid;
+  gap: 0.1rem;
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0.6rem 0 0;
+  border-top: 1px solid var(--line);
+  font-size: var(--t-sm);
+}
+
+.lawyer__contact li {
+  margin: 0;
+}
+
+.lawyer__contact a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.lawyer__contact a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* --- Henvendelse (mørk seksjon med skjema) ------------------------------- */
+
+.intake {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.intake h2 {
+  color: #ffffff;
+  max-width: 20ch;
+}
+
+.intake__intro p {
+  max-width: 46ch;
+  color: var(--on-ink-muted);
+}
+
+.intake__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.intake__steps {
+  display: grid;
+  gap: 0.55rem;
+  list-style: none;
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
+  padding: 0;
+}
+
+.intake__steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--on-ink-muted);
+}
+
+.intake__steps span {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #5c4a3f;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.intake__alt {
+  margin: 0 0 0.35rem;
+  font-size: var(--t-sm);
+  color: var(--on-ink-muted);
+}
+
+.intake__altlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.intake__altlinks li {
+  margin: 0;
+}
+
+.intake__altlinks a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--t-sm);
+  color: #ffffff;
+  text-decoration-color: #7b6656;
+}
+
+/* Fokusringen må synes på den mørke flaten også. */
+.intake :focus-visible,
+.footer :focus-visible {
+  outline-color: #f3c9c5;
+}
+
+.intake__panel {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--surface);
+  color: var(--fg);
+  border-radius: var(--radius);
+  border-top: 3px solid var(--accent-bright);
+  box-shadow: 0 32px 64px -32px rgb(0 0 0 / 55%);
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0 0 1.4rem;
+  padding: 0;
+}
+
+.stepper__item {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+  padding-top: 0.6rem;
+  border-top: 2px solid var(--line);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.stepper__item span {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.stepper__item em {
+  font-style: normal;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+}
+
+.stepper__item.is-current {
+  border-top-color: var(--accent);
+  color: var(--fg);
+}
+
+.stepper__item.is-current span {
+  color: var(--accent);
+}
+
+.stepper__item.is-done {
+  border-top-color: var(--accent);
+}
+
+.step {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.step[hidden] {
+  display: none;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.stepnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.formerror {
+  margin: 0;
+  padding-left: 0.6rem;
+  border-left: 2px solid var(--accent);
+  font-size: var(--t-sm);
+  line-height: 1.45;
+  color: #8f0c18;
+}
+
+/* Kvitteringen */
+
+.receipt {
+  padding: 1rem 1.1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.receipt__status {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.receipt__no {
+  display: grid;
+  gap: 0.1rem;
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px dashed var(--line-strong);
+}
+
+.receipt__nolabel {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.receipt__no strong {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.receipt__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1rem;
+  margin: 0;
+  font-size: var(--t-sm);
+}
+
+.receipt__list div {
+  display: grid;
+  gap: 0.05rem;
+  align-content: start;
+}
+
+.receipt__wide {
+  grid-column: 1 / -1;
+}
+
+.receipt__list dt {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.receipt__list dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* --- Kontakt ------------------------------------------------------------- */
+
+.contact {
+  background: var(--bg);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.contact__grid .lead {
+  margin-bottom: var(--s-4);
+}
+
+.contact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.contact__person {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 1rem 0 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact__person h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.contact__addr {
+  margin: 0 0 0.25rem;
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.contact__person a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--t-sm);
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.contact__person a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* --- Footer -------------------------------------------------------------- */
+
+.footer {
+  padding-block: clamp(2rem, 5vw, 3rem) clamp(1.25rem, 3vw, 1.75rem);
+  background: var(--ink);
+  color: #c8bbae;
+  border-top: 3px solid var(--accent-bright);
+  font-size: var(--t-sm);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.footer__brand {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+
+.footer__grid p {
+  margin: 0 0 0.55rem;
+  line-height: 1.55;
+}
+
+.footer__label {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a3937f !important;
+}
+
+.footer__links {
+  display: grid;
+  gap: 0.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__links li {
+  margin: 0;
+}
+
+.footer__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  color: #e7ddd2;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer__grid a {
+  color: #e7ddd2;
+  text-decoration-color: #6b5a4d;
+}
+
+.footer__mail {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-top: clamp(1.5rem, 4vw, 2.25rem);
+  padding-top: 1rem;
+  border-top: 1px solid #3a2f28;
+  font-size: 0.78rem;
+}
+
+.footer__bottom p {
+  margin: 0;
+}
+
+/* --- Tilpasning ---------------------------------------------------------- */
+
+@media (max-width: 980px) {
+  .hero__head,
+  .about__grid,
+  .fields__grid,
+  .intake__grid,
+  .contact__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__aside {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 1.1rem;
+  }
+
+  .about__media {
+    order: -1;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 860px) {
+  .lawyers__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .facts__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .header__cta {
+    display: none;
+  }
+
+  .hero__media img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero__caption {
+    position: static;
+    margin-top: -2rem;
+    margin-inline: 0.75rem;
+    border-top: 3px solid var(--accent-bright);
+    border-left: 0;
+    box-shadow: 0 12px 24px -18px rgb(23 18 16 / 60%);
+  }
+
+  .lawyers__grid,
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .row2,
+  .receipt__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stepper__item em {
+    font-size: 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-arrow span {
+    transition: none;
+  }
+}

@@ -1,0 +1,140 @@
+/*
+  b reel social — identitet.
+
+  Verkstedet (Arketype: redaksjonell, med magasinets harde kanter):
+  fargene er hentet fra deres egen logo — den klare pinken #d8669c og den
+  dype #aa1f61 — satt på en varm, lys kremflate og en mørk plommeflate.
+  Ingen tredje farge, ingen gradienter.
+
+  Typografi: Bodoni Moda (høy kontrast, redaksjonell) i overskrifter og
+  Manrope i brødtekst. To fonter, ikke flere.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --krem: #fbf4ec;
+  --krem-2: #f4e7da;
+  --kort: #fffaf5;
+
+  /* Blekk — mørk plomme, ikke svart */
+  --plomme: #2a0f1e;
+  --plomme-2: #35142a;
+  --ink: #2a1220;
+  --ink-soft: #3f2434;
+  --muted: #6b5560;
+
+  /* Linjer */
+  --line: #e8d6c7;
+  --line-strong: #d7bfae;
+
+  /* Pink — deres egen */
+  --pink: #d8669c;         /* flater, streker, dekor */
+  --pink-lys: #f2a8c9;     /* tekst på mørk flate */
+  --pink-dyp: #a3155b;     /* tekst og knapper på lys flate */
+  --pink-svak: #f9e2ec;
+
+  /* Lys tekst på plommeflate */
+  --paa-plomme: #f8ede5;
+  --paa-plomme-dempet: #d9c1cb;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--krem);
+  --bg-soft: var(--krem-2);
+  --fg: var(--ink);
+  --accent: var(--pink-dyp);
+  --accent-fg: #fff6fa;
+  --accent-soft: var(--pink-svak);
+
+  /* To fonter */
+  --font-display: 'Bodoni Moda', 'Didot', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Rytme: nesten rette hjørner. Dette er et magasin, ikke et kort-UI. */
+  --radius: 2px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(42 18 32 / 5%), 0 26px 50px -34px rgb(42 18 32 / 40%);
+
+  --wrap: 1180px;
+  --header-h: 78px;
+
+  /* Typeskala */
+  --t-xs: 0.74rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.48vw, 1.28rem);
+  --t-h3: clamp(1.32rem, 1.12rem + 0.85vw, 1.72rem);
+  --t-h2: clamp(1.95rem, 1.35rem + 2.5vw, 3.35rem);
+  --t-h1: clamp(2.5rem, 1.4rem + 5.2vw, 5rem);
+}
+
+html {
+  background: var(--krem);
+}
+
+body {
+  background: var(--krem);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.018em;
+  line-height: 1.04;
+}
+
+h1 { line-height: 0.98; }
+
+h3 { line-height: 1.16; letter-spacing: -0.012em; }
+
+.eyebrow {
+  color: var(--pink-dyp);
+  letter-spacing: 0.18em;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--pink);
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.01em;
+  background: var(--pink-dyp);
+  color: var(--accent-fg);
+}
+
+.btn:hover {
+  background: #8d0f4d;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.btn--ghost:hover {
+  background: transparent;
+  border-color: var(--ink);
+  box-shadow: none;
+}
+
+:focus-visible {
+  outline-color: var(--pink-dyp);
+}
+
+::selection {
+  background: var(--pink-svak);
+  color: var(--ink);
+}

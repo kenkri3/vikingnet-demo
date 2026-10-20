@@ -1,0 +1,80 @@
+/*
+  Bredvid — identitet.
+  Paletten er hentet fra deres egen logo (#1B3631), aksentgrønn fra logoen
+  (#0D453A) og den varme papirfargen de bruker på siden sin (#F9F6F1).
+  Typografi: én display-serif med høy kontrast, én nøytral grotesk til tekst.
+*/
+
+:root {
+  color-scheme: light;
+
+  --paper: #f9f6f1;
+  --paper-deep: #f0eae0;
+  --paper-card: #fdfbf7;
+
+  --ink: #16211d;
+  --muted: #5c6862;
+  --muted-soft: #5f6a63;
+  --line: #e3dcd0;
+
+  --pine: #1b3631;
+  --pine-deep: #0d453a;
+  --pine-dark: #0b2c26;
+
+  --bone: #f9f6f1;
+  --bone-dim: #c3d2c8;
+  --bone-soft: #a9bdb2;
+
+  --bg: var(--paper);
+  --bg-soft: var(--paper-deep);
+  --fg: var(--ink);
+
+  --accent: #0d453a;
+  --accent-fg: #f9f6f1;
+  --accent-soft: #e3ebe0;
+
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+
+  --radius: 3px;
+  --radius-sm: 3px;
+
+  --wrap: 1160px;
+  --header-h: 72px;
+}
+
+/* Display-serifen finnes bare i vekt 400 — vi lar den være lett i stedet for
+   å la nettleseren syntetisere en fet skrift. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.012em;
+}
+
+h1 {
+  font-size: clamp(2.55rem, 1.5rem + 4.2vw, 4.4rem);
+  line-height: 1.02;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 1.35rem + 2.2vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.05rem + 0.6vw, 1.55rem);
+  line-height: 1.16;
+}
+
+strong {
+  font-weight: 600;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bone);
+}

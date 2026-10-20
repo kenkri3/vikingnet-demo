@@ -1,0 +1,49 @@
+/*
+  Billink — theme.css
+  Palett og typografi hentet fra Billinks egen logo: blekkblå #1C252E,
+  logo-teal #198E98 og den lyse minten fra illustrasjonene. Poppins er
+  fonten de selv bruker.
+
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Rå merkevarefarger */
+  --blekk: #101a20;
+  --blekk-svak: #55636d;
+  --petrol: #198e98;        /* logo-teal, brukes på dekor og store flater */
+  --petrol-dyp: #0e6a73;    /* knapp og tekst med hvitt på – klarer AA */
+  --petrol-merke: #0b5a62;  /* lenker på lys flate */
+  --mint: #7ae9e5;
+  --natt: #0b1418;
+
+  /* Flater */
+  --papir: #ffffff;
+  --papir-svak: #f2f7f7;
+  --papir-dyp: #e6f0f0;
+  --strek: #dbe6e6;
+
+  /* base.css sine variabler */
+  --bg: var(--papir);
+  --bg-soft: var(--papir-svak);
+  --fg: var(--blekk);
+  --muted: var(--blekk-svak);
+  --line: var(--strek);
+  --accent: var(--petrol-dyp);
+  --accent-fg: #ffffff;
+  --accent-soft: #e2f2f1;
+
+  /* Én fontfamilie, fire vekter. Ingen flere. */
+  --font-display: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --t-h1: clamp(2.3rem, 1.45rem + 3.7vw, 4rem);
+  --t-h2: clamp(1.75rem, 1.35rem + 1.8vw, 2.6rem);
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgb(11 20 24 / 5%), 0 18px 44px rgb(11 20 24 / 8%);
+  --wrap: 1160px;
+}

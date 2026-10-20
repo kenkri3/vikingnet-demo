@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intility – digital grunnmur for virksomheter i privat og offentlig sektor</title>
+<meta name="description" content="Intility utvikler, leverer og drifter én integrert teknologiplattform: arbeidsflate, identitet, nettverk, sky, sikkerhet, AI og applikasjoner – som én sammenhengende tjeneste.">
+<meta name="theme-color" content="#071627">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Intility">
+<meta property="og:title" content="Intility – digital grunnmur for virksomheter">
+<meta property="og:description" content="Én integrert teknologiplattform: arbeidsflate, identitet, nettverk, sky, sikkerhet, AI og applikasjoner – levert som én sammenhengende tjeneste.">
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/intility/img/plattform-nett.jpg">
+<meta property="og:image:alt" content="Abstrakt illustrasjon av kretsløp i navy og korall">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#topp">
+      <svg class="brand__mark" viewBox="0 0 97 97" role="img" aria-label="Intility">
+        <rect width="96.77" height="96.06" rx="9.23" fill="#0c2338"></rect>
+        <path d="M24.87 17.96c0-2.74 2.22-4.96 4.96-4.96 2.75 0 4.96 2.22 4.96 4.96 0 2.74-2.22 4.96-4.96 4.96-2.73 0-4.96-2.22-4.96-4.96Z" fill="#f3f3f6"></path>
+        <path d="M54.22 43.45h-6.52v-7.88h6.52V26.76h10.02v8.81h15.53v7.88H64.24v17.19c0 4.76.8 8.13 2.4 10.13 1.6 2 4.18 3.01 7.73 3.01h5.4v9.19c-4.15 0-4.65 0-9.61 0-4.47 0-8.24-1.66-11.32-4.99-3.07-3.32-4.62-7.51-4.62-12.58V43.45Z" fill="#f3f3f6"></path>
+        <path d="M24.77 83.06V44.02h-7.77v-8.44h17.79v47.48h-10.02Z" fill="#f3f3f6"></path>
+      </svg>
+      <span>Intility</span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="hovedmeny" aria-label="Åpne meny">
+      <span></span><span></span>
+    </button>
+    <nav class="nav" id="hovedmeny" data-nav hidden aria-label="Hovedmeny">
+      <a href="#plattform">Plattformen</a>
+      <a href="#tjenester">Tjenester</a>
+      <a href="#kunder">Kunder</a>
+      <a href="#kontorer">Kontorer</a>
+      <a class="btn header__cta" href="#henvendelse"><span>Snakk med en rådgiver</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="innhold">
+
+  <!-- Hero -->
+  <section class="hero" id="topp">
+    <div class="hero__bilde">
+      <img src="img/plattform-nett.jpg" width="1600" height="900" fetchpriority="high" decoding="async"
+           alt="Abstrakt illustrasjon av kretsløp i navy og korall, hentet fra Intilitys eget billedspråk">
+    </div>
+    <div class="wrap hero__inner">
+      <div class="hero__tekst">
+        <p class="eyebrow">Enterprise Cloud · Oslo</p>
+        <h1 class="hero__tittel">Digital grunnmur for virksomheter i <em>privat og offentlig sektor</em></h1>
+        <p class="lead hero__lead">Intility utvikler, leverer og drifter én integrert teknologiplattform – arbeidsflate, identitet, nettverk, sky, sikkerhet, AI og applikasjoner – levert som én sammenhengende tjeneste.</p>
+        <div class="hero__handlinger">
+          <a class="btn" href="#henvendelse">Snakk med en rådgiver</a>
+          <a class="btn btn--ghost" href="#plattform">Se plattformen</a>
+        </div>
+        <ul class="hero__fakta">
+          <li>700+ ansatte i Norden</li>
+          <li>Schweigaards gate 39, Oslo</li>
+          <li>Org.nr 981 967 070</li>
+        </ul>
+      </div>
+
+      <aside class="konsoll" aria-label="Plattformtjenestens lag">
+        <div class="konsoll__topp">
+          <span>Plattformtjenesten</span>
+          <span class="konsoll__status">Én leveranse</span>
+        </div>
+        <ul class="konsoll__liste">
+          <li>
+            <span class="konsoll__prikk" aria-hidden="true"></span>
+            <span><span class="konsoll__navn">Arbeidsflate</span><span class="konsoll__hva">PC, Mac, Linux og mobile enheter</span></span>
+            <span class="konsoll__merke">Workplace</span>
+          </li>
+          <li>
+            <span class="konsoll__prikk" aria-hidden="true"></span>
+            <span><span class="konsoll__navn">Identitet</span><span class="konsoll__hva">Tilgangsstyring og Microsoft 365</span></span>
+            <span class="konsoll__merke">Identity</span>
+          </li>
+          <li>
+            <span class="konsoll__prikk" aria-hidden="true"></span>
+            <span><span class="konsoll__navn">Nettverk</span><span class="konsoll__hva">Brukere, lokasjoner, datasentre og sky</span></span>
+            <span class="konsoll__merke">Network</span>
+          </li>
+          <li>
+            <span class="konsoll__prikk" aria-hidden="true"></span>
+            <span><span class="konsoll__navn">Sky</span><span class="konsoll__hva">Edge, privat og offentlig sky</span></span>
+            <span class="konsoll__merke">Cloud</span>
+          </li>
+          <li>
+            <span class="konsoll__prikk" aria-hidden="true"></span>
+            <span><span class="konsoll__navn">Sikkerhet</span><span class="konsoll__hva">Døgnåpent Security Operations Center</span></span>
+            <span class="konsoll__merke">Security</span>
+          </li>
+          <li>
+            <span class="konsoll__prikk" aria-hidden="true"></span>
+            <span><span class="konsoll__navn">AI</span><span class="konsoll__hva">GPU-ressurser, suveren GPT og språkmodeller</span></span>
+            <span class="konsoll__merke">AI &amp; Data</span>
+          </li>
+          <li>
+            <span class="konsoll__prikk" aria-hidden="true"></span>
+            <span><span class="konsoll__navn">Applikasjoner</span><span class="konsoll__hva">3 200+ kundeapplikasjoner ivaretatt</span></span>
+            <span class="konsoll__merke">Apps</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Tall -->
+  <section class="tallband" aria-label="Intility i tall">
+    <div class="wrap">
+      <div class="tallband__grid">
+        <div class="tallband__celle">
+          <span class="tallband__tall">700</span>
+          <span class="tallband__tekst">offentlige og private virksomheter benytter Intility</span>
+        </div>
+        <div class="tallband__celle">
+          <span class="tallband__tall">3 200+</span>
+          <span class="tallband__tekst">kundeapplikasjoner ivaretatt av Intility</span>
+        </div>
+        <div class="tallband__celle">
+          <span class="tallband__tall">48</span>
+          <span class="tallband__tekst">land der Intilitys kunder har virksomhet</span>
+        </div>
+        <div class="tallband__celle">
+          <span class="tallband__tall">104</span>
+          <span class="tallband__tekst">kvartaler med uavbrutt organisk vekst i gjentakende inntekter</span>
+        </div>
+        <div class="tallband__celle">
+          <span class="tallband__tall">700+</span>
+          <span class="tallband__tekst">ansatte fordelt på Intilitys kontorer i Norden</span>
+        </div>
+        <div class="tallband__celle">
+          <span class="tallband__tall">1,8 mrd.</span>
+          <span class="tallband__tekst">i omsetning i 2025</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plattformen: strukturelt skifte -->
+  <section class="section" id="plattform">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Hvorfor Intility</p>
+        <h2>Fra drift av systemer til kontinuerlig plattformutvikling</h2>
+        <p class="lead">Intility beskriver skiftet i fem bevegelser. Tre av dem forklarer hvorfor plattformen er bygget som én tjeneste og ikke som sju leveranser.</p>
+      </div>
+
+      <ol class="trekk">
+        <li>
+          <span class="trekk__nr">01</span>
+          <div>
+            <h3>Fra outsourcing til kontinuerlig plattformutvikling</h3>
+            <p>Tradisjonelle driftsmodeller bygger på overføring av ansvar for eksisterende systemer. Intility mener fremtiden ligger i en modell der plattformen forbedres kontinuerlig som en del av leveransen – kundene kjøper ikke bare stabil drift, men en plattform som utvikles i takt med nye krav, trusler og muligheter.</p>
+          </div>
+        </li>
+        <li>
+          <span class="trekk__nr">02</span>
+          <div>
+            <h3>Fra integrasjonsprosjekter til innebygd plattformøkosystem</h3>
+            <p>Mange organisasjoner bruker betydelig tid og ressurser på å anskaffe, integrere og drifte separate løsninger for identitet, infrastruktur, operasjonelle prosesser og sikkerhet. Hos Intility er teknologi, identitet, operasjonelle verktøy og plattformkapabiliteter bygget sammen fra starten.</p>
+          </div>
+        </li>
+        <li>
+          <span class="trekk__nr">03</span>
+          <div>
+            <h3>Fra leverandørstyring til én operasjonell modell</h3>
+            <p>Når flere leverandører dekker ulike deler av verdikjeden, flyttes ansvaret for helheten ofte tilbake til kunden selv. Intility organiserer mennesker, teknologi og prosesser rundt ett felles ansvar for hele plattformen – med færre grensesnitt og en mer robust sikkerhets- og driftsmodell.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Tjenester -->
+  <section class="section pa-soft" id="tjenester">
+    <div class="wrap">
+      <div class="section-head section-head--delt">
+        <div>
+          <p class="eyebrow">Hva vi gjør</p>
+          <h2>Ett ansvar for hele leveransen</h2>
+          <p class="lead">Den virkelige verdien oppstår når alt fungerer sammen. Derfor leverer Intility én sammenhengende plattformtjeneste, ikke enkeltstående teknologier.</p>
+        </div>
+        <span class="section-nr">01 – 06</span>
+      </div>
+
+      <div class="tjenester">
+        <article class="tjeneste">
+          <span class="tjeneste__merke">Arbeidsflate</span>
+          <h3>Digital Workplace</h3>
+          <p>En moderne arbeidsflate bygget inn i den digitale grunnmuren, med enheter, sikkerhet, identitet og brukeropplevelse forvaltet som én integrert tjeneste – for PC, Mac, Linux og mobile enheter.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__merke">Identitet</span>
+          <h3>Workforce Identity &amp; Collaboration</h3>
+          <p>Kobler brukere, tilgangsstyring, Microsoft 365 og operasjonelle arbeidsprosesser sammen. Automatisert onboarding og kontinuerlig sikkerhetsforvaltning følger hele brukerreisen.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__merke">Nettverk</span>
+          <h3>Network &amp; Connectivity</h3>
+          <p>Kobler brukere, lokasjoner, datasentre, skyplattformer og edge-miljøer sammen i én operasjonell modell – utviklet for sikkerhet, skalerbarhet og forutsigbar drift.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__merke">Sky</span>
+          <h3>Cloud &amp; Applications</h3>
+          <p>Standardisert plattform for drift og utvikling av applikasjoner, containere, data- og AI-tjenester på tvers av edge, private og offentlige skymiljøer, integrert med sikkerhet og identitet fra dag én.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__merke">AI og data</span>
+          <h3>AI, Data &amp; Software</h3>
+          <p>Kobler programvare, data, identitet og operasjonelle prosesser sammen, slik at AI og moderne utvikling blir en naturlig del av virksomhetens operasjonelle modell.</p>
+        </article>
+        <article class="tjeneste">
+          <span class="tjeneste__merke">Sikkerhet</span>
+          <h3>Security &amp; Compliance</h3>
+          <p>Sikkerhet og compliance er bygget inn i hele grunnmuren – fra identitet og enheter til nettverk, applikasjoner og sky – med kontinuerlig overvåkning og et integrert døgnåpent Security Operations Center.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drift -->
+  <section class="section">
+    <div class="wrap split">
+      <div class="split__tekst">
+        <p class="eyebrow">Drift</p>
+        <h2>24/7 Operations &amp; Support</h2>
+        <p class="lead">Et integrert operasjonelt støtteapparat bygget rundt kontinuerlig overvåkning, innsikt og rask håndtering av hendelser på tvers av hele den digitale grunnmuren.</p>
+        <ul class="punkter">
+          <li>Plattformen kombinerer mennesker, automatisering og operasjonelle data for å sikre stabilitet og produktivitet.</li>
+          <li>Som kunde har du tilgang til support fra Intilitys teknikere døgnet rundt, via My Intility eller på telefon.</li>
+          <li>Kontinuerlig videreutvikling fremfor statisk drift – endringer tas som en del av leveransen.</li>
+        </ul>
+      </div>
+      <div class="plate">
+        <img src="img/drift-og-overvakning.jpg" width="376" height="494" decoding="async"
+             alt="Fagfolk foran en vegg av skjermer med overvåkningsdata i Intilitys driftsmiljø">
+        <span class="plate__merke">Døgnåpen drift</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sikkerhet -->
+  <section class="section pa-deep">
+    <div class="wrap split split--snu">
+      <div class="split__tekst">
+        <p class="eyebrow">Sikkerhet og governance</p>
+        <h2>Bygget inn i grunnmuren, ikke lagt på etterpå</h2>
+        <p class="lead">Sikkerhet, compliance og operasjonell kontroll er integrert i hele den digitale grunnmuren – fra identitet og enheter til nettverk, skyplattformer og applikasjoner.</p>
+        <ul class="punkter">
+          <li>Plattformen videreutvikles kontinuerlig for å møte et trusselbilde og regulatoriske krav i rask endring.</li>
+          <li>Operasjonell innsikt på tvers av plattformen gjør det mulig å identifisere, automatisere og løse utfordringer raskere.</li>
+          <li>Standardisering gir høyere kvalitet, bedre samspill mellom teknologidomener og mer forutsigbar drift.</li>
+        </ul>
+      </div>
+      <div class="plate">
+        <img src="img/sikkerhet.jpg" width="376" height="494" decoding="async"
+             alt="Medarbeidere i samtale foran store skjermer med sanntidsdata for sikkerhetsovervåkning">
+        <span class="plate__merke">Security Operations</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Manager -->
+  <section class="section">
+    <div class="wrap">
+      <div class="produkt">
+        <div class="produkt__bilde">
+          <img src="img/platform-manager.jpg" width="1040" height="768" decoding="async"
+               alt="Bærbar PC som viser Intility Sustainability Manager med utslippstall og graf for CO₂ over tid">
+        </div>
+        <div class="produkt__tekst">
+          <p class="eyebrow">Platform Manager</p>
+          <h2>Operasjonell styring på toppen av plattformen</h2>
+          <p>Platform Manager er et software-økosystem for operasjonell styring, bygget på toppen av Intilitys plattformtjeneste. Verktøyene henter data fra samme plattform som virksomheten allerede kjører på.</p>
+          <p>Financial Manager gir løpende finansiell innsikt på tvers av hele plattform-verdikjeden, med abonnementer, fakturaer, betalinger og faktureringsenheter samlet på ett sted. Sustainability Manager samler virksomhetens bærekraftsrapportering i samme miljø.</p>
+          <ul class="produkt__merker">
+            <li>Financial Manager</li>
+            <li>Sustainability Manager</li>
+            <li>Administrert Linux-plattform</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kunder -->
+  <section class="section pa-soft" id="kunder">
+    <div class="wrap referanser">
+      <div class="section-head">
+        <p class="eyebrow">Referanser</p>
+        <h2>700 virksomheter bruker plattformen</h2>
+        <p class="lead">Blant virksomhetene som har valgt Intility som digital grunnmur:</p>
+      </div>
+      <ul class="kundeliste">
+        <li>BDO</li>
+        <li>Entra</li>
+        <li>Lunera Energi</li>
+        <li>Brækhus</li>
+        <li>Eksfin</li>
+        <li>Norad</li>
+        <li>Advokatfirmaet Ro Sommernes</li>
+      </ul>
+      <div class="referansekort">
+        <p class="referansekort__navn">Norad på Intility</p>
+        <p>Norad er direktoratet for utviklingssamarbeid og jobber for at verden skal nå FNs bærekraftsmål. Etter oppdrag fra Stortinget og Regjeringen forvalter de store deler av Norges bistandsmidler, og de har valgt Intilitys ende-til-ende plattformtjeneste for hele sitt IT-miljø.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Henvendelse -->
+  <section class="section henv" id="henvendelse">
+    <div class="wrap henv__grid">
+      <div class="henv__intro">
+        <p class="eyebrow">Henvendelse</p>
+        <h2>Henvendelsen havner hos rett folk – ikke i en tom innboks</h2>
+        <p class="lead">Velg hva det gjelder, og se hvilken kø henvendelsen går til og hvem som svarer. Hver kø har sin egen kanal hos Intility i dag.</p>
+
+        <ul class="koer">
+          <li>
+            <span class="koer__navn">Salg og nye kunder</span>
+            <span class="koer__kanal">
+              <a href="mailto:salg@intility.no">salg@intility.no</a>
+              <a href="tel:+4724103308">+47 24 10 33 08</a>
+            </span>
+          </li>
+          <li>
+            <span class="koer__navn">Support – for kunder, døgnet rundt</span>
+            <span class="koer__kanal">
+              <a href="https://my.intility.com">My Intility</a>
+              <a href="tel:+4724103400">+47 24 10 34 00</a>
+            </span>
+          </li>
+          <li>
+            <span class="koer__navn">Faktura</span>
+            <span class="koer__kanal">
+              <a href="mailto:invoice@intility.no">invoice@intility.no</a>
+              <a href="tel:+4724103306">+47 24 10 33 06</a>
+            </span>
+          </li>
+          <li>
+            <span class="koer__navn">Webshop og brukerutstyr</span>
+            <span class="koer__kanal">
+              <a href="mailto:bestilling@intility.no">bestilling@intility.no</a>
+              <a href="tel:+4724103307">+47 24 10 33 07</a>
+            </span>
+          </li>
+          <li>
+            <span class="koer__navn">Presse</span>
+            <span class="koer__kanal">
+              <a href="mailto:marked@intility.no">marked@intility.no</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="soknad">
+        <div class="soknad__topp">
+          <span>Ny henvendelse</span>
+          <span class="konsoll__status">Tre steg</span>
+        </div>
+        <div class="soknad__kropp">
+
+          <ol class="stegviser" aria-label="Steg i henvendelsen">
+            <li data-steg-indikator="1" aria-current="step">
+              <span class="stegviser__tall">1</span>
+              <span class="stegviser__navn">Emne</span>
+            </li>
+            <li data-steg-indikator="2">
+              <span class="stegviser__tall">2</span>
+              <span class="stegviser__navn">Opplysninger</span>
+            </li>
+            <li data-steg-indikator="3">
+              <span class="stegviser__tall">3</span>
+              <span class="stegviser__navn">Kvittering</span>
+            </li>
+          </ol>
+
+          <form id="henvendelses-skjema" novalidate>
+            <fieldset class="steg" data-steg="1">
+              <legend tabindex="-1">Hva gjelder henvendelsen?</legend>
+              <div class="valg">
+                <label class="valgkort">
+                  <input type="radio" name="ko" value="salg" checked>
+                  <span class="valgkort__tittel">Salg og nye kunder</span>
+                  <span class="valgkort__tekst">Rådgivere som kjenner plattformen inn og ut</span>
+                </label>
+                <label class="valgkort">
+                  <input type="radio" name="ko" value="support">
+                  <span class="valgkort__tittel">Support</span>
+                  <span class="valgkort__tekst">Du er kunde og trenger hjelp fra teknikerne</span>
+                </label>
+                <label class="valgkort">
+                  <input type="radio" name="ko" value="faktura">
+                  <span class="valgkort__tittel">Faktura</span>
+                  <span class="valgkort__tekst">Spørsmål om en faktura du har fått</span>
+                </label>
+                <label class="valgkort">
+                  <input type="radio" name="ko" value="webshop">
+                  <span class="valgkort__tittel">Webshop og utstyr</span>
+                  <span class="valgkort__tekst">Bestilling av nytt brukerutstyr</span>
+                </label>
+                <label class="valgkort">
+                  <input type="radio" name="ko" value="presse">
+                  <span class="valgkort__tittel">Presse</span>
+                  <span class="valgkort__tekst">Presserelaterte henvendelser til markedsavdelingen</span>
+                </label>
+              </div>
+              <div class="skjemafot">
+                <button class="btn" type="button" data-neste>Neste</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="steg" data-steg="2" hidden>
+              <legend tabindex="-1">Om deg og saken</legend>
+              <div class="feltrekke">
+                <div class="felt">
+                  <label for="f-navn">Navn</label>
+                  <input id="f-navn" name="navn" type="text" autocomplete="name" required aria-describedby="feil-navn">
+                  <p class="felt__feil" id="feil-navn" data-feil-for="navn"></p>
+                </div>
+                <div class="felt">
+                  <label for="f-virksomhet">Virksomhet</label>
+                  <input id="f-virksomhet" name="virksomhet" type="text" autocomplete="organization">
+                </div>
+                <div class="felt">
+                  <label for="f-epost">E-post</label>
+                  <input id="f-epost" name="epost" type="email" autocomplete="email" required aria-describedby="feil-epost">
+                  <p class="felt__feil" id="feil-epost" data-feil-for="epost"></p>
+                </div>
+                <div class="felt">
+                  <label for="f-telefon">Telefon <span class="felt__hjelp">(valgfritt)</span></label>
+                  <input id="f-telefon" name="telefon" type="tel" autocomplete="tel">
+                </div>
+                <div class="felt">
+                  <label for="f-melding">Melding</label>
+                  <textarea id="f-melding" name="melding" required aria-describedby="feil-melding" placeholder="Kort om hva saken gjelder"></textarea>
+                  <p class="felt__feil" id="feil-melding" data-feil-for="melding"></p>
+                </div>
+              </div>
+              <div class="skjemafot">
+                <button class="btn" type="submit">Til oppsummering</button>
+                <button class="lenke-knapp" type="button" data-tilbake>Tilbake</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="steg" data-steg="3" hidden>
+              <legend tabindex="-1">Se over og send</legend>
+              <div class="oppsum" id="oppsummering"></div>
+              <div class="skjemafot">
+                <button class="btn" type="button" data-send>Registrer henvendelsen</button>
+                <button class="lenke-knapp" type="button" data-tilbake>Tilbake</button>
+              </div>
+              <p class="skissenotat">Dette er en skisse. Opplysningene blir ikke sendt eller lagret – flyten viser hvordan henvendelsen ville havnet i riktig kø.</p>
+            </fieldset>
+          </form>
+
+          <div class="kvittering" id="kvittering" hidden>
+            <span class="kvittering__merke">Registrert i køen</span>
+            <h3>Henvendelsen går til <span data-kvittering-ko>Salg og nye kunder</span></h3>
+            <p class="kvittering__ref" data-kvittering-ref>INT-000000-0000</p>
+            <div class="kvittering__kanal" data-kvittering-kanal></div>
+            <div class="skjemafot">
+              <button class="btn" type="button" data-ny>Ny henvendelse</button>
+              <a class="lenke-knapp" href="#kontorer">Se alle kontorer</a>
+            </div>
+            <p class="skissenotat">Skissen sender ingenting. I en ferdig løsning ville henvendelsen gått rett til køen over, med kvittering til deg på e-post.</p>
+          </div>
+
+          <p class="visually-hidden" role="status" aria-live="polite" id="skjermleser-status"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontorer -->
+  <section class="section" id="kontorer">
+    <div class="wrap">
+      <div class="section-head section-head--delt">
+        <div>
+          <p class="eyebrow">Kontorer</p>
+          <h2>Ni kontorer i Norden</h2>
+          <p class="lead">Hovedkontoret ligger i Schweigaards gate 39 i Oslo. Support og rådgivning svarer på telefon og e-post fra alle kontorene.</p>
+        </div>
+        <span class="section-nr">Nord og øst</span>
+      </div>
+
+      <div class="kontorer">
+        <article class="kontor">
+          <h3 class="kontor__by">Oslo <span>Hovedkontor</span></h3>
+          <address>Schweigaards gate 39<br>0191 Oslo</address>
+          <div class="kontor__kanal">
+            <a href="tel:+4724103300">+47 24 10 33 00</a>
+            <a href="mailto:info@intility.no">info@intility.no</a>
+          </div>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">Bergen</h3>
+          <address>Lars Hilles gate 30<br>5008 Bergen</address>
+          <div class="kontor__kanal">
+            <a href="tel:+4763866062">+47 63 86 60 62</a>
+            <a href="mailto:info@intility.no">info@intility.no</a>
+          </div>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">Trondheim</h3>
+          <address>Brattørkaia 17A<br>7010 Trondheim</address>
+          <div class="kontor__kanal">
+            <a href="tel:+4763866061">+47 63 86 60 61</a>
+            <a href="mailto:info@intility.no">info@intility.no</a>
+          </div>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">Stavanger</h3>
+          <address>Bryggerikaien 12<br>4014 Stavanger</address>
+          <div class="kontor__kanal">
+            <a href="tel:+4763866060">+47 63 86 60 60</a>
+            <a href="mailto:info@intility.no">info@intility.no</a>
+          </div>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">Hamar</h3>
+          <address>Østregate 13<br>2317 Hamar</address>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">Göteborg</h3>
+          <address>Stampgatan 14<br>411 01 Göteborg</address>
+          <div class="kontor__kanal">
+            <a href="tel:+46313088610">+46 31 308 86 10</a>
+          </div>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">Stockholm</h3>
+          <address>Kungsgatan 64<br>111 22 Stockholm</address>
+          <div class="kontor__kanal">
+            <a href="tel:+4687291767">+46 8 729 17 67</a>
+            <a href="mailto:info@intility.se">info@intility.se</a>
+          </div>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">København</h3>
+          <address>Vestergade 29<br>1456 København K</address>
+          <div class="kontor__kanal">
+            <a href="tel:+4532736394">+45 32 73 63 94</a>
+            <a href="mailto:info@intility.dk">info@intility.dk</a>
+          </div>
+        </article>
+        <article class="kontor">
+          <h3 class="kontor__by">Helsinki</h3>
+          <address>Antinkatu 3 D<br>00100 Helsinki</address>
+          <div class="kontor__kanal">
+            <a href="tel:+35880005729">+358 80 00 57 29</a>
+            <a href="mailto:info@intility.fi">info@intility.fi</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="small muted" style="margin-top:1.25rem">
+        Varelevering: Kværnerveien 1, 0192 Oslo. Mandag–fredag 08:00–16:00.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="#topp">
+          <svg class="brand__mark" viewBox="0 0 97 97" role="img" aria-label="Intility">
+            <rect width="96.77" height="96.06" rx="9.23" fill="#102b42"></rect>
+            <path d="M24.87 17.96c0-2.74 2.22-4.96 4.96-4.96 2.75 0 4.96 2.22 4.96 4.96 0 2.74-2.22 4.96-4.96 4.96-2.73 0-4.96-2.22-4.96-4.96Z" fill="#f3f3f6"></path>
+            <path d="M54.22 43.45h-6.52v-7.88h6.52V26.76h10.02v8.81h15.53v7.88H64.24v17.19c0 4.76.8 8.13 2.4 10.13 1.6 2 4.18 3.01 7.73 3.01h5.4v9.19c-4.15 0-4.65 0-9.61 0-4.47 0-8.24-1.66-11.32-4.99-3.07-3.32-4.62-7.51-4.62-12.58V43.45Z" fill="#f3f3f6"></path>
+            <path d="M24.77 83.06V44.02h-7.77v-8.44h17.79v47.48h-10.02Z" fill="#f3f3f6"></path>
+          </svg>
+          <span>Intility</span>
+        </a>
+        <p>Formål: hjelpe virksomheter med å realisere sitt fulle potensial gjennom teknologi. Intility utvikler, leverer og drifter den digitale grunnmuren som tjeneste.</p>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li>Intility AS</li>
+          <li>Schweigaards gate 39</li>
+          <li>0191 Oslo</li>
+          <li><a href="tel:+4724103300">+47 24 10 33 00</a></li>
+          <li><a href="mailto:info@intility.no">info@intility.no</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Snarveier</h2>
+        <ul>
+          <li><a href="#plattform">Plattformen</a></li>
+          <li><a href="#tjenester">Tjenester</a></li>
+          <li><a href="#kunder">Kunder</a></li>
+          <li><a href="#henvendelse">Henvendelse</a></li>
+          <li><a href="#kontorer">Kontorer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bunn">
+      <span>© <span data-year>2026</span> Intility AS · Org.nr 981 967 070</span>
+      <span>Schweigaards gate 39, 0191 Oslo · +47 24 10 33 00</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
