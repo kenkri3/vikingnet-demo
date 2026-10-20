@@ -5,10 +5,6 @@
 (function () {
   'use strict';
 
-  // Uten denne klassen er alt innhold synlig. Da kan en JS-feil aldri gjøre
-  // seksjoner usynlige for en besøkende.
-  document.documentElement.classList.add('js');
-
   /* ---------- Mobilmeny ---------- */
 
   var nav = document.querySelector('[data-nav]');
@@ -35,27 +31,10 @@
     });
   }
 
-  /* ---------- Rolig innkomst ---------- */
-
-  var dempet = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var los = document.querySelectorAll('.reveal');
-
-  if (los.length) {
-    if (dempet || !('IntersectionObserver' in window)) {
-      for (var r = 0; r < los.length; r++) los[r].classList.add('is-visible');
-    } else {
-      var observator = new IntersectionObserver(function (oppforinger) {
-        for (var i = 0; i < oppforinger.length; i++) {
-          if (oppforinger[i].isIntersecting) {
-            oppforinger[i].target.classList.add('is-visible');
-            observator.unobserve(oppforinger[i].target);
-          }
-        }
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-
-      for (var o = 0; o < los.length; o++) observator.observe(los[o]);
-    }
-  }
+  /* Innkomsten ligger i CSS (styles.css), ikke her. Erfaringssak: en
+     IntersectionObserver som gjør seksjoner usynlige til de kommer i bildet,
+     gjør dem også usynlige i fullside-skjermbilder og i utskrift. En ren
+     CSS-animasjon som starter synlig kan ikke svikte på den måten. */
 
   /* ---------- Åpent nå / stengt ---------- */
   /* Kundens egne åpningstider: ukedager 07:00–15:30, helg stengt.

@@ -99,6 +99,19 @@ section {
   text-decoration-thickness: 2px;
 }
 
+/* På smale skjermer ville adresselinjen presset kontaktlinjen til å bryte
+   inne i seg selv. Adressen står i kontaktseksjonen og i footeren, så her
+   beholder vi bare telefon og e-post. */
+@media (max-width: 700px) {
+  .topbar__inner {
+    justify-content: flex-start;
+  }
+
+  .topbar__place {
+    display: none;
+  }
+}
+
 /* ---------- Header ---------- */
 
 .header {

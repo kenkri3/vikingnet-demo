@@ -156,7 +156,7 @@
 }
 
 .hero__tekst {
-  max-width: 46rem;
+  max-width: 52rem;
   margin-inline: auto;
   padding-block: clamp(2.6rem, 7vw, 5rem) clamp(2rem, 4vw, 3.2rem);
   text-align: center;
@@ -365,7 +365,7 @@
   border-bottom: 1px solid var(--line);
 }
 
-.inngang__nr {
+.inngang .inngang__nr {
   margin: 0 0 0.7rem;
   font-size: 0.7rem;
   font-weight: 600;
@@ -526,7 +526,7 @@
   border-bottom: 1px solid var(--line);
 }
 
-.funksjon__nr {
+.funksjon .funksjon__nr {
   margin: 0.2rem 0 0;
   font-size: 0.72rem;
   font-weight: 600;
@@ -570,12 +570,12 @@
   border-bottom: 1px solid var(--line);
 }
 
-.trinn__nr {
+.trinn .trinn__nr {
   margin: 0 0 0.8rem;
   font-family: var(--font-display);
   font-size: 2.1rem;
   line-height: 1;
-  color: color-mix(in srgb, var(--fiolett) 32%, var(--bg-soft));
+  color: color-mix(in srgb, var(--fiolett) 65%, var(--bg-soft));
 }
 
 .trinn__punkt h3 {
@@ -806,7 +806,7 @@
   margin: clamp(1.4rem, 3vw, 2rem) 0 0;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
-  color: color-mix(in srgb, var(--accent-fg) 58%, transparent);
+  color: color-mix(in srgb, var(--accent-fg) 68%, transparent);
 }
 
 @media (min-width: 600px) {

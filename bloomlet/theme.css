@@ -49,7 +49,7 @@
   --t-lead: clamp(1.1rem, 1rem + 0.5vw, 1.32rem);
   --t-h3: clamp(1.28rem, 1.1rem + 0.7vw, 1.62rem);
   --t-h2: clamp(1.95rem, 1.4rem + 2.2vw, 3.05rem);
-  --t-h1: clamp(2.45rem, 1.2rem + 5.2vw, 4.6rem);
+  --t-h1: clamp(2.4rem, 1.15rem + 5vw, 4.15rem);
 
   /* Merket i logoen skal ha papirfarge i midten */
   --mark-hull: #f6f2ec;

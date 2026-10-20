@@ -29,8 +29,9 @@
   --blue-deep: #0a3556;
   --blue-light: #2f8fd0;
 
-  /* Varm aksent, brukt sparsomt */
-  --tan: #a8713c;
+  /* Varm aksent, brukt sparsomt. Mørk nok til AA også i 11 px fet skrift,
+     som er der den brukes: eyebrow og nummer på tjenestekort. */
+  --tan: #8f5c2c;
   --tan-light: #d9a877;
 
   /* Kit-variabler */

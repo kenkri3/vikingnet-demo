@@ -772,6 +772,8 @@ section[id] {
   border: 0;
 }
 
+/* base.css setter form { display: grid }, som ellers overstyrer [hidden]. */
+#bookForm[hidden],
 .step-panel[hidden],
 .book__error[hidden],
 .book__nav [hidden],
@@ -926,6 +928,12 @@ section[id] {
 .receipt {
   display: grid;
   gap: 0.9rem;
+}
+
+/* Fokus flyttes programmatisk til kvitteringen; ringen ville sett ut som en feilramme. */
+.receipt:focus,
+.receipt:focus-visible {
+  outline: none;
 }
 
 .receipt__kicker {

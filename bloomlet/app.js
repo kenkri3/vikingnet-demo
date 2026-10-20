@@ -1,4 +1,4 @@
-﻿/* Bloomlet — demoens ene interaksjon: interesseskjema i tre steg med kvittering.
+/* Bloomlet — demoens ene interaksjon: interesseskjema i tre steg med kvittering.
    Alt skjer i nettleseren. Ingenting sendes, ingenting lagres. */
 (function () {
   'use strict';
@@ -53,33 +53,6 @@
     tilpassMeny();
     if (smalSkjerm.addEventListener) {
       smalSkjerm.addEventListener('change', tilpassMeny);
-    }
-  }
-
-  /* ---------- Innhold som toner inn ---------- */
-
-  var elementer = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-
-  if (elementer.length) {
-    if (redusertBevegelse.matches || !('IntersectionObserver' in window)) {
-      elementer.forEach(function (el) {
-        el.classList.add('is-visible');
-      });
-    } else {
-      var observator = new IntersectionObserver(
-        function (oppforinger) {
-          oppforinger.forEach(function (oppforing) {
-            if (oppforing.isIntersecting) {
-              oppforing.target.classList.add('is-visible');
-              observator.unobserve(oppforing.target);
-            }
-          });
-        },
-        { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
-      );
-      elementer.forEach(function (el) {
-        observator.observe(el);
-      });
     }
   }
 

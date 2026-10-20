@@ -1,14 +1,14 @@
 /*
-  Analysys Mason â€” interaksjon uten backend.
-  1) Mobilmeny  2) Ã…rstall  3) Booking i tre trinn med kvittering.
+  Analysys Mason — interaksjon uten backend.
+  1) Mobilmeny  2) Årstall  3) Booking i tre trinn med kvittering.
   Alt skjer i nettleseren. Kvitteringen ender i et mailto-utkast til
-  oslo@analysysmason.com, slik en statisk side mÃ¥ gjÃ¸re det.
+  oslo@analysysmason.com, slik en statisk side må gjøre det.
 */
 
 (function () {
   'use strict';
 
-  /* ---------- Marker at JS kjÃ¸rer (styrer reveal-animasjonen) ---------- */
+  /* ---------- Marker at JS kjører (styrer reveal-animasjonen) ---------- */
 
   document.documentElement.classList.add('js');
 
@@ -22,26 +22,26 @@
       var open = !nav.classList.contains('is-open');
       nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Lukk meny' : 'Ã…pne meny');
+      toggle.setAttribute('aria-label', open ? 'Lukk meny' : 'Åpne meny');
     });
 
     nav.addEventListener('click', function (event) {
       if (event.target.closest('a')) {
         nav.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Ã…pne meny');
+        toggle.setAttribute('aria-label', 'Åpne meny');
       }
     });
   }
 
-  /* ---------- Ã…rstall ---------- */
+  /* ---------- Årstall ---------- */
 
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
   /* ---------- Reveal: kort inntoning ved lasting ----------
      Bevisst tidsstyrt og ikke scrollstyrt, slik at innholdet aldri blir
-     stÃ¥ende usynlig i et skjermbilde eller nÃ¥r noe gÃ¥r galt. */
+     stående usynlig i et skjermbilde eller når noe går galt. */
 
   var reveal = document.querySelectorAll('.reveal');
   if (reveal.length) {
@@ -72,7 +72,7 @@
   var mailLink = receipt.querySelector('[data-r-mail]');
   var newBtn = receipt.querySelector('[data-r-new]');
 
-  var UKEDAGER = ['sÃ¸ndag', 'mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lÃ¸rdag'];
+  var UKEDAGER = ['søndag', 'mandag', 'tirsdag', 'onsdag', 'torsdag', 'fredag', 'lørdag'];
   var MANEDER = ['januar', 'februar', 'mars', 'april', 'mai', 'juni',
     'juli', 'august', 'september', 'oktober', 'november', 'desember'];
 
@@ -154,7 +154,7 @@
   function validerSteg(n) {
     if (n === 1) {
       if (!valgt('input[name="tema"]')) {
-        visFeil('Velg et fagomrÃ¥de for Ã¥ gÃ¥ videre.', form.querySelector('input[name="tema"]'));
+        visFeil('Velg et fagområde for å gå videre.', form.querySelector('input[name="tema"]'));
         return false;
       }
     }
@@ -190,7 +190,7 @@
     return true;
   }
 
-  /* Synlig markering av valgt kort, ogsÃ¥ der :has ikke stÃ¸ttes. */
+  /* Synlig markering av valgt kort, også der :has ikke støttes. */
   form.addEventListener('change', function (event) {
     var mal = event.target;
     if (mal.type === 'radio') {
@@ -265,14 +265,14 @@
     tekst(receipt.querySelector('[data-r-telefon]'), data.telefon);
     tekst(receipt.querySelector('[data-r-firma]'), data.firma);
 
-    var emne = 'ForespÃ¸rsel om samtale â€” ' + data.tema + ' (' + data.ref + ')';
+    var emne = 'Forespørsel om samtale — ' + data.tema + ' (' + data.ref + ')';
     var kropp = [
       'Hei,',
       '',
-      'Jeg Ã¸nsker en samtale pÃ¥ 30 minutter med Oslo-kontoret.',
+      'Jeg ønsker en samtale på 30 minutter med Oslo-kontoret.',
       '',
-      'FagomrÃ¥de: ' + data.tema,
-      'Ã˜nsket tid: ' + data.tid,
+      'Fagområde: ' + data.tema,
+      'Ønsket tid: ' + data.tid,
       'Navn: ' + data.navn,
       'Virksomhet: ' + data.firma,
       'E-post: ' + data.epost,
@@ -290,6 +290,10 @@
 
     form.hidden = true;
     receipt.hidden = false;
+    for (var d = 0; d < dots.length; d++) {
+      dots[d].classList.add('is-done');
+      dots[d].classList.remove('is-active');
+    }
     receipt.focus();
   });
 

@@ -13,14 +13,13 @@
 
   if (toggle && nav) {
     var setNav = function (open) {
-      if (open) nav.removeAttribute('hidden');
-      else nav.setAttribute('hidden', '');
+      nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Lukk meny' : 'Åpne meny');
     };
 
     toggle.addEventListener('click', function () {
-      setNav(nav.hasAttribute('hidden'));
+      setNav(!nav.classList.contains('is-open'));
     });
 
     nav.addEventListener('click', function (event) {
@@ -28,7 +27,7 @@
     });
 
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && !nav.hasAttribute('hidden')) {
+      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
         setNav(false);
         toggle.focus();
       }

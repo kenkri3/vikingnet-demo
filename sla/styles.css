@@ -330,9 +330,10 @@
 }
 
 .kontor__tlf {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   min-height: 44px;
+  margin-bottom: 0.15rem;
   font-size: 1.02rem;
   color: var(--lav) !important;
   text-decoration: none;
@@ -597,6 +598,10 @@ p a,
 }
 
 .felt label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.35rem;
   font-size: var(--t-sm);
   font-weight: 500;
   color: var(--blekk);
@@ -666,6 +671,11 @@ p a,
 .kvittering__tittel {
   margin: 0 0 0.35rem;
   font-size: 1.6rem;
+}
+
+/* Overskriften får programmatisk fokus for skjermlesere — ingen synlig ramme */
+.kvittering__tittel:focus {
+  outline: none;
 }
 
 .kvittering__ref {
@@ -833,7 +843,7 @@ p a,
 
 .arbeid__bilder img {
   width: 100%;
-  height: auto;
+  height: clamp(230px, 27vw, 390px);
   object-fit: cover;
   border-radius: var(--radius-sm);
   filter: saturate(0.95);
@@ -932,10 +942,11 @@ p a,
 
 .sak--stor .sak__tekst p:last-child {
   grid-column: 2;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 2;
   align-self: end;
   margin: 0;
   max-width: 42ch;
+  padding-bottom: 0.15rem;
 }
 
 .sak-par {
