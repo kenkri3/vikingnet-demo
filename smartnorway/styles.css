@@ -17,6 +17,11 @@ body {
   padding-inline: clamp(18px, 4vw, 32px);
 }
 
+/* .btn er inline-flex og ville ellers overstyre nettleserens [hidden]. */
+[hidden] {
+  display: none !important;
+}
+
 /*
   Alle klikkbare tekstlenker får en trykkflate på 44 px. Kit-qa måler dem,
   og en lenke midt i en setning er like mye en trykkflate som en knapp.
@@ -153,12 +158,18 @@ h3 {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
-  gap: clamp(28px, 4vw, 62px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+  grid-template-areas:
+    "eyebrow eyebrow"
+    "title   title"
+    "copy    figure";
+  column-gap: clamp(28px, 4vw, 62px);
+  row-gap: 0;
+  align-items: start;
 }
 
 .hero__eyebrow {
+  grid-area: eyebrow;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -169,13 +180,19 @@ h3 {
 }
 
 .hero__title {
+  grid-area: title;
   color: #fff;
   font-size: var(--t-h1);
   font-weight: 600;
   line-height: 1.04;
   letter-spacing: -0.022em;
-  margin: 0 0 1.1rem;
-  max-width: 20ch;
+  margin: 0 0 clamp(22px, 2.6vw, 38px);
+  max-width: 26ch;
+}
+
+.hero__copy {
+  grid-area: copy;
+  align-self: start;
 }
 
 .hero__lead {
@@ -221,6 +238,8 @@ h3 {
 }
 
 .hero__figure {
+  grid-area: figure;
+  align-self: start;
   margin: 0;
 }
 
@@ -548,6 +567,65 @@ h3 {
   color: var(--petrol);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* Kortet som fyller det siste hullet i teamrutenettet på mellomstore skjermer */
+.person--cta {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  min-height: 220px;
+  padding: clamp(18px, 2.2vw, 30px);
+  background:
+    radial-gradient(80% 64% at 100% 0%, rgb(240 160 96 / 22%), transparent 62%),
+    var(--petrol-deep);
+  color: #fff;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: var(--radius);
+}
+
+/* Merkets egen appelsinbue, som i ordmerket */
+.cta-bue {
+  position: absolute;
+  top: clamp(20px, 2.4vw, 30px);
+  left: clamp(18px, 2.2vw, 30px);
+  width: 54px;
+  height: 27px;
+  background: var(--orange);
+  border-radius: 54px 54px 0 0;
+  opacity: 0.9;
+}
+
+.person--cta .person__role {
+  margin-top: 0;
+  color: var(--orange);
+}
+
+.person--cta .person__name {
+  margin-top: 0;
+  color: #fff;
+}
+
+.person--cta .person__bio {
+  color: rgb(255 255 255 / 72%);
+}
+
+.person--cta .person__contact {
+  margin-top: 0.9rem;
+}
+
+.person--cta .person__contact a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgb(240 160 96 / 70%);
+  text-underline-offset: 4px;
+}
+
+.person--cta .person__contact a:hover {
+  color: var(--orange);
 }
 
 /* ---------- Slik begynner det ---------- */
@@ -1032,7 +1110,7 @@ a.contact__val:hover {
 .footer__list {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1096,10 +1174,34 @@ a.contact__val:hover {
   .person__contact {
     font-size: 0.82rem;
   }
+
+  .person--cta {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  /* To spalter blir for trange til «investeringsselskap» i heroen. */
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "copy"
+      "figure";
+  }
+
+  .hero__title {
+    max-width: 24ch;
+    margin-bottom: 1.4rem;
+  }
+
+  .hero__figure {
+    margin-top: 1.9rem;
+  }
 }
 
 @media (max-width: 980px) {
-  .hero__grid,
   .facts__grid,
   .prat__grid,
   .contact__grid {
@@ -1108,14 +1210,6 @@ a.contact__val:hover {
 
   .hero {
     padding-bottom: clamp(84px, 12vw, 120px);
-  }
-
-  .hero__title {
-    max-width: 24ch;
-  }
-
-  .hero__figure {
-    order: 2;
   }
 
   .prat__figure {
@@ -1226,6 +1320,17 @@ a.contact__val:hover {
   .person__contact {
     grid-area: kontakt;
     margin-top: 0;
+  }
+
+  .person--cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0;
+  }
+
+  .cta-bue {
+    display: none;
   }
 
   .footer__grid {
