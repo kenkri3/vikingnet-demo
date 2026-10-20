@@ -383,9 +383,24 @@
 /* ---------------- Mørkt utsagnsbånd ---------------- */
 
 .band {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
   background: var(--ink);
   color: #e8eaf3;
   padding-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle, rgb(255 255 255 / 9%) 1px, transparent 1.4px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(circle at 82% 18%, #000, transparent 62%);
+  mask-image: radial-gradient(circle at 82% 18%, #000, transparent 62%);
+  pointer-events: none;
 }
 
 .band__grid {
@@ -704,6 +719,11 @@
 }
 
 /* ---------------- Kontakt ---------------- */
+
+/* base.css setter form { display: grid }, som ellers slår hidden-attributtet. */
+[hidden] {
+  display: none !important;
+}
 
 .kontakt__grid {
   display: grid;
