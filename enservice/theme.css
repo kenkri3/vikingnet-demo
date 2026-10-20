@@ -1,0 +1,90 @@
+/*
+  Entreprenørservice AS — identitet.
+  Arketype: industriell, men ført som et anleggsdokument: kjølig betongflate,
+  blekk som tekst, og deres egen røde som eneste aksent. Rødfargen er hentet
+  fra deres grafiske profil («Hovudfargen er rød»), og blekket fra logoen,
+  som er satt i en mørk gråsvart. IBM Plex Sans bærer teksten og Plex Mono
+  står for mål, nummer og etiketter — to familier, ikke flere.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater: nedkjølt betong, ikke varmt papir */
+  --paper: #f1f3f4;
+  --paper-2: #e6ebec;
+  --flate: #ffffff;
+  --asfalt: #12181b;
+  --asfalt-2: #1b2327;
+
+  /* Blekk */
+  --blekk: #0f1518;
+  --blekk-2: #20292d;
+  --muted: #5b686d;
+  --paa-asfalt: #eef1f2;
+  --paa-asfalt-dempet: #a7b2b6;
+
+  /* Linjer */
+  --line: #d3dbde;
+  --line-2: #b6c2c7;
+  --line-asfalt: #2b3539;
+
+  /* Deres røde */
+  --accent: #c8102e;
+  --accent-dyp: #97001f;
+  --accent-lys: #ff8a9c;
+  --accent-soft: #fbe9ec;
+  --accent-fg: #ffffff;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--blekk);
+
+  /* To fonter */
+  --font-display: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Typografi */
+  --t-xs: 0.75rem;
+  --t-sm: 0.9375rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.5vw, 1.32rem);
+  --t-h3: clamp(1.15rem, 1.06rem + 0.45vw, 1.4rem);
+  --t-h2: clamp(1.85rem, 1.35rem + 2.3vw, 3.05rem);
+  --t-h1: clamp(2.4rem, 1.35rem + 4.9vw, 4.9rem);
+
+  /* Form: skarpe hjørner, dette er et anlegg, ikke et kort-UI */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(15 21 24 / 6%), 0 18px 40px -24px rgb(15 21 24 / 34%);
+  --shadow-ark: 0 2px 4px rgb(0 0 0 / 10%), 0 30px 70px -40px rgb(0 0 0 / 70%);
+
+  --wrap: 1180px;
+  --header-h: 74px;
+}
+
+html {
+  background: var(--paper);
+  color-scheme: light;
+}
+
+/* Overskriftene er satt i samme grotesk som teksten, men strammere. */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.028em;
+  line-height: 1.03;
+}
+
+h3 {
+  letter-spacing: -0.018em;
+  line-height: 1.18;
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}

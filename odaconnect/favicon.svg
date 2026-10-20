@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="ODA Connect">
+  <rect width="32" height="32" rx="3" fill="#005475"/>
+  <circle cx="15" cy="17" r="8" fill="none" stroke="#fbfeed" stroke-width="3.2"/>
+  <rect x="22" y="5" width="5" height="5" fill="#e5231b"/>
+</svg>

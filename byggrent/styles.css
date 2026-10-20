@@ -1,0 +1,1005 @@
+/*
+  styles.css — Byggrent
+  Layout og komponenter. Horisontal rytme holdes innenfor .wrap, og alle
+  bredder er minmax(0, …) slik at ingen grid-kolonne kan presse siden ut.
+*/
+
+/* --- Hero: bildebrett med panel som overlapper ------------------------ */
+
+.hero {
+  position: relative;
+  background: var(--paper);
+}
+
+.hero__bilde {
+  position: relative;
+  height: clamp(300px, 44vw, 540px);
+  overflow: hidden;
+  background: var(--graphite);
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 58% 20%;
+}
+
+.hero__bilde::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(27 23 20 / 26%) 0%, rgb(27 23 20 / 0%) 42%, rgb(27 23 20 / 34%) 100%);
+}
+
+.hero__merke {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  right: clamp(18px, 4vw, 34px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.45rem 0.75rem;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.hero__prikk {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  flex: none;
+}
+
+.hero__panel {
+  position: relative;
+  z-index: 3;
+  max-width: 780px;
+  margin-top: clamp(-96px, -9vw, -40px);
+  padding: clamp(24px, 3.2vw, 44px) clamp(22px, 3.2vw, 46px) clamp(22px, 2.8vw, 34px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--red);
+  box-shadow: 0 26px 64px rgb(27 23 20 / 11%);
+}
+
+.hero__ingress {
+  max-width: 56ch;
+  margin-bottom: var(--s-2);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: var(--s-4);
+}
+
+.hero__note {
+  margin: var(--s-3) 0 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+/* --- Statusbånd ------------------------------------------------------ */
+
+.status {
+  margin-top: clamp(28px, 5vw, 56px);
+  padding-block: clamp(26px, 3.6vw, 44px);
+  background-color: var(--graphite);
+  background-image: repeating-linear-gradient(90deg, rgb(255 255 255 / 5%) 0 1px, transparent 1px 76px);
+  color: #efe8de;
+}
+
+.status__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 32px);
+  align-items: start;
+}
+
+.status__del {
+  border-top: 2px solid var(--red);
+  padding-top: 0.9rem;
+}
+
+.status__tall {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 1.35rem + 1.7vw, 2.9rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  color: #fff;
+}
+
+.status__tall--ord {
+  font-size: clamp(1.05rem, 0.85rem + 0.65vw, 1.4rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding-top: 0.15rem;
+}
+
+.status__tekst {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #c3b7aa;
+}
+
+/* --- Seksjonshoder --------------------------------------------------- */
+
+.seksjonstopp {
+  margin-bottom: clamp(26px, 3.6vw, 44px);
+}
+
+.seksjonstopp h2 {
+  margin-bottom: 0;
+  max-width: 22ch;
+}
+
+.seksjonstopp--delt {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(18px, 4vw, 48px);
+  align-items: end;
+  max-width: none;
+}
+
+/* --- Tjenester ------------------------------------------------------- */
+
+.tjenester {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.5vw, 18px);
+}
+
+.tjeneste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: clamp(18px, 2.1vw, 26px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.tjeneste:hover {
+  border-color: var(--red);
+  transform: translateY(-2px);
+}
+
+.tjeneste__nr {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--red-ink);
+}
+
+.tjeneste h3 {
+  margin: 0;
+}
+
+.tjeneste p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
+.tjeneste__merke {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tjenester__flere {
+  margin: clamp(16px, 2vw, 24px) 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* --- Slik jobber vi -------------------------------------------------- */
+
+.slik {
+  background: var(--paper-2);
+  border-block: 1px solid var(--line);
+}
+
+.slik__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(22px, 4vw, 56px);
+  align-items: center;
+}
+
+.slik__figur {
+  margin: 0;
+}
+
+.slik__figur img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  object-position: 50% 38%;
+  border-bottom: 4px solid var(--red);
+}
+
+.slik__figur figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.steg {
+  list-style: none;
+  margin: var(--s-4) 0 0;
+  padding: 0;
+}
+
+.steg li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 28px);
+  padding-block: clamp(15px, 1.8vw, 22px);
+  border-top: 1px solid var(--line-strong);
+}
+
+.steg li:last-child {
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.steg__nr {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 1.2rem + 1vw, 2.1rem);
+  font-weight: 600;
+  line-height: 0.9;
+  color: var(--red);
+}
+
+.steg h3 {
+  margin: 0 0 0.15rem;
+}
+
+.steg p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.slik__note {
+  margin: var(--s-3) 0 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* --- Renholdplan (interaksjon) --------------------------------------- */
+
+.plan__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(16px, 2.4vw, 30px);
+  align-items: start;
+}
+
+.plan__skjema {
+  padding: clamp(20px, 2.5vw, 34px);
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.plan__framdrift {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: clamp(18px, 2.2vw, 26px);
+}
+
+.plan__stolpe {
+  flex: 1;
+  height: 3px;
+  background: var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.plan__stolpe i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 25%;
+  background: var(--red);
+  transition: width 0.28s ease;
+}
+
+.plan__trinn {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.plan__steg h3 {
+  margin-bottom: 0.35rem;
+}
+
+.plan__hjelp {
+  margin: 0 0 var(--s-3);
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.plan__etikett {
+  margin: var(--s-4) 0 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.1rem;
+  min-height: 60px;
+  padding: 0.65rem 0.85rem;
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  font: inherit;
+  text-align: left;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  border-color: var(--ink);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.chip__t {
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.chip__s {
+  font-size: 0.74rem;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.chip[aria-pressed="true"] .chip__s {
+  color: #ffe9ec;
+}
+
+.plan__felt-merke {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.plan__felt-merke output {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-transform: none;
+}
+
+input[type="range"] {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  accent-color: var(--red);
+  cursor: pointer;
+}
+
+.plan__felt {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: var(--s-4);
+}
+
+.plan__felt label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.plan__felt input {
+  font-size: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.plan__feil {
+  margin: var(--s-2) 0 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--red-deep);
+}
+
+.plan__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.7rem;
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+}
+
+.plan__nav [data-neste] {
+  margin-left: auto;
+}
+
+.plan__nav [data-nullstill] {
+  margin-left: auto;
+}
+
+.plan__sum {
+  list-style: none;
+  margin: 0 0 var(--s-4);
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.plan__sum li {
+  display: grid;
+  grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr);
+  gap: 0.6rem;
+  margin: 0;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed var(--line-strong);
+}
+
+.plan__sum span:first-child {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.2rem;
+}
+
+.plan__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.plan__ut {
+  position: sticky;
+  top: calc(var(--header-h) + 18px);
+  padding: clamp(22px, 2.5vw, 32px);
+  background: var(--graphite);
+  border-top: 4px solid var(--red);
+  color: #efe8de;
+}
+
+.plan__ut-etikett {
+  margin: 0 0 0.7rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c3b7aa;
+}
+
+.plan__ut-tittel {
+  margin: 0 0 0.2rem;
+  color: #fff;
+  font-size: clamp(1.35rem, 1.1rem + 0.9vw, 1.85rem);
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.plan__ut-meta {
+  margin: 0 0 var(--s-3);
+  min-height: 2.4em;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #c3b7aa;
+}
+
+.plan__oppgaver {
+  list-style: none;
+  margin: 0 0 var(--s-3);
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.plan__oppgaver li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #e7dfd5;
+}
+
+.plan__oppgaver li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 7px;
+  height: 7px;
+  background: var(--red-bright);
+}
+
+.plan__ut-fot {
+  margin: 0;
+  padding-top: var(--s-2);
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  font-size: 0.76rem;
+  color: #a99e92;
+}
+
+/* --- Oppdrag --------------------------------------------------------- */
+
+.oppdrag {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 1.5vw, 18px);
+}
+
+.oppdrag__kort {
+  margin: 0;
+  padding: clamp(16px, 1.9vw, 24px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--red);
+}
+
+.oppdrag__kunde {
+  margin: 0 0 0.5rem;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.oppdrag__kort h3 {
+  margin-bottom: 0.3rem;
+}
+
+.oppdrag__kort p:last-child {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.sitat {
+  margin: clamp(28px, 4vw, 46px) 0 0;
+  padding: clamp(22px, 3vw, 38px);
+  background: var(--graphite);
+  border-left: 6px solid var(--red);
+  color: #f2ece4;
+}
+
+.sitat p {
+  margin: 0 0 var(--s-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 1rem + 1vw, 1.6rem);
+  line-height: 1.32;
+  color: #f2ece4;
+  max-width: 62ch;
+}
+
+.sitat footer {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #bdb2a5;
+}
+
+/* --- Referanser ------------------------------------------------------ */
+
+.referanser {
+  background: var(--white);
+  border-block: 1px solid var(--line);
+}
+
+.referanser__topp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: var(--s-3);
+}
+
+.referanser__tittel {
+  margin: 0;
+}
+
+.referanser__note {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.ref {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.1rem 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.ref li {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.ref li:not(:last-child)::after {
+  content: "·";
+  color: var(--line-strong);
+  font-weight: 700;
+}
+
+/* --- Om oss ---------------------------------------------------------- */
+
+.om__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(22px, 4vw, 52px);
+  align-items: start;
+}
+
+.om__tekst p {
+  max-width: 60ch;
+}
+
+.om__kilde {
+  margin-top: var(--s-3);
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.om__side {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.9rem;
+  padding: 1rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.person__ini {
+  display: grid;
+  place-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--red);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.person__navn {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.person__rolle {
+  margin: 0.15rem 0 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.person__lenker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.person__lenker a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+.person__lenker a:hover {
+  color: var(--red-ink);
+}
+
+.godkjenninger {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.godkjenning {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.8rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.godkjenning img {
+  width: 100%;
+  height: auto;
+  max-height: 68px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.godkjenning figcaption {
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+/* --- Kontakt --------------------------------------------------------- */
+
+.kontakt {
+  background: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+
+.kontakt__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: clamp(22px, 4vw, 52px);
+  align-items: start;
+}
+
+.kontakt__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: var(--s-4);
+}
+
+.kontakt__note {
+  margin: var(--s-3) 0 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.kontakt__kort {
+  padding: clamp(20px, 2.5vw, 32px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--red);
+}
+
+.fakta {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.fakta div {
+  display: grid;
+  gap: 0.1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.fakta div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.fakta dt {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.fakta dd {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.fakta a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--ink);
+  text-decoration-color: var(--line-strong);
+  overflow-wrap: anywhere;
+}
+
+.fakta a:hover {
+  color: var(--red-ink);
+}
+
+.fakta__hvem {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* --- Brytepunkter ---------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .tjenester,
+  .oppdrag {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .status__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(18px, 3vw, 26px);
+  }
+}
+
+@media (max-width: 880px) {
+  .seksjonstopp--delt,
+  .slik__grid,
+  .plan__grid,
+  .om__grid,
+  .kontakt__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .slik__figur {
+    max-width: 420px;
+  }
+
+  .plan__ut {
+    position: static;
+  }
+
+  .seksjonstopp--delt {
+    align-items: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .tjenester,
+  .oppdrag {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Smal ramme kutter sidene av bildet — hold ansiktet inne i feltet. */
+  .hero__img {
+    object-position: 90% 22%;
+  }
+
+  .hero__panel {
+    max-width: none;
+  }
+
+  .hero__merke {
+    top: 0.7rem;
+  }
+
+  .chips,
+  .plan__felt {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .plan__sum li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.05rem;
+  }
+
+  .plan__sum span:first-child {
+    padding-top: 0;
+  }
+
+  .plan__nav .btn {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero__cta .btn {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .status__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .godkjenninger {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__merke {
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+  }
+}

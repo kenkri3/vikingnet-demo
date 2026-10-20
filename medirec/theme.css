@@ -1,0 +1,66 @@
+/*
+  Medical Recruitment and Staffing AS — theme.css
+  Identitet hentet fra logoen: dyp marineblå (#004181), kjølig papir,
+  og én varm signalfarge som bare brukes til prikker og små merker.
+  To fonter: Instrument Sans (display + tekst) og JetBrains Mono (etiketter, tall).
+*/
+
+:root {
+  /* Merkevare */
+  --navy: #004181;
+  --navy-dyp: #002a54;
+  --navy-lys: #0b5aa6;
+
+  /* Nøytraler, kjølige */
+  --blekk: #0c1a26;
+  --dempet: #52646f;
+  --linje: #d9e2ea;
+  --linje-lys: #e7eef4;
+  --papir: #f6f9fb;
+  --is: #e8eff7;
+  --hvit: #ffffff;
+
+  /* Typografi */
+  --font-display: 'Instrument Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Instrument Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  /* Overskriving av kit-tokens */
+  --bg: var(--papir);
+  --bg-soft: var(--is);
+  --fg: var(--blekk);
+  --muted: var(--dempet);
+  --line: var(--linje);
+  --accent: var(--navy);
+  --accent-fg: var(--hvit);
+  --accent-soft: var(--is);
+
+  --radius: 5px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 2px rgb(0 42 84 / 5%), 0 22px 44px -24px rgb(0 42 84 / 26%);
+  --wrap: 1160px;
+  --header-h: 76px;
+
+  --t-h1: clamp(2.4rem, 1.35rem + 4.1vw, 4.35rem);
+  --t-h2: clamp(1.75rem, 1.3rem + 1.7vw, 2.6rem);
+  --t-h3: clamp(1.2rem, 1.05rem + 0.55vw, 1.45rem);
+}
+
+/* Basiselementer */
+body {
+  background: var(--papir);
+  color: var(--blekk);
+  letter-spacing: -0.005em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.028em;
+  font-weight: 600;
+}
+
+h1 { letter-spacing: -0.038em; }
+
+::selection {
+  background: var(--navy);
+  color: var(--hvit);
+}

@@ -1,0 +1,360 @@
+/*
+  theme.css — Byggrent – Din Renholdspartner AS
+  Identitet hentet fra logoen: rødt (#c6122f), varmt papir, grafitt og skarpe
+  hjørner. Industriell arketype: kondensert display, store tall, harde kanter.
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  --font-display: 'Barlow Condensed', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Logoens røde */
+  --red: #c6122f;
+  --red-ink: #a20f27;
+  --red-deep: #7d0a1c;
+  --red-bright: #ff7085;
+
+  --paper: #f8f5f0;
+  --paper-2: #efeae2;
+  --white: #fffdfa;
+  --ink: #1b1714;
+  --ink-soft: #40382f;
+  --muted: #6b6157;
+  --line: #ded6c8;
+  --line-strong: #c8bdac;
+  --graphite: #201c18;
+  --graphite-2: #2b2520;
+
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --accent: var(--red);
+  --accent-fg: #ffffff;
+  --accent-soft: #fbe7ea;
+
+  --radius: 2px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 0 rgb(27 23 20 / 4%), 0 18px 44px rgb(27 23 20 / 8%);
+  --wrap: 1180px;
+  --header-h: 76px;
+
+  --t-xs: 0.7rem;
+  --t-h1: clamp(2.55rem, 1.3rem + 4.7vw, 4.85rem);
+  --t-h2: clamp(1.8rem, 1.2rem + 2.2vw, 2.6rem);
+  --t-h3: clamp(1.12rem, 1rem + 0.45vw, 1.32rem);
+  --t-lead: clamp(1.04rem, 0.99rem + 0.3vw, 1.18rem);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.68;
+}
+
+/* .btn er display:inline-flex og ville ellers overstyre hidden-attributtet. */
+[hidden] {
+  display: none !important;
+}
+
+/* --- Typografi ------------------------------------------------------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.006em;
+  line-height: 1.02;
+  color: var(--ink);
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: var(--t-h1);
+  line-height: 0.94;
+  letter-spacing: -0.004em;
+  margin-bottom: var(--s-3);
+}
+
+h2 {
+  font-size: var(--t-h2);
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: 0.012em;
+  margin-bottom: var(--s-2);
+}
+
+h3 {
+  font-size: var(--t-h3);
+  line-height: 1.16;
+  margin-bottom: var(--s-1);
+}
+
+p {
+  color: var(--ink-soft);
+}
+
+.lead {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--red-ink);
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--red);
+  flex: none;
+}
+
+/* --- Knapper --------------------------------------------------------- */
+
+.btn {
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  min-height: 48px;
+  padding: 0.8rem 1.4rem;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgb(198 18 47 / 20%);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+.btn--ghost:hover {
+  background: var(--white);
+  border-color: var(--ink);
+  box-shadow: none;
+}
+
+.btn--sm {
+  min-height: 44px;
+  padding: 0.5rem 1rem;
+  font-size: 0.84rem;
+}
+
+/* --- Topp ------------------------------------------------------------ */
+
+.header {
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  border-bottom: 1px solid var(--line);
+  box-shadow: inset 0 3px 0 var(--red);
+}
+
+.header__inner {
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 44px;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--red);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.brand__navn {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.brand__under {
+  margin-top: 0.22rem;
+  font-size: 0.56rem;
+  font-weight: 500;
+  letter-spacing: 0.21em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav {
+  gap: 0.1rem;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.6rem;
+  border-bottom: 2px solid transparent;
+  font-size: 0.79rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--red);
+}
+
+.nav .btn {
+  margin-left: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 1.05rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--accent-fg);
+  border-bottom: 0;
+}
+
+.nav .btn:hover {
+  color: var(--accent-fg);
+  background: var(--red-ink);
+}
+
+.nav-toggle {
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+    position: absolute;
+    inset: var(--header-h) 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.35rem clamp(18px, 4vw, 32px) 1.35rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line-strong);
+    box-shadow: 0 26px 46px rgb(27 23 20 / 14%);
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0.95rem 0.1rem;
+    border-top: 1px solid var(--line);
+    border-bottom: 0;
+    font-size: 0.82rem;
+  }
+
+  .nav a:hover {
+    border-top-color: var(--line);
+  }
+
+  .nav .btn {
+    margin: 0.9rem 0 0;
+    min-height: 48px;
+    justify-content: center;
+    border: 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* --- Bunn ------------------------------------------------------------ */
+
+.footer {
+  background: var(--graphite);
+  color: #c3b7aa;
+  border-top: 0;
+  padding-block: clamp(30px, 4vw, 44px);
+  font-size: 0.88rem;
+}
+
+.footer p {
+  color: #c3b7aa;
+  margin-bottom: var(--s-2);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 0.8fr);
+  gap: clamp(20px, 3vw, 44px);
+  align-items: start;
+}
+
+.footer__navn {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.footer__etikett {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8f8578;
+  margin-bottom: 0.35rem;
+}
+
+.footer__nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__nav li {
+  margin: 0;
+}
+
+.footer__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #e6ddd2;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer__nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__aar {
+  margin-top: var(--s-3);
+  font-size: 0.8rem;
+  color: #8f8578;
+}
+
+@media (max-width: 760px) {
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .footer__om {
+    grid-column: 1 / -1;
+  }
+}

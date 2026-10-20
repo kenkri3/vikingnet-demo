@@ -1,0 +1,78 @@
+/*
+  Bilreklame AS — identitet.
+  Arketype: industriell, men lys: kalkhvit flate, blekksvart tekst og én
+  grønn aksent hentet fra deres egen knapp og merkevare (#007D4B).
+  Chakra Petch i overskriftene (kantete, tekniske former som bokstavene i
+  deres eget ordmerke), Barlow i brødteksten.
+  Lastes etter ../kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f2f3ef;
+  --bg-soft: #e8ebe3;
+  --surface: #ffffff;
+  --ink: #0a110d;
+  --ink-2: #101a14;
+
+  /* Tekst */
+  --fg: #111513;
+  --muted: #545e57;
+  --line: #d9ddd3;
+  --line-strong: #bfc6b9;
+
+  /* Deres grønne aksent, tre styrker */
+  --accent: #007d4b;
+  --accent-deep: #005f39;
+  --accent-bright: #16a468;
+  --accent-soft: #dfeee6;
+  --accent-fg: #ffffff;
+
+  /* På mørk flate */
+  --ink-fg: #eef1ea;
+  --ink-muted: #9caaa1;
+
+  /* To fonter, ikke flere */
+  --font-display: 'Chakra Petch', 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'Barlow', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typografi — tettere og større enn kit-standarden, som et verksted */
+  --t-xs: 0.75rem;
+  --t-sm: 0.92rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.45vw, 1.28rem);
+  --t-h3: clamp(1.22rem, 1.05rem + 0.75vw, 1.6rem);
+  --t-h2: clamp(1.9rem, 1.35rem + 2.3vw, 3.1rem);
+  --t-h1: clamp(2.4rem, 1.1rem + 5.6vw, 5rem);
+
+  /* Form: nesten rette hjørner, som et kutt i folien */
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(10 17 13 / 5%), 0 18px 40px -22px rgb(10 17 13 / 34%);
+
+  --wrap: 1180px;
+  --header-h: 70px;
+  --cut: 44px; /* størrelsen på det skrå hjørnet */
+}
+
+/* Litt strammere overskrifter enn kit-standarden */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  text-transform: uppercase;
+  line-height: 0.96;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  line-height: 1.06;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
