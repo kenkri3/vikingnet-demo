@@ -93,7 +93,6 @@
 
 .mark {
   color: var(--accent);
-  box-shadow: inset 0 -0.14em 0 var(--accent-soft);
 }
 
 .hero .lead {
