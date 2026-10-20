@@ -79,11 +79,16 @@
 .nav__cta {
   font-size: 0.86rem;
   padding-inline: 1.05rem;
+}
+
+/* .nav a i kit/base.css er mer spesifikk enn .btn — derfor denne. */
+.nav a.nav__cta,
+.nav a.nav__cta:hover {
   color: var(--accent-fg);
 }
 
-.nav__cta:hover {
-  color: var(--accent-fg);
+.nav a.nav__cta:hover {
+  background: var(--oxide-mork);
 }
 
 @media (max-width: 900px) {
@@ -234,22 +239,35 @@
 
 .merker {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
-  gap: 1.1rem 1.8rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1rem 1.6rem;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 620px) {
+  .merker {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .merker {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .merke {
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  min-width: 0;
   margin: 0;
 }
 
 .merke img {
-  height: 52px;
+  height: 56px;
   width: auto;
   flex: none;
   mix-blend-mode: multiply;
@@ -698,6 +716,14 @@
   padding: 0.1rem 1rem 0.9rem;
 }
 
+.panel__noscript {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-top: 1px solid var(--strek);
+  font-size: 0.9rem;
+  color: var(--blekk-los);
+}
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -823,10 +849,6 @@
 }
 
 /* --- Kontakt ------------------------------------------------------------- */
-.kontakt {
-  border-top: 1px solid var(--strek);
-}
-
 .kontakt__grid {
   display: grid;
   gap: clamp(26px, 4vw, 54px);
@@ -896,29 +918,21 @@
 }
 
 .footer__inner {
-  display: grid;
-  gap: 1.1rem;
-  align-items: start;
-}
-
-@media (min-width: 760px) {
-  .footer__inner {
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, auto) minmax(0, auto);
-    gap: 2rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem 2rem;
 }
 
 .footer__logo {
-  width: 132px;
+  width: 138px;
   height: auto;
-  margin-bottom: 0.85rem;
   mix-blend-mode: multiply;
 }
 
-.footer__merke p,
-.footer__kontakt p,
-.footer__aar {
-  margin: 0 0 0.15rem;
+.footer__kontakt p {
+  margin: 0;
 }
 
 .footer__kontakt a {
@@ -933,6 +947,18 @@
 .footer__kontakt a:hover {
   color: var(--oxide);
   border-bottom-color: var(--oxide);
+}
+
+.footer__bot {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--strek-mork);
+}
+
+.footer__bot p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.6;
 }
 
 .footer .small {

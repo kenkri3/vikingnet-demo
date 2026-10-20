@@ -305,6 +305,10 @@
 
         <div class="panel__logg" id="logg" role="log" aria-live="polite" aria-label="Samtale med demobot"></div>
 
+        <noscript>
+          <p class="panel__noscript">Chatten trenger JavaScript. Ring 452 28 388, eller send e-post til post@atilaabygg.no.</p>
+        </noscript>
+
         <div class="panel__chips" id="chips"></div>
 
         <form class="panel__skjema" id="skjema" autocomplete="off">
@@ -375,17 +379,15 @@
 
 <footer class="footer">
   <div class="wrap footer__inner">
-    <div class="footer__merke">
-      <img class="footer__logo" src="img/logo.jpg" width="500" height="381" loading="lazy" decoding="async"
-           alt="Logoen til A Til Å Bygg AS: rød hammer i sirkel og ordmerket A Til Å Bygg">
-      <p class="small">A Til Å Bygg AS · Org.nr 914 116 848</p>
-      <p class="small">Dunserudhagan 111, 3322 Fiskum</p>
-    </div>
+    <img class="footer__logo" src="img/logo.jpg" width="500" height="381" loading="lazy" decoding="async"
+         alt="Logoen til A Til Å Bygg AS: rød hammer i sirkel og ordmerket A Til Å Bygg">
     <div class="footer__kontakt">
       <p class="small"><a href="tel:+4745228388">452 28 388</a></p>
       <p class="small"><a href="mailto:post@atilaabygg.no">post@atilaabygg.no</a></p>
     </div>
-    <p class="footer__aar small muted">© <span id="ar">2026</span> A Til Å Bygg AS</p>
+  </div>
+  <div class="wrap footer__bot">
+    <p class="small muted">© <span id="ar">2026</span> A Til Å Bygg AS · Org.nr 914 116 848 · Dunserudhagan 111, 3322 Fiskum</p>
   </div>
 </footer>
 

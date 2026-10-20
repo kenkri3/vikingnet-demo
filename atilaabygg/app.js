@@ -193,7 +193,7 @@
     navnEl.textContent = navn;
     en.appendChild(doc.createTextNode('Takk, '));
     en.appendChild(navnEl);
-    en.appendChild(doc.createTextNode('. Forespørselen gjelder ' + telefon + ', og et spørsmål om befaring.'));
+    en.appendChild(doc.createTextNode('. Vi ringer ' + telefon + ' i åpningstiden, mandag til fredag 07:00–15:00.'));
 
     var to = doc.createElement('p');
     to.textContent = 'Dette er en skisse: nummeret ligger bare i nettleseren din, og ingenting er sendt. I en ferdig løsning hadde forespørselen gått rett til ' + TELEFON + ' og ' + EPOST + '.';
@@ -334,6 +334,10 @@
 
   /* Første hilsen */
   window.setTimeout(function () {
-    legg('Hei! Dette er en skisse av sanntidssvaret på atilaabygg.no. Jeg svarer bare med det som står på deres egen side — åpningstid, nummer, adresse og hva de bygger.', 'bot');
+    legg('Hei! Dette er en skisse av sanntidssvaret på atilaabygg.no.', 'bot');
   }, 420);
+
+  window.setTimeout(function () {
+    legg('Jeg svarer bare med det som står på deres egen side — åpningstid, nummer, adresse og hva de bygger. Hva lurer du på?', 'bot');
+  }, 1150);
 })();

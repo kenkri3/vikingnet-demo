@@ -97,18 +97,26 @@ section {
   justify-content: center;
   min-width: 44px;
   min-height: 44px;
-  color: var(--muted);
   font-weight: 500;
 }
 
-.nav a:hover {
+.nav a:not(.btn) {
+  color: var(--muted);
+}
+
+.nav a:not(.btn):hover {
   color: var(--fg);
 }
 
 .nav .btn--topp {
   min-height: 44px;
   padding: 0.6rem 1.1rem;
+  color: var(--accent-fg);
   font-size: var(--t-sm);
+}
+
+.nav .btn--topp:hover {
+  color: var(--accent-fg);
 }
 
 .nav-toggle {
@@ -620,8 +628,8 @@ section {
 
 .effekt__side {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--s-3);
+  align-content: start;
 }
 
 .tallkort {
@@ -631,14 +639,10 @@ section {
   border-radius: var(--radius);
 }
 
-.tallkort--stor {
-  grid-column: 1 / -1;
-}
-
 .tallkort__nr {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(2.3rem, 1.5rem + 2.6vw, 3.6rem);
+  font-size: clamp(2.3rem, 1.5rem + 2.6vw, 3.4rem);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -653,7 +657,6 @@ section {
 }
 
 .effekt__bilde {
-  grid-column: 1 / -1;
   margin: 0;
 }
 
@@ -1103,27 +1106,15 @@ a.kontakt__lenke:hover strong {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .effekt__side {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .tallkort--stor {
-    grid-column: auto;
-  }
-
   .om__fakta {
     grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 520px) {
-  .brand__under {
-    display: none;
-  }
-
   .brand__logo {
-    width: 112px;
-    height: 14px;
+    width: 138px;
+    height: 16px;
   }
 
   .hvem__liste {
@@ -1131,9 +1122,14 @@ a.kontakt__lenke:hover strong {
   }
 
   .hero__media img {
-    aspect-ratio: 5 / 4;
-    object-position: 50% 40%;
-    border-radius: 140px 140px var(--radius) var(--radius);
+    aspect-ratio: 4 / 5;
+    object-position: 50% 50%;
+    border-radius: 160px 160px var(--radius) var(--radius);
+  }
+
+  .hero__kort {
+    position: static;
+    margin: -26px 14px 0;
   }
 
   .hero__cta .btn {

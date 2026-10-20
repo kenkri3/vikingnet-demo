@@ -79,8 +79,8 @@
 
   var SVAR = {
     hva: 'AV1 er en skolerobot som plasseres i klasserommet. Eleven kobler seg til via AV1-appen og kan se, høre, rekke opp hånda og delta i timen – fra et grupperom, en behandlingsinstitusjon eller hjemmefra.',
-    pris: 'Priser står ikke på nettsiden deres. Der beskrives AV1 som en kostnadseffektiv løsning sammenlignet med alternative tiltak. For et konkret svar: ring +47 37 71 52 10 eller skriv til norden@noisolation.com.',
-    igang: 'Fyll ut kontaktskjemaet på noisolation.com, eller ring +47 37 71 52 10. De tar kontakt med informasjon om hvordan AV1 kan brukes i din skole eller kommune.',
+    pris: 'Priser står ikke på nettsiden. Der beskrives AV1 som en kostnadseffektiv løsning sammenlignet med alternative tiltak. For et konkret svar: ring +47 37 71 52 10 eller skriv til norden@noisolation.com.',
+    igang: 'Fyll ut kontaktskjemaet på noisolation.com, eller ring +47 37 71 52 10. No Isolation tar kontakt med informasjon om hvordan AV1 kan brukes i din skole eller kommune.',
     resultat: 'Nye data fra over 3 000 AV1-insatser viser at 77,9 % av intervensjonene oppnår sitt tiltenkte formål, og at 77,6 % bidrar til at eleven kommer fysisk tilbake til klasserommet.',
     tid: 'Telefonlinjene er åpne 09.00–16.00, mandag–fredag. Norsk nummer: +47 37 71 52 10.',
     app: 'AV1-appen er gratis og kompatibel med iPhone og iPad med iOS/iPadOS 16.6 eller nyere, samt utvalgte Android-nettbrett. Eleven kobler til sin tildelte robot med en unik kode.',
