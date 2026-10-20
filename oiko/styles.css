@@ -5,6 +5,26 @@
   tynne linjer, mye luft og én rød aksent som bare brukes der noe skal merkes.
 */
 
+/* Skjulte elementer skal være skjult, også når kit-klassene setter display. */
+[hidden] {
+  display: none !important;
+}
+
+/* Anker skal ikke havne under den klebrige headeren. */
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 14px);
+}
+
+/* Uten JavaScript vises alle stegene som ren tekst, og knappene skjules. */
+html:not(.js) .step-panel[hidden] {
+  display: grid !important;
+}
+
+html:not(.js) .progress,
+html:not(.js) .brief__nav {
+  display: none;
+}
+
 /* ---------- Header ---------- */
 
 .header {
@@ -93,6 +113,7 @@
 
 .mark {
   color: var(--accent);
+  white-space: nowrap;
 }
 
 .hero .lead {
