@@ -17,7 +17,7 @@
     if (!menyKnapp || !meny) {
       return;
     }
-    meny.hidden = !apen;
+    meny.dataset.open = apen ? 'true' : 'false';
     menyKnapp.setAttribute('aria-expanded', apen ? 'true' : 'false');
     menyKnapp.setAttribute('aria-label', apen ? 'Lukk meny' : 'Åpne meny');
   }
@@ -28,7 +28,7 @@
     }
 
     menyKnapp.addEventListener('click', function () {
-      settMeny(menyKnapp.getAttribute('aria-expanded') !== 'true');
+      settMeny(meny.dataset.open !== 'true');
     });
 
     meny.addEventListener('click', function (hendelse) {
@@ -86,7 +86,7 @@
     app: 'AV1-appen er gratis og kompatibel med iPhone og iPad med iOS/iPadOS 16.6 eller nyere, samt utvalgte Android-nettbrett. Eleven kobler til sin tildelte robot med en unik kode.',
     kamera: 'Kameraet i AV1 er enveiskjørt: eleven kan se og høre klassen uten å være synlig for andre. Det kan være særlig viktig for elever som er syke, engstelige eller har smerter.',
     hvem: 'AV1 brukes av kommuner, grunnskoler, videregående skoler, sykehusskoler og veldedighetsorganisasjoner. Foresatte kan også ta kontakt.',
-    nei: 'Det spørsmålet har jeg ikke svar på her. Ring +47 37 71 52 10 (09.00–16.00) eller skriv til norden@noisolation.com, så svarer de.'
+    nei: 'Det spørsmålet har jeg ikke svar på her. Ring +47 37 71 52 10 (09.00–16.00) eller skriv til norden@noisolation.com.'
   };
 
   /* Rekkefølgen betyr noe: pris og telefontid må sjekkes før det generelle
@@ -94,9 +94,9 @@
   var REGLER = [
     { nokler: ['pris', 'kost', 'koster', 'kr', 'billig'], svar: SVAR.pris },
     { nokler: ['ringe', 'telefon', 'telefontid', 'åpningstid', 'åpent', 'når kan'], svar: SVAR.tid },
-    { nokler: ['resultat', 'effekt', 'insats', 'tall', 'fungerer det'], svar: SVAR.resultat },
-    { nokler: ['ipad', 'iphone', 'app', 'android', 'ios', 'nettbrett'], svar: SVAR.app },
-    { nokler: ['kamera', 'synlig', 'se meg', 'privat'], svar: SVAR.kamera },
+    { nokler: ['resultat', 'effekt', 'insats', 'tall', '77'], svar: SVAR.resultat },
+    { nokler: ['ipad', 'iphone', 'app', 'android', 'ios', 'nettbrett', 'enhet'], svar: SVAR.app },
+    { nokler: ['kamera', 'synlig', 'se meg', 'privat', 'anonym', 'bli sett'], svar: SVAR.kamera },
     { nokler: ['hvem', 'kommune', 'skole', 'foresatt', 'foreldre'], svar: SVAR.hvem },
     { nokler: ['i gang', 'begynne', 'start', 'bestille', 'kjøpe', 'komme i gang'], svar: SVAR.igang },
     { nokler: ['av1', 'robot', 'skolerobot', 'hva er'], svar: SVAR.hva }

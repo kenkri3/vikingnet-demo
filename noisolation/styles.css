@@ -695,6 +695,10 @@ section {
 
 .sitat--stor {
   grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr);
+  gap: var(--s-4);
+  align-items: end;
   background: var(--lilac-soft);
   border-color: color-mix(in srgb, var(--lilac) 55%, var(--line));
 }
@@ -709,8 +713,9 @@ section {
 }
 
 .sitat--stor blockquote {
+  margin-bottom: 0;
   font-size: clamp(1.3rem, 1.05rem + 1vw, 1.72rem);
-  max-width: 30ch;
+  max-width: 46ch;
 }
 
 .sitat figcaption {
@@ -989,7 +994,7 @@ a.kontakt__lenke:hover strong {
 }
 
 .footer__kolonne a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   min-height: 44px;
   color: var(--band-fg);
@@ -1056,7 +1061,19 @@ a.kontakt__lenke:hover strong {
 }
 
 @media (max-width: 900px) {
+  /* Menyen er lukket som standard på smal skjerm, uten blinking: regelen
+     gjelder uansett om JavaScript har kjørt. JS åpner den med data-open. */
+  .nav {
+    display: none;
+    align-items: stretch;
+  }
+
+  .nav[data-open="true"] {
+    display: flex;
+  }
+
   .nav a {
+    justify-content: flex-start;
     min-height: 48px;
     border-top: 1px solid var(--line);
   }
@@ -1092,7 +1109,12 @@ a.kontakt__lenke:hover strong {
   }
 
   .sitat--stor {
+    display: block;
     grid-column: auto;
+  }
+
+  .sitat--stor blockquote {
+    margin-bottom: var(--s-3);
   }
 }
 
