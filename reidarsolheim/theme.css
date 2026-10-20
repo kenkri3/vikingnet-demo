@@ -1,0 +1,79 @@
+/*
+  Byggmester Reidar Solheim AS — identitet.
+  Paletten er hentet fra deres egen logo: den dype blå i «Reidar Solheim AS»
+  (#0d4da5) og den mørke umberen i «BYGGMESTER»-feltet (#3f332c). Resten er
+  varmt papir, slik et gammelt håndverksfirma ser ut på trykk.
+  Fraunces i overskriftene (myk, gammel serif), Karla i brødteksten.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Papir og blekk */
+  --paper: #f7f2e9;
+  --paper-2: #efe6d6;
+  --paper-3: #e7dcc9;
+  --ink: #1f1a16;
+  --ink-soft: #3a312a;
+  --muted: #6c6058;
+  --line: #dbcfbb;
+  --line-soft: #e8decd;
+
+  /* Deres to farger */
+  --blue: #0d4da5;
+  --blue-deep: #0a3a7d;
+  --blue-soft: #e4ecf8;
+  --umber: #2b2320;
+  --umber-2: #3f332c;
+  --brass: #a97a3c;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --accent: var(--blue);
+  --accent-fg: #fbf8f1;
+  --accent-soft: var(--blue-soft);
+
+  /* To fonter, ikke flere */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 1px rgb(47 35 22 / 5%), 0 18px 40px -26px rgb(47 35 22 / 40%);
+  --shadow-lift: 0 2px 4px rgb(47 35 22 / 6%), 0 26px 50px -30px rgb(47 35 22 / 45%);
+
+  --wrap: 1160px;
+  --header-h: 74px;
+
+  /* Typeskala */
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.45vw, 1.26rem);
+  --t-h3: clamp(1.22rem, 1.06rem + 0.65vw, 1.55rem);
+  --t-h2: clamp(1.85rem, 1.35rem + 1.9vw, 2.75rem);
+  --t-h1: clamp(2.4rem, 1.5rem + 3.9vw, 4.15rem);
+}
+
+/* Fraunces har optisk størrelse — la den vite hvor stor den er. */
+h1, h2, h3, .brand__name {
+  font-variation-settings: 'SOFT' 20, 'WONK' 1;
+}
+
+body {
+  background:
+    radial-gradient(120% 70% at 100% 0, rgb(13 77 165 / 4%), transparent 60%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.68;
+  letter-spacing: 0.002em;
+}
+
+::selection {
+  background: var(--blue);
+  color: #fff;
+}

@@ -1,0 +1,100 @@
+/*
+  Accountor — identitet.
+  Paletten er hentet fra deres egen logo og nettsted: dyp petrol (#004650),
+  sitrongul (#f5ff6b) og en kjølig mint (#ccf6f3). Petrol er flaten, sitronen
+  er det ene signalet — aldri omvendt, og aldri sitron som tekst på lyst.
+
+  Arketype: redaksjonell og tall-drevet. Sora i overskrifter og tall (geometrisk,
+  samme formfølelse som ordmerket deres), Manrope i brødtekst. To familier.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f7f8f3;
+  --bg-soft: #eef1e9;
+  --surface: #ffffff;
+
+  /* Blekk */
+  --fg: #0c2329;
+  --fg-strong: #06181d;
+  --muted: #52656a;
+
+  /* Linjer */
+  --line: #dde3dc;
+  --line-strong: #c3ccc4;
+
+  /* Petrol — deres egen mørke grønnblå */
+  --petrol: #004650;
+  --petrol-deep: #00343c;
+  --petrol-ink: #002329;
+  --petrol-soft: #e2eeec;
+
+  /* Sitron — deres egen aksent */
+  --lime: #f5ff6b;
+  --lime-deep: #dfec45;
+  --lime-ink: #2a3007;
+
+  /* Mint — deres lyse støttefarge */
+  --mint: #ccf6f3;
+
+  /* Base-primitivene */
+  --accent: #004650;
+  --accent-fg: #ffffff;
+  --accent-soft: #e2eeec;
+
+  --font-display: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgb(6 24 29 / 5%), 0 18px 40px -18px rgb(6 24 29 / 18%);
+  --shadow-lift: 0 30px 60px -34px rgb(0 35 41 / 55%);
+
+  --wrap: 1160px;
+  --header-h: 72px;
+
+  /* Typografi — litt strammere enn grunnlaget, Sora tåler det */
+  --t-h1: clamp(2.05rem, 1.35rem + 3vw, 3.5rem);
+  --t-h2: clamp(1.7rem, 1.3rem + 1.7vw, 2.45rem);
+  --t-h3: clamp(1.2rem, 1.02rem + 0.6vw, 1.5rem);
+  --t-lead: clamp(1.05rem, 0.98rem + 0.4vw, 1.2rem);
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--lime-ink);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.028em;
+  font-weight: 600;
+}
+
+h1 { letter-spacing: -0.035em; }
+
+.eyebrow {
+  color: var(--petrol);
+  letter-spacing: 0.16em;
+}
+
+/* Mørke flater: lys tekst, sitron som fokusring */
+.on-dark {
+  color: #e9f2f0;
+}
+
+.on-dark .eyebrow {
+  color: var(--lime);
+}
+
+.on-dark .lead,
+.on-dark .muted {
+  color: #b7c9c7;
+}
+
+.on-dark :focus-visible {
+  outline-color: var(--lime);
+}

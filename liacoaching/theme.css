@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Liacoaching — tema.
+
+   Paletten er hentet fra kundens egen logo (#695698 fiolett, #474747 grå) og
+   fra aksentfargen som ligger i malen deres (#ff3366, dempet til #a92e55 for
+   lesbarhet på lyst papir). Typografien er en editorial duo: Fraunces til
+   overskrifter og sitater, Karla til tekst. To familier, ikke flere.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Flater */
+  --papir: #f7f3f7;
+  --papir-dyp: #efe7f1;
+  --kort: #fffdfe;
+  --mork: #241d33;
+  --mork-dyp: #1a1426;
+
+  /* Blekk */
+  --blekk: #241f30;
+  --blekk-myk: #4a4257;
+  --dempet: #6a6178;
+
+  /* Streker */
+  --strek: #ddd2e2;
+  --strek-mork: #403654;
+
+  /* Aksenter */
+  --fiolett: #5b4a86;
+  --fiolett-lys: #695698;
+  --fiolett-svak: #e9e1f0;
+  --rose: #a92e55;
+  --rose-lys: #e8a3b6;
+
+  /* base.css */
+  --bg: var(--papir);
+  --bg-soft: var(--papir-dyp);
+  --fg: var(--blekk);
+  --muted: var(--dempet);
+  --line: var(--strek);
+  --accent: var(--fiolett);
+  --accent-fg: #fbf8fd;
+  --accent-soft: var(--fiolett-svak);
+
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Karla', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 20px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgb(36 29 51 / 6%), 0 22px 44px -24px rgb(36 29 51 / 22%);
+  --header-h: 76px;
+
+  /* Litt større og roligere hero enn grunnlaget */
+  --t-h1: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  --t-h2: clamp(1.9rem, 1.4rem + 2.1vw, 3rem);
+}
+
+::selection {
+  background: var(--fiolett-svak);
+  color: var(--blekk);
+}
+
+body {
+  background: var(--papir);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.022em;
+}
+
+h1 em,
+h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--fiolett);
+}
+
+.lead {
+  color: var(--blekk-myk);
+}

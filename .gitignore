@@ -1,0 +1,5 @@
+﻿# midlertidige filer fra QA- og skjermbiltekjøringer
+_qa*
+qa-flow*.mjs
+*.qa-dump.html
+_shot*.png

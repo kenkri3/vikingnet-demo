@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Animer — håndtegnede animasjonsfilmer for bedrifter</title>
+<meta name="description" content="Animer lager håndtegnede animasjonsfilmer for opplæring, markedsføring og presentasjon. Over 450 filmer for over 300 kunder siden 2016.">
+<meta name="theme-color" content="#08282B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Animer">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Animer — vi gjør komplekse budskap enkle å forstå">
+<meta property="og:description" content="Håndtegnede animasjonsfilmer for opplæring, markedsføring og presentasjon. Over 450 filmer for over 300 kunder siden 2016.">
+<meta property="og:image" content="img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Animer AS",
+  "alternateName": "Animer",
+  "url": "https://animer.no/",
+  "image": "img/og.png",
+  "description": "Animasjonsstudio som lager håndtegnede animasjonsfilmer for opplæring, markedsføring og presentasjon.",
+  "telephone": "+4794291169",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Saupstadringen 6B",
+    "postalCode": "7078",
+    "addressLocality": "Saupstad",
+    "addressCountry": "NO"
+  },
+  "areaServed": { "@type": "Country", "name": "Norge" },
+  "knowsAbout": ["Animasjonsfilm", "E-læring", "Illustrasjon", "Voiceover", "2D-animasjon", "3D-animasjon"]
+}
+</script>
+</head>
+<body>
+
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+
+<header class="header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#innhold" aria-label="Animer — til toppen">
+      <img src="img/logo-blekk.png" alt="Animer" width="624" height="141">
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Åpne menyen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Hovedmeny" hidden>
+      <a href="#behov">Ditt behov</a>
+      <a href="#produksjon">Produksjon</a>
+      <a href="#arbeid">Arbeid</a>
+      <a href="#sporsmal">Spørsmål</a>
+      <a class="btn nav__cta" href="#kontakt">Book et møte</a>
+    </nav>
+  </div>
+</header>
+
+<main id="innhold">
+
+  <section class="hero" aria-labelledby="hero-tittel">
+    <div class="wrap hero__grid">
+      <div class="hero__tekst">
+        <p class="eyebrow"><span class="pip" aria-hidden="true"></span>Animasjonsstudio siden 2016</p>
+        <h1 id="hero-tittel">Vi gjør komplekse budskap <span class="mark">enkle å forstå</span>.</h1>
+        <p class="lead">Håndtegnede animasjonsfilmer for opplæring, markedsføring og presentasjon. Over 450 filmer for over 300 kunder.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#kontakt">Book et møte</a>
+          <a class="btn btn--ghost" href="#produksjon">Se leveranseprosessen</a>
+        </div>
+        <p class="hero__notat">Team med fagfolk i alle ledd — manus, illustrasjon, stemme og animasjon.</p>
+      </div>
+
+      <div class="svar" aria-labelledby="svar-tittel">
+        <div class="svar__topp">
+          <span class="svar__pip" aria-hidden="true"></span>
+          <div class="svar__hvem">
+            <strong id="svar-tittel">Sanntidssvar</strong>
+            <span>Svarer mens vi sitter i produksjon</span>
+          </div>
+          <span class="svar__merke">Skisse</span>
+        </div>
+
+        <div class="svar__logg" id="svar-logg" role="log" aria-live="polite" aria-label="Samtale">
+          <p class="boble boble--bot">Hei! Jeg svarer med det som står på animer.no. Hva lurer du på?</p>
+          <p class="boble boble--bot">Du kan spørre om pris, tid, 3D eller språk — eller trykke på et av forslagene under.</p>
+        </div>
+
+        <div class="svar__chips" id="svar-chips">
+          <button class="chip" type="button">Hva koster det?</button>
+          <button class="chip" type="button">Hvor lang tid?</button>
+          <button class="chip" type="button">Lager dere 3D?</button>
+          <button class="chip" type="button">Flere språk?</button>
+          <button class="chip" type="button">Hvor holder dere til?</button>
+        </div>
+
+        <form class="svar__form" id="svar-form">
+          <label class="visually-hidden" for="svar-felt">Skriv spørsmålet ditt</label>
+          <input id="svar-felt" name="sporsmal" type="text" placeholder="Skriv et spørsmål …" autocomplete="off" enterkeyhint="send">
+          <button class="svar__send" type="submit" aria-label="Send spørsmålet">Send</button>
+        </form>
+        <p class="svar__fot">Svarene er hentet fra animer.no. Ingenting sendes, og ingenting lagres.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tallrekke" aria-label="Animer i tall">
+    <div class="wrap tallrekke__grid">
+      <div class="tall">
+        <span class="tall__verdi">450+</span>
+        <span class="tall__tekst">håndtegnede animasjonsfilmer</span>
+      </div>
+      <div class="tall">
+        <span class="tall__verdi">300+</span>
+        <span class="tall__tekst">kunder siden 2016</span>
+      </div>
+      <div class="tall">
+        <span class="tall__verdi">3–4</span>
+        <span class="tall__tekst">uker fra oppstartsmøte til ferdig film</span>
+      </div>
+      <div class="tall">
+        <span class="tall__verdi">4</span>
+        <span class="tall__tekst">språk — samme film kan lages på fire språk</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="kunder" aria-labelledby="kunder-tittel">
+    <div class="wrap">
+      <p class="kunder__over">Filmer vi er stolte av å ha produsert</p>
+      <h2 class="visually-hidden" id="kunder-tittel">Kunder</h2>
+      <ul class="kunder__liste">
+        <li><img src="img/kunde-elkjop.png" alt="Elkjøp" width="271" height="103"></li>
+        <li><img src="img/kunde-falck.png" alt="Falck" width="420" height="127"></li>
+        <li><img src="img/kunde-uno-x.png" alt="Uno X" width="420" height="186"></li>
+        <li><img src="img/kunde-xxl.png" alt="XXL" width="298" height="158"></li>
+        <li><img src="img/kunde-vipps.png" alt="Vipps" width="420" height="109"></li>
+        <li><img src="img/kunde-maxbo.png" alt="Maxbo" width="420" height="66"></li>
+        <li><img src="img/kunde-oslo-kommune.png" alt="Oslo kommune" width="420" height="178"></li>
+        <li><img src="img/kunde-fagbokforlaget.png" alt="Fagbokforlaget" width="420" height="135"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section behov" id="behov" aria-labelledby="behov-tittel">
+    <div class="wrap">
+      <div class="seksjonshode">
+        <p class="eyebrow">Ditt behov</p>
+        <h2 id="behov-tittel">Hva ønsker dere å bruke animasjon til?</h2>
+        <p class="lead">Tre innganger som dekker det de fleste kundene våre kommer for.</p>
+      </div>
+
+      <div class="grid behov__grid">
+        <article class="behov__kort">
+          <span class="behov__nr">01</span>
+          <h3>Opplæring</h3>
+          <p>Bruk animasjonsfilm til å lære opp dine ansatte og dine kunder om arbeidsprosesser og dine produkter og tjenester mer effektivt.</p>
+        </article>
+        <article class="behov__kort">
+          <span class="behov__nr">02</span>
+          <h3>Markedsføring</h3>
+          <p>Bruk animasjonsfilm og skill deg ut fra konkurrentene. Skap interesse på sosiale medier med deres helt egen stil og budskap.</p>
+        </article>
+        <article class="behov__kort">
+          <span class="behov__nr">03</span>
+          <h3>Presentasjon</h3>
+          <p>Bruk animasjonsfilm for å presentere deres produkt eller tjeneste på en mer engasjerende måte som folk forstår og husker.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section prosess" id="produksjon" aria-labelledby="prosess-tittel">
+    <div class="wrap">
+      <div class="seksjonshode">
+        <p class="eyebrow">Leveranseprosessen</p>
+        <h2 id="prosess-tittel">Fire steg, og du er med i alle ledd</h2>
+        <p class="lead">Med erfaring fra over 450 prosjekter de siste ti årene har vi utarbeidet en tydelig og effektiv leveranseprosess.</p>
+      </div>
+
+      <ol class="prosess__liste">
+        <li class="steg">
+          <div class="steg__bilde">
+            <img src="img/steg-oppstart.png" alt="Illustrasjon av kunde og prosjektleder som snakker sammen" width="301" height="246">
+          </div>
+          <span class="steg__nr">01</span>
+          <h3>Oppstartsmøte</h3>
+          <p>Kunde, manusforfatter og prosjektleder møtes for å få en klar forståelse for hvilket budskap og resultat dere ønsker med filmen.</p>
+        </li>
+        <li class="steg">
+          <div class="steg__bilde">
+            <img src="img/steg-illustrasjon.png" alt="Illustrasjon av fire karakteransikter i ulike stiler" width="285" height="266">
+          </div>
+          <span class="steg__nr">02</span>
+          <h3>Illustrasjon</h3>
+          <p>Illustratøren lager design etter deres ønske og profil. Dere får tidlig forslag på karakterer, elementer og bakgrunn — når manus og design er godkjent, tegnes alle scenene.</p>
+        </li>
+        <li class="steg">
+          <div class="steg__bilde">
+            <img src="img/steg-voice.png" alt="Illustrasjon av stemmeskuespiller med hodetelefoner foran mikrofon" width="308" height="242">
+          </div>
+          <span class="steg__nr">03</span>
+          <h3>Voiceover</h3>
+          <p>Vi har et stort utvalg av erfarne stemmeskuespillere. Prosjektlederen deres hjelper dere med å finne stemmen som best formidler budskapet til målgruppen.</p>
+        </li>
+        <li class="steg">
+          <div class="steg__bilde">
+            <img src="img/steg-animasjon.png" alt="Illustrasjon av en animatør som tegner en figur i et filmvindu" width="302" height="250">
+          </div>
+          <span class="steg__nr">04</span>
+          <h3>Animasjon</h3>
+          <p>Når illustrasjoner og stemme er godkjent, levendegjør animatørene skissene. Stemme, bakgrunnsmusikk og lydeffekter legges på.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section arbeid" id="arbeid" aria-labelledby="arbeid-tittel">
+    <div class="wrap arbeid__grid">
+      <div class="arbeid__tekst">
+        <p class="eyebrow">Kundehistorie</p>
+        <h2 id="arbeid-tittel">E-læring for Veidekke</h2>
+        <p>Veidekke-filmene viser ting som kan gå galt dersom man ikke gjør alt på en riktig og trygg måte, gjennom enkel og tydelig visuell kommunikasjon. Det var helt nødvendig da mange av Veidekkes ansatte jobber på arbeidsplasser med mye bakgrunnsstøy og bruker små telefoner og nettbrett.</p>
+        <p>Stil og karakterer er designet ut fra Veidekkes designmanual, med karakterer konsekvent ikledd Veidekke-klær. Utstyr, maskiner og kjøretøy er studert ned på detaljnivå for å være virkelighetstro.</p>
+        <blockquote class="sitat">
+          <p>«I dette prosjektet har mye tid gått med til å studere utstyr, maskiner og kjøretøy, og finpusse detaljene til de gjenspeiler virkeligheten 100%.»</p>
+          <cite>Fra prosjektsiden om Veidekke</cite>
+        </blockquote>
+      </div>
+
+      <aside class="arbeid__kort" aria-label="Prosjektfakta">
+        <div class="filmramme">
+          <img src="img/veidekke-merke.png" alt="Veidekkes logo" width="380" height="378">
+          <span class="filmramme__merke">E-læring · animasjonsfilm</span>
+        </div>
+        <dl class="faktaliste">
+          <div><dt>Kunde</dt><dd>Veidekke</dd></div>
+          <div><dt>Format</dt><dd>Animasjonsfilm til e-læring</dd></div>
+          <div><dt>Profil</dt><dd>Veidekkes designmanual</dd></div>
+        </dl>
+        <p class="small muted">Filmen ligger på animer.no/veidekke.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section sporsmal" id="sporsmal" aria-labelledby="sporsmal-tittel">
+    <div class="wrap sporsmal__grid">
+      <div class="sporsmal__hode">
+        <p class="eyebrow">Ofte stilte spørsmål</p>
+        <h2 id="sporsmal-tittel">Det folk spør oss om først</h2>
+        <p class="lead">Svarene under er de samme som sanntidssvaret bruker.</p>
+        <div class="sporsmal__hjelp">
+          <p>Finner du ikke svaret du leter etter?</p>
+          <a class="btn btn--ghost" href="tel:+4794291169">Ring 942 91 169</a>
+        </div>
+      </div>
+
+      <div class="sporsmal__liste">
+        <details class="faq">
+          <summary>Hvor lang tid tar det å lage en animasjonsfilm?</summary>
+          <p>Ved å følge leveranseprosessen tar filmen 3–4 uker. Leveransen varierer ut fra kompleksiteten i filmen og endringer som blir gjort i korrektur underveis.</p>
+        </details>
+        <details class="faq">
+          <summary>Det haster — kan det lages fortere?</summary>
+          <p>Ja. Det ordnes ved at vi setter flere på produksjonen og færre korrekturrunder. Kontakt oss for å høre om vi kan møte fristen deres.</p>
+        </details>
+        <details class="faq">
+          <summary>Jeg trenger filmen på flere språk — går det?</summary>
+          <p>Absolutt. Vi samarbeider med dyktige stemmeskuespillere over hele verden, og du kan fint lage én film på fire forskjellige språk om ønskelig.</p>
+        </details>
+        <details class="faq">
+          <summary>Hva koster en animasjonsfilm?</summary>
+          <p>Vi har fastpriser basert på lengden på filmen og behov. Vi anbefaler at du booker en online kaffe med oss — der gir vi en konkret prisvurdering basert på deres behov.</p>
+        </details>
+        <details class="faq">
+          <summary>Lager dere 3D-animasjon?</summary>
+          <p>Ja. Vi har erfaring med å produsere 3D-animasjon. Den typen animasjon koster ekstra mot vanlig 2D og tar lengre tid å produsere.</p>
+        </details>
+        <details class="faq">
+          <summary>Hvor holder Animer til?</summary>
+          <p>Vi arbeider hjemmefra og har derfor ikke et fast kontor. Er det ønskelig med et fysisk møte kommer vi gjerne til dere — ellers tar vi gjerne et online møte.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section kontakt" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap kontakt__grid">
+      <div class="kontakt__info">
+        <p class="eyebrow">Book et møte</p>
+        <h2 id="kontakt-tittel">Din unike animasjonsfilm venter hos oss</h2>
+        <p class="lead">Book et møte med oss, eller bruk skjemaet om du har spørsmål — så svarer vi så snart vi kan.</p>
+
+        <ul class="kontaktliste">
+          <li>
+            <span class="kontaktliste__merke">Telefon</span>
+            <a href="tel:+4794291169">942 91 169</a>
+          </li>
+          <li>
+            <span class="kontaktliste__merke">Forretningsadresse</span>
+            <span>Saupstadringen 6B, 7078 Saupstad</span>
+          </li>
+          <li>
+            <span class="kontaktliste__merke">Møter</span>
+            <span>Online, eller hos dere — vi har ikke fast kontor</span>
+          </li>
+          <li>
+            <span class="kontaktliste__merke">Foretak</span>
+            <span>ANIMER AS · org.nr 833 450 212</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="kontakt__kort">
+        <form id="foresporsel" class="foresporsel" novalidate>
+          <div class="foresporsel__felt">
+            <label for="navn">Navn</label>
+            <input id="navn" name="navn" type="text" autocomplete="name" required>
+          </div>
+          <div class="foresporsel__to">
+            <div class="foresporsel__felt">
+              <label for="epost">E-post</label>
+              <input id="epost" name="epost" type="email" autocomplete="email" required>
+            </div>
+            <div class="foresporsel__felt">
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel">
+            </div>
+          </div>
+          <div class="foresporsel__felt">
+            <label for="behov">Hva gjelder det?</label>
+            <select id="behov" name="behov">
+              <option>Opplæring</option>
+              <option>Markedsføring</option>
+              <option>Presentasjon</option>
+              <option>3D-animasjon</option>
+              <option>Annet</option>
+            </select>
+          </div>
+          <div class="foresporsel__felt">
+            <label for="melding">Kort om filmen dere ser for dere</label>
+            <textarea id="melding" name="melding" rows="4" required></textarea>
+          </div>
+          <button class="btn foresporsel__send" type="submit">Send forespørsel</button>
+          <p class="small muted foresporsel__fot">Skissen sender ingenting. I den ferdige løsningen går henvendelsen til Animer og havner i en kø med varsel.</p>
+        </form>
+
+        <div class="kvittering" id="kvittering" hidden tabindex="-1">
+          <p class="kvittering__merke">Kvittering <span id="kvittering-nr"></span></p>
+          <h3>Takk, <span id="kvittering-navn">du</span>.</h3>
+          <p id="kvittering-tekst"></p>
+          <dl class="kvittering__liste" id="kvittering-liste"></dl>
+          <button class="btn btn--ghost" type="button" id="kvittering-ny">Skriv en ny henvendelse</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__merke">
+      <img src="img/logo-cyan.png" alt="Animer" width="624" height="141">
+      <p>Håndtegnede animasjonsfilmer for bedrifter. Vi gjør komplekse budskap enkle å forstå.</p>
+    </div>
+    <div class="footer__kol">
+      <h2>Kontakt</h2>
+      <p><a href="tel:+4794291169">942 91 169</a></p>
+      <p>Saupstadringen 6B<br>7078 Saupstad</p>
+    </div>
+    <div class="footer__kol">
+      <h2>Foretak</h2>
+      <p>ANIMER AS<br>Org.nr 833 450 212</p>
+      <p class="small">Animasjonsstudio siden 2016.</p>
+    </div>
+  </div>
+  <div class="wrap footer__bunn">
+    <p>© 2026 ANIMER AS. Alle rettigheter forbeholdt.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

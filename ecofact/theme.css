@@ -1,0 +1,44 @@
+/*
+  Ecofact — tema.
+  Paletten er hentet fra logoen deres: cyan #00BCEF, marineblå #0073BB og
+  et mørkt blekk som grunnlag. Typografien er én serif for overskrifter og
+  én humanistisk sans for tekst — aldri mer enn to familier.
+*/
+
+:root {
+  /* Råfarger */
+  --blekk: #08262c;
+  --blekk-2: #0d333a;
+  --papir: #f1f5f4;
+  --flate: #ffffff;
+  --dempet: #4b625e;
+  --linje: #d6e0dd;
+  --linje-2: #b6c7c2;
+  --merke: #0073bb;
+  --merke-dyp: #00588f;
+  --cyan: #00bcef;
+  --cyan-blek: #e2f5fb;
+  --sand: #e7ede9;
+
+  /* Navnene base.css bruker */
+  --bg: var(--papir);
+  --bg-soft: var(--sand);
+  --fg: var(--blekk);
+  --muted: var(--dempet);
+  --line: var(--linje);
+  --accent: var(--cyan);
+  --accent-fg: #062a33;
+  --accent-soft: var(--cyan-blek);
+
+  /* Typografi */
+  --font-display: 'Source Serif 4', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Form og rom */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(8 38 44 / 6%), 0 18px 40px rgb(8 38 44 / 8%);
+  --wrap: 1180px;
+  --header-h: 72px;
+  --kant: clamp(18px, 4vw, 32px);
+}

@@ -1,0 +1,75 @@
+/*
+  Animer — identitet.
+  Paletten er hentet fra logoen: turkis #02CCD1 på dyp blekk. Turkisen er
+  lys, så tekst og lenker bruker en mørkere variant av samme tone.
+  To fonter: Gabarito (display) og Onest (tekst).
+*/
+
+:root {
+  /* Flater */
+  --papir: #f3fafa;
+  --papir-dyp: #e7f4f5;
+  --flate: #ffffff;
+
+  /* Blekk */
+  --blekk: #08282b;
+  --blekk-2: #0f3b3f;
+  --blekk-3: #16494e;
+  --demper: #4a6b6e;
+  --demper-lys: #6c8b8e;
+
+  /* Linjer */
+  --linje: #cfe5e7;
+  --linje-2: #b6d6d9;
+
+  /* Merkevare */
+  --cyan: #02ccd1;
+  --cyan-dyp: #056a70;
+  --cyan-fyll: #067e85;
+  --cyan-soft: #d9f5f6;
+  --cyan-glod: #a9ecee;
+
+  /* Stemning — brukes sparsomt */
+  --koral: #f4657a;
+
+  /* Kobler demo-kitet til paletten */
+  --bg: var(--papir);
+  --bg-soft: var(--papir-dyp);
+  --fg: var(--blekk);
+  --muted: var(--demper);
+  --line: var(--linje);
+  --accent: var(--cyan-dyp);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--cyan-soft);
+
+  --font-display: 'Gabarito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Onest', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-lg: 28px;
+
+  --shadow-lav: 0 1px 2px rgb(8 40 43 / 5%), 0 10px 24px rgb(8 40 43 / 6%);
+  --shadow-hoy: 0 2px 4px rgb(8 40 43 / 6%), 0 24px 60px rgb(8 40 43 / 12%);
+
+  --wrap: 1160px;
+
+  --t-h1: clamp(2.3rem, 1.4rem + 3.9vw, 4.05rem);
+  --t-h2: clamp(1.8rem, 1.3rem + 2vw, 2.75rem);
+  --t-h3: clamp(1.25rem, 1.05rem + 0.7vw, 1.5rem);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+h1 { line-height: 1.02; }
+h2 { line-height: 1.06; }
+
+::selection {
+  background: var(--cyan-glod);
+  color: var(--blekk);
+}

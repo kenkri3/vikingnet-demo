@@ -1,0 +1,1060 @@
+/*
+  Beat Technology AS — layout og komponenter.
+  Rekkefølge i <head>: kit/base.css → theme.css → styles.css
+  Alle trykkflater er minst 44 px, alle skjemafelt 16 px, og ingen
+  dekor ligger utenfor kanten (kit/qa.html måler det).
+*/
+
+/* ---------- Felles småting ---------- */
+
+.seksjon {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+.seksjon--smal {
+  padding-block: clamp(2rem, 4vw, 3rem);
+}
+
+.seksjon--flate {
+  background: var(--bg-soft);
+}
+
+.seksjon__hode {
+  max-width: 58ch;
+  margin-bottom: clamp(1.5rem, 3vw, 2.6rem);
+}
+
+.seksjon__hode h2 {
+  margin-bottom: var(--s-2);
+}
+
+.seksjon__hode p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: var(--s-2);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.kicker::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+}
+
+.merke {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  background: var(--sky);
+  color: #04121b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.merke[hidden] {
+  display: none;
+}
+
+.merke--dempet {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.brand__mark {
+  color: var(--sky);
+  flex: 0 0 auto;
+}
+
+.brand__text {
+  white-space: nowrap;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding-inline: 0.5rem;
+}
+
+.nav a.btn {
+  color: var(--accent-fg);
+  padding-inline: 1rem;
+  min-height: 44px;
+  border-top: 0;
+}
+
+.nav a.btn:hover {
+  color: var(--accent-fg);
+}
+
+@media (max-width: 900px) {
+  .nav a.btn {
+    margin-top: var(--s-2);
+    border-top: 0;
+  }
+}
+
+/* Menyen er merket [hidden] på mobil. På brede skjermer skal den alltid vises,
+   også etter at mobilmenyen er lukket og vinduet er dratt ut igjen. */
+@media (min-width: 901px) {
+  .nav[hidden] {
+    display: flex;
+  }
+}
+
+/* ---------- Hero: mørk scene ---------- */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 420px at 82% -12%, #17455f 0%, rgb(23 69 95 / 0%) 62%),
+    linear-gradient(178deg, var(--ink) 0%, #081c28 100%);
+  color: var(--ink-fg);
+  padding-top: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgb(53 180 232 / 7%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(53 180 232 / 7%) 1px, transparent 1px);
+  background-size: 88px 88px;
+  mask-image: radial-gradient(720px 460px at 74% 22%, #000 0%, transparent 78%);
+  -webkit-mask-image: radial-gradient(720px 460px at 74% 22%, #000 0%, transparent 78%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  align-items: center;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2rem, 4.5vw, 3.25rem);
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 var(--s-3);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sky);
+}
+
+.hero__eyebrow .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sky);
+  box-shadow: 0 0 0 4px rgb(53 180 232 / 18%);
+}
+
+.hero h1 {
+  color: #fff;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--s-3);
+  max-width: 20ch;
+}
+
+.hero__lead {
+  font-size: var(--t-lead);
+  color: var(--ink-muted);
+  max-width: 46ch;
+  margin-bottom: var(--s-4);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-bottom: var(--s-3);
+}
+
+.btn--lys {
+  background: var(--sky);
+  color: #04121b;
+}
+
+.btn--lys:hover {
+  background: #5cc5ee;
+}
+
+.btn--linje {
+  background: transparent;
+  color: var(--ink-fg);
+  border-color: rgb(157 179 194 / 40%);
+}
+
+.btn--linje:hover {
+  background: rgb(157 179 194 / 12%);
+  box-shadow: none;
+}
+
+.hero__note {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--ink-muted);
+}
+
+.hero__fig {
+  margin: 0;
+  border: 1px solid rgb(157 179 194 / 22%);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0c2634;
+  box-shadow: 0 34px 80px -42px rgb(0 0 0 / 90%);
+}
+
+.hero__fig img {
+  width: 100%;
+  height: auto;
+}
+
+.hero__figcap {
+  display: block;
+  padding: 0.7rem 0.95rem;
+  border-top: 1px solid rgb(157 179 194 / 16%);
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+/* Tallbånd nederst i scenen */
+
+.hero__stats {
+  border-top: 1px solid var(--ink-line);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stats li {
+  margin: 0;
+  padding: 1.15rem clamp(0.6rem, 1.8vw, 1.4rem) 1.25rem;
+  border-left: 1px solid var(--ink-line);
+}
+
+.stats li:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.stats b {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 3vw, 2.05rem);
+  font-weight: 600;
+  line-height: 1.05;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.stats span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ink-muted);
+}
+
+/* ---------- Produkter ---------- */
+
+.produkter {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  align-items: stretch;
+}
+
+.produkt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.produkt--loft {
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+  background: linear-gradient(180deg, #ffffff 0%, #f3fafd 100%);
+  box-shadow: var(--shadow);
+}
+
+.produkt--loft::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, var(--sky), var(--accent));
+}
+
+.produkt__topp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-bottom: 0.2rem;
+}
+
+.produkt h3 {
+  margin: 0;
+  font-size: var(--t-h3);
+}
+
+.produkt__ingress {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+.produkt ul {
+  margin: 0.65rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.produkt li {
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr);
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.produkt li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  margin-top: 0.5em;
+  border-radius: 50%;
+  background: var(--sky);
+}
+
+.produkt__fot {
+  margin: auto 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.83rem;
+  color: var(--fg-soft);
+  font-weight: 600;
+}
+
+.produkt__fot span {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* ---------- Priser ---------- */
+
+.priser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.pris {
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.pris--loft {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+  box-shadow: var(--shadow);
+}
+
+.pris h3 {
+  margin: 0 0 0.15rem;
+  font-size: var(--t-h3);
+}
+
+.pris__sum {
+  margin: 0 0 0.9rem;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.pris dl {
+  margin: 0;
+  display: grid;
+  gap: 0;
+}
+
+.pris .rad {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+.pris .rad:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.pris dt {
+  margin: 0;
+  color: var(--muted);
+}
+
+.pris dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+.prisnote {
+  margin: clamp(1rem, 2vw, 1.4rem) 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* ---------- Priskalkulator ---------- */
+
+.kalk {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(1rem, 2.4vw, 1.75rem);
+  align-items: start;
+}
+
+.kalk__skjema {
+  display: grid;
+  gap: 1.15rem;
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.felt {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.felt .hint {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.satser {
+  margin: 0;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.satser > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.satser dt {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.satser dd {
+  margin: 0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.kalk__svar {
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #0a2130 0%, var(--ink) 100%);
+  color: var(--ink-fg);
+}
+
+.kalk__svar h3 {
+  color: #fff;
+  font-size: var(--t-h3);
+  margin-bottom: 0.15rem;
+}
+
+.kalk__svar .undertittel {
+  margin: 0 0 1rem;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+.svar {
+  display: grid;
+  gap: 0;
+}
+
+.svar__tittel {
+  margin: 0.9rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sky);
+}
+
+.svar__tittel:first-child {
+  margin-top: 0;
+}
+
+.svar__rad {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.62rem 0;
+  border-top: 1px solid var(--ink-line);
+  font-size: 0.92rem;
+}
+
+.svar__rad:last-of-type {
+  border-bottom: 1px solid var(--ink-line);
+}
+
+.svar__rad dt,
+.svar__rad .lab {
+  color: var(--ink-muted);
+  min-width: 0;
+}
+
+.svar__rad dd,
+.svar__rad .val {
+  margin: 0;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: #fff;
+}
+
+.svar__rad--sum dd {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  letter-spacing: -0.01em;
+}
+
+.anbefaling {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-fg);
+}
+
+.kalk__knapp {
+  margin-top: 1rem;
+}
+
+.kalk__knapp .btn {
+  width: 100%;
+}
+
+.kalk__fot {
+  margin: 0.85rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.kalk__svar .merke {
+  margin-left: 0.5rem;
+}
+
+.kalk__svar .merke[hidden] {
+  display: none;
+}
+
+/* ---------- Plattformen ---------- */
+
+.plattform {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  align-items: start;
+}
+
+.plattform__fig {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+
+.plattform__fig img {
+  width: 100%;
+  height: auto;
+}
+
+.plattform__fig figcaption {
+  padding: 0.65rem 0.9rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.funksjoner {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.funksjoner li {
+  margin: 0;
+}
+
+.funksjoner h3 {
+  margin: 0 0 0.15rem;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.funksjoner p {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.spekter {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin-top: clamp(1.75rem, 3.5vw, 2.75rem);
+  padding-top: clamp(1.25rem, 2.5vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+.spekter h3 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.spekter ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.spekter li {
+  margin: 0;
+  font-size: 0.92rem;
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.spekter li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+/* ---------- Møteplasser ---------- */
+
+.moter {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.moter li {
+  display: grid;
+  grid-template-columns: minmax(0, 9rem) minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  margin: 0;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.moter .naar {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.moter .hva {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.moter .hvor {
+  font-size: 0.87rem;
+  color: var(--muted);
+}
+
+/* ---------- Folk ---------- */
+
+.folk {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.4rem);
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.person img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--bg-soft);
+}
+
+.person__tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.85rem 1rem 0.4rem;
+}
+
+.person h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.person__rolle {
+  margin: 0;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.person a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 1rem;
+  font-size: 0.82rem;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.person a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* ---------- Kontakt ---------- */
+
+.kontakt {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(1.5rem, 3.5vw, 3rem);
+  align-items: start;
+}
+
+.kontakt__liste {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.kontakt__rad {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.kontakt__rad:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.kontakt__rad dt {
+  margin: 0 0 0.1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kontakt__rad dd {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.kontakt__rad dd a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  text-underline-offset: 3px;
+}
+
+.kontakt__skjema {
+  padding: clamp(1.25rem, 2.4vw, 1.9rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.kontakt__skjema h3 {
+  margin-bottom: 0.2rem;
+}
+
+.kontakt__skjema > p {
+  margin-bottom: var(--s-4);
+  color: var(--muted);
+  font-size: var(--t-sm);
+}
+
+.kvittering {
+  margin: var(--s-3) 0 0;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  font-size: 0.87rem;
+  color: var(--fg-soft);
+}
+
+.kvittering[hidden] {
+  display: none;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--ink);
+  color: var(--ink-muted);
+  border-top: 0;
+  padding-block: clamp(2.25rem, 4vw, 3.25rem);
+}
+
+.footer a {
+  color: var(--ink-fg);
+  text-decoration: none;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.footer .brand {
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.footer p {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.footer__tittel {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.footer__nav {
+  display: grid;
+  gap: 0;
+}
+
+.footer__nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.88rem;
+  color: var(--ink-fg);
+}
+
+.footer__nav a:hover {
+  color: var(--sky);
+}
+
+.footer__bunn {
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--ink-line);
+  font-size: 0.8rem;
+}
+
+/* ---------- Responsivt ---------- */
+
+@media (max-width: 1000px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1 {
+    max-width: 24ch;
+  }
+
+  .hero__fig {
+    max-width: 620px;
+  }
+
+  .produkter,
+  .priser,
+  .folk {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kalk,
+  .plattform,
+  .kontakt {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats li {
+    border-left: 0;
+    border-top: 1px solid var(--ink-line);
+    padding-left: 0;
+  }
+
+  .stats li:nth-child(-n + 2) {
+    border-top: 0;
+  }
+
+  .produkter,
+  .priser,
+  .folk {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .funksjoner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.9rem;
+  }
+
+  .spekter {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .moter li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+    padding: 0.85rem 0;
+  }
+
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .folk {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__cta .btn {
+    width: 100%;
+  }
+}

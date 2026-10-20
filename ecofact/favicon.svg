@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Ecofact">
+  <rect width="64" height="64" rx="8" fill="#08262c"/>
+  <g fill="none" stroke="#00bcef" stroke-width="3" stroke-linecap="round">
+    <circle cx="32" cy="27" r="14"/>
+    <ellipse cx="32" cy="27" rx="7" ry="14"/>
+    <line x1="18" y1="27" x2="46" y2="27"/>
+  </g>
+  <rect x="18" y="48" width="28" height="4" fill="#00bcef"/>
+</svg>

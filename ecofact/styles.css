@@ -1,0 +1,1125 @@
+/*
+  Ecofact — layout.
+  Rekkefølge: hero med faktastripe, oppdragstabell, tjenestekatalog, vann og miljø,
+  arbeidsmåte, sitatbånd, fagfolk, forespørsel. Annet enn de nyeste demoene.
+*/
+
+/* Alle lenker er trykkflater: minst 44 px høye, også de som står alene. */
+a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+section[id],
+main [id] {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
+/* base.css gir li en bunnmargin. Alle listene her er egne komponenter med
+   egen rytme, så marginen må bort — ellers blir det brede bånd i gridene. */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+/* ---------- Header ---------- */
+
+.header__inner {
+  gap: 0.8rem;
+}
+
+.brand {
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--blekk);
+}
+
+.brand__merke {
+  flex: none;
+  border-radius: 6px;
+}
+
+.brand__navn {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.header__cta {
+  min-height: 44px;
+  padding: 0.55rem 1.05rem;
+  font-size: 0.9rem;
+}
+
+.nav-toggle {
+  flex: none;
+}
+
+.nav__telefon {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: var(--blekk);
+  color: #eaf2f1;
+  padding-block: clamp(2.25rem, 5vw, 3.75rem) clamp(2.25rem, 5vw, 3.25rem);
+  border-bottom: 1px solid rgb(255 255 255 / 9%);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.hero__merke {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin: 0 0 0.9rem;
+}
+
+.hero h1 {
+  color: #f7fbfa;
+  letter-spacing: -0.022em;
+  margin-bottom: 1rem;
+  max-width: 18ch;
+}
+
+.hero__lead {
+  font-size: var(--t-lead);
+  line-height: 1.55;
+  color: rgb(234 242 241 / 84%);
+  max-width: 44ch;
+  margin-bottom: 0;
+}
+
+.hero__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-block: var(--s-4) var(--s-4);
+}
+
+.btn--lys {
+  background: transparent;
+  color: #eaf2f1;
+  border-color: rgb(234 242 241 / 34%);
+}
+
+.btn--lys:hover {
+  background: rgb(234 242 241 / 10%);
+  box-shadow: none;
+}
+
+.hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid rgb(255 255 255 / 13%);
+  font-size: var(--t-sm);
+  color: rgb(234 242 241 / 72%);
+}
+
+.hero__meta li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  background: var(--cyan);
+}
+
+.hero__figur {
+  margin: 0;
+  position: relative;
+  aspect-ratio: 5 / 6;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--blekk-2);
+}
+
+.hero__figur img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__figur figcaption,
+.oppdrag__bilde figcaption,
+.vann__figur figcaption,
+.arbeidsmate__figur figcaption {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 0.3rem 0.55rem;
+  background: rgb(4 22 26 / 74%);
+  color: #eaf2f1;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  border-radius: 2px;
+}
+
+/* ---------- Faktastripe ---------- */
+
+.fakta {
+  background: var(--flate);
+  border-bottom: 1px solid var(--linje);
+}
+
+.fakta__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fakta__punkt {
+  padding: clamp(1.3rem, 3vw, 2.1rem) clamp(1rem, 2vw, 1.6rem);
+  border-left: 1px solid var(--linje);
+}
+
+.fakta__punkt:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.fakta__verdi {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 1.1rem + 1.3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.35rem;
+  color: var(--blekk);
+  font-variant-numeric: tabular-nums;
+}
+
+.fakta__navn {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--dempet);
+  max-width: 22ch;
+}
+
+/* ---------- Seksjonstopper ---------- */
+
+.seksjonstopp {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: end;
+  margin-bottom: clamp(1.6rem, 4vw, 2.6rem);
+}
+
+.seksjonstopp h2 {
+  margin-bottom: 0;
+  max-width: 22ch;
+}
+
+.seksjonstopp .lead {
+  margin-bottom: 0.15rem;
+}
+
+.section--flate {
+  background: var(--flate);
+  border-top: 1px solid var(--linje);
+}
+
+/* ---------- Oppdrag ---------- */
+
+.oppdrag__bilde {
+  margin: 0 0 clamp(1.2rem, 3vw, 1.8rem);
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.oppdrag__bilde img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.1 / 1;
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+
+.oppdrag__ramme {
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--flate);
+}
+
+.oppdrag {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.94rem;
+}
+
+.oppdrag th,
+.oppdrag td {
+  text-align: left;
+  padding: 0.85rem clamp(0.7rem, 2vw, 1.15rem);
+  border-bottom: 1px solid var(--linje);
+  vertical-align: top;
+}
+
+.oppdrag thead th {
+  font-family: var(--font-body);
+  font-size: 0.71rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--dempet);
+  background: var(--sand);
+  border-bottom: 1px solid var(--linje-2);
+}
+
+.oppdrag tbody tr:last-child th,
+.oppdrag tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.oppdrag tbody th {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  width: 22%;
+}
+
+.oppdrag td[data-navn="År"] {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--dempet);
+}
+
+.oppdrag td[data-navn="Bidrag"] {
+  color: var(--merke-dyp);
+  font-size: 0.86rem;
+}
+
+.oppdrag__kilde {
+  margin: 0.9rem 0 0;
+}
+
+/* ---------- Tjenester ---------- */
+
+.tjenester {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--linje);
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.tjeneste {
+  background: var(--flate);
+  padding: clamp(1.15rem, 2.4vw, 1.75rem);
+  transition: background 0.15s ease;
+}
+
+.tjeneste:hover {
+  background: #f6fbfa;
+}
+
+.tjeneste__nr {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--merke);
+  margin: 0 0 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.tjeneste h3 {
+  font-size: 1.13rem;
+  margin-bottom: 0.35rem;
+}
+
+.tjeneste p:last-child {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--dempet);
+}
+
+/* ---------- Vann og miljø ---------- */
+
+.vann {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.vann__figur {
+  margin: 0;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.vann__figur img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.vann__tekst h2 {
+  max-width: 18ch;
+}
+
+.vann__tekst p {
+  max-width: 52ch;
+}
+
+.merker {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: var(--s-3) 0 0;
+  padding: 0;
+}
+
+.merker li {
+  font-size: 0.77rem;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--linje-2);
+  border-radius: 2px;
+  background: var(--flate);
+  color: var(--dempet);
+}
+
+/* ---------- Slik jobber vi ---------- */
+
+.arbeidsmate {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.arbeidsmate h2 {
+  max-width: 20ch;
+}
+
+.stigar {
+  list-style: none;
+  margin: var(--s-4) 0 0;
+  padding: 0;
+}
+
+.stig {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  column-gap: 1rem;
+  row-gap: 0.2rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--linje);
+}
+
+.stig:last-child {
+  border-bottom: 1px solid var(--linje);
+}
+
+.stig__nr {
+  grid-row: span 2;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--linje-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.stig h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.stig p:last-child {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--dempet);
+}
+
+.arbeidsmate__figur {
+  margin: 0;
+  position: sticky;
+  top: calc(var(--header-h) + 20px);
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.arbeidsmate__figur img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ---------- Sitat ---------- */
+
+.sitat {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  min-height: clamp(340px, 46vw, 520px);
+  padding-block: clamp(2.8rem, 8vw, 5rem);
+  color: #f4f8f7;
+  overflow: hidden;
+}
+
+.sitat__bilde {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sitat::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(155deg, rgb(4 22 26 / 84%), rgb(4 22 26 / 52%));
+}
+
+.sitat__figur {
+  margin: 0;
+  max-width: 54rem;
+}
+
+.sitat blockquote {
+  margin: 0;
+}
+
+.sitat blockquote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 1.15rem + 2.2vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.sitat figcaption {
+  margin-top: 1.4rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgb(0 188 239 / 65%);
+  font-size: 0.9rem;
+  color: rgb(244 248 247 / 80%);
+  max-width: 30ch;
+}
+
+/* ---------- Fagfolk ---------- */
+
+.folk {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--linje);
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.person {
+  background: var(--flate);
+  padding: clamp(1.1rem, 2.2vw, 1.6rem);
+}
+
+.person__sted {
+  margin: 0 0 0.6rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--merke);
+}
+
+.person h3 {
+  font-size: 1.08rem;
+  margin-bottom: 0.12rem;
+}
+
+.person__rolle {
+  margin: 0 0 0.45rem;
+  font-size: 0.87rem;
+  line-height: 1.45;
+  color: var(--dempet);
+}
+
+.person__lenke {
+  display: flex;
+  font-size: 0.86rem;
+  color: var(--blekk);
+  text-decoration: none;
+  border-bottom: 1px solid var(--linje);
+  overflow-wrap: anywhere;
+}
+
+.person__lenke:last-child {
+  border-bottom: 0;
+}
+
+.person__lenke:hover {
+  color: var(--merke-dyp);
+}
+
+/* ---------- Forespørsel ---------- */
+
+.foresporsel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.foresporsel__hoved h2 {
+  max-width: 20ch;
+}
+
+.foresporsel__hoved > .lead {
+  margin-bottom: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.skjema {
+  background: var(--flate);
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+  padding: clamp(1.05rem, 3vw, 1.9rem);
+}
+
+/* base.css gjør form til display: grid, og det overstyrer nettleserens
+   [hidden]. Uten denne linjen blir skjemaet stående over kvitteringen. */
+.skjema[hidden] {
+  display: none;
+}
+
+.steg {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 1.2rem;
+  padding: 0;
+}
+
+.steg__punkt {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 2px solid var(--linje);
+  font-size: 0.79rem;
+  color: var(--dempet);
+}
+
+.steg__punkt[aria-current="step"] {
+  border-bottom-color: var(--cyan);
+  color: var(--blekk);
+  font-weight: 600;
+}
+
+.steg__punkt.er-ferdig {
+  border-bottom-color: var(--merke);
+  color: var(--blekk);
+}
+
+.steg__nr {
+  display: grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  flex: none;
+  border-radius: 50%;
+  background: var(--sand);
+  color: var(--dempet);
+  font-size: 0.71rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.steg__punkt[aria-current="step"] .steg__nr {
+  background: var(--blekk);
+  color: #eaf2f1;
+}
+
+.valgfelt {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.valgfelt legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+.valgfelt__hint {
+  font-weight: 400;
+  color: var(--dempet);
+}
+
+.valg {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.valg__knapp {
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--linje-2);
+  border-radius: 2px;
+  background: var(--flate);
+  color: var(--blekk);
+  font: inherit;
+  font-size: 0.89rem;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.valg__knapp:hover {
+  border-color: var(--blekk);
+}
+
+.valg__knapp[aria-pressed="true"] {
+  background: var(--blekk);
+  border-color: var(--blekk);
+  color: #eaf2f1;
+}
+
+.skjema__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+}
+
+.feil {
+  margin: 0;
+  color: #9f1d16;
+  font-size: 0.85rem;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #9f1d16;
+  background: #fdf6f5;
+}
+
+.skjema__merknad {
+  margin: 0;
+  font-size: 0.79rem;
+  line-height: 1.5;
+  color: var(--dempet);
+}
+
+.kvittering {
+  background: var(--flate);
+  border: 1px solid var(--linje);
+  border-left: 4px solid var(--cyan);
+  border-radius: 3px;
+  padding: clamp(1.05rem, 3vw, 1.9rem);
+}
+
+.kvittering__merke {
+  margin: 0 0 0.3rem;
+  font-size: 0.69rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--merke);
+}
+
+.kvittering h3 {
+  margin-bottom: 0.35rem;
+}
+
+/* Overskriften får fokus når kvitteringen vises, slik at skjermlesere leser
+   den opp. Fokusringen ville sett ut som en feil rundt en overskrift. */
+.kvittering h3:focus,
+.kvittering h3:focus-visible {
+  outline: none;
+}
+
+.kvittering__nr {
+  margin: 0 0 1.1rem;
+  font-size: 0.89rem;
+  color: var(--dempet);
+}
+
+.kvittering__nr strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--blekk);
+}
+
+.kvittering__liste {
+  display: grid;
+  grid-template-columns: minmax(7rem, 10rem) minmax(0, 1fr);
+  gap: 0;
+  margin: 0 0 1.1rem;
+  border-top: 1px solid var(--linje);
+}
+
+.kvittering__liste dt,
+.kvittering__liste dd {
+  margin: 0;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--linje);
+}
+
+.kvittering__liste dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.kvittering__liste dd {
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.kvittering__notat {
+  margin: 0 0 1rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--dempet);
+}
+
+/* ---------- Kontor ---------- */
+
+.kontor {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+  padding: clamp(1.05rem, 2.5vw, 1.6rem);
+  background: var(--sand);
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+}
+
+.kontor h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.kontor__kort {
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--linje-2);
+}
+
+.kontor__by {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-display);
+  font-size: 1.04rem;
+  font-weight: 600;
+}
+
+.kontor__kort p:last-child {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--dempet);
+}
+
+.kontor__kontakt {
+  display: grid;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--linje-2);
+}
+
+.kontor__kontakt a {
+  display: flex;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.kontor p.small {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------- Footer ---------- */
+
+.footer--blekk {
+  background: var(--blekk);
+  color: rgb(234 242 241 / 78%);
+  border-top: 0;
+  padding-block: clamp(2.4rem, 5vw, 3.4rem) 1.4rem;
+}
+
+.footer--blekk a {
+  display: flex;
+  color: #e2ecea;
+  text-decoration-color: rgb(226 236 234 / 42%);
+}
+
+.footer--blekk a:hover {
+  color: #ffffff;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 1fr 1fr;
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+}
+
+.footer__navn {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #f4faf9;
+}
+
+.footer__merke {
+  margin: 0 0 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.footer__tekst {
+  margin: 0 0 0.5rem;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.footer__bunn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-top: clamp(1.5rem, 3vw, 2.2rem);
+  padding-top: 1.2rem;
+  border-top: 1px solid rgb(255 255 255 / 13%);
+  font-size: 0.79rem;
+}
+
+.footer__bunn p {
+  margin: 0;
+}
+
+/* ---------- Mellomstore skjermer ---------- */
+
+@media (max-width: 980px) {
+  .hero__grid,
+  .vann,
+  .arbeidsmate,
+  .foresporsel,
+  .seksjonstopp {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__tekst {
+    order: 1;
+  }
+
+  .hero__figur {
+    order: 2;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero h1,
+  .vann__tekst h2,
+  .arbeidsmate h2,
+  .seksjonstopp h2 {
+    max-width: none;
+  }
+
+  .arbeidsmate__figur {
+    position: static;
+    max-width: 34rem;
+  }
+
+  .tjenester,
+  .folk {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .seksjonstopp {
+    align-items: start;
+    gap: 0.9rem;
+  }
+
+  .fakta__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fakta__punkt {
+    border-left: 1px solid var(--linje);
+    padding-left: clamp(1rem, 3vw, 1.4rem);
+  }
+
+  .fakta__punkt:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .fakta__punkt:nth-child(n + 3) {
+    border-top: 1px solid var(--linje);
+  }
+}
+
+/* ---------- Små skjermer ---------- */
+
+@media (max-width: 640px) {
+  .header__cta {
+    display: none;
+  }
+
+  .tjenester,
+  .folk {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .oppdrag__bilde img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .kvittering__liste {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kvittering__liste dt {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .kvittering__liste dd {
+    padding-top: 0.15rem;
+  }
+
+  .hero__figur {
+    aspect-ratio: 3 / 2;
+  }
+
+  .hero__meta {
+    font-size: 0.84rem;
+  }
+
+  .steg__navn {
+    font-size: 0.74rem;
+  }
+
+  .footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Oppdragstabellen som kort ---------- */
+
+@media (max-width: 760px) {
+  .oppdrag thead {
+    display: none;
+  }
+
+  .oppdrag,
+  .oppdrag tbody,
+  .oppdrag tr,
+  .oppdrag th,
+  .oppdrag td {
+    display: block;
+    width: auto;
+  }
+
+  .oppdrag tr {
+    padding: 0.95rem clamp(0.9rem, 4vw, 1.2rem);
+    border-bottom: 1px solid var(--linje);
+  }
+
+  .oppdrag tbody tr:last-child {
+    border-bottom: 0;
+  }
+
+  .oppdrag tbody th {
+    width: auto;
+    padding: 0 0 0.35rem;
+    border: 0;
+    font-size: 1.02rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .oppdrag td,
+  .oppdrag tbody tr:last-child td {
+    padding: 0;
+    border: 0;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .oppdrag td::before {
+    content: attr(data-navn) ": ";
+    font-size: 0.71rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--dempet);
+  }
+
+  .oppdrag td[data-navn="Oppdrag"] {
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+  }
+}

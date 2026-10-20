@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Byggmester Reidar Solheim AS">
+  <rect width="64" height="64" rx="10" fill="#2b2320"/>
+  <path d="M11 33 32 15l21 18" fill="none" stroke="#f7f2e9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19 34v15h26V34" fill="none" stroke="#0d4da5" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M28 49V38h8v11" fill="none" stroke="#dcb984" stroke-width="4" stroke-linejoin="round"/>
+</svg>

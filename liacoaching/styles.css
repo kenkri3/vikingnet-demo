@@ -1,0 +1,1265 @@
+/* ==========================================================================
+   Liacoaching — layout og komponenter.
+   Temaet ligger i theme.css; denne filen bygger siden.
+   ========================================================================== */
+
+[hidden] {
+  display: none !important;
+}
+
+html {
+  scroll-padding-top: calc(var(--header-h) + 12px);
+}
+
+/* Hopper over menylinjen for tastaturbrukere, men er stor nok som trefflate. */
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.8rem 1.2rem;
+  transform: translateY(-160%);
+  background: var(--fiolett);
+  color: var(--accent-fg);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.skip:focus {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Driftsvarsel
+   -------------------------------------------------------------------------- */
+
+.varsel {
+  background: var(--mork);
+  color: #e6dbef;
+  font-size: var(--t-sm);
+}
+
+.varsel__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 46px;
+  padding-block: 0.45rem;
+}
+
+.varsel p {
+  margin: 0;
+}
+
+.varsel strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.varsel__prikk {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rose-lys);
+  box-shadow: 0 0 0 4px rgb(232 163 182 / 18%);
+}
+
+/* --------------------------------------------------------------------------
+   Topplinje
+   -------------------------------------------------------------------------- */
+
+.topp {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: color-mix(in srgb, var(--papir) 92%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--strek);
+}
+
+.topp__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.2rem;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 52px;
+  width: auto;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.4rem;
+  color: var(--blekk-myk);
+}
+
+.nav a:hover {
+  color: var(--fiolett);
+}
+
+.topp__handlinger {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.topp__handlinger .btn {
+  white-space: nowrap;
+}
+
+.meny-knapp {
+  display: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--strek);
+  border-radius: var(--radius-sm);
+  background: var(--kort);
+  color: var(--blekk);
+  cursor: pointer;
+}
+
+.meny-knapp span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 4px auto;
+  background: currentColor;
+  transition: transform 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Hero: tekst til venstre, portrett i bue til høyre
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -10% -5% auto auto;
+  width: 46vw;
+  height: 46vw;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgb(105 86 152 / 9%), transparent 68%);
+  pointer-events: none;
+}
+
+.hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(2rem, 4.5vw, 3.5rem);
+  align-items: end;
+}
+
+.hero h1 {
+  margin-bottom: 1.15rem;
+}
+
+.hero .lead {
+  max-width: 46ch;
+}
+
+.hero__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.6rem;
+}
+
+.hero__fakta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: clamp(1.75rem, 3vw, 2.5rem) 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--strek);
+}
+
+.hero__fakta dt {
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.hero__fakta dd {
+  margin: 0.25rem 0 0;
+  font-size: var(--t-sm);
+  color: var(--blekk-myk);
+}
+
+.hero__figur {
+  position: relative;
+  margin: 0;
+}
+
+.hero__bue {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 999px 999px 24px 24px;
+  background:
+    radial-gradient(120% 75% at 50% 0%, #7d6aab 0%, var(--fiolett-lys) 45%, #42345f 100%);
+}
+
+.hero__bue::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 34%;
+  background: linear-gradient(to top, rgb(26 20 38 / 42%), transparent);
+  pointer-events: none;
+}
+
+.hero__bue img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 6%;
+}
+
+.hero__figur figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.hero__figur figcaption::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--rose);
+}
+
+/* --------------------------------------------------------------------------
+   Felles seksjonshode
+   -------------------------------------------------------------------------- */
+
+.seksjon-hode {
+  max-width: 60ch;
+  margin-bottom: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+.seksjon-hode h2 {
+  margin-bottom: 0.75rem;
+}
+
+.seksjon-hode .lead {
+  margin: 0;
+}
+
+.eyebrow {
+  color: var(--fiolett);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--rose);
+}
+
+/* --------------------------------------------------------------------------
+   Om Jørn
+   -------------------------------------------------------------------------- */
+
+.om {
+  background: var(--papir-dyp);
+  border-block: 1px solid var(--strek);
+}
+
+.om__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(2rem, 4.5vw, 3.75rem);
+  align-items: start;
+}
+
+.om__tekst h2 {
+  max-width: 22ch;
+}
+
+.om__tekst .lead {
+  max-width: 48ch;
+}
+
+.erfaring {
+  list-style: none;
+  margin: clamp(1.5rem, 3vw, 2rem) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.erfaring li {
+  position: relative;
+  margin: 0;
+  padding: 0.55rem 0 0.55rem 1.35rem;
+  font-size: var(--t-sm);
+  color: var(--blekk-myk);
+  border-top: 1px solid color-mix(in srgb, var(--strek) 70%, transparent);
+}
+
+.erfaring li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rose);
+}
+
+.sitat-stor {
+  position: relative;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--kort);
+  border: 1px solid var(--strek);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.sitat-stor::before {
+  content: "”";
+  position: absolute;
+  top: -0.35rem;
+  left: clamp(1.5rem, 3vw, 2.25rem);
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--fiolett-svak);
+}
+
+.sitat-stor blockquote {
+  margin: 0;
+}
+
+.sitat-stor blockquote p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.02rem, 0.94rem + 0.5vw, 1.2rem);
+  line-height: 1.55;
+  color: var(--blekk);
+}
+
+.sitat-stor figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--strek);
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.sitat-stor figcaption img {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--fiolett-svak);
+}
+
+.sitat-stor figcaption strong {
+  display: block;
+  color: var(--blekk);
+}
+
+.sitat-stor figcaption span span {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Tema
+   -------------------------------------------------------------------------- */
+
+.tema__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.85rem, 1.6vw, 1.25rem);
+}
+
+.temakort {
+  position: relative;
+  padding: clamp(1.35rem, 2.6vw, 2rem);
+  background: var(--kort);
+  border: 1px solid var(--strek);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgb(36 29 51 / 4%);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temakort::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  border-radius: var(--radius) 0 0 var(--radius);
+  background: var(--fiolett-svak);
+  transition: background 0.2s ease;
+}
+
+.temakort:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--fiolett) 35%, var(--strek));
+  box-shadow: var(--shadow);
+}
+
+.temakort:hover::before {
+  background: var(--rose);
+}
+
+.temakort__nr {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--fiolett-lys);
+}
+
+.temakort h3 {
+  margin: 0.4rem 0 0.55rem;
+}
+
+.temakort p {
+  margin: 0;
+  color: var(--blekk-myk);
+}
+
+/* --------------------------------------------------------------------------
+   Sitater
+   -------------------------------------------------------------------------- */
+
+.sitater {
+  background: var(--papir-dyp);
+  border-block: 1px solid var(--strek);
+}
+
+.sitater__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.85rem, 1.6vw, 1.25rem);
+}
+
+.sitatkort {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--kort);
+  border: 1px solid var(--strek);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.sitatkort::before {
+  content: "”";
+  position: absolute;
+  top: -0.6rem;
+  right: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 6rem;
+  line-height: 1;
+  color: var(--fiolett-svak);
+  pointer-events: none;
+}
+
+.sitatkort blockquote {
+  position: relative;
+  margin: 0;
+}
+
+.sitatkort blockquote p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1rem + 0.7vw, 1.38rem);
+  line-height: 1.45;
+  color: var(--blekk);
+}
+
+.sitatkort__person {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: auto;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--strek);
+}
+
+.sitatkort__person img {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--strek);
+}
+
+.sitatkort__navn {
+  display: block;
+  font-weight: 700;
+  color: var(--blekk);
+}
+
+.sitatkort__rolle {
+  display: block;
+  font-size: var(--t-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+/* --------------------------------------------------------------------------
+   Henvendelse
+   -------------------------------------------------------------------------- */
+
+.foresp {
+  background:
+    radial-gradient(120% 90% at 100% 0%, #3b2e55 0%, var(--mork) 58%, var(--mork-dyp) 100%);
+  color: #efe7f6;
+}
+
+.foresp__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+.foresp .eyebrow {
+  color: #c6b4dd;
+}
+
+.foresp .eyebrow::before {
+  background: var(--rose-lys);
+}
+
+.foresp h2 {
+  color: #fff;
+}
+
+.foresp__tekst p {
+  color: #d8cae6;
+  max-width: 46ch;
+}
+
+.foresp__punkter {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.foresp__punkter li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.6rem;
+  color: #e8dcf3;
+  font-size: var(--t-sm);
+}
+
+.foresp__punkter li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 12px;
+  height: 1px;
+  background: var(--rose-lys);
+}
+
+.foresp__notat {
+  margin: 1.6rem 0 0;
+  font-size: var(--t-sm);
+  color: #bdaecf;
+}
+
+.foresp__notat a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.15rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration-color: rgb(255 255 255 / 45%);
+}
+
+.skjema-kort {
+  padding: clamp(1.15rem, 2.8vw, 2rem);
+  background: var(--papir);
+  color: var(--blekk);
+  border-radius: var(--radius);
+  box-shadow: 0 34px 70px -34px rgb(0 0 0 / 60%);
+}
+
+/* Stegvisning */
+
+.steg {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.steg li {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  margin: 0;
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  color: var(--dempet);
+}
+
+.steg li::before {
+  content: attr(data-nr);
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--strek);
+  border-radius: 50%;
+  background: var(--kort);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--dempet);
+}
+
+.steg li.er-aktiv {
+  color: var(--fiolett);
+  font-weight: 700;
+}
+
+.steg li.er-aktiv::before {
+  background: var(--fiolett);
+  border-color: var(--fiolett);
+  color: #fff;
+}
+
+.steg li.er-ferdig::before {
+  background: var(--fiolett-svak);
+  border-color: var(--fiolett-svak);
+  color: var(--fiolett);
+}
+
+/* Skjema */
+
+.steg-panel {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.steg-panel > * + * {
+  margin-top: 0.9rem;
+}
+
+.panel-tittel {
+  padding: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.panel-hjelp {
+  margin: 0.25rem 0 0;
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.valg {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+}
+
+.valgkort {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--strek);
+  border-radius: var(--radius-sm);
+  background: var(--kort);
+  cursor: pointer;
+  font-size: var(--t-sm);
+  font-weight: 700;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.valgkort input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.valgkort span,
+.valgkort em {
+  pointer-events: none;
+}
+
+.valgkort em {
+  font-style: normal;
+  font-size: var(--t-xs);
+  font-weight: 400;
+  color: var(--dempet);
+}
+
+.valgkort:hover {
+  border-color: color-mix(in srgb, var(--fiolett) 40%, var(--strek));
+}
+
+.valgkort:has(input:checked) {
+  border-color: var(--fiolett);
+  background: var(--fiolett-svak);
+  box-shadow: inset 0 0 0 1px var(--fiolett);
+}
+
+.valgkort:has(input:focus-visible) {
+  outline: 2px solid var(--fiolett);
+  outline-offset: 3px;
+}
+
+.to-felt {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+#henvendelse label {
+  font-size: var(--t-sm);
+  color: var(--blekk);
+}
+
+.hjelp {
+  font-weight: 400;
+  color: var(--dempet);
+}
+
+.feilmelding {
+  margin: 0.35rem 0 0;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  color: var(--rose);
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--rose);
+}
+
+.skjema-fot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+
+#tilbake {
+  margin-right: auto;
+}
+
+.skjema-notat {
+  margin: 0.9rem 0 0;
+  font-size: var(--t-xs);
+  color: var(--dempet);
+}
+
+.oppsummering {
+  display: grid;
+  gap: 0.05rem;
+  margin-top: 0.9rem;
+}
+
+.oppsummering div {
+  display: grid;
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 0.7rem;
+  border-top: 1px solid var(--strek);
+}
+
+.oppsummering div:first-child {
+  border-top: 0;
+}
+
+.oppsummering dt {
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dempet);
+  padding-top: 0.15rem;
+}
+
+.oppsummering dd {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--blekk);
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+/* Kvittering */
+
+.kvittering {
+  outline: none;
+}
+
+.kvittering__topp {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 1.1rem;
+}
+
+.kvittering__topp h3 {
+  margin: 0 0 0.2rem;
+}
+
+.kvittering__topp p {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.kvittering__hake {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--fiolett);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.kvittering__brev {
+  margin: 0 0 1.1rem;
+  padding: 1rem;
+  max-height: 22rem;
+  overflow: auto;
+  border: 1px dashed color-mix(in srgb, var(--fiolett) 35%, var(--strek));
+  border-radius: var(--radius-sm);
+  background: var(--kort);
+  color: var(--blekk-myk);
+  font-family: ui-monospace, 'Cascadia Mono', Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.kvittering__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.kvittering__notat {
+  margin: 1rem 0 0;
+  font-size: var(--t-xs);
+  color: var(--dempet);
+}
+
+/* --------------------------------------------------------------------------
+   Kontakt
+   -------------------------------------------------------------------------- */
+
+.kontakt__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.65rem, 1.4vw, 1rem);
+}
+
+.kontaktkort {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-height: 104px;
+  padding: clamp(1.05rem, 2.4vw, 1.6rem);
+  border: 1px solid var(--strek);
+  border-radius: var(--radius);
+  background: var(--kort);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.kontaktkort:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--fiolett) 45%, var(--strek));
+  box-shadow: var(--shadow);
+}
+
+.kontaktkort__merke {
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.kontaktkort strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+
+.kontaktkort span:last-child {
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.kontakt__some {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.kontakt__some p {
+  margin: 0 0.5rem 0 0;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.some-lenke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 46px;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--strek);
+  border-radius: 999px;
+  background: var(--kort);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--blekk-myk);
+}
+
+.some-lenke:hover {
+  border-color: var(--fiolett);
+  color: var(--fiolett);
+}
+
+.kontakt__status {
+  margin: clamp(1.25rem, 2.5vw, 1.75rem) 0 0;
+  padding: 0.85rem 1.1rem;
+  border-left: 3px solid var(--rose);
+  background: color-mix(in srgb, var(--rose) 7%, transparent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: var(--t-sm);
+  color: var(--blekk-myk);
+}
+
+/* --------------------------------------------------------------------------
+   Bunn
+   -------------------------------------------------------------------------- */
+
+.bunn {
+  background: var(--mork-dyp);
+  color: #cbbcdb;
+  padding-block: clamp(2.5rem, 5vw, 3.5rem) 1.25rem;
+}
+
+.bunn__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.bunn__merke img {
+  height: 44px;
+  width: auto;
+}
+
+.bunn__merke p {
+  margin: 1rem 0 0;
+  max-width: 26ch;
+  font-size: var(--t-sm);
+}
+
+.bunn__tittel {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #a390bd;
+}
+
+.bunn p {
+  margin: 0 0 0.4rem;
+  font-size: var(--t-sm);
+}
+
+.bunn__lenker {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+}
+
+.bunn__lenker li {
+  margin: 0;
+}
+
+.bunn__lenker a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #f1e8f8;
+  text-decoration: underline;
+  text-decoration-color: rgb(255 255 255 / 30%);
+}
+
+.bunn__lenker a:hover {
+  text-decoration-color: var(--rose-lys);
+}
+
+.bunn__status {
+  margin-top: 0.6rem;
+  color: #e8a3b6;
+}
+
+.bunn__slutt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: clamp(2rem, 4vw, 2.75rem);
+  padding-top: 1rem;
+  border-top: 1px solid var(--strek-mork);
+  font-size: var(--t-xs);
+}
+
+.bunn__slutt p {
+  margin: 0;
+}
+
+.bunn__slutt a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #f1e8f8;
+}
+
+/* --------------------------------------------------------------------------
+   Brytepunkter
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .topp__cta {
+    display: none;
+  }
+}
+
+@media (max-width: 940px) {
+  .meny-knapp {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    z-index: 39;
+    inset: var(--header-h) 0 auto 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0 clamp(18px, 4vw, 32px) 0.75rem;
+    background: var(--papir);
+    border-bottom: 1px solid var(--strek);
+    box-shadow: var(--shadow);
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .nav a {
+    padding-block: 0.85rem;
+    border-top: 1px solid var(--strek);
+    font-size: var(--t-base);
+  }
+
+  .hero__grid,
+  .om__grid,
+  .foresp__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__figur {
+    max-width: 460px;
+  }
+
+  .hero__grid {
+    align-items: start;
+  }
+
+  .bunn__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .bunn__merke {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 780px) {
+  .tema__grid,
+  .sitater__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .erfaring {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero__fakta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.25rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .brand img {
+    height: 44px;
+  }
+
+  /* Trinnvise prikker holder; navnene blir stående for skjermlesere. */
+  .steg__navn {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .hero__fakta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.85rem;
+  }
+
+  .hero__knapper .btn,
+  .skjema-fot .btn {
+    width: 100%;
+  }
+
+  .to-felt,
+  .valg,
+  .kontakt__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .skjema-fot {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  #tilbake {
+    margin-right: 0;
+  }
+
+  .bunn__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .topp__ring {
+    padding-inline: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .steg li {
+    font-size: 0.72rem;
+    gap: 0.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .temakort,
+  .kontaktkort {
+    transition: none;
+  }
+}
+
+@media print {
+  .topp,
+  .varsel,
+  .foresp {
+    display: none;
+  }
+}
