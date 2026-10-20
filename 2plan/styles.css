@@ -67,7 +67,7 @@ img { max-width: 100%; display: block; }
   display: grid; place-items: center; font-family: var(--font-head); font-size: 1rem;
 }
 .logo__text { font-family: var(--font-head); font-size: 1.05rem; line-height: 1.1; }
-.logo__text small { display: block; font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.18em; color: var(--muted); }
+.logo__text small { display: inline-block; margin-left: 0.3rem; font-family: var(--font-body); font-size: 0.6rem; letter-spacing: 0.16em; color: var(--muted); vertical-align: middle; }
 
 .menu { display: flex; align-items: center; gap: 1.6rem; }
 .menu a { text-decoration: none; color: var(--ink-soft); font-size: 0.95rem; }
@@ -92,7 +92,7 @@ img { max-width: 100%; display: block; }
 
 .strip { background: var(--sand); border-bottom: 1px solid var(--line); }
 .strip__inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; padding: 1.4rem 0; text-align: center; }
-.strip strong { display: block; font-family: var(--font-head); font-size: 1.35rem; color: var(--forest); }
+.strip strong { display: block; font-family: var(--font-head); font-size: 1.15rem; color: var(--forest); }
 .strip span { font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 
 .photo img { border-radius: 6px; aspect-ratio: 5 / 4; object-fit: cover; }
@@ -127,6 +127,7 @@ img { max-width: 100%; display: block; }
 .footer p { color: inherit; margin: 0.2rem 0; }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 
+/* Telefon: alt skal kunne leses uten sideveis scrolling. */
 @media (max-width: 900px) {
   .hero__inner, .grid-two, .cta__inner { grid-template-columns: 1fr; }
   .menu { display: none; }
@@ -143,6 +144,12 @@ img { max-width: 100%; display: block; }
   .hero__actions .btn { width: 100%; }
   .footer__inner { flex-direction: column; }
   .strip__inner { grid-template-columns: 1fr 1fr; }
+  .strip strong { font-size: 1rem; }
+  .form { padding: 1.1rem; }
+}
+
+@media (max-width: 400px) {
+  .strip__inner { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
