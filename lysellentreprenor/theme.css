@@ -1,0 +1,97 @@
+/*
+  Lysell Entreprenør AS — identitet.
+
+  Paletten er hentet fra logoen deres: det fasetterte huset i blått, med
+  nattblå ramme. Rundt det ligger kalkstein og varm sand — samme varme
+  bruntoner som de selv bruker på siden sin. Radiene er små (2–3 px) med
+  vilje: firmaet selger nøyaktighet og presisjon, ikke myke bobler.
+
+  Én font: Schibsted Grotesk. Den er norsk, stram og lesbar i alle størrelser,
+  og holder siden lett (én familieforespørsel, ikke to).
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Flater */
+  --sand: #f2ece1;
+  --sand-2: #e9e1d2;
+  --sand-3: #ddd2be;
+  --paper: #faf7f0;
+
+  /* Blekk */
+  --ink: #16191c;
+  --ink-soft: #2a2f33;
+  --muted: #575d63;
+
+  /* Logo-blå */
+  --blue: #10629c;
+  --blue-deep: #0a3556;
+  --blue-light: #2f8fd0;
+
+  /* Varm aksent, brukt sparsomt */
+  --tan: #a8713c;
+  --tan-light: #d9a877;
+
+  /* Kit-variabler */
+  --bg: var(--sand);
+  --bg-soft: var(--paper);
+  --fg: var(--ink);
+  --line: #d8cdba;
+  --accent: var(--blue);
+  --accent-fg: #ffffff;
+  --accent-soft: #dfeaf2;
+
+  --font-display: 'Schibsted Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Schibsted Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 0 rgb(22 25 28 / 5%), 0 22px 44px -28px rgb(22 25 28 / 34%);
+  --wrap: 1180px;
+  --header-h: 74px;
+}
+
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  letter-spacing: -0.032em;
+}
+
+h1 {
+  letter-spacing: -0.042em;
+  line-height: 0.98;
+}
+
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.018em;
+}
+
+.eyebrow {
+  color: var(--tan);
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  display: inline-block;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+strong {
+  font-weight: 700;
+}

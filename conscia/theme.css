@@ -1,0 +1,54 @@
+/*
+  Conscia Norge — identitet.
+
+  Paletten er hentet fra Conscias egen nettside (styles.css i deres tema):
+  burgundy #1e0721, svart #140c15, gråtoner #f9f9fa–#373b4a, og aksentene
+  rose #c44a53, teal #1c4e51 og elektrisk blå #4962ff. Her brukes burgundy
+  som blekk og hovedflate, rose som markør og teal som sekundærfarge.
+
+  Typografi: Libre Caslon Display til overskrifter (institusjonell serif),
+  Hanken Grotesk til brødtekst (geometrisk humanist, nær deres egen Saans).
+  To familier, lastet med display=swap.
+*/
+
+:root {
+  --paper: #f6f4f6;
+  --paper-2: #ffffff;
+  --paper-3: #f1ecf0;
+
+  --ink: #140c15;
+  --ink-2: #2c1e2d;
+  --muted: #675b68;
+
+  --line: #e2dae2;
+  --line-2: #efe9ef;
+
+  --brand: #1e0721;
+  --brand-2: #351030;
+  --brand-soft: #f0eaf1;
+
+  --rose: #c44a53;
+  --rose-ink: #a13742;
+  --rose-soft: #fbecee;
+
+  --teal: #1c4e51;
+  --teal-soft: #e2efed;
+
+  --blue: #4962ff;
+
+  /* Grunnmuren i base.css */
+  --bg: var(--paper);
+  --bg-soft: var(--brand-soft);
+  --fg: var(--ink);
+  --accent: var(--brand);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--brand-soft);
+
+  --font-display: 'Libre Caslon Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(20 12 21 / 5%), 0 18px 40px rgb(20 12 21 / 7%);
+  --header-h: 72px;
+}

@@ -1,0 +1,587 @@
+﻿<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bloomlet — studer, skriv og samarbeid i ett arbeidsrom</title>
+<meta name="description" content="Bloomlet er studielivets digitale møtested: faglig støtte, sosialt fellesskap og verktøy som hjelper studenter å mestre studiene. Utviklet i Trondheim." />
+<meta name="theme-color" content="#3a1d86" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="nb_NO" />
+<meta property="og:site_name" content="Bloomlet" />
+<meta property="og:title" content="Bloomlet — studer, skriv og samarbeid i ett arbeidsrom" />
+<meta property="og:description" content="Faglig støtte, sosialt fellesskap og verktøy for studenter — i ett arbeidsrom. Bloomlet Technologies AS, Trondheim." />
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/bloomlet/img/hero-studenter.jpg" />
+<meta property="og:image:alt" content="Studenter som sitter sammen i en trapp med notatbok og bærbar PC" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Prata&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../kit/base.css" />
+<link rel="stylesheet" href="theme.css" />
+<link rel="stylesheet" href="styles.css" />
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Bloomlet Technologies AS",
+  "alternateName": "Bloomlet",
+  "url": "https://www.bloomlet.com/",
+  "email": "hello@bloomlet.com",
+  "description": "Bloomlet utvikler en digital plattform som kombinerer faglig støtte, sosialt fellesskap og verktøy for studenter.",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "Organisasjonsnummer",
+    "value": "933063976"
+  },
+  "foundingDate": "2024-01-23",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Skippergata 14",
+    "postalCode": "7042",
+    "addressLocality": "Trondheim",
+    "addressCountry": "NO"
+  },
+  "knowsAbout": ["Høyere utdanning", "Studenttilhørighet", "Læringsteknologi"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#hoved">Til innholdet</a>
+
+<header class="header topp" id="topp">
+  <div class="wrap header__inner">
+    <a class="brand" href="#topp" aria-label="Bloomlet — til toppen">
+      <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <g fill="currentColor">
+          <circle cx="12" cy="6.4" r="3.5" />
+          <circle cx="12" cy="17.6" r="3.5" />
+          <circle cx="6.4" cy="12" r="3.5" />
+          <circle cx="17.6" cy="12" r="3.5" />
+        </g>
+        <circle cx="12" cy="12" r="2.4" fill="var(--mark-hull, #f6f2ec)" />
+      </svg>
+      <span class="brand__tekst">
+        <span class="brand__navn">bloomlet</span>
+        <span class="brand__under">Technologies AS</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="meny" aria-label="Åpne menyen">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="meny" hidden aria-label="Hovedmeny">
+      <a href="#for-hvem">For hvem</a>
+      <a href="#plattformen">Plattformen</a>
+      <a href="#personvern">Personvern</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn--lite" href="#skjema">Meld interesse</a>
+    </nav>
+  </div>
+</header>
+
+<main id="hoved">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero__indre">
+      <div class="hero__meta">
+        <p class="hero__meta-venstre">
+          <span>Trondheim</span><span aria-hidden="true">·</span><span>Stiftet 2024</span><span aria-hidden="true">·</span><span>Org.nr 933 063 976</span>
+        </p>
+        <p class="hero__meta-hoyre">Plattformen er under utvikling</p>
+      </div>
+
+      <div class="hero__tekst">
+        <h1 class="hero__h1">Studer, skriv og samarbeid<br />— i ett arbeidsrom.</h1>
+        <p class="hero__lead">Bloomlet er studielivets digitale møtested. Vi kombinerer læring, fellesskap og teknologi for å skape et mer inkluderende studieliv.</p>
+        <div class="hero__cta">
+          <a class="btn btn--lys" href="#skjema">Meld interesse</a>
+          <a class="btn btn--kontur" href="#plattformen">Se hva plattformen gjør</a>
+        </div>
+      </div>
+
+      <figure class="hero__bilde">
+        <img
+          src="img/hero-studenter.jpg"
+          alt="Fem studenter sitter sammen i en bred trapp, en av dem skriver på en bærbar PC"
+          width="1024" height="506" fetchpriority="high" decoding="async" />
+        <figcaption class="hero__bilde-tekst">Studenthverdagen plattformen bygges for.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ INNHOLDSINDEKS ============ -->
+  <nav class="indeks" aria-label="Innhold på siden">
+    <div class="wrap indeks__grid">
+      <a class="indeks__lenke" href="#for-hvem">
+        <span class="indeks__nr">01</span>
+        <span class="indeks__tittel">Studenter</span>
+        <span class="indeks__tekst">Faglig støtte, fellesskap og verktøy i hverdagen.</span>
+      </a>
+      <a class="indeks__lenke" href="#for-hvem">
+        <span class="indeks__nr">02</span>
+        <span class="indeks__tittel">Universiteter</span>
+        <span class="indeks__tekst">Et supplement i overgangen inn i studiene.</span>
+      </a>
+      <a class="indeks__lenke" href="#for-hvem">
+        <span class="indeks__nr">03</span>
+        <span class="indeks__tittel">Næringsliv</span>
+        <span class="indeks__tekst">Synlighet, samarbeid og deling av kompetanse.</span>
+      </a>
+      <a class="indeks__lenke" href="#for-hvem">
+        <span class="indeks__nr">04</span>
+        <span class="indeks__tittel">Investorer</span>
+        <span class="indeks__tekst">En plattform bygget for å skalere.</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============ FOR HVEM ============ -->
+  <section class="sec" id="for-hvem">
+    <div class="wrap">
+      <header class="seksjonshode reveal">
+        <p class="eyebrow">For hvem</p>
+        <h2>Fire innganger, én plattform.</h2>
+        <p class="lead">Bloomlet beskriver fire grupper plattformen er laget for. Velg den som passer deg — skjemaet nederst tar deg videre derfra.</p>
+      </header>
+
+      <div class="innganger">
+        <article class="inngang" id="studenter">
+          <p class="inngang__nr">01 — Studenter</p>
+          <h3 class="inngang__tittel">Din personlige læringspartner</h3>
+          <p>Bloomlet kombinerer faglig støtte, sosialt fellesskap og smarte verktøy i én digital plattform.</p>
+          <p>Få oversikt, finn venner og lær i ditt eget tempo, med støtte fra oss hele veien.</p>
+          <p class="inngang__sitat">Inkludering, trygghet og mestring — fra dag én.</p>
+          <button class="btn btn--ghost inngang__cta" type="button" data-rolle-velg="Student">Meld interesse som student</button>
+        </article>
+
+        <article class="inngang" id="universiteter">
+          <p class="inngang__nr">02 — Universiteter og høgskoler</p>
+          <h3 class="inngang__tittel">Et supplement til læringssystemene dere har</h3>
+          <p>Bloomlet utvikles for å styrke studenters tilhørighet, kommunikasjon og mestring — spesielt i overgangsfasen inn i studiene.</p>
+          <p>Vi hjelper studenter med å finne fram, få venner, forstå studieløpet og møte mer forberedt. Med påminnelser, støtte og sosial tilknytning reduserer vi utenforskap og frafall.</p>
+          <p class="inngang__sitat">Koble deg på fremtidens kompetanse.</p>
+          <button class="btn btn--ghost inngang__cta" type="button" data-rolle-velg="Universitet">Meld interesse for institusjonen</button>
+        </article>
+
+        <article class="inngang" id="naeringsliv">
+          <p class="inngang__nr">03 — Næringsliv</p>
+          <h3 class="inngang__tittel">Bygg relasjoner til studentene</h3>
+          <p>Bloomlet gir bedrifter en mulighet til å bygge relasjoner med studenter gjennom synlighet, samarbeid og deling av kompetanse.</p>
+          <p>Plattformen åpner for rekruttering, praksisplasser og partnerskap som styrker både lokalt næringsliv og studentenes vei inn i arbeidslivet.</p>
+          <p class="inngang__sitat">Bli med og bygg fremtidens læringsplattform.</p>
+          <button class="btn btn--ghost inngang__cta" type="button" data-rolle-velg="Bedrift">Meld interesse som bedrift</button>
+        </article>
+
+        <article class="inngang" id="investorer">
+          <p class="inngang__nr">04 — Investorer og partnere</p>
+          <h3 class="inngang__tittel">Mer enn en edtech-løsning</h3>
+          <p>Bloomlet er bygget for å skalere, med flersidige verdistrømmer fra studenter, samfunn og næringsliv — i ett økosystem.</p>
+          <p>Vi ønsker å bygge nettverk med investorer og partnere som deler vår visjon og verdier. Vi tar gjerne en prat.</p>
+          <button class="btn btn--ghost inngang__cta" type="button" data-rolle-velg="Investor eller partner">Meld interesse som partner</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEVIS ============ -->
+  <section class="sec sec--soft bevis" id="hvorfor">
+    <div class="wrap">
+      <header class="seksjonshode reveal">
+        <p class="eyebrow">Hvorfor Bloomlet</p>
+        <h2>Dagens studenter er overveldet og alene.</h2>
+        <p class="lead">Vi utvikler teknologi som forstår studentenes virkelighet og bygger bro mellom læring, mestring og tilhørighet.</p>
+      </header>
+
+      <div class="bevis__grid">
+        <div class="tall reveal">
+          <p class="tall__nr">1 av 4</p>
+          <p class="tall__tekst">studenter slutter etter første studieår</p>
+          <p class="tall__kilde">SSB 2025</p>
+        </div>
+        <div class="tall reveal">
+          <p class="tall__nr">42 %</p>
+          <p class="tall__tekst">har plager med psykisk helse</p>
+          <p class="tall__kilde">SSB 2024</p>
+        </div>
+        <div class="tall reveal">
+          <p class="tall__nr">45 %</p>
+          <p class="tall__tekst">sliter med studiestress</p>
+          <p class="tall__kilde">Brain, Behavior &amp; Immunity 2024</p>
+        </div>
+        <div class="tall reveal">
+          <p class="tall__nr">8 av 10</p>
+          <p class="tall__tekst">norske studenter bruker generativ AI i dag</p>
+          <p class="tall__kilde">NOKUT 2025</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLATTFORMEN ============ -->
+  <section class="sec" id="plattformen">
+    <div class="wrap produkt">
+      <div class="produkt__bilde reveal">
+        <img
+          src="img/studenter-benk.jpg"
+          alt="Tre studenter som ler sammen over en bærbar PC på en trebenk"
+          width="683" height="1024" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="produkt__innhold">
+        <header class="seksjonshode reveal">
+          <p class="eyebrow">Plattformen</p>
+          <h2>Sosial og akademisk støtte — alt på ett sted.</h2>
+          <p class="lead">Bloomlet kombinerer teknologi, innsikt og fellesskap for å hjelpe studenter å lære, mestre og føle tilhørighet gjennom hele utdanningsreisen.</p>
+        </header>
+
+        <ol class="funksjoner">
+          <li class="funksjon reveal">
+            <p class="funksjon__nr">01</p>
+            <div>
+              <h3>Arbeidsrommet</h3>
+              <p>Studer, skriv og samarbeid samlet i ett arbeidsrom.</p>
+            </div>
+          </li>
+          <li class="funksjon reveal">
+            <p class="funksjon__nr">02</p>
+            <div>
+              <h3>Personlig tilpasning</h3>
+              <p>Læring skal skje på dine egne premisser. Plattformen er personlig, fleksibel, AI-drevet og skreddersydd.</p>
+            </div>
+          </li>
+          <li class="funksjon reveal">
+            <p class="funksjon__nr">03</p>
+            <div>
+              <h3>Fellesskap</h3>
+              <p>Du trenger ikke lære alene. Vi kobler deg med andre — for vennskap, samarbeid og tilhørighet.</p>
+            </div>
+          </li>
+          <li class="funksjon reveal">
+            <p class="funksjon__nr">04</p>
+            <div>
+              <h3>Struktur og fremgang</h3>
+              <p>Verktøy og støtte som gir deg struktur, innsikt og motivasjon, slik at du kan nå dine mål.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIK ============ -->
+  <section class="sec sec--soft" id="slik">
+    <div class="wrap">
+      <header class="seksjonshode reveal">
+        <p class="eyebrow">Slik kommer du i gang</p>
+        <h2>Tre steg, og så tar vi en prat.</h2>
+      </header>
+
+      <ol class="trinn">
+        <li class="trinn__punkt reveal">
+          <p class="trinn__nr">01</p>
+          <h3>Velg hvem du er</h3>
+          <p>Student, universitet, bedrift eller investor. Det styrer hva vi spør om videre.</p>
+        </li>
+        <li class="trinn__punkt reveal">
+          <p class="trinn__nr">02</p>
+          <h3>Beskriv hva du trenger</h3>
+          <p>Skriv noen ord i skjemaet. Du ser et sammendrag før du sender noe som helst.</p>
+        </li>
+        <li class="trinn__punkt reveal">
+          <p class="trinn__nr">03</p>
+          <h3>Vi svarer på e-post</h3>
+          <p>Vi svarer så raskt vi kan, og tar gjerne en prat om hvordan Bloomlet kan brukes der du er.</p>
+        </li>
+      </ol>
+
+      <p class="trinn__note">Skjemaet på denne siden er en skisse: det sender ingenting av seg selv, men lager et sammendrag du kan sende til hello@bloomlet.com.</p>
+    </div>
+  </section>
+
+  <!-- ============ VERDIER ============ -->
+  <section class="sec" id="verdier">
+    <div class="wrap">
+      <header class="seksjonshode reveal">
+        <p class="eyebrow">Verdier</p>
+        <h2>Fire verdier som styrer hva vi bygger.</h2>
+        <p class="lead">Bloomlet skal tilpasses mennesket — ikke omvendt. Verdiene under er de fire Bloomlet selv løfter fram.</p>
+      </header>
+
+      <div class="verdier">
+        <article class="verdi reveal">
+          <h3>Tilpasning</h3>
+          <p>Læring skal skje på dine egne premisser. Vi tror kunnskap skal formes etter individet — ikke omvendt.</p>
+          <ul class="tagliste">
+            <li>Personlig</li><li>Fleksibelt</li><li>AI-drevet</li><li>Skreddersydd</li>
+          </ul>
+        </article>
+        <article class="verdi reveal">
+          <h3>Tillit</h3>
+          <p>Et trygt rom for læring og utvikling. Vi bygger teknologi med respekt for personvern, etikk og åpenhet.</p>
+          <ul class="tagliste">
+            <li>GDPR-sikret</li><li>Feide-pålogging</li><li>Etisk AI</li><li>Transparens</li>
+          </ul>
+        </article>
+        <article class="verdi reveal">
+          <h3>Mestring</h3>
+          <p>Verktøy og støtte som hjelper deg å lykkes. Vi gir deg struktur, innsikt og motivasjon, slik at du kan nå dine mål.</p>
+          <ul class="tagliste">
+            <li>Struktur</li><li>Fokus</li><li>Fremgang</li><li>Verktøykasse</li>
+          </ul>
+        </article>
+        <article class="verdi reveal">
+          <h3>Fellesskap</h3>
+          <p>Du trenger ikke lære alene. Vi kobler deg med andre, for vennskap, samarbeid og tilhørighet.</p>
+          <ul class="tagliste">
+            <li>Vennskap</li><li>Samarbeid</li><li>Tilhørighet</li><li>Nettverk</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STED ============ -->
+  <section class="sec sted" id="sted">
+    <div class="wrap">
+      <div class="sted__topp">
+        <header class="seksjonshode reveal">
+          <p class="eyebrow">Hvor vi holder til</p>
+          <h2>Bygget i Trondheim.</h2>
+          <p class="lead">Bloomlet Technologies AS holder til i Skippergata 14 i Trondheim. Plattformen utvikles tett på studenter og fagmiljøer, med studentenes faktiske hverdag i sentrum: fleksibel, sosial, uforutsigbar og full av potensial.</p>
+        </header>
+
+        <dl class="fakta reveal">
+          <div class="fakta__rad"><dt>Selskap</dt><dd>Bloomlet Technologies AS</dd></div>
+          <div class="fakta__rad"><dt>Organisasjonsnummer</dt><dd>933 063 976</dd></div>
+          <div class="fakta__rad"><dt>Stiftet</dt><dd>23. januar 2024</dd></div>
+          <div class="fakta__rad"><dt>Næringskode</dt><dd>62.100 Dataprogrammeringstjenester</dd></div>
+          <div class="fakta__rad"><dt>Adresse</dt><dd>Skippergata 14, 7042 Trondheim</dd></div>
+          <div class="fakta__rad fakta__rad--kilde"><dt>Kilde</dt><dd>Enhetsregisteret</dd></div>
+        </dl>
+      </div>
+
+      <div class="sted__bilder">
+        <figure class="sted__bilde reveal">
+          <img
+            src="img/ntnu.jpg"
+            alt="Hovedbygningen på NTNU Gløshaugen i Trondheim, med høstløv i forgrunnen"
+            width="1100" height="655" loading="lazy" decoding="async" />
+          <figcaption>Campus i Trondheim.</figcaption>
+        </figure>
+        <figure class="sted__bilde reveal">
+          <img
+            src="img/trondheim.jpg"
+            alt="Bryggene langs Nidelva i Trondheim speiler seg i stille vann en vintermorgen"
+            width="1000" height="667" loading="lazy" decoding="async" />
+          <figcaption>Trondheim, der selskapet holder til.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSONVERN ============ -->
+  <section class="sec personvern" id="personvern">
+    <div class="wrap">
+      <header class="seksjonshode seksjonshode--lys reveal">
+        <p class="eyebrow">Personvern</p>
+        <h2>Trygghet er en forutsetning, ikke en funksjon.</h2>
+        <p class="lead">Bloomlet behandler personopplysninger i samsvar med GDPR, og beskriver selv hvordan opplysningene brukes, lagres og slettes.</p>
+      </header>
+
+      <div class="pv">
+        <article class="pv__punkt reveal">
+          <h3>Feide</h3>
+          <p>Studenter logger inn med Feide. Opplysningene hentes fra universitetets systemer ved pålogging.</p>
+        </article>
+        <article class="pv__punkt reveal">
+          <h3>24 måneder</h3>
+          <p>Personopplysninger slettes når formålet er oppfylt, og senest 24 måneder etter siste aktivitet.</p>
+        </article>
+        <article class="pv__punkt reveal">
+          <h3>Ingen karakterer</h3>
+          <p>Bloomlet gir aldri karakterer eller nekter adgang basert på analyser.</p>
+        </article>
+        <article class="pv__punkt reveal">
+          <h3>Uttrykkelig samtykke</h3>
+          <p>Særlige kategorier personopplysninger behandles bare med uttrykkelig samtykke.</p>
+        </article>
+      </div>
+
+      <p class="pv__kilde">Sammendraget er hentet fra Bloomlets egen personvernerklæring.</p>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="sec kontakt" id="kontakt">
+    <div class="wrap kontakt__grid">
+      <div class="kontakt__venstre">
+        <header class="seksjonshode reveal">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Meld din interesse.</h2>
+          <p class="lead">Du kan kontakte oss via e-post eller ved å fylle ut skjemaet. Vi svarer så raskt vi kan, og ser frem til å høre fra deg.</p>
+        </header>
+
+        <div class="rader">
+          <a class="rad" href="mailto:hello@bloomlet.com">
+            <span class="rad__lbl">E-post</span>
+            <span class="rad__val">hello@bloomlet.com</span>
+          </a>
+          <div class="rad">
+            <span class="rad__lbl">Adresse</span>
+            <span class="rad__val">Skippergata 14, 7042 Trondheim</span>
+          </div>
+          <div class="rad">
+            <span class="rad__lbl">Organisasjonsnummer</span>
+            <span class="rad__val">933 063 976</span>
+          </div>
+          <div class="rad">
+            <span class="rad__lbl">Selskap</span>
+            <span class="rad__val">Bloomlet Technologies AS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skjema" id="skjema">
+        <div class="skjema__panel">
+          <h3 class="skjema__tittel">Interesseskjema</h3>
+          <p class="skjema__ingress">Tre steg. Du ser et sammendrag før du sender noe.</p>
+
+          <div class="skjema__fallback" id="skjema-fallback">
+            <p>Skjemaet trenger JavaScript. Du kan også sende en e-post direkte til <a class="lenke" href="mailto:hello@bloomlet.com">hello@bloomlet.com</a>.</p>
+          </div>
+
+          <form class="skjema__form" id="interesse-skjema" novalidate hidden>
+            <ol class="stegviser" aria-label="Steg i skjemaet">
+              <li class="stegviser__punkt is-aktiv" data-steg-punkt="1"><span class="stegviser__nr">1</span> Hvem</li>
+              <li class="stegviser__punkt" data-steg-punkt="2"><span class="stegviser__nr">2</span> Detaljer</li>
+              <li class="stegviser__punkt" data-steg-punkt="3"><span class="stegviser__nr">3</span> Send</li>
+            </ol>
+
+            <div class="steg" data-steg="1">
+              <fieldset class="rollevalg">
+                <legend class="visually-hidden">Hvem er du?</legend>
+                <label class="rolle">
+                  <input class="rolle__input" type="radio" name="rolle" value="Student" />
+                  <span class="rolle__kropp">
+                    <span class="rolle__tittel">Student</span>
+                    <span class="rolle__tekst">Faglig støtte, fellesskap og verktøy.</span>
+                  </span>
+                </label>
+                <label class="rolle">
+                  <input class="rolle__input" type="radio" name="rolle" value="Universitet" />
+                  <span class="rolle__kropp">
+                    <span class="rolle__tittel">Universitet</span>
+                    <span class="rolle__tekst">Supplement i overgangen inn i studiene.</span>
+                  </span>
+                </label>
+                <label class="rolle">
+                  <input class="rolle__input" type="radio" name="rolle" value="Bedrift" />
+                  <span class="rolle__kropp">
+                    <span class="rolle__tittel">Bedrift</span>
+                    <span class="rolle__tekst">Synlighet, samarbeid og kompetanse.</span>
+                  </span>
+                </label>
+                <label class="rolle">
+                  <input class="rolle__input" type="radio" name="rolle" value="Investor eller partner" />
+                  <span class="rolle__kropp">
+                    <span class="rolle__tittel">Investor eller partner</span>
+                    <span class="rolle__tekst">Visjon, verdier og partnerskap.</span>
+                  </span>
+                </label>
+              </fieldset>
+              <p class="feilmelding" id="feil-rolle" role="alert" hidden></p>
+            </div>
+
+            <div class="steg" data-steg="2" hidden>
+              <div class="feltpar">
+                <label class="felt">Fornavn
+                  <input id="felt-fornavn" name="fornavn" type="text" autocomplete="given-name" />
+                </label>
+                <label class="felt">Etternavn
+                  <input name="etternavn" type="text" autocomplete="family-name" />
+                </label>
+              </div>
+              <label class="felt">E-post
+                <input id="felt-epost" name="epost" type="email" inputmode="email" autocomplete="email" />
+              </label>
+              <label class="felt">Hva vil du vite?
+                <textarea id="felt-melding" name="melding" rows="4"></textarea>
+              </label>
+              <p class="feilmelding" id="feil-felter" role="alert" hidden></p>
+            </div>
+
+            <div class="steg" data-steg="3" hidden>
+              <div class="sammendrag" id="sammendrag"></div>
+              <p class="skjema__note">Skissen sender ingenting selv. Neste steg lager en e-post med sammendraget, som du sender fra din egen innboks.</p>
+            </div>
+
+            <div class="skjema__knapper">
+              <button class="btn btn--ghost" type="button" data-tilbake hidden>Tilbake</button>
+              <button class="btn" type="button" data-neste>Neste</button>
+              <button class="btn" type="submit" data-send hidden>Lag e-post med sammendraget</button>
+            </div>
+            <p class="skjema__status" id="skjema-status" aria-live="polite"></p>
+          </form>
+
+          <div class="kvittering" id="kvittering" hidden aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__topp">
+      <div class="footer__merke">
+        <a class="brand brand--footer" href="#topp" aria-label="Bloomlet — til toppen">
+          <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <g fill="currentColor">
+              <circle cx="12" cy="6.4" r="3.5" />
+              <circle cx="12" cy="17.6" r="3.5" />
+              <circle cx="6.4" cy="12" r="3.5" />
+              <circle cx="17.6" cy="12" r="3.5" />
+            </g>
+            <circle cx="12" cy="12" r="2.4" fill="var(--mark-hull, #f6f2ec)" />
+          </svg>
+          <span class="brand__tekst">
+            <span class="brand__navn">bloomlet</span>
+            <span class="brand__under">Technologies AS</span>
+          </span>
+        </a>
+        <p class="footer__slagord">Bloom together, grow forever.</p>
+      </div>
+
+      <div class="footer__kol">
+        <h2 class="footer__h">Kontakt</h2>
+        <a class="footer__lenke" href="mailto:hello@bloomlet.com">hello@bloomlet.com</a>
+        <p class="footer__tekst">Skippergata 14<br />7042 Trondheim</p>
+      </div>
+
+      <div class="footer__kol">
+        <h2 class="footer__h">Selskap</h2>
+        <p class="footer__tekst">Bloomlet Technologies AS<br />Org.nr 933 063 976<br />Stiftet 23. januar 2024</p>
+        <p class="footer__tekst">Næringskode 62.100<br />Dataprogrammeringstjenester</p>
+      </div>
+
+      <div class="footer__kol">
+        <h2 class="footer__h">Dokumenter</h2>
+        <a class="footer__lenke" href="https://www.bloomlet.com/privacy">Personvernerklæring</a>
+        <a class="footer__lenke" href="https://www.bloomlet.com/terms">Bruksvilkår</a>
+        <a class="footer__lenke" href="https://www.bloomlet.com/support">Support</a>
+      </div>
+    </div>
+
+    <p class="footer__bunn">© 2026 Bloomlet Technologies AS · Skippergata 14, 7042 Trondheim</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

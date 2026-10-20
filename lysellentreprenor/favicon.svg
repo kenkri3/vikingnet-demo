@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lysell Entreprenør">
+  <rect width="64" height="64" rx="9" fill="#0a3556"/>
+  <path d="M11 31.5 32 14.5 32 53 11 53Z" fill="#4aa3dd"/>
+  <path d="M53 31.5 32 14.5 32 53 53 53Z" fill="#1a6da8"/>
+  <path d="M11 31.5 32 14.5 53 31.5 53 35.5 32 19 11 35.5Z" fill="#0a3556" opacity=".55"/>
+</svg>

@@ -1,0 +1,121 @@
+/*
+  Alpha Solutions Norge — identitet.
+  Palett hentet fra deres egen logo: dyp skoggrønn (#003e2f) på hvitt,
+  med kjølig grågrønt som støttefarge. Arketype: klinisk/rolig —
+  geometrisk sans, mye luft, hårfine linjer, ingen skygger.
+
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  /* Flater og blekk */
+  --bg: #ffffff;
+  --bg-soft: #f3f6f4;
+  --fg: #14211c;
+  --muted: #56645e;
+  --line: #dbe3df;
+  --line-sterk: #c3cfc9;
+
+  /* Deres grønn */
+  --forest: #003e2f;
+  --forest-dyp: #002a20;
+  --forest-lys: #0a5b45;
+  --accent: #003e2f;
+  --accent-fg: #ffffff;
+  --accent-soft: #e7efeb;
+
+  /* To familier, ikke flere */
+  --font-display: 'Inter Tight', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Work Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Rett, ikke rundt — dette er et konsulenthus, ikke en app-butikk */
+  --radius: 2px;
+  --radius-sm: 2px;
+  --shadow: none;
+
+  --wrap: 1200px;
+  --header-h: 72px;
+
+  /* Typografi: trang display, romslig brødtekst */
+  --t-h1: clamp(2.05rem, 1.15rem + 4.4vw, 4.4rem);
+  --t-h2: clamp(1.7rem, 1.2rem + 2.1vw, 2.65rem);
+  --t-h3: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+  --t-lead: clamp(1.06rem, 0.98rem + 0.45vw, 1.22rem);
+}
+
+body {
+  font-family: var(--font-body);
+  letter-spacing: 0.002em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: -0.042em;
+  line-height: 0.94;
+  margin-bottom: var(--s-4);
+}
+
+h2 {
+  line-height: 1.04;
+  margin-bottom: var(--s-3);
+}
+
+h3 {
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+}
+
+p {
+  max-width: 68ch;
+}
+
+:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--forest);
+  color: #fff;
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+  background: var(--forest);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  min-height: 48px;
+  padding: 0.8rem 1.4rem;
+}
+
+.btn:hover {
+  background: var(--forest-lys);
+  transform: none;
+  box-shadow: none;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line-sterk);
+}
+
+.btn--ghost:hover {
+  background: var(--bg-soft);
+}
+
+.btn--liten {
+  min-height: 44px;
+  padding: 0.55rem 1rem;
+  font-size: var(--t-sm);
+}

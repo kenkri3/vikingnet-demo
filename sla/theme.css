@@ -1,0 +1,251 @@
+/*
+  SLA — identitet.
+  Arketype: redaksjonell, men med mørk skoggrønn base i stedet for varmt papir.
+  Paletten er hentet fra deres egen billedverden: dyp skog, mosé, bein og en
+  lavgrønn aksent. Instrument Serif i overskrifter, Inter Tight i brødtekst.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Papir, blekk og skog */
+  --papir: #f2efe4;
+  --papir-dyp: #e8e4d4;
+  --blekk: #131d16;
+  --blekk-dempet: #566052;
+
+  --mork: #101a14;
+  --mork-2: #16241b;
+  --linje-mork: #2c3a30;
+  --dempet-mork: #a6b2a3;
+
+  --linje: #d8d3c1;
+  --linje-lys: #e4e0d1;
+
+  /* Aksentene: mose på papir, lav på mørkt */
+  --mose: #2b4632;
+  --mose-dyp: #1d3323;
+  --mose-lys: #466b4c;
+  --lav: #c6d6a6;
+  --lav-dempet: #9fae83;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--papir);
+  --bg-soft: var(--papir-dyp);
+  --fg: var(--blekk);
+  --muted: var(--blekk-dempet);
+  --accent: var(--mose);
+  --accent-fg: #f7f4e9;
+  --accent-soft: #e2e6d4;
+
+  /* To fonter, ikke flere */
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter Tight', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(19 29 22 / 6%), 0 24px 48px -32px rgb(19 29 22 / 38%);
+
+  --wrap: 1180px;
+  --header-h: 74px;
+
+  /* Typeskala */
+  --t-xs: 0.72rem;
+  --t-sm: 0.88rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.1rem, 1rem + 0.45vw, 1.28rem);
+  --t-h3: clamp(1.22rem, 1.08rem + 0.55vw, 1.5rem);
+  --t-h2: clamp(2rem, 1.35rem + 2.4vw, 3.2rem);
+  --t-h1: clamp(2.6rem, 1.45rem + 4.6vw, 5rem);
+}
+
+body {
+  background: var(--papir);
+  color: var(--blekk);
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.002em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  line-height: 1.02;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  line-height: 1.16;
+  letter-spacing: -0.005em;
+}
+
+em {
+  font-style: italic;
+}
+
+p {
+  max-width: 64ch;
+}
+
+a {
+  text-decoration-color: color-mix(in srgb, var(--mose) 40%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  color: var(--mose-dyp);
+  text-decoration-color: var(--mose);
+}
+
+::selection {
+  background: var(--lav);
+  color: var(--mork);
+}
+
+/* Liten overlinje: kort strek, deretter ordet */
+.eyebrow {
+  color: var(--mose);
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: var(--t-xs);
+  gap: 0.6rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 26px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
+  flex: none;
+}
+
+.lead {
+  line-height: 1.6;
+  color: var(--blekk-dempet);
+}
+
+.small {
+  line-height: 1.55;
+}
+
+/* Knapper: rektangulære, ingen skygge før hover */
+.btn {
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  box-shadow: none;
+}
+
+.btn--ghost {
+  border-color: color-mix(in srgb, var(--blekk) 22%, transparent);
+  color: var(--blekk);
+}
+
+.btn--ghost:hover {
+  background: var(--papir-dyp);
+  border-color: var(--mose-lys);
+}
+
+/* Mørke flater: bytt ut tekst- og knappefarger */
+.hero,
+.kontor,
+.arbeid,
+.slutt,
+.footer {
+  background: var(--mork);
+  color: var(--papir);
+}
+
+.hero .lead,
+.kontor p,
+.arbeid p,
+.slutt p,
+.footer p,
+.footer a {
+  color: var(--dempet-mork);
+}
+
+.hero .eyebrow,
+.kontor .eyebrow,
+.arbeid .eyebrow,
+.slutt .eyebrow {
+  color: var(--lav);
+}
+
+.hero a:not(.btn),
+.kontor a:not(.btn),
+.arbeid a:not(.btn),
+.slutt a:not(.btn),
+.footer a {
+  text-decoration-color: color-mix(in srgb, var(--lav) 45%, transparent);
+}
+
+.hero a:not(.btn):hover,
+.kontor a:not(.btn):hover,
+.arbeid a:not(.btn):hover,
+.slutt a:not(.btn):hover,
+.footer a:hover {
+  color: var(--lav);
+}
+
+/* På mørk bunn er primærknappen lys, ikke mosegrønn */
+.hero .btn,
+.arbeid .btn,
+.slutt .btn {
+  background: var(--papir);
+  color: var(--mork);
+  border-color: var(--papir);
+}
+
+.hero .btn--ghost,
+.arbeid .btn--ghost,
+.slutt .btn--ghost {
+  background: transparent;
+  color: var(--papir);
+  border-color: color-mix(in srgb, var(--papir) 34%, transparent);
+}
+
+.hero .btn--ghost:hover,
+.arbeid .btn--ghost:hover,
+.slutt .btn--ghost:hover {
+  background: var(--mork-2);
+  color: var(--papir);
+}
+
+/* Fokus skal synes på begge underlag */
+.hero :focus-visible,
+.kontor :focus-visible,
+.arbeid :focus-visible,
+.slutt :focus-visible,
+.footer :focus-visible {
+  outline-color: var(--lav);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+
+/* Anker-hopp skal ikke animeres når brukeren vil ha ro */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

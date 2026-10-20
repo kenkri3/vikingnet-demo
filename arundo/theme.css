@@ -1,0 +1,235 @@
+/*
+  Arundo — identitet.
+
+  Palett hentet fra deres eget favicon-ikon: signaloransje #f4772b på
+  nesten-svart. Resten er industri: grafitt, stål og betong-papir. To fonter:
+  Familjen Grotesk til overskrifter, Inter til brødtekst.
+
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  color-scheme: dark;
+
+  /* Flater */
+  --ink: #0c0f12;
+  --graphite: #141a1e;
+  --steel: #1b2329;
+  --steel-2: #222c33;
+  --paper: #f2efe9;
+  --paper-2: #e7e2d8;
+
+  /* Signalfarge — fra favicon */
+  --signal: #f4772b;
+  --signal-ink: #1c0d03;
+  --signal-deep: #a8430a;
+  --signal-soft: #fbe5d5;
+
+  /* Tekst */
+  --muted-dark: #a2adb5;
+  --muted-light: #4f585f;
+
+  /* base.css-variabler */
+  --bg: var(--ink);
+  --fg: #f3f1ed;
+  --muted: var(--muted-dark);
+  --line: rgb(255 255 255 / 13%);
+  --accent: var(--signal);
+  --accent-fg: var(--signal-ink);
+  --accent-soft: rgb(244 119 43 / 15%);
+
+  --font-display: 'Familjen Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius: 12px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgb(0 0 0 / 24%), 0 22px 50px rgb(0 0 0 / 30%);
+  --wrap: 1180px;
+  --header-h: 72px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+h1 {
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+h2 {
+  line-height: 1.05;
+}
+
+h3 {
+  letter-spacing: -0.012em;
+}
+
+::selection {
+  background: var(--signal);
+  color: var(--signal-ink);
+}
+
+/* Lys seksjon: samme komponenter, inverterte variabler. */
+.on-paper {
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --muted: var(--muted-light);
+  --line: rgb(12 15 18 / 14%);
+  --accent: var(--signal);
+  --accent-fg: var(--signal-ink);
+  --accent-soft: #fbe7d8;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.on-paper .eyebrow {
+  color: var(--signal-deep);
+}
+
+/* Toppstripe */
+.topbar {
+  background: #090c0e;
+  border-bottom: 1px solid rgb(255 255 255 / 8%);
+  font-size: 0.78rem;
+  color: #b6c0c7;
+}
+
+.topbar__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem 1.25rem;
+  min-height: 38px;
+  padding-block: 0.35rem;
+}
+
+.topbar p {
+  margin: 0;
+}
+
+.topbar__note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #dfe4e7;
+}
+
+.topbar__note::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: var(--signal);
+  border-radius: 2px;
+}
+
+/* Header */
+.header {
+  background: color-mix(in srgb, var(--ink) 90%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+
+.header__inner {
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--signal);
+  color: var(--signal-ink);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.nav a {
+  color: var(--muted-dark);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.header__cta {
+  padding-inline: 1.1rem;
+}
+
+/* Knapper */
+.btn {
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.005em;
+}
+
+.btn--ghost {
+  border-color: rgb(255 255 255 / 26%);
+  color: var(--fg);
+}
+
+.btn--ghost:hover {
+  background: rgb(255 255 255 / 8%);
+}
+
+.on-paper .btn--ghost {
+  border-color: rgb(12 15 18 / 24%);
+  color: var(--ink);
+}
+
+.on-paper .btn--ghost:hover {
+  background: rgb(12 15 18 / 6%);
+}
+
+/* Skjemaelementer på lys bunn */
+.on-paper input,
+.on-paper select,
+.on-paper textarea {
+  background: #fff;
+  border-color: rgb(12 15 18 / 18%);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline-color: var(--signal);
+  outline-width: 3px;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
