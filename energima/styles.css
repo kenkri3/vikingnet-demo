@@ -127,6 +127,15 @@ li a { text-decoration-color: var(--teal); }
   font-size: 0.95rem;
 }
 
+/* base.css gir .nav a fargen --muted; knappen skal ha hvit tekst. */
+.nav .btn {
+  color: var(--accent-fg);
+}
+
+.nav .btn:hover {
+  color: var(--accent-fg);
+}
+
 .nav-toggle {
   border-color: var(--line-strong);
   background: transparent;
