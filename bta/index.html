@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTA Elektro AS — elektriker på Jessheim for bolig og næring</title>
+<meta name="description" content="BTA Elektro AS gjør elektriske installasjoner i bolig- og næringsbygg i hele Østlandsområdet. Industrivegen 22 på Jessheim. Be om befaring eller ring 63 94 97 03.">
+<meta name="theme-color" content="#0b181e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BTA Elektro AS — elektriske installasjoner for bolig og næringsbygg">
+<meta property="og:description" content="Elektriker på Jessheim siden 2003. Boliger, leilighetsbygg, næringsbygg og offentlige bygg i hele Østlandsområdet.">
+<meta property="og:image" content="https://kenkri3.github.io/vikingnet-demo/bta/img/stensetaasen.jpg">
+<meta property="og:image:alt" content="Boligblokk i mørkt tre med varmt lys i vinduene og utebelysning på en snødekt tomt">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="header site-header">
+  <div class="wrap header__inner">
+    <a class="brand" href="#toppen">
+      <img class="brand__logo" src="img/logo.png" alt="BTA Elektro AS" width="200" height="132" fetchpriority="high" decoding="async">
+      <span class="brand__text">BTA Elektro<small>Jessheim · siden 2003</small></span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Åpne meny">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="siteNav" aria-label="Hovedmeny">
+      <a href="#tjenester">Tjenester</a>
+      <a href="#referanser">Referanser</a>
+      <a href="#slik">Slik jobber vi</a>
+      <a href="#om">Om oss</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="nav__cta" href="#mottak">Be om befaring</a>
+    </nav>
+  </div>
+</header>
+
+<main id="innhold">
+
+  <section class="hero" id="toppen" aria-labelledby="hero-tittel">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__tick" aria-hidden="true"></span>Elektriker · Jessheim · hele Østlandet</p>
+        <h1 id="hero-tittel">Kunden får svar mens elektrikeren står i arbeid.</h1>
+        <p class="hero__lead">BTA Elektro AS gjør elektriske installasjoner i bolig- og næringsbygg — for private, entreprenører og offentlige bygg i hele Østlandsområdet.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="#mottak">Be om befaring</a>
+          <a class="btn btn--outline" href="tel:+4763949703">Ring 63 94 97 03</a>
+        </div>
+        <p class="hero__meta">Sentralt godkjent foretak · Org.nr 985 440 964 MVA<br>Industrivegen 22, 2069 Jessheim</p>
+      </div>
+
+      <div class="mottak" id="mottak">
+        <div class="mottak__head">
+          <p class="mottak__kicker"><span class="mottak__dot" aria-hidden="true"></span>Mottak</p>
+          <h2 class="mottak__title" id="mottak-tittel">Be om befaring</h2>
+          <p class="mottak__note">Befaring og prosjektering er gratis for alle nye kunder.</p>
+        </div>
+
+        <p class="mottak__status" id="mottakStatus" aria-live="polite">Steg 1 av 3 · Hva gjelder det?</p>
+        <div class="mottak__bar" aria-hidden="true"><span class="mottak__bar-fill" id="mottakBar" style="width:33.333%"></span></div>
+
+        <form class="mottak__form" id="mottakForm" action="mailto:post@bta.no" method="post" enctype="text/plain" novalidate>
+          <fieldset class="steg" id="steg1">
+            <legend class="visually-hidden">Hva gjelder forespørselen?</legend>
+            <div class="chips">
+              <label class="chip">
+                <input type="radio" name="type" value="Bolig" required>
+                <span class="chip__box"><strong>Bolig</strong><small>Enebolig og leilighet</small></span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="type" value="Næringsbygg">
+                <span class="chip__box"><strong>Næringsbygg</strong><small>Entreprenør, leilighetsbygg, offentlig</small></span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="type" value="Hagebelysning">
+                <span class="chip__box"><strong>Hagebelysning</strong><small>Utendørs belysning og uteanlegg</small></span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="type" value="Smarthus">
+                <span class="chip__box"><strong>Smarthus</strong><small>xComfort, lys, lyd og varme</small></span>
+              </label>
+            </div>
+            <p class="steg__feil" id="steg1Feil" hidden>Velg hva forespørselen gjelder, så går vi videre.</p>
+            <button class="btn btn--accent btn--block" type="button" data-neste>Neste</button>
+          </fieldset>
+
+          <fieldset class="steg" id="steg2" hidden>
+            <legend class="visually-hidden">Når passer det, og hvem er du?</legend>
+            <p class="steg__label">Når på dagen passer det best?</p>
+            <div class="chips chips--tre">
+              <label class="chip">
+                <input type="radio" name="naar" value="Formiddag" checked>
+                <span class="chip__box"><strong>Formiddag</strong></span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="naar" value="Ettermiddag">
+                <span class="chip__box"><strong>Ettermiddag</strong></span>
+              </label>
+              <label class="chip">
+                <input type="radio" name="naar" value="Ring meg først">
+                <span class="chip__box"><strong>Ring meg</strong></span>
+              </label>
+            </div>
+
+            <div class="felt-par">
+              <label class="felt">
+                <span class="felt__label">Navn</span>
+                <input type="text" id="navn" name="navn" autocomplete="name" minlength="2" required>
+              </label>
+              <label class="felt">
+                <span class="felt__label">Telefon</span>
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel" inputmode="tel" minlength="6" required>
+              </label>
+            </div>
+            <label class="felt">
+              <span class="felt__label">Adresse eller sted <em>valgfritt</em></span>
+              <input type="text" id="sted" name="sted" autocomplete="street-address">
+            </label>
+            <label class="felt">
+              <span class="felt__label">Kort om oppdraget <em>valgfritt</em></span>
+              <textarea id="merknad" name="merknad" rows="2"></textarea>
+            </label>
+
+            <div class="steg__actions">
+              <button class="btn btn--ghost" type="button" data-tilbake="1">Tilbake</button>
+              <button class="btn btn--accent" type="submit">Se kvittering</button>
+            </div>
+          </fieldset>
+
+          <div class="steg" id="steg3" hidden>
+            <h3 class="steg__label" id="steg3Tittel" tabindex="-1">Kvittering</h3>
+            <div class="kvittering">
+              <div class="kvittering__topp">
+                <span class="kvittering__stempel">Forespørsel</span>
+                <span class="kvittering__ref" id="kvRef">BTA-000000-000</span>
+              </div>
+              <p class="kvittering__lead">Forespørselen er klar. Ingenting er sendt ennå.</p>
+              <dl class="kvittering__liste" id="kvListe"></dl>
+              <a class="btn btn--accent btn--block" id="kvSend" href="mailto:post@bta.no">Send forespørselen på e-post</a>
+              <div class="steg__actions">
+                <button class="btn btn--ghost" type="button" data-tilbake="2">Endre</button>
+                <button class="btn btn--link" type="button" id="kvReset">Ny forespørsel</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <p class="mottak__fine">Skisse: denne siden sender ingenting selv. Du sender forespørselen fra din egen e-post, eller ringer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-labelledby="proof-tittel">
+    <figure class="proof__figure">
+      <img src="img/stensetaasen.jpg" alt="Boligblokk i mørkt tre med varmt lys i vinduene og utebelysning langs bakken en vinterkveld, Stensetåsen" width="1024" height="371" fetchpriority="high" decoding="async">
+      <figcaption><strong>Stensetåsen</strong><span>Boligprosjekt med utelys og varmt lys i vinduene</span></figcaption>
+    </figure>
+    <div class="wrap">
+      <h2 class="visually-hidden" id="proof-tittel">BTA Elektro i korte trekk</h2>
+      <dl class="proof__facts">
+        <div class="fact">
+          <dt class="fact__label">I året</dt>
+          <dd class="fact__num">300</dd>
+          <dd class="fact__text">eneboliger og leiligheter bygget eller rehabilitert</dd>
+        </div>
+        <div class="fact">
+          <dt class="fact__label">Siden</dt>
+          <dd class="fact__num">2003</dd>
+          <dd class="fact__text">har BTA Elektro AS hatt sterk og god vekst</dd>
+        </div>
+        <div class="fact">
+          <dt class="fact__label">Gaselle-prisen</dt>
+          <dd class="fact__num">Flere år</dd>
+          <dd class="fact__text">er prisen tildelt BTA Elektro AS</dd>
+        </div>
+        <div class="fact">
+          <dt class="fact__label">Oppdrag</dt>
+          <dd class="fact__num">Østlandet</dd>
+          <dd class="fact__text">for private og næringskunder — ved behov også andre steder i landet</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section tjenester" id="tjenester" aria-labelledby="tjenester-tittel">
+    <div class="wrap tjenester__grid">
+      <div class="tjenester__intro">
+        <p class="eyebrow">Tjenester</p>
+        <h2 id="tjenester-tittel">Elektro fra befaring til ferdig anlegg.</h2>
+        <p class="lead">Vi gjør installasjoner i både nybygg og ved rehabilitering — for private eneboliger og leiligheter, entreprenører og offentlige bygg.</p>
+        <figure class="tjenester__figure">
+          <img src="img/kjokken.jpg" alt="Kjøkken med lys under overskapene, benk i stein og gule skapfronter" width="620" height="932" loading="lazy" decoding="async">
+          <figcaption>Belysning under overskap etter rehabilitering av kjøkken.</figcaption>
+        </figure>
+        <p class="tjenester__note">Vi er også forhandler av Hi-Fi-klubbens produkter.</p>
+      </div>
+
+      <ol class="tjenester__liste">
+        <li class="tjeneste">
+          <span class="tjeneste__num" aria-hidden="true">01</span>
+          <div>
+            <h3>Belysning og hagebelysning</h3>
+            <p>Prosjektering, levering og installasjon av belysning. Utendørs belysning og hagebelysning — rett lyssetting gir eiendommen ny verdi året rundt.</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <span class="tjeneste__num" aria-hidden="true">02</span>
+          <div>
+            <h3>Smarthus med xComfort</h3>
+            <p>Trådløst lys- og varmestyringsanlegg som kan brukes ved fornying av eksisterende installasjon, til påbygg, rehabilitering og helt nye installasjoner.</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <span class="tjeneste__num" aria-hidden="true">03</span>
+          <div>
+            <h3>Lyd og bilde</h3>
+            <p>Integrerte lydanlegg. Skal lyd og bilde inn i tillegg, bruker vi Control-4.</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <span class="tjeneste__num" aria-hidden="true">04</span>
+          <div>
+            <h3>Tele og data</h3>
+            <p>Tele- og datainstallasjoner i bolig og næringsbygg.</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <span class="tjeneste__num" aria-hidden="true">05</span>
+          <div>
+            <h3>Rehabilitering</h3>
+            <p>Rehabilitering av sikringsskap, kjøkken og bad.</p>
+          </div>
+        </li>
+        <li class="tjeneste">
+          <span class="tjeneste__num" aria-hidden="true">06</span>
+          <div>
+            <h3>Energi og oppvarming</h3>
+            <p>Energiklassifisering av bolig eller næringsbygg, strømsparende tiltak som kvalifiserer til Enova-tilskudd, og alle typer elektrisk oppvarming — varmekabler, varme under parkett og panelovner.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section referanser" id="referanser" aria-labelledby="referanser-tittel">
+    <div class="wrap">
+      <div class="referanser__topp">
+        <div>
+          <p class="eyebrow">Referanser</p>
+          <h2 id="referanser-tittel">Boligblokker, sykehjem og kirker.</h2>
+        </div>
+        <p class="lead">Fra 25 eneboliger i Nannestad til 146 leiligheter på Frogner. Her er et utvalg av prosjektene BTA har levert elektroarbeidene til.</p>
+      </div>
+
+      <div class="referanser__bilder">
+        <figure class="refbilde refbilde--hoy">
+          <img src="img/skibladnersvingen.jpg" alt="Ny boligblokk i tre og hvitt med opplyste balkonger og utelys langs bakken, Skibladnersvingen i Eidsvoll" width="720" height="914" loading="lazy" decoding="async">
+          <figcaption><strong>Skibladnersvingen, Eidsvoll</strong><span>29 leiligheter · Backe Gruppen</span></figcaption>
+        </figure>
+        <figure class="refbilde">
+          <img src="img/grindatunet.jpg" alt="Opplyst gangvei og inngangsparti mellom boligblokker på Grindatunet i Råholt, fotografert en vinterkveld" width="1024" height="649" loading="lazy" decoding="async">
+          <figcaption><strong>Grindatunet, Råholt</strong><span>49 leiligheter · Backe Gruppen</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="referanser__lister">
+        <div class="refgruppe">
+          <h3>Leilighetsbygg</h3>
+          <ul>
+            <li><strong>Fabeltunet trinn 1 og 2</strong>, Frogner — 146 leiligheter (Bakke Leiligheter)</li>
+            <li><strong>Nittebergsvingen</strong>, Kjeller — 129 funkis eneboliger i kjede (Bakke AS)</li>
+            <li><strong>Granåsen Fetsund</strong> — 128 eneboliger i kjede (Bakke Småhus)</li>
+            <li><strong>Smedhagen Park 5, 6 og 7</strong> — 78 leiligheter (Fundamentgruppen / Aas &amp; Nordal)</li>
+            <li><strong>Gystad Hageby</strong>, Jessheim — 71 funkis eneboliger i kjede (Bakke AS)</li>
+            <li><strong>Grindatunet</strong>, Råholt — 49 leiligheter (Backe Gruppen)</li>
+            <li><strong>Skibladnersvingen</strong>, Eidsvoll — 29 leiligheter (Backe Gruppen)</li>
+          </ul>
+        </div>
+        <div class="refgruppe">
+          <h3>Rehabilitering og offentlig</h3>
+          <ul>
+            <li><strong>Sandakerveien</strong>, Oslo — total rehabilitering av 49 leiligheter</li>
+            <li><strong>Prinsensgate</strong>, Oslo — total rehabilitering av 35 leiligheter</li>
+            <li><strong>Ris kirke</strong>, Oslo — belysning og lysstyring</li>
+            <li><strong>Sørum Sykehjem</strong>, Sørumsand — rehabilitering (Ø.M. Fjeld)</li>
+            <li><strong>Solheim Barnehage</strong>, Maura — rehabilitering</li>
+            <li><strong>Diakonhjemmet Sykehus</strong>, Oslo — rehabilitering leiligheter</li>
+            <li><strong>Ulvenveien 77</strong>, Oslo — rehabilitering av kontorer</li>
+          </ul>
+        </div>
+        <div class="refgruppe">
+          <h3>Næringsbygg</h3>
+          <ul>
+            <li><strong>Kontorbygg Bakke</strong>, Finstadhagen 17 (Bygg Med Oss)</li>
+            <li><strong>Ullensaker Skytterlag</strong>, Hauerseter — ny skytebane (Bygg Med Oss)</li>
+            <li><strong>VILA</strong>, Jessheim — ny butikk</li>
+            <li><strong>Chiao Bella</strong>, Jessheim — rehabilitering restaurant</li>
+            <li><strong>Ablegøy</strong>, Jessheim — ny butikk</li>
+            <li><strong>Melleberg Hageby</strong>, Maura — 70 hus og leiligheter (BoligPartner)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section slik" id="slik" aria-labelledby="slik-tittel">
+    <div class="wrap">
+      <div class="slik__topp">
+        <p class="eyebrow">Slik jobber vi</p>
+        <h2 id="slik-tittel">Befaring, prosjektering, installasjon.</h2>
+        <p class="lead">Befaring og prosjektering er gratis for alle nye kunder. Alle oppdrag får seriøs og effektiv behandling, uansett størrelse.</p>
+      </div>
+      <ol class="slik__steg">
+        <li>
+          <span class="slik__tall" aria-hidden="true">01</span>
+          <h3>Befaring</h3>
+          <p>Vi kommer hjem til deg eller ut på byggeplassen og ser på forholdene. Befaring og prosjektering er gratis for alle nye kunder.</p>
+        </li>
+        <li>
+          <span class="slik__tall" aria-hidden="true">02</span>
+          <h3>Prosjektering</h3>
+          <p>Integrert lys, lyd og varmestyring er en selvfølgelig del av planleggingen — også når arkitekttegnede boliger med høy standard skal føres opp.</p>
+        </li>
+        <li>
+          <span class="slik__tall" aria-hidden="true">03</span>
+          <h3>Installasjon</h3>
+          <p>Vi gjør installasjoner i nybygg og ved rehabilitering, og utfører oppdrag i hele Østlandsområdet — ved behov også i andre deler av landet.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="smarthus" id="smarthus" aria-labelledby="smarthus-tittel">
+    <div class="wrap smarthus__grid">
+      <div class="smarthus__tekst">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__tick" aria-hidden="true"></span>Smarthus</p>
+        <h2 id="smarthus-tittel">Ett trykk: lys, musikk, varme og låser.</h2>
+        <p>Med kun ett trykk demper du lys, setter på musikk, skrur opp varmen, låser dørene og skrur på sikkerhetssystemet. BTA leverer xComfort — et trådløst styringssystem for det elektriske anlegget i huset, og huset tilpasses din familie og livsstil.</p>
+        <p>Systemet kan brukes ved fornying av eksisterende installasjon, til påbygg, rehabilitering og til splitter nye, komplette installasjoner.</p>
+        <a class="btn btn--accent" href="#mottak">Be om befaring</a>
+      </div>
+      <div class="smarthus__side">
+        <h3>Dette får du med xComfort og Sensio</h3>
+        <ul class="smarthus__liste">
+          <li>Mindre strømforbruk</li>
+          <li>Styr lys og varme</li>
+          <li>Bedre sikkerhet</li>
+          <li>Trådløs styring</li>
+          <li>Ingen skjemmende ledninger</li>
+          <li>Fjernstyring via sms eller web</li>
+          <li>Design tilpasset din stil</li>
+          <li>Lengre levetid på lyspærer</li>
+        </ul>
+        <p class="smarthus__note">Ønsker du lyd og bilde i tillegg, bruker vi Control-4.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section om" id="om" aria-labelledby="om-tittel">
+    <div class="wrap om__grid">
+      <div class="om__tekst">
+        <p class="eyebrow">Om oss</p>
+        <h2 id="om-tittel">Siden 2003 på Jessheim.</h2>
+        <p>BTA Elektro AS er lokalisert på Jessheim og utfører oppdrag hos både privatkunder og næringskunder i hele Østlandsområdet. Ved behov utfører vi oppdrag også i andre deler av landet.</p>
+        <p>Med en sunn økonomi og gode arbeidsforhold har vi bygget en kultur vi er stolte av. Å være en del av BTA-teamet betyr trygghet og god lagfølelse — og det merkes når vi er ute hos kundene.</p>
+        <p>Siden starten i 2003 har BTA Elektro AS hatt sterk og god vekst, og vi er tildelt Gaselle-prisen flere år.</p>
+        <blockquote class="om__sitat">«Vår erfaring og kunnskap er din trygghet!»</blockquote>
+      </div>
+
+      <div class="om__team">
+        <article class="person">
+          <img src="img/bjorntore.jpg" alt="Bjørn Tore Ottersen, daglig leder i BTA Elektro AS" width="520" height="761" loading="lazy" decoding="async">
+          <div class="person__tekst">
+            <h3>Bjørn Tore Ottersen</h3>
+            <p class="person__rolle">Daglig leder · andre henvendelser</p>
+            <a class="person__epost" href="mailto:bjorntore@bta.no">bjorntore@bta.no</a>
+          </div>
+        </article>
+        <article class="person">
+          <img src="img/thomas.jpg" alt="Thomas Birkelund, prosjekter for nærings- og leilighetsbygg i BTA Elektro AS" width="520" height="761" loading="lazy" decoding="async">
+          <div class="person__tekst">
+            <h3>Thomas Birkelund</h3>
+            <p class="person__rolle">Prosjekter · nærings- og leilighetsbygg</p>
+            <a class="person__epost" href="mailto:thomas@bta.no">thomas@bta.no</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section kontakt" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap kontakt__grid">
+      <div class="kontakt__tekst">
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="kontakt-tittel">Ring eller send en e-post.</h2>
+        <p class="lead">Ring eller send oss en e-post, så avtaler vi et møte — og setter oss ned og diskuterer idéer, innspill, muligheter og løsninger.</p>
+        <a class="kontakt__tlf" href="tel:+4763949703">63 94 97 03</a>
+        <div class="kontakt__knapper">
+          <a class="btn btn--accent" href="#mottak">Be om befaring</a>
+          <a class="btn btn--ghost" href="mailto:post@bta.no">post@bta.no</a>
+        </div>
+      </div>
+
+      <dl class="kontakt__data">
+        <div><dt>Besøk</dt><dd>Industrivegen 22<br>2069 Jessheim</dd></div>
+        <div><dt>Telefon</dt><dd><a href="tel:+4763949703">+47 63 94 97 03</a></dd></div>
+        <div><dt>E-post</dt><dd><a href="mailto:post@bta.no">post@bta.no</a></dd></div>
+        <div><dt>Faktura</dt><dd><a href="mailto:faktura@bta.no">faktura@bta.no</a></dd></div>
+        <div><dt>Organisasjon</dt><dd>985 440 964 MVA<br>Sentralt godkjent foretak</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer site-footer">
+  <div class="wrap footer__grid">
+    <div class="footer__merke">
+      <span class="footer__logo"><img src="img/logo.png" alt="BTA Elektro AS" width="200" height="132" loading="lazy" decoding="async"></span>
+      <p>Elektriske installasjoner for bolig- og næringsbygg.</p>
+    </div>
+    <div>
+      <h2 class="footer__head">Adresse</h2>
+      <p>Industrivegen 22<br>2069 Jessheim</p>
+    </div>
+    <div>
+      <h2 class="footer__head">Kontakt</h2>
+      <p><a href="tel:+4763949703">63 94 97 03</a><br><a href="mailto:post@bta.no">post@bta.no</a></p>
+    </div>
+    <div>
+      <h2 class="footer__head">Organisasjon</h2>
+      <p>Org.nr 985 440 964 MVA<br>Sentralt godkjent foretak</p>
+    </div>
+  </div>
+  <div class="wrap footer__bunn">
+    <p>© <span id="year">2026</span> BTA Elektro AS</p>
+    <p>Industrivegen 22, 2069 Jessheim</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

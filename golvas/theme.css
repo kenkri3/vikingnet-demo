@@ -1,0 +1,81 @@
+/*
+  GøLv AS — identitet.
+  Fargene er hentet fra deres egen logo: turkis #10b5af og grafitt i
+  merket (to skrå flak). Turkisen er lys og brukes derfor bare til dekor og
+  flater; tekst og knapper bruker en mørkere variant av samme farge, slik at
+  kontrasten holder AA på lys bakgrunn.
+  Typografi: Libre Caslon Display i overskrifter, Manrope i brødtekst.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f7f8f6;             /* porselen, svakt grønnskjær */
+  --bg-soft: #eef1ee;
+  --surface: #ffffff;
+  --ink-bg: #0d1b1a;         /* mørk bånd: prosesjon og footer */
+  --ink-fg: #eef4f2;
+
+  /* Tekst */
+  --fg: #101d1c;
+  --muted: #55635f;
+  --ink-muted: #a7b8b4;
+
+  /* Linjer */
+  --line: #dde4e0;
+  --line-strong: #c3cfca;
+
+  /* Deres turkis, tre styrker */
+  --accent-bright: #10b5af;  /* ren logo-farge — dekor på mørk flate */
+  --accent: #0b837e;         /* knapper og lenker på lys flate */
+  --accent-deep: #075a55;
+  --accent-soft: #e2f2f0;
+  --accent-fg: #ffffff;
+
+  /* Grafitt fra merket */
+  --graphite: #3f4a4c;
+
+  /* To fonter, ikke flere */
+  --font-display: 'Libre Caslon Display', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Skarp form: dette er et vareprøve- og spesifikasjonsark, ikke et kort-UI */
+  --radius: 4px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(13 27 26 / 5%), 0 20px 44px -30px rgb(13 27 26 / 40%);
+
+  /* Rytme */
+  --wrap: 1160px;
+  --header-h: 74px;
+  --t-xs: 0.74rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.42vw, 1.26rem);
+  --t-h3: clamp(1.16rem, 1.02rem + 0.7vw, 1.42rem);
+  --t-h2: clamp(1.85rem, 1.35rem + 2.1vw, 2.85rem);
+  --t-h1: clamp(2.35rem, 1.5rem + 3.5vw, 4.05rem);
+}
+
+html {
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400; /* Libre Caslon Display finnes bare i 400 */
+  letter-spacing: -0.012em;
+}
+
+h1 {
+  line-height: 1.04;
+}
+
+h2 {
+  line-height: 1.08;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
