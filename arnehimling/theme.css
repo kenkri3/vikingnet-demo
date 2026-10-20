@@ -1,0 +1,60 @@
+/*
+  Arne Himling AS — identitet.
+  Arketype: redaksjonell, men tegnet som en byggetegning: papirflate med
+  svakt rutenett, tynne streker, nummererte rader og serif i overskriftene
+  (slik ordmerket deres er satt). Aksenten er hentet fra himling.no sin egen
+  grønne blå (#68ccd1), dempet til en dyp petrol for tekst og knapper.
+
+  Rekkefølge i <head>: base.css → theme.css → styles.css
+*/
+
+:root {
+  /* Papir og blekk */
+  --paper: #f4f3ee;
+  --paper-2: #ecebe4;
+  --paper-3: #fbfaf6;
+  --ink: #17191a;
+  --ink-soft: #33373a;
+  --muted: #5e6462;
+  --line: #dbd8ce;
+  --line-strong: #b9b5a8;
+
+  /* Én aksent, tre styrker */
+  --accent: #0e4b52;
+  --accent-deep: #083238;
+  --accent-lys: #68ccd1;
+  --accent-soft: #dde9e8;
+  --accent-fg: #f7f6f1;
+
+  /* Mørkt bånd */
+  --dark: #0b3237;
+  --dark-2: #0f3d43;
+  --dark-fg: #eef0ec;
+  --dark-muted: #a9c0bf;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --accent-2: var(--accent-lys);
+
+  /* To fonter: Instrument Serif i overskrifter, IBM Plex Sans i brødtekst */
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Skarp, ikke rund: dette skal ligne en tegning, ikke et kort-UI */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(23 25 26 / 5%), 0 18px 40px -28px rgb(23 25 26 / 35%);
+
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.06rem, 1rem + 0.4vw, 1.24rem);
+  --t-h3: clamp(1.18rem, 1.06rem + 0.6vw, 1.5rem);
+  --t-h2: clamp(1.9rem, 1.4rem + 2.1vw, 3rem);
+  --t-h1: clamp(2.6rem, 1.5rem + 4.6vw, 4.9rem);
+
+  --wrap: 1200px;
+  --header-h: 76px;
+}

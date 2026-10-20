@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Murbygg AS">
+  <rect width="32" height="32" fill="#96180f"/>
+  <g fill="#fdfbf6">
+    <rect x="6" y="8" width="20" height="4.4"/>
+    <rect x="6" y="13.6" width="9.2" height="4.4"/>
+    <rect x="16.8" y="13.6" width="9.2" height="4.4"/>
+    <rect x="6" y="19.2" width="20" height="4.4"/>
+  </g>
+</svg>

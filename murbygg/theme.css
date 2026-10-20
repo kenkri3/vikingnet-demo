@@ -1,0 +1,94 @@
+/*
+  Murbygg AS — «tegl og kalk».
+  Paletten er hentet fra deres egen logo og meny: teglrødt (#9E0300),
+  mørkerødt i overskriftene (#800000), en tegner i blått og grått.
+  Her er det røde ført ned til én aksent, og resten lagt på en kald
+  kalksteinstone — så siden leses som mur, ikke som en rød plakat.
+
+  Bitter (slab serif) bærer overskriftene, IBM Plex Sans brødteksten.
+  To familier, ingen flere.
+*/
+
+:root {
+  /* Flater */
+  --kalk: #ecebe4;
+  --kalk-dyp: #e2e0d7;
+  --flate: #f8f7f3;
+  --mørtel: #cdc7b8;
+
+  /* Blekk */
+  --blekk: #1a1b17;
+  --blekk-myk: #3a3c34;
+  --grå: #5b5e55;
+
+  /* Tegl — deres røde, justert så den holder AA på kalk */
+  --tegl: #96180f;
+  --tegl-dyp: #6b100a;
+  --tegl-lys: #f4e5e0;
+
+  /* Grunnmuren i base.css */
+  --bg: var(--kalk);
+  --bg-soft: var(--kalk-dyp);
+  --fg: var(--blekk);
+  --muted: var(--grå);
+  --line: #d3cec1;
+  --accent: var(--tegl);
+  --accent-fg: #fdfbf6;
+  --accent-soft: var(--tegl-lys);
+
+  /* Steinhogd, ikke myk: nesten ingen avrunding */
+  --radius: 2px;
+  --radius-sm: 2px;
+
+  --font-display: 'Bitter', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --wrap: 1160px;
+  --header-h: 72px;
+
+  /* Murbånd: én fuge per 27 px, halvforbandt i annenhver rad. */
+  --mur-motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='54' viewBox='0 0 128 54'%3E%3Cg fill='none' stroke='%23b9b2a1' stroke-width='1'%3E%3Cpath d='M0 .5h128M0 27.5h128M0 53.5h128'/%3E%3Cpath d='M0 .5v27M64 .5v27M128 .5v27'/%3E%3Cpath d='M32 27.5v26M96 27.5v26'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Mørke flater: samme navn, invertert betydning. */
+.pa-blekk {
+  --bg: var(--blekk);
+  --bg-soft: #23241f;
+  --fg: #f2f0e8;
+  --muted: #b3b1a5;
+  --line: #34362e;
+  --accent: #e8836f;
+  --accent-fg: #1a1b17;
+  --accent-soft: #2c1a16;
+  background: var(--blekk);
+  color: var(--fg);
+}
+
+body {
+  /* Kalksteinen har en svak kornstruktur; den ligger i bakgrunnen, ikke i et bilde. */
+  background-color: var(--kalk);
+  background-image: radial-gradient(circle at 18% 12%, #f3f2ec 0%, transparent 55%),
+    radial-gradient(circle at 88% 78%, #e6e4da 0%, transparent 48%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+h1 {
+  font-size: clamp(2.15rem, 1.35rem + 3.2vw, 3.7rem);
+  line-height: 1.02;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 1.25rem + 1.9vw, 2.6rem);
+}
+
+::selection {
+  background: var(--tegl);
+  color: #fdfbf6;
+}

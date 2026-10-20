@@ -1,0 +1,163 @@
+/*
+  Elconnect AS — identitet.
+  Paletten er hentet fra deres egen logo: dyp petrol (#005468) og
+  oransje (#f47822). Typografien er én familie i to snitt:
+  IBM Plex Sans Condensed i overskrifter, IBM Plex Sans i teksten.
+  Resten av uttrykket er teknisk: tynne linjer, skarpe hjørner, tall i rutenett.
+*/
+
+:root {
+  /* Flater */
+  --paper: #f2eee7;
+  --paper-2: #e9e3d8;
+  --surface: #fffdf8;
+  --surface-2: #f8f5ee;
+
+  /* Blekk */
+  --ink: #102f36;
+  --ink-soft: #2b4a50;
+  --muted: #566a6e;
+
+  /* Merkevare */
+  --petrol: #005468;
+  --petrol-deep: #042c35;
+  --petrol-lys: #dce7e6;
+  --orange: #e2661c;
+  --orange-ink: #9e420b;
+  --orange-lys: #ffa463;
+
+  --line: #d6cfc1;
+  --line-strong: #b9b0a0;
+
+  /* base.css-variabler */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --accent: var(--petrol);
+  --accent-fg: #fffdf8;
+  --accent-soft: var(--petrol-lys);
+
+  --font-display: 'IBM Plex Sans Condensed', 'Arial Narrow', 'Helvetica Neue', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --t-h1: clamp(2.3rem, 1.45rem + 4vw, 4.25rem);
+  --t-h2: clamp(1.85rem, 1.3rem + 2.1vw, 2.9rem);
+  --t-h3: clamp(1.15rem, 1.02rem + 0.6vw, 1.45rem);
+  --t-lead: clamp(1.05rem, 0.99rem + 0.4vw, 1.25rem);
+  --t-base: 1.0625rem;
+  --t-sm: 0.9rem;
+  --t-xs: 0.75rem;
+
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(16 47 54 / 6%), 0 18px 40px -22px rgb(16 47 54 / 30%);
+  --wrap: 1180px;
+  --header-h: 74px;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.04;
+  color: var(--ink);
+}
+
+h1 {
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+h2 { line-height: 1.06; }
+
+h3 {
+  font-size: var(--t-h3);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+}
+
+.lead { color: var(--muted); }
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.eyebrow__stripe {
+  width: 22px;
+  height: 3px;
+  background: var(--orange);
+  flex: none;
+}
+
+.eyebrow--lys { color: rgb(255 253 248 / 62%); }
+
+.lead--lys { color: rgb(255 253 248 / 74%); }
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+  padding-inline: 1.4rem;
+  letter-spacing: 0.005em;
+  background: var(--petrol);
+  color: var(--accent-fg);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 12%) inset;
+}
+
+.btn:hover {
+  background: #00657d;
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+  box-shadow: none;
+}
+
+.btn--ghost:hover {
+  background: rgb(0 84 104 / 6%);
+  border-color: var(--petrol);
+  color: var(--petrol);
+}
+
+.btn--tekst {
+  background: transparent;
+  color: var(--petrol);
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.btn--tekst:hover { background: rgb(0 84 104 / 7%); }
+
+.btn--liten {
+  min-height: 44px;
+  padding-inline: 1.05rem;
+  font-size: var(--t-sm);
+}
+
+:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgb(226 102 28 / 22%);
+}

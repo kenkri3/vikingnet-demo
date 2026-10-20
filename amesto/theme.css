@@ -1,0 +1,124 @@
+/*
+  Amesto — identitet.
+  Palett og typografi er hentet fra amesto.no: dyp sjøgrønn/slate, diset mint,
+  korall som eneste handlingsfarge, og serif i overskriftene (Abhaya Libre)
+  med nøytral sans i brødteksten (Rubik). Geometrien er knekt: kort og bilder
+  har et avskåret hjørne i stedet for avrunding.
+*/
+
+:root {
+  --bg: #f6f8f9;
+  --bg-soft: #e8eeee;
+  --fg: #181818;
+  --muted: #4f646b;
+  --line: #d2dfe1;
+  --accent: #f25b40;
+  --accent-fg: #181818;
+  --accent-soft: #fde3dd;
+
+  --ink: #202d32;
+  --ink-2: #35474f;
+  --ink-3: #2a3a40;
+  --mint: #a8c1bb;
+  --mist: #cad8da;
+  --fog: #e3ecee;
+  --paper: #f6f8f9;
+  --on-dark: #f3f7f7;
+  --on-dark-muted: #b9cdcb;
+  --coral-on-dark: #ff8f78;
+
+  --font-display: 'Abhaya Libre', Georgia, 'Times New Roman', serif;
+  --font-body: 'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius: 2px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(16 24 40 / 4%), 0 18px 44px rgb(20 42 46 / 9%);
+  --wrap: 1180px;
+  --header-h: 72px;
+  --chamfer: 28px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-weight: 400;
+  letter-spacing: 0.002em;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  line-height: 1.02;
+}
+
+h1 { letter-spacing: -0.02em; }
+
+h1 em,
+h2 em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--s-2);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  flex: none;
+}
+
+.eyebrow--dark {
+  color: var(--mint);
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-sm);
+  min-height: 48px;
+}
+
+.btn--coral {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-color: var(--accent);
+}
+
+.btn--coral:hover {
+  background: #e94e33;
+  border-color: #e94e33;
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--on-dark);
+  border-color: rgb(202 216 218 / 45%);
+}
+
+.btn--outline:hover {
+  background: rgb(202 216 218 / 12%);
+  border-color: var(--mist);
+}

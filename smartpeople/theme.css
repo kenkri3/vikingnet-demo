@@ -1,0 +1,182 @@
+/*
+  Smartpeople Search & Selection AS — identitet.
+
+  Arketype: redaksjonell, men kjølig. Petroleumsblå #003349 er hentet fra
+  deres eget nettsted, og logomerkets navy #0A253E fra logofilen. Papiret er
+  kaldt bein, ikke varmt — siden skal leses som et oppdragsnotat fra et
+  hodejegerfirma, ikke som en brosjyre.
+  To familier: Instrument Serif i overskriftene, Manrope i brødteksten.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bone: #f4f5f1;
+  --bone-2: #e9ece6;
+  --bone-3: #dee3db;
+  --white: #fbfbf8;
+
+  /* Blekk */
+  --ink: #0c2028;
+  --ink-soft: #223740;
+  --muted: #4f636a;
+
+  /* Linjer */
+  --line: #d5dbd3;
+  --line-strong: #b3bfb6;
+
+  /* Deres egne farger. Ingen tredje kulør. */
+  --petrol: #003349;
+  --petrol-deep: #002432;
+  --petrol-soft: #173f4e;
+  --navy: #0a253e;
+  --steel: #7e9aa2;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--bone);
+  --bg-soft: var(--bone-2);
+  --fg: var(--ink);
+  --accent: var(--petrol);
+  --accent-fg: #f7f8f4;
+  --accent-soft: #e3eae4;
+
+  /* To fonter, ikke flere */
+  --font-display: 'Instrument Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Rett hjørne: dette er dokumenter, ikke app-kort */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 0 rgb(12 32 40 / 4%), 0 26px 50px -38px rgb(12 32 40 / 50%);
+
+  --wrap: 1160px;
+  --header-h: 74px;
+
+  /* Typeskala */
+  --t-xs: 0.73rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.06rem, 0.98rem + 0.45vw, 1.24rem);
+  --t-h3: clamp(1.16rem, 1.02rem + 0.55vw, 1.42rem);
+  --t-h2: clamp(1.9rem, 1.32rem + 2.4vw, 3.05rem);
+  --t-h1: clamp(2.55rem, 1.3rem + 5.6vw, 4.9rem);
+}
+
+html {
+  background: var(--bone);
+}
+
+body {
+  background: var(--bone);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.002em;
+}
+
+/* Instrument Serif har bare 400 — grunnlagets 600 ville blitt syntetisk fet. */
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.008em;
+  line-height: 1.02;
+  color: var(--petrol);
+}
+
+h1 em,
+h2 em {
+  font-style: italic;
+  color: var(--petrol-soft);
+}
+
+h3 {
+  line-height: 1.16;
+}
+
+p {
+  color: var(--ink-soft);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--petrol);
+  color: var(--bone);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+.lead {
+  color: var(--ink-soft);
+  max-width: 54ch;
+}
+
+.small {
+  font-size: var(--t-sm);
+}
+
+.btn {
+  min-height: 48px;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius-sm);
+  background: var(--petrol);
+  color: var(--accent-fg);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+.btn:hover {
+  background: var(--petrol-deep);
+  box-shadow: var(--shadow);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--petrol);
+  border: 1px solid var(--line-strong);
+}
+
+.btn--ghost:hover {
+  background: var(--bone-2);
+  border-color: var(--petrol);
+}
+
+:focus-visible {
+  outline: 2px solid var(--petrol);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skjemafelt: 16 px hindrer iOS-zoom (base.css) — arver Manrope her. */
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+  border-radius: var(--radius-sm);
+  border-color: var(--line-strong);
+  background: var(--white);
+}
+
+select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--petrol) 50%),
+    linear-gradient(135deg, var(--petrol) 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(50% + 2px), calc(100% - 14px) calc(50% + 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 2.4rem;
+}
