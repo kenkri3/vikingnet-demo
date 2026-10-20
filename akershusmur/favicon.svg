@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Akershus Murforretning AS">
+  <defs>
+    <linearGradient id="flate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a4ac4"/>
+      <stop offset="1" stop-color="#1c1a58"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="10" fill="#12123a"/>
+  <g>
+    <rect x="9" y="14" width="30" height="21" fill="url(#flate)" opacity="0.9"/>
+    <rect x="24" y="29" width="31" height="22" fill="url(#flate)"/>
+  </g>
+</svg>

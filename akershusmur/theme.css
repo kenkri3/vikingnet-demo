@@ -1,0 +1,114 @@
+/*
+  Akershus Murforretning AS — identitet.
+  Paletten er hentet fra logoen: to overlappende indigo flater (#262366 →
+  #8282be) og ordmerket i grafitt (#4a4f52). Ingen andre farger enn disse,
+  papirhvitt og én lys periwinkle til flater.
+
+  Rekkefølge: base.css → theme.css → styles.css
+*/
+
+:root {
+  /* Indigo fra logoen */
+  --indigo-950: #12123a;
+  --indigo-900: #1b1b50;
+  --indigo: #262366;
+  --indigo-600: #34348c;
+  --indigo-400: #6f70c9;
+  --indigo-100: #e7e7f4;
+  --peri: #8282be;
+
+  /* Grafitt fra ordmerket */
+  --grafitt: #4a4f52;
+
+  --ink: #14151c;
+  --ink-soft: #2d2f3f;
+  --muted: #55596b;
+  --line: #dcdce6;
+  --line-strong: #c2c3d2;
+
+  --paper: #f3f3f7;
+  --paper-2: #e9e9f0;
+  --surface: #ffffff;
+
+  /* base.css-primitiver */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --fg: var(--ink);
+  --accent: var(--indigo);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--indigo-100);
+
+  /* To fonter: Archivo til overskrifter og tall, Source Sans 3 til tekst. */
+  --font-display: 'Archivo', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Source Sans 3', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Strammere hjørner og lavere skygge: arkitekttegning, ikke kort-app. */
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(18 18 58 / 5%), 0 18px 40px -18px rgb(18 18 58 / 18%);
+  --wrap: 1180px;
+  --header-h: 72px;
+}
+
+::selection {
+  background: var(--indigo);
+  color: #ffffff;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+
+h2 {
+  letter-spacing: -0.026em;
+  line-height: 1.05;
+}
+
+h3 {
+  letter-spacing: -0.012em;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--indigo);
+}
+
+.lead {
+  color: var(--muted);
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Fokusringen skal være synlig mot både papir og indigo. */
+:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+.on-dark :focus-visible,
+.band :focus-visible,
+.footer :focus-visible {
+  outline-color: #b9b9ea;
+}

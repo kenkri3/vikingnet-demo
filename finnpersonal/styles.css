@@ -1,0 +1,1235 @@
+/* ==========================================================================
+   FinnPersonal — oppsett.
+   Rekkefølge: base.css → theme.css → styles.css
+   Hero: tekst venstre, mørkt tilgjengelighetskort høyre. Deretter tallstripe,
+   tjenester, prosess, tilgjengelighet med foto, om, forespørsel, bunn.
+   ========================================================================== */
+
+[hidden] {
+  display: none !important;
+}
+
+/* --- Hopp til innhold: 0×0 når den ikke er i bruk, så den ikke måles som
+       en liten trykkflate. ------------------------------------------------- */
+.hopp {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--accent-fg);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 80;
+}
+
+.hopp:focus-visible {
+  width: auto;
+  height: auto;
+  padding: 0.7rem 1rem;
+  outline-color: var(--signal);
+}
+
+/* --- Topp ---------------------------------------------------------------- */
+.topp {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topp__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  min-height: var(--header-h);
+}
+
+.merke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 44px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.merke__ring {
+  flex: none;
+}
+
+.merke__ord {
+  font-family: var(--font-body);
+  font-size: 1.32rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: var(--ink-soft);
+}
+
+.merke__finn {
+  color: var(--signal-deep);
+}
+
+.meny-knapp {
+  display: none;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.meny-knapp span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.meny-knapp[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.meny-knapp[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.meny-knapp[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.hode-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.35rem, 1.5vw, 1.4rem);
+}
+
+.hode-nav > a:not(.btn) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.35rem;
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.hode-nav > a:not(.btn):hover {
+  color: var(--ink);
+}
+
+.topp__cta {
+  min-height: 44px;
+  padding: 0.6rem 1.1rem;
+  font-size: var(--t-sm);
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+.hero {
+  padding-block: clamp(2.2rem, 5.5vw, 4.6rem) clamp(2rem, 4.5vw, 3.4rem);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: clamp(1.6rem, 3.5vw, 3.4rem);
+  align-items: start;
+}
+
+.hero__tekst {
+  padding-top: 0.4rem;
+}
+
+.eyebrow {
+  color: var(--muted);
+}
+
+.eyebrow .prikk {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+}
+
+.hero h1 {
+  margin-bottom: var(--s-3);
+  color: var(--ink);
+}
+
+.hero .lead {
+  max-width: 44ch;
+  margin-bottom: var(--s-4);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: var(--s-5);
+}
+
+.hero__cta .btn {
+  min-height: 48px;
+}
+
+.hero__fakta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.hero__fakta li {
+  position: relative;
+  margin: 0;
+  padding-left: 0.85rem;
+}
+
+.hero__fakta li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 1px;
+  background: var(--signal);
+}
+
+/* --- Tilgjengelighetskortet (mørkt) ------------------------------------- */
+.live {
+  position: relative;
+  margin: 0;
+  padding: clamp(1.25rem, 2.6vw, 1.9rem);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: #f7f2ee;
+  box-shadow: var(--shadow);
+}
+
+.live__merkelapp {
+  margin: 0 0 0.9rem;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #b9b0b8;
+}
+
+.live__tilstand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 1.95rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.live__prikk {
+  width: 10px;
+  height: 10px;
+  flex: none;
+  border-radius: 50%;
+  background: #8d858f;
+  box-shadow: 0 0 0 4px rgb(255 255 255 / 8%);
+}
+
+.live[data-apen='ja'] .live__prikk {
+  background: var(--signal);
+  box-shadow: 0 0 0 4px rgb(243 112 33 / 22%);
+}
+
+.live__tid {
+  margin: 0 0 var(--s-4);
+  font-size: var(--t-sm);
+  color: #c8c0c7;
+}
+
+.live__tid-merke {
+  color: #948b94;
+}
+
+.live__liste {
+  margin: 0 0 var(--s-3);
+  border-top: 1px solid rgb(255 255 255 / 12%);
+}
+
+.live__liste > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2);
+  padding-block: 0.55rem;
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+}
+
+.live__liste dt {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: #c8c0c7;
+}
+
+.live__liste dd {
+  margin: 0;
+  font-size: var(--t-sm);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: #f7f2ee;
+}
+
+.live__neste {
+  margin: 0 0 0.9rem;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: #f2b48c;
+}
+
+.live__neste:empty {
+  display: none;
+}
+
+.live__fotnote {
+  margin: 0;
+  font-size: var(--t-xs);
+  line-height: 1.5;
+  color: #948b94;
+}
+
+/* --- Tallstripe --------------------------------------------------------- */
+.tall {
+  border-block: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.tall__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding-block: 0;
+}
+
+.tall__post {
+  padding: clamp(1.1rem, 2.4vw, 1.8rem) clamp(0.4rem, 1.4vw, 1.4rem);
+  border-left: 1px solid var(--line);
+}
+
+.tall__post:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.tall__tall {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.65rem, 1.1rem + 2vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  color: var(--signal-deep);
+}
+
+.tall__tekst {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+/* --- Seksjoner ---------------------------------------------------------- */
+.seksjon {
+  padding-block: clamp(2.6rem, 6vw, 5rem);
+}
+
+.seksjon__hode {
+  max-width: 62ch;
+  margin-bottom: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+.seksjon__hode h2 {
+  margin-bottom: var(--s-2);
+}
+
+.seksjon__hode .lead {
+  margin-bottom: 0;
+  max-width: 58ch;
+}
+
+/* --- Tjenester ---------------------------------------------------------- */
+.tjenester {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.4rem);
+}
+
+.tjeneste {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.tjeneste__nr {
+  margin: 0 0 0.35rem;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--signal-deep);
+}
+
+.tjeneste h3 {
+  margin: 0;
+}
+
+.tjeneste p:last-child {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.fag {
+  display: grid;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  align-items: center;
+  margin-top: clamp(1rem, 2.5vw, 1.6rem);
+  padding-top: clamp(1rem, 2.5vw, 1.6rem);
+  border-top: 1px solid var(--line);
+}
+
+.fag h3 {
+  margin: 0;
+  font-size: var(--t-h3);
+}
+
+.brikker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brikker li {
+  margin: 0;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 100px;
+  font-size: var(--t-sm);
+  color: var(--ink-soft);
+  background: var(--paper);
+}
+
+/* --- Prosess ------------------------------------------------------------ */
+.seksjon--prosess {
+  background: color-mix(in srgb, var(--paper-deep) 55%, transparent);
+  border-block: 1px solid var(--line);
+}
+
+.steg-liste {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 2.2rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: steg;
+}
+
+.steg {
+  margin: 0;
+  padding-top: 0.9rem;
+  border-top: 2px solid var(--signal);
+}
+
+.steg__nr {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--signal-deep);
+}
+
+.steg h3 {
+  margin-bottom: 0.4rem;
+}
+
+.steg p {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+/* --- Tilgjengelighet med foto ------------------------------------------ */
+.tilgjengelig {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(1.4rem, 3.5vw, 3rem);
+  align-items: center;
+}
+
+.tilgjengelig__foto {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--paper-deep);
+}
+
+.tilgjengelig__foto img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.tilgjengelig__tekst h2 {
+  margin-bottom: var(--s-3);
+}
+
+.tilgjengelig__tekst p {
+  color: var(--muted);
+}
+
+.punkter {
+  margin: var(--s-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.punkter li {
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding-left: 1.15rem;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.punkter li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 2px;
+  background: var(--signal);
+}
+
+.punkter strong {
+  color: var(--ink);
+}
+
+/* --- Om ---------------------------------------------------------------- */
+.om {
+  display: grid;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr);
+  gap: clamp(1.4rem, 3.5vw, 3rem);
+  align-items: start;
+}
+
+.om__portrett {
+  margin: 0;
+}
+
+.om__portrett img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  filter: grayscale(1) contrast(1.03);
+}
+
+.om__portrett figcaption {
+  display: grid;
+  gap: 0.05rem;
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line);
+  max-width: 320px;
+}
+
+.om__portrett figcaption strong {
+  font-size: var(--t-base);
+  color: var(--ink);
+}
+
+.om__portrett figcaption span {
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.om__tekst p {
+  color: var(--muted);
+}
+
+.kontakt-liste {
+  margin: var(--s-3) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.15rem;
+  border-top: 1px solid var(--line);
+}
+
+.kontakt-liste li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15rem 0.75rem;
+  margin: 0;
+  padding-block: 0.15rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.kontakt-liste li > span {
+  min-width: 4.2rem;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kontakt-liste a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 0.2rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration-color: var(--signal);
+  text-decoration-thickness: 2px;
+}
+
+.kontakt-liste a:hover {
+  color: var(--signal-deep);
+}
+
+/* --- Forespørsel ------------------------------------------------------- */
+.seksjon--foresporsel {
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+}
+
+.foresporsel__rutenett {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 0.95fr);
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  align-items: start;
+}
+
+.skjema-kort {
+  padding: clamp(1.15rem, 2.6vw, 1.9rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.fremdrift {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  margin: 0 0 var(--s-4);
+  padding: 0;
+  list-style: none;
+  counter-reset: fremdrift;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.fremdrift li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  color: var(--muted);
+  background: var(--paper);
+}
+
+.fremdrift li::before {
+  counter-increment: fremdrift;
+  content: counter(fremdrift);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: var(--line);
+  color: var(--ink);
+  font-size: 0.68rem;
+}
+
+.fremdrift li.er-aktiv {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.fremdrift li.er-aktiv::before {
+  background: var(--signal);
+  color: #2a1204;
+}
+
+.fremdrift li.er-ferdig::before {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.skjema__felt {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.felt-rad {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-3);
+}
+
+.skjema-kort label {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.skjema-kort input,
+.skjema-kort select {
+  font-size: 16px;
+  background: #fff;
+}
+
+.valg {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.valg legend {
+  padding: 0;
+  margin-bottom: 0.7rem;
+  font-family: var(--font-display);
+  font-size: var(--t-h3);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.valg__kort {
+  position: relative;
+  display: block;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  cursor: pointer;
+  font-weight: 500;
+  min-height: 44px;
+}
+
+.valg__kort input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  appearance: none;
+}
+
+.valg__kort:has(input:checked) {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+  background: #fff;
+}
+
+.valg__kort:has(input:checked)::after {
+  content: '';
+  position: absolute;
+  right: 0.7rem;
+  top: 0.7rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--signal);
+}
+
+.valg__kort:has(input:focus-visible) {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+
+.valg__tekst {
+  display: grid;
+  gap: 0.1rem;
+  padding-right: 1.2rem;
+}
+
+.valg__tekst strong {
+  font-size: var(--t-base);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.valg__tekst span {
+  font-size: var(--t-sm);
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.skjema__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: var(--s-4);
+}
+
+.skjema__knapper .btn {
+  min-height: 46px;
+}
+
+.skjema__feil {
+  margin: var(--s-3) 0 0;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--signal-deep);
+  background: var(--signal-soft);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: #5c2a08;
+}
+
+.skjema__notat {
+  margin: var(--s-3) 0 0;
+  font-size: var(--t-xs);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.skjema__undertittel {
+  margin: 0 0 var(--s-3);
+}
+
+.oppsummering {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.oppsummering > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.2rem 1rem;
+  padding-block: 0.55rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.oppsummering dt {
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.oppsummering dd {
+  margin: 0;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--ink);
+  text-align: right;
+}
+
+/* --- Kvittering -------------------------------------------------------- */
+.kvittering {
+  margin-top: var(--s-3);
+}
+
+.kvittering__merke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.4rem;
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--signal-deep);
+}
+
+.kvittering__merke::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal);
+}
+
+.kvittering h3 {
+  margin-bottom: var(--s-3);
+}
+
+.kvittering__ref {
+  margin: 0 0 var(--s-3);
+  font-size: var(--t-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.kvittering__ref strong {
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.kvittering__svar {
+  margin: var(--s-3) 0 0;
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid var(--signal);
+  background: var(--paper);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* --- Kontaktkort ------------------------------------------------------- */
+.kontakt-kort {
+  padding: clamp(1.15rem, 2.4vw, 1.7rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-deep);
+}
+
+.kontakt-kort h3 {
+  margin-bottom: var(--s-2);
+}
+
+.kontakt-kort address {
+  font-style: normal;
+  font-size: var(--t-sm);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.kontakt-kort address strong {
+  color: var(--ink);
+}
+
+.kontakt-liste--kort {
+  margin-top: var(--s-3);
+}
+
+.aapningstid {
+  margin: var(--s-3) 0 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.aapningstid > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-block: 0.45rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.aapningstid dt,
+.aapningstid dd {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--muted);
+}
+
+.aapningstid dd {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.kontakt-kort__org {
+  margin: var(--s-3) 0 0;
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+/* --- Bunn ------------------------------------------------------------- */
+.bunn {
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+  padding-block: clamp(2rem, 4.5vw, 3.4rem) 0;
+  background: var(--ink);
+  color: #cfc7ce;
+}
+
+.bunn__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.85fr) minmax(0, 0.85fr);
+  gap: clamp(1.4rem, 3vw, 2.6rem);
+  padding-bottom: clamp(1.6rem, 3.5vw, 2.6rem);
+}
+
+.bunn__ordmerke {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  color: #f7f2ee;
+}
+
+.bunn__ordmerke .merke__finn {
+  color: #f5893f;
+}
+
+.bunn__slagord {
+  margin: 0 0 0.9rem;
+  font-family: var(--font-display);
+  font-size: var(--t-h3);
+  color: #f7f2ee;
+}
+
+.bunn__tekst {
+  margin: 0;
+  max-width: 34ch;
+  font-size: var(--t-sm);
+  color: #a8a0a7;
+}
+
+.bunn h3 {
+  margin: 0 0 0.7rem;
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a8a0a7;
+}
+
+.bunn p {
+  font-size: var(--t-sm);
+  color: #cfc7ce;
+}
+
+.bunn__lenker {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bunn__lenker li {
+  margin: 0;
+}
+
+.bunn__lenker a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 0.1rem;
+  font-size: var(--t-sm);
+  color: #e7e1e5;
+  text-decoration: none;
+}
+
+.bunn__lenker a:hover {
+  color: #f5893f;
+  text-decoration: underline;
+}
+
+.bunn :focus-visible {
+  outline-color: var(--signal);
+}
+
+.bunn__bunn {
+  padding-block: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+}
+
+.bunn__bunn p {
+  margin: 0;
+  font-size: var(--t-xs);
+  color: #a8a0a7;
+}
+
+/* --- Respons ---------------------------------------------------------- */
+@media (max-width: 1000px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero .lead {
+    max-width: 56ch;
+  }
+
+  .live {
+    max-width: 460px;
+  }
+
+  .foresporsel__rutenett {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kontakt-kort {
+    order: 2;
+  }
+}
+
+@media (max-width: 960px) {
+  .meny-knapp {
+    display: inline-flex;
+  }
+
+  .hode-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.4rem clamp(18px, 4vw, 32px) var(--s-4);
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  .hode-nav.er-apen {
+    display: flex;
+  }
+
+  .hode-nav > a:not(.btn) {
+    min-height: 52px;
+    padding-inline: 0;
+    border-top: 1px solid var(--line);
+    font-size: var(--t-base);
+  }
+
+  .topp__cta {
+    margin-top: 0.8rem;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 860px) {
+  .tall__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tall__post {
+    border-left: 0;
+    padding-inline: 0;
+    padding-block: 0.9rem;
+  }
+
+  .tall__post:nth-child(even) {
+    padding-left: 1rem;
+  }
+
+  .tall__post:nth-child(odd) {
+    border-right: 1px solid var(--line);
+    padding-right: 1rem;
+  }
+
+  .tall__post:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .tilgjengelig {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tilgjengelig__foto {
+    order: 2;
+  }
+
+  .tilgjengelig__foto img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .om {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .om__portrett img,
+  .om__portrett figcaption {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 720px) {
+  .tjenester,
+  .steg-liste,
+  .valg,
+  .felt-rad {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fag {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .bunn__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fremdrift {
+    gap: 0.3rem;
+  }
+
+  .fremdrift li {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.68rem;
+  }
+
+  .bunn__lenker a {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__cta .btn,
+  .skjema__knapper .btn {
+    flex: 1 1 100%;
+  }
+
+  .merke__ord {
+    font-size: 1.2rem;
+  }
+}

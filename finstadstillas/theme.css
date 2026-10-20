@@ -1,0 +1,77 @@
+/*
+  Finstad Stillas AS — identitet.
+
+  Arketype: industriell, men på kald papirflate i stedet for betonggrå, og med
+  dyp petrol som bærende mørk flate. Aksentfargen #ff671d er samplet fra deres
+  egen logo (test_finstad.svg) og brukes som merking — tynne regler, nivåtall og
+  små flater — ikke som knappeflate. Det gir et annet uttrykk enn de andre
+  industri-demoene, som bruker oransje eller gult som hovedflate.
+
+  To fonter: Bricolage Grotesque i overskriftene, Work Sans i brødteksten.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Flater */
+  --bg: #f4f5f2;
+  --bg-soft: #e9ece7;
+  --surface: #ffffff;
+
+  /* Blekk */
+  --fg: #111b1e;
+  --muted: #55635f;
+  --line: #d6dbd5;
+  --line-strong: #b7c0b9;
+
+  /* Mørk flate: dyp petrol */
+  --band: #0f1c1f;
+  --band-2: #16262a;
+  --band-fg: #eef2ef;
+  --band-muted: #a7b5b0;
+
+  /* Deres egen oransje — merking, ikke flate */
+  --accent: #ff671d;
+  --accent-deep: #b0430a;
+  --accent-fg: #1a0f07;
+  --accent-soft: #ffeade;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --accent-ink: var(--band);
+  --accent-contrast: var(--band-fg);
+
+  /* Typografi */
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Work Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.05rem, 1rem + 0.42vw, 1.24rem);
+  --t-h3: clamp(1.12rem, 1.02rem + 0.45vw, 1.4rem);
+  --t-h2: clamp(1.72rem, 1.3rem + 1.75vw, 2.6rem);
+  --t-h1: clamp(2.15rem, 1.45rem + 3.6vw, 4.2rem);
+
+  /* Teknisk formspråk: lite avrunding, harde kanter */
+  --radius: 4px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 2px rgb(15 28 31 / 5%), 0 34px 60px -40px rgb(15 28 31 / 42%);
+
+  --wrap: 1160px;
+  --header-h: 72px;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}

@@ -1,0 +1,58 @@
+/*
+  People4you AS — identitet.
+  Paletten er hentet fra deres egen logo: boblen er #ED1A3A, ordmerket er
+  hvitt, og portrettene deres er fotografert mot nøytral grå. Derfor hvit
+  flate, kjølig grå og én rød — ingen varme papirtoner.
+
+  Arketype: redaksjonell med produktblikk. Rød heroflate med boblehale
+  (formlånet fra logoen), Familjen Grotesk i overskrifter og Figtree i
+  brødtekst. Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Rød, tre styrker */
+  --red: #ed1a3a;          /* logofargen, brukes til flater og detaljer */
+  --red-deep: #d4172f;     /* flate med hvit tekst, 5,4:1 */
+  --red-ink: #bf1027;      /* rød tekst på lys flate, 6,0:1 */
+  --red-soft: #fdeef1;
+
+  /* Flater og blekk */
+  --paper: #ffffff;
+  --grey: #f5f5f7;
+  --grey-2: #ececef;
+  --ink: #15161a;
+  --ink-2: #23252b;
+  --muted: #5c6169;
+  --line: #e4e5e9;
+  --line-strong: #cfd1d7;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--grey);
+  --fg: var(--ink);
+  --accent: var(--red-deep);
+  --accent-fg: #ffffff;
+  --accent-soft: var(--red-soft);
+
+  /* To fonter, ikke flere */
+  --font-display: 'Familjen Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --t-h1: clamp(2.35rem, 1.55rem + 3.4vw, 3.95rem);
+  --t-h2: clamp(1.8rem, 1.3rem + 2vw, 2.7rem);
+  --t-h3: clamp(1.12rem, 1.02rem + 0.4vw, 1.35rem);
+  --t-lead: clamp(1.08rem, 1rem + 0.4vw, 1.25rem);
+
+  --radius: 18px;
+  --radius-sm: 10px;
+  --wrap: 1120px;
+  --header-h: 72px;
+
+  --shadow-lift: 0 2px 4px rgb(21 22 26 / 4%), 0 18px 44px rgb(21 22 26 / 10%);
+  --shadow-bubble: 0 30px 70px rgb(21 22 26 / 26%);
+}
+
+::selection {
+  background: var(--red);
+  color: #fff;
+}

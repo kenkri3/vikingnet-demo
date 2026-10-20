@@ -1,0 +1,113 @@
+/*
+  Fliskunstnerne AS — identitet.
+
+  Arketype: varm / håndverk, med en egen flis-mosaikk som formspråk.
+  Paletten er hentet fra deres egen logo: petrolgrønn (#479d97), grå
+  (#9ea2a5) og oransje (#e3662e). Petrol er flaten, krem er pausen,
+  oransje er merket — aldri store oransje tekstflater, fordi fargen er
+  lys og ikke holder AA som tekstbærer.
+
+  To fonter: Fraunces (rund serif, overskrifter) og Work Sans
+  (humanistisk sans, brødtekst).
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --krem: #faf5ec;
+  --krem-2: #f3ecdf;
+  --sand: #e3d8c6;
+  --hvit: #fffdf8;
+
+  /* Blekk og dempet tekst */
+  --blekk: #182420;
+  --blekk-2: #22322d;
+  --dempet: #5b6a63;
+  --dempet-lys: #93a09a;
+
+  /* Deres egne farger */
+  --flis: #479d97;
+  --flis-lys: #d3e6e3;
+  --gra: #9ea2a5;
+  --terrakotta: #e3662e;
+  --terrakotta-dyp: #b8481a;
+  --petrol: #17544d;
+  --petrol-2: #0f3e39;
+  --petrol-3: #0a2d29;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --bg: var(--krem);
+  --bg-soft: var(--krem-2);
+  --fg: var(--blekk);
+  --muted: var(--dempet);
+  --line: var(--sand);
+  --accent: var(--petrol);
+  --accent-fg: var(--krem);
+  --accent-soft: var(--flis-lys);
+
+  /* To fonter, ikke flere */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 2px rgb(24 36 32 / 5%), 0 18px 40px -28px rgb(24 36 32 / 40%);
+  --wrap: 1200px;
+  --header-h: 72px;
+
+  /* Flis-fugen: samme mål overalt, så rutenettet leses som flis */
+  --fuge: 6px;
+
+  --t-xs: 0.76rem;
+  --t-sm: 0.92rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.12rem, 1rem + 0.45vw, 1.32rem);
+  --t-h3: clamp(1.22rem, 1.05rem + 0.6vw, 1.5rem);
+  --t-h2: clamp(1.85rem, 1.45rem + 1.9vw, 2.85rem);
+  --t-h1: clamp(2.2rem, 1.45rem + 3.1vw, 3.75rem);
+}
+
+h1,
+h2,
+h3 {
+  font-variation-settings: 'SOFT' 30, 'WONK' 0;
+  letter-spacing: -0.012em;
+}
+
+h1 {
+  font-size: var(--t-h1);
+  line-height: 1.02;
+  letter-spacing: -0.022em;
+}
+
+h2 {
+  line-height: 1.05;
+}
+
+h3 {
+  letter-spacing: -0.008em;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  color: var(--terrakotta-dyp);
+}
+
+.lead {
+  color: var(--dempet);
+}
+
+/* Fokus må være synlig også på de mørke flatene. */
+:focus-visible {
+  outline: 2px solid var(--petrol);
+  outline-offset: 3px;
+}
+
+.fk-mork :focus-visible,
+.fk-topp :focus-visible {
+  outline: 2px solid #ffd2bb;
+}

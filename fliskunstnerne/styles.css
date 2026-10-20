@@ -1,0 +1,1398 @@
+/*
+  Fliskunstnerne AS — layout.
+
+  Rekkefølge på siden: topplinje → header → hero som flismosaikk →
+  galleri → tjenester → ti fag (mørk) → kundeprosessen → folkene →
+  dekningsområde → befaring (mørk) → footer.
+
+  Alt bygger på kit/base.css. Her ligger bare komponentene, og alt er
+  prefikset fk- så det ikke kolliderer med kit-klassene.
+*/
+
+/* ---------- Hopp til innhold ---------- */
+
+.fk-skip {
+  position: absolute;
+  top: -80px;
+  left: 8px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 1rem;
+  background: var(--petrol);
+  color: var(--krem);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-decoration: none;
+}
+
+.fk-skip:focus {
+  top: 0;
+}
+
+/* ---------- Topplinje ---------- */
+
+.fk-topp {
+  background: var(--petrol-3);
+  color: color-mix(in srgb, var(--krem) 82%, transparent);
+  font-size: var(--t-xs);
+}
+
+.fk-topp__inn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 var(--s-3);
+  min-height: 44px;
+}
+
+.fk-topp p {
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.fk-topp__tid {
+  margin-left: auto !important;
+}
+
+.fk-topp a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--krem);
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.fk-topp a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Header ---------- */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 46px;
+  text-decoration: none;
+}
+
+.fk-logo {
+  width: auto;
+  height: 32px;
+  flex: none;
+}
+
+.fk-brand__tekst {
+  display: grid;
+  line-height: 1.05;
+}
+
+.fk-brand__navn {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.fk-brand__under {
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--dempet);
+  white-space: nowrap;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 2px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--blekk);
+  text-decoration: underline;
+  text-decoration-color: var(--terrakotta);
+}
+
+.header__cta {
+  min-height: 44px;
+}
+
+/* På smale telefoner ville logotekst, CTA og meny dele plassen så menyen
+   ble klemt under 44 px. Derfor: menyen er fast, og CTA-en flytter ned i
+   heroen som allerede står rett under. */
+.nav-toggle {
+  flex: none;
+}
+
+.fk-brand__navn {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .header__cta {
+    display: none;
+  }
+}
+
+/* ---------- Seksjonshoder ---------- */
+
+.fk-hode {
+  display: grid;
+  gap: var(--s-2);
+  max-width: 68ch;
+  margin-bottom: clamp(var(--s-4), 4vw, var(--s-6));
+}
+
+.fk-hode h2 {
+  margin-bottom: 0;
+}
+
+.fk-hode .lead {
+  margin-bottom: 0;
+}
+
+.fk-hode--splitt {
+  max-width: none;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: end;
+  gap: var(--s-3) clamp(var(--s-4), 5vw, var(--s-7));
+}
+
+.fk-hode--splitt .lead {
+  padding-bottom: 0.35rem;
+}
+
+/* ---------- Hero: flismosaikk ---------- */
+
+.fk-hero {
+  background: var(--krem);
+  padding-block: clamp(var(--s-4), 3vw, var(--s-5)) clamp(var(--s-5), 5vw, var(--s-7));
+}
+
+.fk-hero__fliser {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: minmax(330px, auto) minmax(224px, auto);
+  gap: var(--fuge);
+  background: var(--sand);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fk-flis {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  background: var(--krem);
+}
+
+.fk-hero__tekst {
+  grid-column: 1 / 7;
+  grid-row: 1;
+  padding: clamp(22px, 3.2vw, 46px);
+  gap: var(--s-2);
+}
+
+.fk-hero__tekst h1 {
+  margin: 0 0 var(--s-2);
+  max-width: 15ch;
+}
+
+.fk-hero__tekst .lead {
+  margin: 0;
+  max-width: 42ch;
+}
+
+.fk-hero__handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-3);
+}
+
+.fk-hero__ring {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: var(--s-2) 0 0;
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.fk-hero__ring a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--blekk);
+  font-weight: 600;
+  text-decoration-color: var(--terrakotta);
+}
+
+.fk-hero__foto {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.fk-hero__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fk-hero__foto--stor {
+  grid-column: 7 / 13;
+  grid-row: 1;
+}
+
+.fk-hero__foto--liten {
+  grid-column: 5 / 9;
+  grid-row: 2;
+}
+
+/* Faktaflisen: deres egne tall og påstander, ikke våre. */
+.fk-fakta {
+  grid-column: 1 / 5;
+  grid-row: 2;
+  background: var(--petrol);
+  color: var(--krem);
+  padding: clamp(18px, 2.4vw, 30px);
+  gap: 0;
+}
+
+.fk-fakta__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.fk-fakta__liste li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: 0.7rem;
+  margin: 0;
+  padding-top: 0.55rem;
+  border-top: 1px solid color-mix(in srgb, var(--krem) 22%, transparent);
+}
+
+.fk-fakta__liste li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.fk-fakta__tall {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--krem);
+}
+
+.fk-fakta__tekst {
+  font-size: var(--t-sm);
+  line-height: 1.35;
+  color: color-mix(in srgb, var(--krem) 82%, transparent);
+}
+
+/* Kontaktflisen */
+.fk-kontaktflis {
+  grid-column: 9 / 13;
+  grid-row: 2;
+  background: var(--terrakotta-dyp);
+  color: var(--krem);
+  padding: clamp(18px, 2.4vw, 30px);
+  gap: 0.35rem;
+  align-items: flex-start;
+}
+
+.fk-kontaktflis p {
+  margin: 0;
+}
+
+.fk-kontaktflis__merke {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--krem) 78%, transparent);
+}
+
+.fk-kontaktflis__tekst {
+  font-size: var(--t-sm);
+  line-height: 1.45;
+  max-width: 26ch;
+}
+
+.fk-kontaktflis__tel {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: var(--krem);
+  text-decoration-color: color-mix(in srgb, var(--krem) 55%, transparent);
+}
+
+.fk-kontaktflis__tid {
+  font-size: var(--t-xs);
+  color: color-mix(in srgb, var(--krem) 80%, transparent);
+}
+
+/* ---------- Galleri ---------- */
+
+.fk-galleri {
+  background: var(--krem-2);
+}
+
+.fk-galleri__fliser {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--fuge);
+  background: var(--sand);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fk-bilde {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--sand);
+}
+
+.fk-bilde img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fk-bilde figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--krem);
+  background: color-mix(in srgb, var(--blekk) 72%, transparent);
+}
+
+.fk-bilde--bred {
+  grid-column: 1 / -1;
+  aspect-ratio: 21 / 9;
+}
+
+.fk-bilde--hoy {
+  aspect-ratio: 3 / 4;
+}
+
+/* Vaskerombildet er bredere enn ruten; vi flytter utsnittet mot servanten. */
+.fk-bilde--vask img {
+  object-position: 58% 45%;
+}
+
+/* ---------- Tjenester ---------- */
+
+.fk-tjenester__fliser {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--fuge);
+  background: var(--sand);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fk-tjeneste {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: clamp(22px, 3vw, 40px);
+  background: var(--hvit);
+}
+
+.fk-tjeneste__merke {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--terrakotta-dyp);
+  letter-spacing: 0.02em;
+}
+
+.fk-tjeneste h3 {
+  margin: 0;
+}
+
+.fk-tjeneste p {
+  margin: 0;
+  color: var(--dempet);
+}
+
+.fk-tjeneste__liste {
+  list-style: none;
+  margin: var(--s-1) 0 var(--s-2);
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.fk-tjeneste__liste li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--blekk-2);
+}
+
+.fk-tjeneste__liste li::before {
+  content: '';
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background: var(--flis);
+  transform: translateY(-1px);
+}
+
+.fk-tjeneste__fot {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-3);
+}
+
+.fk-notat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-3);
+  margin-top: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border-left: 3px solid var(--terrakotta);
+  background: var(--krem-2);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.fk-notat p {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--blekk-2);
+}
+
+/* ---------- Ti fag (mørk seksjon) ---------- */
+
+.fk-fag {
+  background: var(--petrol-3);
+  color: var(--krem);
+}
+
+.fk-fag .eyebrow {
+  color: #ffb894;
+}
+
+.fk-fag h2 {
+  color: var(--krem);
+}
+
+.fk-fag .lead {
+  color: color-mix(in srgb, var(--krem) 76%, transparent);
+}
+
+.fk-fag__rutenett {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--fuge);
+  background: color-mix(in srgb, var(--krem) 16%, var(--petrol-3));
+  padding: var(--fuge);
+  border-radius: var(--radius);
+  margin-bottom: var(--s-5);
+}
+
+.fk-fag__flis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--s-2);
+  min-height: 96px;
+  padding: var(--s-3);
+  background: var(--petrol-2);
+  border-radius: 3px;
+}
+
+.fk-fag__nr {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #8ec9c3;
+  letter-spacing: 0.08em;
+}
+
+.fk-fag__navn {
+  font-size: var(--t-sm);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.fk-fag__notater {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-3) clamp(var(--s-4), 5vw, var(--s-7));
+}
+
+.fk-fag__notat {
+  margin: 0;
+  padding-left: var(--s-3);
+  border-left: 2px solid var(--flis);
+  font-size: var(--t-sm);
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--krem) 84%, transparent);
+}
+
+.fk-fag__notat strong {
+  color: var(--krem);
+}
+
+/* ---------- Prosessen ---------- */
+
+.fk-prosess__rekke {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(var(--s-3), 3vw, var(--s-5));
+  counter-reset: steg;
+}
+
+.fk-steg {
+  margin: 0;
+  padding-top: var(--s-3);
+  border-top: 2px solid var(--sand);
+}
+
+.fk-steg__nr {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--terrakotta-dyp);
+  margin-bottom: var(--s-2);
+}
+
+.fk-steg h3 {
+  margin-bottom: var(--s-1);
+  font-size: 1.15rem;
+}
+
+.fk-steg p {
+  margin: 0;
+  font-size: var(--t-sm);
+  line-height: 1.6;
+  color: var(--dempet);
+}
+
+.fk-prosess__fot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-3);
+  margin-top: var(--s-5);
+}
+
+.fk-prosess__fot p {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+/* ---------- Folkene ---------- */
+
+.fk-folk {
+  background: var(--krem-2);
+}
+
+.fk-folk__topp {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--s-3) clamp(var(--s-4), 5vw, var(--s-7));
+  margin-bottom: clamp(var(--s-4), 4vw, var(--s-5));
+}
+
+.fk-folk__topp p {
+  margin: 0;
+  color: var(--blekk-2);
+}
+
+.fk-folk__fliser {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--fuge);
+  background: var(--sand);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.fk-person {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: clamp(22px, 3vw, 38px);
+  background: var(--hvit);
+}
+
+.fk-person__merke {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terrakotta-dyp);
+}
+
+.fk-person h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.fk-person__rolle {
+  margin: 0 0 var(--s-2);
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.fk-person__kontakt {
+  display: grid;
+  gap: 0.15rem;
+  margin-top: auto;
+}
+
+.fk-person__kontakt a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 0.5rem;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--blekk);
+  text-decoration-color: color-mix(in srgb, var(--blekk) 28%, transparent);
+  overflow-wrap: anywhere;
+}
+
+.fk-person__kontakt a:hover {
+  text-decoration-color: var(--terrakotta);
+}
+
+/* ---------- Dekningsområde ---------- */
+
+.fk-omrade__inn {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(var(--s-4), 5vw, var(--s-7));
+  align-items: start;
+}
+
+.fk-omrade__inn p {
+  margin-bottom: var(--s-2);
+  color: var(--dempet);
+}
+
+.fk-omrade__base {
+  margin-top: var(--s-3);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--sand);
+  font-size: var(--t-sm);
+  color: var(--blekk-2);
+}
+
+.fk-omrade__base strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--blekk);
+  margin-bottom: 0.15rem;
+}
+
+.fk-brikker {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.fk-brikker li {
+  margin: 0;
+  padding: 0.45rem 0.85rem;
+  font-size: var(--t-sm);
+  font-weight: 500;
+  color: var(--blekk-2);
+  background: var(--krem-2);
+  border: 1px solid var(--sand);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* ---------- Befaring ---------- */
+
+.fk-befaring {
+  background: var(--petrol-2);
+  color: var(--krem);
+}
+
+.fk-befaring h2,
+.fk-befaring h3 {
+  color: var(--krem);
+}
+
+.fk-befaring .eyebrow {
+  color: #ffb894;
+}
+
+.fk-befaring .lead {
+  color: color-mix(in srgb, var(--krem) 78%, transparent);
+}
+
+.fk-befaring__inn {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(var(--s-4), 4vw, var(--s-6));
+  align-items: start;
+}
+
+.fk-skjema {
+  display: grid;
+  gap: var(--s-4);
+}
+
+/* base.css gir form og grid display, som slår UA-regelen for [hidden].
+   Uten denne ville skjemaet og kvitteringen stått på siden samtidig. */
+.fk-skjema[hidden],
+.fk-oppsum[hidden],
+.fk-kvittering[hidden] {
+  display: none;
+}
+
+.fk-blokk {
+  display: grid;
+  gap: var(--s-2);
+}
+
+.fk-blokk__hode {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.fk-blokk__nr {
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #ffb894;
+  letter-spacing: 0.1em;
+}
+
+.fk-blokk h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.fk-valg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 58px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--krem) 24%, transparent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--krem) 5%, transparent);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.fk-valg:hover {
+  border-color: color-mix(in srgb, var(--krem) 48%, transparent);
+}
+
+.fk-valg input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fk-valg__prikk {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid color-mix(in srgb, var(--krem) 45%, transparent);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fk-valg:has(input:checked) {
+  border-color: var(--terrakotta);
+  background: color-mix(in srgb, var(--terrakotta) 20%, transparent);
+}
+
+.fk-valg:has(input:checked) .fk-valg__prikk {
+  border-color: var(--terrakotta);
+  box-shadow: inset 0 0 0 4px var(--terrakotta);
+}
+
+.fk-valg:has(input:focus-visible) {
+  outline: 2px solid #ffd2bb;
+  outline-offset: 3px;
+}
+
+.fk-valg-gruppe {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.fk-dager,
+.fk-tider {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.fk-tider > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  align-self: center;
+}
+
+.fk-dag strong,
+.fk-tid strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.fk-dager {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.fk-tider {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fk-dag,
+.fk-tid {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.1rem;
+  min-height: 62px;
+  padding: 0.4rem 0.2rem;
+  border: 1px solid color-mix(in srgb, var(--krem) 24%, transparent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--krem) 5%, transparent);
+  color: var(--krem);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.fk-dag span,
+.fk-tid span {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--krem) 68%, transparent);
+}
+
+.fk-dag:hover:not(:disabled),
+.fk-tid:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--krem) 55%, transparent);
+}
+
+.fk-dag[aria-pressed='true'],
+.fk-tid[aria-pressed='true'] {
+  border-color: var(--terrakotta);
+  background: color-mix(in srgb, var(--terrakotta) 24%, transparent);
+}
+
+.fk-dag[aria-pressed='true'] span,
+.fk-tid[aria-pressed='true'] span {
+  color: var(--krem);
+}
+
+.fk-dag:disabled,
+.fk-tid:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.fk-felt {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s-2) var(--s-3);
+}
+
+.fk-felt label {
+  color: color-mix(in srgb, var(--krem) 86%, transparent);
+}
+
+.fk-felt input,
+.fk-felt textarea {
+  background: color-mix(in srgb, var(--krem) 7%, transparent);
+  border-color: color-mix(in srgb, var(--krem) 26%, transparent);
+  color: var(--krem);
+}
+
+.fk-felt input::placeholder,
+.fk-felt textarea::placeholder {
+  color: color-mix(in srgb, var(--krem) 50%, transparent);
+}
+
+.fk-felt__brei {
+  grid-column: 1 / -1;
+}
+
+.fk-feil {
+  min-height: 1.1rem;
+  margin: 0.25rem 0 0;
+  font-size: var(--t-xs);
+  font-weight: 600;
+  color: #ffb894;
+}
+
+.fk-skjema__fot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2) var(--s-3);
+}
+
+.fk-skjema__fot .btn {
+  background: var(--terrakotta-dyp);
+  color: var(--krem);
+}
+
+.fk-hjelp {
+  margin: 0;
+  font-size: var(--t-xs);
+  color: color-mix(in srgb, var(--krem) 70%, transparent);
+  max-width: 46ch;
+}
+
+/* Oppsummeringen */
+.fk-oppsum {
+  position: sticky;
+  top: calc(var(--header-h) + 16px);
+  display: grid;
+  gap: var(--s-2);
+  padding: clamp(20px, 2.6vw, 30px);
+  background: var(--petrol-3);
+  border: 1px solid color-mix(in srgb, var(--krem) 16%, transparent);
+  border-radius: var(--radius);
+}
+
+.fk-oppsum h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.fk-oppsum__merke {
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffb894;
+}
+
+.fk-oppsum dl {
+  display: grid;
+  gap: 0.55rem;
+  margin: var(--s-1) 0 0;
+}
+
+.fk-oppsum dt {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--krem) 64%, transparent);
+}
+
+.fk-oppsum dd {
+  margin: 0;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--krem);
+}
+
+.fk-oppsum__av {
+  margin: 0;
+  padding-top: var(--s-2);
+  border-top: 1px solid color-mix(in srgb, var(--krem) 16%, transparent);
+  font-size: var(--t-xs);
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--krem) 74%, transparent);
+}
+
+.fk-oppsum__av a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--krem);
+  font-weight: 600;
+}
+
+/* Kvittering */
+.fk-befaring__inn--lukket .fk-kvittering {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 680px;
+}
+
+.fk-kvittering {
+  display: grid;
+  gap: var(--s-2);
+  padding: clamp(22px, 3vw, 34px);
+  background: var(--krem);
+  color: var(--blekk);
+  border-radius: var(--radius);
+}
+
+.fk-kvittering:focus {
+  outline: none;
+}
+
+.fk-kvittering h3 {
+  margin: 0;
+  color: var(--blekk);
+  font-size: 1.4rem;
+}
+
+.fk-kvittering__ref {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  gap: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 3px;
+  background: var(--krem-2);
+  border: 1px solid var(--sand);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.fk-kvittering dl {
+  display: grid;
+  gap: 0.5rem;
+  margin: var(--s-2) 0;
+}
+
+.fk-kvittering dt {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dempet);
+}
+
+.fk-kvittering dd {
+  margin: 0;
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+.fk-kvittering p {
+  margin: 0;
+  font-size: var(--t-sm);
+  color: var(--dempet);
+}
+
+.fk-kvittering__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-2);
+}
+
+/* ---------- Footer ---------- */
+
+.fk-footer {
+  background: var(--petrol-3);
+  color: color-mix(in srgb, var(--krem) 78%, transparent);
+  padding-block: clamp(var(--s-5), 6vw, var(--s-7)) var(--s-4);
+  font-size: var(--t-sm);
+}
+
+.fk-footer__topp {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr));
+  gap: var(--s-4) clamp(var(--s-4), 4vw, var(--s-6));
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid color-mix(in srgb, var(--krem) 16%, transparent);
+}
+
+.fk-footer__merke {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 var(--s-2);
+}
+
+.fk-footer__navn {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--krem);
+  line-height: 1.1;
+}
+
+.fk-footer__slagord {
+  margin: 0;
+  max-width: 34ch;
+  line-height: 1.6;
+}
+
+.fk-footer h4 {
+  margin: 0 0 var(--s-2);
+  font-family: var(--font-body);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--krem) 62%, transparent);
+}
+
+.fk-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fk-footer li {
+  margin: 0;
+}
+
+.fk-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--krem);
+  text-decoration-color: color-mix(in srgb, var(--krem) 35%, transparent);
+  overflow-wrap: anywhere;
+}
+
+.fk-footer a:hover {
+  text-decoration-color: var(--terrakotta);
+}
+
+.fk-footer__adresse {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0;
+}
+
+.fk-footer__bunn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-4);
+  align-items: center;
+  padding-top: var(--s-3);
+  font-size: var(--t-xs);
+  color: color-mix(in srgb, var(--krem) 62%, transparent);
+}
+
+.fk-footer__bunn p {
+  margin: 0;
+}
+
+/* ---------- Ankerscroll ---------- */
+
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + var(--s-3));
+}
+
+/* ---------- Bredder ---------- */
+
+@media (max-width: 1080px) {
+  .fk-hero__fliser {
+    grid-template-rows: minmax(300px, auto) minmax(200px, auto);
+  }
+
+  .fk-hero__tekst h1 {
+    max-width: 18ch;
+  }
+
+  .fk-prosess__rekke {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--s-4);
+  }
+}
+
+@media (max-width: 900px) {
+  .fk-hero__fliser {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto auto;
+  }
+
+  .fk-hero__tekst {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .fk-hero__tekst h1 {
+    max-width: 20ch;
+  }
+
+  .fk-hero__foto--stor {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    aspect-ratio: 16 / 9;
+  }
+
+  .fk-fakta {
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+
+  .fk-kontaktflis {
+    grid-column: 2 / 3;
+    grid-row: 3;
+  }
+
+  .fk-hero__foto--liten {
+    display: none;
+  }
+
+  .fk-hode--splitt,
+  .fk-folk__topp,
+  .fk-omrade__inn,
+  .fk-befaring__inn {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-oppsum {
+    position: static;
+  }
+
+  .fk-tjenester__fliser,
+  .fk-folk__fliser {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-bilde--bred {
+    aspect-ratio: 16 / 9;
+  }
+
+  .fk-fag__rutenett {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fk-fag__notater {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-dager {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .fk-footer__topp {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fk-footer__merke {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 680px) {
+  .fk-hero__fliser {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-fakta,
+  .fk-kontaktflis {
+    grid-column: 1 / -1;
+  }
+
+  .fk-omrade__inn {
+    gap: var(--s-3);
+  }
+
+  .fk-tider {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .fk-dager {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .fk-felt {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-fag__rutenett {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fk-prosess__rekke {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-galleri__fliser {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-bilde--hoy {
+    aspect-ratio: 4 / 3;
+  }
+
+  .fk-footer__topp {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fk-topp__tid {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .fk-dager {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fk-tider {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

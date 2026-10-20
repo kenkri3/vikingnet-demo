@@ -1,0 +1,74 @@
+/*
+  Search People — identitet.
+  Palett hentet fra deres eget merke: sandfarget sirkel med espresso-brunt
+  ordmerke (logo _brun) og footer-flaten #cfc5b0 på searchpeople.no.
+  Arketype: redaksjonell, men med et mørkt bånd i espresso — som et
+  oppdragsnotat fra et hodejegerfirma, ikke som en brosjyre.
+  Typografi: Josefin Sans (deres egen nettside bruker den) i overskrifter og
+  korte etiketter, Karla i brødtekst.
+  Lastes etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Sand — flaten alt ligger på */
+  --sand-50: #faf5ed;
+  --sand-100: #f2ece0;
+  --sand-200: #e8dece;
+  --sand-300: #d9cbb3;
+  --sand-400: #c6b494;
+
+  /* Espresso — blekk og mørke bånd */
+  --ink-950: #1b1813;
+  --ink-900: #241f19;
+  --ink-800: #322b22;
+  --ink-700: #473d30;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--sand-100);
+  --bg-soft: var(--sand-50);
+  --fg: var(--ink-900);
+  --muted: #6c6253;
+  --line: #d8cbb5;
+  --line-strong: #bda98a;
+
+  /* Én dyp aksent: espresso. Ingen tredje kulør. */
+  --accent: var(--ink-900);
+  --accent-fg: #faf5ed;
+  --accent-soft: #e9dfcd;
+
+  /* Mørkt bånd */
+  --band-bg: var(--ink-900);
+  --band-bg-2: var(--ink-800);
+  --band-fg: #f4eee2;
+  --band-muted: #bcb09c;
+  --band-line: rgb(244 238 226 / 16%);
+
+  /* To familier, ikke flere */
+  --font-display: 'Josefin Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Karla', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Rett og stramt: dette skal se trykt ut, ikke som et kort-UI */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(36 31 25 / 5%), 0 18px 40px -28px rgb(36 31 25 / 32%);
+
+  --wrap: 1160px;
+  --header-h: 74px;
+
+  --t-xs: 0.74rem;
+  --t-sm: 0.89rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.08rem, 1rem + 0.42vw, 1.26rem);
+  --t-h3: clamp(1.24rem, 1.08rem + 0.72vw, 1.6rem);
+  --t-h2: clamp(1.9rem, 1.35rem + 2.1vw, 2.9rem);
+  --t-h1: clamp(2.15rem, 1.15rem + 4.1vw, 4.05rem);
+}
+
+html {
+  background: var(--bg);
+}
+
+::selection {
+  background: var(--sand-400);
+  color: var(--ink-950);
+}

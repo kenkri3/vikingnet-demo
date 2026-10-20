@@ -1,0 +1,80 @@
+/*
+  CBA Fagformidling AS — identitet.
+  Fargen er hentet fra deres egen logo: dyp plomme (#441839). Flaten er bein,
+  ikke hvitt, og det eneste kalde i paletten er blekket. Typografien er en
+  samtidig slab (Bitter) mot en nøktern grotesk (IBM Plex Sans) — et
+  arbeidsseddel-uttrykk, ikke et kort-UI.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f8f5f0;
+  --bg-soft: #efe8e0;
+  --surface: #fffdfa;
+
+  /* Blekk */
+  --fg: #1b1216;
+  --fg-soft: #3b2c33;
+  --muted: #6a5860;
+
+  /* Linjer */
+  --line: #e3d8ce;
+  --line-strong: #cdbbb0;
+
+  /* Plomme — deres egen logo */
+  --plum: #441839;
+  --plum-deep: #2a0e23;
+  --plum-mid: #6b2a55;
+  --plum-soft: #f4e9f0;
+  --sand: #e7dac9;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --accent: var(--plum);
+  --accent-fg: #fdf9f4;
+  --accent-soft: var(--plum-soft);
+
+  /* To fonter, ikke flere */
+  --font-display: 'Bitter', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Rytme */
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.06rem, 1rem + 0.4vw, 1.22rem);
+  --t-h3: clamp(1.14rem, 1.04rem + 0.45vw, 1.42rem);
+  --t-h2: clamp(1.72rem, 1.32rem + 1.7vw, 2.55rem);
+  --t-h1: clamp(2.1rem, 1.45rem + 3.1vw, 3.65rem);
+
+  --radius: 12px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgb(42 14 35 / 5%), 0 18px 40px -24px rgb(42 14 35 / 30%);
+  --wrap: 1160px;
+  --header-h: 74px;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-feature-settings: 'kern' 1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--plum);
+  color: var(--accent-fg);
+}
