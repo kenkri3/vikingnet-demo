@@ -1,0 +1,1018 @@
+/*
+  Arne Hansen Installasjon AS — layout og komponenter.
+  Ligger etter kit/base.css og theme.css. base.css gir rom, typografi og skjema;
+  her kommer identiteten: header med gul list, hero med gul ramme, tjenestekort,
+  forespørselsskjemaet i tre steg og kvitteringen.
+*/
+
+/* hidden-attributtet skal alltid vinne over display-regler i denne filen. */
+[hidden] {
+  display: none !important;
+}
+
+/* ---------- Knapper ---------- */
+
+.btn--ghost {
+  background: var(--papir);
+  border-color: var(--linje-sterk);
+}
+
+.btn--ghost:hover {
+  background: var(--gul-blek);
+  border-color: var(--blekk);
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  border-bottom: 1px solid var(--linje);
+  background: color-mix(in srgb, var(--flate) 90%, transparent);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 3px;
+  background: var(--gul);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 48px;
+  text-decoration: none;
+  color: var(--blekk);
+}
+
+.brand__mark {
+  display: block;
+  flex: none;
+  line-height: 0;
+}
+
+.brand__mark svg {
+  display: block;
+  width: 42px;
+  height: 42px;
+}
+
+.brand__text {
+  display: grid;
+  gap: 0.05rem;
+  line-height: 1.05;
+}
+
+.brand__text strong {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
+}
+
+.brand__text > span {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav {
+  align-items: center;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: var(--blekk);
+}
+
+.nav .nav__cta {
+  padding: 0.7rem 1.15rem;
+  margin-left: 0.2rem;
+  color: var(--accent-fg);
+  text-decoration: none;
+}
+
+.nav .nav__cta:hover {
+  color: var(--accent-fg);
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+
+  .nav.is-open {
+    display: flex;
+  }
+
+  .nav .nav__cta {
+    margin-top: 0.9rem;
+    padding: 0.85rem 1.2rem;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding-block: clamp(1.6rem, 3.6vw, 2.8rem) clamp(2rem, 5vw, 3.6rem);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: min(60%, 760px);
+  height: 78%;
+  background: radial-gradient(130% 110% at 100% 0%, rgb(255 209 0 / 22%), rgb(255 209 0 / 0) 62%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__text > *,
+  .hero__media {
+    animation: kom-inn 0.65s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  .hero__text > :nth-child(2) { animation-delay: 0.05s; }
+  .hero__text > :nth-child(3) { animation-delay: 0.11s; }
+  .hero__text > :nth-child(4) { animation-delay: 0.17s; }
+  .hero__media { animation-delay: 0.1s; }
+}
+
+@keyframes kom-inn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(1.6rem, 4vw, 3.4rem);
+  align-items: center;
+  position: relative;
+}
+
+.hero h1 {
+  margin-bottom: var(--s-3);
+  max-width: 15ch;
+}
+
+.hero .lead {
+  max-width: 44ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.hero__note {
+  margin: 1.1rem 0 0;
+  font-size: var(--t-sm);
+  color: var(--muted);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.hero__note::before {
+  content: '';
+  flex: none;
+  width: 14px;
+  height: 3px;
+  margin-top: 0.65em;
+  background: var(--gul);
+}
+
+.hero__media {
+  margin: 0;
+  position: relative;
+  background: var(--gul);
+  padding: 10px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.hero__badge {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  max-width: calc(100% - 44px);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--natt);
+  color: var(--pa-natt);
+  border-radius: 3px;
+  line-height: 1.25;
+}
+
+.hero__badge-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.55rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--gul);
+}
+
+.hero__badge-tekst {
+  font-size: 0.8rem;
+  max-width: 14ch;
+}
+
+@media (max-width: 900px) {
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.4rem, 4vw, 2rem);
+  }
+
+  .hero h1 {
+    max-width: 20ch;
+  }
+}
+
+/* ---------- Nøkkeltall ---------- */
+
+.proof {
+  background: var(--natt);
+  color: var(--pa-natt);
+}
+
+.proof__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding-block: 0;
+}
+
+.proof__item {
+  padding: clamp(1rem, 2.4vw, 1.5rem) clamp(0.85rem, 2vw, 1.4rem);
+  border-left: 1px solid rgb(244 243 238 / 16%);
+}
+
+.proof__item:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+
+.proof__num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 1.15rem + 1vw, 2.1rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--gul);
+  margin-bottom: 0.4rem;
+}
+
+.proof__label {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--pa-natt-demp);
+}
+
+@media (max-width: 860px) {
+  .proof__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .proof__item {
+    padding-inline: 0.9rem;
+    border-top: 1px solid rgb(244 243 238 / 16%);
+  }
+
+  .proof__item:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .proof__item:nth-child(-n + 2) {
+    border-top: 0;
+  }
+}
+
+/* ---------- Seksjonshoder ---------- */
+
+.section {
+  padding-block: clamp(2.4rem, 5.5vw, 4.6rem);
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 14px);
+}
+
+.seksjonshode {
+  max-width: 62ch;
+  margin-bottom: clamp(1.6rem, 3.2vw, 2.6rem);
+}
+
+.seksjonshode .lead {
+  margin-bottom: 0;
+}
+
+/* ---------- Tjenester ---------- */
+
+.tjenester__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.35rem);
+}
+
+.kort {
+  display: flex;
+  flex-direction: column;
+  background: var(--papir);
+  border: 1px solid var(--linje);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.kort__bilde {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid var(--linje);
+}
+
+.kort__kropp {
+  padding: clamp(1rem, 1.8vw, 1.35rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.kort h3 {
+  margin: 0;
+  font-size: var(--t-h3);
+}
+
+.kort p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.kort__merke {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--blekk) !important;
+}
+
+.kort__merke::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  background: var(--gul);
+}
+
+@media (max-width: 980px) {
+  .tjenester__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .tjenester__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Forespørsel ---------- */
+
+.svar {
+  position: relative;
+  background: var(--natt);
+  color: var(--pa-natt);
+  overflow: hidden;
+}
+
+.svar::before {
+  content: '';
+  position: absolute;
+  inset: -20% -12% auto auto;
+  width: min(620px, 70%);
+  height: 620px;
+  background: radial-gradient(circle at 70% 30%, rgb(255 209 0 / 20%), transparent 62%);
+  pointer-events: none;
+}
+
+.svar__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(1.6rem, 4vw, 3.2rem);
+  align-items: start;
+}
+
+.svar h2 {
+  color: var(--pa-natt);
+  max-width: 18ch;
+}
+
+.svar .lead,
+.svar__intro > p {
+  color: var(--pa-natt-demp);
+  max-width: 46ch;
+}
+
+.svar__steg {
+  list-style: none;
+  margin: 1.7rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.95rem;
+}
+
+.svar__steg li {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.svar__tall {
+  width: 30px;
+  height: 30px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(255 209 0 / 55%);
+  border-radius: 2px;
+  color: var(--gul);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.svar__steg strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  letter-spacing: -0.012em;
+}
+
+.svar__steg div > span {
+  font-size: 0.9rem;
+  color: var(--pa-natt-demp);
+}
+
+.skjemakort {
+  background: var(--papir);
+  color: var(--blekk);
+  border-radius: var(--radius);
+  padding: clamp(1.1rem, 2.4vw, 1.75rem);
+  box-shadow: 0 36px 70px -34px rgb(0 0 0 / 70%);
+}
+
+.foresp__topp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.foresp__stegtekst {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.foresp__prikker {
+  display: flex;
+  gap: 5px;
+}
+
+.foresp__prikker span {
+  width: 26px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--linje);
+}
+
+.foresp__prikker span.is-aktiv {
+  background: var(--gul);
+}
+
+.foresp__prikker span.is-ferdig {
+  background: var(--blekk);
+}
+
+.foresp__feil {
+  margin: 0 0 1rem;
+  padding: 0.7rem 0.85rem;
+  background: #fbeceb;
+  border: 1px solid #e8bab5;
+  border-radius: 3px;
+  color: #8c1d15;
+  font-size: 0.9rem;
+}
+
+.felt {
+  border: 0;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.felt__legend {
+  display: block;
+  padding: 0;
+  margin: 0 0 0.2rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.06rem;
+  letter-spacing: -0.015em;
+  color: var(--blekk);
+}
+
+.felt > span {
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+.felt input,
+.felt textarea,
+.felt select {
+  background: var(--papir);
+}
+
+.valg {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.valg label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 50px;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+  background: var(--papir-2);
+  font-size: 0.93rem;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.valg label:hover {
+  border-color: var(--linje-sterk);
+}
+
+.valg label::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  flex: none;
+  margin-left: auto;
+  border: 1px solid var(--linje-sterk);
+  border-radius: 50%;
+}
+
+.valg label:has(input:checked) {
+  border-color: var(--blekk);
+  background: var(--gul-blek);
+  box-shadow: inset 3px 0 0 var(--gul);
+}
+
+.valg label:has(input:checked)::after {
+  border-color: var(--blekk);
+  background: radial-gradient(circle, var(--blekk) 0 45%, transparent 46%);
+}
+
+.valg label:has(input:focus-visible) {
+  outline: 2px solid var(--blekk);
+  outline-offset: 2px;
+}
+
+.valg input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.valg input:focus {
+  outline: none;
+}
+
+.foresp__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.foresp__nav .btn {
+  min-width: 128px;
+}
+
+.foresp__nav > .btn:last-child {
+  margin-left: auto;
+}
+
+@media (max-width: 940px) {
+  .svar__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .svar h2 {
+    max-width: 24ch;
+  }
+}
+
+@media (max-width: 480px) {
+  .valg {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Kvittering ---------- */
+
+.kvittering__merke {
+  display: inline-block;
+  margin: 0;
+  padding: 0.22rem 0.55rem;
+  background: var(--gul);
+  border-radius: 2px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.kvittering__ref {
+  margin: 0.7rem 0 1.1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.kvittering__ref strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--blekk);
+}
+
+.kvittering__liste {
+  margin: 0 0 1rem;
+  padding: 0;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.kvittering__liste > div {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 0.7rem;
+  padding-block: 0.5rem;
+  border-bottom: 1px dashed var(--linje);
+}
+
+.kvittering__liste dt {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.15rem;
+}
+
+.kvittering__liste dd {
+  margin: 0;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.kvittering__hint {
+  margin: 0 0 1rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+#send-epost {
+  width: 100%;
+}
+
+.kvittering__knapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.55rem;
+}
+
+.kvittering__knapper .btn {
+  flex: 1 1 150px;
+}
+
+.kvittering__status {
+  margin: 0.6rem 0 0;
+  min-height: 1.2em;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ---------- Bedrift ---------- */
+
+.bedrift {
+  background: var(--flate-2);
+  border-block: 1px solid var(--linje);
+}
+
+.bedrift__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.bedrift__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.bedrift__liste li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.85rem 1rem;
+  background: var(--papir);
+  border: 1px solid var(--linje);
+  border-radius: 3px;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.hake {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin-top: 0.15rem;
+  border-radius: 50%;
+  background: var(--gul);
+}
+
+.hake::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid var(--blekk);
+  border-bottom: 2px solid var(--blekk);
+  transform: rotate(42deg);
+}
+
+@media (max-width: 900px) {
+  .bedrift__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Om oss ---------- */
+
+.om__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(1.6rem, 4vw, 3.2rem);
+  align-items: start;
+}
+
+.om__tekst p {
+  max-width: 58ch;
+}
+
+.tidslinje {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.4rem;
+  display: grid;
+  gap: 1.15rem;
+  border-left: 2px solid var(--linje-sterk);
+}
+
+.tidslinje li {
+  position: relative;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.tidslinje li::before {
+  content: '';
+  position: absolute;
+  left: calc(-1.4rem - 7px);
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gul);
+  border: 2px solid var(--flate);
+}
+
+.tidslinje__aar {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.tidslinje__tekst {
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .om__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- Kontakt ---------- */
+
+.kontakt__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: clamp(1.6rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.kontakt__handlinger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+}
+
+.kontaktkort {
+  margin: 0;
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  background: var(--papir);
+  border: 1px solid var(--linje);
+  border-radius: var(--radius);
+}
+
+.kontaktkort__rad {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: baseline;
+  padding-block: 0.55rem;
+  border-bottom: 1px solid var(--linje);
+}
+
+.kontaktkort__rad:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.kontaktkort__rad:first-child {
+  padding-top: 0;
+}
+
+.kontaktkort dt {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.kontaktkort dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.kontaktkort a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+@media (max-width: 900px) {
+  .kontakt__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .kontaktkort__rad {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--natt);
+  color: var(--pa-natt-demp);
+  border-top: 0;
+  padding-block: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.footer__grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.footer__merke {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.footer__navn {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: var(--pa-natt);
+}
+
+.footer__lenker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.3rem;
+}
+
+.footer__lenker a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--pa-natt);
+  font-size: 0.94rem;
+  text-decoration: none;
+}
+
+.footer__lenker a:hover {
+  color: var(--gul);
+  text-decoration: underline;
+}
+
+.footer__smatt {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--pa-natt-demp);
+}

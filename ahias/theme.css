@@ -1,0 +1,138 @@
+/*
+  Arne Hansen Installasjon AS — identitet.
+  Arketype: industriell, men lys. Fargene er hentet fra deres egen logo:
+  signalgul (#ffd100) og grå, med grafitt som tekstfarge. Gul brukes som
+  markør og handling, aldri som flate over store områder — siden skal leses
+  som et arbeidsdokument, ikke som en plakat.
+
+  To familier: Archivo i overskrifter, tall og merker; Instrument Sans i
+  brødteksten. Archivo er stram og maskinell, Instrument Sans er roligere.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Flater */
+  --flate: #f2f1ec;          /* lys betong */
+  --flate-2: #e9e8e1;        /* dypere, til bånd og kort */
+  --papir: #fffefb;          /* skjema og kort */
+  --papir-2: #faf9f4;
+
+  /* Blekk */
+  --blekk: #17191c;
+  --blekk-2: #26292c;
+  --muted: #575d5e;
+
+  /* Linjer */
+  --linje: #dcdbd2;
+  --linje-sterk: #b8b7aa;
+
+  /* Merkevare */
+  --gul: #ffd100;
+  --gul-dyp: #e8bd00;
+  --gul-lys: #fff8c9;
+  --gul-blek: #fffdf0;
+
+  /* Mørk flate */
+  --natt: #16181a;
+  --natt-2: #1e2124;
+  --pa-natt: #f4f3ee;
+  --pa-natt-demp: #adb0ad;
+
+  /* Kit-navnene, slik at base.css og kit-klassene virker uendret */
+  --bg: var(--flate);
+  --bg-soft: var(--flate-2);
+  --fg: var(--blekk);
+  --line: var(--linje);
+  --accent: var(--gul);
+  --accent-fg: var(--blekk);
+  --accent-soft: var(--gul-lys);
+
+  /* Typografi */
+  --font-display: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --t-h1: clamp(2.1rem, 1.35rem + 3.2vw, 3.7rem);
+  --t-h2: clamp(1.75rem, 1.25rem + 2.2vw, 2.85rem);
+  --t-h3: clamp(1.12rem, 1.02rem + 0.4vw, 1.32rem);
+  --t-lead: clamp(1.02rem, 0.98rem + 0.3vw, 1.18rem);
+
+  /* Form */
+  --radius: 5px;
+  --radius-sm: 3px;
+  --shadow: 0 1px 0 rgb(23 25 28 / 4%), 0 18px 40px -24px rgb(23 25 28 / 30%);
+  --wrap: 1160px;
+  --header-h: 72px;
+
+  --merke: var(--gul);
+}
+
+body {
+  background-color: var(--flate);
+  background-image: linear-gradient(180deg, #f7f6f1 0%, var(--flate) 38%);
+  background-repeat: no-repeat;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.028em;
+  line-height: 1.02;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+/* Gul markør under/rundt et ord i en overskrift. */
+.mark {
+  background-image: linear-gradient(180deg, transparent 58%, var(--gul) 58%, var(--gul) 94%, transparent 94%);
+  background-repeat: no-repeat;
+  padding-inline: 0.04em;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.eyebrow__dot {
+  width: 9px;
+  height: 9px;
+  background: var(--gul);
+  display: inline-block;
+  flex: none;
+}
+
+.eyebrow--lys {
+  color: var(--pa-natt-demp);
+}
+
+.lead {
+  color: var(--muted);
+}
+
+/* Fokus: gul ring forsvinner på lys flate, så vi bruker blekk her og
+   gul bare på de mørke båndene. */
+:focus-visible {
+  outline: 2px solid var(--blekk);
+  outline-offset: 3px;
+}
+
+.svar :focus-visible,
+.footer :focus-visible {
+  outline-color: var(--gul);
+}
+
+::selection {
+  background: var(--gul);
+  color: var(--blekk);
+}
