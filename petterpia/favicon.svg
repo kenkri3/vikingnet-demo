@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Petter og Pia">
+  <rect width="64" height="64" rx="14" fill="#a1dbb6"/>
+  <circle cx="19" cy="20" r="8.5" fill="#10140f"/>
+  <circle cx="45" cy="20" r="8.5" fill="#10140f"/>
+  <circle cx="32" cy="37" r="18" fill="#ffffff"/>
+  <ellipse cx="24" cy="34" rx="6.2" ry="7.2" fill="#10140f" transform="rotate(-14 24 34)"/>
+  <ellipse cx="40" cy="34" rx="6.2" ry="7.2" fill="#10140f" transform="rotate(14 40 34)"/>
+  <circle cx="24.5" cy="33.5" r="2.2" fill="#ffffff"/>
+  <circle cx="39.5" cy="33.5" r="2.2" fill="#ffffff"/>
+  <ellipse cx="32" cy="43" rx="3.6" ry="2.8" fill="#10140f"/>
+  <path d="M27.5 47.5c2.4 2.8 6.6 2.8 9 0" stroke="#10140f" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>

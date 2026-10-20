@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Saga Aluminium">
+  <defs>
+    <linearGradient id="glass" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#a7ddf5"/>
+      <stop offset="0.5" stop-color="#2a9cd8"/>
+      <stop offset="1" stop-color="#0b6ba8"/>
+    </linearGradient>
+    <linearGradient id="stål" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8d9aa4"/>
+      <stop offset="1" stop-color="#2b3740"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="9" fill="#0d1720"/>
+  <path d="M32 7.5 52.5 19.4v24.2L32 56.5 11.5 43.6V19.4z" fill="url(#glass)"/>
+  <path d="M32 7.5 52.5 19.4 32 31.3 11.5 19.4z" fill="#cdeefb" opacity="0.62"/>
+  <path d="M32 31.3v25.2L11.5 43.6V19.4z" fill="url(#stål)" opacity="0.9"/>
+</svg>

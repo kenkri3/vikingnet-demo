@@ -1,0 +1,101 @@
+/*
+  Incubeat AS — identitet.
+  Arketype: redaksjonell, men med mørk flate først. Paletten er hentet fra
+  deres egne bilder: morgentåke over skogen (papir), blekkblå kveldshimmel
+  (flate) og messinglyset i trekronene og i bankbygget (aksent). Logoen deres
+  er ren sort ordmerke, så aksenten må komme fra bildene.
+  Crimson Pro i overskriftene, DM Sans i brødteksten. To familier, ikke flere.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --paper: #f4f2ec;
+  --paper-2: #eae6dc;
+  --paper-3: #e0dacb;
+  --ink: #0b1620;
+  --ink-2: #10222e;
+  --ink-3: #17313f;
+
+  /* Tekst */
+  --fg: var(--ink);
+  --muted: #55606b;
+  --on-ink: #f3f0e8;
+  --on-ink-soft: #c8d2d9;
+  --on-ink-muted: #9dabb5;
+
+  /* Linjer */
+  --line: #d7d1c2;
+  --line-soft: #e5e0d3;
+  --line-ink: rgb(243 240 232 / 14%);
+  --line-ink-strong: rgb(243 240 232 / 26%);
+
+  /* Messing — eneste aksent, tre styrker */
+  --brass: #c2904f;
+  --brass-deep: #7f5522;
+  --brass-soft: #f0e4cf;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-2);
+  --accent: var(--brass-deep);
+  --accent-fg: #fbf7ef;
+  --accent-soft: var(--brass-soft);
+
+  /* To fonter */
+  --font-display: 'Crimson Pro', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typografi — litt større kontrast mellom display og brødtekst */
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.1rem, 1rem + 0.5vw, 1.32rem);
+  --t-h3: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
+  --t-h2: clamp(1.95rem, 1.35rem + 2.4vw, 3.15rem);
+  --t-h1: clamp(2.55rem, 1.35rem + 4.6vw, 4.5rem);
+
+  /* Form: lite avrunding, dette skal leses som papir og blekk */
+  --radius: 3px;
+  --radius-sm: 2px;
+
+  --wrap: 1160px;
+  --header-h: 72px;
+  --shadow: 0 1px 2px rgb(11 22 32 / 6%), 0 18px 40px -28px rgb(11 22 32 / 45%);
+}
+
+html {
+  background: var(--paper);
+  color-scheme: light;
+}
+
+body {
+  background: var(--paper);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  letter-spacing: -0.018em;
+}
+
+h1 {
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+h2 {
+  line-height: 1.06;
+}
+
+/* Brødteksten skal henge sammen med overskriftene uten å konkurrere */
+.lead {
+  font-size: var(--t-lead);
+  line-height: 1.6;
+}
+
+::selection {
+  background: var(--brass);
+  color: var(--ink);
+}

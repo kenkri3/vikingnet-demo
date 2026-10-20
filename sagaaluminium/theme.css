@@ -1,0 +1,53 @@
+/*
+  Saga Aluminium AS — identitet.
+  Paletten er hentet fra deres egen logo: aluminiumsgrå flate, blekksvart
+  ordmerke og glassblå fra hexagonen. Blåen er dempet til #0b6ba8 slik at den
+  holder AA-kontrast både som tekst på lys flate og som knappeflate med hvit tekst.
+
+  Arketype: presis, lys og teknisk — en tegneflate i aluminium, ikke en mørk
+  anleggsplakat. To familier: Syne i overskriftene, Manrope i brødteksten.
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --bg: #f2f5f7;            /* aluminium, kjølig lys grå */
+  --bg-soft: #e6ecf0;       /* tint til paneler og band */
+  --surface: #ffffff;
+  --fg: #10171d;            /* blekk, som ordmerket */
+  --fg-soft: #263039;
+  --muted: #56656f;
+  --line: #d3dce2;
+  --line-strong: #b6c3cc;
+
+  /* Glassblå — hentet fra logomerket */
+  --accent: #0b6ba8;
+  --accent-deep: #07507e;
+  --accent-bright: #1a9fdd;  /* bare strek og dekor */
+  --accent-soft: #e2eef7;
+  --accent-fg: #ffffff;
+  --accent-lys: #8ccfef;     /* lenker og merker på mørk flate */
+
+  /* Mørk flate (topplinje, band, footer) */
+  --ink: #0d1720;
+  --ink-2: #14232e;
+  --ink-fg: #eaf1f6;
+  --ink-muted: #9db0bd;
+
+  /* To familier, ikke flere */
+  --font-display: 'Syne', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Typografi */
+  --t-h1: clamp(2.05rem, 1.22rem + 3.2vw, 3.45rem);
+  --t-h2: clamp(1.75rem, 1.3rem + 1.9vw, 2.65rem);
+  --t-h3: clamp(1.12rem, 1.03rem + 0.4vw, 1.32rem);
+  --t-lead: clamp(1.06rem, 1rem + 0.42vw, 1.22rem);
+  --t-base: 1.0625rem;
+
+  /* Form: skarp og teknisk, ikke avrundet */
+  --radius: 3px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(13 23 32 / 5%), 0 14px 34px rgb(13 23 32 / 7%);
+  --wrap: 1180px;
+}

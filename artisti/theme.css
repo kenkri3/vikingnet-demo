@@ -1,0 +1,40 @@
+/*
+  Artisti — tema.
+  Paletten er hentet fra artisti.no sin egen stilark:
+  blekk #22293a, stål #72959f, lys stål #89b3bf, gul #f7b519,
+  lys gul #f2ce78 og salvie #9caf88. Sidens egne fonter er Manrope;
+  Young Serif brukes som display for å gi produktsiden et katalogpreg.
+*/
+
+:root {
+  --papir: #f4f1ea;
+  --papir-2: #ebe6db;
+  --blekk: #22293a;
+  --blekk-2: #2e3749;
+  --stal: #72959f;
+  --stal-lys: #89b3bf;
+  /* Mørkere stål brukes der stålfargen er tekst på papir — #72959f gir
+     bare 2,9:1 og er for lys til å leses. */
+  --stal-dyp: #4a6b76;
+  --gul: #f7b519;
+  --gul-lys: #f2ce78;
+  --salvie: #9caf88;
+
+  --bg: var(--papir);
+  --bg-soft: var(--papir-2);
+  --fg: var(--blekk);
+  --muted: #5a6172;
+  --line: #dcd6c8;
+  --accent: var(--gul);
+  --accent-fg: var(--blekk);
+  --accent-soft: #fbefd0;
+
+  --font-display: 'Young Serif', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-body: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --radius: 18px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgb(34 41 58 / 6%), 0 18px 40px rgb(34 41 58 / 10%);
+  --wrap: 1160px;
+  --header-h: 72px;
+}

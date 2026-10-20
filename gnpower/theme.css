@@ -1,0 +1,110 @@
+/*
+  GN Power Holding AS — identitet.
+  Arketype: redaksjonell, med en investors dokumentfølelse. Kald stein som
+  papir, blekk som tekst og én dyp oksblod som eneste aksent. Logoen deres er
+  svart og grå, så identiteten er monokrom — aksenten er den ene fargen som
+  ikke finnes i logoen, og som gir siden retning uten å konkurrere med den.
+
+  Typografi: Bodoni Moda i overskrifter (høy kontrast, tall i tabellstil),
+  Schibsted Grotesk i brødtekst. To familier, ikke flere.
+
+  Ligger etter kit/base.css og før styles.css.
+*/
+
+:root {
+  /* Flater */
+  --paper: #f1f1ed;
+  --paper-deep: #e7e8e2;
+  --surface: #fbfbf7;
+  --ink: #14181b;
+  --ink-lift: #1c2225;
+  --ink-deep: #0e1214;
+
+  /* Tekst */
+  --fg: var(--ink);
+  --muted: #55605e;
+  --on-ink: #efeee7;
+  --on-ink-muted: #a4aba6;
+
+  /* Linjer */
+  --line: #d5d7cf;
+  --line-strong: #b6bab0;
+  --line-ink: rgb(239 238 231 / 16%);
+  --line-ink-strong: rgb(239 238 231 / 32%);
+
+  /* Aksent: oksblod. Brukes til eyebrow, tallmarkering og én knapp. */
+  --accent: #6b2230;
+  --accent-deep: #4d1622;
+  --accent-fg: #ffffff;
+  --accent-soft: #f3e6e5;
+  --accent-line: #dcc0be;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --bg: var(--paper);
+  --bg-soft: var(--paper-deep);
+  --accent-soft-kit: var(--accent-soft);
+
+  /* To fonter */
+  --font-display: 'Bodoni Moda', 'Didot', Georgia, 'Times New Roman', serif;
+  --font-body: 'Schibsted Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Store bokstaver i display, luft i brødtekst */
+  --t-xs: 0.75rem;
+  --t-sm: 0.9rem;
+  --t-base: 1.0625rem;
+  --t-lead: clamp(1.1rem, 1.02rem + 0.42vw, 1.32rem);
+  --t-h3: clamp(1.18rem, 1.06rem + 0.5vw, 1.45rem);
+  --t-h2: clamp(1.95rem, 1.4rem + 2.15vw, 3.05rem);
+  --t-h1: clamp(2.5rem, 1.5rem + 4.4vw, 4.35rem);
+
+  /* Nesten rette hjørner: dette skal leses som et dokument, ikke et app-kort */
+  --radius: 4px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(14 18 20 / 5%), 0 18px 40px -24px rgb(14 18 20 / 26%);
+
+  --wrap: 1160px;
+  --header-h: 74px;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  letter-spacing: 0.002em;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  line-height: 1.02;
+}
+
+h1 {
+  font-size: var(--t-h1);
+}
+
+h2 {
+  font-size: var(--t-h2);
+}
+
+/* Små overskrifter i brødtekstfonten: Bodoni blir for tynn under 1.6rem */
+h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--t-h3);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+}
+
+p {
+  max-width: 68ch;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}

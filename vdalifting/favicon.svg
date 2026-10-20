@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VDA Lifting">
+  <rect width="64" height="64" rx="10" fill="#10161a"/>
+  <path d="M32 15 49 51M32 15 15 51" fill="none" stroke="#d9e321" stroke-width="9" stroke-linecap="square"/>
+  <rect x="15" y="51" width="34" height="5" fill="#d9e321"/>
+</svg>

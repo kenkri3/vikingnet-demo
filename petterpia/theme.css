@@ -1,0 +1,141 @@
+/*
+  Petter & Pia — identitet.
+  Fargene er hentet fra deres eget ordmerke: mintgrønn (#A1DBB6) fra
+  båndet i logoen og blekket fra bokstavene. Flaten under er varmt papir.
+  Arketype: varm/håndverk i lys, lekende variant — myk serif (Fraunces)
+  i overskriftene, humanistisk sans (Karla) i brødteksten. To fonter.
+
+  Rekkefølge i <head>: kit/base.css → theme.css → styles.css
+*/
+
+:root {
+  /* Logoens mintgrønn */
+  --mint: #a1dbb6;
+  --mint-bright: #bce9cc;
+  --mint-soft: #e6f4eb;
+  --mint-deep: #14563c;
+
+  /* Papir, blekk og linjer */
+  --bg: #fbf9f3;
+  --bg-soft: #f2eee2;
+  --surface: #ffffff;
+  --fg: #10140f;
+  --fg-soft: #2c342c;
+  --muted: #5b665a;
+  --line: #e4dece;
+  --line-strong: #d0c8b3;
+
+  /* Mørk flate: kundeservice og footer */
+  --ink: #0e130f;
+  --ink-soft: #171d18;
+  --on-ink: #f4f1e7;
+  --on-ink-muted: #a6b1a5;
+  --ink-line: #2a332b;
+
+  /* Kit-navnene, slik at base.css virker uendret */
+  --accent: #10140f;
+  --accent-fg: #fbf9f3;
+  --accent-soft: var(--mint-soft);
+
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Karla', 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+
+  --radius: 20px;
+  --radius-sm: 12px;
+  --wrap: 1180px;
+  --header-h: 76px;
+  --shadow-soft: 0 1px 2px rgb(16 20 15 / 5%), 0 22px 44px -22px rgb(16 20 15 / 22%);
+
+  --t-h1: clamp(2.6rem, 1.55rem + 4.6vw, 4.7rem);
+  --t-h2: clamp(1.95rem, 1.35rem + 2.3vw, 3.05rem);
+  --t-h3: clamp(1.12rem, 1rem + 0.55vw, 1.4rem);
+  --t-lead: clamp(1.04rem, 1rem + 0.45vw, 1.28rem);
+}
+
+::selection {
+  background: var(--mint);
+  color: var(--fg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-variation-settings: 'SOFT' 40, 'WONK' 0;
+  letter-spacing: -0.022em;
+}
+
+h1 {
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+h2 { line-height: 1.06; }
+h3 { line-height: 1.18; letter-spacing: -0.012em; }
+
+strong { font-weight: 700; }
+
+.eyebrow {
+  color: var(--muted);
+  letter-spacing: 0.16em;
+}
+
+.eyebrow--mint { color: var(--mint); }
+
+.lead { color: var(--muted); }
+
+:focus-visible {
+  outline: 2px solid var(--mint-deep);
+  outline-offset: 3px;
+}
+
+.btn {
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  min-height: 48px;
+  padding: 0.8rem 1.5rem;
+}
+
+.btn--lg {
+  min-height: 54px;
+  padding: 0.95rem 1.75rem;
+  font-size: 1.02rem;
+}
+
+.btn--full { width: 100%; }
+
+.btn--ink {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.btn--ink:hover { background: #1c241d; }
+
+.btn--mint {
+  background: var(--mint);
+  color: var(--fg);
+}
+
+.btn--mint:hover { background: var(--mint-bright); }
+
+.btn--line {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line-strong);
+}
+
+.btn--line:hover {
+  background: var(--surface);
+  border-color: var(--fg);
+}
