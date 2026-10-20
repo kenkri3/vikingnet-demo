@@ -237,7 +237,7 @@
   width: 100%;
   height: clamp(210px, 40vw, 500px);
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 10%;
 }
 
 .bildeband__tekst {
@@ -300,7 +300,7 @@
   font-family: var(--font-display);
   font-size: 0.8rem;
   letter-spacing: 0.14em;
-  color: var(--gold-2);
+  color: var(--gold-3);
 }
 
 .kontor__kort h3 {
@@ -357,7 +357,7 @@
   padding-top: 0.2rem;
   font-family: var(--font-display);
   font-size: 0.85rem;
-  color: var(--gold-2);
+  color: var(--gold-3);
 }
 
 .omrade h3 {

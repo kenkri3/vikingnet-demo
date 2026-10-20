@@ -59,30 +59,6 @@
     }
   }
 
-  /* ---------- Rolig innfasing av innhold ---------- */
-
-  var synlige = document.querySelectorAll('.reveal');
-  var rolig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  if ('IntersectionObserver' in window && !rolig) {
-    var observator = new IntersectionObserver(function (oppforinger) {
-      oppforinger.forEach(function (opp) {
-        if (opp.isIntersecting) {
-          opp.target.classList.add('is-visible');
-          observator.unobserve(opp.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
-
-    Array.prototype.forEach.call(synlige, function (el) {
-      observator.observe(el);
-    });
-  } else {
-    Array.prototype.forEach.call(synlige, function (el) {
-      el.classList.add('is-visible');
-    });
-  }
-
   /* ---------- Kalkulator på firmaets egne timesatser ---------- */
 
   var kalkulator = document.querySelector('[data-kalkulator]');

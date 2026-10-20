@@ -52,7 +52,7 @@ body {
 }
 
 .brand__logo {
-  width: 126px;
+  width: 140px;
   height: auto;
 }
 
@@ -66,6 +66,18 @@ body {
 
 .nav a:hover {
   color: var(--accent-deep);
+}
+
+.nav .nav__book {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .nav .nav__book {
+    display: inline-flex;
+    color: var(--accent-deep);
+    font-weight: 700;
+  }
 }
 
 .header__cta {
@@ -532,7 +544,7 @@ body {
   margin: 0.3rem 0 0;
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--accent-deep);
   letter-spacing: 0.02em;
 }
 
@@ -648,7 +660,7 @@ body {
   margin: 0 0 0.4rem;
   font-family: var(--font-display);
   font-size: 1rem;
-  color: var(--accent);
+  color: var(--accent-deep);
 }
 
 .perspektiv h3 {
@@ -734,8 +746,10 @@ body {
 .verdier {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.6rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-top: clamp(1.6rem, 4vw, 2.6rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
 }
 
 .verdi {
@@ -763,7 +777,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.9rem;
-  margin: 1.6rem 0 0;
+  margin: 1.4rem 0 0;
   padding: 0.85rem 1rem;
   background: var(--paper);
   border: 1px solid var(--line);
@@ -778,7 +792,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.7rem;
   font-weight: 400;
-  color: var(--accent);
+  color: var(--accent-deep);
   line-height: 1;
 }
 
@@ -1035,10 +1049,6 @@ body {
 
   .footer__grid {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .om__figur {
-    order: -1;
   }
 }
 
