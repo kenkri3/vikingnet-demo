@@ -1,0 +1,215 @@
+/*
+  Banzha — identitet.
+  Palett hentet fra kundens egen forside: Banzha-rød (#FC241D i headeren),
+  varm krem, blekk fra matfotografiene og en dyp urtgrønn fra urtebladene.
+  Lastes etter ../kit/base.css og før styles.css.
+*/
+
+:root {
+  --bg: #f8f2e7;
+  --bg-soft: #efe5d4;
+  --fg: #201a16;
+  --muted: #6c6157;
+  --line: #ddd1bd;
+
+  --accent: #d8271a;
+  --accent-fg: #fff8f0;
+  --accent-soft: #fbe6e0;
+
+  --ink: #17120f;
+  --ink-2: #251c16;
+  --sand: #efe5d3;
+  --rod: #d8271a;
+  --rod-lys: #fc241d;
+  --urt: #2e5340;
+  --gull: #b9853c;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --radius: 2px;
+  --radius-sm: 2px;
+  --shadow: 0 2px 4px rgb(32 24 18 / 4%), 0 22px 48px rgb(32 24 18 / 10%);
+  --wrap: 1160px;
+  --header-h: 76px;
+
+  --t-xs: 0.72rem;
+  --t-sm: 0.88rem;
+  --t-base: 1.04rem;
+  --t-lead: clamp(1.05rem, 0.98rem + 0.35vw, 1.2rem);
+  --t-h3: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
+  --t-h2: clamp(1.9rem, 1.4rem + 2.2vw, 3rem);
+  --t-h1: clamp(2.4rem, 1.45rem + 4.1vw, 4.4rem);
+}
+
+html {
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.62;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+
+h1 {
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  letter-spacing: -0.022em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.eyebrow {
+  color: var(--rod);
+  font-size: 0.7rem;
+  letter-spacing: 0.19em;
+  font-weight: 600;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+/* Knappene er runde og varme; kort og bilder er skarpe. Kontrasten er bevisst. */
+.btn {
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.005em;
+  padding: 0.8rem 1.5rem;
+  min-height: 46px;
+}
+
+.btn--ghost {
+  border-color: color-mix(in srgb, var(--fg) 22%, transparent);
+  color: var(--fg);
+}
+
+.btn--ghost:hover {
+  background: color-mix(in srgb, var(--fg) 5%, transparent);
+}
+
+.btn--lys {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.btn--omriss-lys {
+  background: transparent;
+  border-color: rgb(255 255 255 / 38%);
+  color: #fdf6ec;
+}
+
+.btn--omriss-lys:hover {
+  background: rgb(255 255 255 / 8%);
+}
+
+:focus-visible {
+  outline: 3px solid var(--rod);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--rod);
+  color: #fff8f0;
+}
+
+/* Logomerket er hvitt og trenger en rød flate, også i headeren. */
+.merke {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  min-height: 48px;
+  color: var(--ink);
+}
+
+.merke__chip {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: var(--rod-lys);
+  border-radius: 2px;
+  flex: none;
+}
+
+.merke__chip img {
+  width: 26px;
+  height: 28px;
+}
+
+.merke__tekst {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.merke__navn {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: 0.19em;
+}
+
+.merke__sted {
+  font-size: 0.64rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.nav a {
+  padding: 0.7rem 0.15rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: color-mix(in srgb, var(--fg) 82%, transparent);
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--rod);
+}
+
+.nav-toggle {
+  border-radius: 2px;
+  border-color: color-mix(in srgb, var(--fg) 20%, transparent);
+  background: transparent;
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .nav {
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 24px 40px rgb(32 24 18 / 12%);
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 1rem 0.15rem;
+    font-size: 1rem;
+    border-top: 1px solid var(--line);
+  }
+}

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banzha — Yunnan-kjøkken i Bergen | Bordbestilling og julebord</title>
+<meta name="description" content="Banzha lager yunnan-mat i Neumanns gate 28 i Bergen. Deleretter, julebord fra kr 799 per person og bordbestilling. Åpent 7 dager i uken.">
+<meta name="theme-color" content="#17120f">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Banzha">
+<meta property="og:title" content="Banzha — Yunnan-kjøkken i Bergen">
+<meta property="og:description" content="Kraftig mat fra Yunnan, midt i Bergen. Deleretter, julebord fra kr 799 per person og bordbestilling.">
+<meta property="og:image" content="img/hero-mat.jpg">
+<meta property="og:image:alt" content="Bordet dekket med deleretter fra Banzha">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo-merke.png" type="image/png">
+<link rel="apple-touch-icon" href="img/logo-merke.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap">
+
+<link rel="stylesheet" href="../kit/base.css">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topp">
+  <div class="wrap topp__inner">
+    <a class="merke" href="#topp">
+      <span class="merke__chip"><img src="img/logo-merke.png" alt="Banzha" width="26" height="28"></span>
+      <span class="merke__tekst">
+        <span class="merke__navn">BANZHA</span>
+        <span class="merke__sted">Yunnan · Bergen</span>
+      </span>
+    </a>
+
+    <nav class="nav topp__nav" id="hovedmeny" aria-label="Hovedmeny" data-nav hidden>
+      <a href="#retter">Meny</a>
+      <a href="#julebord">Julebord</a>
+      <a href="#kjokken">Kjøkkenet</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <a class="btn topp__cta" href="#book">Book bord</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hovedmeny" aria-label="Åpne meny" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="topp">
+
+  <section class="hero" aria-labelledby="hero-tittel">
+    <div class="wrap hero__grid">
+      <div class="hero__tekst">
+        <p class="eyebrow">Yunnan-kjøkken · Neumanns gate 28</p>
+        <h1 id="hero-tittel">Kraftig mat fra Yunnan, <em>midt i Bergen.</em></h1>
+        <p class="hero__ingress">Vi rister og maler krydderet selv, og setter rettene på bordet så dere kan dele. Banzha er yunnan-slang for fantastisk — det er følelsen vi vil at dere skal gå herfra med.</p>
+
+        <div class="hero__handlinger">
+          <a class="btn" href="#book">Book bord</a>
+          <a class="btn btn--ghost" href="#retter">Se menyen</a>
+        </div>
+
+        <dl class="fakta">
+          <div><dt>Åpent</dt><dd>7 dager i uken</dd></div>
+          <div><dt>Siden</dt><dd>2021</dd></div>
+          <div><dt>Grupper</dt><dd>Opptil 50</dd></div>
+          <div><dt>Kjøkken</dt><dd>Yunnan</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__media">
+        <div class="hero__ramme">
+          <img src="img/hero-mat.jpg" alt="Bordet dekket med dampgryte, ribbe, reker og grønnsaker fra Banzha" width="1000" height="1333" fetchpriority="high">
+        </div>
+
+        <form class="book-kort" id="heroBook" aria-labelledby="heroBookTittel">
+          <h2 id="heroBookTittel">Book bord</h2>
+          <p class="book-kort__hint">Velg gjester, dag og tid — så tar du resten i skjemaet.</p>
+          <div class="book-kort__felt">
+            <label>Gjester
+              <select id="heroGjester" name="gjester">
+                <option>2 gjester</option>
+                <option>3 gjester</option>
+                <option>4 gjester</option>
+                <option>5 gjester</option>
+                <option>6 gjester</option>
+                <option>7 gjester</option>
+                <option>8 gjester</option>
+                <option>9–20 gjester</option>
+                <option>21–50 gjester</option>
+              </select>
+            </label>
+            <label>Tid
+              <select id="heroTid" name="tid">
+                <option>17:00</option>
+                <option>17:30</option>
+                <option>18:00</option>
+                <option>18:30</option>
+                <option>19:00</option>
+                <option>19:30</option>
+                <option>20:00</option>
+                <option>20:30</option>
+                <option>21:00</option>
+              </select>
+            </label>
+            <label class="label--full">Dato
+              <input type="date" id="heroDato" name="dato">
+            </label>
+          </div>
+          <button class="btn" type="submit">Gå videre</button>
+          <p class="book-kort__skisse">Ledige tider hentes fra Banzhas bookingsystem. Tidene her er eksempler.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="julebord" id="julebord" aria-labelledby="julebord-tittel">
+    <div class="wrap julebord__grid">
+      <div class="julebord__tekst">
+        <p class="eyebrow">Julebord 2026 · 2. nov – 22. des</p>
+        <h2 id="julebord-tittel">Julebord med varme i.</h2>
+        <p>Vinterens delingsmeny samler varme yunnan-smaker og Banzha-favoritter rundt bordet. Seks deleretter og dessert, <strong>fra kr 799 per person</strong> — med drikkepakke til kr 599.</p>
+        <p>Fra to gjester. Vi tar imot grupper på opptil 50, og til større feiringer kan hele lokalet bookes.</p>
+        <div class="julebord__knapper">
+          <a class="btn" href="mailto:booking@banzha.no?subject=Julebord%202026">Book julebord</a>
+          <a class="btn btn--omriss-lys" href="tel:+4745729162">Ring 457 29 162</a>
+        </div>
+      </div>
+
+      <dl class="pris">
+        <div>
+          <dt>Per person</dt>
+          <dd>Fra kr 799<span>Seks deleretter og dessert</span></dd>
+        </div>
+        <div>
+          <dt>Drikkepakke</dt>
+          <dd>Kr 599<span>Per person</span></dd>
+        </div>
+        <div>
+          <dt>Grupper</dt>
+          <dd>2–50<span>Hele lokalet kan bookes</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="kjokken" id="kjokken" aria-labelledby="kjokken-tittel">
+    <div class="wrap kjokken__grid">
+      <div class="kjokken__tekst">
+        <p class="eyebrow">Kjøkkenet</p>
+        <h2 id="kjokken-tittel">Krydderet blir ristet og malt hos oss.</h2>
+        <p>Aromatikk er kjernen i kjøkkenet. Vi rister og maler krydderet fra grunnen av — det finnes få ting som slår lukten av fersk kinesisk femkrydder.</p>
+        <p>Menyen bygger på oppskrifter fra medeier Michelles oppvekst i Yunnan. Der møter hjemmelaget braisert tofu norsk ramsløk, og tradisjonelle oppskrifter får følge av sesongens råvarer.</p>
+        <blockquote class="sitat">
+          «Banzha er yunnan-slang for fantastisk.»
+          <cite>Banzha</cite>
+        </blockquote>
+        <p>Yunnan er en av Kinas mest mangfoldige mattradisjoner: friske urter, aromatiske krydder og tydelige smaker.</p>
+      </div>
+
+      <div class="kjokken__media">
+        <div class="kjokken__stor">
+          <img src="img/krydder.jpg" alt="Stjerneanis, pepper og krydder som ristes i en wok" width="1200" height="800" loading="lazy">
+        </div>
+        <div class="kjokken__liten">
+          <img src="img/rett-tofu.jpg" alt="Sprøstekt tofu med urtesaus og koriander" width="820" height="1025" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="retter" id="retter" aria-labelledby="retter-tittel">
+    <div class="wrap">
+      <div class="retter__topp">
+        <div>
+          <p class="eyebrow">Fra menyen</p>
+          <h2 id="retter-tittel">Rettene vi deler.</h2>
+        </div>
+        <p>Utvalgte retter fra menyen. Navnene er Banzhas egne, og hele menyen ligger hos dem.</p>
+      </div>
+
+      <div class="retter__grid">
+        <article class="rett">
+          <div class="rett__bilde">
+            <img src="img/rett-dampgryte.jpg" alt="Dampet kylling i leirgryte med lokket løftet av" width="820" height="1025" loading="lazy">
+          </div>
+          <div class="rett__kropp">
+            <p class="rett__merke">Delerett</p>
+            <h3>Steam pot chicken</h3>
+            <p>Kylling dampet i leirgryte.</p>
+          </div>
+        </article>
+
+        <article class="rett">
+          <div class="rett__bilde">
+            <img src="img/rett-ribs.jpg" alt="Ribbe med frisk mynte i en dyp skål" width="820" height="1025" loading="lazy">
+          </div>
+          <div class="rett__kropp">
+            <p class="rett__merke">Delerett</p>
+            <h3>Peppermint Ribs</h3>
+            <p>Ribbe med mynte.</p>
+          </div>
+        </article>
+
+        <article class="rett">
+          <div class="rett__bilde">
+            <img src="img/rett-biff.jpg" alt="Marinert biff i chiliolje med sesam og vårløk" width="820" height="1025" loading="lazy">
+          </div>
+          <div class="rett__kropp">
+            <p class="rett__merke">Delerett</p>
+            <h3>Marinated Beef</h3>
+            <p>Marinert biff.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="retter__fot">
+        <p><strong>Vegetar?</strong> Ja. Flere retter er vegetariske, med sesongens grønnsaker, tofu, sopp og hjemmelagde sauser. <strong>Sterkt?</strong> Ikke alt — vi har både milde og kraftige retter, og personalet hjelper dere å velge.</p>
+        <a class="btn btn--ghost" href="https://www.banzha.no/s/Menu-Oct.pdf" target="_blank" rel="noopener">Se hele menyen</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="presse" id="presse" aria-labelledby="presse-tittel">
+    <div class="wrap presse__inner">
+      <h2 class="presse__lbl" id="presse-tittel">Omtalt i</h2>
+      <a class="presse__lenke" href="https://www.ba.no/banzha-far-kjempeskryt-av-bas-matanmelder/v/5-8-3353839" target="_blank" rel="noopener">Bergensavisen</a>
+      <a class="presse__lenke" href="https://www.bt.no/kultur/i/a7RMX4/smaksbonanza-paa-banzha" target="_blank" rel="noopener">Bergens Tidende</a>
+      <a class="presse__lenke" href="https://www.dn.no/smak/restaurantguiden/restauranter/restaurantanmeldelse/salt-og-pepper/i-kina-spiser-de-furu/2-1-1331207" target="_blank" rel="noopener">DN</a>
+      <a class="presse__lenke" href="https://www.godt.no/anmeldelser/restaurant/i/qWllGz/restaurantanmeldelse-av-banzha-oppskriften-paa-suksess" target="_blank" rel="noopener">Godt</a>
+    </div>
+  </section>
+
+  <section class="book" id="book" aria-labelledby="book-tittel">
+    <div class="wrap">
+      <p class="eyebrow">Bordbestilling</p>
+      <h2 id="book-tittel">Book bordet deres.</h2>
+      <p class="lead">Velg gjester, dag og tid, og fyll inn hvem som kommer. Vi lager en ferdig forespørsel du sender med ett trykk.</p>
+
+      <div class="book__grid">
+        <div class="book__panel">
+          <div class="book__steg" aria-hidden="true">
+            <span class="er-aktiv" data-prikk="1"></span>
+            <span data-prikk="2"></span>
+          </div>
+          <p class="book__status" id="book-status" aria-live="polite">Steg 1 av 2 · Gjester og tid</p>
+
+          <form id="bookForm" novalidate>
+            <div data-panel="1">
+              <h3>Gjester og tid</h3>
+              <div class="book__felt">
+                <label>Antall gjester
+                  <select id="gjester" name="gjester">
+                    <option>2 gjester</option>
+                    <option>3 gjester</option>
+                    <option>4 gjester</option>
+                    <option>5 gjester</option>
+                    <option>6 gjester</option>
+                    <option>7 gjester</option>
+                    <option>8 gjester</option>
+                    <option>9–20 gjester</option>
+                    <option>21–50 gjester</option>
+                  </select>
+                </label>
+                <label>Anledning
+                  <select id="anledning" name="anledning">
+                    <option>Middag</option>
+                    <option>Julebord</option>
+                    <option>Gruppe eller feiring</option>
+                    <option>Lunsj</option>
+                    <option>Annet</option>
+                  </select>
+                </label>
+                <label>Dato
+                  <input type="date" id="dato" name="dato" required>
+                </label>
+                <label>Tid
+                  <select id="tid" name="tid">
+                    <option value="">Velg tid</option>
+                    <option>17:00</option>
+                    <option>17:30</option>
+                    <option>18:00</option>
+                    <option>18:30</option>
+                    <option>19:00</option>
+                    <option>19:30</option>
+                    <option>20:00</option>
+                    <option>20:30</option>
+                    <option>21:00</option>
+                  </select>
+                </label>
+              </div>
+              <p class="book__feil" id="feil-steg1" hidden></p>
+              <div class="book__nav">
+                <button type="button" class="btn" id="neste">Neste</button>
+              </div>
+            </div>
+
+            <div data-panel="2" hidden>
+              <h3>Hvem kommer?</h3>
+              <div class="book__felt">
+                <label>Navn
+                  <input id="navn" name="navn" type="text" autocomplete="name" required>
+                </label>
+                <label>Telefon
+                  <input id="telefon" name="telefon" type="tel" autocomplete="tel" required>
+                </label>
+                <label class="label--full">E-post
+                  <input id="epost" name="epost" type="email" autocomplete="email" required>
+                </label>
+                <label class="label--full">Melding <span class="small muted">(valgfritt)</span>
+                  <textarea id="melding" name="melding" rows="3"></textarea>
+                </label>
+              </div>
+              <p class="book__feil" id="feil-steg2" hidden></p>
+              <div class="book__nav">
+                <button type="button" class="btn btn--ghost" id="tilbake">Tilbake</button>
+                <button type="submit" class="btn" id="send">Send forespørsel</button>
+              </div>
+            </div>
+
+            <p class="book__skisse">Skisse: skjemaet lagrer ingenting. Forespørselen åpnes i e-postprogrammet ditt, adressert til booking@banzha.no.</p>
+          </form>
+
+          <div class="kvittering" id="kvittering" hidden>
+            <h3>Forespørselen er klar</h3>
+            <p class="kvittering__ref" id="kv-ref">BZ-000000-0000</p>
+            <dl class="kvittering__liste">
+              <div><dt>Gjester</dt><dd id="kv-gjester"></dd></div>
+              <div><dt>Dato</dt><dd id="kv-dato"></dd></div>
+              <div><dt>Tid</dt><dd id="kv-tid"></dd></div>
+              <div><dt>Anledning</dt><dd id="kv-anledning"></dd></div>
+            </dl>
+            <div class="kvittering__knapper">
+              <a class="btn" id="kv-send" href="mailto:booking@banzha.no">Åpne e-post med forespørselen</a>
+              <button type="button" class="btn btn--ghost" id="kv-ny">Ny forespørsel</button>
+            </div>
+            <p class="book__skisse">Ingenting er sendt ennå. Forespørselen går fra din egen e-post når du trykker send.</p>
+          </div>
+        </div>
+
+        <aside class="book__side" aria-labelledby="sum-tittel">
+          <h3 id="sum-tittel">Deres bord</h3>
+          <dl class="book__side-liste">
+            <div><dt>Gjester</dt><dd id="sum-gjester">Ikke valgt</dd></div>
+            <div><dt>Dato</dt><dd id="sum-dato">Ikke valgt</dd></div>
+            <div><dt>Tid</dt><dd id="sum-tid">Ikke valgt</dd></div>
+            <div><dt>Anledning</dt><dd id="sum-anledning">Middag</dd></div>
+          </dl>
+          <p class="book__side-fot">Flere enn 50 gjester, catering eller hele lokalet? Skriv til booking@banzha.no.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="flater" id="flater" aria-labelledby="flater-tittel">
+    <div class="wrap">
+      <p class="eyebrow">Mer fra Banzha</p>
+      <h2 id="flater-tittel">Lunsj, takeaway og gavekort.</h2>
+
+      <div class="flater__grid">
+        <article class="flate flate--bred">
+          <div class="flate__bilde">
+            <img src="img/lunsj.jpg" alt="Nudelsalat med urter, agurk og chili som vendes med saus" width="900" height="600" loading="lazy">
+          </div>
+          <div class="flate__kropp">
+            <h3>Lunsj på kontoret</h3>
+            <p>Hver torsdag leverer Banzha nudelsalat til kontorer i Bergen, sammen med Lunsjkollektivet.</p>
+            <a class="flate__lenke" href="https://lunsjkollektivet.no/" target="_blank" rel="noopener">Bestill lunsj hos Lunsjkollektivet →</a>
+          </div>
+        </article>
+
+        <article class="flate">
+          <div class="flate__kropp">
+            <span class="flate__ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 8h12l-1 12H7L6 8Z"></path>
+                <path d="M9 8V6.5a3 3 0 0 1 6 0V8"></path>
+              </svg>
+            </span>
+            <h3>Takeaway</h3>
+            <p>Vil du spise hjemme? Maten bestilles via Foodora.</p>
+            <a class="flate__lenke" href="https://www.foodora.no/restaurant/ry7l/banzha" target="_blank" rel="noopener">Bestill på Foodora →</a>
+          </div>
+        </article>
+
+        <article class="flate">
+          <div class="flate__kropp">
+            <span class="flate__ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 9h16v11H4z"></path>
+                <path d="M4 9V7h16v2"></path>
+                <path d="M12 9v11"></path>
+                <path d="M12 7c-1.4-2.2-3-2.6-4-1.7-1 .9-.4 1.7 4 1.7Zm0 0c1.4-2.2 3-2.6 4-1.7 1 .9.4 1.7-4 1.7Z"></path>
+              </svg>
+            </span>
+            <h3>Gavekort</h3>
+            <p>Gi bort et måltid. Banzha selger digitale gavekort i nettbutikken.</p>
+            <a class="flate__lenke" href="https://banzha.munu.shop/" target="_blank" rel="noopener">Kjøp gavekort →</a>
+          </div>
+        </article>
+
+        <article class="flate">
+          <div class="flate__kropp">
+            <span class="flate__ikon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="6" width="16" height="14" rx="1"></rect>
+                <path d="M4 10h16M9 4v4M15 4v4"></path>
+              </svg>
+            </span>
+            <h3>Julebord</h3>
+            <p>Vinterens delingsmeny passer for grupper og feiringer, fra 2. november.</p>
+            <a class="flate__lenke" href="#julebord">Se julebordmenyen →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="kontakt" id="kontakt" aria-labelledby="kontakt-tittel">
+    <div class="wrap kontakt__grid">
+      <div class="kontakt__bilde">
+        <img src="img/inngang.jpg" alt="Inngangen til Banzha i Neumanns gate 28 i Bergen" width="800" height="1067" loading="lazy">
+      </div>
+
+      <div class="kontakt__tekst">
+        <p class="eyebrow">Finn oss</p>
+        <h2 id="kontakt-tittel">Neumanns gate 28.</h2>
+        <p>Vi holder til i Neumanns gate 28 i Bergen, og har åpent alle dager. Ledige tider for bordbestilling ligger i bookingsystemet.</p>
+
+        <dl class="kontakt__liste">
+          <div class="kontakt__rad"><dt>Adresse</dt><dd>Neumanns gate 28, 5015 Bergen</dd></div>
+          <div class="kontakt__rad"><dt>Telefon</dt><dd><a href="tel:+4745729162">+47 457 29 162</a></dd></div>
+          <div class="kontakt__rad"><dt>Bordbestilling</dt><dd><a href="mailto:booking@banzha.no">booking@banzha.no</a></dd></div>
+          <div class="kontakt__rad"><dt>Åpent</dt><dd>7 dager i uken</dd></div>
+          <div class="kontakt__rad"><dt>Kart</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Neumanns+gate+28,+5015+Bergen" target="_blank" rel="noopener">Se kart</a></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-tittel">
+    <div class="wrap faq__grid">
+      <div>
+        <p class="eyebrow">Spørsmål</p>
+        <h2 id="faq-tittel">Det folk spør om.</h2>
+        <p class="muted">Svarene er hentet fra Banzhas egen FAQ.</p>
+        <a class="btn btn--ghost faq__cta" href="#book">Book bord</a>
+      </div>
+
+      <div class="faq__liste">
+        <details>
+          <summary>Hva er yunnan-kjøkken?</summary>
+          <p>Yunnan-kjøkkenet er en av Kinas mest mangfoldige mattradisjoner. Det kommer fra sørvest i Kina og er kjent for friske urter, aromatiske krydder og tydelige smaker. Kjøkkenet blander kinesiske teknikker med smaker fra Sørøst-Asia, og 25 etniske minoriteter setter preg på maten.</p>
+        </details>
+        <details>
+          <summary>Er maten sterk?</summary>
+          <p>Mange retter fra Yunnan har chili, men ikke alt er sterkt. Vi har retter fra milde og aromatiske til kraftige og sterke, og personalet hjelper deg å velge.</p>
+        </details>
+        <details>
+          <summary>Har dere vegetar?</summary>
+          <p>Ja. Vi har flere vegetariske retter inspirert av yunnan-kjøkkenet, med sesongens grønnsaker, tofu, sopp, urter og hjemmelagde sauser.</p>
+        </details>
+        <details>
+          <summary>Tar dere imot grupper?</summary>
+          <p>Ja. Vi tar imot firmamiddager, afterwork, bursdager og private arrangementer, og delingsmenyene passer for grupper.</p>
+        </details>
+        <details>
+          <summary>Kan dere catere i Bergen?</summary>
+          <p>Ja. Vi leverer catering til private og bedrifter i Bergen, med delingsmenyer inspirert av yunnan-kjøkkenet.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bunn">
+  <div class="wrap">
+    <div class="bunn__grid">
+      <div class="bunn__merke">
+        <img class="bunn__logo" src="img/logo-hvit.png" alt="Banzha" width="700" height="605" loading="lazy">
+        <p class="bunn__tekst">Yunnan-kjøkken i Bergen. Deling, krydder og mat laget fra grunnen av.</p>
+        <p class="bunn__tekst">BANZHA AS · Org.nr 926 781 642</p>
+      </div>
+
+      <div>
+        <p class="bunn__tittel">Besøk</p>
+        <p class="bunn__tekst">Neumanns gate 28<br>5015 Bergen</p>
+        <p><a href="tel:+4745729162">+47 457 29 162</a></p>
+        <p><a href="mailto:booking@banzha.no">booking@banzha.no</a></p>
+      </div>
+
+      <div>
+        <p class="bunn__tittel">Sider</p>
+        <p><a href="#retter">Meny</a></p>
+        <p><a href="#julebord">Julebord</a></p>
+        <p><a href="#book">Book bord</a></p>
+        <p><a href="#kontakt">Kontakt</a></p>
+        <p><a href="#faq">Spørsmål</a></p>
+      </div>
+    </div>
+
+    <div class="bunn__slutt">
+      <p>© <span data-year>2026</span> BANZHA AS</p>
+      <p>Foto: Banzha · Nettside levert av Vikingnet</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../kit/app.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
