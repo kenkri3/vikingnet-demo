@@ -1,0 +1,14 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #e6f1f9;
+  --fg: #0a161b;
+  --muted: #55666d;
+  --line: #cce4f2;
+  --accent: 0076c0;
+  --accent-fg: #ffffff;
+  --accent-soft: #dbecf6;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 10px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
