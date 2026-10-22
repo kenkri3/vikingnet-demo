@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nb_NO" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../kit/base.css" />
 <link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles.css" />
@@ -30,56 +30,27 @@
 </header>
 <main id="topp">
 
-<section class="hero hero--overlay">
-  <div class="hero__media"><img src="img/1-basis-no.jpg" alt="BASIS.NO AS" width="1200" height="630" fetchpriority="high" /></div>
+<section class="hero hero--fullbredde">
+  <div class="hero__bg"><img src="img/1-basis-no.jpg" alt="BASIS.NO AS" width="1200" height="630" /></div>
   <div class="wrap hero__inner">
-    <div class="hero__copy">
-      <p class="eyebrow">SaaS/tech</p>
-      <h1>Run anything on basis. Run SAP Kubernetes integrations anything anything on basis .</h1>
-      <p class="lead">basis.no hosts and operates business-critical systems for Norwegian and international companies, in our own data centres and with our own engineers.</p>
-      <div class="hero__cta">
-        <a class="btn" href="#kontakt">Be om tilbud</a>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="statement">
-  <div class="wrap">
-    <p class="statement__tekst">Appearance Talk to an engineer Drag to turn it, or use the arrow keys; it stays where you leave it. Press Enter to spin it back.</p>
-  </div>
+      <div class="hero__copy ">
+        <p class="eyebrow">SaaS/tech</p>
+        <h1>Run anything on basis. Run SAP Kubernetes integrations anything anything on basis .</h1>
+        <p class="lead">basis.no hosts and operates business-critical systems for Norwegian and international companies, in our own data centres and with our own engineers.</p>
+        <div class="hero__cta"><a class="btn" href="#kontakt">Be om tilbud</a></div>
+      </div></div>
 </section>
 
 <section class="section" id="tjenester">
   <div class="wrap">
-    <div class="seksjonshode">
-      <h2>Dette gjør vi</h2>
-      
-    </div>
-    <div class="tjenester tjenester--mange">
-      <article class="tjeneste">
-        <h3>Your clusters, or your whole application</h3>
-        <p>With Kubernetes PaaS, we keep your clusters running. With Managed Kubernetes, we also deploy and operate your application, under one SLA.</p>
-      </article><article class="tjeneste">
-        <h3>Integrations you own</h3>
-        <p>Integration code in your own repository. We build it, deliver it to production and run it.</p>
-      </article><article class="tjeneste">
-        <h3>Odoo, hosted and operated</h3>
-        <p>Odoo Community and Enterprise on our own platform, with continuous backup, private network access and support around the clock. From €500 per month.</p>
-      </article><article class="tjeneste">
-        <h3>Agreed uptime. Engineers who answer</h3>
-        <p>99.9% SAP application uptime SLA. The application itself, not just the servers.</p>
-      </article><article class="tjeneste">
-        <h3>A small team. Long customer relationships</h3>
-        <p>1999 Founded as SAP Basis consultants ~40 Employees, headquartered in Oslo ~50 Customers “basis.no has reliable hosting, excellent customer service, proactive system management and a quick response time to meet our business needs. They have built a top-notch team of customer-driven professionals who are a</p>
-      </article><article class="tjeneste">
-        <h3>Tell us about your systems</h3>
-        <p>Describe what you run today and what you need. An engineer reads your message and replies with a proposed setup.</p>
-      </article>
-    </div>
+    
+      <div class="seksjonshode"><h2>Dette gjør vi</h2></div>
+    <ul class="tjenester tjenester--rader">
+      <li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">01</span><div><h3>Your clusters, or your whole application</h3><p>With Kubernetes PaaS, we keep your clusters running. With Managed Kubernetes, we also deploy and operate your application, under one SLA.</p></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">02</span><div><h3>Integrations you own</h3><p>Integration code in your own repository. We build it, deliver it to production and run it.</p></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">03</span><div><h3>Odoo, hosted and operated</h3><p>Odoo Community and Enterprise on our own platform, with continuous backup, private network access and support around the clock. From €500 per month.</p></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">04</span><div><h3>Agreed uptime. Engineers who answer</h3><p>99.9% SAP application uptime SLA. The application itself, not just the servers.</p></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">05</span><div><h3>A small team. Long customer relationships</h3><p>1999 Founded as SAP Basis consultants ~40 Employees, headquartered in Oslo ~50 Customers “basis.no has reliable hosting, excellent customer service, proactive system management and a quick response time to meet our business needs. They have built a top-notch team of customer-driven professionals who are a</p></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">06</span><div><h3>Tell us about your systems</h3><p>Describe what you run today and what you need. An engineer reads your message and replies with a proposed setup.</p></div></li>
+    </ul>
   </div>
 </section>
+
 
 <div class="fakta">
   <div class="wrap fakta__inner">
@@ -89,7 +60,8 @@
 
 <section class="section prosess">
   <div class="wrap">
-    <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
+    
+      <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
     <ol class="steg">
       <li class="steg__item"><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Ring eller send skjemaet, og fortell kort hva du trenger.</p></li><li class="steg__item"><span class="steg__nr">02</span><h3>Vi avtaler befaring</h3><p>Vi ser på forholdene og snakker gjennom hva som skal gjøres.</p></li><li class="steg__item"><span class="steg__nr">03</span><h3>Du får skriftlig tilbud</h3><p>Du vet hva jobben koster før den starter.</p></li>
     </ol>
@@ -108,7 +80,7 @@
 
 <section class="section flere">
   <div class="wrap flere__grid">
-    <div class="flere__hode"><h2>Mer om det vi gjør</h2></div>
+    <h2>Mer om det vi gjør</h2>
     <div class="flere__tekst"><p>With Kubernetes PaaS, we keep your clusters running. With Managed Kubernetes, we also deploy and operate your application, under one SLA.</p><p>Integration code in your own repository. We build it, deliver it to production and run it.</p></div>
   </div>
 </section>
@@ -122,16 +94,15 @@
 
 <section class="section kontakt" id="kontakt">
   <div class="wrap kontakt__grid">
-    <div>
+    <div class="kontakt__info">
       <h2>Ta kontakt</h2>
       <ul class="kontakt__liste">
         
         <li><span>E-post</span><a href="mailto:kontakt@basis.no">kontakt@basis.no</a></li>
         
-        
       </ul>
     </div>
-    <form class="kort kontakt__skjema" data-contact-form data-mailto="kontakt@basis.no" data-subject="Henvendelse fra nettsiden">
+    <form class="kontakt__skjema" data-contact-form data-mailto="kontakt@basis.no" data-subject="Henvendelse fra nettsiden">
       <h3>Send en henvendelse</h3>
       <label>Navn<input type="text" name="Navn" required placeholder="Fornavn Etternavn" /></label>
       <div class="kontakt__rad">
