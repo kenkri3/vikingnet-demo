@@ -1,14 +1,19 @@
 :root {
   --bg: #faf6ef;
-  --bg-soft: #e6eaef;
+  --bg-soft: #NaNe7f8;
   --fg: #2a2118;
   --muted: #6d6152;
-  --line: #ccd5df;
+  --line: #NaNd0f0;
   --accent: #012b5d;
   --accent-fg: #ffffff;
-  --accent-soft: #dbe1e8;
-  --font-display: 'Bitter', Georgia, serif;
-  --font-body: 'Karla', system-ui, sans-serif;
+  --accent-soft: #NaNdef5;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
   --radius: 10px;
+  --h1-size: clamp(2.3rem,1.4rem+3vw,3.6rem);
+  --h1-track: -0.01em;
+  --h1-lh: 1.08;
+  --h1-weight: 600;
 }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-display); }
+h1 { font-size: var(--h1-size); letter-spacing: var(--h1-track); line-height: var(--h1-lh); font-weight: var(--h1-weight); }
