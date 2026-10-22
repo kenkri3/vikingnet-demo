@@ -1,0 +1,14 @@
+:root {
+  --bg: #faf6ef;
+  --bg-soft: #e8effc;
+  --fg: #2a2118;
+  --muted: #6d6152;
+  --line: #d1e0f8;
+  --accent: 1863dc;
+  --accent-fg: #ffffff;
+  --accent-soft: #dfe9fa;
+  --font-display: 'Bitter', Georgia, serif;
+  --font-body: 'Karla', system-ui, sans-serif;
+  --radius: 10px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
