@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nb_NO" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../kit/base.css" />
 <link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles.css" />
@@ -30,52 +30,14 @@
 </header>
 <main id="topp">
 
-<section class="hero hero--tekst">
-  
+<section class="hero hero--typografisk">
   <div class="wrap hero__inner">
-    <div class="hero__copy">
-      <p class="eyebrow">butikk</p>
-      <h1>Butikk i Stavern</h1>
-      <p class="lead">Butikk i Stavern. Blomster og Interiør.</p>
-      <div class="hero__cta">
-        <a class="btn" href="#kontakt">Be om tilbud</a>
-        <a class="btn btn--ghost" href="tel:41483820">Ring 41483820</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="statement">
-  <div class="wrap">
-    <p class="statement__tekst">Søk Stavern Blomstermakeri Meny Vil du bestille blomster? Blomster til begravelse Produkter Kontakt oss Blogg Meny Søk Søk etter: Lukk søk Lukk meny Vil du bestille blomster?</p>
-  </div>
-</section>
-
-<section class="section" id="tjenester">
-  <div class="wrap">
-    <div class="seksjonshode">
-      <h2>Dette gjør vi</h2>
-      
-    </div>
-    <div class="tjenester tjenester--mange">
-      <article class="tjeneste">
-        <h3>Personopplysninger til tredjepart</h3>
-        <p>Stavern Blomstermakeri selger ikke personopplysninger til tredjepart, og vi bytter eller videreformidler heller ikke slik informasjon med tredjepart. Utenforstående kan bare få innsyn i opplysningene hvis dette er nødvendig for å utføre bestemte tjenester for Stavern Blomstermakeri.</p>
-      </article><article class="tjeneste">
-        <h3>Blomster til begravelse</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Vil du bestille blomster?</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Interiør og design</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Busker og trær</h3>
-        
-      </article>
-    </div>
-  </div>
+      <div class="hero__copy hero__copy--stor">
+        <p class="eyebrow">butikk</p>
+        <h1>Butikk i Stavern</h1>
+        <p class="lead">Butikk i Stavern. Blomster og Interiør.</p>
+        <div class="hero__cta"><a class="btn" href="#kontakt">Be om tilbud</a><a class="btn btn--ghost" href="tel:41483820">Ring 41483820</a></div>
+      </div></div>
 </section>
 
 <div class="fakta">
@@ -84,14 +46,16 @@
   </div>
 </div>
 
-<section class="section prosess">
+<section class="section" id="tjenester">
   <div class="wrap">
-    <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
-    <ol class="steg">
-      <li class="steg__item"><span class="steg__nr">01</span><h3>Se hva vi har</h3><p>Utvalget og det vi gjør står på siden. Er du i nærheten, stikk innom.</p></li><li class="steg__item"><span class="steg__nr">02</span><h3>Spør oss</h3><p>Ring, skriv eller kom innom — du får svar på det du lurer på.</p></li><li class="steg__item"><span class="steg__nr">03</span><h3>Vi tar det derfra</h3><p>Trenger du noe spesielt, finner vi ut av det sammen.</p></li>
-    </ol>
+    
+      <div class="seksjonshode"><h2>Dette gjør vi</h2></div>
+    <ul class="tjenester tjenester--rader">
+      <li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">01</span><div><h3>Personopplysninger til tredjepart</h3><p>Stavern Blomstermakeri selger ikke personopplysninger til tredjepart, og vi bytter eller videreformidler heller ikke slik informasjon med tredjepart. Utenforstående kan bare få innsyn i opplysningene hvis dette er nødvendig for å utføre bestemte tjenester for Stavern Blomstermakeri.</p></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">02</span><div><h3>Blomster til begravelse</h3></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">03</span><div><h3>Vil du bestille blomster?</h3></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">04</span><div><h3>Interiør og design</h3></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">05</span><div><h3>Busker og trær</h3></div></li>
+    </ul>
   </div>
 </section>
+
 
 <section class="section om" id="om">
   <div class="wrap om__grid">
@@ -105,8 +69,18 @@
 
 <section class="section flere">
   <div class="wrap flere__grid">
-    <div class="flere__hode"><h2>Mer om det vi gjør</h2></div>
+    <h2>Mer om det vi gjør</h2>
     <div class="flere__tekst"><p>Vi lager hver uke nydelige buketter, dekorasjoner og oppsatser. Kom innom å se hva vi har i butikken i dag.</p><p>Sjekk ut våre spennende og populære produkter i nettbutikken vår, ByWink. Vi sender til hele landet!</p></div>
+  </div>
+</section>
+
+<section class="section prosess">
+  <div class="wrap">
+    
+      <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
+    <ol class="steg">
+      <li class="steg__item"><span class="steg__nr">01</span><h3>Se hva vi har</h3><p>Utvalget og det vi gjør står på siden. Er du i nærheten, stikk innom.</p></li><li class="steg__item"><span class="steg__nr">02</span><h3>Spør oss</h3><p>Ring, skriv eller kom innom — du får svar på det du lurer på.</p></li><li class="steg__item"><span class="steg__nr">03</span><h3>Vi tar det derfra</h3><p>Trenger du noe spesielt, finner vi ut av det sammen.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -119,16 +93,15 @@
 
 <section class="section kontakt" id="kontakt">
   <div class="wrap kontakt__grid">
-    <div>
+    <div class="kontakt__info">
       <h2>Ta kontakt</h2>
       <ul class="kontakt__liste">
         <li><span>Telefon</span><a href="tel:41483820">41483820</a></li>
         <li><span>E-post</span><a href="mailto:stavernblomster@icloud.com">stavernblomster@icloud.com</a></li>
         
-        
       </ul>
     </div>
-    <form class="kort kontakt__skjema" data-contact-form data-mailto="stavernblomster@icloud.com" data-subject="Henvendelse fra nettsiden">
+    <form class="kontakt__skjema" data-contact-form data-mailto="stavernblomster@icloud.com" data-subject="Henvendelse fra nettsiden">
       <h3>Send en henvendelse</h3>
       <label>Navn<input type="text" name="Navn" required placeholder="Fornavn Etternavn" /></label>
       <div class="kontakt__rad">
