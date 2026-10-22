@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nb_NO" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Karla:wght@400;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../kit/base.css" />
 <link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles.css" />
@@ -30,18 +30,16 @@
 </header>
 <main id="topp">
 
-<section class="hero hero--split">
-  <div class="hero__media"><img src="img/1-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="960" height="779" fetchpriority="high" /></div>
+<section class="hero hero--splitt-hoyre">
   <div class="wrap hero__inner">
-    <div class="hero__copy">
-      <p class="eyebrow">Renhold/vaktmester</p>
-      <h1>Vi fornyer bygg. Og tar vare på dem.</h1>
-      <p class="lead">Eksperter på vedlikehold og drift av bygg i Oslo, Akershus og Østfold. Fra totalrenovering og enkle serviceoppdrag til fast kontakt for faste tilsyn.</p>
-      <div class="hero__cta">
-        <a class="btn" href="#kontakt">Be om tilbud</a>
-        <a class="btn btn--ghost" href="tel:48927170">Ring 48927170</a>
+    
+      <div class="hero__copy ">
+        <p class="eyebrow">Renhold/vaktmester</p>
+        <h1>Vi fornyer bygg. Og tar vare på dem.</h1>
+        <p class="lead">Eksperter på vedlikehold og drift av bygg i Oslo, Akershus og Østfold. Fra totalrenovering og enkle serviceoppdrag til fast kontakt for faste tilsyn.</p>
+        <div class="hero__cta"><a class="btn" href="#kontakt">Be om tilbud</a><a class="btn btn--ghost" href="tel:48927170">Ring 48927170</a></div>
       </div>
-    </div>
+    <figure class="hero__media"><img src="img/1-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="960" height="779" /></figure>
   </div>
 </section>
 
@@ -53,38 +51,20 @@
 
 <section class="section" id="tjenester">
   <div class="wrap">
-    <div class="seksjonshode">
-      <h2>Dette gjør vi</h2>
-      
-    </div>
-    <div class="tjenester tjenester--mange">
-      <article class="tjeneste">
-        <h3>Rammeavtale håndverk</h3>
-        <p>En håndverker som kjenner bygget. Ingen ny anbudsrunde for hver småjobb.</p>
-      </article><article class="tjeneste">
-        <h3>Send oss en melding</h3>
-        <p>Kontaktopplysninger og melding Fornavn Etternavn E-post * Telefon Eiendommens adresse Kort om behovet Opplysningene brukes til å svare på forespørselen din. Send en uforpliktende forespørsel →</p>
-      </article><article class="tjeneste">
-        <h3>Småfiks inntil 15 min per tilsyn</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Rapportering slik dere ønsker det</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Alt i Budsjett</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Sesongprofil etter behov</h3>
-        
-      </article>
-    </div>
+    
+      <div class="seksjonshode"><h2>Dette gjør vi</h2></div>
+    <ul class="tjenester tjenester--fliser">
+      <li class="tjeneste tjeneste--fliser"><h3>Rammeavtale håndverk</h3><p>En håndverker som kjenner bygget. Ingen ny anbudsrunde for hver småjobb.</p></li><li class="tjeneste tjeneste--fliser"><h3>Send oss en melding</h3><p>Kontaktopplysninger og melding Fornavn Etternavn E-post * Telefon Eiendommens adresse Kort om behovet Opplysningene brukes til å svare på forespørselen din. Send en uforpliktende forespørsel →</p></li><li class="tjeneste tjeneste--fliser"><h3>Småfiks inntil 15 min per tilsyn</h3></li><li class="tjeneste tjeneste--fliser"><h3>Rapportering slik dere ønsker det</h3></li><li class="tjeneste tjeneste--fliser"><h3>Alt i Budsjett</h3></li><li class="tjeneste tjeneste--fliser"><h3>Sesongprofil etter behov</h3></li>
+    </ul>
   </div>
 </section>
+
 <section class="section galleri">
   <div class="wrap">
-    <div class="seksjonshode"><h2>Fra arbeidet vårt</h2></div>
-    <div class="galleri__rutenett">
-      <figure class="galleri__bilde"><img src="img/2-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="800" height="600" loading="lazy" /></figure><figure class="galleri__bilde"><img src="img/3-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="800" height="600" loading="lazy" /></figure><figure class="galleri__bilde"><img src="img/4-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="1600" height="1200" loading="lazy" /></figure>
+    
+      <div class="seksjonshode"><h2>Fra arbeidet vårt</h2></div>
+    <div class="galleri__rutenett galleri__rutenett--3">
+      <figure><img src="img/2-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="800" height="600" loading="lazy" /></figure><figure><img src="img/3-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="800" height="600" loading="lazy" /></figure><figure><img src="img/4-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="1600" height="1200" loading="lazy" /></figure>
     </div>
   </div>
 </section>
@@ -95,20 +75,21 @@
       <h2>Om BYGGDRIFTEN.NO</h2>
       <p>Eksperter på vedlikehold av bygg og drift. Fra totalrenoveringer og enkle serviceoppdrag til en fast kontakt for faste tilsyn.</p><p>«Rask og presis. Demonterte gittergjerde i sameiet vårt.</p><p>Vi hjelper kunder i Oslo, gjennom Akershus og helt ned til Halden. Større prosjekter utenfor området tar vi også – vi kan reise dit jobben er.</p>
     </div>
-    <div class="om__bilde"><img src="img/2-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="800" height="600" loading="lazy" /></div>
+    <figure class="om__bilde om__bilde--stort"><img src="img/2-byggdriften-no.jpg" alt="BYGGDRIFTEN.NO AS" width="800" height="600" loading="lazy" /></figure>
   </div>
 </section>
 
 <section class="section flere">
   <div class="wrap flere__grid">
-    <div class="flere__hode"><h2>Mer om det vi gjør</h2></div>
+    <h2>Mer om det vi gjør</h2>
     <div class="flere__tekst"><p>Vaktmester Vi tar vare på bygget ditt med faste tilsyn, så små feil blir oppdaget før de blir dyre reparasjoner.</p><p>La oss ta en prat En liten jobb eller fast oppfølging? Fortell oss hva du trenger hjelp med.</p></div>
   </div>
 </section>
 
 <section class="section prosess">
   <div class="wrap">
-    <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
+    
+      <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
     <ol class="steg">
       <li class="steg__item"><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Ring eller send skjemaet, og fortell kort hva du trenger.</p></li><li class="steg__item"><span class="steg__nr">02</span><h3>Vi avtaler befaring</h3><p>Vi ser på forholdene og snakker gjennom hva som skal gjøres.</p></li><li class="steg__item"><span class="steg__nr">03</span><h3>Du får skriftlig tilbud</h3><p>Du vet hva jobben koster før den starter.</p></li>
     </ol>
@@ -124,16 +105,15 @@
 
 <section class="section kontakt" id="kontakt">
   <div class="wrap kontakt__grid">
-    <div>
+    <div class="kontakt__info">
       <h2>Ta kontakt</h2>
       <ul class="kontakt__liste">
         <li><span>Telefon</span><a href="tel:48927170">48927170</a></li>
         <li><span>E-post</span><a href="mailto:peter@byggdriften.no">peter@byggdriften.no</a></li>
         
-        
       </ul>
     </div>
-    <form class="kort kontakt__skjema" data-contact-form data-mailto="peter@byggdriften.no" data-subject="Henvendelse fra nettsiden">
+    <form class="kontakt__skjema" data-contact-form data-mailto="peter@byggdriften.no" data-subject="Henvendelse fra nettsiden">
       <h3>Send en henvendelse</h3>
       <label>Navn<input type="text" name="Navn" required placeholder="Fornavn Etternavn" /></label>
       <div class="kontakt__rad">
