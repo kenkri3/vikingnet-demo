@@ -1,0 +1,42 @@
+/* Andersen Elektriske — identitet.
+   Nordisk teknisk: dyp skifer, kald grå, én varm kobberaksent. */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f1f4f7;
+  --fg: #101828;
+  --muted: #56637a;
+  --line: #dde3ea;
+  --accent: #b4530a;
+  --accent-fg: #ffffff;
+  --accent-soft: #fdf1e3;
+
+  --ink: #0e1726;
+  --ink-2: #172338;
+  --ink-muted: #a9b6c8;
+
+  --font-display: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 1px 2px rgb(16 24 40 / 5%), 0 18px 40px rgb(16 24 40 / 9%);
+  --wrap: 1120px;
+}
+
+body {
+  letter-spacing: 0.002em;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.022em;
+  font-weight: 700;
+}
+
+h1 { font-weight: 800; }
+
+.eyebrow {
+  color: var(--accent);
+  letter-spacing: 0.16em;
+}
