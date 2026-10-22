@@ -1,12 +1,12 @@
 :root {
   --bg: #faf6ef;
-  --bg-soft: #f3ebdd;
+  --bg-soft: #e6eaef;
   --fg: #2a2118;
   --muted: #6d6152;
-  --line: #e6dbc9;
-  --accent: #7a5c2e;
+  --line: #ccd5df;
+  --accent: 012b5d;
   --accent-fg: #ffffff;
-  --accent-soft: #f0e6d3;
+  --accent-soft: #dbe1e8;
   --font-display: 'Bitter', Georgia, serif;
   --font-body: 'Karla', system-ui, sans-serif;
   --radius: 10px;
