@@ -1,0 +1,52 @@
+/*
+  Alticom AS — identitet.
+  Kjølig, teknisk og rolig: gråblå flater, hårfine linjer, mye luft og én
+  dyp blågrønn aksent. Space Grotesk i overskriftene, Inter i teksten.
+  Geometrien er nesten rett: 4–6 px radius, ingen tunge skygger.
+*/
+
+:root {
+  --bg: #f7f9fa;
+  --bg-soft: #edf2f4;
+  --fg: #0f1b21;
+  --muted: #53646c;
+  --line: #d8e1e5;
+  --accent: #0d5a6b;
+  --accent-fg: #ffffff;
+  --accent-soft: #e2eef0;
+
+  --ink: #0a161b;
+  --ink-2: #102229;
+  --on-dark: #e9f1f3;
+  --on-dark-muted: #a7bbc1;
+  --signal: #7fd3df;
+
+  --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius: 6px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 2px rgb(10 22 27 / 5%), 0 18px 44px rgb(10 22 27 / 7%);
+  --wrap: 1160px;
+  --header-h: 72px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+}
+
+h1 { letter-spacing: -0.035em; }
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
