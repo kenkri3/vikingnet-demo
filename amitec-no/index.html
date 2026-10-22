@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nb_NO" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../kit/base.css" />
 <link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles.css" />
@@ -30,25 +30,14 @@
 </header>
 <main id="topp">
 
-<section class="hero hero--split">
-  <div class="hero__media"><img src="img/1-amitec-no.jpg" alt="AMITEC AS" width="1200" height="628" fetchpriority="high" /></div>
+<section class="hero hero--typografisk">
   <div class="wrap hero__inner">
-    <div class="hero__copy">
-      <p class="eyebrow">SaaS/tech</p>
-      <h1>GATHERING DATA HUNTING INSIGHTS</h1>
-      <p class="lead">Amitec is a European consulting and technology company helping industrial businesses turn PROCESS DATA into useful INSIGHTS.</p>
-      <div class="hero__cta">
-        <a class="btn" href="#kontakt">Be om tilbud</a>
-        <a class="btn btn--ghost" href="tel:55527800">Ring 55 52 78 00</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="statement">
-  <div class="wrap">
-    <p class="statement__tekst">Since 1994, we have empowered organizations with innovative solutions, applications, and expertise to bridge the gap between operational technology and information technology. Our mission is to enable faster, smarter business decisions based on accurate, accessible, and trusted process data.</p>
-  </div>
+      <div class="hero__copy hero__copy--stor">
+        <p class="eyebrow">SaaS/tech</p>
+        <h1>GATHERING DATA HUNTING INSIGHTS</h1>
+        <p class="lead">Amitec is a European consulting and technology company helping industrial businesses turn PROCESS DATA into useful INSIGHTS.</p>
+        <div class="hero__cta"><a class="btn" href="#kontakt">Be om tilbud</a><a class="btn btn--ghost" href="tel:55527800">Ring 55 52 78 00</a></div>
+      </div></div>
 </section>
 
 <section class="section om" id="om">
@@ -63,38 +52,18 @@
 
 <section class="section flere">
   <div class="wrap flere__grid">
-    <div class="flere__hode"><h2>Mer om det vi gjør</h2></div>
+    <h2>Mer om det vi gjør</h2>
     <div class="flere__tekst"><p>Our team comprises highly skilled and dedicated software and analytics engineers who are committed to delivering quality and efficiency in everything we do.</p><p>Everything starts with a data infrastructure, optimized to consolidate, centralize and contextualize your process data in a secure manner. The enabling layer for a scalable digitalization journey.</p></div>
   </div>
 </section>
 
 <section class="section" id="tjenester">
   <div class="wrap">
-    <div class="seksjonshode">
-      <h2>Dette gjør vi</h2>
-      
-    </div>
-    <div class="tjenester tjenester--mange">
-      <article class="tjeneste">
-        <h3>Core offerings</h3>
-        <p>Data infrastructure Advanced Analytics Advanced Visualization Projects, Services &amp; Support</p>
-      </article><article class="tjeneste">
-        <h3>About us</h3>
-        <p>Amitec is a European consulting and technology company helping industrial businesses turn PROCESS DATA into useful INSIGHTS. Since 1994, we have empowered organizations with innovative solutions, applications, and expertise to bridge the gap between operational technology and information technology.</p>
-      </article><article class="tjeneste">
-        <h3>Data Infrastructure</h3>
-        <p>Everything starts with a data infrastructure, optimized to consolidate, centralize and contextualize your process data in a secure manner. The enabling layer for a scalable digitalization journey.</p>
-      </article><article class="tjeneste">
-        <h3>Advanced Analytics</h3>
-        <p>Search your data, add context, cleanse, model, find patterns, establish boundaries, monitor assets, collaborate in real time, and interact with process data like never before. Learn more</p>
-      </article><article class="tjeneste">
-        <h3>Advanced Visualization</h3>
-        <p>Visualization of process data enables insights and more efficient operations. Bring information to life, on any device.</p>
-      </article><article class="tjeneste">
-        <h3>Services &amp; Support</h3>
-        <p>As a leading system integrator and AVEVA partner, let us help you get the most out of your PI System data infrastructure. Accelerate your digital transformation strategies and generate business value across the enterprise.</p>
-      </article>
-    </div>
+    
+      <div class="seksjonshode"><h2>Dette gjør vi</h2></div>
+    <ul class="tjenester tjenester--linjer">
+      <li class="tjeneste tjeneste--linjer"><h3>About us</h3><p>Amitec is a European consulting and technology company helping industrial businesses turn PROCESS DATA into useful INSIGHTS. Since 1994, we have empowered organizations with innovative solutions, applications, and expertise to bridge the gap between operational technology and information technology.</p></li><li class="tjeneste tjeneste--linjer"><h3>Data Infrastructure</h3><p>Everything starts with a data infrastructure, optimized to consolidate, centralize and contextualize your process data in a secure manner. The enabling layer for a scalable digitalization journey.</p></li><li class="tjeneste tjeneste--linjer"><h3>Advanced Analytics</h3><p>Search your data, add context, cleanse, model, find patterns, establish boundaries, monitor assets, collaborate in real time, and interact with process data like never before. Learn more</p></li><li class="tjeneste tjeneste--linjer"><h3>Advanced Visualization</h3><p>Visualization of process data enables insights and more efficient operations. Bring information to life, on any device.</p></li><li class="tjeneste tjeneste--linjer"><h3>Services &amp; Support</h3><p>As a leading system integrator and AVEVA partner, let us help you get the most out of your PI System data infrastructure. Accelerate your digital transformation strategies and generate business value across the enterprise.</p></li><li class="tjeneste tjeneste--linjer"><h3>Join us on our journey</h3><p>At Amitec, we’re inspired by the daily achievements of those working with data in the process industry. We’re inspired by the continuous progress in making operations safer and more efficient, optimizing production and drive innovations that move the industry forward.</p></li>
+    </ul>
   </div>
 </section>
 
@@ -104,6 +73,7 @@
   </div>
 </div>
 
+
 <div class="ctastripe">
   <div class="wrap ctastripe__inner">
     <p><strong>AMITEC AS</strong> · 55 52 78 00</p>
@@ -111,18 +81,27 @@
   </div>
 </div>
 
+<section class="section prosess">
+  <div class="wrap">
+    
+      <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
+    <ol class="steg">
+      <li class="steg__item"><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Ring eller send skjemaet, og fortell kort hva du trenger.</p></li><li class="steg__item"><span class="steg__nr">02</span><h3>Vi avtaler befaring</h3><p>Vi ser på forholdene og snakker gjennom hva som skal gjøres.</p></li><li class="steg__item"><span class="steg__nr">03</span><h3>Du får skriftlig tilbud</h3><p>Du vet hva jobben koster før den starter.</p></li>
+    </ol>
+  </div>
+</section>
+
 <section class="section kontakt" id="kontakt">
   <div class="wrap kontakt__grid">
-    <div>
+    <div class="kontakt__info">
       <h2>Ta kontakt</h2>
       <ul class="kontakt__liste">
         <li><span>Telefon</span><a href="tel:55527800">55 52 78 00</a></li>
         <li><span>E-post</span><a href="mailto:mail@amitec.no">mail@amitec.no</a></li>
         
-        
       </ul>
     </div>
-    <form class="kort kontakt__skjema" data-contact-form data-mailto="mail@amitec.no" data-subject="Henvendelse fra nettsiden">
+    <form class="kontakt__skjema" data-contact-form data-mailto="mail@amitec.no" data-subject="Henvendelse fra nettsiden">
       <h3>Send en henvendelse</h3>
       <label>Navn<input type="text" name="Navn" required placeholder="Fornavn Etternavn" /></label>
       <div class="kontakt__rad">
