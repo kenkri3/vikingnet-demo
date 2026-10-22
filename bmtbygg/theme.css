@@ -1,0 +1,66 @@
+/*
+  BMT Bygg AS — tema.
+  Industriell retning: betong, stål og én rustrød aksent.
+  Kondensert display (Saira Condensed) mot rolig tekstsans (IBM Plex Sans).
+*/
+
+:root {
+  --bg: #f7f5f1;
+  --bg-soft: #efece5;
+  --fg: #17191a;
+  --muted: #56595d;
+  --line: #d6d2c8;
+  --accent: #a8441f;
+  --accent-fg: #ffffff;
+  --accent-soft: #f2e2d9;
+
+  --font-display: 'Saira Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius: 4px;
+  --radius-sm: 2px;
+  --shadow: 0 1px 2px rgb(20 22 24 / 5%), 0 18px 42px rgb(20 22 24 / 8%);
+  --wrap: 1180px;
+  --header-h: 72px;
+
+  --ink: #17191a;
+  --ink-2: #212426;
+  --steel: #4b4f52;
+  --concrete: #e7e4dd;
+  --paper: #fbfaf7;
+  --rust: #a8441f;
+  --rust-light: #e08a63;
+}
+
+::selection {
+  background: var(--rust);
+  color: #fff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  font-weight: 600;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(2.1rem, 1.4rem + 2.8vw, 3.4rem);
+  line-height: 0.94;
+}
+
+h3 {
+  line-height: 1.05;
+}
+
+a {
+  text-underline-offset: 4px;
+}
