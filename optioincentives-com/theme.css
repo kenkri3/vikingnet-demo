@@ -1,14 +1,19 @@
 :root {
   --bg: #faf6ef;
-  --bg-soft: #ebf3fe;
+  --bg-soft: #NaNf8ea;
   --fg: #2a2118;
   --muted: #6d6152;
-  --line: #d8e6fd;
-  --accent: #3472d8;
+  --line: #NaNf1d5;
+  --accent: #3b82f6;
   --accent-fg: #ffffff;
-  --accent-soft: #e4eefe;
-  --font-display: 'Bitter', Georgia, serif;
-  --font-body: 'Karla', system-ui, sans-serif;
+  --accent-soft: #NaNf5e2;
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
   --radius: 10px;
+  --h1-size: clamp(2.4rem,1.3rem+3.6vw,3.9rem);
+  --h1-track: -0.025em;
+  --h1-lh: 1.03;
+  --h1-weight: 800;
 }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-display); }
+h1 { font-size: var(--h1-size); letter-spacing: var(--h1-track); line-height: var(--h1-lh); font-weight: var(--h1-weight); }
