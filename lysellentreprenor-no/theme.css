@@ -1,14 +1,19 @@
 :root {
   --bg: #faf6ef;
-  --bg-soft: #eaf6fe;
+  --bg-soft: #NaNfdec;
   --fg: #2a2118;
   --muted: #6d6152;
-  --line: #d5edfc;
-  --accent: #1f6fa5;
+  --line: #NaNfbd9;
+  --accent: #2ea3f2;
   --accent-fg: #ffffff;
-  --accent-soft: #e2f2fd;
+  --accent-soft: #NaNfce4;
   --font-display: 'Bitter', Georgia, serif;
   --font-body: 'Karla', system-ui, sans-serif;
   --radius: 10px;
+  --h1-size: clamp(2.2rem,1.3rem+2.8vw,3.3rem);
+  --h1-track: -0.015em;
+  --h1-lh: 1.14;
+  --h1-weight: 600;
 }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-display); }
+h1 { font-size: var(--h1-size); letter-spacing: var(--h1-track); line-height: var(--h1-lh); font-weight: var(--h1-weight); }
