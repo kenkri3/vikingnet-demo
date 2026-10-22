@@ -7,8 +7,13 @@
   --accent: #003399;
   --accent-fg: #ffffff;
   --accent-soft: #NaNdce3;
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Lora', Georgia, serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
   --radius: 10px;
+  --h1-size: clamp(2.2rem,1.4rem+2.9vw,3.4rem);
+  --h1-track: -0.01em;
+  --h1-lh: 1.12;
+  --h1-weight: 600;
 }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-display); }
+h1 { font-size: var(--h1-size); letter-spacing: var(--h1-track); line-height: var(--h1-lh); font-weight: var(--h1-weight); }
