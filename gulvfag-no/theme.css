@@ -1,0 +1,14 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f4faed;
+  --fg: #101828;
+  --muted: #5b6472;
+  --line: #e9f5db;
+  --accent: 90cb4b;
+  --accent-fg: #ffffff;
+  --accent-soft: #eff8e6;
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 4px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; }
