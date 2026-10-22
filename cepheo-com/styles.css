@@ -25,6 +25,14 @@
 .hero--overlay .btn--ghost { color: #fff; border-color: rgb(255 255 255 / 45%); }
 .hero--overlay .eyebrow { color: #fff; opacity: .8; }
 
+/* Uten et brukbart fotografi blir heroen typografisk: en farget flate, stor
+   type og fakta på linje. Det ser ferdig ut — en tom bildeplass gjør det ikke. */
+.hero--tekst { background: var(--accent-soft); border-bottom: 1px solid var(--line); }
+.hero--tekst .hero__inner { padding-block: clamp(3rem,7vw,5.2rem); }
+.hero--tekst h1 { font-size: clamp(2.3rem,1.3rem+4vw,4.1rem); max-width: 22ch; }
+.hero--tekst .lead { max-width: 48ch; color: var(--fg); opacity: .78; }
+.hero--tekst .eyebrow { color: var(--accent); }
+
 .fakta { border-bottom: 1px solid var(--line); }
 .fakta__inner { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 1rem; padding-block: 1.1rem; }
 .fakta__item { display: grid; gap: .1rem; }
