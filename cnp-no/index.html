@@ -12,7 +12,7 @@
 <meta property="og:locale" content="nb_NO" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../kit/base.css" />
 <link rel="stylesheet" href="theme.css" />
 <link rel="stylesheet" href="styles.css" />
@@ -30,48 +30,16 @@
 </header>
 <main id="topp">
 
-<section class="hero hero--split">
-  <div class="hero__media"><img src="img/1-cnp-no.jpg" alt="CNP AS" width="800" height="533" fetchpriority="high" /></div>
+<section class="hero hero--splitt-venstre">
   <div class="wrap hero__inner">
-    <div class="hero__copy">
-      <p class="eyebrow">Bemanning/rekruttering</p>
-      <h1>Hjem</h1>
-      <p class="lead">CNP trenger alltid flere dyktige fagfolk! Vi tilbyr fast ansettelse, konkurransedyktig lønn og spennende prosjekter.</p>
-      <div class="hero__cta">
-        <a class="btn" href="#kontakt">Be om tilbud</a>
-        <a class="btn btn--ghost" href="tel:22830600">Ring 22830600</a>
+    <figure class="hero__media"><img src="img/1-cnp-no.jpg" alt="CNP AS" width="800" height="533" /></figure>
+    
+      <div class="hero__copy ">
+        <p class="eyebrow">Bemanning/rekruttering</p>
+        <h1>Hjem</h1>
+        <p class="lead">CNP trenger alltid flere dyktige fagfolk! Vi tilbyr fast ansettelse, konkurransedyktig lønn og spennende prosjekter.</p>
+        <div class="hero__cta"><a class="btn" href="#kontakt">Be om tilbud</a><a class="btn btn--ghost" href="tel:22830600">Ring 22830600</a></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="statement">
-  <div class="wrap">
-    <p class="statement__tekst">Norwegian Group styrker sin elektriske plattform gjennom nytt oppkjøp og har inngått en avtale om å kjøpe 70 % av aksjene i CNP Norge. CNP er et spesialisert elektroteknisk selskap med omtrent 90 ansatte og hovedkontor i Tønsberg, som leverer sterke tjenester til både fornybar energisektor og olje- og gassindustrien.</p>
-  </div>
-</section>
-
-<section class="section" id="tjenester">
-  <div class="wrap">
-    <div class="seksjonshode">
-      <h2>Dette gjør vi</h2>
-      
-    </div>
-    <div class="tjenester tjenester--faa">
-      <article class="tjeneste">
-        <h3>Partnerskap med Norwegian Group</h3>
-        <p>Norwegian Group styrker sin elektriske plattform gjennom nytt oppkjøp og har inngått en avtale om å kjøpe 70 % av aksjene i CNP Norge. CNP er et spesialisert elektroteknisk selskap med omtrent 90 ansatte og hovedkontor i Tønsberg, som leverer sterke tjenester til både fornybar</p>
-      </article><article class="tjeneste">
-        <h3>Registrer CV Registrer CV</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Møllegaten 8, 3111 Tønsberg</h3>
-        
-      </article><article class="tjeneste">
-        <h3>Mandag-fredag 08.00 - 16.00</h3>
-        
-      </article>
-    </div>
   </div>
 </section>
 
@@ -81,14 +49,16 @@
   </div>
 </div>
 
-<section class="section prosess">
+<section class="section" id="tjenester">
   <div class="wrap">
-    <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
-    <ol class="steg">
-      <li class="steg__item"><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Ring eller send skjemaet, og fortell kort hva du trenger.</p></li><li class="steg__item"><span class="steg__nr">02</span><h3>Vi avtaler befaring</h3><p>Vi ser på forholdene og snakker gjennom hva som skal gjøres.</p></li><li class="steg__item"><span class="steg__nr">03</span><h3>Du får skriftlig tilbud</h3><p>Du vet hva jobben koster før den starter.</p></li>
-    </ol>
+    
+      <div class="seksjonshode"><h2>Dette gjør vi</h2></div>
+    <ul class="tjenester tjenester--rader">
+      <li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">01</span><div><h3>Partnerskap med Norwegian Group</h3><p>Norwegian Group styrker sin elektriske plattform gjennom nytt oppkjøp og har inngått en avtale om å kjøpe 70 % av aksjene i CNP Norge. CNP er et spesialisert elektroteknisk selskap med omtrent 90 ansatte og hovedkontor i Tønsberg, som leverer sterke tjenester til både fornybar</p></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">02</span><div><h3>Registrer CV Registrer CV</h3></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">03</span><div><h3>Møllegaten 8, 3111 Tønsberg</h3></div></li><li class="tjeneste tjeneste--rad"><span class="tjeneste__nr">04</span><div><h3>Mandag-fredag 08.00 - 16.00</h3></div></li>
+    </ul>
   </div>
 </section>
+
 
 <section class="section om" id="om">
   <div class="wrap om__grid">
@@ -102,8 +72,18 @@
 
 <section class="section flere">
   <div class="wrap flere__grid">
-    <div class="flere__hode"><h2>Mer om det vi gjør</h2></div>
+    <h2>Mer om det vi gjør</h2>
     <div class="flere__tekst"><p>Fra venstre: Mari Strøm Larsen – NOG, Torfinn Torheim – NOG, Kay Ove Johansen – NOG, Knut Arild Renstrøm – CNP, Morten Borøchstein – NOG, Camilla Hidalgo Lie – NOG.</p><p>Vi har fokus på kvalitet og HMS som en integrert del av vår leveranse. Du kan stole på at resultater blir levert raskt og effektivt og at du blir fornøyd med resultatet.</p></div>
+  </div>
+</section>
+
+<section class="section prosess">
+  <div class="wrap">
+    
+      <div class="seksjonshode"><h2>Slik jobber vi</h2></div>
+    <ol class="steg">
+      <li class="steg__item"><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Ring eller send skjemaet, og fortell kort hva du trenger.</p></li><li class="steg__item"><span class="steg__nr">02</span><h3>Vi avtaler befaring</h3><p>Vi ser på forholdene og snakker gjennom hva som skal gjøres.</p></li><li class="steg__item"><span class="steg__nr">03</span><h3>Du får skriftlig tilbud</h3><p>Du vet hva jobben koster før den starter.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -116,16 +96,15 @@
 
 <section class="section kontakt" id="kontakt">
   <div class="wrap kontakt__grid">
-    <div>
+    <div class="kontakt__info">
       <h2>Ta kontakt</h2>
       <ul class="kontakt__liste">
         <li><span>Telefon</span><a href="tel:22830600">22830600</a></li>
         <li><span>E-post</span><a href="mailto:post@cnp.no">post@cnp.no</a></li>
         
-        
       </ul>
     </div>
-    <form class="kort kontakt__skjema" data-contact-form data-mailto="post@cnp.no" data-subject="Henvendelse fra nettsiden">
+    <form class="kontakt__skjema" data-contact-form data-mailto="post@cnp.no" data-subject="Henvendelse fra nettsiden">
       <h3>Send en henvendelse</h3>
       <label>Navn<input type="text" name="Navn" required placeholder="Fornavn Etternavn" /></label>
       <div class="kontakt__rad">
