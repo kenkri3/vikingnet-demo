@@ -1,0 +1,14 @@
+:root {
+  --bg: #f7f4ee;
+  --bg-soft: #NaNf8ee;
+  --fg: #22201c;
+  --muted: #65604f;
+  --line: #NaNf2dd;
+  --accent: #8bc53f;
+  --accent-fg: #ffffff;
+  --accent-soft: #NaNf6e7;
+  --font-display: 'Lora', Georgia, serif;
+  --font-body: 'Nunito Sans', system-ui, sans-serif;
+  --radius: 12px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
