@@ -1,0 +1,14 @@
+:root {
+  --bg: #fbfbfd;
+  --bg-soft: #NaNf6eb;
+  --fg: #241f2b;
+  --muted: #625b6e;
+  --line: #NaNeed6;
+  --accent: #fa9334;
+  --accent-fg: #ffffff;
+  --accent-soft: #NaNf3e2;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 14px;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; }
