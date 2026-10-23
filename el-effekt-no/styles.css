@@ -10,6 +10,11 @@ img{display:block;max-width:100%;height:auto}
 .meny a{text-decoration:none;font-size:.94rem}
 .topp .knapp{margin-left:auto;min-height:42px;padding:.5rem 1rem;font-size:.9rem}
 .helt{display:grid}
+.helt--typografisk{background:var(--blekk);color:var(--bak);padding:clamp(4rem,3rem + 9vw,8rem) 0 clamp(3rem,2rem + 5vw,5rem)}
+.helt--typografisk h1{color:var(--bak)}
+.helt--typografisk .merkelapp{color:var(--aksent)}
+.helt--typografisk .helt__ingress{color:color-mix(in srgb, var(--bak) 82%, transparent)}
+.helt--typografisk .knapp--tom{color:var(--bak);border-color:color-mix(in srgb, var(--bak) 45%, transparent)}
 .helt--split .helt__slor{display:none}
 .helt__bilde img{width:100%;height:100%;object-fit:cover;min-height:300px}
 .helt__innhold{max-width:var(--max);margin:0 auto;padding:clamp(2.6rem,2rem + 5vw,5rem) clamp(1rem,.6rem + 1.4vw,1.9rem);width:100%}
