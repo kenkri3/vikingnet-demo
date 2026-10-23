@@ -68,3 +68,7 @@ h2 { letter-spacing: -0.03em; }
 }
 .kontakt__skjema textarea { min-height: 110px; }
 .kontakt__skjema .btn { margin-top: .3rem; }
+
+/* QA 2026-10-23: nettleserens standardmargin på <figure> (1em 40px) lå utenpå
+   gridkolonnen og ga 8 px horisontal overflyt ved 1024 px. */
+figure { margin: 0; }
