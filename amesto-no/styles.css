@@ -9,43 +9,44 @@ img{display:block;max-width:100%;height:auto}
 .meny{display:none;margin-left:auto;gap:1.4rem}
 .meny a{text-decoration:none;font-size:.94rem}
 .topp .knapp{margin-left:auto;min-height:42px;padding:.5rem 1rem;font-size:.9rem}
-.helt{display:grid;gap:0}
-.helt__bilde img{width:100%;height:100%;object-fit:cover;min-height:320px}.helt__slor{display:none}.helt__innhold{max-width:var(--max);margin:0 auto;padding:clamp(2.4rem,1.8rem + 4vw,4.5rem) clamp(1rem,.6rem + 1.4vw,1.9rem);width:100%}
+.helt{display:grid}
+.helt--split .helt__slor{display:none}
+.helt__bilde img{width:100%;height:100%;object-fit:cover;min-height:300px}
+.helt__innhold{max-width:var(--max);margin:0 auto;padding:clamp(2.6rem,2rem + 5vw,5rem) clamp(1rem,.6rem + 1.4vw,1.9rem);width:100%}
 .helt h1{max-width:22ch}
 .helt__ingress{margin-top:1rem;max-width:52ch;opacity:.9}
 .helt__handling{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
 .band{background:var(--blekk);color:var(--bak)}
 .band__indre{max-width:var(--max);margin:0 auto;padding:1.4rem clamp(1rem,.6rem + 1.4vw,1.9rem);display:grid;grid-template-columns:repeat(2,1fr);gap:1rem 2rem}
-.band strong{display:block;font-family:var(--serif);font-size:1.3rem;color:var(--aksent)}
+.band strong{display:block;font-family:var(--serif);font-size:1.25rem;color:var(--aksent)}
 .band span{font-size:.84rem;opacity:.85}
-.seksjon{max-width:var(--max);margin:0 auto;padding:clamp(2.8rem,2rem + 4vw,5rem) clamp(1rem,.6rem + 1.4vw,1.9rem)}
+.seksjon{max-width:var(--max);margin:0 auto;padding:clamp(2.6rem,2rem + 4vw,4.6rem) clamp(1rem,.6rem + 1.4vw,1.9rem)}
 .steg{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:1.4rem}
 .steg li{border-top:2px solid var(--blekk);padding-top:.9rem}
 .steg__nr{font-family:var(--serif);color:var(--aksent);font-size:.85rem;letter-spacing:.1em}
 .steg p{color:var(--dempet);font-size:.97rem;margin-top:.3rem}
 .rutenett{margin-top:2rem;display:grid;gap:1rem}
-.kort{background:var(--flate);border:1px solid var(--kant);border-radius:10px;padding:1.3rem}
+.kort{background:var(--bak);border:1px solid var(--kant);border-radius:10px;padding:1.3rem}
 .kort p{color:var(--dempet);font-size:.96rem;margin-top:.35rem}
-.drom{background:var(--blekk);color:var(--bak);padding:clamp(2.8rem,2rem + 4vw,5rem) 0}
+.drom{background:var(--blekk);color:var(--bak);padding:clamp(2.6rem,2rem + 4vw,4.6rem) 0}
 .drom__indre{max-width:var(--max);margin:0 auto;padding:0 clamp(1rem,.6rem + 1.4vw,1.9rem);display:grid;gap:2rem}
 .drom .merkelapp{color:var(--aksent)}
 .drom p{opacity:.9;margin-top:1rem}
 .drom ul{list-style:none;padding:0;margin:1.2rem 0 1.8rem;display:grid;gap:.55rem}
 .drom li{padding-left:1.4rem;position:relative}
 .drom li::before{content:"→";position:absolute;left:0;color:var(--aksent)}
-.drom .knapp{background:var(--aksent)}
 .mock{background:var(--bak);color:var(--blekk);border-radius:14px;padding:1.1rem;max-width:340px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
-.mock__rad{display:flex;justify-content:space-between;font-size:.86rem;padding:.5rem 0;border-bottom:1px solid var(--kant)}
+.mock__rad{display:flex;justify-content:space-between;gap:1rem;font-size:.86rem;padding:.5rem 0;border-bottom:1px solid var(--kant)}
 .mock__rad:last-child{border-bottom:0}
 .mock__merke{font-family:var(--serif);font-size:1.05rem;margin-bottom:.6rem}
 .drom__mock{display:grid;place-items:center}
 .om{display:grid;gap:1.6rem}
 .om img{border-radius:12px;width:100%}
-.om blockquote{margin:1.4rem 0 0;padding-left:1.1rem;border-left:3px solid var(--aksent);font-family:var(--serif);font-size:1.1rem}
+.om blockquote{margin:1.4rem 0 0;padding-left:1.1rem;border-left:3px solid var(--aksent);font-family:var(--serif);font-size:1.08rem}
 .kontakt{display:grid;gap:2rem}
 .felt{display:grid;gap:.3rem;margin-bottom:.9rem}
 .felt label{font-size:.82rem;font-weight:600}
-.felt input,.felt textarea{font:inherit;font-size:1rem;padding:.75rem .85rem;min-height:48px;border:1px solid var(--kant);border-radius:6px;background:var(--flate);color:inherit}
+.felt input,.felt textarea{font:inherit;font-size:1rem;padding:.75rem .85rem;min-height:48px;border:1px solid var(--kant);border-radius:6px;background:var(--bak);color:inherit}
 .felt textarea{min-height:110px}
 .hjelp{font-size:.84rem;color:var(--dempet);margin-top:.6rem}
 .kontaktkort{background:var(--blekk);color:var(--bak);border-radius:12px;padding:1.5rem}
@@ -55,7 +56,6 @@ img{display:block;max-width:100%;height:auto}
 .bunn{background:var(--blekk);color:var(--bak)}
 .bunn__indre{max-width:var(--max);margin:0 auto;padding:1.8rem clamp(1rem,.6rem + 1.4vw,1.9rem);font-size:.88rem;opacity:.85}
 @media(min-width:640px){.band__indre{grid-template-columns:repeat(4,1fr)}.rutenett{grid-template-columns:repeat(2,1fr)}.steg{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:900px){.meny{display:flex}.topp .knapp{margin-left:0}.drom__indre{grid-template-columns:1.1fr .9fr;align-items:center}.om{grid-template-columns:1fr 1fr;align-items:center;gap:2.6rem}.kontakt{grid-template-columns:1.3fr .7fr;align-items:start;gap:2.6rem}}
-@media(min-width:900px){.helt--split{grid-template-columns:1.05fr .95fr;align-items:center}}
+@media(min-width:900px){.meny{display:flex}.topp .knapp{margin-left:0}.helt--split{grid-template-columns:1.05fr .95fr;align-items:center}.helt--split .helt__bilde{order:2;height:100%}.drom__indre{grid-template-columns:1.1fr .9fr;align-items:center}.om{grid-template-columns:1fr 1fr;align-items:center;gap:2.6rem}.kontakt{grid-template-columns:1.3fr .7fr;align-items:start;gap:2.6rem}}
 @media(min-width:1200px){.rutenett{grid-template-columns:repeat(4,1fr)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important}}

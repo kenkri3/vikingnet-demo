@@ -6,7 +6,7 @@ var n=f.elements.navn,ep=f.elements.epost,m=f.elements.melding,t=f.elements.tele
 if(ep.value.trim()&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(ep.value.trim())){ep.setAttribute('aria-invalid','true');mangler=true;}
 if(mangler){st.textContent='Fyll ut navn, e-post og hva det gjelder.';return;}
 var linjer=['Navn: '+n.value.trim(),'E-post: '+ep.value.trim(),t?'Telefon: '+t:'','',m.value.trim()].filter(Boolean);
-window.location.href='mailto:'+"post@askerhaandverk.no"+'?subject='+encodeURIComponent('Henvendelse fra nettsiden')+'&body='+encodeURIComponent(linjer.join('\n'));
+window.location.href='mailto:'+f.getAttribute('data-epost')+'?subject='+encodeURIComponent('Henvendelse fra nettsiden')+'&body='+encodeURIComponent(linjer.join('\n'));
 st.textContent='E-postprogrammet åpnes med opplysningene fylt inn.';});}
 var ar=document.getElementById('ar');if(ar)ar.textContent=String(new Date().getFullYear());
 })();
