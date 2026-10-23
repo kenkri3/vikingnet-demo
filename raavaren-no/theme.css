@@ -1,19 +1,14 @@
-:root {
-  --bg: #f7f4ee;
-  --bg-soft: #NaNe7e9;
-  --fg: #22201c;
-  --muted: #65604f;
-  --line: #NaNd0d3;
-  --accent: #112244;
-  --accent-fg: #ffffff;
-  --accent-soft: #NaNdee0;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --radius: 12px;
-  --h1-size: clamp(2.5rem,1.5rem+3.4vw,4rem);
-  --h1-track: -0.03em;
-  --h1-lh: 1.02;
-  --h1-weight: 600;
+:root{
+  --bak:#f8f3ea;--blekk:#23301f;--aksent:#a45c2f;
+  --dempet:color-mix(in srgb, #23301f 58%, #f8f3ea);
+  --kant:color-mix(in srgb, #23301f 15%, #f8f3ea);
+  --max:1180px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --h1:clamp(2.1rem,1.2rem + 4.2vw,4rem);
+  --h2:clamp(1.5rem,1.1rem + 1.8vw,2.4rem);
 }
-h1, h2, h3 { font-family: var(--font-display); }
-h1 { font-size: var(--h1-size); letter-spacing: var(--h1-track); line-height: var(--h1-lh); font-weight: var(--h1-weight); }
+body{margin:0;background:var(--bak);color:var(--blekk);font-family:var(--sans);line-height:1.65}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0}
+h1{font-size:var(--h1)}h2{font-size:var(--h2)}h3{font-size:1.12rem}
+p{margin:0}a{color:inherit}figure{margin:0}
