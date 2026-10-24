@@ -1,4 +1,6 @@
 
+.galleri--en{grid-template-columns:1fr}
+.galleri--en .galleri__bilde img{aspect-ratio:16/9;max-height:520px}
 .innledning{max-width:62ch;color:var(--dempet);margin:0 0 2rem;font-size:1.02rem}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
