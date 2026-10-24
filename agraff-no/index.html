@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Agraff – Norge</title>
 <meta name="description" content="Vi jobber ut fra en tanke om at alt vi bygger og endrer skal fungere sammen med sine omgivelser, ikke stå i veien for dem.">
 <meta property="og:title" content="Agraff – Norge">
@@ -11,85 +10,104 @@
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<header class="topp"><div class="topp__indre">
-  <a class="merke" href="#topp"><img class="merke__logo" src="img/logo.svg" alt="Agraff" height="34"></a>
-  <nav class="meny"><a href="#tjenester">Tjenester</a><a href="#slik">Slik jobber vi</a><a href="#kontakt">Kontakt</a></nav>
-  <a class="knapp" href="#kontakt">Ta kontakt</a>
-</div></header>
-<main id="topp">
-<section class="helt helt--split">
-  <div class="helt__bilde"><img src="img/hero.jpg" alt="Innredning i tre" width="1600" height="1067"><div class="helt__slor"></div></div>
-  <div class="helt__innhold">
+<a class="hopp" href="#innhold">Gå til innholdet</a>
+<header class="topp">
+  <div class="topp__indre">
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Agraff" height="34"></a>
+    <details class="mobilmeny">
+      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
+      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    </details>
+    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  </div>
+</header>
+<main id="innhold">
+<section class="helt">
+  <div class="helt__bilde"><img class="" src="img/hero.jpg" alt=" Agraff" ></div>
+  <div class="helt__tekst">
     <p class="merkelapp">innredning · Norge</p>
     <h1>Innredning som hører sammen med rommet</h1>
     <p class="helt__ingress">Vi jobber ut fra en tanke om at alt vi bygger og endrer skal fungere sammen med sine omgivelser, ikke stå i veien for dem.</p>
-    <div class="helt__handling"><a class="knapp" href="#kontakt">Ta kontakt</a></div>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se tjenester</a>
+    </div>
   </div>
 </section>
-<section class="band"><div class="band__indre">
-  <div><strong>Norge</strong><span>base</span></div>
-  <div><strong>post@agraff.no</strong><span>e-post</span></div>
-  <div><strong>Fast</strong><span>samme person hele veien</span></div>
-  <div><strong>Svar</strong><span>svar samme dag</span></div>
-</div></section>
-<section class="drom" id="drom"><div class="drom__indre">
-  <div>
-    <p class="merkelapp">Ny mulighet</p>
-    <h2>Se innredningen i ditt eget rom, før den bygges</h2>
-    <p>En tegning er vanskelig å forestille seg, og endringer kommer ofte etter at arbeidet har startet. En side der kunden ser forslaget lagt inn i sitt eget rom, med materialer og mål, gir færre overraskelser — og raskere ja.</p>
-    <ul><li>Forslag i kundens eget rom</li><li>Materialer og mål</li><li>Endringer før produksjon</li></ul>
-    <a class="knapp" href="#kontakt">Se hvordan det kunne vært</a>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Tjenester</p>
+    <h2>Det vi gjør</h2>
   </div>
-  <div class="drom__mock"><div class="mock">
-    <p class="mock__merke">Se innredningen i ditt eget rom, før den bygges</p>
-    <div class="mock__rad"><span>Forslag i kundens eget rom</span><span>I dag</span></div><div class="mock__rad"><span>Materialer og mål</span><span>Klar</span></div><div class="mock__rad"><span>Endringer før produksjon</span><span>Klar</span></div>
-  </div></div>
-</div></section>
-<section class="seksjon" id="slik">
-  <p class="merkelapp">Slik jobber vi</p>
-  <h2>Slik gjør vi det, steg for steg</h2>
-  <ol class="steg"><li><span class="steg__nr">01</span><h3>Befaring</h3><p>Vi ser rommet, lyset og hvordan det brukes.</p></li><li><span class="steg__nr">02</span><h3>Tegning og tilbud</h3><p>Forslag, materialer og pris.</p></li><li><span class="steg__nr">03</span><h3>Produksjon og montering</h3><p>Vi bygger, monterer og justerer.</p></li></ol>
+  <div class="rutenett rutenett--3"><article class="kort">
+      <span class="kort__nr">01</span>
+      <h3>Innredning</h3>
+      <p>Løsninger tegnet for rommet, ikke for katalogen.</p>
+    </article><article class="kort">
+      <span class="kort__nr">02</span>
+      <h3>Kjøkken og garderobe</h3>
+      <p>Målrettet innredning, montert ferdig.</p>
+    </article><article class="kort">
+      <span class="kort__nr">03</span>
+      <h3>Fast inventar</h3>
+      <p>Resepsjon, disk og oppbevaring bygget på stedet.</p>
+    </article></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle 4 tjenester →</a></p>
 </section>
-<section class="seksjon om">
-  <div><img src="img/om.jpg" alt="Agraff" width="1600" height="1067" loading="lazy"></div>
-  <div>
-    <p class="merkelapp">Om oss</p>
-    <h2>Agraff</h2>
-    <p>Vi jobber ut fra en tanke om at alt vi bygger og endrer skal fungere sammen med sine omgivelser, ikke stå i veien for dem.</p>
-    <blockquote>«Det skal være enkelt å være kunde hos oss. Du får vite hva som skjer, og når.»</blockquote>
+
+<section class="drom">
+  <div class="drom__indre">
+    <div>
+      <p class="merkelapp">Ny mulighet</p>
+      <h2>Se innredningen i ditt eget rom, før den bygges</h2>
+      <p>En tegning er vanskelig å forestille seg, og endringer kommer ofte etter at arbeidet har startet. En side der kunden ser forslaget lagt inn i sitt eget rom, med materialer og mål, gir færre overraskelser — og raskere ja.</p>
+    </div>
+    <div class="drom__kort">
+      <p class="drom__korttittel">Se innredningen i ditt eget rom, før den bygges</p>
+      <div class="drom__rad"><span>Forslag i kundens eget rom</span><span>Nå</span></div><div class="drom__rad"><span>Materialer og mål</span><span>Klar</span></div><div class="drom__rad"><span>Endringer før produksjon</span><span>Klar</span></div>
+    </div>
   </div>
 </section>
-<section class="seksjon" id="tjenester">
-  <p class="merkelapp">Tjenester</p>
-  <h2>Det vi gjør for kundene</h2>
-  <div class="rutenett"><article class="kort"><h3>Innredning</h3><p>Løsninger tegnet for rommet, ikke for katalogen.</p></article><article class="kort"><h3>Kjøkken og garderobe</h3><p>Målrettet innredning, montert ferdig.</p></article><article class="kort"><h3>Fast inventar</h3><p>Resepsjon, disk og oppbevaring bygget på stedet.</p></article><article class="kort"><h3>Montering</h3><p>Vi monterer og justerer til det sitter.</p></article></div>
-</section>
-<section class="seksjon kontakt kontakt--speil" id="kontakt">
-  <div>
-    <p class="merkelapp">Kontakt</p>
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <form id="skjema" novalidate data-epost="post@agraff.no">
-      <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
-      <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
-      <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
-      <div class="felt"><label for="melding">Hva gjelder det?</label><textarea id="melding" name="melding" rows="4" required></textarea></div>
-      <button class="knapp" type="submit">Send henvendelsen</button>
-      <p class="hjelp">Skjemaet åpner e-postprogrammet ditt.</p>
-      <p id="status" role="status" aria-live="polite"></p>
-    </form>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Slik jobber vi</p>
+    <h2>Tre steg fra avtale til ferdig</h2>
   </div>
-  <aside class="kontaktkort">
-    <h3>Agraff</h3>
-    <dl>
-      
-      <div><dt>E-post</dt><dd><a href="mailto:post@agraff.no">post@agraff.no</a></dd></div>
-      <div><dt>Sted</dt><dd>Norge</dd></div>
-    </dl>
-  </aside>
+  <ol class="steg">
+    <li><span class="steg__nr">01</span><h3>Befaring</h3><p>Vi ser rommet, lyset og hvordan det brukes.</p></li><li><span class="steg__nr">02</span><h3>Tegning og tilbud</h3><p>Forslag, materialer og pris.</p></li><li><span class="steg__nr">03</span><h3>Produksjon og montering</h3><p>Vi bygger, monterer og justerer.</p></li>
+  </ol>
+</section>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Prosjekter</p>
+    <h2>Fra arbeidet vårt</h2>
+  </div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/1-agraff-no.jpg" alt="Agraff – Innredning" loading="lazy" decoding="async"><figcaption>Agraff – Innredning</figcaption></figure><figure class="galleri__bilde"><img class="" src="img/2-agraff-no.jpg" alt="Agraff – Kjøkken og garderobe" loading="lazy" decoding="async"><figcaption>Agraff – Kjøkken og garderobe</figcaption></figure><figure class="galleri__bilde"><img class="" src="img/3-agraff-no.jpg" alt="Agraff – Fast inventar" loading="lazy" decoding="async"><figcaption>Agraff – Fast inventar</figcaption></figure></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
+</section>
+
+<section class="cta">
+  <h2>Kort fortalt: hva trenger du?</h2>
+  <p>Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
+  <a class="knapp" href="kontakt.html">Send en henvendelse</a>
 </section>
 </main>
-<footer class="bunn"><div class="bunn__indre">Agraff · Norge · post@agraff.no<br>© <span id="ar">2026</span> Agraff</div></footer>
-<script src="app.js" defer></script>
-</body></html>
+<footer class="bunn">
+  <div class="bunn__indre">
+    <div>
+      <p class="bunn__navn">Agraff</p>
+      <p class="bunn__tekst">Norge · post@agraff.no</p>
+    </div>
+    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <p class="bunn__krav">© 2026 Agraff</p>
+  </div>
+</footer>
+</body>
+</html>

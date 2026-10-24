@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Haavind – Oslo</title>
 <meta name="description" content="Vi er et fullservice advokatfirma, og har mange av Norges største selskaper som kunder.">
 <meta property="og:title" content="Haavind – Oslo">
@@ -11,84 +10,104 @@
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<header class="topp"><div class="topp__indre">
-  <a class="merke" href="#topp">Haavind</a>
-  <nav class="meny"><a href="#tjenester">Tjenester</a><a href="#slik">Slik jobber vi</a><a href="#kontakt">Kontakt</a></nav>
-  <a class="knapp" href="#kontakt">Ta kontakt</a>
-</div></header>
-<main id="topp">
-<section class="helt helt--typografisk">
-  <div class="helt__innhold">
+<a class="hopp" href="#innhold">Gå til innholdet</a>
+<header class="topp">
+  <div class="topp__indre">
+    <a class="merke" href="index.html">Haavind</a>
+    <details class="mobilmeny">
+      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
+      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    </details>
+    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  </div>
+</header>
+<main id="innhold">
+<section class="helt">
+  <div class="helt__bilde"><img class="" src="img/hero.jpg" alt=" Haavind" ></div>
+  <div class="helt__tekst">
     <p class="merkelapp">advokat · Oslo</p>
     <h1>Forretningsjus for Norges største selskaper</h1>
     <p class="helt__ingress">Vi er et fullservice advokatfirma, og har mange av Norges største selskaper som kunder.</p>
-    <div class="helt__handling"><a class="knapp" href="#kontakt">Ta kontakt</a></div>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se tjenester</a>
+    </div>
   </div>
 </section>
-<section class="band"><div class="band__indre">
-  <div><strong>Oslo</strong><span>base</span></div>
-  <div><strong>post@haavind.no</strong><span>e-post</span></div>
-  <div><strong>Fast</strong><span>samme person hele veien</span></div>
-  <div><strong>Svar</strong><span>svar samme dag</span></div>
-</div></section>
-<section class="seksjon om om--uten-bilde">
-  
-  <div>
-    <p class="merkelapp">Om oss</p>
-    <h2>Haavind</h2>
-    <p>Vi er et fullservice advokatfirma, og har mange av Norges største selskaper som kunder.</p>
-    <blockquote>«Det skal være enkelt å være kunde hos oss. Du får vite hva som skjer, og når.»</blockquote>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Tjenester</p>
+    <h2>Det vi gjør</h2>
+  </div>
+  <div class="rutenett rutenett--3"><article class="kort">
+      <span class="kort__nr">01</span>
+      <h3>Forretningsjus</h3>
+      <p>Avtaler, transaksjoner og tvister.</p>
+    </article><article class="kort">
+      <span class="kort__nr">02</span>
+      <h3>Arbeidsrett</h3>
+      <p>Bistand til ledelse og HR i personalsaker.</p>
+    </article><article class="kort">
+      <span class="kort__nr">03</span>
+      <h3>Compliance</h3>
+      <p>Etterlevelse og internkontroll.</p>
+    </article></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle 4 tjenester →</a></p>
+</section>
+
+<section class="drom">
+  <div class="drom__indre">
+    <div>
+      <p class="merkelapp">Ny mulighet</p>
+      <h2>Oversikt over saker og frister, for klienten</h2>
+      <p>Store klienter har mange saker gående samtidig, og status samles i e-post. En side der klienten ser saker, frister og hvem som jobber med hva, gir oversikt uten å ringe tre partnere — og gjør oppgjøret lettere å forstå.</p>
+    </div>
+    <div class="drom__kort">
+      <p class="drom__korttittel">Oversikt over saker og frister, for klienten</p>
+      <div class="drom__rad"><span>Saker og ansvarlig</span><span>Nå</span></div><div class="drom__rad"><span>Frister som nærmer seg</span><span>Klar</span></div><div class="drom__rad"><span>Timer per sak</span><span>Klar</span></div>
+    </div>
   </div>
 </section>
-<section class="seksjon" id="tjenester">
-  <p class="merkelapp">Tjenester</p>
-  <h2>Det vi gjør for kundene</h2>
-  <div class="rutenett"><article class="kort"><h3>Forretningsjus</h3><p>Avtaler, transaksjoner og tvister.</p></article><article class="kort"><h3>Arbeidsrett</h3><p>Bistand til ledelse og HR i personalsaker.</p></article><article class="kort"><h3>Compliance</h3><p>Etterlevelse og internkontroll.</p></article><article class="kort"><h3>Tvist</h3><p>Prosedyre for domstolene og i voldgift.</p></article></div>
-</section>
-<section class="drom" id="drom"><div class="drom__indre">
-  <div>
-    <p class="merkelapp">Ny mulighet</p>
-    <h2>Oversikt over saker og frister, for klienten</h2>
-    <p>Store klienter har mange saker gående samtidig, og status samles i e-post. En side der klienten ser saker, frister og hvem som jobber med hva, gir oversikt uten å ringe tre partnere — og gjør oppgjøret lettere å forstå.</p>
-    <ul><li>Saker og ansvarlig</li><li>Frister som nærmer seg</li><li>Timer per sak</li></ul>
-    <a class="knapp" href="#kontakt">Se hvordan det kunne vært</a>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Slik jobber vi</p>
+    <h2>Tre steg fra avtale til ferdig</h2>
   </div>
-  <div class="drom__mock"><div class="mock">
-    <p class="mock__merke">Oversikt over saker og frister, for klienten</p>
-    <div class="mock__rad"><span>Saker og ansvarlig</span><span>I dag</span></div><div class="mock__rad"><span>Frister som nærmer seg</span><span>Klar</span></div><div class="mock__rad"><span>Timer per sak</span><span>Klar</span></div>
-  </div></div>
-</div></section>
-<section class="seksjon" id="slik">
-  <p class="merkelapp">Slik jobber vi</p>
-  <h2>Slik gjør vi det, steg for steg</h2>
-  <ol class="steg"><li><span class="steg__nr">01</span><h3>Saken</h3><p>Vi avklarer hva som står på spill og hvilke frister som gjelder.</p></li><li><span class="steg__nr">02</span><h3>Vurdering</h3><p>Alternativer, med kostnad og risiko.</p></li><li><span class="steg__nr">03</span><h3>Bistand</h3><p>Vi følger saken, og forklarer underveis.</p></li></ol>
+  <ol class="steg">
+    <li><span class="steg__nr">01</span><h3>Saken</h3><p>Vi avklarer hva som står på spill og hvilke frister som gjelder.</p></li><li><span class="steg__nr">02</span><h3>Vurdering</h3><p>Alternativer, med kostnad og risiko.</p></li><li><span class="steg__nr">03</span><h3>Bistand</h3><p>Vi følger saken, og forklarer underveis.</p></li>
+  </ol>
 </section>
-<section class="seksjon kontakt kontakt--speil" id="kontakt">
-  <div>
-    <p class="merkelapp">Kontakt</p>
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <form id="skjema" novalidate data-epost="post@haavind.no">
-      <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
-      <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
-      <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
-      <div class="felt"><label for="melding">Hva gjelder det?</label><textarea id="melding" name="melding" rows="4" required></textarea></div>
-      <button class="knapp" type="submit">Send henvendelsen</button>
-      <p class="hjelp">Skjemaet åpner e-postprogrammet ditt.</p>
-      <p id="status" role="status" aria-live="polite"></p>
-    </form>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Prosjekter</p>
+    <h2>Fra arbeidet vårt</h2>
   </div>
-  <aside class="kontaktkort">
-    <h3>Haavind</h3>
-    <dl>
-      
-      <div><dt>E-post</dt><dd><a href="mailto:post@haavind.no">post@haavind.no</a></dd></div>
-      <div><dt>Sted</dt><dd>Oslo</dd></div>
-    </dl>
-  </aside>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/galleri-1.jpg" alt="Haavind – arbeid" loading="lazy" decoding="async"><figcaption>Haavind – arbeid</figcaption></figure></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
+</section>
+
+<section class="cta">
+  <h2>Kort fortalt: hva trenger du?</h2>
+  <p>Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
+  <a class="knapp" href="kontakt.html">Send en henvendelse</a>
 </section>
 </main>
-<footer class="bunn"><div class="bunn__indre">Haavind · Oslo · post@haavind.no<br>© <span id="ar">2026</span> Haavind</div></footer>
-<script src="app.js" defer></script>
-</body></html>
+<footer class="bunn">
+  <div class="bunn__indre">
+    <div>
+      <p class="bunn__navn">Haavind</p>
+      <p class="bunn__tekst">Oslo · post@haavind.no</p>
+    </div>
+    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <p class="bunn__krav">© 2026 Haavind</p>
+  </div>
+</footer>
+</body>
+</html>

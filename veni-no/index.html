@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Veni – Norge</title>
 <meta name="description" content="Gjennom Microsoft 365 Digital Coach fikk ansatte i Aero Norway opplæring som ble brukt, ikke bare gjennomført.">
 <meta property="og:title" content="Veni – Norge">
@@ -11,84 +10,104 @@
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<header class="topp"><div class="topp__indre">
-  <a class="merke" href="#topp"><img class="merke__logo" src="img/logo.svg" alt="Veni" height="34"></a>
-  <nav class="meny"><a href="#tjenester">Tjenester</a><a href="#slik">Slik jobber vi</a><a href="#kontakt">Kontakt</a></nav>
-  <a class="knapp" href="#kontakt">Ta kontakt</a>
-</div></header>
-<main id="topp">
-<section class="helt helt--typografisk">
-  <div class="helt__innhold">
+<a class="hopp" href="#innhold">Gå til innholdet</a>
+<header class="topp">
+  <div class="topp__indre">
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Veni" height="34"></a>
+    <details class="mobilmeny">
+      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
+      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    </details>
+    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  </div>
+</header>
+<main id="innhold">
+<section class="helt">
+  <div class="helt__bilde"><img class="" src="img/hero.jpg" alt=" Veni" ></div>
+  <div class="helt__tekst">
     <p class="merkelapp">opplæring · Norge</p>
     <h1>Microsoft 365 som folk faktisk tar i bruk</h1>
     <p class="helt__ingress">Gjennom Microsoft 365 Digital Coach fikk ansatte i Aero Norway opplæring som ble brukt, ikke bare gjennomført.</p>
-    <div class="helt__handling"><a class="knapp" href="#kontakt">Ta kontakt</a></div>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se tjenester</a>
+    </div>
   </div>
 </section>
-<section class="band"><div class="band__indre">
-  <div><strong>Norge</strong><span>der vi holder til</span></div>
-  <div><strong>post@veni.no</strong><span>e-post</span></div>
-  <div><strong>Fast</strong><span>fast kontaktperson</span></div>
-  <div><strong>Svar</strong><span>svar innen neste virkedag</span></div>
-</div></section>
-<section class="drom" id="drom"><div class="drom__indre">
-  <div>
-    <p class="merkelapp">Ny mulighet</p>
-    <h2>Se hvem som har lært hva, per avdeling</h2>
-    <p>Opplæring måles ofte i antall gjennomførte kurs, ikke i bruk. En side der lederen ser fremdrift per avdeling og hvem som fortsatt ikke bruker verktøyet, gjør det mulig å følge opp dem som trenger det.</p>
-    <ul><li>Fremdrift per avdeling</li><li>Hvem som ikke har startet</li><li>Neste økt</li></ul>
-    <a class="knapp" href="#kontakt">Hør hvordan det kan settes opp</a>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Tjenester</p>
+    <h2>Det vi gjør</h2>
   </div>
-  <div class="drom__mock"><div class="mock">
-    <p class="mock__merke">Se hvem som har lært hva, per avdeling</p>
-    <div class="mock__rad"><span>Fremdrift per avdeling</span><span>I dag</span></div><div class="mock__rad"><span>Hvem som ikke har startet</span><span>Klar</span></div><div class="mock__rad"><span>Neste økt</span><span>Klar</span></div>
-  </div></div>
-</div></section>
-<section class="seksjon" id="slik">
-  <p class="merkelapp">Slik jobber vi</p>
-  <h2>3 steg, og du vet hva som skjer</h2>
-  <ol class="steg"><li><span class="steg__nr">01</span><h3>Kartlegging</h3><p>Hva som er innført og hva som brukes.</p></li><li><span class="steg__nr">02</span><h3>Opplæring</h3><p>Korte økter, tilpasset hverdagen.</p></li><li><span class="steg__nr">03</span><h3>Oppfølging</h3><p>Vi måler bruk og følger opp de som henger etter.</p></li></ol>
+  <div class="rutenett rutenett--3"><article class="kort">
+      <span class="kort__nr">01</span>
+      <h3>Digital Coach</h3>
+      <p>Opplæring i Microsoft 365, tilpasset rollen.</p>
+    </article><article class="kort">
+      <span class="kort__nr">02</span>
+      <h3>Innføring</h3>
+      <p>Nye verktøy tatt i bruk, med oppfølging.</p>
+    </article><article class="kort">
+      <span class="kort__nr">03</span>
+      <h3>Måling</h3>
+      <p>Vi ser hvem som har lært hva, og følger opp.</p>
+    </article></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle 4 tjenester →</a></p>
 </section>
-<section class="seksjon om om--uten-bilde">
-  
-  <div>
-    <p class="merkelapp">Om oss</p>
-    <h2>Veni</h2>
-    <p>Gjennom Microsoft 365 Digital Coach fikk ansatte i Aero Norway opplæring som ble brukt, ikke bare gjennomført.</p>
-    <blockquote>«Vi tar jobben, men vi forklarer den også. Du skal vite hvorfor vi gjør det vi gjør.»</blockquote>
+
+<section class="drom">
+  <div class="drom__indre">
+    <div>
+      <p class="merkelapp">Ny mulighet</p>
+      <h2>Se hvem som har lært hva, per avdeling</h2>
+      <p>Opplæring måles ofte i antall gjennomførte kurs, ikke i bruk. En side der lederen ser fremdrift per avdeling og hvem som fortsatt ikke bruker verktøyet, gjør det mulig å følge opp dem som trenger det.</p>
+    </div>
+    <div class="drom__kort">
+      <p class="drom__korttittel">Se hvem som har lært hva, per avdeling</p>
+      <div class="drom__rad"><span>Fremdrift per avdeling</span><span>Nå</span></div><div class="drom__rad"><span>Hvem som ikke har startet</span><span>Klar</span></div><div class="drom__rad"><span>Neste økt</span><span>Klar</span></div>
+    </div>
   </div>
 </section>
-<section class="seksjon" id="tjenester">
-  <p class="merkelapp">Tjenester</p>
-  <h2>Det vi gjør for kundene</h2>
-  <div class="rutenett"><article class="kort"><h3>Digital Coach</h3><p>Opplæring i Microsoft 365, tilpasset rollen.</p></article><article class="kort"><h3>Innføring</h3><p>Nye verktøy tatt i bruk, med oppfølging.</p></article><article class="kort"><h3>Måling</h3><p>Vi ser hvem som har lært hva, og følger opp.</p></article><article class="kort"><h3>Rådgivning</h3><p>Hvilke verktøy som faktisk trengs.</p></article></div>
-</section>
-<section class="seksjon kontakt" id="kontakt">
-  <div>
-    <p class="merkelapp">Kontakt</p>
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <form id="skjema" novalidate data-epost="post@veni.no">
-      <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
-      <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
-      <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
-      <div class="felt"><label for="melding">Hva gjelder det?</label><textarea id="melding" name="melding" rows="4" required></textarea></div>
-      <button class="knapp" type="submit">Send henvendelsen</button>
-      <p class="hjelp">Skjemaet åpner e-postprogrammet ditt.</p>
-      <p id="status" role="status" aria-live="polite"></p>
-    </form>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Slik jobber vi</p>
+    <h2>Tre steg fra avtale til ferdig</h2>
   </div>
-  <aside class="kontaktkort">
-    <h3>Veni</h3>
-    <dl>
-      
-      <div><dt>E-post</dt><dd><a href="mailto:post@veni.no">post@veni.no</a></dd></div>
-      <div><dt>Sted</dt><dd>Norge</dd></div>
-    </dl>
-  </aside>
+  <ol class="steg">
+    <li><span class="steg__nr">01</span><h3>Kartlegging</h3><p>Hva som er innført og hva som brukes.</p></li><li><span class="steg__nr">02</span><h3>Opplæring</h3><p>Korte økter, tilpasset hverdagen.</p></li><li><span class="steg__nr">03</span><h3>Oppfølging</h3><p>Vi måler bruk og følger opp de som henger etter.</p></li>
+  </ol>
+</section>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Prosjekter</p>
+    <h2>Fra arbeidet vårt</h2>
+  </div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/galleri-1.jpg" alt="Veni – arbeid" loading="lazy" decoding="async"><figcaption>Veni – arbeid</figcaption></figure></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
+</section>
+
+<section class="cta">
+  <h2>Kort fortalt: hva trenger du?</h2>
+  <p>Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
+  <a class="knapp" href="kontakt.html">Send en henvendelse</a>
 </section>
 </main>
-<footer class="bunn"><div class="bunn__indre">Veni · Norge · post@veni.no<br>© <span id="ar">2026</span> Veni</div></footer>
-<script src="app.js" defer></script>
-</body></html>
+<footer class="bunn">
+  <div class="bunn__indre">
+    <div>
+      <p class="bunn__navn">Veni</p>
+      <p class="bunn__tekst">Norge · post@veni.no</p>
+    </div>
+    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <p class="bunn__krav">© 2026 Veni</p>
+  </div>
+</footer>
+</body>
+</html>

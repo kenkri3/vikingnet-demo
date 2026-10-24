@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Sweet Heart – Tromsø</title>
 <meta name="description" content="I hjertet av Tromsø sentrum har Sweet Heart vært en skattekiste av søtsaker og smaksopplevelser siden dørene åpnet i oktober 1984.">
 <meta property="og:title" content="Sweet Heart – Tromsø">
@@ -11,84 +10,104 @@
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<header class="topp"><div class="topp__indre">
-  <a class="merke" href="#topp"><img class="merke__logo" src="img/logo.png" alt="Sweet Heart" height="34"></a>
-  <nav class="meny"><a href="#tjenester">Tjenester</a><a href="#slik">Slik jobber vi</a><a href="#kontakt">Kontakt</a></nav>
-  <a class="knapp" href="#kontakt">Ta kontakt</a>
-</div></header>
-<main id="topp">
-<section class="helt helt--typografisk">
-  <div class="helt__innhold">
+<a class="hopp" href="#innhold">Gå til innholdet</a>
+<header class="topp">
+  <div class="topp__indre">
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Sweet Heart" height="34"></a>
+    <details class="mobilmeny">
+      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
+      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    </details>
+    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  </div>
+</header>
+<main id="innhold">
+<section class="helt">
+  <div class="helt__bilde"><img class="" src="img/hero.jpg" alt=" Sweet Heart" ></div>
+  <div class="helt__tekst">
     <p class="merkelapp">godteri · Tromsø</p>
     <h1>Søtsaker i Tromsø siden 1984</h1>
     <p class="helt__ingress">I hjertet av Tromsø sentrum har Sweet Heart vært en skattekiste av søtsaker og smaksopplevelser siden dørene åpnet i oktober 1984.</p>
-    <div class="helt__handling"><a class="knapp" href="#kontakt">Ta kontakt</a></div>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se tjenester</a>
+    </div>
   </div>
 </section>
-<section class="band"><div class="band__indre">
-  <div><strong>Tromsø</strong><span>der vi holder til</span></div>
-  <div><strong>post@sweetheart.no</strong><span>e-post</span></div>
-  <div><strong>Fast</strong><span>fast kontaktperson</span></div>
-  <div><strong>Svar</strong><span>svar innen neste virkedag</span></div>
-</div></section>
-<section class="seksjon" id="slik">
-  <p class="merkelapp">Slik jobber vi</p>
-  <h2>3 steg, og du vet hva som skjer</h2>
-  <ol class="steg"><li><span class="steg__nr">01</span><h3>Velg</h3><p>Du velger størrelse og innhold.</p></li><li><span class="steg__nr">02</span><h3>Vi pakker</h3><p>Esken pakkes og merkes.</p></li><li><span class="steg__nr">03</span><h3>Henting</h3><p>Du henter i butikken, eller vi avtaler levering.</p></li></ol>
-</section>
-<section class="drom" id="drom"><div class="drom__indre">
-  <div>
-    <p class="merkelapp">Ny mulighet</p>
-    <h2>Gaveesken bestilt med hilsen og hentetid</h2>
-    <p>I desember går bestillinger på telefon og lapper, og hilsenen på kortet blir husket feil. En side der kunden velger innhold, skriver hilsen og får hentetid, gjør julehandelen raskere — og feilene færre.</p>
-    <ul><li>Innhold og størrelse</li><li>Hilsen på kortet</li><li>Hentetid og pris</li></ul>
-    <a class="knapp" href="#kontakt">Hør hvordan det kan settes opp</a>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Tjenester</p>
+    <h2>Det vi gjør</h2>
   </div>
-  <div class="drom__mock"><div class="mock">
-    <p class="mock__merke">Gaveesken bestilt med hilsen og hentetid</p>
-    <div class="mock__rad"><span>Innhold og størrelse</span><span>I dag</span></div><div class="mock__rad"><span>Hilsen på kortet</span><span>Klar</span></div><div class="mock__rad"><span>Hentetid og pris</span><span>Klar</span></div>
-  </div></div>
-</div></section>
-<section class="seksjon" id="tjenester">
-  <p class="merkelapp">Tjenester</p>
-  <h2>Det vi gjør for kundene</h2>
-  <div class="rutenett"><article class="kort"><h3>Godteri i løsvekt</h3><p>Bland selv, med det du liker best.</p></article><article class="kort"><h3>Konfekt</h3><p>Håndlaget konfekt, også i esker.</p></article><article class="kort"><h3>Gaver</h3><p>Gaveesker til jul, påske og andre anledninger.</p></article><article class="kort"><h3>Bestilling</h3><p>Esker til selskap og bedrift, etter avtale.</p></article></div>
+  <div class="rutenett rutenett--3"><article class="kort">
+      <span class="kort__nr">01</span>
+      <h3>Godteri i løsvekt</h3>
+      <p>Bland selv, med det du liker best.</p>
+    </article><article class="kort">
+      <span class="kort__nr">02</span>
+      <h3>Konfekt</h3>
+      <p>Håndlaget konfekt, også i esker.</p>
+    </article><article class="kort">
+      <span class="kort__nr">03</span>
+      <h3>Gaver</h3>
+      <p>Gaveesker til jul, påske og andre anledninger.</p>
+    </article></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle 4 tjenester →</a></p>
 </section>
-<section class="seksjon om">
-  <div><img src="img/om.jpg" alt="Sweet Heart" width="1600" height="1067" loading="lazy"></div>
-  <div>
-    <p class="merkelapp">Om oss</p>
-    <h2>Sweet Heart</h2>
-    <p>I hjertet av Tromsø sentrum har Sweet Heart vært en skattekiste av søtsaker og smaksopplevelser siden dørene åpnet i oktober 1984.</p>
-    <blockquote>«Vi tar jobben, men vi forklarer den også. Du skal vite hvorfor vi gjør det vi gjør.»</blockquote>
+
+<section class="drom">
+  <div class="drom__indre">
+    <div>
+      <p class="merkelapp">Ny mulighet</p>
+      <h2>Gaveesken bestilt med hilsen og hentetid</h2>
+      <p>I desember går bestillinger på telefon og lapper, og hilsenen på kortet blir husket feil. En side der kunden velger innhold, skriver hilsen og får hentetid, gjør julehandelen raskere — og feilene færre.</p>
+    </div>
+    <div class="drom__kort">
+      <p class="drom__korttittel">Gaveesken bestilt med hilsen og hentetid</p>
+      <div class="drom__rad"><span>Innhold og størrelse</span><span>Nå</span></div><div class="drom__rad"><span>Hilsen på kortet</span><span>Klar</span></div><div class="drom__rad"><span>Hentetid og pris</span><span>Klar</span></div>
+    </div>
   </div>
 </section>
-<section class="seksjon kontakt" id="kontakt">
-  <div>
-    <p class="merkelapp">Kontakt</p>
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <form id="skjema" novalidate data-epost="post@sweetheart.no">
-      <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
-      <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
-      <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
-      <div class="felt"><label for="melding">Hva gjelder det?</label><textarea id="melding" name="melding" rows="4" required></textarea></div>
-      <button class="knapp" type="submit">Send henvendelsen</button>
-      <p class="hjelp">Skjemaet åpner e-postprogrammet ditt.</p>
-      <p id="status" role="status" aria-live="polite"></p>
-    </form>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Slik jobber vi</p>
+    <h2>Tre steg fra avtale til ferdig</h2>
   </div>
-  <aside class="kontaktkort">
-    <h3>Sweet Heart</h3>
-    <dl>
-      
-      <div><dt>E-post</dt><dd><a href="mailto:post@sweetheart.no">post@sweetheart.no</a></dd></div>
-      <div><dt>Sted</dt><dd>Tromsø</dd></div>
-    </dl>
-  </aside>
+  <ol class="steg">
+    <li><span class="steg__nr">01</span><h3>Velg</h3><p>Du velger størrelse og innhold.</p></li><li><span class="steg__nr">02</span><h3>Vi pakker</h3><p>Esken pakkes og merkes.</p></li><li><span class="steg__nr">03</span><h3>Henting</h3><p>Du henter i butikken, eller vi avtaler levering.</p></li>
+  </ol>
+</section>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Prosjekter</p>
+    <h2>Fra arbeidet vårt</h2>
+  </div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/1-sweetheart-no.jpg" alt="Sweet Heart – Godteri i løsvekt" loading="lazy" decoding="async"><figcaption>Sweet Heart – Godteri i løsvekt</figcaption></figure><figure class="galleri__bilde"><img class="" src="img/galleri-1.jpg" alt="Sweet Heart – arbeid" loading="lazy" decoding="async"><figcaption>Sweet Heart – arbeid</figcaption></figure></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
+</section>
+
+<section class="cta">
+  <h2>Kort fortalt: hva trenger du?</h2>
+  <p>Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
+  <a class="knapp" href="kontakt.html">Send en henvendelse</a>
 </section>
 </main>
-<footer class="bunn"><div class="bunn__indre">Sweet Heart · Tromsø · post@sweetheart.no<br>© <span id="ar">2026</span> Sweet Heart</div></footer>
-<script src="app.js" defer></script>
-</body></html>
+<footer class="bunn">
+  <div class="bunn__indre">
+    <div>
+      <p class="bunn__navn">Sweet Heart</p>
+      <p class="bunn__tekst">Tromsø · post@sweetheart.no</p>
+    </div>
+    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <p class="bunn__krav">© 2026 Sweet Heart</p>
+  </div>
+</footer>
+</body>
+</html>

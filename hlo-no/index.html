@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>HLO – Norge</title>
 <meta name="description" content="Vi har våre fagområder, du har dine. Vår jobb er å hjelpe deg og bedriften med de rette valgene, gjennom pålitelige regnskaper og tjenester levert i rett tid.">
 <meta property="og:title" content="HLO – Norge">
@@ -11,80 +10,104 @@
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-<header class="topp"><div class="topp__indre">
-  <a class="merke" href="#topp"><img class="merke__logo" src="img/logo.svg" alt="HLO" height="34"></a>
-  <nav class="meny"><a href="#tjenester">Tjenester</a><a href="#slik">Slik jobber vi</a><a href="#kontakt">Kontakt</a></nav>
-  <a class="knapp" href="#kontakt">Ta kontakt</a>
-</div></header>
-<main id="topp">
-<section class="helt helt--split">
-  <div class="helt__bilde"><img src="img/hero.jpg" alt="Regnskap og papirer" width="1600" height="1067"><div class="helt__slor"></div></div>
-  <div class="helt__innhold">
+<a class="hopp" href="#innhold">Gå til innholdet</a>
+<header class="topp">
+  <div class="topp__indre">
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="HLO" height="34"></a>
+    <details class="mobilmeny">
+      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
+      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    </details>
+    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  </div>
+</header>
+<main id="innhold">
+<section class="helt">
+  <div class="helt__bilde"><img class="" src="img/hero.jpg" alt=" HLO" ></div>
+  <div class="helt__tekst">
     <p class="merkelapp">regnskap · Norge</p>
     <h1>Regnskap og rådgivning, levert i rett tid</h1>
     <p class="helt__ingress">Vi har våre fagområder, du har dine. Vår jobb er å hjelpe deg og bedriften med de rette valgene, gjennom pålitelige regnskaper og tjenester levert i rett tid.</p>
-    <div class="helt__handling"><a class="knapp" href="#kontakt">Ta kontakt</a></div>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se tjenester</a>
+    </div>
   </div>
 </section>
 
-<section class="seksjon" id="tjenester">
-  <p class="merkelapp">Tjenester</p>
-  <h2>Det vi gjør for kundene</h2>
-  <div class="rutenett"><article class="kort"><h3>Regnskap</h3><p>Løpende regnskap med tall du kan lese og bruke.</p></article><article class="kort"><h3>Lønn</h3><p>Lønn og rapportering, til avtalt tid.</p></article><article class="kort"><h3>Rådgivning</h3><p>Spørsmål om skatt og drift, når de dukker opp.</p></article><article class="kort"><h3>Årsoppgjør</h3><p>Årsregnskap og skattemelding, med fremdrift du blir varslet om.</p></article></div>
-</section>
-<section class="drom" id="drom"><div class="drom__indre">
-  <div>
-    <p class="merkelapp">Ny mulighet</p>
-    <h2>Tallene dine, oppdatert når du ser på dem</h2>
-    <p>Mange ser regnskapet først ved årsoppgjør. En side der kunden ser omsetning, kostnader og likviditet oppdatert hver uke, gjør regnskapet til et verktøy i driften — ikke en rapport i ettertid.</p>
-    <ul><li>Omsetning og kostnad per måned</li><li>Likviditet og forfall</li><li>Sammenlignet med i fjor</li></ul>
-    <a class="knapp" href="#kontakt">Ta en prat om det</a>
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Tjenester</p>
+    <h2>Det vi gjør</h2>
   </div>
-  <div class="drom__mock"><div class="mock">
-    <p class="mock__merke">Tallene dine, oppdatert når du ser på dem</p>
-    <div class="mock__rad"><span>Omsetning og kostnad per måned</span><span>I dag</span></div><div class="mock__rad"><span>Likviditet og forfall</span><span>Klar</span></div><div class="mock__rad"><span>Sammenlignet med i fjor</span><span>Klar</span></div>
-  </div></div>
-</div></section>
-<section class="seksjon" id="slik">
-  <p class="merkelapp">Slik jobber vi</p>
-  <h2>Fra første samtale til ferdig jobb</h2>
-  <ol class="steg"><li><span class="steg__nr">01</span><h3>En samtale</h3><p>Vi ser på bedriften og hva du trenger hjelp til.</p></li><li><span class="steg__nr">02</span><h3>Overlevering</h3><p>Vi tar over og setter opp rutiner for bilag.</p></li><li><span class="steg__nr">03</span><h3>Løpende drift</h3><p>Regnskap og lønn til avtalt tid, med fast kontaktperson.</p></li></ol>
+  <div class="rutenett rutenett--3"><article class="kort">
+      <span class="kort__nr">01</span>
+      <h3>Regnskap</h3>
+      <p>Løpende regnskap med tall du kan lese og bruke.</p>
+    </article><article class="kort">
+      <span class="kort__nr">02</span>
+      <h3>Lønn</h3>
+      <p>Lønn og rapportering, til avtalt tid.</p>
+    </article><article class="kort">
+      <span class="kort__nr">03</span>
+      <h3>Rådgivning</h3>
+      <p>Spørsmål om skatt og drift, når de dukker opp.</p>
+    </article></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle 4 tjenester →</a></p>
 </section>
-<section class="seksjon om om--uten-bilde">
-  
-  <div>
-    <p class="merkelapp">Om oss</p>
-    <h2>HLO</h2>
-    <p>Vi har våre fagområder, du har dine. Vår jobb er å hjelpe deg og bedriften med de rette valgene, gjennom pålitelige regnskaper og tjenester levert i rett tid.</p>
-    <blockquote>«Godt håndverk merkes ikke. Det er poenget.»</blockquote>
+
+<section class="drom">
+  <div class="drom__indre">
+    <div>
+      <p class="merkelapp">Ny mulighet</p>
+      <h2>Tallene dine, oppdatert når du ser på dem</h2>
+      <p>Mange ser regnskapet først ved årsoppgjør. En side der kunden ser omsetning, kostnader og likviditet oppdatert hver uke, gjør regnskapet til et verktøy i driften — ikke en rapport i ettertid.</p>
+    </div>
+    <div class="drom__kort">
+      <p class="drom__korttittel">Tallene dine, oppdatert når du ser på dem</p>
+      <div class="drom__rad"><span>Omsetning og kostnad per måned</span><span>Nå</span></div><div class="drom__rad"><span>Likviditet og forfall</span><span>Klar</span></div><div class="drom__rad"><span>Sammenlignet med i fjor</span><span>Klar</span></div>
+    </div>
   </div>
 </section>
-<section class="seksjon kontakt kontakt--speil" id="kontakt">
-  <div>
-    <p class="merkelapp">Kontakt</p>
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <form id="skjema" novalidate data-epost="post@hlo.no">
-      <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
-      <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
-      <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
-      <div class="felt"><label for="melding">Hva gjelder det?</label><textarea id="melding" name="melding" rows="4" required></textarea></div>
-      <button class="knapp" type="submit">Send henvendelsen</button>
-      <p class="hjelp">Skjemaet åpner e-postprogrammet ditt.</p>
-      <p id="status" role="status" aria-live="polite"></p>
-    </form>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Slik jobber vi</p>
+    <h2>Tre steg fra avtale til ferdig</h2>
   </div>
-  <aside class="kontaktkort">
-    <h3>HLO</h3>
-    <dl>
-      
-      <div><dt>E-post</dt><dd><a href="mailto:post@hlo.no">post@hlo.no</a></dd></div>
-      <div><dt>Sted</dt><dd>Norge</dd></div>
-    </dl>
-  </aside>
+  <ol class="steg">
+    <li><span class="steg__nr">01</span><h3>En samtale</h3><p>Vi ser på bedriften og hva du trenger hjelp til.</p></li><li><span class="steg__nr">02</span><h3>Overlevering</h3><p>Vi tar over og setter opp rutiner for bilag.</p></li><li><span class="steg__nr">03</span><h3>Løpende drift</h3><p>Regnskap og lønn til avtalt tid, med fast kontaktperson.</p></li>
+  </ol>
+</section>
+
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Prosjekter</p>
+    <h2>Fra arbeidet vårt</h2>
+  </div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/galleri-1.jpg" alt="HLO – arbeid" loading="lazy" decoding="async"><figcaption>HLO – arbeid</figcaption></figure></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
+</section>
+
+<section class="cta">
+  <h2>Kort fortalt: hva trenger du?</h2>
+  <p>Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
+  <a class="knapp" href="kontakt.html">Send en henvendelse</a>
 </section>
 </main>
-<footer class="bunn"><div class="bunn__indre">HLO · Norge · post@hlo.no<br>© <span id="ar">2026</span> HLO</div></footer>
-<script src="app.js" defer></script>
-</body></html>
+<footer class="bunn">
+  <div class="bunn__indre">
+    <div>
+      <p class="bunn__navn">HLO</p>
+      <p class="bunn__tekst">Norge · post@hlo.no</p>
+    </div>
+    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <p class="bunn__krav">© 2026 HLO</p>
+  </div>
+</footer>
+</body>
+</html>

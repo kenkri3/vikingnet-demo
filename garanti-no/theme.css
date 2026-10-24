@@ -1,35 +1,15 @@
-/* Vestbo Garanti Sentrum — egen palett og typografi.
-   Bergen, kveld, tre og hvitt hus: dyp marine, lin og messing. */
-:root {
-  --blekk: #0d1a24;
-  --blekk-2: #16283400;
-  --marine: #12283a;
-  --marine-lys: #1d3a50;
-  --lin: #f7f3ea;
-  --sand: #e9dfcd;
-  --messing: #a8813f;
-  --messing-lys: #c39c58;
-  --tekst: #1d2a33;
-  --dempet: #5c6a74;
-  --hvit: #fffdf9;
-
-  --radius: 4px;
-  --radius-m: 10px;
-  --maks: 1180px;
-  --luft: clamp(1.1rem, 0.7rem + 1.6vw, 2rem);
-
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --sans: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
-
-  --t-1: clamp(2.2rem, 1.3rem + 4.2vw, 4.1rem);
-  --t-2: clamp(1.55rem, 1.15rem + 1.8vw, 2.5rem);
-  --t-3: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem);
-  --t-brod: clamp(1rem, 0.97rem + 0.15vw, 1.06rem);
-  --t-liten: 0.86rem;
+:root{
+  --bak:#f7f4ee;--blekk:#1c2430;--aksent:#8a6a34;
+  --dempet:color-mix(in srgb, #1c2430 58%, #f7f4ee);
+  --kant:color-mix(in srgb, #1c2430 15%, #f7f4ee);
+  --max:1180px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --h1:clamp(2.1rem,1.2rem + 4.2vw,4rem);
+  --h2:clamp(1.5rem,1.1rem + 1.8vw,2.4rem);
 }
-
-h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; margin: 0; }
-h1 { font-size: var(--t-1); }
-h2 { font-size: var(--t-2); }
-h3 { font-size: var(--t-3); }
-p { margin: 0; }
+body{margin:0;background:var(--bak);color:var(--blekk);font-family:var(--sans);line-height:1.65}
+.merke__logo{height:34px;width:auto;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0}
+h1{font-size:var(--h1)}h2{font-size:var(--h2)}h3{font-size:1.12rem}
+p{margin:0}a{color:inherit}figure{margin:0}
