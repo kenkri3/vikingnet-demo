@@ -1,4 +1,7 @@
 
+.merke__flate{display:inline-flex;align-items:center;padding:6px 10px;border-radius:8px}
+.merke__flate--mork{background:#101418}
+.merke__flate--lys{background:#ffffff;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
 .galleri--en{grid-template-columns:1fr}
 .galleri--en .galleri__bilde img{aspect-ratio:16/9;max-height:520px}
 .innledning{max-width:62ch;color:var(--dempet);margin:0 0 2rem;font-size:1.02rem}
