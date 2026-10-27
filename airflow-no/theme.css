@@ -1,7 +1,7 @@
 :root{
-  --bak:#f0f5f8;--blekk:#001829;--aksent:#005692;
-  --dempet:color-mix(in srgb, #001829 58%, #f0f5f8);
-  --kant:color-mix(in srgb, #001829 15%, #f0f5f8);
+  --bak:#f8f3ea;--blekk:#23301f;--aksent:#a45c2f;
+  --dempet:color-mix(in srgb, #23301f 74%, #f8f3ea);
+  --kant:color-mix(in srgb, #23301f 15%, #f8f3ea);
   --max:1180px;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --sans:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
