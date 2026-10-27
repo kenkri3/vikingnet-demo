@@ -34,7 +34,7 @@ p{margin:0 0 1em}
 .meny a{text-decoration:none;padding:.35rem 0;border-bottom:2px solid transparent}
 .meny a:hover,.meny a[aria-current="page"]{border-bottom-color:var(--aksent)}
 .meny a[aria-current="page"]{font-weight:600}
-.knapp{background:color-mix(in srgb,var(--aksent) 70%,#000);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.35rem;border-radius:999px;background:color-mix(in srgb,var(--aksent) 70%,#000);color:#fff;text-decoration:none;font-weight:600;border:1px solid transparent;cursor:pointer}
+.knapp{background:color-mix(in srgb,var(--aksent) 70%,#000);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.35rem;border-radius:999px;background:color-mix(in srgb,var(--aksent) 70%,#000);color:var(--knapptekst,#fff);text-decoration:none;font-weight:600;border:1px solid transparent;cursor:pointer}
 .knapp--tom{background:transparent;color:inherit;border-color:color-mix(in srgb,var(--blekk) 35%,transparent)}
 .knapp--liten{min-height:40px;padding:.5rem 1rem;font-size:.9rem;margin-left:auto}
 .knapper{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem}
@@ -62,7 +62,7 @@ p{margin:0 0 1em}
 .helt__bilde img{width:100%;border-radius:20px;object-fit:cover;max-height:460px}
 .helt__ingress{font-size:1.05rem;max-width:56ch;color:var(--dempet)}
 @media (min-width:900px){.helt{grid-template-columns:1.15fr .85fr;align-items:center;padding:3.5rem 1.25rem 4rem}.helt__bilde{order:2}}
-.merkelapp{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;color:color-mix(in srgb,var(--aksent) 68%,var(--blekk));margin:0 0 .8rem}
+.merkelapp{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;color:color-mix(in srgb,var(--aksent) 55%,var(--blekk));margin:0 0 .8rem}
 .seksjon{max-width:var(--max);margin:0 auto;padding:3rem 1.25rem}
 .seksjon--smal{max-width:820px}
 .seksjon--to{display:grid;gap:2rem}

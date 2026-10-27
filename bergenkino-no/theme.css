@@ -1,6 +1,7 @@
 :root{
   --bak:#0e0d09;--blekk:#f4f2ec;--aksent:#9a8f67;
-  --dempet:color-mix(in srgb, #f4f2ec 74%, #0e0d09);
+  --dempet:color-mix(in srgb, #f4f2ec 86%, #0e0d09);
+  --knapptekst:#ffffff;
   --kant:color-mix(in srgb, #f4f2ec 15%, #0e0d09);
   --max:1180px;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
