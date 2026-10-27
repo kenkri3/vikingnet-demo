@@ -1,4 +1,10 @@
 
+
+.logovegg{display:flex;flex-wrap:wrap;gap:1.25rem 2rem;align-items:center;list-style:none;padding:0;margin:0}
+.logovegg img{height:32px;width:auto;filter:grayscale(1);opacity:.75}
+.seksjon--sitat .sitat{margin:0 0 1.5rem;max-width:60ch;font-size:1.12rem;line-height:1.55}
+.seksjon--sitat .sitat footer{margin-top:.5rem;font-size:.9rem;color:var(--dempet);font-style:normal}
+
 .merke__flate{display:inline-flex;align-items:center;padding:6px 10px;border-radius:8px}
 .merke__flate--mork{background:#101418}
 .merke__flate--lys{background:#ffffff;box-shadow:0 0 0 1px rgba(0,0,0,.12)}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="65px" height="50px" viewBox="0 0 65 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 5 Copy</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0.074510 0 0 0 0 0.078431 0 0 0 0 0.082353 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Skisse-01-Team-Desktop" transform="translate(-1183.000000, -2559.000000)">
+            <g id="Group-5-Copy" transform="translate(436.000000, 2449.000000)" filter="url(#filter-1)">
+                <g transform="translate(750.000000, 113.000000)">
+                    <line x1="0" y1="21.5" x2="57.7169131" y2="21.6875" id="Line-2" stroke="#F53C5E" stroke-width="4"></line>
+                    <polyline id="Line-2" stroke="#F53C5E" stroke-width="4" transform="translate(48.000000, 22.000000) rotate(90.000000) translate(-48.000000, -22.000000) " points="26 33 48 11 70 33"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
