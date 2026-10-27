@@ -91,12 +91,12 @@ p{margin:0 0 1em}
 .tjeneste__nr{font-family:var(--serif);font-size:1.6rem;color:var(--aksent)}
 .punkter{margin:.5rem 0 0;padding-left:1.1rem;color:var(--dempet)}
 .punkter li{margin:.3rem 0}
-.galleri{display:grid;gap:1rem}
+.galleri{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
 @media (min-width:761px){.galleri{grid-template-columns:repeat(2,1fr)}.galleri__bilde--stor{grid-column:span 2}}
 .galleri__bilde{margin:0;background:color-mix(in srgb,var(--bak) 90%,var(--blekk) 5%);border-radius:16px;overflow:hidden;border:1px solid var(--kant)}
 .galleri__bilde img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
 .galleri__bilde figcaption{padding:.8rem 1rem;font-size:.9rem;color:var(--dempet)}
-.galleri--tre{grid-template-columns:1fr}
+.galleri--tre{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 @media (min-width:761px){.galleri--tre{grid-template-columns:repeat(3,1fr)}.galleri--tre .galleri__bilde img{aspect-ratio:4/3}}
 .bredtbilde{margin:0;border-radius:18px;overflow:hidden}
 .sitat{border-left:3px solid var(--aksent);padding-left:1rem;color:var(--dempet);font-size:1.05rem;margin:1.5rem 0 0}
