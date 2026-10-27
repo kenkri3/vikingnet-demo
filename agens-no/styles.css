@@ -34,7 +34,7 @@ p{margin:0 0 1em}
 .meny a{text-decoration:none;padding:.35rem 0;border-bottom:2px solid transparent}
 .meny a:hover,.meny a[aria-current="page"]{border-bottom-color:var(--aksent)}
 .meny a[aria-current="page"]{font-weight:600}
-.knapp{background:color-mix(in srgb,var(--aksent) 70%,#000);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.35rem;border-radius:999px;background:color-mix(in srgb,var(--aksent) 70%,#000);color:var(--knapptekst,#fff);text-decoration:none;font-weight:600;border:1px solid transparent;cursor:pointer}
+.knapp{background:color-mix(in srgb,var(--aksent) 70%,#000);display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.35rem;border-radius:999px;background:var(--knappbak,color-mix(in srgb,var(--aksent) 70%,#000));color:var(--knapptekst,#fff);text-decoration:none;font-weight:600;border:1px solid transparent;cursor:pointer}
 .knapp--tom{background:transparent;color:inherit;border-color:color-mix(in srgb,var(--blekk) 35%,transparent)}
 .knapp--liten{min-height:40px;padding:.5rem 1rem;font-size:.9rem;margin-left:auto}
 .knapper{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem}

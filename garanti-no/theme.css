@@ -1,6 +1,6 @@
-:root{
+﻿:root{
   --bak:#f7f4ee;--blekk:#1c2430;--aksent:#8a6a34;
-  --dempet:color-mix(in srgb, #1c2430 58%, #f7f4ee);
+  --dempet:color-mix(in srgb, #1c2430 86%, #f7f4ee);
   --kant:color-mix(in srgb, #1c2430 15%, #f7f4ee);
   --max:1180px;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
@@ -13,3 +13,5 @@ body{margin:0;background:var(--bak);color:var(--blekk);font-family:var(--sans);l
 h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0}
 h1{font-size:var(--h1)}h2{font-size:var(--h2)}h3{font-size:1.12rem}
 p{margin:0}a{color:inherit}figure{margin:0}
+
+

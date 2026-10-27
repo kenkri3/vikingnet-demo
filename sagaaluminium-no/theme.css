@@ -1,6 +1,7 @@
 :root{
   --bak:#f0faff;--blekk:#002e47;--aksent:#0092e0;
   --dempet:color-mix(in srgb, #002e47 86%, #f0faff);
+  --knappbak:color-mix(in srgb, #0092e0 70%, #000);
   --knapptekst:#ffffff;
   --kant:color-mix(in srgb, #002e47 15%, #f0faff);
   --max:1180px;
