@@ -1,0 +1,15 @@
+:root{
+  --bak:#f1f6fa;--blekk:#071d30;--aksent:#1a68ac;
+  --dempet:color-mix(in srgb, #071d30 58%, #f1f6fa);
+  --kant:color-mix(in srgb, #071d30 15%, #f1f6fa);
+  --max:1180px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  --h1:clamp(2.1rem,1.2rem + 4.2vw,4rem);
+  --h2:clamp(1.5rem,1.1rem + 1.8vw,2.4rem);
+}
+body{margin:0;background:var(--bak);color:var(--blekk);font-family:var(--sans);line-height:1.65}
+.merke__logo{height:34px;width:auto;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;margin:0}
+h1{font-size:var(--h1)}h2{font-size:var(--h2)}h3{font-size:1.12rem}
+p{margin:0}a{color:inherit}figure{margin:0}
