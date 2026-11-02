@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lars U. Kobro — Dagens oppdrag</title>
+<title>Lars U. Kobro — Dagens oversikt</title>
 <meta name="description" content="Panel med dagens status, oppgaver og henvendelser.">
-<meta property="og:title" content="Lars U. Kobro — Dagens oppdrag">
+<meta property="og:title" content="Lars U. Kobro — Dagens oversikt">
 <meta property="og:description" content="Panel med dagens status, oppgaver og henvendelser.">
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
@@ -66,45 +66,45 @@
     <div class="panel__topp">
       <div>
         <p class="merkelapp">Panel</p>
-        <h1>Dagens oppdrag</h1>
+        <h1>Dagens oversikt</h1>
         <p class="innledning">Dette er hvordan Lars U. Kobro ser dagen sin. Trykk på en oppgave for å merke den ferdig — tallene oppdateres med en gang.</p>
       </div>
       <div class="panel__bruker"><span class="panel__prikk"></span>Lars U. Kobro</div>
     </div>
 
     <div class="panel__kpi-rad">
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>7</span><span class="panel__kpi-navn">Aktive oppdrag</span></div>
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>38,5</span><span class="panel__kpi-navn">Timer i dag</span></div>
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>1</span><span class="panel__kpi-navn">Avvik</span></div>
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>412 000</span><span class="panel__kpi-navn">Fakturert i måned</span></div>
+        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>9</span><span class="panel__kpi-navn">Henvendelser</span></div>
+        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>4</span><span class="panel__kpi-navn">Til oppfølging</span></div>
+        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>6</span><span class="panel__kpi-navn">Fullført i dag</span></div>
+        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>175 000</span><span class="panel__kpi-navn">Verdi i pipeline</span></div>
     </div>
 
     <div class="panel__rutenett">
       <div class="panel__boks">
         <div class="panel__boks-topp">
           <h2>Oppgaver</h2>
-          <span class="panel__teller"><span data-igjen>4</span> igjen</span>
+          <span class="panel__teller"><span data-igjen>3</span> igjen</span>
         </div>
         <ul class="oppgaver" data-oppgaver>
-        <li class="oppgave" data-status="pågår">
+        <li class="oppgave" data-status="haster">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Stillas på Nordre gate 4</strong><span>Ferdig kl. 14</span></div>
-          <span class="status status--pågår">Pågår</span>
+          <div class="oppgave__tekst"><strong>En inhabil bokomtale – Nordre gate 4</strong><span>Fra nettstedet i går</span></div>
+          <span class="status status--haster">Haster</span>
         </li>
         <li class="oppgave" data-status="venter">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Levering av materiale</strong><span>Sjåfør meldt 09:20</span></div>
+          <div class="oppgave__tekst"><strong>En inhabil bokomtale – Hos kunde</strong><span>Kunde venter</span></div>
           <span class="status status--venter">Venter</span>
         </li>
-        <li class="oppgave" data-status="haster">
+        <li class="oppgave" data-status="pågår">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>SJA for nytt oppdrag</strong><span>Mangler signatur</span></div>
-          <span class="status status--haster">Haster</span>
+          <div class="oppgave__tekst"><strong>En inhabil bokomtale – Egen base</strong><span>Avtalt i dag</span></div>
+          <span class="status status--pågår">Pågår</span>
         </li>
-        <li class="oppgave" data-status="planlagt">
+        <li class="oppgave" data-status="ferdig">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Sluttkontroll hos kunde</strong><span>Bestilt fredag</span></div>
-          <span class="status status--planlagt">Planlagt</span>
+          <div class="oppgave__tekst"><strong>En inhabil bokomtale – Nordre gate 4</strong><span>Kunden har fått svar</span></div>
+          <span class="status status--ferdig">Ferdig</span>
         </li>
         </ul>
       </div>
@@ -116,15 +116,15 @@
         </div>
         <ul class="meldinger">
         <li class="melding" data-status="ulest">
-          <div><strong>Kunde: Adcom</strong><p>Kan dere starte en dag tidligere?</p></div>
+          <div><strong>Ny henvendelse</strong><p>Skjema fra forsiden</p></div>
           <button class="melding__knapp" type="button" data-les>Merk lest</button>
         </li>
         <li class="melding" data-status="ulest">
-          <div><strong>Sjåfør</strong><p>Framme om ti minutter</p></div>
+          <div><strong>Kunde</strong><p>Takk, vi går videre med dere</p></div>
           <button class="melding__knapp" type="button" data-les>Merk lest</button>
         </li>
         <li class="melding" data-status="lest">
-          <div><strong>Prosjektleder</strong><p>Tegningene er oppdatert</p></div>
+          <div><strong>Systemvarsel</strong><p>Påminnelse sendt til to kunder</p></div>
           <button class="melding__knapp" type="button" data-les>Lest</button>
         </li>
         </ul>
@@ -133,7 +133,7 @@
 
     <div class="panel__forklaring">
       <h2>Hva skjer automatisk</h2>
-      <p>Timene føres når laget trykker «ferdig», og fakturaen lages av de samme timene. Ingen dobbeltregistrering.</p>
+      <p>Henvendelser samles på ett sted, og den som venter får svar selv når ingen er på kontoret.</p>
       <p class="panel__mer">Panelet er en demo av hvordan det kunne se ut for Lars U. Kobro. Ingen data sendes noe sted.</p>
     </div>
   </section>
