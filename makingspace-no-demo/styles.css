@@ -2,6 +2,28 @@
 .merke__flate{display:inline-flex;align-items:center;padding:6px 10px;border-radius:8px}
 .merke__flate--mork{background:#101418}
 .merke__flate--lys{background:#ffffff;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.tillit{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:.45rem}
+.tillit__punkt{font-size:.92rem;color:rgba(255,255,255,.9)}
+.tillit__punkt::before{content:"✓";margin-right:.45rem;color:var(--aksent)}
+.verdier{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.verdi{background:var(--bak);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
+.verdi h3{margin:0 0 .35rem;font-size:1.05rem}
+.verdi p{margin:0;color:var(--dempet);font-size:.95rem}
+.garantier{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.garanti__punkt{padding-left:1.6rem;position:relative}
+.garanti__punkt::before{content:"✓";position:absolute;left:0;color:var(--aksent);font-weight:700}
+.skjema{display:grid;gap:.9rem;max-width:560px}
+.skjema label{display:grid;gap:.35rem;font-size:.92rem;color:var(--dempet)}
+.skjema input,.skjema select,.skjema textarea{font:inherit;padding:.7rem .8rem;border:1px solid var(--kant);border-radius:10px;background:var(--bak);color:var(--blekk)}
+.skjema button{justify-self:start}
+.klebrig{position:fixed;right:1rem;bottom:1rem;z-index:60;background:var(--aksent);color:#fff;text-decoration:none;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.18);font-size:.95rem}
+.logovegg{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;align-items:center}
+.logovegg li{display:flex;align-items:center}
+.logovegg img{height:40px;width:auto;max-width:170px;object-fit:contain}
+.logovegg img:hover{opacity:1;filter:none}
+.seksjon--logoer{padding-block:2rem}
+.seksjon--sitat blockquote{margin:0 0 1.2rem;padding-left:1rem;border-left:2px solid var(--aksent);font-size:1.02rem}
+.seksjon--sitat cite{font-style:normal;color:var(--dempet);font-size:.9rem}
 .kort__bilde{margin:-.2rem -.2rem 1rem;border-radius:10px;overflow:hidden;aspect-ratio:16/10;background:color-mix(in srgb,var(--blekk) 6%,var(--bak))}
 .kort__bilde img{width:100%;height:100%;object-fit:cover;display:block}
 .galleri--en{grid-template-columns:1fr}
