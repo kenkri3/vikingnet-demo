@@ -2,7 +2,7 @@
 .merke__flate{display:inline-flex;align-items:center;padding:6px 10px;border-radius:8px}
 .merke__flate--mork{background:#101418}
 .merke__flate--lys{background:#ffffff;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
-.tillit{list-style:none;margin:1.4rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem}
+.tillit{list-style:none;margin:1.4rem 0 0;padding:0;display:grid;gap:.45rem}
 .tillit__punkt{font-size:.92rem;color:rgba(255,255,255,.9)}
 .tillit__punkt::before{content:"✓";margin-right:.45rem;color:var(--aksent)}
 .verdier{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
