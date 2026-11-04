@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>linkedin-seeklogo.com</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard">
+            <g id="linkedin-seeklogo.com">
+                <circle id="Oval" fill="#006087" cx="32" cy="32" r="32"></circle>
+                <g id="Group" transform="translate(16.000000, 16.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M4.00113058,0 C6.20764849,0 8,1.72593845 8,3.85062499 C8,5.97686669 6.20764849,7.7034272 4.00113058,7.7034272 C1.79008999,7.7034272 0,5.97686669 0,3.85062499 C0,1.72593845 1.79008999,0 4.00113058,0 L4.00113058,0 Z M0.549852646,10.6252988 L7.44982423,10.6252988 L7.44982423,32 L0.549852646,32 L0.549852646,10.6252988 Z" id="Shape"></path>
+                    <path d="M11,10.5341398 L17.4603014,10.5341398 L17.4603014,13.4669108 L17.5498483,13.4669108 C18.4484699,11.7795289 20.6455209,10 23.9215486,10 C30.7409835,10 32,14.4458548 32,20.2254972 L32,32 L25.2704273,32 L25.2704273,21.5611591 C25.2704273,19.0706932 25.2240771,15.8689781 21.7708475,15.8689781 C18.2662233,15.8689781 17.7295727,18.5809089 17.7295727,21.3809259 L17.7295727,32 L11,32 L11,10.5341398" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
