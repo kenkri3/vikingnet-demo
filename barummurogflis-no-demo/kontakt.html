@@ -9,7 +9,7 @@
 <meta name="description" content="Kontakt Bærum Mur og Flis, telefon 67 54 22 22, e-post post@bmof.no.">
 <meta property="og:title" content="Kontakt – Bærum Mur og Flis">
 <meta property="og:description" content="Kontakt Bærum Mur og Flis, telefon 67 54 22 22, e-post post@bmof.no.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/02-barummurogflis-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -61,5 +61,15 @@
     <p class="bunn__krav">© 2026 Bærum Mur og Flis</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
