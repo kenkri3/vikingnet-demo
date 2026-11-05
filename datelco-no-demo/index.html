@@ -9,7 +9,7 @@
 <meta name="description" content="Sammen med flere av våre gode samarbeidspartnere har vi produsert en ny digital brosjyre som viser mye av det vi tilbyr våre kunder.">
 <meta property="og:title" content="Datelco AS – OSLO">
 <meta property="og:description" content="Sammen med flere av våre gode samarbeidspartnere har vi produsert en ny digital brosjyre som viser mye av det vi tilbyr våre kunder.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/08-datelco-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  <div class="helt__bilde"><img class="" src="img/hero.jpg" alt=" Datelco AS" ></div>
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/08-datelco-no.jpg" alt=" Datelco AS" ><figcaption><strong>Ny digital brosjyre</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">OSLO</p>
     <h1>DATELCO - FORDI FREMTIDEN ER ELEKTRISK</h1>
@@ -52,25 +52,25 @@
     <h2>Det vi hjelper med</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/01-datelco-no.jpg" alt="Ny digital brosjyre" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/03-datelco-no.jpg" alt="Ny digital brosjyre" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Ny digital brosjyre</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/02-datelco-no.jpg" alt="WiFi – kartlegging og installasjon" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/05-datelco-no.jpg" alt="WiFi – kartlegging og installasjon" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>WiFi – kartlegging og installasjon</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/03-datelco-no.jpg" alt="Energieffektivisering" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/06-datelco-no.jpg" alt="Energieffektivisering" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Energieffektivisering</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/04-datelco-no.jpg" alt="Termofotografering" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/07-datelco-no.jpg" alt="Termofotografering" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Termofotografering</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -91,6 +91,7 @@
     <div class="verdi"><p>Datelcos elektrikere oppgraderer belysningen med nye LED-armaturer og smartere lysstyring.</p></div>
   </div>
 </section>
+
 
 
 
@@ -123,7 +124,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-datelco-no.jpg" alt="Datelco AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-datelco-no.jpg" alt="Datelco AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/04-datelco-no.jpg" alt="Datelco AS – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-datelco-no.jpg" alt="Datelco AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-datelco-no.jpg" alt="Datelco AS – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -185,5 +186,15 @@
     <p class="bunn__krav">© 2026 Datelco AS</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
