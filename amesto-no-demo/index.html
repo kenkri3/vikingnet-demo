@@ -28,7 +28,7 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
   
   <div class="helt__tekst">
     <p class="merkelapp">regnskap · Norge</p>
@@ -52,13 +52,13 @@
     <h2>Det vi tar oss av</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/02-amesto-no.jpg" alt="Nordisk og global tilstedeværelse" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Nordisk og global tilstedeværelse</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/02-amesto-no.jpg" alt="Din langsiktige partner" loading="lazy" decoding="async"></div>
+      
       <span class="kort__nr">02</span>
       <h3>Din langsiktige partner</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/hero-bransje.jpg" alt="Simplifying business – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Simplifying business | Amesto Tjenester Regnskap Lønn Internasjonal vekst Bærekraft Andre tjenester Outsourcing av regnskap Våre autoriserte regnskapsførere tar seg av regnskapsføring, merverdiavgift, fakturering og rapportering fra start til slutt.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -184,5 +185,15 @@
     <p class="bunn__krav">© 2026 Simplifying business</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
