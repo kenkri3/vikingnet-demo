@@ -9,7 +9,7 @@
 <meta name="description" content="Hvorfor du og din familie vurderer å påta dere den viktige oppgaven med å være fosterfamilie, er fordi dere kan gi trygghet, kjærlighet, omsorg og håp til unge som trenger det mest.">
 <meta property="og:title" content="Ditt Tiltak – Etterstad">
 <meta property="og:description" content="Hvorfor du og din familie vurderer å påta dere den viktige oppgaven med å være fosterfamilie, er fordi dere kan gi trygghet, kjærlighet, omsorg og håp til unge som trenger det mest.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/05-ditt-tiltak-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/05-ditt-tiltak-no.jpg" alt=" Ditt Tiltak" ><figcaption><strong>Fosterhjem</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">Etterstad</p>
     <h1>Er du interessert i å bli fosterfamilie?</h1>
@@ -52,25 +52,25 @@
     <h2>Slik kan vi bidra</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/04-ditt-tiltak-no.jpg" alt="Fosterhjem" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Fosterhjem</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-ditt-tiltak-no.jpg" alt="Ettervern" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Ettervern</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/07-ditt-tiltak-no.jpg" alt="Tiltak" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Tiltak</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/04-ditt-tiltak-no.jpg" alt="Saksbehandling" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/08-ditt-tiltak-no.jpg" alt="Saksbehandling" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Saksbehandling</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/03-ditt-tiltak-no.jpg" alt="Ditt Tiltak – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Ditt Tiltak - Vi er på jobb for en trygg oppvekst Fosterhjem Ettervern Hjemmebaserte tiltak Saksbehandling Jobb med oss BPA Kontakt Meny Ta kontakt med oss for en uforpliktende samtale 47 93 09 09 post@ditt-tiltak.no Fosterhjem Ettervern Hjemmebaserte tiltak Saksbehandling Jobb med oss Kontakt Vanlige spørsmål Om oss BPA Personvernerklæring og cookies Ditt Tiltak AS Grenseveien 91 Oslo 0607 PB 6575 Etterstad Norge Vil du jobbe med oss?</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -123,7 +124,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-ditt-tiltak-no.jpg" alt="Ditt Tiltak – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-ditt-tiltak-no.jpg" alt="Ditt Tiltak – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-ditt-tiltak-no.jpg" alt="Ditt Tiltak – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-ditt-tiltak-no.jpg" alt="Ditt Tiltak – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-ditt-tiltak-no.jpg" alt="Ditt Tiltak – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -176,5 +177,15 @@
     <p class="bunn__krav">© 2026 Ditt Tiltak</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
