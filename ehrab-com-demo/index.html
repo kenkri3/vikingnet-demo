@@ -9,7 +9,7 @@
 <meta name="description" content="​​Vi är specialister på att rekrytera och hyra ut mobila arbetslag – alltid med schyssta villkor.">
 <meta property="og:title" content="EHRAB – Norge">
 <meta property="og:description" content="​​Vi är specialister på att rekrytera och hyra ut mobila arbetslag – alltid med schyssta villkor.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-ehrab-com.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/01-ehrab-com.jpg" alt=" EHRAB" ><figcaption><strong>Jobba hos oss</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">bygg · Norge</p>
     <h1>HÅLLBAR OCH TRYGG BEMANNING FÖR BYGGBRANSCHEN</h1>
@@ -52,25 +52,25 @@
     <h2>Det vi bygger</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-ehrab-com.jpg" alt="Jobba hos oss" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Jobba hos oss</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/07-ehrab-com.jpg" alt="ByggJobs" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>ByggJobs</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/08-ehrab-com.jpg" alt="Vårt erbjudande" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Vårt erbjudande</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/05-ehrab-com.jpg" alt="Efterlevnad" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/09-ehrab-com.jpg" alt="Efterlevnad" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Efterlevnad</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/05-ehrab-com.jpg" alt="EHRAB – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>EHRAB - Hållbar Och Schysst Bemanning För Byggbranschen Hoppa till innehåll Byggbemanning Jobba hos oss Registrera CV Utbildning EHRAB-skolan Rusta och Matcha Referenser Om EHRAB Om oss Hälsa, miljö och säkerhet Visselblåsning &amp; Feedback Nyheter Bli Franchisetagare Lagar och regler ID06 SKU5 Utstationeringsdirektivet Lagen om entreprenörsansvar Investerare Kontakt Jag söker arbete Jag söker personal Jag söker arbete Jag söker personal Byggbemanning Jobba hos oss Registrera CV Utbildning EHRAB-skolan Rusta och Matcha Referenser Om EHRAB Om oss Hälsa, miljö och säkerhet Visselblåsning &amp; Feedback Nyheter Bli Franchisetagare Lagar och regler ID06 SKU5 Utstationeringsdirektivet Lagen om entreprenörsansvar Investerare Kontakt HÅLLBAR OCH TRYGG BEMANNING FÖR BYGGBRANSCHEN ​​Vi är specialister på att rekrytera och hyra ut mobila arbetslag – alltid med schyssta villkor.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -123,7 +124,7 @@
     <p class="merkelapp">Arbeid underveis</p>
     <h2>Fra byggeplassen</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-ehrab-com.jpg" alt="EHRAB – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-ehrab-com.jpg" alt="EHRAB – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-ehrab-com.jpg" alt="EHRAB – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/02-ehrab-com.jpg" alt="EHRAB – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-ehrab-com.jpg" alt="EHRAB – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -183,5 +184,15 @@
     <p class="bunn__krav">© 2026 EHRAB</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

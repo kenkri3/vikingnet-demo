@@ -9,7 +9,7 @@
 <meta name="description" content="Prosjekter og arbeid fra EHRAB.">
 <meta property="og:title" content="Prosjekter – EHRAB">
 <meta property="og:description" content="Prosjekter og arbeid fra EHRAB.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-ehrab-com.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -36,13 +36,13 @@
 <section class="seksjon">
   <p class="innledning">EHRAB holder til i Norge og tar oppdrag innen jobba hos oss, byggjobs, vårt erbjudande og efterlevnad. Bildene under er hentet fra vårt eget arbeid. Vil du se noe som ligner ditt eget oppdrag, si fra, så viser vi deg relevante prosjekter og hva de krevde.</p>
   <div class="galleri "><figure class="galleri__bilde galleri__bilde--stor">
-      <img class="" src="img/01-ehrab-com.jpg" alt="EHRAB – arbeid" >
-      <figcaption>EHRAB – arbeid</figcaption>
-    </figure><figure class="galleri__bilde">
       <img class="" src="img/02-ehrab-com.jpg" alt="EHRAB – arbeid" >
       <figcaption>EHRAB – arbeid</figcaption>
     </figure><figure class="galleri__bilde">
       <img class="" src="img/03-ehrab-com.jpg" alt="EHRAB – arbeid" >
+      <figcaption>EHRAB – arbeid</figcaption>
+    </figure><figure class="galleri__bilde">
+      <img class="" src="img/05-ehrab-com.jpg" alt="EHRAB – arbeid" >
       <figcaption>EHRAB – arbeid</figcaption>
     </figure></div>
 </section>
@@ -62,5 +62,15 @@
     <p class="bunn__krav">© 2026 EHRAB</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
