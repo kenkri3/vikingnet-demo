@@ -9,7 +9,7 @@
 <meta name="description" content="Bergen Bydrift AS utfører drift og vedlikehold av vei, parkanlegg, vann og avløp og bidrar til et bedre bymiljø i Bergen.">
 <meta property="og:title" content="Bergen Bydrift AS – Nesttun">
 <meta property="og:description" content="Bergen Bydrift AS utfører drift og vedlikehold av vei, parkanlegg, vann og avløp og bidrar til et bedre bymiljø i Bergen.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/02-bydrift-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/02-bydrift-no.jpg" alt=" Bergen Bydrift AS" ><figcaption><strong>Smed, gjerde og sikring</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">Nesttun</p>
     <h1>Bergen Bydrift AS — Steinarbeider og vinterdrift</h1>
@@ -52,25 +52,25 @@
     <h2>Det vi leverer</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/04-bydrift-no.jpg" alt="Smed, gjerde og sikring" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Smed, gjerde og sikring</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-bydrift-no.jpg" alt="Steinarbeider" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Steinarbeider</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/07-bydrift-no.jpg" alt="Grunn, betong og gravearbeider" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Grunn, betong og gravearbeider</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/04-bydrift-no.jpg" alt="Vei, vann, avløp, kumtømming og sugebil" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/08-bydrift-no.jpg" alt="Vei, vann, avløp, kumtømming og sugebil" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Vei, vann, avløp, kumtømming og sugebil</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -92,6 +92,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/05-bydrift-no.jpg" alt="Bergen Bydrift AS – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Bergen Bydrift - #1 på drift og vedlikehold av vei og anlegg Skip to content Toggle Navigation Fagområder Hage og park Smed, gjerde og sikring Steinarbeider Grunn, betong og gravearbeider Vei, vann, avløp, kumtømming og sugebil Vinterdrift Byarrangementer Kvalitet og Miljø Karriere Om oss Historie HMS FAQ Kontakt Kontakt sheet Frontpage jonaslykke 2025-08-25T09:18:49+01:00 Fagområder Bergen Bydrift tilbyr et bredt spekter av tjenester året rundt.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -121,7 +122,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-bydrift-no.jpg" alt="Bergen Bydrift AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-bydrift-no.jpg" alt="Bergen Bydrift AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-bydrift-no.jpg" alt="Bergen Bydrift AS – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-bydrift-no.jpg" alt="Bergen Bydrift AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-bydrift-no.jpg" alt="Bergen Bydrift AS – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -170,5 +171,15 @@
     <p class="bunn__krav">© 2026 Bergen Bydrift AS</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
