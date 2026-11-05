@@ -49,14 +49,15 @@
 .bildebande__tekst{position:relative;z-index:1;max-width:26ch;text-align:center;padding:3rem 1.5rem}
 .bildebande__tekst p{font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.25;color:#fff;font-family:var(--serif,Georgia,serif)}
 /* Splittet hero */
-.helt--splitt{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,4rem);align-items:center;padding:clamp(2rem,5vw,4.5rem) clamp(1.25rem,4vw,4rem);max-width:1280px;margin:0 auto;min-height:auto;background:var(--bak)}
+.helt--splitt{display:grid;grid-template-columns:.95fr 1.05fr;overflow:visible;gap:clamp(1.5rem,4vw,4rem);align-items:center;padding:clamp(2rem,5vw,4.5rem) clamp(1.25rem,4vw,4rem);max-width:1280px;margin:0 auto;min-height:auto;background:var(--bak)}
 .helt--uten-bilde{grid-template-columns:1fr;min-height:52vh}
 .helt__kort{position:relative;margin:0;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.18)}
 .helt__kort img{width:100%;height:clamp(320px,52vh,560px);object-fit:cover;display:block}
 .helt__kort figcaption{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(10,14,12,.82);color:#fff;border-radius:14px;padding:.9rem 1.1rem;display:grid;gap:.15rem}
 .helt__kort figcaption strong{font-size:1rem}
 .helt__kort figcaption span{font-size:.85rem;opacity:.85}
-.helt--splitt .helt__tekst{max-width:620px}
+.helt--splitt .helt__tekst{max-width:620px;order:1}
+.helt--splitt .helt__kort{order:2}
 @media (max-width:900px){.helt--splitt{grid-template-columns:1fr}.helt__kort img{height:44vh}}
 .logovegg{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;align-items:center}
 .logovegg li{display:flex;align-items:center}
