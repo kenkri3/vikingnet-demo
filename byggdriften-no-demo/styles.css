@@ -30,6 +30,18 @@
 .galleri__bilde img{transition:transform .6s ease}
 .galleri__bilde:hover img{transform:scale(1.04)}
 .merkelapp{letter-spacing:.16em}
+/* Visuell oppgradering */
+.helt:not(.helt--full){padding:4rem 1.5rem}
+.helt--full{min-height:min(78vh,720px)}
+.helt__tekst h1{font-size:clamp(2.4rem,6.2vw,5rem);line-height:.98;letter-spacing:-.02em}
+.helt__ingress{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:38ch}
+.helt--full .helt__bilde::after{background:linear-gradient(105deg,rgba(8,12,10,.92) 0%,rgba(8,12,10,.72) 42%,rgba(8,12,10,.25) 100%)}
+.seksjon{padding:5rem 1.5rem}
+.seksjon__hode h2{font-size:clamp(1.9rem,3.4vw,2.8rem);letter-spacing:-.015em}
+.rutenett{gap:1.4rem}
+.kort{border-radius:18px}
+.galleri{gap:1rem}
+.galleri__bilde{border-radius:16px;overflow:hidden}
 .logovegg{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;align-items:center}
 .logovegg li{display:flex;align-items:center}
 .logovegg img{height:40px;width:auto;max-width:170px;object-fit:contain}
