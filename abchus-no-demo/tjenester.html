@@ -9,7 +9,7 @@
 <meta name="description" content="NYHET, Bygg ferdighus til fastpris, Hvilke hus tilbyr vi i ABChus, Hva koster det å bygge nytt hus hos Ferdighus av høy kvalitet til en attraktiv pris - ABChus i Vinterbro.">
 <meta property="og:title" content="Tjenester – Ferdighus av høy kvalitet til en attraktiv pris - ABChus">
 <meta property="og:description" content="NYHET, Bygg ferdighus til fastpris, Hvilke hus tilbyr vi i ABChus, Hva koster det å bygge nytt hus hos Ferdighus av høy kvalitet til en attraktiv pris - ABChus i Vinterbro.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-abchus-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -81,7 +81,7 @@
       </div>
     </article>
 </section>
-
+<section class="seksjon"><figure class="bredtbilde"><img class="" src="img/hero-bransje.jpg" alt="Ferdighus av høy kvalitet til en attraktiv pris - ABChus" loading="lazy" decoding="async"></figure></section>
 <section class="cta">
   <h2>Usikker på hva du trenger?</h2>
   <p>Send en kort beskrivelse, så sier vi hva som er neste steg.</p>
@@ -98,5 +98,15 @@
     <p class="bunn__krav">© 2026 Ferdighus av høy kvalitet til en attraktiv pris - ABChus</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
