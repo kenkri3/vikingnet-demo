@@ -9,7 +9,7 @@
 <meta name="description" content="Søk Prisgaranti i 2027 Bestill din reise i 2027 nå og sikre deg den garantert laveste prisen på reiser med Svalbardlinjen og Den originale kystruten.">
 <meta property="og:title" content="Hurtigruten – Bestill">
 <meta property="og:description" content="Søk Prisgaranti i 2027 Bestill din reise i 2027 nå og sikre deg den garantert laveste prisen på reiser med Svalbardlinjen og Den originale kystruten.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/09-hurtigruten-com.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/09-hurtigruten-com.jpg" alt=" Hurtigruten" ><figcaption><strong>Sjøreisene våre</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">opplevelse · Bestill</p>
     <h1>Prisgaranti i 2027</h1>
@@ -52,25 +52,25 @@
     <h2>Slik kan vi bidra</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/04-hurtigruten-com.jpg" alt="Sjøreisene våre" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Sjøreisene våre</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/05-hurtigruten-com.jpg" alt="Utvalgte reiser" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Utvalgte reiser</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-hurtigruten-com.jpg" alt="Den originale kystruten" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Den originale kystruten</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/04-hurtigruten-com.jpg" alt="Nordkapplinjen" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/07-hurtigruten-com.jpg" alt="Nordkapplinjen" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Nordkapplinjen</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -93,6 +93,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/03-hurtigruten-com.jpg" alt="Hurtigruten – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Hurtigruten NO: Den originale kystruten | Opplev fjorder og nordlys Destinasjon Velg destinasjon Sesong Velg sesong Varighet Velg antall dager Vis 27 reiseruter Utforsk alle reiser Søk Prisgaranti i 2027 Bestill din reise i 2027 nå og sikre deg den garantert laveste prisen på reiser med Svalbardlinjen og Den originale kystruten.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -122,7 +123,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-hurtigruten-com.jpg" alt="Hurtigruten – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-hurtigruten-com.jpg" alt="Hurtigruten – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-hurtigruten-com.jpg" alt="Hurtigruten – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-hurtigruten-com.jpg" alt="Hurtigruten – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-hurtigruten-com.jpg" alt="Hurtigruten – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -171,5 +172,15 @@
     <p class="bunn__krav">© 2026 Hurtigruten</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
