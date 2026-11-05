@@ -9,7 +9,7 @@
 <meta name="description" content="Vi kan tilby gode løsninger for alle typer oppdrag, enten ved egen opparbeidet kompetanse eller med støtte fra våre leverandører og samarbeidspartnere.">
 <meta property="og:title" content="Claussen Elektro AS – SKIEN">
 <meta property="og:description" content="Vi kan tilby gode løsninger for alle typer oppdrag, enten ved egen opparbeidet kompetanse eller med støtte fra våre leverandører og samarbeidspartnere.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-claussenelektro-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/01-claussenelektro-no.jpg" alt=" Claussen Elektro AS" ><figcaption><strong>Din elektriker i Skien</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">elektro · SKIEN</p>
     <h1>Claussen Elektro AS — Vi kan tilby gode løsninger for alle typer oppdrag</h1>
@@ -52,7 +52,7 @@
     <h2>Slik kan vi bidra</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/01-claussenelektro-no.jpg" alt="Din elektriker i Skien" loading="lazy" decoding="async"></div>
+      
       <span class="kort__nr">01</span>
       <h3>Din elektriker i Skien</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/hero-bransje.jpg" alt="Claussen Elektro AS – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Claussen Elektro AS Home Forside Om oss Ansatte Tjenester Samarbeidspartnere Ledig stilling Kontakt Personvern  mc@claussenelektro.no  458 30 138  Bølevegen 131, 3713 SKIEN  Orgnr 928 308 219 Claussen ELEKTRO AS Vi er et firma i Skien med mer enn 24 års erfaring i faget.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -118,7 +119,14 @@
   </ol>
 </section>
 
-
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Eksempel</p>
+    <h2>Fra arbeidet</h2>
+  </div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/hero-bransje.jpg" alt="Claussen Elektro AS – arbeid" ></figure></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
+</section>
 
 <section class="seksjon seksjon--logoer">
   <p class="merkelapp">Kunder</p>
@@ -177,5 +185,15 @@
     <p class="bunn__krav">© 2026 Claussen Elektro AS</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
