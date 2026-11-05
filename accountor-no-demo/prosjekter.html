@@ -34,7 +34,7 @@
   <p class="sidehode__ingress">Slik ser det ut når vi er i gang — bytt gjerne bildene med deres egne.</p>
 </section>
 <section class="seksjon">
-  <p class="innledning">Accountor holder til i Norge og tar oppdrag innen navigasjonssti, hva kan vi hjelpe deg med, et regnskapskontor alltid i nærheten og trenger bedriften din hjelp. Bildene under er hentet fra vårt eget arbeid. Vil du se noe som ligner ditt eget oppdrag, si fra, så viser vi deg relevante prosjekter og hva de krevde.</p>
+  <p class="innledning">Accountor holder til i Norge og tar oppdrag innen navigasjonssti, hva kan vi hjelpe deg med, hvorfor velge accountor som regnskapsfører og trenger bedriften din hjelp. Bildene under er hentet fra vårt eget arbeid. Vil du se noe som ligner ditt eget oppdrag, si fra, så viser vi deg relevante prosjekter og hva de krevde.</p>
   <div class="galleri "><figure class="galleri__bilde galleri__bilde--stor">
       <img class="" src="img/01-accountor-no.jpg" alt="Accountor – arbeid" >
       <figcaption>Accountor – arbeid</figcaption>
@@ -62,5 +62,15 @@
     <p class="bunn__krav">© 2026 Accountor</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

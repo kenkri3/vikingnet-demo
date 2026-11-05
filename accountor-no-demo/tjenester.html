@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="theme-color" content="#16120e">
 <title>Tjenester – Accountor</title>
-<meta name="description" content="Navigasjonssti, Hva kan vi hjelpe deg med, Et regnskapskontor alltid i nærheten, Trenger bedriften din hjelp hos Accountor i Norge.">
+<meta name="description" content="Navigasjonssti, Hva kan vi hjelpe deg med, Hvorfor velge Accountor som regnskapsfører, Trenger bedriften din hjelp hos Accountor i Norge.">
 <meta property="og:title" content="Tjenester – Accountor">
-<meta property="og:description" content="Navigasjonssti, Hva kan vi hjelpe deg med, Et regnskapskontor alltid i nærheten, Trenger bedriften din hjelp hos Accountor i Norge.">
+<meta property="og:description" content="Navigasjonssti, Hva kan vi hjelpe deg med, Hvorfor velge Accountor som regnskapsfører, Trenger bedriften din hjelp hos Accountor i Norge.">
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
@@ -31,7 +31,7 @@
 <section class="sidehode">
   <p class="merkelapp">regnskap</p>
   <h1>Tjenester</h1>
-  <p class="sidehode__ingress">Accountor holder til i Norge og tar oppdrag innen navigasjonssti, hva kan vi hjelpe deg med, et regnskapskontor alltid i nærheten og trenger bedriften din hjelp.</p>
+  <p class="sidehode__ingress">Accountor holder til i Norge og tar oppdrag innen navigasjonssti, hva kan vi hjelpe deg med, hvorfor velge accountor som regnskapsfører og trenger bedriften din hjelp.</p>
 </section>
 <section class="seksjon seksjon--smal">
   <p class="innledning">Her er hva vi gjør, hvordan vi avklarer et oppdrag, og hva du kan forvente av oss underveis. Hvert oppdrag starter med en samtale der vi blir enige om omfang, pris og tidspunkt før noe settes i gang.</p>
@@ -60,7 +60,7 @@
     </article><article class="tjeneste">
       <div class="tjeneste__nr">03</div>
       <div>
-        <h2>Et regnskapskontor alltid i nærheten</h2>
+        <h2>Hvorfor velge Accountor som regnskapsfører</h2>
         <p>Vi sier hva det koster før vi begynner.</p>
         <ul class="punkter">
           <li>Fast kontaktperson</li>
@@ -98,5 +98,15 @@
     <p class="bunn__krav">© 2026 Accountor</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
