@@ -56,6 +56,8 @@
 .helt__kort figcaption{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(10,14,12,.82);color:#fff;border-radius:14px;padding:.9rem 1.1rem;display:grid;gap:.15rem}
 .helt__kort figcaption strong{font-size:1rem}
 .helt__kort figcaption span{font-size:.85rem;opacity:.85}
+.helt--splitt .tillit__punkt{color:var(--dempet)}
+.helt--splitt .tillit{margin-top:1.6rem}
 .helt--splitt .helt__tekst{max-width:620px;order:1}
 .helt--splitt .helt__kort{order:2}
 @media (max-width:900px){.helt--splitt{grid-template-columns:1fr}.helt__kort img{height:44vh}}
