@@ -9,7 +9,7 @@
 <meta name="description" content="Prosjekter og arbeid fra Castel.">
 <meta property="og:title" content="Prosjekter – Castel">
 <meta property="og:description" content="Prosjekter og arbeid fra Castel.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-castelbygg-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -36,7 +36,7 @@
 <section class="seksjon">
   <p class="innledning">Castel holder til i Norge og tar oppdrag innen yrkesstolthet, rask og effektiv prosess, tett dialog med kunde og --> hjem | castel top of page hjem. Bildene under er hentet fra vårt eget arbeid. Vil du se noe som ligner ditt eget oppdrag, si fra, så viser vi deg relevante prosjekter og hva de krevde.</p>
   <div class="galleri galleri--en"><figure class="galleri__bilde galleri__bilde--stor">
-      <img class="" src="img/01-castelbygg-no.jpg" alt="Castel – arbeid" >
+      <img class="" src="img/hero-bransje.jpg" alt="Castel – arbeid" >
       <figcaption>Castel – arbeid</figcaption>
     </figure></div>
 </section>
@@ -56,5 +56,15 @@
     <p class="bunn__krav">© 2026 Castel</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

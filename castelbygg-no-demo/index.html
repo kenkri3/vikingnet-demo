@@ -9,7 +9,7 @@
 <meta name="description" content="Med lang erfaring i bagasjen utføres jobben med riktig kompetanse.">
 <meta property="og:title" content="Castel – Norge">
 <meta property="og:description" content="Med lang erfaring i bagasjen utføres jobben med riktig kompetanse.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-castelbygg-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/01-castelbygg-no.jpg" alt=" Castel" ><figcaption><strong>Yrkesstolthet</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">Norge</p>
     <h1>Castel — Med lang erfaring i bagasjen utføres jobben med riktig kompetanse</h1>
@@ -93,6 +93,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/hero-bransje.jpg" alt="Castel – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Vi er stolt av det vi leverer.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -122,7 +123,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-castelbygg-no.jpg" alt="Castel – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/hero-bransje.jpg" alt="Castel – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -180,5 +181,15 @@
     <p class="bunn__krav">© 2026 Castel</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
