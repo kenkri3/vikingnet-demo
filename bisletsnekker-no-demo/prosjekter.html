@@ -9,7 +9,7 @@
 <meta name="description" content="Prosjekter og arbeid fra Bislet Snekker AS - din tømrer i Nittedal og omegn.">
 <meta property="og:title" content="Prosjekter – Bislet Snekker AS - din tømrer i Nittedal og omegn">
 <meta property="og:description" content="Prosjekter og arbeid fra Bislet Snekker AS - din tømrer i Nittedal og omegn.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/02-bisletsnekker-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -35,11 +35,8 @@
 </section>
 <section class="seksjon">
   <p class="innledning">Bislet Snekker AS - din tømrer i Nittedal og omegn holder til i HAGAN og tar oppdrag innen pålitelig og sikker tømrer, fornøyde kunder, solid samarbeidspartner og la fagfolk gjøre jobben. Bildene under er hentet fra vårt eget arbeid. Vil du se noe som ligner ditt eget oppdrag, si fra, så viser vi deg relevante prosjekter og hva de krevde.</p>
-  <div class="galleri "><figure class="galleri__bilde galleri__bilde--stor">
+  <div class="galleri galleri--en"><figure class="galleri__bilde galleri__bilde--stor">
       <img class="" src="img/01-bisletsnekker-no.jpg" alt="Bislet Snekker AS - din tømrer i Nittedal og omegn – arbeid" >
-      <figcaption>Bislet Snekker AS - din tømrer i Nittedal og omegn – arbeid</figcaption>
-    </figure><figure class="galleri__bilde">
-      <img class="" src="img/02-bisletsnekker-no.jpg" alt="Bislet Snekker AS - din tømrer i Nittedal og omegn – arbeid" >
       <figcaption>Bislet Snekker AS - din tømrer i Nittedal og omegn – arbeid</figcaption>
     </figure></div>
 </section>
@@ -59,5 +56,15 @@
     <p class="bunn__krav">© 2026 Bislet Snekker AS - din tømrer i Nittedal og omegn</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
