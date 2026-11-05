@@ -9,7 +9,7 @@
 <meta name="description" content="Åsane Byggmesterforretning, et selskap i AF Gruppen, er innstilt som entreprenør av Vestre Sælemyr borettslag for rehabilitering av fasader og installering av ny balansert ventilasjon.">
 <meta property="og:title" content="AF Gruppen – Norge">
 <meta property="og:description" content="Åsane Byggmesterforretning, et selskap i AF Gruppen, er innstilt som entreprenør av Vestre Sælemyr borettslag for rehabilitering av fasader og installering av ny balansert ventilasjon.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/03-afgruppen-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/03-afgruppen-no.jpg" alt=" AF Gruppen" ><figcaption><strong>Vi tilbyr tjenester innen</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">bygg · Norge</p>
     <h1>Fra gamle anlegg til smartere energibruk</h1>
@@ -52,7 +52,7 @@
     <h2>Det vi bygger</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/04-afgruppen-no.jpg" alt="Vi tilbyr tjenester innen" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Vi tilbyr tjenester innen</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
@@ -70,7 +70,7 @@
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/04-afgruppen-no.jpg" alt="Vi ser muligheter i samfunnsutfordringer" loading="lazy" decoding="async"></div>
+      
       <span class="kort__nr">04</span>
       <h3>Vi ser muligheter i samfunnsutfordringer</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/06-afgruppen-no.jpg" alt="AF Gruppen – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Avtalen er en totalentreprise og ha AF Gruppen | Vi rydder fra fortiden og bygger for fremtiden - AF Gruppen Hopp til hovedinnhold Prosjekter Karriere Om oss Tjenester Anlegg Samferdsel og tunnel Kraft Industri Vann og avløp Datasenter Riving Riving av hus Sprengning Sanering Søkshund Bygg Bolig Næringsbygg Offentlige bygg Rehabilitering Modulbygg Eiendom Eiendom på Østlandet Eiendom på Vestlandet Eiendom i Sverige Energi Forprosjekter Energieffektivisering Totaltekniske entrepriser Energisentraler Fjernvarme og fjernkjøling Service og drift Elektrisk infrastruktur Offshore Fjerning og gjenvinning Luft- og kjølesystemer (HVAC) Offshore Wind Miljø Miljøkartlegging Naturrestaurering Forurenset grunn Gjenvinning av masser Bærekraft Aktuelt Leverandør Investor Kontakt oss Norsk Norsk Svenska English Søk Søk Fra gamle anlegg til smartere energibruk På Vulkan i Oslo er AF Energi i sluttfasen av å energieffektivisere Nye Broverkstedet.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -123,7 +124,7 @@
     <p class="merkelapp">Arbeid underveis</p>
     <h2>Fra byggeplassen</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-afgruppen-no.jpg" alt="AF Gruppen – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-afgruppen-no.jpg" alt="AF Gruppen – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-afgruppen-no.jpg" alt="AF Gruppen – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-afgruppen-no.jpg" alt="AF Gruppen – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-afgruppen-no.jpg" alt="AF Gruppen – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -172,5 +173,15 @@
     <p class="bunn__krav">© 2026 AF Gruppen</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
