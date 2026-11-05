@@ -28,7 +28,7 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
   
   <div class="helt__tekst">
     <p class="merkelapp">renhold · Bodø</p>
@@ -90,6 +90,7 @@
     <div class="verdi"><p>Serviceinstilling og kvalitet på de tjenester vi leverer skal gjøre det enklere for våre kunder å fokusere på sine primære oppgave.</p></div>
   </div>
 </section>
+
 
 
 
@@ -172,5 +173,15 @@
     <p class="bunn__krav">© 2026 Busch Sørensen</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
