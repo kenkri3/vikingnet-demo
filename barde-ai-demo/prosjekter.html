@@ -9,7 +9,7 @@
 <meta name="description" content="Prosjekter og arbeid fra Barde - Enkle digitale verktøy for anleggsbransjen.">
 <meta property="og:title" content="Prosjekter – Barde - Enkle digitale verktøy for anleggsbransjen">
 <meta property="og:description" content="Prosjekter og arbeid fra Barde - Enkle digitale verktøy for anleggsbransjen.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/11-barde-ai.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -36,7 +36,7 @@
 <section class="seksjon">
   <p class="innledning">Barde - Enkle digitale verktøy for anleggsbransjen holder til i Norge og tar oppdrag innen sammen bygger vi en bedre fremtid, funksjoner som leverer resultater, samsvar og dokumentasjon uten stress og effektiv arbeidsflyt, mindre dobbeltarbeid. Bildene under er hentet fra vårt eget arbeid. Vil du se noe som ligner ditt eget oppdrag, si fra, så viser vi deg relevante prosjekter og hva de krevde.</p>
   <div class="galleri galleri--en"><figure class="galleri__bilde galleri__bilde--stor">
-      <img class="" src="img/11-barde-ai.jpg" alt="Barde - Enkle digitale verktøy for anleggsbransjen – arbeid" >
+      <img class="" src="img/hero-bransje.jpg" alt="Barde - Enkle digitale verktøy for anleggsbransjen – arbeid" >
       <figcaption>Barde - Enkle digitale verktøy for anleggsbransjen – arbeid</figcaption>
     </figure></div>
 </section>
@@ -56,5 +56,15 @@
     <p class="bunn__krav">© 2026 Barde - Enkle digitale verktøy for anleggsbransjen</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
