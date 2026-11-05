@@ -28,7 +28,7 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
   
   <div class="helt__tekst">
     <p class="merkelapp">bygg · Ridabu</p>
@@ -91,6 +91,7 @@
     <div class="verdi"><p>Vi tar små og store oppdrag for private, næringslivet og det offentlige – Vi skal levere kvalitetsarbeid til riktige priser.</p></div>
   </div>
 </section>
+
 
 
 
@@ -173,5 +174,15 @@
     <p class="bunn__krav">© 2026 Gulvsystemer AS</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
