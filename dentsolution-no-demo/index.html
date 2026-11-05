@@ -9,7 +9,7 @@
 <meta name="description" content="Dent Solution arbeider med vi tror på samarbeid som er bygget på og informasjon.">
 <meta property="og:title" content="Dent Solution – Norge">
 <meta property="og:description" content="Dent Solution arbeider med vi tror på samarbeid som er bygget på og informasjon.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-dentsolution-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/01-dentsolution-no.jpg" alt=" Dent Solution" ><figcaption><strong>Vi tror på samarbeid som er bygget på</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">Norge</p>
     <h1>Dent Solution — Informasjon og --&gt; tannteknikk</h1>
@@ -52,19 +52,19 @@
     <h2>Oppdragene våre</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/03-dentsolution-no.jpg" alt="Vi tror på samarbeid som er bygget på" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Vi tror på samarbeid som er bygget på</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-dentsolution-no.jpg" alt="Informasjon" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Informasjon</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/03-dentsolution-no.jpg" alt="--&gt; Tannteknikk" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/07-dentsolution-no.jpg" alt="--&gt; Tannteknikk" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>--&gt; Tannteknikk</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/05-dentsolution-no.jpg" alt="Dent Solution – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Dent Solution --&gt; Tannteknikk Forbruksartikler Meny Home Kroner &amp; Broer E-max Press E-max CAD Zirkonia Monolittisk Zirkonia Multilayer Zirkonia Mk Gullarbeider Etsebro Implantater Implantater generelt Valg av distanse Individuelle distanser Dekkproteser Implantatpakker Systemer CAD/CAM Proteser Helprotese Delprotese metall Delprotese akryl Valplast Kombinasjonsarbeid CAD/CAM Skinner Bittskinne Snorkeskinne Sportskinne Blekeskinne CAD/CAM Tips &amp; Råd Nyttige tips Spørsmål &amp; Svar Nedlastninger Link til leverandører Priser PrisGaranti Storkundebonus Prisliste Våre tjenester Hvem er vi?</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -123,7 +124,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-dentsolution-no.jpg" alt="Dent Solution – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-dentsolution-no.jpg" alt="Dent Solution – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/04-dentsolution-no.jpg" alt="Dent Solution – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/02-dentsolution-no.jpg" alt="Dent Solution – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/04-dentsolution-no.jpg" alt="Dent Solution – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -182,5 +183,15 @@
     <p class="bunn__krav">© 2026 Dent Solution</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
