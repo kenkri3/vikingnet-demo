@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="theme-color" content="#16120e">
-<title>Tjenester – ABELONE.NO</title>
-<meta name="description" content="Utvalgte produkter, Tilbudsprodukter, Registrer, post@abelone.no hos ABELONE.NO i Norge.">
-<meta property="og:title" content="Tjenester – ABELONE.NO">
-<meta property="og:description" content="Utvalgte produkter, Tilbudsprodukter, Registrer, post@abelone.no hos ABELONE.NO i Norge.">
-<meta property="og:image" content="img/hero.jpg">
+<title>Tjenester – ABELONE</title>
+<meta name="description" content="Utvalgte produkter, Tilbudsprodukter, post@abelone.no, Kunst til salgs hos ABELONE i Norge.">
+<meta property="og:title" content="Tjenester – ABELONE">
+<meta property="og:description" content="Utvalgte produkter, Tilbudsprodukter, post@abelone.no, Kunst til salgs hos ABELONE i Norge.">
+<meta property="og:image" content="img/11-abelone-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -18,7 +18,7 @@
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="ABELONE.NO" height="34"></a>
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="ABELONE" height="34"></a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
       <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html" aria-current="page">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
@@ -31,7 +31,7 @@
 <section class="sidehode">
   <p class="merkelapp">frisor</p>
   <h1>Tjenester</h1>
-  <p class="sidehode__ingress">ABELONE.NO holder til i Norge og tar oppdrag innen utvalgte produkter, tilbudsprodukter, registrer og post@abelone.no.</p>
+  <p class="sidehode__ingress">ABELONE holder til i Norge og tar oppdrag innen utvalgte produkter, tilbudsprodukter, post@abelone.no og kunst til salgs.</p>
 </section>
 <section class="seksjon seksjon--smal">
   <p class="innledning">Her er hva vi gjør, hvordan vi avklarer et oppdrag, og hva du kan forvente av oss underveis. Hvert oppdrag starter med en samtale der vi blir enige om omfang, pris og tidspunkt før noe settes i gang.</p>
@@ -60,7 +60,7 @@
     </article><article class="tjeneste">
       <div class="tjeneste__nr">03</div>
       <div>
-        <h2>Registrer</h2>
+        <h2>post@abelone.no</h2>
         <p>Vi sier hva det koster før vi begynner.</p>
         <ul class="punkter">
           <li>Fast kontaktperson</li>
@@ -71,7 +71,7 @@
     </article><article class="tjeneste">
       <div class="tjeneste__nr">04</div>
       <div>
-        <h2>post@abelone.no</h2>
+        <h2>Kunst til salgs</h2>
         <p>Arbeidet dokumenteres mens det pågår.</p>
         <ul class="punkter">
           <li>Fast kontaktperson</li>
@@ -81,7 +81,7 @@
       </div>
     </article>
 </section>
-<section class="seksjon"><figure class="bredtbilde"><img class="" src="img/05-abelone-no.jpg" alt="ABELONE.NO" loading="lazy" decoding="async"></figure></section>
+<section class="seksjon"><figure class="bredtbilde"><img class="" src="img/05-abelone-no.jpg" alt="ABELONE" loading="lazy" decoding="async"></figure></section>
 <section class="cta">
   <h2>Usikker på hva du trenger?</h2>
   <p>Send en kort beskrivelse, så sier vi hva som er neste steg.</p>
@@ -91,12 +91,22 @@
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">ABELONE.NO</p>
+      <p class="bunn__navn">ABELONE</p>
       <p class="bunn__tekst">Norge · post@abelone.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 ABELONE.NO</p>
+    <p class="bunn__krav">© 2026 ABELONE</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

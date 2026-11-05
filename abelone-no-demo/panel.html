@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="theme-color" content="#16120e">
-<title>ABELONE.NO — Dagens oversikt</title>
+<title>ABELONE — Dagens oversikt</title>
 <meta name="description" content="Panel med dagens status, oppgaver og henvendelser.">
-<meta property="og:title" content="ABELONE.NO — Dagens oversikt">
+<meta property="og:title" content="ABELONE — Dagens oversikt">
 <meta property="og:description" content="Panel med dagens status, oppgaver og henvendelser.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/11-abelone-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 <style>
@@ -53,7 +53,7 @@
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="ABELONE.NO" height="34"></a>
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="ABELONE" height="34"></a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
       <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
@@ -69,9 +69,9 @@
       <div>
         <p class="merkelapp">Panel</p>
         <h1>Dagens oversikt</h1>
-        <p class="innledning">Dette er hvordan ABELONE.NO ser dagen sin. Trykk på en oppgave for å merke den ferdig — tallene oppdateres med en gang.</p>
+        <p class="innledning">Dette er hvordan ABELONE ser dagen sin. Trykk på en oppgave for å merke den ferdig — tallene oppdateres med en gang.</p>
       </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>ABELONE.NO</div>
+      <div class="panel__bruker"><span class="panel__prikk"></span>ABELONE</div>
     </div>
 
     <div class="panel__kpi-rad">
@@ -100,12 +100,12 @@
         </li>
         <li class="oppgave" data-status="pågår">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Registrer</strong><span>Avtalt i dag · Egen base</span></div>
+          <div class="oppgave__tekst"><strong>post@abelone.no</strong><span>Avtalt i dag · Egen base</span></div>
           <span class="status status--pågår">Pågår</span>
         </li>
         <li class="oppgave" data-status="ferdig">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>post@abelone.no</strong><span>Kunden har fått svar · Nordre gate 4</span></div>
+          <div class="oppgave__tekst"><strong>Kunst til salgs</strong><span>Kunden har fått svar · Nordre gate 4</span></div>
           <span class="status status--ferdig">Ferdig</span>
         </li>
         </ul>
@@ -136,7 +136,7 @@
     <div class="panel__forklaring">
       <h2>Hva skjer automatisk</h2>
       <p>Henvendelser samles på ett sted, og den som venter får svar selv når ingen er på kontoret.</p>
-      <p class="panel__mer">Panelet er en demo av hvordan det kunne se ut for ABELONE.NO. Ingen data sendes noe sted.</p>
+      <p class="panel__mer">Panelet er en demo av hvordan det kunne se ut for ABELONE. Ingen data sendes noe sted.</p>
     </div>
   </section>
 
@@ -150,13 +150,23 @@
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">ABELONE.NO</p>
+      <p class="bunn__navn">ABELONE</p>
       <p class="bunn__tekst">Norge · post@abelone.no</p>
     </div>
     <nav class="bunn__meny"><a href="[object Object]index.html">Forside</a><a href="[object Object]tjenester.html">Tjenester</a><a href="[object Object]prosjekter.html">Prosjekter</a><a href="[object Object]panel.html">Panel</a><a href="[object Object]om-oss.html">Om oss</a><a href="[object Object]kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 ABELONE.NO</p>
+    <p class="bunn__krav">© 2026 ABELONE</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 <script>
 document.querySelectorAll('[data-hake]').forEach(function (k) {
   k.addEventListener('click', function () {
