@@ -9,7 +9,7 @@
 <meta name="description" content="Om Elektro Kilden AS i Norge.">
 <meta property="og:title" content="Om oss – Elektro Kilden AS">
 <meta property="og:description" content="Om Elektro Kilden AS i Norge.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/02-elektrokilden-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -40,7 +40,7 @@
     <blockquote class="sitat">«Rapporten som er ferdig når bilen kjører»</blockquote>
   </div>
   <div class="om__bilde">
-    <img class="" src="img/om.jpg" alt="Elektro Kilden AS" loading="lazy" decoding="async">
+    
   </div>
 </section>
 
@@ -67,5 +67,15 @@
     <p class="bunn__krav">© 2026 Elektro Kilden AS</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
