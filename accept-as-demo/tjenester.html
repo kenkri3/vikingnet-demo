@@ -9,7 +9,7 @@
 <meta name="description" content="RENHOLD, KANTINE, Renhold med fokus på godt samarbeid, Fleksibel kantinedrift for bedrifter hos Accept Servicepartner i Norge.">
 <meta property="og:title" content="Tjenester – Accept Servicepartner">
 <meta property="og:description" content="RENHOLD, KANTINE, Renhold med fokus på godt samarbeid, Fleksibel kantinedrift for bedrifter hos Accept Servicepartner i Norge.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-accept-as.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -81,7 +81,7 @@
       </div>
     </article>
 </section>
-<section class="seksjon"><figure class="bredtbilde"><img class="" src="img/04-accept-as.jpg" alt="Accept Servicepartner" loading="lazy" decoding="async"></figure></section>
+<section class="seksjon"><figure class="bredtbilde"><img class="" src="img/05-accept-as.jpg" alt="Accept Servicepartner" loading="lazy" decoding="async"></figure></section>
 <section class="cta">
   <h2>Usikker på hva du trenger?</h2>
   <p>Send en kort beskrivelse, så sier vi hva som er neste steg.</p>
@@ -98,5 +98,15 @@
     <p class="bunn__krav">© 2026 Accept Servicepartner</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
