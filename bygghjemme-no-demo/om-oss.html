@@ -36,7 +36,7 @@
 <section class="seksjon seksjon--to">
   <div>
     <p class="innledning">Bygghjemme holder til i Nøtterøy og tar oppdrag innen populære kategorier, månedens kampanjer, populære varemerker og utvalgte kampanjer for deg.</p>
-    <p>Bygghjemme - handle byggevarer i vårt byggevarehus på nettet NORDENS STØRSTE E-HANDEL INNEN BYGG OG HAGE NYE KUNDER FÅR 200 KR RABATT Kundeservice Mine Sider Favoritter Handlekurv Alle produkter Kontakt oss Varemerker Månedens beste tilbud Black Month Byggevarehuset på nett Kjøkken &amp; bad Hage &amp; utemiljø Hus &amp; bygg Gulv &amp; vegg Innredning &amp; belysning Fritid &amp; marine Verktøy &amp; maskiner Skog og landbruk Våre varemerker Populære kategorier Linoleumsgulv Vinylgulv Knotter Snø- og taksikring Dørhåndtak Trapperenovering Lyskilder Veggplater og veggpanel Månedens kampanjer Populære varemerker Vis alle varemerker Vis alle varemerker Utvalgte kampanjer for deg Populære kampanjer Finn dine nye flisfavoritter og spar stort! NÅ 30% Store gulvdrømmer til små priser NÅ 35% Salg Få hjelp fra våre erfarne selgere når du ønsker tips og råd før kjøpet.</p><p>Tilbudsforespørsel Ordrelegging Raske svar via e-post: salg@bygghjemme.no 21601818 Kundeservice Med vår kundeservice kan du enkelt registrere saken din og finne svar på de vanligste spørsmålene.</p>
+    <p>Bygghjemme - handle byggevarer i vårt byggevarehus på nettet NORDENS STØRSTE E-HANDEL INNEN BYGG OG HAGE Kundeservice Mine Sider Favoritter Handlekurv Alle produkter Kontakt oss Varemerker Månedens beste tilbud Black Month Byggevarehuset på nett Kjøkken &amp; bad Hus &amp; bygg Gulv &amp; vegg Innredning &amp; belysning Fritid &amp; marine Hage &amp; utemiljø Verktøy &amp; maskiner Skog og landbruk Merker Våre varemerker Populære kategorier Linoleumsgulv Vinylgulv Knotter Snø- og taksikring Dørhåndtak Trapperenovering Lyskilder Veggplater og veggpanel Månedens kampanjer Populære varemerker Vis alle varemerker Vis alle varemerker Utvalgte kampanjer for deg Klassisk baderomsdesign – nå til knallgode priser! NÅ 20% Populære kampanjer Store gulvdrømmer til små priser NÅ 35% Gi kjøkkenet et løft med Nordic Tech OPPTIL 35% Salg Få hjelp fra våre erfarne selgere når du ønsker tips og råd før kjøpet.</p><p>Tilbudsforespørsel Ordrelegging Raske svar via e-post: salg@bygghjemme.no 21601818 Kundeservice Med vår kundeservice kan du enkelt registrere saken din og finne svar på de vanligste spørsmålene.</p>
     <blockquote class="sitat">«Følg bygget fra første spadetak»</blockquote>
   </div>
   <div class="om__bilde">
@@ -67,5 +67,15 @@
     <p class="bunn__krav">© 2026 Bygghjemme</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

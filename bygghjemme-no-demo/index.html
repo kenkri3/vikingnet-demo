@@ -28,7 +28,7 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
   
   <div class="helt__tekst">
     <p class="merkelapp">bygg · Nøtterøy</p>
@@ -52,25 +52,25 @@
     <h2>Det vi bygger</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/04-bygghjemme-no.jpg" alt="Populære kategorier" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Populære kategorier</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/07-bygghjemme-no.jpg" alt="Månedens kampanjer" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Månedens kampanjer</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/08-bygghjemme-no.jpg" alt="Populære varemerker" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Populære varemerker</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/04-bygghjemme-no.jpg" alt="Utvalgte kampanjer for deg" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/09-bygghjemme-no.jpg" alt="Utvalgte kampanjer for deg" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Utvalgte kampanjer for deg</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -85,7 +85,6 @@
     <h2>Slik jobber vi</h2>
   </div>
   <div class="verdier">
-    <div class="verdi"><p>NÅ 30% Store gulvdrømmer til små priser NÅ 35% Salg Få hjelp fra våre erfarne selgere når du ønsker tips og råd før kjøpet.</p></div>
     <div class="verdi"><p>Når vi har mottatt saken din, vil vi kontakte deg og hjelpe deg videre med forespørselen din.</p></div>
     <div class="verdi"><p>nr.: 993 392 375 Alle produkter på Bygghjemme.no er tilpasset bruk i Norge</p></div>
   </div>
@@ -93,6 +92,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/03-bygghjemme-no.jpg" alt="Bygghjemme – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Bygghjemme - handle byggevarer i vårt byggevarehus på nettet NORDENS STØRSTE E-HANDEL INNEN BYGG OG HAGE Kundeservice Mine Sider Favoritter Handlekurv Alle produkter Kontakt oss Varemerker Månedens beste tilbud Black Month Byggevarehuset på nett Kjøkken &amp; bad Hus &amp; bygg Gulv &amp; vegg Innredning &amp; belysning Fritid &amp; marine Hage &amp; utemiljø Verktøy &amp; maskiner Skog og landbruk Merker Våre varemerker Populære kategorier Linoleumsgulv Vinylgulv Knotter Snø- og taksikring Dørhåndtak Trapperenovering Lyskilder Veggplater og veggpanel Månedens kampanjer Populære varemerker Vis alle varemerker Vis alle varemerker Utvalgte kampanjer for deg Klassisk baderomsdesign – nå til knallgode priser!</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -122,7 +122,7 @@
     <p class="merkelapp">Arbeid underveis</p>
     <h2>Fra byggeplassen</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-bygghjemme-no.jpg" alt="Bygghjemme – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-bygghjemme-no.jpg" alt="Bygghjemme – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-bygghjemme-no.jpg" alt="Bygghjemme – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-bygghjemme-no.jpg" alt="Bygghjemme – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-bygghjemme-no.jpg" alt="Bygghjemme – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -183,5 +183,15 @@
     <p class="bunn__krav">© 2026 Bygghjemme</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
