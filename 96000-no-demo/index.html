@@ -28,7 +28,7 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
   
   <div class="helt__tekst">
     <p class="merkelapp">ror · Holmestrand</p>
@@ -36,7 +36,7 @@
     <p class="helt__ingress">Siden 1980 har Brekke Sanitær har levert rørleggertjenester.</p>
     <div class="knapper">
       <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tjenester.html">Se tjenester</a>
+      <a class="knapp knapp--tom" href="tel:+4792615457">Ring 92 61 54 57</a>
     </div>
     <ul class="tillit">
       <li class="tillit__punkt">Sertifikat</li>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/hero-bransje.jpg" alt="VVS Eksperten – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Vårt fokus er kvalitet og punktlighet.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -118,7 +119,14 @@
   </ol>
 </section>
 
-
+<section class="seksjon">
+  <div class="seksjon__hode">
+    <p class="merkelapp">Eksempel</p>
+    <h2>Fra arbeidet</h2>
+  </div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/hero-bransje.jpg" alt="VVS Eksperten – arbeid" ></figure></div>
+  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
+</section>
 
 
 
@@ -153,11 +161,21 @@
   <div class="bunn__indre">
     <div>
       <p class="bunn__navn">VVS Eksperten</p>
-      <p class="bunn__tekst">Holmestrand · post@96000.no</p>
+      <p class="bunn__tekst">Holmestrand · 92 61 54 57 · post@96000.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
     <p class="bunn__krav">© 2026 VVS Eksperten</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

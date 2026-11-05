@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="theme-color" content="#16120e">
 <title>Kontakt – VVS Eksperten</title>
-<meta name="description" content="Kontakt VVS Eksperten, e-post post@96000.no.">
+<meta name="description" content="Kontakt VVS Eksperten, telefon 92 61 54 57, e-post post@96000.no.">
 <meta property="og:title" content="Kontakt – VVS Eksperten">
-<meta property="og:description" content="Kontakt VVS Eksperten, e-post post@96000.no.">
+<meta property="og:description" content="Kontakt VVS Eksperten, telefon 92 61 54 57, e-post post@96000.no.">
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
@@ -45,7 +45,7 @@
   </form>
   <aside class="kontaktkort">
     <p class="kontaktkort__navn">VVS Eksperten</p>
-    
+    <p><strong>Telefon</strong><br><a href="tel:+4792615457">92 61 54 57</a></p>
     <p><strong>E-post</strong><br><a href="mailto:post@96000.no">post@96000.no</a></p>
     <p><strong>Sted</strong><br>Holmestrand</p>
   </aside>
@@ -55,11 +55,21 @@
   <div class="bunn__indre">
     <div>
       <p class="bunn__navn">VVS Eksperten</p>
-      <p class="bunn__tekst">Holmestrand · post@96000.no</p>
+      <p class="bunn__tekst">Holmestrand · 92 61 54 57 · post@96000.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
     <p class="bunn__krav">© 2026 VVS Eksperten</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

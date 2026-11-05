@@ -151,12 +151,22 @@
   <div class="bunn__indre">
     <div>
       <p class="bunn__navn">VVS Eksperten</p>
-      <p class="bunn__tekst">Holmestrand · post@96000.no</p>
+      <p class="bunn__tekst">Holmestrand · 92 61 54 57 · post@96000.no</p>
     </div>
     <nav class="bunn__meny"><a href="[object Object]index.html">Forside</a><a href="[object Object]tjenester.html">Tjenester</a><a href="[object Object]prosjekter.html">Prosjekter</a><a href="[object Object]panel.html">Panel</a><a href="[object Object]om-oss.html">Om oss</a><a href="[object Object]kontakt.html">Kontakt</a></nav>
     <p class="bunn__krav">© 2026 VVS Eksperten</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 <script>
 document.querySelectorAll('[data-hake]').forEach(function (k) {
   k.addEventListener('click', function () {
