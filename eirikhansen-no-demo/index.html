@@ -28,7 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
+  <aside class="helt__fakta"><p class="helt__fakta-topp">Murmester Eirik Hansen AS</p><ul><li>Leverer alt av arbeid innen murerfaget</li><li>Bad og våtrom</li><li>Vintervedlikehold</li></ul><a class="knapp" href="tel:+4794421111">Ring 94 42 11 11</a></aside>
   
   <div class="helt__tekst">
     <p class="merkelapp">bygg · Nesttun</p>
@@ -52,25 +53,25 @@
     <h2>Det vi bygger</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/05-eirikhansen-no.jpg" alt="Leverer alt av arbeid innen murerfaget" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Leverer alt av arbeid innen murerfaget</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-eirikhansen-no.jpg" alt="Bad og våtrom" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Bad og våtrom</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/07-eirikhansen-no.jpg" alt="Vintervedlikehold" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Vintervedlikehold</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/05-eirikhansen-no.jpg" alt="Naturstein" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/08-eirikhansen-no.jpg" alt="Naturstein" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Naturstein</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -94,6 +95,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/04-eirikhansen-no.jpg" alt="Murmester Eirik Hansen AS – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Murmester Eirik Hansen AS - Leverer alt av arbeid innen murerfaget Forside Om oss Tjenester Bolig i mur Bad og våtrom Vintervedlikehold Naturstein Pipe og ildsted Gulv: støping og avretting Puss av fasade Samarbeidspartnere Prosjekter Aktuelt Kontakt oss Informasjonskapsler Prosjekter Murmester Eirik Hansen AS Leverer alt av arbeid innen murerfaget.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -123,7 +125,7 @@
     <p class="merkelapp">Arbeid underveis</p>
     <h2>Fra byggeplassen</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-eirikhansen-no.jpg" alt="Murmester Eirik Hansen AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-eirikhansen-no.jpg" alt="Murmester Eirik Hansen AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/04-eirikhansen-no.jpg" alt="Murmester Eirik Hansen AS – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-eirikhansen-no.jpg" alt="Murmester Eirik Hansen AS – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-eirikhansen-no.jpg" alt="Murmester Eirik Hansen AS – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -182,5 +184,15 @@
     <p class="bunn__krav">© 2026 Murmester Eirik Hansen AS</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
