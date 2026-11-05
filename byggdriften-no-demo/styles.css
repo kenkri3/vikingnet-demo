@@ -42,6 +42,12 @@
 .kort{border-radius:18px}
 .galleri{gap:1rem}
 .galleri__bilde{border-radius:16px;overflow:hidden}
+/* Fullbredde bildebande */
+.bildebande{position:relative;min-height:42vh;display:grid;place-items:center;overflow:hidden}
+.bildebande>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bildebande::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.55))}
+.bildebande__tekst{position:relative;z-index:1;max-width:26ch;text-align:center;padding:3rem 1.5rem}
+.bildebande__tekst p{font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.25;color:#fff;font-family:var(--serif,Georgia,serif)}
 .logovegg{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;align-items:center}
 .logovegg li{display:flex;align-items:center}
 .logovegg img{height:40px;width:auto;max-width:170px;object-fit:contain}
