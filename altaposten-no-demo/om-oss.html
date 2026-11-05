@@ -35,7 +35,7 @@
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Altaposten holder til i Norge og tar oppdrag innen to blåveiser til donald trump, eavis, meninger og sport.</p>
+    <p class="innledning">Altaposten holder til i Norge og tar oppdrag innen frammøte til lærerutdanning, takk for engasjementet og vennskapet, rut, lastebil fast i kløfta og eavis.</p>
     <p>Altaposten har ikke ansvar for innhold på eksterne nettsider som det lenkes til.</p><p>Alt innhold er opphavsrettslig beskytte</p>
     <blockquote class="sitat">«Henvendelsen som ikke blir liggende»</blockquote>
   </div>
@@ -67,5 +67,15 @@
     <p class="bunn__krav">© 2026 Altaposten</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
