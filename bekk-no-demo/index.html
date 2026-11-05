@@ -28,7 +28,7 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
   
   <div class="helt__tekst">
     <p class="merkelapp">bygg · Trondheim</p>
@@ -52,25 +52,25 @@
     <h2>Det vi bygger</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/04-bekk-no.jpg" alt="Når alle kan bygge alt, må noen forstå" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Når alle kan bygge alt, må noen forstå</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/05-bekk-no.jpg" alt="Arbeider" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Arbeider</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-bekk-no.jpg" alt="Løsninger folk bruker hver dag" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Løsninger folk bruker hver dag</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/04-bekk-no.jpg" alt="Barn, urskog og nasjonalromantikk" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/07-bekk-no.jpg" alt="Barn, urskog og nasjonalromantikk" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Barn, urskog og nasjonalromantikk</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -91,6 +91,7 @@
     <div class="verdi"><p>oktober Maskiner er dine nye brukere AI-agenter bruker allerede tjenestene dine.</p></div>
   </div>
 </section>
+
 
 
 
@@ -123,7 +124,7 @@
     <p class="merkelapp">Arbeid underveis</p>
     <h2>Fra byggeplassen</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-bekk-no.jpg" alt="Bekk – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-bekk-no.jpg" alt="Bekk – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-bekk-no.jpg" alt="Bekk – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-bekk-no.jpg" alt="Bekk – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/02-bekk-no.jpg" alt="Bekk – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -172,5 +173,15 @@
     <p class="bunn__krav">© 2026 Bekk</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
