@@ -9,7 +9,7 @@
 <meta name="description" content="Prosjekter og arbeid fra Gnist.">
 <meta property="og:title" content="Prosjekter – Gnist">
 <meta property="og:description" content="Prosjekter og arbeid fra Gnist.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/03-gnist-as.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -39,10 +39,10 @@
       <img class="" src="img/01-gnist-as.jpg" alt="Gnist – arbeid" >
       <figcaption>Gnist – arbeid</figcaption>
     </figure><figure class="galleri__bilde">
-      <img class="" src="img/03-gnist-as.jpg" alt="Gnist – arbeid" >
+      <img class="" src="img/04-gnist-as.jpg" alt="Gnist – arbeid" >
       <figcaption>Gnist – arbeid</figcaption>
     </figure><figure class="galleri__bilde">
-      <img class="" src="img/04-gnist-as.jpg" alt="Gnist – arbeid" >
+      <img class="" src="img/05-gnist-as.jpg" alt="Gnist – arbeid" >
       <figcaption>Gnist – arbeid</figcaption>
     </figure></div>
 </section>
@@ -62,5 +62,15 @@
     <p class="bunn__krav">© 2026 Gnist</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

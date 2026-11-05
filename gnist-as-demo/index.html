@@ -9,7 +9,7 @@
 <meta name="description" content="«Gnist var sentral i arbeidet med å øke teamets eierskap og gjennomføringsevne i en hverdag med både drift og utvikling.">
 <meta property="og:title" content="Gnist – Oslo">
 <meta property="og:description" content="«Gnist var sentral i arbeidet med å øke teamets eierskap og gjennomføringsevne i en hverdag med både drift og utvikling.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/03-gnist-as.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/03-gnist-as.jpg" alt=" Gnist" ><figcaption><strong>Produkt og Agile Coaching</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">Oslo</p>
     <h1>Sammen skaper vi fremtiden</h1>
@@ -52,25 +52,25 @@
     <h2>Oppdragene våre</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-gnist-as.jpg" alt="Produkt og Agile Coaching" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Produkt og Agile Coaching</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/07-gnist-as.jpg" alt="Transformasjonsledelse" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>Transformasjonsledelse</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/08-gnist-as.jpg" alt="Moderne teknologiledelse" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Moderne teknologiledelse</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/05-gnist-as.jpg" alt="Kurs i smidige organisasjoner" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/10-gnist-as.jpg" alt="Kurs i smidige organisasjoner" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Kurs i smidige organisasjoner</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/05-gnist-as.jpg" alt="Gnist – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Det førte til bedre flyt, kortere ledetid og betydelig økt leveransekapasitet.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -123,7 +124,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-gnist-as.jpg" alt="Gnist – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-gnist-as.jpg" alt="Gnist – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/04-gnist-as.jpg" alt="Gnist – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-gnist-as.jpg" alt="Gnist – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/04-gnist-as.jpg" alt="Gnist – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -181,5 +182,15 @@
     <p class="bunn__krav">© 2026 Gnist</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
