@@ -9,7 +9,7 @@
 <meta name="description" content="Hos blinQ er vi eksperter på moderne teknologi.">
 <meta property="og:title" content="BlinQ - Din tekniske verdiskaper – Norge">
 <meta property="og:description" content="Hos blinQ er vi eksperter på moderne teknologi.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-blinq-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/01-blinq-no.jpg" alt=" BlinQ - Din tekniske verdiskaper" ><figcaption><strong>Dekker hele Norge</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">Norge</p>
     <h1>Fra teknologi til Verdi</h1>
@@ -52,25 +52,25 @@
     <h2>Det vi leverer</h2>
   </div>
   <div class="rutenett rutenett--3"><article class="kort">
-      <div class="kort__bilde"><img class="" src="img/01-blinq-no.jpg" alt="Dekker hele Norge" loading="lazy" decoding="async"></div>
+      <div class="kort__bilde"><img class="" src="img/05-blinq-no.jpg" alt="Dekker hele Norge" loading="lazy" decoding="async"></div>
       <span class="kort__nr">01</span>
       <h3>Dekker hele Norge</h3>
       <p>Vi avklarer omfang og tid før vi starter.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/06-blinq-no.jpg" alt="AI gir verdi – hvis dere gjør det riktig" loading="lazy" decoding="async"></div>
       <span class="kort__nr">02</span>
       <h3>AI gir verdi – hvis dere gjør det riktig</h3>
       <p>Du har én kontakt gjennom hele saken.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/07-blinq-no.jpg" alt="Bærekraft" loading="lazy" decoding="async"></div>
       <span class="kort__nr">03</span>
       <h3>Bærekraft</h3>
       <p>Vi sier hva det koster før vi begynner.</p>
       <a class="tekstlenke" href="kontakt.html">Be om tilbud →</a>
     </article><article class="kort">
-      
+      <div class="kort__bilde"><img class="" src="img/08-blinq-no.jpg" alt="Arrangementer" loading="lazy" decoding="async"></div>
       <span class="kort__nr">04</span>
       <h3>Arrangementer</h3>
       <p>Arbeidet dokumenteres mens det pågår.</p>
@@ -94,6 +94,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/04-blinq-no.jpg" alt="BlinQ - Din tekniske verdiskaper – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Vår spisskompetanse strekker seg fra tradisjonell legacy IT gjennom moderne skytjenester og helt ut til din arbeidsflate.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -123,7 +124,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/02-blinq-no.jpg" alt="BlinQ - Din tekniske verdiskaper – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-blinq-no.jpg" alt="BlinQ - Din tekniske verdiskaper – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/04-blinq-no.jpg" alt="BlinQ - Din tekniske verdiskaper – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/02-blinq-no.jpg" alt="BlinQ - Din tekniske verdiskaper – arbeid" ></figure><figure class="galleri__bilde"><img class="" src="img/03-blinq-no.jpg" alt="BlinQ - Din tekniske verdiskaper – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -182,5 +183,15 @@
     <p class="bunn__krav">© 2026 BlinQ - Din tekniske verdiskaper</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
