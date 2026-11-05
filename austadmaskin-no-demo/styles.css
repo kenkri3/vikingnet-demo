@@ -17,6 +17,50 @@
 .skjema input,.skjema select,.skjema textarea{font:inherit;padding:.7rem .8rem;border:1px solid var(--kant);border-radius:10px;background:var(--bak);color:var(--blekk)}
 .skjema button{justify-self:start}
 .klebrig{position:fixed;right:1rem;bottom:1rem;z-index:60;background:var(--aksent);color:#fff;text-decoration:none;padding:.8rem 1.2rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.18);font-size:.95rem}
+/* Bevegelse og dybde */
+.reveal{opacity:1;transform:none;overflow-x:clip}
+.reveal.vis{animation:inn .7s cubic-bezier(.2,.7,.3,1) both}
+@keyframes inn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}}
+.helt__bilde{overflow:hidden}
+.helt__bilde img{animation:heroZoom 24s ease-out both;will-change:transform}
+@keyframes heroZoom{from{transform:scale(1.04)}to{transform:scale(1)}}
+.kort{transition:transform .35s ease,box-shadow .35s ease}
+.kort:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.galleri__bilde img{transition:transform .6s ease}
+.galleri__bilde:hover img{transform:scale(1.04)}
+.merkelapp{letter-spacing:.16em}
+/* Visuell oppgradering */
+.helt:not(.helt--full){padding:4rem 1.5rem}
+.helt--full{min-height:min(78vh,720px)}
+.helt__tekst h1{font-size:clamp(2.4rem,6.2vw,5rem);line-height:.98;letter-spacing:-.02em}
+.helt__ingress{font-size:clamp(1.05rem,1.6vw,1.3rem);max-width:38ch}
+.helt--full .helt__bilde::after{background:linear-gradient(105deg,rgba(8,12,10,.92) 0%,rgba(8,12,10,.72) 42%,rgba(8,12,10,.25) 100%)}
+.seksjon{padding:5rem 1.5rem}
+.seksjon__hode h2{font-size:clamp(1.9rem,3.4vw,2.8rem);letter-spacing:-.015em}
+.rutenett{gap:1.4rem}
+.kort{border-radius:18px}
+.galleri{gap:1rem}
+.galleri__bilde{border-radius:16px;overflow:hidden}
+/* Fullbredde bildebande */
+.bildebande{position:relative;min-height:42vh;display:grid;place-items:center;overflow:hidden}
+.bildebande>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bildebande::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.55))}
+.bildebande__tekst{position:relative;z-index:1;max-width:26ch;text-align:center;padding:3rem 1.5rem}
+.bildebande__tekst p{font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.25;color:#fff;font-family:var(--serif,Georgia,serif)}
+/* Splittet hero */
+.helt--splitt{display:grid;grid-template-columns:.95fr 1.05fr;overflow:visible;gap:clamp(1.5rem,4vw,4rem);align-items:center;padding:clamp(2rem,5vw,4.5rem) clamp(1.25rem,4vw,4rem);max-width:1280px;margin:0 auto;min-height:auto;background:var(--bak)}
+.helt--uten-bilde{grid-template-columns:1fr;min-height:52vh}
+.helt__kort{position:relative;margin:0;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.helt__kort img{width:100%;height:clamp(320px,52vh,560px);object-fit:cover;display:block}
+.helt__kort figcaption{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(10,14,12,.82);color:#fff;border-radius:14px;padding:.9rem 1.1rem;display:grid;gap:.15rem}
+.helt__kort figcaption strong{font-size:1rem}
+.helt__kort figcaption span{font-size:.85rem;opacity:.85}
+.helt--splitt .tillit__punkt{color:var(--dempet)}
+.helt--splitt .tillit{margin-top:1.6rem}
+.helt--splitt .helt__tekst{max-width:620px;order:1}
+.helt--splitt .helt__kort{order:2}
+@media (max-width:900px){.helt--splitt{grid-template-columns:1fr}.helt__kort img{height:44vh}}
 .logovegg{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:1.6rem 2.4rem;align-items:center}
 .logovegg li{display:flex;align-items:center}
 .logovegg img{height:40px;width:auto;max-width:170px;object-fit:contain}
