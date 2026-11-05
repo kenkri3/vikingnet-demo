@@ -9,7 +9,7 @@
 <meta name="description" content="Om Dag Aasbø Travel i Dag.">
 <meta property="og:title" content="Om oss – Dag Aasbø Travel">
 <meta property="og:description" content="Om Dag Aasbø Travel i Dag.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/12-dagaasbo-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -35,8 +35,8 @@
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Dag Aasbø Travel holder til i Dag og tar oppdrag innen destinasjoner, gaven som gir opplevelser, la oss planlegge din gruppereise og hvor vil du reise fra? ✈️.</p>
-    <p>Opplev en magisk førjul i historiske byer! Dag Aasbø Travel | Påmeldingsturer og gruppereiser Alle reiser Type reise Flyreiser Bussreiser Cruisereiser Penjonistforbundet Reis fra Gardermoen Torp Kjevik Sola Flesland Værnes Tromsø Evenes Se alle våre reiser Få et tilbud Lukkede gruppereiser Foreningstur Korpstur Kortur Skoletur Reisetema Destinasjoner Spørsmål og svar Om oss Lukk Alle reiser Type reise Flyreiser Bussreiser Cruisereiser Pensjonistforbundet Reis fra Gardermoen Torp Kjevik Flesland Sola Værnes Tromsø Evenes Få et tilbud Foreningstur Korpstur Kortur Skoletur Destinasjoner Reisetema Spørsmål og svar Om oss Min side Kontakt oss Min side Kontakt oss Meny Dag Aasbø Travel 4.5 Vi skaper gode og varige ferieminner Ring oss på 37 15 70 31 .</p><p>Alle hverdager: 9-15 Lukk søk Se alle reiser Gode reiseopplevelser i over 90 år Norsk reiseleder på alle turer Opplev trygge og innholdsrike turer Anbefalte reisemål 2026 Cruisereiser Få plasser igjen! Cruise i Middelhavet med Tunisia &amp; Sicilia Cruise i Middelhavet 17.11.2026 Gardermoen (Kristiansand) Pris: 11 990,- Flyreiser Fullbooket Vinterpause på Costa del Sol Costa del Sol, Benalmadena 26.11.2026 Kristiansand (Gardermoen) Pris: 14 990,- Bussreiser Nyttårsfeiring på historiske Brattrein Hotell Norge, Telemark, Notodden 30.12.2026 Krstiansand og Oslo Pris: 5 990,- Flyreiser Vinterpause Costa Blanca – Albir Spania, Costa Blanca, Albir 05.01.2027 Sandefjord Torp (Kristiansand) Pris: 13 490,- Julemarked og førjulsturer 2026 Snart åpner julemarkedene i Europa, og vi har turene som gir deg julestemningen.</p>
+    <p class="innledning">Dag Aasbø Travel holder til i Dag og tar oppdrag innen anbefalte reisemål, destinasjoner, gaven som gir opplevelser og la oss planlegge din gruppereise.</p>
+    <p>Opplev en magisk førjul i historiske byer! Dag Aasbø Travel | Påmeldingsturer og gruppereiser Alle reiser Type reise Flyreiser Bussreiser Cruisereiser Penjonistforbundet Reis fra Gardermoen Torp Kjevik Sola Flesland Værnes Tromsø Evenes Se alle våre reiser Få et tilbud Lukkede gruppereiser Foreningstur Korpstur Kortur Skoletur Reisetema Destinasjoner Spørsmål og svar Om oss Lukk Alle reiser Type reise Flyreiser Bussreiser Cruisereiser Pensjonistforbundet Reis fra Gardermoen Torp Kjevik Flesland Sola Værnes Tromsø Evenes Få et tilbud Foreningstur Korpstur Kortur Skoletur Destinasjoner Reisetema Spørsmål og svar Om oss Min side Kontakt oss Min side Kontakt oss Meny Dag Aasbø Travel 4.5 Vi skaper gode og varige ferieminner Ring oss på 37 15 70 31 .</p><p>Alle hverdager: 9-15 Lukk søk Se alle reiser Gode reiseopplevelser i over 90 år Norsk reiseleder på alle turer Opplev trygge og innholdsrike turer Anbefalte reisemål Bussreiser Nyttårsfeiring på historiske Brattrein Hotell Norge, Telemark, Notodden 30.12.2026 Krstiansand og Oslo Pris: 5 990,- Flyreiser Vinterpause Costa Blanca – Albir Spania, Costa Blanca, Albir 05.01.2027 Sandefjord Torp (Kristiansand) Pris: 13 490,- Cruisereiser Spennende cruise fra Rio de Janeiro Brasil, Rio de Janeiro 23.01.2027 Gardermoen (Kristiansand) Pris: 29 490,- Flyreiser Vinterpause i Sør-Spania – Almunecar Spania, Almunecar 06.02.2027 Gardermoen (Kristiansand) Pris: 16 590,- Julemarked og førjulsturer 2026 Snart åpner julemarkedene i Europa, og vi har turene som gir deg julestemningen.</p><p>Førjulstur til Flensburg &amp; Lübeck 01.12.2026 Kristiansand (utreise via Oslo) Pris: 6 790,- Flyreiser Julemarked i Gdansk Polen, Gdansk 08.12.2026 Sandefjord Torp (Kristiansand) Pris: 6 490,- Flyreiser Julemarked i Krakow Krakow, Polen 08.12.2026 Sandefjord Torp (Kristiansand) Pris: 6 590,- Cruisereiser Få plasser igjen!</p>
     <blockquote class="sitat">«Bookingen uten telefon»</blockquote>
   </div>
   <div class="om__bilde">
@@ -67,5 +67,15 @@
     <p class="bunn__krav">© 2026 Dag Aasbø Travel</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

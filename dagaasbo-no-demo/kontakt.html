@@ -9,7 +9,7 @@
 <meta name="description" content="Kontakt Dag Aasbø Travel, telefon 37 15 70 31, e-post post@dagaasbo.no.">
 <meta property="og:title" content="Kontakt – Dag Aasbø Travel">
 <meta property="og:description" content="Kontakt Dag Aasbø Travel, telefon 37 15 70 31, e-post post@dagaasbo.no.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/12-dagaasbo-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -34,7 +34,7 @@
   <p class="sidehode__ingress">Skriv noen ord, så svarer vi så raskt vi kan.</p>
 </section>
 <section class="seksjon seksjon--to">
-  <p class="innledning">Dag Aasbø Travel holder til i Dag og tar oppdrag innen destinasjoner, gaven som gir opplevelser, la oss planlegge din gruppereise og hvor vil du reise fra? ✈️. Skriv kort hva saken gjelder, så svarer vi med hva den krever og hva den koster. Du trenger ikke vite detaljene på forhånd.</p>
+  <p class="innledning">Dag Aasbø Travel holder til i Dag og tar oppdrag innen anbefalte reisemål, destinasjoner, gaven som gir opplevelser og la oss planlegge din gruppereise. Skriv kort hva saken gjelder, så svarer vi med hva den krever og hva den koster. Du trenger ikke vite detaljene på forhånd.</p>
   <form class="skjema" method="post" action="mailto:post@dagaasbo.no" enctype="text/plain">
     <label>Navn<input type="text" name="navn" required></label>
     <label>E-post<input type="email" name="epost" required></label>
@@ -61,5 +61,15 @@
     <p class="bunn__krav">© 2026 Dag Aasbø Travel</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
