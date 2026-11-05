@@ -9,7 +9,7 @@
 <meta name="description" content="Prosjekter og arbeid fra CSD Sealing Systems.">
 <meta property="og:title" content="Prosjekter – CSD Sealing Systems">
 <meta property="og:description" content="Prosjekter og arbeid fra CSD Sealing Systems.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-csd-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -35,7 +35,10 @@
 </section>
 <section class="seksjon">
   <p class="innledning">CSD Sealing Systems holder til i Norge og tar oppdrag innen markeder, dokumentasjon, tester tetting som i sahara og antarktis og branntett. Bildene under er hentet fra vårt eget arbeid. Vil du se noe som ligner ditt eget oppdrag, si fra, så viser vi deg relevante prosjekter og hva de krevde.</p>
-  <div class="galleri galleri--en"><figure class="galleri__bilde galleri__bilde--stor">
+  <div class="galleri "><figure class="galleri__bilde galleri__bilde--stor">
+      <img class="" src="img/02-csd-no.jpg" alt="CSD Sealing Systems – arbeid" >
+      <figcaption>CSD Sealing Systems – arbeid</figcaption>
+    </figure><figure class="galleri__bilde">
       <img class="" src="img/03-csd-no.jpg" alt="CSD Sealing Systems – arbeid" >
       <figcaption>CSD Sealing Systems – arbeid</figcaption>
     </figure></div>
@@ -56,5 +59,15 @@
     <p class="bunn__krav">© 2026 CSD Sealing Systems</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
