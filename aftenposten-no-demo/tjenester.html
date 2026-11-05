@@ -6,10 +6,10 @@
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="theme-color" content="#16120e">
 <title>Tjenester – Aftenposten</title>
-<meta name="description" content="Første valgvinner utpekt, Dette må du vite om nattens valg, Spill, Sudoku hos Aftenposten i Oslo.">
+<meta name="description" content="Dette er et karakterdrap på Listhaug, Spill, Sudoku, Quiz hos Aftenposten i Oslo.">
 <meta property="og:title" content="Tjenester – Aftenposten">
-<meta property="og:description" content="Første valgvinner utpekt, Dette må du vite om nattens valg, Spill, Sudoku hos Aftenposten i Oslo.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:description" content="Dette er et karakterdrap på Listhaug, Spill, Sudoku, Quiz hos Aftenposten i Oslo.">
+<meta property="og:image" content="img/09-aftenposten-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -31,14 +31,14 @@
 <section class="sidehode">
   <p class="merkelapp">Oslo</p>
   <h1>Tjenester</h1>
-  <p class="sidehode__ingress">Aftenposten holder til i Oslo og tar oppdrag innen første valgvinner utpekt, dette må du vite om nattens valg, spill og sudoku.</p>
+  <p class="sidehode__ingress">Aftenposten holder til i Oslo og tar oppdrag innen dette er et karakterdrap på listhaug, spill, sudoku og quiz.</p>
 </section>
 <section class="seksjon seksjon--smal">
   <p class="innledning">Her er hva vi gjør, hvordan vi avklarer et oppdrag, og hva du kan forvente av oss underveis. Hvert oppdrag starter med en samtale der vi blir enige om omfang, pris og tidspunkt før noe settes i gang.</p>
   <article class="tjeneste">
       <div class="tjeneste__nr">01</div>
       <div>
-        <h2>Første valgvinner utpekt</h2>
+        <h2>Dette er et karakterdrap på Listhaug</h2>
         <p>Vi avklarer omfang og tid før vi starter.</p>
         <ul class="punkter">
           <li>Fast kontaktperson</li>
@@ -49,7 +49,7 @@
     </article><article class="tjeneste">
       <div class="tjeneste__nr">02</div>
       <div>
-        <h2>Dette må du vite om nattens valg</h2>
+        <h2>Spill</h2>
         <p>Du har én kontakt gjennom hele saken.</p>
         <ul class="punkter">
           <li>Fast kontaktperson</li>
@@ -60,7 +60,7 @@
     </article><article class="tjeneste">
       <div class="tjeneste__nr">03</div>
       <div>
-        <h2>Spill</h2>
+        <h2>Sudoku</h2>
         <p>Vi sier hva det koster før vi begynner.</p>
         <ul class="punkter">
           <li>Fast kontaktperson</li>
@@ -71,7 +71,7 @@
     </article><article class="tjeneste">
       <div class="tjeneste__nr">04</div>
       <div>
-        <h2>Sudoku</h2>
+        <h2>Quiz</h2>
         <p>Arbeidet dokumenteres mens det pågår.</p>
         <ul class="punkter">
           <li>Fast kontaktperson</li>
@@ -98,5 +98,15 @@
     <p class="bunn__krav">© 2026 Aftenposten</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>

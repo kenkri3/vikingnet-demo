@@ -9,7 +9,7 @@
 <meta name="description" content="Om Aftenposten i Oslo.">
 <meta property="og:title" content="Om oss – Aftenposten">
 <meta property="og:description" content="Om Aftenposten i Oslo.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/09-aftenposten-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -35,8 +35,8 @@
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Aftenposten holder til i Oslo og tar oppdrag innen første valgvinner utpekt, dette må du vite om nattens valg, spill og sudoku.</p>
-    <p>Aftenposten Hopp til innhold Aftenposten Nyheter Oslo Meninger A-magasinet Vink E-avis Bli abonnent Nyheter Verden Norge Oslo Politikk Økonomi Meninger Leder Debatt Kommentar Kronikk Kultur Musikk Kunst Kulturkommentarer Bok A-magasinet Portrettet Foreldrekoden Matskolen Vinskolen Siste ord Vink Film og serier Byliv og guider Mat og drikke Sport Fotball Sportskommentarer Spill Sudoku Quiz Ordnettet 2048 Kryssord Mye brukt Dødsannonser Nekrologer Kortfilm og dokumentar Sprek Foreldreliv A til Å Min side Logg ut Logg inn Min side Del abonnement Kundeservice Kundeservice Vil du se færre nyheter fra Oslo? Kjetil Hanssen Akkurat nå Første valgvinner utpekt Valgdagsmåling: Bare 38 prosent støtter Trump Dette må du vite om nattens valg Mellomvalget i USA 2026 South Carolina South Carolina Kommentar Mellomvalget i USA 2026 Hvis denne demokraten vinner, blir det en svært tøff natt for Trump Christina Pletten Kommentator i Aftenposten Verden Mellomvalget i USA 2026 Trodde han intervjuet Trump-supporter.</p><p>Ohio/Virginia/Texas Ohio/Virginia/Texas Verden Mellomvalget i USA 2026 Derfor stemte hun: – Tryggheten og kristne verdier står på spill Norge Datasikkerhet Professor advarer: – Det er en veldig dum ting å gjøre Spill Se alle spill Sudoku Klarer du å løse alle brettene?</p>
+    <p class="innledning">Aftenposten holder til i Oslo og tar oppdrag innen dette er et karakterdrap på listhaug, spill, sudoku og quiz.</p>
+    <p>Aftenposten Hopp til innhold Aftenposten Nyheter Oslo Meninger A-magasinet Vink E-avis Bli abonnent Nyheter Verden Norge Oslo Politikk Økonomi Meninger Leder Debatt Kommentar Kronikk Kultur Musikk Kunst Kulturkommentarer Bok A-magasinet Portrettet Foreldrekoden Matskolen Vinskolen Siste ord Vink Film og serier Byliv og guider Mat og drikke Sport Fotball Sportskommentarer Spill Sudoku Quiz Ordnettet 2048 Kryssord Mye brukt Dødsannonser Nekrologer Kortfilm og dokumentar Sprek Foreldreliv A til Å Min side Logg ut Logg inn Min side Del abonnement Kundeservice Kundeservice Vil du se færre nyheter fra Oslo? Alstadheim Politisk redaktør i Aftenposten Spill Se alle spill Sudoku Klarer du å løse alle brettene? Siste nyheter 43 min Politikk Listhaug svarer på kritikken i Solbergs bok: – Kjenner meg ikke igjen 52 min Norge Mosseporten stengte etter alvorlig trafikkulykke – luftambulanse rykket ut 1 t Verden Minst 11 europeiske fly tvunget til å lande etter bombetrusler 2 t Norge Ni druknet i oktober 2 t Verden Russisk kaptein dømt for kabelbrudd i Østersjøen 2 t Verden Bombegruppa rykket ut til Københavns lufthavn 2 t Økonomi Uendret fra Norges Bank: – Vi er forberedt på å sette renten opp 2 t Verden Bare Nato er ikke nok – nå er det helgardering som gjelder Se flere nyheter Mest lest Siste 24 timer Store deler av Oslo er rammet av vannlekkasje.</p>
     <blockquote class="sitat">«Henvendelsen som ikke blir liggende»</blockquote>
   </div>
   <div class="om__bilde">
@@ -67,5 +67,15 @@
     <p class="bunn__krav">© 2026 Aftenposten</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
