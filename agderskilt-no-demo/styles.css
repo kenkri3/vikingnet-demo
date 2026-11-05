@@ -42,6 +42,9 @@
 .kort{border-radius:18px}
 .galleri{gap:1rem}
 .galleri__bilde{border-radius:16px;overflow:hidden}
+/* Typografisk bande uten foto */
+.tekstbande{background:#101613;color:#fff;padding:clamp(3rem,7vw,5.5rem) clamp(1.5rem,6vw,5rem)}
+.tekstbande p{max-width:34ch;margin:0 auto;text-align:center;font-family:var(--serif,Georgia,serif);font-size:clamp(1.5rem,3.2vw,2.6rem);line-height:1.2}
 /* Fullbredde bildebande */
 .bildebande{position:relative;min-height:42vh;display:grid;place-items:center;overflow:hidden}
 .bildebande>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -50,7 +53,13 @@
 .bildebande__tekst p{font-size:clamp(1.3rem,2.4vw,2rem);line-height:1.25;color:#fff;font-family:var(--serif,Georgia,serif)}
 /* Splittet hero */
 .helt--splitt{display:grid;grid-template-columns:.95fr 1.05fr;overflow:visible;gap:clamp(1.5rem,4vw,4rem);align-items:center;padding:clamp(2rem,5vw,4.5rem) clamp(1.25rem,4vw,4rem);max-width:1280px;margin:0 auto;min-height:auto;background:var(--bak)}
-.helt--uten-bilde{grid-template-columns:1fr;min-height:52vh}
+.helt--uten-bilde{grid-template-columns:.95fr 1.05fr;min-height:auto}
+.helt__fakta{order:2;background:#101613;color:#fff;border-radius:24px;padding:clamp(1.6rem,3vw,2.6rem);display:grid;gap:1.2rem;align-content:start;box-shadow:0 30px 60px rgba(0,0,0,.22)}
+.helt__fakta-topp{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin:0}
+.helt__fakta ul{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.helt__fakta li{position:relative;padding-left:1.6rem;line-height:1.35}
+.helt__fakta li::before{content:"✓";position:absolute;left:0;opacity:.9}
+@media (max-width:900px){.helt--uten-bilde{grid-template-columns:1fr}}
 .helt__kort{position:relative;margin:0;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.18)}
 .helt__kort img{width:100%;height:clamp(320px,52vh,560px);object-fit:cover;display:block}
 .helt__kort figcaption{position:absolute;left:14px;right:14px;bottom:14px;background:rgba(10,14,12,.82);color:#fff;border-radius:14px;padding:.9rem 1.1rem;display:grid;gap:.15rem}
