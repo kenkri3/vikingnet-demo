@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
 <meta name="theme-color" content="#f97316">
-<title>DekorShop — Dagens oversikt</title>
+<title>Dekorshop — Dagens oversikt</title>
 <meta name="description" content="Panel med dagens status, oppgaver og henvendelser.">
-<meta property="og:title" content="DekorShop — Dagens oversikt">
+<meta property="og:title" content="Dekorshop — Dagens oversikt">
 <meta property="og:description" content="Panel med dagens status, oppgaver og henvendelser.">
 <meta property="og:image" content="img/hero.jpg">
 <link rel="stylesheet" href="theme.css">
@@ -53,7 +53,7 @@
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="DekorShop" height="34"></a>
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Dekorshop" height="34"></a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
       <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
@@ -69,9 +69,9 @@
       <div>
         <p class="merkelapp">Panel</p>
         <h1>Dagens oversikt</h1>
-        <p class="innledning">Dette er hvordan DekorShop ser dagen sin. Trykk på en oppgave for å merke den ferdig — tallene oppdateres med en gang.</p>
+        <p class="innledning">Dette er hvordan Dekorshop ser dagen sin. Trykk på en oppgave for å merke den ferdig — tallene oppdateres med en gang.</p>
       </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>DekorShop</div>
+      <div class="panel__bruker"><span class="panel__prikk"></span>Dekorshop</div>
     </div>
 
     <div class="panel__kpi-rad">
@@ -90,22 +90,22 @@
         <ul class="oppgaver" data-oppgaver>
         <li class="oppgave" data-status="haster">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Klistremerker til bil</strong><span>Fra nettstedet i går · Nordre gate 4</span></div>
+          <div class="oppgave__tekst"><strong>Svar på henvendelse</strong><span>Fra nettstedet i går</span></div>
           <span class="status status--haster">Haster</span>
         </li>
         <li class="oppgave" data-status="venter">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Hvordan montere bildekor</strong><span>Kunde venter · Hos kunde</span></div>
+          <div class="oppgave__tekst"><strong>Send tilbud</strong><span>Kunde venter</span></div>
           <span class="status status--venter">Venter</span>
         </li>
         <li class="oppgave" data-status="pågår">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Klistremerker til bil</strong><span>Avtalt i dag · Egen base</span></div>
+          <div class="oppgave__tekst"><strong>Oppfølging</strong><span>Avtalt i dag</span></div>
           <span class="status status--pågår">Pågår</span>
         </li>
         <li class="oppgave" data-status="ferdig">
           <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Hvordan montere bildekor</strong><span>Kunden har fått svar · Nordre gate 4</span></div>
+          <div class="oppgave__tekst"><strong>Lukk sak</strong><span>Kunden har fått svar</span></div>
           <span class="status status--ferdig">Ferdig</span>
         </li>
         </ul>
@@ -136,7 +136,7 @@
     <div class="panel__forklaring">
       <h2>Hva skjer automatisk</h2>
       <p>Henvendelser samles på ett sted, og den som venter får svar selv når ingen er på kontoret.</p>
-      <p class="panel__mer">Panelet er en demo av hvordan det kunne se ut for DekorShop. Ingen data sendes noe sted.</p>
+      <p class="panel__mer">Panelet er en demo av hvordan det kunne se ut for Dekorshop. Ingen data sendes noe sted.</p>
     </div>
   </section>
 
@@ -150,13 +150,23 @@
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">DekorShop</p>
+      <p class="bunn__navn">Dekorshop</p>
       <p class="bunn__tekst">Norge · salg@dekorshop.no</p>
     </div>
     <nav class="bunn__meny"><a href="[object Object]index.html">Forside</a><a href="[object Object]tjenester.html">Tjenester</a><a href="[object Object]prosjekter.html">Prosjekter</a><a href="[object Object]panel.html">Panel</a><a href="[object Object]om-oss.html">Om oss</a><a href="[object Object]kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 DekorShop</p>
+    <p class="bunn__krav">© 2026 Dekorshop</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 <script>
 document.querySelectorAll('[data-hake]').forEach(function (k) {
   k.addEventListener('click', function () {
