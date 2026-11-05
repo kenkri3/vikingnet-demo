@@ -9,7 +9,7 @@
 <meta name="description" content="Kontakt AB Bil AS, telefon 72 88 55 55, e-post kontakt@ab-bil.no.">
 <meta property="og:title" content="Kontakt – AB Bil AS">
 <meta property="og:description" content="Kontakt AB Bil AS, telefon 72 88 55 55, e-post kontakt@ab-bil.no.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/04-ab-bil-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -34,7 +34,7 @@
   <p class="sidehode__ingress">Skriv noen ord, så svarer vi så raskt vi kan.</p>
 </section>
 <section class="seksjon seksjon--to">
-  <p class="innledning">AB Bil AS holder til i Bergen og tar oppdrag innen komplette løsninger for bilhandel, trygg bilhandel, kvalitet i hver bil og personlig service. Skriv kort hva saken gjelder, så svarer vi med hva den krever og hva den koster. Du trenger ikke vite detaljene på forhånd.</p>
+  <p class="innledning">AB Bil AS holder til i Norge og tar oppdrag innen komplette løsninger for bilhandel, trygg bilhandel, kvalitet i hver bil og personlig service. Skriv kort hva saken gjelder, så svarer vi med hva den krever og hva den koster. Du trenger ikke vite detaljene på forhånd.</p>
   <form class="skjema" method="post" action="mailto:kontakt@ab-bil.no" enctype="text/plain">
     <label>Navn<input type="text" name="navn" required></label>
     <label>E-post<input type="email" name="epost" required></label>
@@ -47,7 +47,7 @@
     <p class="kontaktkort__navn">AB Bil AS</p>
     <p><strong>Telefon</strong><br><a href="tel:+4772885555">72 88 55 55</a></p>
     <p><strong>E-post</strong><br><a href="mailto:kontakt@ab-bil.no">kontakt@ab-bil.no</a></p>
-    <p><strong>Sted</strong><br>Bergen</p>
+    <p><strong>Sted</strong><br>Norge</p>
   </aside>
 </section>
 </main>
@@ -55,11 +55,21 @@
   <div class="bunn__indre">
     <div>
       <p class="bunn__navn">AB Bil AS</p>
-      <p class="bunn__tekst">Bergen · 72 88 55 55 · kontakt@ab-bil.no</p>
+      <p class="bunn__tekst">Norge · 72 88 55 55 · kontakt@ab-bil.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
     <p class="bunn__krav">© 2026 AB Bil AS</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
