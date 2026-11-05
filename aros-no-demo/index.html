@@ -28,7 +28,7 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
+<section class="helt helt--splitt helt--uten-bilde">
   
   <div class="helt__tekst">
     <p class="merkelapp">Sandnes</p>
@@ -90,6 +90,7 @@
     <div class="verdi"><p>Sammen skaper vi en gjensidig forståelse og felles forventning til både prosessen og det endelige resultatet.</p></div>
   </div>
 </section>
+
 
 
 
@@ -158,5 +159,15 @@
     <p class="bunn__krav">© 2026 Aros Arkitekter</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
