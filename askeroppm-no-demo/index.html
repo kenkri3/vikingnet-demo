@@ -9,7 +9,7 @@
 <meta name="description" content="Vi er i dag et firma med 20 ansatte og et av de største firmaene i bransjen som kun arbeider med oppmålingssaker.">
 <meta property="og:title" content="Ao-hjemmeside – Hvalstad">
 <meta property="og:description" content="Vi er i dag et firma med 20 ansatte og et av de største firmaene i bransjen som kun arbeider med oppmålingssaker.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/01-askeroppm-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -28,8 +28,8 @@
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--full">
-  
+<section class="helt helt--splitt">
+  <figure class="helt__kort"><img class="" src="img/01-askeroppm-no.jpg" alt=" Ao-hjemmeside" ><figcaption><strong>LEDENDE INNEN LANDMÅLING I NORGE</strong><span>Vi avklarer omfang og tid før vi starter.</span></figcaption></figure>
   <div class="helt__tekst">
     <p class="merkelapp">Hvalstad</p>
     <h1>Ao-hjemmeside — Tjenester og 1986</h1>
@@ -93,6 +93,7 @@
 
 
 
+<section class="bildebande"><img class="" src="img/hero-bransje.jpg" alt="Ao-hjemmeside – arbeid" loading="lazy" decoding="async"><div class="bildebande__tekst"><p>Firmaet ble etablert av Rolf Myhre, som et enkeltmannsforetak i 1986.</p></div></section>
 <section class="drom">
   <div class="drom__indre">
     <div>
@@ -122,7 +123,7 @@
     <p class="merkelapp">Eksempel</p>
     <h2>Fra arbeidet</h2>
   </div>
-  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/01-askeroppm-no.jpg" alt="Ao-hjemmeside – arbeid" ></figure></div>
+  <div class="galleri galleri--tre"><figure class="galleri__bilde"><img class="" src="img/hero-bransje.jpg" alt="Ao-hjemmeside – arbeid" ></figure></div>
   <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere prosjekter →</a></p>
 </section>
 
@@ -183,5 +184,15 @@
     <p class="bunn__krav">© 2026 Ao-hjemmeside</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
