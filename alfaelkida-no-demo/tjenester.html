@@ -9,7 +9,7 @@
 <meta name="description" content="Elkonor dokumenterer i Boligmappa, Idretten i nytt lys, Bærekraftige varmeløsninger fra DEVI, Få mer ut av strømmen med xStorage Hybrid hos Alfa Elkida AS - alfaelkida din lokale elektriker på Gjøvik og Lillehammer i Gjøvik.">
 <meta property="og:title" content="Tjenester – Alfa Elkida AS - alfaelkida din lokale elektriker på Gjøvik og Lillehammer">
 <meta property="og:description" content="Elkonor dokumenterer i Boligmappa, Idretten i nytt lys, Bærekraftige varmeløsninger fra DEVI, Få mer ut av strømmen med xStorage Hybrid hos Alfa Elkida AS - alfaelkida din lokale elektriker på Gjøvik og Lillehammer i Gjøvik.">
-<meta property="og:image" content="img/hero.jpg">
+<meta property="og:image" content="img/11-alfaelkida-no.jpg">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 
@@ -98,5 +98,15 @@
     <p class="bunn__krav">© 2026 Alfa Elkida AS - alfaelkida din lokale elektriker på Gjøvik og Lillehammer</p>
   </div>
 </footer>
+<script>
+  (function () {
+    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
+    if (!('IntersectionObserver' in window)) { return; }
+    var io = new IntersectionObserver(function (oppf) {
+      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
+    }, { rootMargin: '-60px 0px' });
+    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
+  })();
+</script>
 </body>
 </html>
