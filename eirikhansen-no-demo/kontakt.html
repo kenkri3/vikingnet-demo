@@ -35,7 +35,7 @@
 </section>
 <section class="seksjon seksjon--to">
   <p class="innledning">Murmester Eirik Hansen AS holder til i Nesttun og tar oppdrag innen leverer alt av arbeid innen murerfaget, bad og våtrom, vintervedlikehold og naturstein. Skriv kort hva saken gjelder, så svarer vi med hva den krever og hva den koster. Du trenger ikke vite detaljene på forhånd.</p>
-  <form class="skjema" method="post" action="mailto:murmester@eirikhansen.no" enctype="text/plain">
+  <form class="skjema" id="skjema" method="post" action="mailto:murmester@eirikhansen.no" enctype="text/plain">
     <label>Navn<input type="text" name="navn" required></label>
     <label>E-post<input type="email" name="epost" required></label>
     <label>Telefon<input type="tel" name="telefon"></label>
@@ -71,5 +71,6 @@
     seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
   })();
 </script>
+<script src="app.js"></script>
 </body>
 </html>
