@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg:#faf8f5; --fg:#1a1714; --muted:#f1ece5; --muted-fg:#6b6259; --card:#fff;
   --border:#e6ded2; --primary:#1a1714; --primary-fg:#fff; --accent:#b8542a;
   --radius:2px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Bricolage Grotesque',Inter,sans-serif;

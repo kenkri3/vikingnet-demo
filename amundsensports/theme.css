@@ -14,6 +14,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Papir og natt */
   --paper: #f2ece1;
   --paper-deep: #e9e0d0;

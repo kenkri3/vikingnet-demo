@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --bone: #f4f5f1;
   --bone-2: #e9ece6;

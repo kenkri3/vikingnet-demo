@@ -6,6 +6,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --petrol: #005475;
   --petrol-deep: #06323f;
   --petrol-soft: #e2edf0;

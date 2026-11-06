@@ -8,6 +8,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater og blekk */
   --bg: #ffffff;
   --bg-soft: #f3f6f4;

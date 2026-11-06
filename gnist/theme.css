@@ -5,6 +5,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Blekk og papir */
   --ink: #171c33;
   --ink-deep: #10142a;

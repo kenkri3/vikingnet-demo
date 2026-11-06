@@ -3,22 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#16120e">
-<title>Om oss – Accountor</title>
-<meta name="description" content="Bli kjent med Accountor i Norge. Les om vår erfaring, våre verdier og hvordan vi jobber for trygge leveranser.">
-<meta property="og:title" content="Om oss – Accountor">
-<meta property="og:description" content="Om Accountor i Norge.">
-<meta property="og:image" content="img/hero.jpg">
+<title>Om oss – Accountor Norge AS</title>
+<meta name="description" content="Les mer om Accountor Norge AS og hvordan vi bistår kunder i Norge.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Accountor" height="34"></a>
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Accountor Norge AS" height="34"></a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
       <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html" aria-current="page">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
@@ -29,53 +25,43 @@
 </header>
 <main id="innhold">
 <section class="sidehode">
-  <p class="merkelapp">regnskap</p>
-  <h1>Om oss</h1>
-  <p class="sidehode__ingress">Accountor holder til i Norge.</p>
+  <p class="merkelapp">Regnskap &amp; økonomisk rådgivning · Norge</p>
+  <h1>Om Accountor Norge AS</h1>
+  <p class="sidehode__ingress">Trenger bedriften din hjelp med regnskap, lønn eller økonomi?</p>
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Accountor holder til i Norge og tar oppdrag innen navigasjonssti, hva kan vi hjelpe deg med, hvorfor velge accountor som regnskapsfører og trenger bedriften din hjelp.</p>
-    <p>Hos Accountor får du erfarne fagfolk som hjelper deg med alt fra den løpende økonomihverdagen til rådgivning og bedre økonomistyring.</p>
-    <blockquote class="sitat">«Bilagsflyten uten e-post»</blockquote>
+    <p class="innledning">Accountor Norge AS bistår kunder i Norge med fagmessige leveranser innen løpende regnskap og bokføring, lønn og personaladministrasjon, årsoppgjør og skattemelding og økonomisk rådgivning og finansiering.</p>
+    <p>Regnskapet skal ikke bare leveres til myndighetene – det skal gi deg innsikt til å ta lønnsomme beslutninger i hverdagen. Vi kobler kassasystem, prosjektverktøy, nettbutikk og bank direkte mot regnskapssystemet så du sparer tid.</p>
+    <p>Vi sier fra i god tid før viktige frister og varsler når nøkkeltallene utvikler seg i ny retning. Du får et dedikert team som kjenner bransjen din og er lett tilgjengelig på telefon og e-post.</p>
+    <blockquote class="sitat">«Ryddig økonomi og oppdaterte nøkkeltall som gir bedriften arbeidsro til å vokse.»</blockquote>
   </div>
   <div class="om__bilde">
-    <img class="" src="img/om.jpg" alt="Accountor" loading="lazy" decoding="async">
+    <img src="img/03-accountor-no.jpg" alt="Accountor Norge AS" loading="lazy" decoding="async">
   </div>
 </section>
-
 <section class="seksjon">
   <div class="tall">
-    <div><strong>4</strong><span>Tjenesteområder</span></div>
-    <div><strong>Norge</strong><span>Holder til</span></div>
-    <div><strong>E-post</strong><span>post@accountor.no</span></div>
+    <div><strong>Fagkompetanse</strong><span>Regnskap &amp; økonomisk rådgivning</span></div>
+    <div><strong>Norge</strong><span>Lokalt engasjement og oppfølging</span></div>
+    <div><strong>Direkte dialog</strong><span>post@accountor.no</span></div>
   </div>
 </section>
 <section class="cta">
-  <h2>Vil du vite mer?</h2>
-  <p>Vi svarer på det du lurer på, uten bindende avtale.</p>
+  <h2>Vil du vite mer om hvordan vi kan hjelpe deg?</h2>
+  <p>Ta kontakt for en uforpliktende samtale med våre fagfolk.</p>
   <a class="knapp" href="kontakt.html">Ta kontakt</a>
 </section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">Accountor</p>
+      <p class="bunn__navn">Accountor Norge AS</p>
       <p class="bunn__tekst">Norge · post@accountor.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Accountor</p>
+    <p class="bunn__krav">© 2026 Accountor Norge AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

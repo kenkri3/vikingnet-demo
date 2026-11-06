@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg: #ffffff;
   --bg-soft: #f6f1ee;
   --fg: #101828;

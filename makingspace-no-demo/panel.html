@@ -3,183 +3,173 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#7c3b49">
-<title>Makingspace — Dagens oversikt</title>
-<meta name="description" content="Panel med dagens status, oppgaver og henvendelser.">
-<meta property="og:title" content="Makingspace — Dagens oversikt">
-<meta property="og:description" content="Panel med dagens status, oppgaver og henvendelser.">
-<meta property="og:image" content="img/hero.jpg">
+<title>Making Space AS – Kunde- og oppdragspanel</title>
+<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Making Space AS.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
 <style>
-.panel{max-width:var(--max);margin:0 auto;padding:2.5rem 1.25rem 1rem}
+.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
 .panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .8rem;border-radius:999px}
+.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
 .panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-bottom:1.4rem}
-.panel__kpi{background:var(--bak);border:1px solid var(--kant);border-radius:14px;padding:1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.6rem;line-height:1.1}
-.panel__kpi-navn{color:var(--dempet);font-size:.85rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1rem}
+.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
+.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
+.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
+.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
+.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
 @media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:var(--bak);border:1px solid var(--kant);border-radius:16px;padding:1.1rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem}
-.panel__boks-topp h2{font-size:1.1rem;margin:0}
+.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
+.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
+.panel__boks-topp h2{font-size:1.12rem;margin:0}
 .panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
-.oppgave{display:flex;align-items:center;gap:.7rem;padding:.6rem;border-radius:10px;background:color-mix(in srgb,var(--blekk) 4%,var(--bak))}
+.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
+.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
 .oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
 .oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
 .oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.3;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.85rem}
-.status{font-size:.75rem;padding:.2rem .55rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant)}
+.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
+.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
+.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
 .status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
 .status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pågår,.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
+.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
 .status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.7rem;align-items:center;padding:.6rem;border-radius:10px;background:color-mix(in srgb,var(--blekk) 4%,var(--bak))}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.9rem}
+.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
+.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
 .melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.35rem .7rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);cursor:pointer;white-space:nowrap}
-.panel__forklaring{margin-top:1.6rem;padding:1.2rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 8%,var(--bak))}
-.panel__forklaring h2{font-size:1.05rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0 0 .5rem}
-.panel__mer{font-size:.85rem;color:var(--dempet)}
+.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
+.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
+.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
+.panel__forklaring p{margin:0}
 </style>
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Makingspace" height="34"></a>
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Making Space AS" height="34"></a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
     </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
+    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
     <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
   </div>
 </header>
 <main id="innhold">
-<main>
   <section class="panel">
     <div class="panel__topp">
       <div>
-        <p class="merkelapp">Panel</p>
-        <h1>Dagens oversikt</h1>
-        <p class="innledning">Dette er hvordan Makingspace ser dagen sin. Trykk på en oppgave for å merke den ferdig — tallene oppdateres med en gang.</p>
+        <p class="merkelapp">Digital oppdragsflyt · Gjøvik</p>
+        <h1>Dagens oppdrag og henvendelser</h1>
+        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Making Space AS. Klikk på en oppgave for å oppdatere status.</p>
       </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Makingspace</div>
+      <div class="panel__bruker"><span class="panel__prikk"></span>Making Space AS</div>
     </div>
 
     <div class="panel__kpi-rad">
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>9</span><span class="panel__kpi-navn">Henvendelser</span></div>
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>4</span><span class="panel__kpi-navn">Til oppfølging</span></div>
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>6</span><span class="panel__kpi-navn">Fullført i dag</span></div>
-        <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>175 000</span><span class="panel__kpi-navn">Verdi i pipeline</span></div>
+      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
+      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
+      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
+      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
     </div>
 
     <div class="panel__rutenett">
       <div class="panel__boks">
         <div class="panel__boks-topp">
-          <h2>Oppgaver</h2>
-          <span class="panel__teller"><span data-igjen>3</span> igjen</span>
+          <h2>Planlagte og pågående oppdrag</h2>
+          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
         </div>
         <ul class="oppgaver" data-oppgaver>
-        <li class="oppgave" data-status="haster">
-          <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Svar på henvendelse</strong><span>Fra nettstedet i går</span></div>
-          <span class="status status--haster">Haster</span>
-        </li>
-        <li class="oppgave" data-status="venter">
-          <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Send tilbud</strong><span>Kunde venter</span></div>
-          <span class="status status--venter">Venter</span>
-        </li>
-        <li class="oppgave" data-status="pågår">
-          <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Oppfølging</strong><span>Avtalt i dag</span></div>
-          <span class="status status--pågår">Pågår</span>
-        </li>
-        <li class="oppgave" data-status="ferdig">
-          <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-          <div class="oppgave__tekst"><strong>Lukk sak</strong><span>Kunden har fått svar</span></div>
-          <span class="status status--ferdig">Ferdig</span>
-        </li>
+          <li class="oppgave" data-status="haster">
+            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
+            <div class="oppgave__tekst"><strong>Kompetanseheving og bedriftskurs</strong><span>Ny forespørsel via nettsiden · Gjøvik</span></div>
+            <span class="status status--haster">Ny</span>
+          </li>
+          <li class="oppgave" data-status="pagar">
+            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
+            <div class="oppgave__tekst"><strong>Utdanningsløp og fagopplæring</strong><span>Befaring og tilbud bekreftet</span></div>
+            <span class="status status--pagar">Pågår</span>
+          </li>
+          <li class="oppgave" data-status="venter">
+            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
+            <div class="oppgave__tekst"><strong>Digitale lærings- og mestringsverktøy</strong><span>Planlagt gjennomføring denne uken</span></div>
+            <span class="status status--venter">Planlagt</span>
+          </li>
+          <li class="oppgave" data-status="ferdig">
+            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
+            <div class="oppgave__tekst"><strong>Veiledning, kartlegging og oppfølging</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
+            <span class="status status--ferdig">Ferdig</span>
+          </li>
         </ul>
       </div>
 
       <div class="panel__boks">
         <div class="panel__boks-topp">
-          <h2>Henvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> ulest</span>
+          <h2>Siste kundehenvendelser</h2>
+          <span class="panel__teller"><span data-ulest>2</span> nye</span>
         </div>
         <ul class="meldinger">
-        <li class="melding" data-status="ulest">
-          <div><strong>Ny henvendelse</strong><p>Skjema fra forsiden</p></div>
-          <button class="melding__knapp" type="button" data-les>Merk lest</button>
-        </li>
-        <li class="melding" data-status="ulest">
-          <div><strong>Kunde</strong><p>Takk, vi går videre med dere</p></div>
-          <button class="melding__knapp" type="button" data-les>Merk lest</button>
-        </li>
-        <li class="melding" data-status="lest">
-          <div><strong>Systemvarsel</strong><p>Påminnelse sendt til to kunder</p></div>
-          <button class="melding__knapp" type="button" data-les>Lest</button>
-        </li>
+          <li class="melding" data-status="ulest">
+            <div><strong>Forespørsel om kompetanseheving og bedriftskurs</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
+            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
+          </li>
+          <li class="melding" data-status="ulest">
+            <div><strong>Spørsmål om utdanningsløp og fagopplæring</strong><p>Kunde i Gjøvik ber om uforpliktende befaring.</p></div>
+            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
+          </li>
+          <li class="melding" data-status="lest">
+            <div><strong>Oppfølging av digitale lærings- og mestringsverktøy</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
+            <button class="melding__knapp" type="button" data-les>Besvart</button>
+          </li>
         </ul>
       </div>
     </div>
 
     <div class="panel__forklaring">
-      <h2>Hva skjer automatisk</h2>
-      <p>Henvendelser samles på ett sted, og den som venter får svar selv når ingen er på kontoret.</p>
-      <p class="panel__mer">Panelet er en demo av hvordan det kunne se ut for Makingspace. Ingen data sendes noe sted.</p>
+      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
+      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
     </div>
-  </section>
-
-  <section class="cta">
-    <h2>Vil du se dette med deres egne tall?</h2>
-    <p>Vi setter opp et panel med deres oppgaver og deres kunder, klart til å prøve.</p>
-    <a class="knapp" href="kontakt.html">Ta kontakt</a>
   </section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">Makingspace</p>
+      <p class="bunn__navn">Making Space AS</p>
       <p class="bunn__tekst">Gjøvik · erik@makingspace.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Makingspace</p>
+    <p class="bunn__krav">© 2026 Making Space AS</p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('[data-hake]').forEach(function (k) {
-  k.addEventListener('click', function () {
-    var li = k.closest('.oppgave');
+document.querySelectorAll('[data-hake]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var li = btn.closest('.oppgave');
     var ferdig = li.getAttribute('data-status') === 'ferdig';
     li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var st = li.querySelector('.status');
-    st.className = 'status status--' + (ferdig ? 'pagar' : 'ferdig');
-    st.textContent = ferdig ? 'Pågår' : 'Ferdig';
-    var igjen = document.querySelectorAll('[data-oppgaver] .oppgave[data-status!="ferdig"]').length;
-    var teller = document.querySelector('[data-igjen]');
-    if (teller) teller.textContent = igjen;
+    var badge = li.querySelector('.status');
+    if (badge) {
+      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
+      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
+    }
+    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
+    var el = document.querySelector('[data-igjen]');
+    if (el) el.textContent = igjen;
   });
 });
-document.querySelectorAll('[data-les]').forEach(function (k) {
-  k.addEventListener('click', function () {
-    var li = k.closest('.melding');
-    if (li.getAttribute('data-status') === 'lest') return;
+document.querySelectorAll('[data-les]').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var li = btn.closest('.melding');
     li.setAttribute('data-status', 'lest');
-    k.textContent = 'Lest';
+    btn.textContent = 'Besvart';
     var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var teller = document.querySelector('[data-ulest]');
-    if (teller) teller.textContent = ulest;
+    var el = document.querySelector('[data-ulest]');
+    if (el) el.textContent = ulest;
   });
 });
-</script></body>
+</script>
+</body>
 </html>

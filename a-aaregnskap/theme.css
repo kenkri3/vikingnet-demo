@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Papir og flater */
   --paper: #eef2f6;
   --paper-2: #e7edf3;

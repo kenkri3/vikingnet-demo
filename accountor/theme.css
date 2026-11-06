@@ -11,6 +11,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --bg: #f7f8f3;
   --bg-soft: #eef1e9;

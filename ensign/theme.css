@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg:#ffffff; --fg:#0b1f2a; --muted:#eef4f7; --muted-fg:#4d6472; --card:#fff;
   --border:#dbe6ec; --primary:#0b6b8f; --primary-fg:#fff; --accent:#12a3c9;
   --radius:6px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Sora',Inter,sans-serif;

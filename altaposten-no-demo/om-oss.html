@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#16120e">
 <title>Om oss – Altaposten</title>
-<meta name="description" content="Bli kjent med Altaposten i Norge. Les om vår erfaring, våre verdier og hvordan vi jobber for trygge leveranser.">
-<meta property="og:title" content="Om oss – Altaposten">
-<meta property="og:description" content="Om Altaposten i Norge.">
-<meta property="og:image" content="img/hero.jpg">
+<meta name="description" content="Les mer om Altaposten og hvordan vi bistår kunder i Norge.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -29,31 +25,31 @@
 </header>
 <main id="innhold">
 <section class="sidehode">
-  <p class="merkelapp">Norge</p>
-  <h1>Om oss</h1>
-  <p class="sidehode__ingress">Altaposten holder til i Norge.</p>
+  <p class="merkelapp">Medier, journalistikk &amp; annonsering · Norge</p>
+  <h1>Om Altaposten</h1>
+  <p class="sidehode__ingress">Altaposten arbeider etter Vær Varsom-plakatens regler for god presseskikk.</p>
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Altaposten holder til i Norge og tar oppdrag innen frammøte til lærerutdanning, takk for engasjementet og vennskapet, rut, lastebil fast i kløfta og eavis.</p>
-    <p>Altaposten har ikke ansvar for innhold på eksterne nettsider som det lenkes til.</p><p>Alt innhold er opphavsrettslig beskytte</p>
-    <blockquote class="sitat">«Henvendelsen som ikke blir liggende»</blockquote>
+    <p class="innledning">Altaposten bistår kunder i Norge med fagmessige leveranser innen nyhetsdekning og aktualitetsstoff, abonnement og e-avis, annonsering og kommersielt samarbeid og tips, debatt og leserkontakt.</p>
+    <p>Vi arbeider etter Vær Varsom-plakaten og etterprøver fakta slik at leserne kan stole på det vi publiserer. Våre journalister følger samfunnsutvikling, næringsliv, kultur og hverdagsliv tett hver eneste dag.</p>
+    <p>For annonsører gir redaksjonelle medier en trygg og oppmerksomhetssterk ramme rundt budskapet. Moderne digitale flater gjør det enkelt å holde seg oppdatert uansett hvor du befinner deg.</p>
+    <blockquote class="sitat">«Viktig journalistikk, levende debatt og sterk rekkevidde hver eneste dag.»</blockquote>
   </div>
   <div class="om__bilde">
-    
+    <img src="img/hero.jpg" alt="Altaposten" loading="lazy" decoding="async">
   </div>
 </section>
-
 <section class="seksjon">
   <div class="tall">
-    <div><strong>4</strong><span>Tjenesteområder</span></div>
-    <div><strong>Norge</strong><span>Holder til</span></div>
-    <div><strong>E-post</strong><span>redaksjonen@altaposten.no</span></div>
+    <div><strong>Fagkompetanse</strong><span>Medier, journalistikk &amp; annonsering</span></div>
+    <div><strong>Norge</strong><span>Lokalt engasjement og oppfølging</span></div>
+    <div><strong>Direkte dialog</strong><span>redaksjonen@altaposten.no</span></div>
   </div>
 </section>
 <section class="cta">
-  <h2>Vil du vite mer?</h2>
-  <p>Vi svarer på det du lurer på, uten bindende avtale.</p>
+  <h2>Vil du vite mer om hvordan vi kan hjelpe deg?</h2>
+  <p>Ta kontakt for en uforpliktende samtale med våre fagfolk.</p>
   <a class="knapp" href="kontakt.html">Ta kontakt</a>
 </section>
 </main>
@@ -67,15 +63,5 @@
     <p class="bunn__krav">© 2026 Altaposten</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

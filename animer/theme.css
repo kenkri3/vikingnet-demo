@@ -6,6 +6,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --papir: #f3fafa;
   --papir-dyp: #e7f4f5;

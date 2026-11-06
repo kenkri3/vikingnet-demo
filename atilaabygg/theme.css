@@ -7,6 +7,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --papir: #f8f2e8;
   --papir-dyp: #eee4d4;
   --blekk: #191614;

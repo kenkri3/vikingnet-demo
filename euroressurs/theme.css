@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Merkefarger, hentet fra logo og ikoner */
   --navy: #00205b;
   --navy-deep: #001640;

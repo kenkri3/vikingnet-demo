@@ -8,6 +8,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Grunnfarger */
   --ink: #15232f;          /* midnattblå, fra logoen */
   --ink-2: #22374a;

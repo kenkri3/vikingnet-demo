@@ -14,6 +14,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --krem: #faf5ec;
   --krem-2: #f3ecdf;

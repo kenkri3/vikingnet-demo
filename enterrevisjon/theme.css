@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg:#fbfbfa; --fg:#1b2430; --muted:#f0f2f4; --muted-fg:#5a6673; --card:#fff;
   --border:#dfe3e8; --primary:#1b3a5c; --primary-fg:#fff; --accent:#8a6d3b;
   --radius:3px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Libre Franklin',Inter,sans-serif;

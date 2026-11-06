@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#16120e">
 <title>Om oss – Baker Brun</title>
-<meta name="description" content="Om Baker Brun i Norge.">
-<meta property="og:title" content="Om oss – Baker Brun">
-<meta property="og:description" content="Om Baker Brun i Norge.">
-<meta property="og:image" content="img/09-bakerbrun-no.jpg">
+<meta name="description" content="Les mer om Baker Brun og hvordan vi bistår kunder i Norge.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -29,31 +25,31 @@
 </header>
 <main id="innhold">
 <section class="sidehode">
-  <p class="merkelapp">servering</p>
-  <h1>Om oss</h1>
-  <p class="sidehode__ingress">Baker Brun holder til i Norge.</p>
+  <p class="merkelapp">Bakeri, konditori &amp; servering · Norge</p>
+  <h1>Om Baker Brun</h1>
+  <p class="sidehode__ingress">Baker Brun baker ferske brød, luftig gjærbakst, selskaps- og marsipankaker samt møtemat hver eneste dag med gode råvarer og ekte håndverkstradisjon.</p>
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Baker Brun holder til i Norge og tar oppdrag innen møtemat, kakebestilling, eplekake og glutenfrie eplemuffins.</p>
-    <p>Baker Brun - Hele Bergens favorittbakeri Meny Meny Bestill Møtemat Kake Storhusholdning Leie lokaler Lagunen Svensgården Om Baker Brun Oppskrifter Historien Ledige stillinger Arrangementer Aktuelt Kontakt oss Meny Meny Bakerier Kundeklubb Bestill Møtemat Kake Storhusholdning Leie lokaler Svensgården Lagunen Om Baker Brun Oppskrifter Historien Ledige stillinger Arrangementer Aktuelt Kontakt oss Våre bakerier Kundeklubb Våre bakerier Våre bakerier baker rykende ferske fristelser hver dag – det merkes på smaken! Nærmeste bakeri Møtemat By på det lille ekstra med håndlaget møtemat fra Baker Brun.</p><p>Bestill møtemat Kakebestilling Bygg din egen kake på nett eller ring ditt nærmeste bakeriutsalg.</p>
-    <blockquote class="sitat">«Bordet og maten bestilt på forhånd»</blockquote>
+    <p class="innledning">Baker Brun bistår kunder i Norge med fagmessige leveranser innen ferske håndverksbrød og rundstykker, selskapskaker og konditorhåndverk, møtemat, påsmurt og bedriftslevering og kafé og utsalg med god atmosfære.</p>
+    <p>God bakst krever tid, kunnskap i fingrene og råvarer uten unødvendige snarveier. Våre bakere og konditorer starter tidlig hver dag slik at disken bugner av ferske varer fra vi åpner.</p>
+    <p>Enten det gjelder tirsdagsmøtet på jobben eller årets største familiedag, sørger vi for bakst som samler folk. Vi bygger videre på gode norske og europeiske bakertradisjoner tilpasset dagens smak.</p>
+    <blockquote class="sitat">«Duften av fersk gjærbakst, sprø skorpe og konditorhåndverk laget med kjærlighet.»</blockquote>
   </div>
   <div class="om__bilde">
-    <img class="" src="img/om.jpg" alt="Baker Brun" loading="lazy" decoding="async">
+    <img src="img/02-bakerbrun-no.jpg" alt="Baker Brun" loading="lazy" decoding="async">
   </div>
 </section>
-
 <section class="seksjon">
   <div class="tall">
-    <div><strong>4</strong><span>Tjenesteområder</span></div>
-    <div><strong>Norge</strong><span>Holder til</span></div>
-    <div><strong>Direkte</strong><span>55 34 96 00</span></div>
+    <div><strong>Fagkompetanse</strong><span>Bakeri, konditori &amp; servering</span></div>
+    <div><strong>Norge</strong><span>Lokalt engasjement og oppfølging</span></div>
+    <div><strong>Direkte dialog</strong><span>55 34 96 00</span></div>
   </div>
 </section>
 <section class="cta">
-  <h2>Vil du vite mer?</h2>
-  <p>Vi svarer på det du lurer på, uten bindende avtale.</p>
+  <h2>Vil du vite mer om hvordan vi kan hjelpe deg?</h2>
+  <p>Ta kontakt for en uforpliktende samtale med våre fagfolk.</p>
   <a class="knapp" href="kontakt.html">Ta kontakt</a>
 </section>
 </main>
@@ -67,15 +63,5 @@
     <p class="bunn__krav">© 2026 Baker Brun</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

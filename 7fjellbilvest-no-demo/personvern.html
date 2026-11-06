@@ -3,22 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#a71e1e">
-<title>Personvern – 7Fjellbilvest</title>
-<meta name="description" content="Personvernerklæring for 7Fjellbilvest. Les om hvordan vi håndterer personopplysninger og ivaretar ditt personvern.">
-<meta property="og:title" content="Personvern – 7Fjellbilvest">
-<meta property="og:description" content="">
-
+<title>Personvern – 7 Fjell Bil Vest AS</title>
+<meta name="description" content="7 Fjell Bil Vest AS gjør bilhandelen trygg og oversiktlig med teknisk kontrollerte bruktbiler, rettferdig innbyttepris og fleksible finansieringsløsninger.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Kjøp og selg bruktbil i Bergen" height="34"></a>
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="7 Fjell Bil Vest AS" height="34"></a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
       <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
@@ -28,39 +24,35 @@
   </div>
 </header>
 <main id="innhold">
-  <section class="seksjon seksjon--smal">
-    <p class="merkelapp">Personvern</p>
-    <h1>Personvern</h1>
-    <div class="innledning">
-      <p>Enkel bilhandel med mulighet for innbytte, finansiering og forsikring på ett sted.</p>
+<section class="sidehode">
+  <p class="merkelapp">Bilforhandler i Bergen · Nesttun</p>
+  <h1>Personvern</h1>
+  <p class="sidehode__ingress">7 Fjell Bil Vest AS gjør bilhandelen trygg og oversiktlig med teknisk kontrollerte bruktbiler, rettferdig innbyttepris og fleksible finansieringsløsninger.</p>
+</section>
+<section class="seksjon seksjon--to">
+  <div>
+    <p class="innledning">Hos 7 Fjell Bil Vest AS får du faglig rådgivning, forutsigbare rammer og løsninger tilpasset ditt behov i Nesttun.</p>
+    <p>Et nøye utvalgt sortiment av nyere bruktbiler som er teknisk gjennomgått, klargjort og levert med dokumentert servicehistorikk.</p>
+    <p>Vi gir deg en rask og rettferdig innbyttepris på din nåværende bil, eller tar hånd om hele salgsprosessen for deg gjennom kommisjon.</p>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se alle tjenester</a>
     </div>
-  </section>
-  
-  <section class="seksjon seksjon--smal">
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <p class="innledning">Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
-    <p><a class="knapp" href="kontakt.html">Send en henvendelse</a></p>
-  </section>
+  </div>
+  <div class="om__bilde">
+    <img src="img/01-7fjellbilvest-no.jpg" alt="7 Fjell Bil Vest AS" loading="lazy" decoding="async">
+  </div>
+</section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">Kjøp og selg bruktbil i Bergen</p>
+      <p class="bunn__navn">7 Fjell Bil Vest AS</p>
       <p class="bunn__tekst">Nesttun · didrik@7fjellbil.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Kjøp og selg bruktbil i Bergen</p>
+    <p class="bunn__krav">© 2026 7 Fjell Bil Vest AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

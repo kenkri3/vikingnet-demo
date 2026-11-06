@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: dark;
+  forced-color-adjust: none;
   --bg:#0d1117; --fg:#e9eef5; --muted:#161c26; --muted-fg:#93a1b5; --card:#141b25;
   --border:#232c3a; --primary:#3ea6ff; --primary-fg:#06121f; --accent:#7c5cff;
   --radius:10px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Space Grotesk',Inter,sans-serif;

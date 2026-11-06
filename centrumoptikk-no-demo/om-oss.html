@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#428bca">
 <title>Om oss – Centrum Optikk</title>
-<meta name="description" content="Om Centrum Optikk i Norge.">
-<meta property="og:title" content="Om oss – Centrum Optikk">
-<meta property="og:description" content="Om Centrum Optikk i Norge.">
-<meta property="og:image" content="img/01-centrumoptikk-no.jpg">
+<meta name="description" content="Les mer om Centrum Optikk og hvordan vi bistår kunder i Norge.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -29,31 +25,31 @@
 </header>
 <main id="innhold">
 <section class="sidehode">
-  <p class="merkelapp">Norge</p>
-  <h1>Om oss</h1>
-  <p class="sidehode__ingress">Centrum Optikk holder til i Norge.</p>
+  <p class="merkelapp">Optiker &amp; synshelse · Norge</p>
+  <h1>Om Centrum Optikk</h1>
+  <p class="sidehode__ingress">Centrum Optikk kombinerer avansert optisk måleutstyr med personlig veiledning innen briller, kontaktlinser, solbriller og forebyggende øyehelse.</p>
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Centrum Optikk holder til i Norge og tar oppdrag innen åpningstider i juli, vi vet at uhell kan oppstå, finn oss og åpningstider.</p>
-    <p>Velkommen til synsundersøkelse hos din fastoptiker! Centrum Optikk – En del av Alliance Optikk, din Fastoptiker i Drammen sentrum Centrum Optikk A A For å endre tekststørrelsen, hold inne cmd knappen ⌘ og trykk plusstegnet + for å skalere opp, minustegnet - for å skalere ned.</p><p>For å endre tekststørrelsen, hold inne ctrl knappen Ctrl og trykk plusstegnet + for å skalere opp, minustegnet - for å skalere ned.</p><p>Nettbutikk Finn butikk Centrum Optikk Kontakt Aktuelt Nettbutikk VÅRE TJENESTER Din Fastoptiker Brilleforsikring Handlekonto Linseabonnement Bedriftsavtale Kundeklubb Ditt syn Ditt syn Hvilke briller skal jeg velge?</p>
-    <blockquote class="sitat">«Henvendelsen som ikke blir liggende»</blockquote>
+    <p class="innledning">Centrum Optikk bistår kunder i Norge med fagmessige leveranser innen utvidet synsundersøkelse og øyehelse, briller og skreddersydde kvalitetsglass, kontaktlinser og linsekontroll og arbeidsplassbriller og spesialoptikk.</p>
+    <p>Vi setter av god tid til hver enkelt undersøkelse slik at både synsskarphet og øyehelse blir grundig ivaretatt. Våre rådgivere hjelper deg å finne innfatninger som kler ansiktsform, farger og bruksområde.</p>
+    <p>Vi justerer og tilpasser brillene kostnadsfritt slik at de sitter perfekt i hverdagen. Hos oss møter du de samme kjente fagfolkene fra år til år, med full historikk over synsutviklingen din.</p>
+    <blockquote class="sitat">«Klart syn og trygg øyehelse gjennom hele livet – hos din lokale optiker.»</blockquote>
   </div>
   <div class="om__bilde">
-    <img class="" src="img/om.jpg" alt="Centrum Optikk" loading="lazy" decoding="async">
+    <img src="img/02-centrumoptikk-no.jpg" alt="Centrum Optikk" loading="lazy" decoding="async">
   </div>
 </section>
-
 <section class="seksjon">
   <div class="tall">
-    <div><strong>4</strong><span>Tjenesteområder</span></div>
-    <div><strong>Norge</strong><span>Holder til</span></div>
-    <div><strong>Direkte</strong><span>32 89 65 10</span></div>
+    <div><strong>Fagkompetanse</strong><span>Optiker &amp; synshelse</span></div>
+    <div><strong>Norge</strong><span>Lokalt engasjement og oppfølging</span></div>
+    <div><strong>Direkte dialog</strong><span>32 89 65 10</span></div>
   </div>
 </section>
 <section class="cta">
-  <h2>Vil du vite mer?</h2>
-  <p>Vi svarer på det du lurer på, uten bindende avtale.</p>
+  <h2>Vil du vite mer om hvordan vi kan hjelpe deg?</h2>
+  <p>Ta kontakt for en uforpliktende samtale med våre fagfolk.</p>
   <a class="knapp" href="kontakt.html">Ta kontakt</a>
 </section>
 </main>
@@ -67,15 +63,5 @@
     <p class="bunn__krav">© 2026 Centrum Optikk</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

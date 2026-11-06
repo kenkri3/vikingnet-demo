@@ -8,6 +8,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Kalk og stein */
   --kalk: #f4f0e8;
   --kalk-2: #ebe5d9;

@@ -7,6 +7,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Papir, blekk og skog */
   --papir: #f2efe4;
   --papir-dyp: #e8e4d4;

@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg:#fbfaf7; --fg:#1f2420; --muted:#6a736a; --card:#ffffff; --border:#e6e3da;
   --brand:#1f4d3a; --brand-2:#2f6b52; --accent:#c9a227; --accent-ink:#3a2f00;
   --radius:14px; --sans:'Inter',system-ui,sans-serif; --display:'Fraunces',Georgia,serif;

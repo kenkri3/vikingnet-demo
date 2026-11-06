@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --bg: #f2f5f7;            /* aluminium, kjølig lys grå */
   --bg-soft: #e6ecf0;       /* tint til paneler og band */

@@ -6,6 +6,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --paper: #f7f4fb;
   --paper-2: #efe8fa;
   --white: #ffffff;

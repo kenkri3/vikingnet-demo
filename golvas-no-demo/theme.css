@@ -1,4 +1,10 @@
 :root{
+  color-scheme:dark;
+  --knapptekst:#ffffff;
+  
+  
+  
+  
   --bak:#110e04;--blekk:#f9f4e3;--aksent:#a5882a;
   --dempet:color-mix(in srgb, #f9f4e3 58%, #110e04);
   --kant:color-mix(in srgb, #f9f4e3 15%, #110e04);

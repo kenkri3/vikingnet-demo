@@ -6,6 +6,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Råfarger */
   --blekk: #08262c;
   --blekk-2: #0d333a;

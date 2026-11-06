@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: dark;
+  forced-color-adjust: none;
   --bg:#0b1622; --bg-2:#0f1e2e; --surface:#132639; --line:#1e3a52;
   --ink:#eaf2f8; --ink-soft:#9db4c7; --ink-dim:#6d879c;
   --accent:#da532c; --accent-soft:#f0764f; --accent-wash:#2a1409;

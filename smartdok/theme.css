@@ -8,6 +8,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Papir og flater */
   --papir: #fbf8f1;
   --papir-dyp: #f4eee1;

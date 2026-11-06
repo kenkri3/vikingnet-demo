@@ -7,6 +7,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater: papir, ikke hvitt */
   --paper: #f5efe6;
   --paper-2: #ece4d7;

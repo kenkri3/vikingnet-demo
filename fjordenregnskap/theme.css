@@ -6,6 +6,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --blekk: #0a1b24;
   --blekk-2: #4c6270;
   --is: #f2f7fa;

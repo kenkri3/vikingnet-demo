@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#16120e">
-<title>Offshore mdash bks industri – BKS Industri AS</title>
-<meta name="description" content="Offshore-mdash-bks-industri hos BKS Industri AS i Norge. Kontakt oss for mer informasjon og tilbud.">
-<meta property="og:title" content="Offshore mdash bks industri – BKS Industri AS">
-<meta property="og:description" content="">
-
+<title>Offshore Mdash Bks Industri – BKS Industri AS</title>
+<meta name="description" content="BKS Industri AS leverer tekniske installasjoner, industrikomponenter, kran- og løfteutstyr, ventilasjon og sakkyndig vedlikehold for industri, energi og næring.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -28,19 +24,25 @@
   </div>
 </header>
 <main id="innhold">
-  <section class="seksjon seksjon--smal">
-    <p class="merkelapp">Offshore &amp;mdash; BKS Industri AS</p>
-    <h1>Offshore &amp;mdash; BKS Industri AS</h1>
-    <div class="innledning">
-      <p>Denne nettsiden bruker cookies for i \u00E5 gi deg en god opplevelse, vise tilpasset innhold og hjelpe nettsiden til \u00E5 fungere effektivt.</p>
+<section class="sidehode">
+  <p class="merkelapp">Industri, maskin &amp; tekniske systemer · Norge</p>
+  <h1>Offshore Mdash Bks Industri</h1>
+  <p class="sidehode__ingress">BKS Industri AS leverer tekniske installasjoner, industrikomponenter, kran- og løfteutstyr, ventilasjon og sakkyndig vedlikehold for industri, energi og næring.</p>
+</section>
+<section class="seksjon seksjon--to">
+  <div>
+    <p class="innledning">Hos BKS Industri AS får du faglig rådgivning, forutsigbare rammer og løsninger tilpasset ditt behov i Norge.</p>
+    <p>Skreddersydde systemløsninger, tavler, gjennomføringer, maskiner og tekniske komponenter dimensjonert for nordiske driftsforhold.</p>
+    <p>Fagmessig installasjon, testing og igangkjøring utført av erfarne teknikere og ingeniører på anlegg, byggeplass eller offshore.</p>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se alle tjenester</a>
     </div>
-  </section>
-  
-  <section class="seksjon seksjon--smal">
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <p class="innledning">Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
-    <p><a class="knapp" href="kontakt.html">Send en henvendelse</a></p>
-  </section>
+  </div>
+  <div class="om__bilde">
+    <img src="img/01-bksas-no.jpg" alt="BKS Industri AS" loading="lazy" decoding="async">
+  </div>
+</section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
@@ -52,15 +54,5 @@
     <p class="bunn__krav">© 2026 BKS Industri AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

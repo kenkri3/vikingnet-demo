@@ -3,22 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#fae705">
-<title>Personvern – Effektive Transport- og Budtjenester</title>
-<meta name="description" content="Personvernerklæring for Effektive Transport- og Budtjenester. Les om hvordan vi håndterer personopplysninger og ivaretar ditt personvern.">
-<meta property="og:title" content="Personvern – Effektive Transport- og Budtjenester">
-<meta property="og:description" content="">
-
+<title>Personvern – Bentzen Bud &amp; Transport AS</title>
+<meta name="description" content="Vi tilbyr pålitelige budtjenester for både privatpersoner og bedrifter.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html">Effektive Transport- og Budtjenester</a>
+    <a class="merke" href="index.html">Bentzen Bud &amp; Transport AS</a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
       <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
@@ -28,39 +24,35 @@
   </div>
 </header>
 <main id="innhold">
-  <section class="seksjon seksjon--smal">
-    <p class="merkelapp">Personvern</p>
-    <h1>Personvern</h1>
-    <div class="innledning">
-      <p>Vi tilbyr pålitelige budtjenester for både privatpersoner og bedrifter.</p>
+<section class="sidehode">
+  <p class="merkelapp">Transport, bud &amp; logistikk · Norge</p>
+  <h1>Personvern</h1>
+  <p class="sidehode__ingress">Vi tilbyr pålitelige budtjenester for både privatpersoner og bedrifter.</p>
+</section>
+<section class="seksjon seksjon--to">
+  <div>
+    <p class="innledning">Hos Bentzen Bud &amp; Transport AS får du faglig rådgivning, forutsigbare rammer og løsninger tilpasset ditt behov i Norge.</p>
+    <p>Pålitelig transport av stykkgods, paller, byggevarer, termo- og industrigods lokalt, regionalt og nasjonalt med faste avganger.</p>
+    <p>Direktekjøring av tidskritiske sendinger, dokumenter, reservedeler og pakker fra dør til dør uten omlasting underveis.</p>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se alle tjenester</a>
     </div>
-  </section>
-  
-  <section class="seksjon seksjon--smal">
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <p class="innledning">Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
-    <p><a class="knapp" href="kontakt.html">Send en henvendelse</a></p>
-  </section>
+  </div>
+  <div class="om__bilde">
+    <img src="img/01-bentzenbud-no.jpg" alt="Bentzen Bud &amp; Transport AS" loading="lazy" decoding="async">
+  </div>
+</section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">Effektive Transport- og Budtjenester</p>
+      <p class="bunn__navn">Bentzen Bud &amp; Transport AS</p>
       <p class="bunn__tekst">Norge · 45 60 10 01 · ordre@bentzenbud.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Effektive Transport- og Budtjenester</p>
+    <p class="bunn__krav">© 2026 Bentzen Bud &amp; Transport AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

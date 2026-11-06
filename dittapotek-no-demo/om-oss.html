@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#58ae57">
 <title>Om oss – Ditt Apotek</title>
-<meta name="description" content="Bli kjent med Ditt Apotek i OSLO. Les om vår erfaring, våre verdier og hvordan vi jobber for trygge leveranser.">
-<meta property="og:title" content="Om oss – Ditt Apotek">
-<meta property="og:description" content="Om Ditt Apotek i OSLO.">
-<meta property="og:image" content="img/01-dittapotek-no.jpg">
+<meta name="description" content="Les mer om Ditt Apotek og hvordan vi bistår kunder i Oslo.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -29,31 +25,31 @@
 </header>
 <main id="innhold">
 <section class="sidehode">
-  <p class="merkelapp">OSLO</p>
-  <h1>Om oss</h1>
-  <p class="sidehode__ingress">Ditt Apotek holder til i OSLO.</p>
+  <p class="merkelapp">Lokalt apotek &amp; helsetjenester · Oslo</p>
+  <h1>Om Ditt Apotek</h1>
+  <p class="sidehode__ingress">Ditt Apotek gir deg rask og trygg hjelp med resepter, legemiddelbruk, vaksinesetting og nøye utvalgte helse- og hudpleieprodukter.</p>
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Ditt Apotek holder til i OSLO og tar oppdrag innen aktuelle artikler, influensavaksine hos ditt apotek, forkjølelse og vitamin d.</p>
-    <p>Farmasøyter i apotek kan skrive ut resept på vaksine til deg, etter en nøye, faglig vurdering.</p><p>Møt opp for drop-in vaksinering hos ditt nærmeste Ditt...</p>
-    <blockquote class="sitat">«Henvendelsen som ikke blir liggende»</blockquote>
+    <p class="innledning">Ditt Apotek bistår kunder i Oslo med fagmessige leveranser innen utredning, konsultasjon og rådgivning, skreddersydd behandling og oppfølging, forebyggende helse og livsstil og samarbeid med bedrifter og fagmiljøer.</p>
+    <p>Hos oss blir du møtt med respekt, taushetsplikt og fagfolk som lytter til din situasjon. Vi holder oss løpende oppdatert på ny kunnskap, teknologi og beste praksis innen vårt fagfelt.</p>
+    <p>Du får alltid tydelig informasjon om hvordan opplegget gjennomføres, varighet og priser. Enkel timebestilling og rask tilbakemelding gjør det lett å få hjelp når du trenger det.</p>
+    <blockquote class="sitat">«Faglig omsorg, presisjon og trygge rammer fra første kontakt.»</blockquote>
   </div>
   <div class="om__bilde">
-    <img class="" src="img/om.jpg" alt="Ditt Apotek" loading="lazy" decoding="async">
+    <img src="img/02-dittapotek-no.jpg" alt="Ditt Apotek" loading="lazy" decoding="async">
   </div>
 </section>
-
 <section class="seksjon">
   <div class="tall">
-    <div><strong>4</strong><span>Tjenesteområder</span></div>
-    <div><strong>OSLO</strong><span>Holder til</span></div>
-    <div><strong>E-post</strong><span>post@dittapotek.no</span></div>
+    <div><strong>Fagkompetanse</strong><span>Lokalt apotek &amp; helsetjenester</span></div>
+    <div><strong>Oslo</strong><span>Lokalt engasjement og oppfølging</span></div>
+    <div><strong>Direkte dialog</strong><span>post@dittapotek.no</span></div>
   </div>
 </section>
 <section class="cta">
-  <h2>Vil du vite mer?</h2>
-  <p>Vi svarer på det du lurer på, uten bindende avtale.</p>
+  <h2>Vil du vite mer om hvordan vi kan hjelpe deg?</h2>
+  <p>Ta kontakt for en uforpliktende samtale med våre fagfolk.</p>
   <a class="knapp" href="kontakt.html">Ta kontakt</a>
 </section>
 </main>
@@ -61,21 +57,11 @@
   <div class="bunn__indre">
     <div>
       <p class="bunn__navn">Ditt Apotek</p>
-      <p class="bunn__tekst">OSLO · post@dittapotek.no</p>
+      <p class="bunn__tekst">Oslo · post@dittapotek.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
     <p class="bunn__krav">© 2026 Ditt Apotek</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

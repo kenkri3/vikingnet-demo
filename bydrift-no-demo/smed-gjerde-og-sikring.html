@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#db4b68">
-<title>Smed gjerde og sikring – Bergen Bydrift AS</title>
-<meta name="description" content="Smed-gjerde-og-sikring hos Bergen Bydrift AS i Nesttun. Kontakt oss for mer informasjon og tilbud.">
-<meta property="og:title" content="Smed gjerde og sikring – Bergen Bydrift AS">
-<meta property="og:description" content="">
-
+<title>Smed Gjerde Og Sikring – Bergen Bydrift AS</title>
+<meta name="description" content="Bergen Bydrift AS utfører drift og vedlikehold av vei, parkanlegg, vann og avløp og bidrar til et bedre bymiljø i Bergen.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -28,19 +24,25 @@
   </div>
 </header>
 <main id="innhold">
-  <section class="seksjon seksjon--smal">
-    <p class="merkelapp">Smed, gjerde og sikring</p>
-    <h1>Smed, gjerde og sikring</h1>
-    <div class="innledning">
-      <p>Bergen Bydrift AS utfører drift og vedlikehold av vei, parkanlegg, vann og avløp og bidrar til et bedre bymiljø i Bergen.</p>
+<section class="sidehode">
+  <p class="merkelapp">Anlegg, vei &amp; infrastruktur · Nesttun</p>
+  <h1>Smed Gjerde Og Sikring</h1>
+  <p class="sidehode__ingress">Bergen Bydrift AS utfører drift og vedlikehold av vei, parkanlegg, vann og avløp og bidrar til et bedre bymiljø i Bergen.</p>
+</section>
+<section class="seksjon seksjon--to">
+  <div>
+    <p class="innledning">Hos Bergen Bydrift AS får du faglig rådgivning, forutsigbare rammer og løsninger tilpasset ditt behov i Nesttun.</p>
+    <p>Maskinell og manuell legging av slitesterk asfalt for gårdsplasser, borettslag, parkeringsanlegg, industriområder og offentlige veier.</p>
+    <p>Utgraving av byggegroper, drenering rundt bolig og næringsbygg, klargjøring av tomter samt utskifting av vann- og avløpsledninger.</p>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se alle tjenester</a>
     </div>
-  </section>
-  
-  <section class="seksjon seksjon--smal">
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <p class="innledning">Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
-    <p><a class="knapp" href="kontakt.html">Send en henvendelse</a></p>
-  </section>
+  </div>
+  <div class="om__bilde">
+    <img src="img/01-bydrift-no.jpg" alt="Bergen Bydrift AS" loading="lazy" decoding="async">
+  </div>
+</section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
@@ -52,15 +54,5 @@
     <p class="bunn__krav">© 2026 Bergen Bydrift AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

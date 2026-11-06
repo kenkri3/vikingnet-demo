@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#058b44">
 <title>Personvern – Profesjonell lastebiltransport i Lyngstad</title>
-<meta name="description" content="Personvernerklæring for Profesjonell lastebiltransport i Lyngstad. Les om hvordan vi håndterer personopplysninger og ivaretar ditt personvern.">
-<meta property="og:title" content="Personvern – Profesjonell lastebiltransport i Lyngstad">
-<meta property="og:description" content="">
-
+<meta name="description" content="Vi er opptatt av å levere en førsteklasses kundeopplevelse, og vårt team står klare til å svare på eventuelle spørsmål du måtte ha, for å sikre at du blir fornøyd med jobben vi gjør.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -28,19 +24,25 @@
   </div>
 </header>
 <main id="innhold">
-  <section class="seksjon seksjon--smal">
-    <p class="merkelapp">Personvern</p>
-    <h1>Personvern</h1>
-    <div class="innledning">
-      <p>Vi er opptatt av å levere en førsteklasses kundeopplevelse, og vårt team står klare til å svare på eventuelle spørsmål du måtte ha, for å sikre at du blir fornøyd med jobben vi gjør.</p>
+<section class="sidehode">
+  <p class="merkelapp">Transport, bud &amp; logistikk · Lyngstad</p>
+  <h1>Personvern</h1>
+  <p class="sidehode__ingress">Vi er opptatt av å levere en førsteklasses kundeopplevelse, og vårt team står klare til å svare på eventuelle spørsmål du måtte ha, for å sikre at du blir fornøyd med jobben vi gjør.</p>
+</section>
+<section class="seksjon seksjon--to">
+  <div>
+    <p class="innledning">Hos Profesjonell lastebiltransport i Lyngstad får du faglig rådgivning, forutsigbare rammer og løsninger tilpasset ditt behov i Lyngstad.</p>
+    <p>Pålitelig transport av stykkgods, paller, byggevarer, termo- og industrigods lokalt, regionalt og nasjonalt med faste avganger.</p>
+    <p>Direktekjøring av tidskritiske sendinger, dokumenter, reservedeler og pakker fra dør til dør uten omlasting underveis.</p>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se alle tjenester</a>
     </div>
-  </section>
-  
-  <section class="seksjon seksjon--smal">
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <p class="innledning">Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
-    <p><a class="knapp" href="kontakt.html">Send en henvendelse</a></p>
-  </section>
+  </div>
+  <div class="om__bilde">
+    <img src="img/01-a-visnes-no.jpg" alt="Profesjonell lastebiltransport i Lyngstad" loading="lazy" decoding="async">
+  </div>
+</section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
@@ -52,15 +54,5 @@
     <p class="bunn__krav">© 2026 Profesjonell lastebiltransport i Lyngstad</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

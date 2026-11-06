@@ -2,6 +2,8 @@
    Nordisk teknisk: dyp skifer, kald grå, én varm kobberaksent. */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg: #ffffff;
   --bg-soft: #f1f4f7;
   --fg: #101828;

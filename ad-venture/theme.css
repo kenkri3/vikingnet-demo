@@ -11,6 +11,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --paper: #f1f4f5;
   --paper-2: #e6ecee;
   --paper-3: #fbfcfc;

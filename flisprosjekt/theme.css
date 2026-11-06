@@ -11,6 +11,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Betong, porselen og grafitt */
   --betong: #f2f3f2;
   --betong-2: #e8eae9;

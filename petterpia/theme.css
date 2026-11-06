@@ -9,6 +9,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Logoens mintgrønn */
   --mint: #a1dbb6;
   --mint-bright: #bce9cc;

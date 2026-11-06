@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg:#f6f7f9; --fg:#0f1720; --muted:#5b6672; --card:#ffffff; --border:#e2e6ea;
   --brand:#12324f; --brand-2:#1d4e79; --accent:#f5b301; --accent-ink:#3a2a00;
   --radius:6px; --sans:'Inter',system-ui,sans-serif; --display:'Barlow Condensed','Inter',sans-serif;

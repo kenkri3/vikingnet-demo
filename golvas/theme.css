@@ -9,6 +9,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --bg: #f7f8f6;             /* porselen, svakt grønnskjær */
   --bg-soft: #eef1ee;

@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: dark;
+  forced-color-adjust: none;
  --bg:#0d1418; --bg-2:#131c22; --card:#18242c; --line:#26363f;
  --fg:#eef3f5; --fg-soft:#9db0ba; --acc:#ff7a1a; --acc-2:#ffa04d; --steel:#4d7f9c;
  --radius:6px; --maxw:1200px;

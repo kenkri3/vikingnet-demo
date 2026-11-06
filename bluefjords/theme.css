@@ -11,6 +11,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --paper: #f4f8f9;
   --paper-2: #e6eef1;

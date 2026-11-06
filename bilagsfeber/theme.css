@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Deres egne farger */
   --navy: #111c4e;
   --navy-dyp: #0a1338;

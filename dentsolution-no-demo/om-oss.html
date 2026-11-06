@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#524578">
-<title>Om oss – Dent Solution</title>
-<meta name="description" content="Om Dent Solution i Norge.">
-<meta property="og:title" content="Om oss – Dent Solution">
-<meta property="og:description" content="Om Dent Solution i Norge.">
-<meta property="og:image" content="img/hero-bransje.jpg">
+<title>Om oss – Dent Solution AS</title>
+<meta name="description" content="Les mer om Dent Solution AS og hvordan vi bistår kunder i Hele Norge.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -29,54 +25,43 @@
 </header>
 <main id="innhold">
 <section class="sidehode">
-  <p class="merkelapp">Norge</p>
-  <h1>Om oss</h1>
-  <p class="sidehode__ingress">Dent Solution holder til i Norge.</p>
+  <p class="merkelapp">Tannteknisk laboratorium · Hele Norge</p>
+  <h1>Om Dent Solution AS</h1>
+  <p class="sidehode__ingress">Dent Solution leverer skreddersydde tanntekniske konstruksjoner til tannleger og tannklinikker i hele Norge. Vi kombinerer avansert digital CAD/CAM og 3D-skanning med førsteklasses håndverksmessig finish.</p>
 </section>
 <section class="seksjon seksjon--to">
   <div>
-    <p class="innledning">Dent Solution er et autorisert tannteknisk laboratorium som leverer høykvalitets tannrestaureringer til tannklinikker i hele Norge.</p>
-    <p>Vi kombinerer tradisjonsrikt tannteknisk håndverk med toppmoderne digital CAD/CAM og 3D-skanning. Våre teknikere designer og produserer tannkroner, broer, implantater og bittskinner med mikrometerpresisjon.</p>
-    <p>Gjennom tett dialog med tannlegen sikrer vi forutsigbare leveranser, skreddersydd passform og et naturlig estetisk smil for pasienten.</p>
-    <blockquote class="sitat">«Presisjon, faglig stolthet og kompromissløs kvalitet i hvert eneste ledd.»</blockquote>
+    <p class="innledning">Dent Solution AS bistår kunder i Hele Norge med fagmessige leveranser innen tannkroner og broer i fullzirkonia, implantatprotetikk, estetiske fasetter og e-max og bittskinner og avtagbar protetikk.</p>
+    <p>Hos oss blir du møtt med respekt, taushetsplikt og fagfolk som lytter til din situasjon. Vi holder oss løpende oppdatert på ny kunnskap, teknologi og beste praksis innen vårt fagfelt.</p>
+    <p>Du får alltid tydelig informasjon om hvordan opplegget gjennomføres, varighet og priser. Enkel timebestilling og rask tilbakemelding gjør det lett å få hjelp når du trenger det.</p>
+    <blockquote class="sitat">«Faglig omsorg, presisjon og trygge rammer fra første kontakt.»</blockquote>
   </div>
   <div class="om__bilde">
-    <img src="img/hero-bransje.jpg" alt="Dent Solution tannteknisk laboratorium" loading="lazy" decoding="async">
+    <img src="img/live-foto-2.jpg" alt="Dent Solution AS" loading="lazy" decoding="async">
   </div>
 </section>
-
 <section class="seksjon">
   <div class="tall">
-    <div><strong>4</strong><span>Tjenesteområder</span></div>
-    <div><strong>Norge</strong><span>Holder til</span></div>
-    <div><strong>Direkte</strong><span>09 16 23 68</span></div>
+    <div><strong>Fagkompetanse</strong><span>Tannteknisk laboratorium</span></div>
+    <div><strong>Hele Norge</strong><span>Lokalt engasjement og oppfølging</span></div>
+    <div><strong>Direkte dialog</strong><span>info@dentsolution.no</span></div>
   </div>
 </section>
 <section class="cta">
-  <h2>Vil du vite mer?</h2>
-  <p>Vi svarer på det du lurer på, uten bindende avtale.</p>
+  <h2>Vil du vite mer om hvordan vi kan hjelpe deg?</h2>
+  <p>Ta kontakt for en uforpliktende samtale med våre fagfolk.</p>
   <a class="knapp" href="kontakt.html">Ta kontakt</a>
 </section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">Dent Solution</p>
-      <p class="bunn__tekst">Norge · 09 16 23 68 · info@dentsolution.no</p>
+      <p class="bunn__navn">Dent Solution AS</p>
+      <p class="bunn__tekst">Hele Norge · info@dentsolution.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Dent Solution</p>
+    <p class="bunn__krav">© 2026 Dent Solution AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

@@ -6,6 +6,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Merkevare */
   --navy: #004181;
   --navy-dyp: #002a54;

@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --kalk: #ecebe4;
   --kalk-dyp: #e2e0d7;

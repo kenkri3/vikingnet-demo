@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Rød, tre styrker */
   --red: #ed1a3a;          /* logofargen, brukes til flater og detaljer */
   --red-deep: #d4172f;     /* flate med hvit tekst, 5,4:1 */

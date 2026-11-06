@@ -1,4 +1,6 @@
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --ink: #0f1720;
   --ink-soft: #33414f;
   --muted: #62707d;

@@ -8,6 +8,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --paper: #fdfaf2;          /* varm honningkrem */
   --paper-2: #f8f2e3;        /* tint, brukes til seksjonsflater */

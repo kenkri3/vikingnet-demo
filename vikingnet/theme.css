@@ -1,5 +1,7 @@
 /* Vikingnet — brand theme. Mørk, teknisk profil med elektrisk blå/cyan accent. */
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --background: #ffffff;
   --foreground: #0b1220;
   --muted: #f4f7fb;

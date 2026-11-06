@@ -6,6 +6,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Papir og blekk */
   --paper: #f8f3ea;
   --paper-deep: #f1e9da;

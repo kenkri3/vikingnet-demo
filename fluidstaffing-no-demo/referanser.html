@@ -3,22 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#00d084">
-<title>Referanser – Fluidstaffing</title>
-<meta name="description" content="Se referanser og utvalgte prosjekter fra Fluidstaffing. Dokumentert kvalitet og solide løsninger for fornøyde oppdragsgivere.">
-<meta property="og:title" content="Referanser – Fluidstaffing">
-<meta property="og:description" content="">
-
+<title>Referanser – Fluid Staffing AS</title>
+<meta name="description" content="Fluid Staffing kobler sammen tannklinikker som trenger kompetent personell og tannhelsepersonell som ønsker å arbeide mer – assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
 <header class="topp">
   <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Fluidstaffing" height="34"></a>
+    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Fluid Staffing AS" height="34"></a>
     <details class="mobilmeny">
       <summary aria-label="Meny"><span></span><span></span><span></span></summary>
       <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
@@ -28,39 +24,35 @@
   </div>
 </header>
 <main id="innhold">
-  <section class="seksjon seksjon--smal">
-    <p class="merkelapp">Referanser</p>
-    <h1>Referanser</h1>
-    <div class="innledning">
-      <p>Fluid Staffing kobler sammen tannklinikker som trenger kompetent personell og tannhelsepersonell som ønsker å arbeide mer – assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.</p>
+<section class="sidehode">
+  <p class="merkelapp">Rekruttering &amp; bemanning · Norge</p>
+  <h1>Referanser</h1>
+  <p class="sidehode__ingress">Fluid Staffing kobler sammen tannklinikker som trenger kompetent personell og tannhelsepersonell som ønsker å arbeide mer – assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.</p>
+</section>
+<section class="seksjon seksjon--to">
+  <div>
+    <p class="innledning">Hos Fluid Staffing AS får du faglig rådgivning, forutsigbare rammer og løsninger tilpasset ditt behov i Norge.</p>
+    <p>Helhetlig rekrutteringsprosess med kravprofil, aktivt kandidatsøk, strukturerte intervjuer, testing og grundig referansekontroll.</p>
+    <p>Rask tilgang på kvalifiserte medarbeidere ved sesongtopper, prosjekter, sykdom eller midlertidige bemanningsbehov.</p>
+    <div class="knapper">
+      <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
+      <a class="knapp knapp--tom" href="tjenester.html">Se alle tjenester</a>
     </div>
-  </section>
-  
-  <section class="seksjon seksjon--smal">
-    <h2>Kort fortalt: hva trenger du?</h2>
-    <p class="innledning">Beskriv saken, så svarer vi med hva det krever og hva det koster.</p>
-    <p><a class="knapp" href="kontakt.html">Send en henvendelse</a></p>
-  </section>
+  </div>
+  <div class="om__bilde">
+    <img src="img/live-foto-1.jpg" alt="Fluid Staffing AS" loading="lazy" decoding="async">
+  </div>
+</section>
 </main>
 <footer class="bunn">
   <div class="bunn__indre">
     <div>
-      <p class="bunn__navn">Fluidstaffing</p>
+      <p class="bunn__navn">Fluid Staffing AS</p>
       <p class="bunn__tekst">Norge · 47 36 85 21 · post@fluidstaffing.no</p>
     </div>
     <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Fluidstaffing</p>
+    <p class="bunn__krav">© 2026 Fluid Staffing AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 </body>
 </html>

@@ -9,6 +9,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Asfalt og stein */
   --asfalt: #101215;
   --asfalt-2: #171a1f;

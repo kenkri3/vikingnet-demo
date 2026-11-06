@@ -7,6 +7,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Flater */
   --kalk: #ece9e2;
   --kalk-dyp: #e2ded4;

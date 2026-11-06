@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<meta name="theme-color" content="#16120e">
 <title>Kontakt – Elteknikk AS</title>
-<meta name="description" content="Kontakt Elteknikk AS, e-post post@elteknikk.no.">
-<meta property="og:title" content="Kontakt – Elteknikk AS">
-<meta property="og:description" content="Kontakt Elteknikk AS, e-post post@elteknikk.no.">
-<meta property="og:image" content="img/01-elteknikk-no.jpg">
+<meta name="description" content="Ta kontakt med Elteknikk AS på e-post post@elteknikk.no.">
 <link rel="stylesheet" href="theme.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
 <a class="hopp" href="#innhold">Gå til innholdet</a>
@@ -29,26 +25,30 @@
 </header>
 <main id="innhold">
 <section class="sidehode">
-  <p class="merkelapp">eiendom</p>
-  <h1>Kontakt</h1>
-  <p class="sidehode__ingress">Skriv noen ord, så svarer vi så raskt vi kan.</p>
+  <p class="merkelapp">Elektro &amp; installasjon · Norge</p>
+  <h1>Ta kontakt med Elteknikk AS</h1>
+  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
 </section>
 <section class="seksjon seksjon--to">
-  <p class="innledning">Elteknikk AS holder til i Norge og tar oppdrag innen tre områder, én leverandør, næring, landbruk og sertifiseringer og godkjenninger. Skriv kort hva saken gjelder, så svarer vi med hva den krever og hva den koster. Du trenger ikke vite detaljene på forhånd.</p>
+  <div>
+    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
+    <aside class="kontaktkort">
+      <p class="kontaktkort__navn">Elteknikk AS</p>
+      
+      <p><strong>E-post</strong><br><a href="mailto:post@elteknikk.no">post@elteknikk.no</a></p>
+      <p><strong>Område</strong><br>Norge</p>
+      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
+    </aside>
+  </div>
   <form class="skjema" id="skjema" method="post" action="mailto:post@elteknikk.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required></label>
-    <label>E-post<input type="email" name="epost" required></label>
-    <label>Telefon<input type="tel" name="telefon"></label>
-    <label>Hva gjelder det?<textarea name="melding" rows="5"></textarea></label>
+    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
+    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
+    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
+    <label>Tjenesteområde<select name="type"><option>Elbillading og smart strømstyring</option><option>Sikringsskap og el-kontroll</option><option>Belysning og smarthusløsninger</option><option>Serviceavtaler for næring og industri</option><option>Annet</option></select></label>
+    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
     <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Skjemaet åpner e-postprogrammet ditt.</p>
+    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
   </form>
-  <aside class="kontaktkort">
-    <p class="kontaktkort__navn">Elteknikk AS</p>
-    
-    <p><strong>E-post</strong><br><a href="mailto:post@elteknikk.no">post@elteknikk.no</a></p>
-    <p><strong>Sted</strong><br>Norge</p>
-  </aside>
 </section>
 </main>
 <footer class="bunn">
@@ -61,16 +61,6 @@
     <p class="bunn__krav">© 2026 Elteknikk AS</p>
   </div>
 </footer>
-<script>
-  (function () {
-    var seksjoner = document.querySelectorAll('main .seksjon, main .drom, main .cta');
-    if (!('IntersectionObserver' in window)) { return; }
-    var io = new IntersectionObserver(function (oppf) {
-      oppf.forEach(function (o) { if (o.isIntersecting) { o.target.classList.add('vis'); io.unobserve(o.target); } });
-    }, { rootMargin: '-60px 0px' });
-    seksjoner.forEach(function (el) { el.classList.add('reveal'); io.observe(el); });
-  })();
-</script>
 <script src="app.js"></script>
 </body>
 </html>

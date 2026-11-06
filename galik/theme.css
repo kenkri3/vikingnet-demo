@@ -1,5 +1,7 @@
 /* Galik Bygg — brand theme. Hentet fra deres egen profil: gul/oransje på mørk grunn. */
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --background: #ffffff;
   --foreground: #1c1917;
   --muted: #faf7f2;

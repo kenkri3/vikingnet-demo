@@ -7,6 +7,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg: #f6f8f9;
   --bg-soft: #e8eeee;
   --fg: #181818;

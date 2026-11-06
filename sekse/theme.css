@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg:#fdfbf8; --fg:#2b2827; --muted:#f5f0e9; --muted-fg:#6d635c;
   --card:#ffffff; --border:#e6ddd2; --primary:#2b2827; --primary-fg:#fdfbf8;
   --accent:#bc8664; --accent-soft:#f3e8dd; --accent-fg:#8f6144;

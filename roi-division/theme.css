@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --ink:#0f0f10;
   --ink-soft:#5a5a60;
   --paper:#fbfbfa;

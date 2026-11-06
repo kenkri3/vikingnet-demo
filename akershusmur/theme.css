@@ -8,6 +8,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Indigo fra logoen */
   --indigo-950: #12123a;
   --indigo-900: #1b1b50;

@@ -10,6 +10,8 @@
 */
 
 :root {
+  color-scheme: light;
+  forced-color-adjust: none;
   /* Sand — flaten alt ligger på */
   --sand-50: #faf5ed;
   --sand-100: #f2ece0;

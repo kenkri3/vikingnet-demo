@@ -1,4 +1,6 @@
-:root{
+:root {
+  color-scheme: light;
+  forced-color-adjust: none;
   --bg:#fdfbf7; --fg:#2a2419; --muted:#f4efe4; --muted-fg:#6f6552; --card:#fff;
   --border:#e6ddc9; --primary:#8c5a2b; --primary-fg:#fff; --accent:#c8a06a;
   --radius:4px; --font-sans:'Inter',system-ui,sans-serif; --font-display:'Playfair Display',Georgia,serif;
