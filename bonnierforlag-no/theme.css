@@ -1,12 +1,12 @@
 :root {
   --bg: #ffffff;
-  --bg-soft: #NaNf1f2;
+  --bg-soft: #ebedfb;
   --fg: #0a161b;
   --muted: #55666d;
-  --line: #NaNe3e5;
+  --line: #d2d7f1;
   --accent: #1717ff;
   --accent-fg: #ffffff;
-  --accent-soft: #NaNebed;
+  --accent-soft: #dfdfff;
   --font-display: 'Archivo', system-ui, sans-serif;
   --font-body: 'IBM Plex Sans', system-ui, sans-serif;
   --radius: 10px;

@@ -1,12 +1,12 @@
 :root {
-  --bg: #fbfbfd;
-  --bg-soft: #NaNe7e6;
+  --bg: #ffffff;
+  --bg-soft: #ebecf4;
   --fg: #241f2b;
   --muted: #625b6e;
-  --line: #NaNcfcd;
+  --line: #d1d5e6;
   --accent: #110077;
   --accent-fg: #ffffff;
-  --accent-soft: #NaNdedc;
+  --accent-soft: #dedbec;
   --font-display: 'Lora', Georgia, serif;
   --font-body: 'Nunito Sans', system-ui, sans-serif;
   --radius: 14px;

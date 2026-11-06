@@ -1,12 +1,12 @@
 :root {
-  --bg: #fbf9f5;
-  --bg-soft: #NaNe7e6;
+  --bg: #ffffff;
+  --bg-soft: #ebecf4;
   --fg: #1a1a17;
   --muted: #6b6459;
-  --line: #NaNcfcd;
+  --line: #d1d5e6;
   --accent: #110077;
   --accent-fg: #ffffff;
-  --accent-soft: #NaNdedc;
+  --accent-soft: #dedbec;
   --font-display: 'Outfit', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
   --radius: 6px;

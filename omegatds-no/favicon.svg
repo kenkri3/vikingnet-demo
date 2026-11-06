@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Omega TDS">
+  <rect width="64" height="64" rx="13" fill="#11161a"/>
+  <g fill="none" stroke="#f2702a" stroke-width="6" stroke-linecap="square">
+    <path d="M19 45a13 13 0 1 1 26 0"/>
+    <path d="M19 45h7"/>
+    <path d="M38 45h7"/>
+  </g>
+</svg>
