@@ -1083,7 +1083,7 @@ input, select, textarea {
   }
   
   body {
-    background-color: var(--bak, #fafafa);
+    background-color: var(--bak, var(--bg, #fafafa));
   }
   
   .wrap, .topp__indre, .bunn__indre, .seksjon, 

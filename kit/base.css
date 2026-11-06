@@ -340,3 +340,32 @@ html.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
+
+/* Beskytt mot tvungen mørk modus på Samsung / Xiaomi og sikre mobil/TV-skalering */
+html, body {
+  forced-color-adjust: none !important;
+  -webkit-forced-color-adjust: none !important;
+}
+
+@media (max-width: 640px) {
+  .header__inner {
+    gap: 0.5rem;
+  }
+  .header__cta {
+    display: none !important;
+  }
+  .brand {
+    font-size: 1.02rem;
+    max-width: calc(100vw - 96px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --wrap: 1480px;
+  }
+}
+
