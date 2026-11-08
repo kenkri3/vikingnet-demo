@@ -1,175 +1,219 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Flotte Gulv AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Flotte Gulv AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Befaringer · Flotte Gulv AS</title>
+<meta name="description" content="Demo av Flotte Gulvs befaringer: kunder, areal og status, med filter og knapper for å booke og registrere gjennomført befaring.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flotte Gulv AS">
+<meta property="og:title" content="Befaringer · Flotte Gulv AS">
+<meta property="og:description" content="Demo av Flotte Gulvs befaringer: kunder, areal og status, med filter og knapper for å booke og registrere gjennomført befaring.">
+<meta property="og:image" content="assets/img/02-flottegulv-no.jpg">
+<meta name="theme-color" content="#f0e9df">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Anek+Latin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/flottegulv-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Flotte Gulv AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="lamell" aria-hidden="true"><i></i><i></i><i></i></span><span class="n">Flotte Gulv<span>Tregulv som varer</span></span></a>
+    <div class="hoyre">
+      <a class="tlf" href="tel:+4722442727">22 44 27 27</a>
+      <a class="smal" href="kontakt.html">Showroom Oslo</a>
+      <button class="flis-knapp" type="button" data-rute-apne aria-expanded="false" aria-controls="rutenett">
+        <span class="fliser" aria-hidden="true"><i></i><i></i><i></i><i></i></span> Meny
+      </button>
+    </div>
   </div>
 </header>
+
+<div class="rutenett" id="rutenett" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hovedmeny">
+  <button class="lukk-rutenett" type="button" data-rute-lukk>Lukk ×</button>
+  <div class="rutenett-inn">
+    <div class="rutenett-hode">
+      <h2>Velg en flis</h2>
+      <p>Showroom · Thomas Heftyes Gate 52, Oslo</p>
+    </div>
+    <ul class="fliser">
+      <li><a href="index.html"><span class="nr">01</span><span class="t">Forside</span><span class="u">Tregulv som varer i generasjoner</span></a></li>
+      <li><a href="gulvtyper.html"><span class="nr">02</span><span class="t">Gulvtyper</span><span class="u">Heltre, parkett, fiskeben, chevron</span></a></li>
+      <li><a href="prosess.html"><span class="nr">03</span><span class="t">Prosess og montering</span><span class="u">Fra befaring til ferdig gulv</span></a></li>
+      <li><a href="prosjekter.html"><span class="nr">04</span><span class="t">Prosjekter</span><span class="u">Leiligheter, hus og kirkesaler</span></a></li>
+      <li><a href="om.html"><span class="nr">05</span><span class="t">Om oss</span><span class="u">Selskapet, showrommet og folkene</span></a></li>
+      <li><a href="kontakt.html"><span class="nr">06</span><span class="t">Kontakt</span><span class="u">Showroom i Oslo</span></a></li>
+      <li><a href="panel.html" aria-current="page"><span class="nr">07</span><span class="t">Befaringer</span><span class="u">Driftsbilde (demo)</span></a></li>
+    </ul>
+    <div class="rutenett-bunn">
+      <a href="tel:+4722442727">22 44 27 27</a>
+      <a href="mailto:kontakt@flottegulv.no">kontakt@flottegulv.no</a>
+      <span>Man–tor 10–18 · fre 10–17 · lør 11–15</span>
+    </div>
+  </div>
+</div>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Oslo</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Flotte Gulv AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Flotte Gulv AS</div>
+
+<header class="panelhode">
+  <div class="ramme">
+    <div class="rad">
+      <p class="brodsmule"><a href="index.html">Hjem</a> / Befaringer</p>
+      <span class="drift">Showrommet er åpent</span>
+    </div>
+    <h1>Befaringer</h1>
+    <p class="ingress" style="max-width:60ch">Dette er arbeidslisten vår: hvem som har bedt om befaring, hvem som er booket og hvem vi har vært hos. Trykk på knappene – status, nøkkeltall og logg oppdaterer seg. Alt er eksempeldata.</p>
+  </div>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="kpier">
+      <div class="kpi"><span class="l">Nye forespørsler</span><span class="v" data-kpi-apne>2</span><span class="d">Fra skjema og telefon</span></div>
+      <div class="kpi"><span class="l">Booket</span><span class="v" data-kpi-booket>2</span><span class="d">Neste er tirsdag 10:00</span></div>
+      <div class="kpi"><span class="l">Gjennomført</span><span class="v" data-kpi-gjestet>2</span><span class="d">Tilbud sendt</span></div>
+      <div class="kpi"><span class="l">Snittareal</span><span class="v">71 m²</span><span class="d">Eksempeldata</span></div>
     </div>
 
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
+    <div class="faner" role="group" aria-label="Filtrer befaringer">
+      <button class="fane" type="button" data-filter="alle" aria-pressed="true">Alle <span class="antall">6</span></button>
+      <button class="fane" type="button" data-filter="ny" aria-pressed="false">Nye <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="booket" aria-pressed="false">Booket <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="gjestet" aria-pressed="false">Gjennomført <span class="antall">2</span></button>
     </div>
 
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+    <div class="befaringer" data-befaringer>
+      <article class="befaring" data-id="FG-318" data-status="ny">
+        <div class="id">FG-318</div>
+        <div class="hoved"><div class="t">Fiskeben i eik, stue og gang</div><div class="m">Lie · Frogner</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ca. 62 m² · ønsker prøver</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="book">Book</button>
+          <button class="mini mini--full" type="button" data-handling="gjest">Gjennomfør</button>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Støvfri sliping av parkett og tregulv</strong><span>Ny forespørsel via nettsiden · Oslo</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Lakkering, oljing og innfarging</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Legging av parkett og fiskebensgulv</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Reparasjon og vedlikehold av næringsgulv</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
+      </article>
+      <article class="befaring" data-id="FG-317" data-status="booket">
+        <div class="id">FG-317</div>
+        <div class="hoved"><div class="t">Heltreplanker, oljet hvit</div><div class="m">Haugen · Bærum</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ca. 110 m² · befaring tirsdag</span></div>
+        <span class="status" data-status="booket">Booket</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="book" disabled>Book</button>
+          <button class="mini mini--full" type="button" data-handling="gjest">Gjennomfør</button>
+        </div>
+      </article>
+      <article class="befaring" data-id="FG-316" data-status="ny">
+        <div class="id">FG-316</div>
+        <div class="hoved"><div class="t">Slipe og olje eksisterende eik</div><div class="m">Sund · Majorstuen</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ca. 48 m²</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="book">Book</button>
+          <button class="mini mini--full" type="button" data-handling="gjest">Gjennomfør</button>
+        </div>
+      </article>
+      <article class="befaring" data-id="FG-315" data-status="booket">
+        <div class="id">FG-315</div>
+        <div class="hoved"><div class="t">Chevron i stue</div><div class="m">Berg · Haslum</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ca. 40 m² · befaring fredag</span></div>
+        <span class="status" data-status="booket">Booket</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="book" disabled>Book</button>
+          <button class="mini mini--full" type="button" data-handling="gjest">Gjennomfør</button>
+        </div>
+      </article>
+      <article class="befaring befaring--gjestet" data-id="FG-314" data-status="gjestet">
+        <div class="id">FG-314</div>
+        <div class="hoved"><div class="t">IPE terrassegulv</div><div class="m">Aas · Nesøya</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ca. 35 m² · befart 12.10</span></div>
+        <span class="status" data-status="gjestet">Gjestet</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="book" disabled>Book</button>
+          <button class="mini mini--full" type="button" data-handling="gjest" disabled>Gjennomfør</button>
+        </div>
+      </article>
+      <article class="befaring befaring--gjestet" data-id="FG-313" data-status="gjestet">
+        <div class="id">FG-313</div>
+        <div class="hoved"><div class="t">Enstavs parkett, tre etasjer</div><div class="m">Moen · Ullern</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ca. 130 m² · befart 09.10</span></div>
+        <span class="status" data-status="gjestet">Gjestet</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="book" disabled>Book</button>
+          <button class="mini mini--full" type="button" data-handling="gjest" disabled>Gjennomfør</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="panel-to">
+      <div class="panel-kort">
+        <h2>Showrommet denne uken</h2>
+        <p class="under">Eksempeldata for demoen</p>
+        <ul style="list-style:none;margin:0;padding:0">
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>Tirsdag · befaring Bærum</span><span style="color:var(--dempet)">10:00</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>Fredag · befaring Haslum</span><span style="color:var(--dempet)">13:00</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;font-size:14px"><span>Lørdag · åpent showrom</span><span style="color:var(--dempet)">11:00–15:00</span></li>
         </ul>
       </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="panel-kort">
+        <h2>Hendelser</h2>
+        <p class="under">Siste aktivitet</p>
+        <div class="logg" data-logg>
+          <div><b>11:35</b> FG-316 forespørsel fra nettskjema</div>
+          <div><b>10:12</b> FG-315 befaring booket</div>
+          <div><b>09:20</b> tilbud sendt på FG-314</div>
+          <div><b>08:30</b> showrommet åpnet</div>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om støvfri sliping av parkett og tregulv</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om lakkering, oljing og innfarging</strong><p>Kunde i Oslo ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av legging av parkett og fiskebensgulv</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+        <a class="knapp knapp--lys" href="gulvtyper.html" style="margin-top:14px">Til gulvtypene <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Flotte Gulv AS</p>
-      <p class="bunn__tekst">Oslo · 22 44 27 27 · kontakt@flottegulv.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div>
+        <h3>FLOTTE GULV</h3>
+        <p>Flotte Gulv AS er Norges ledende leverandør av eksklusive tregulv. Tregulv som varer i generasjoner.</p>
+      </div>
+      <div><h4>Utvalget</h4><ul>
+        <li><a href="gulvtyper.html#heltre">Heltre lamellgulv</a></li>
+        <li><a href="gulvtyper.html#parkett">Enstavs parkett</a></li>
+        <li><a href="gulvtyper.html#fiskeben">Fiskeben og chevron</a></li>
+        <li><a href="gulvtyper.html#terrasse">IPE terrassegulv</a></li>
+        <li><a href="gulvtyper.html#antikk">Reclaimed Antique Oak</a></li>
+      </ul></div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="prosess.html">Prosess og montering</a></li>
+        <li><a href="prosjekter.html">Prosjekter</a></li>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="panel.html">Befaringer (demo)</a></li>
+      </ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+4722442727">22 44 27 27</a></li>
+        <li><a href="mailto:kontakt@flottegulv.no">kontakt@flottegulv.no</a></li>
+        <li>Thomas Heftyes Gate 52<br>0267 Oslo</li>
+        <li>Man–tor 10–18 · fre 10–17<br>lør 11–15</li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Flotte Gulv AS</p>
+    <div class="bunn-bunn">
+      <span>© 2026 Flotte Gulv AS</span>
+      <span>Showroom Oslo · lager på Skjetten</span>
+      <span>Demo: innhold hentet fra flottegulv.no</span>
+    </div>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/flottegulv-no-demo.js" defer></script>
 </body>
 </html>

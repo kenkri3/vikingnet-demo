@@ -1,182 +1,219 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>eDelivery AS – Transport, bud &amp; logistikk</title>
-<meta name="description" content="Edelivery AS er din totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser.">
-<meta property="og:title" content="eDelivery AS – Transport, bud &amp; logistikk">
-<meta property="og:description" content="Edelivery AS er din totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser.">
-<meta property="og:image" content="img/02-edelivery-no.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Edelivery AS · transport og levering fra Stavanger</title>
+<meta name="description" content="Edelivery AS er totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser – nasjonalt og internasjonalt. Hovedkontor i Stavanger.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Edelivery AS">
+<meta property="og:title" content="Edelivery AS · transport og levering fra Stavanger">
+<meta property="og:description" content="Edelivery AS er totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser – nasjonalt og internasjonalt. Hovedkontor i Stavanger.">
+<meta property="og:image" content="assets/img/09-edelivery-no.jpg">
+<meta name="theme-color" content="#14161a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/edelivery-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="eDelivery AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="flis" aria-hidden="true">E</span>EDELIVERY<span>.AS</span></a>
+    <div class="kontakt">
+      <a class="tlf" href="tel:+4755708060">+47 55 70 80 60</a>
+      <a class="smal" href="kontakt.html">Bestill transport</a>
+      <button class="meny-knapp" type="button" data-splitt-apne aria-expanded="false" aria-controls="splitt">
+        <span class="streker" aria-hidden="true"><i></i><i></i><i></i></span> Meny
+      </button>
+    </div>
   </div>
 </header>
+
+<div class="splitt" id="splitt" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hovedmeny">
+  <button class="lukk-splitt" type="button" data-splitt-lukk>Lukk ×</button>
+  <div class="splitt-inn">
+    <div class="kolonne">
+      <h2>Sidene</h2>
+      <ul>
+        <li><a href="index.html"><span class="nr">01</span>Forside</a></li>
+        <li><a href="losninger.html"><span class="nr">02</span>Løsninger</a></li>
+        <li><a href="integrasjoner.html"><span class="nr">03</span>Sporing og integrasjon</a></li>
+        <li><a href="om.html"><span class="nr">04</span>Om oss</a></li>
+        <li><a href="kontakt.html"><span class="nr">05</span>Kontakt og bestilling</a></li>
+        <li><a href="panel.html"><span class="nr">06</span>Forsendelser (demo)</a></li>
+      </ul>
+      <div class="splitt-bunn">
+        <a href="tel:+4755708060">+47 55 70 80 60</a>
+        <a href="mailto:post@edelivery.no">post@edelivery.no</a>
+        <span>Stavanger</span>
+      </div>
+    </div>
+    <div class="kolonne kolonne--tjenester">
+      <h2>Tjenester</h2>
+      <ul>
+        <li><a href="losninger.html#distribusjon"><span class="nr">a</span>Distribusjon</a></li>
+        <li><a href="losninger.html#linjebil"><span class="nr">b</span>Linjebil</a></li>
+        <li><a href="losninger.html#budbil"><span class="nr">c</span>Budbil</a></li>
+        <li><a href="losninger.html#ekspress"><span class="nr">d</span>Ekspresslevering</a></li>
+        <li><a href="losninger.html#lager"><span class="nr">e</span>Lager og logistikk</a></li>
+      </ul>
+      <div class="splitt-cta">
+        <a class="knapp" href="kontakt.html">Bestill transport</a>
+        <a class="knapp knapp--lys" href="om.html#jobb">Søk jobb</a>
+      </div>
+    </div>
+  </div>
+</div>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/02-edelivery-no.jpg" alt="eDelivery AS" loading="eager" decoding="async">
-    <figcaption><strong>eDelivery AS</strong><span>Transport, bud &amp; logistikk · Stavanger</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Transport, bud &amp; logistikk · Stavanger</p>
-    <h1>Punktlig transport og fleksibel logistikk som kommer frem til avtalt tid</h1>
-    <p class="helt__ingress">Edelivery AS er din totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tel:+4755708060">Ring 55 70 80 60</a>
-    </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">Erfa­rne sjåfører og moderne bilpark</li>
-      <li class="tillit__punkt">Leveringspresisjon og full sporbarhet</li>
-      <li class="tillit__punkt">Skreddersydde faste ruter og hasteoppdrag</li>
-    </ul>
-  </div>
-</section>
 
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
-  </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/03-edelivery-no.jpg" alt="Gods- og partitransport" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Gods- og partitransport</h3>
-      <p>Pålitelig transport av stykkgods, paller, byggevarer, termo- og industrigods lokalt, regionalt og nasjonalt med faste avganger.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/04-edelivery-no.jpg" alt="Budbil og ekspresslevering" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Budbil og ekspresslevering</h3>
-      <p>Direktekjøring av tidskritiske sendinger, dokumenter, reservedeler og pakker fra dør til dør uten omlasting underveis.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/05-edelivery-no.jpg" alt="Flytting og bedriftsflytting" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Flytting og bedriftsflytting</h3>
-      <p>Effektiv og skånsom flyttehjelp, nedpakking, montering og transport for private hjem og bedrifter som skal inn i nye lokaler.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/06-edelivery-no.jpg" alt="Tredjepartslogistikk og lager" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Tredjepartslogistikk og lager</h3>
-      <p>Mellomlagring, omlasting, plukk, pakk og distribusjon tilpasset nettbutikker, grossister og entreprenører.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Punktlighet i alle ledd</h3><p>Vi vet at kundene dine venter på varene – derfor planlegger vi rutene nøye og holder det vi lover.</p></div>
-    <div class="verdi"><h3>Forsvarlig godshåndtering</h3><p>Erfarne sjåfører sørger for riktig lastsikring, temperaturkontroll og skånsom levering helt frem til mottaker.</p></div>
-    <div class="verdi"><h3>Direkte kommunikasjon</h3><p>Hos oss får du raskt svar fra kjørekontoret når du trenger status eller har en ekstraordinær hastelevering.</p></div>
-    <div class="verdi"><h3>Moderne og miljøvennlig drift</h3><p>Vi investerer løpende i drivstoffgjerrige kjøretøy og optimal ruteplanlegging.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/seksjon-6.jpg" alt="eDelivery AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Trygt fremme til avtalt tid – hver eneste dag langs norske veier.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Sporbar leveranse</p>
-      <h2>Sporingen kunden slår opp selv</h2>
-      <p>Både avsender og mottaker får tydelig beskjed om planlagt leveringstidspunkt og umiddelbar kvittering når oppdraget er utført.</p>
-    </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Status på sendingen</p>
-      <div class="drom__rad"><span>Bestilling og ruteplanlegging</span><span>Bekreftet</span></div><div class="drom__rad"><span>Opphentet og under transport</span><span>I rute</span></div><div class="drom__rad"><span>Utlevert med signatur</span><span>Klar</span></div>
+<section class="hero">
+  <div class="ramme">
+    <div class="hero-deling">
+      <div>
+        <span class="merke">Stavanger · hele Norge</span>
+        <h1>Alt innen transport.<br><em>Fra A til Å.</em></h1>
+        <p class="hero-lead">Edelivery AS er din totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser. Vi tilbyr fleksible løsninger som er skreddersydd etter dine behov – nasjonalt og internasjonalt.</p>
+        <div class="hero-cta">
+          <a class="knapp" href="kontakt.html">Bestill transport <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+          <a class="knapp knapp--lys" href="losninger.html">Se løsningene</a>
+        </div>
+      </div>
+      <div class="pakke-scene">
+        <div class="pakke" data-pakke>
+          <div class="flapp flapp--1"></div>
+          <div class="kasse">
+            <span class="logomerke">EDELIVERY</span>
+            <span class="merkelapp">Klar for levering</span>
+          </div>
+          <div class="innhold"></div>
+          <div class="flapp flapp--2"></div>
+        </div>
+        <div class="pakke-skygge" aria-hidden="true"></div>
+        <span class="pakke-hint">Trykk på pakken</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
+  <div class="ramme">
+    <div class="hode avslor">
+      <span class="merke">Tjenester</span>
+      <h2>Fem måter å få det fram</h2>
+      <p>Enten det er én pakke til en kunde i Stavanger eller en fast rute for hele landet, setter vi sammen løsningen etter behovet ditt.</p>
+    </div>
+    <div class="tjenestekort">
+      <article class="avslor"><span class="i">01</span><h3>Distribusjon</h3><p>Faste ruter for deg som sender mye til de samme områdene. Vi planlegger, kjører og rapporterer.</p></article>
+      <article class="avslor"><span class="i">02</span><h3>Linjebil</h3><p>Faste avganger mellom byer og regioner, med plass til både paller og stykk gods.</p></article>
+      <article class="avslor"><span class="i">03</span><h3>Budbil</h3><p>Rask levering samme dag der det haster. Sjåfører som kjenner området.</p></article>
+      <article class="avslor"><span class="i">04</span><h3>Ekspresslevering</h3><p>Når tiden er hele poenget: prioritert henting og levering, med sporing hele veien.</p></article>
+      <article class="avslor"><span class="i">05</span><h3>Lager og logistikk</h3><p>Vi tar imot, lagrer og plukker – så du slipper å bygge eget lager.</p></article>
+      <article class="avslor"><span class="i">→</span><h3>Trenger du en kombinasjon?</h3><p>De fleste kunder bruker mer enn én tjeneste. Ta kontakt, så setter vi opp en løsning.<br><a href="kontakt.html" style="color:var(--oransje);font-weight:600">Bestill transport <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a></p></article>
+    </div>
   </div>
-  <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
-  </ol>
+</section>
+
+<section class="seksjon seksjon--lys">
+  <div class="ramme">
+    <div class="hode avslor"><span class="merke">Slik jobber vi</span><h2>Fra bestilling til signatur</h2></div>
+    <div class="tidslinje">
+      <div class="avslor"><span class="rom">Steg 01</span><h3>Du bestiller</h3><p>Send en henvendelse med hentested, leveringssted og når det skal fram. Vi svarer med pris og tid.</p></div>
+      <div class="avslor"><span class="rom">Steg 02</span><h3>Vi henter</h3><p>Sjåføren henter på avtalt tid. Du får beskjed når godset er om bord.</p></div>
+      <div class="avslor"><span class="rom">Steg 03</span><h3>Vi kjører</h3><p>Godset går på rute, linje eller ekspress – avhengig av hva du har bestilt.</p></div>
+      <div class="avslor"><span class="rom">Steg 04</span><h3>Vi leverer</h3><p>Levering mot signatur, og du får bekreftelse når pakken er mottatt.</p></div>
+    </div>
+    <div class="bilderad avslor" style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:clamp(20px,3vw,32px)">
+      <figure class="bilde" style="margin:0;aspect-ratio:4/3"><img src="assets/img/04-edelivery-no.jpg" alt="Edelivery-terminal med vogntog og trailere på rekke" width="2048" height="1536" loading="lazy"></figure>
+      <figure class="bilde" style="margin:0;aspect-ratio:4/3"><img src="assets/img/07-edelivery-no.jpg" alt="Lagerhall med pallereoler og gods på paller" width="2000" height="1333" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="seksjon seksjon--mork">
+  <div class="ramme">
+    <div class="hode avslor"><span class="merke">Sporing</span><h2>Følg sendingen</h2><p>Har du et sporingsnummer, kan du se hvor sendingen er. (Demo: oppslaget svarer med en forklaring i stedet for ekte status.)</p></div>
+    <div class="sporing">
+      <div class="avslor">
+        <form class="felt" data-sporing novalidate>
+          <label class="visuelt-skjult" for="spor">Sporingsnummer</label>
+          <input id="spor" type="text" placeholder="Sporingsnummer eller ordrenummer">
+          <button type="submit">Søk</button>
+        </form>
+        <p class="svar" data-spor-svar role="status" aria-live="polite"></p>
+      </div>
+      <div class="avslor">
+        <div class="fakta" style="border-color:#2c3238">
+          <div style="border-color:#2c3238"><dt style="color:#7d858d">Henting</dt><dd style="color:#c8ccd1">Vi henter der godset er, etter avtale</dd></div>
+          <div style="border-color:#2c3238"><dt style="color:#7d858d">Levering</dt><dd style="color:#c8ccd1">Mot signatur, med bekreftelse til deg</dd></div>
+          <div style="border-color:#2c3238"><dt style="color:#7d858d">Dekning</dt><dd style="color:#c8ccd1">Hele Norge, og internasjonalt etter avtale</dd></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
+  <div class="ramme">
+    <div class="hode avslor"><span class="merke">Hvorfor Edelivery</span><h2>Det kundene sier vi er gode på</h2></div>
+    <div class="tjenestekort">
+      <article class="avslor"><span class="i">A</span><h3>Fleksible løsninger</h3><p>Vi tilpasser ruter og tjenester etter behovet ditt, ikke omvendt.</p></article>
+      <article class="avslor"><span class="i">B</span><h3>Bred dekning</h3><p>Nasjonalt – og internasjonalt når du trenger det.</p></article>
+      <article class="avslor"><span class="i">C</span><h3>Lang erfaring</h3><p>Erfarne sjåfører og sertifiserte team gir trygghet i hver kilometer.</p></article>
+      <article class="avslor"><span class="i">D</span><h3>Pålitelig samarbeid</h3><p>Vi sier fra når noe endrer seg, i stedet for å la deg finne det ut selv.</p></article>
+      <article class="avslor"><span class="i">E</span><h3>Konkurransedyktige priser</h3><p>Du får pris før vi kjører, ikke etterpå.</p></article>
+      <article class="avslor"><span class="i">F</span><h3>Ekspress når det gjelder</h3><p>Prioriterte oppdrag når noe må fram samme dag.</p></article>
+    </div>
   </div>
-  <div class="galleri galleri--tre">
-    <figure class="galleri__bilde"><img src="img/seksjon-7.jpg" alt="eDelivery AS – Gods- og partitransport" loading="lazy" decoding="async"><figcaption>eDelivery AS – Gods- og partitransport</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-8.jpg" alt="eDelivery AS – Budbil og ekspresslevering" loading="lazy" decoding="async"><figcaption>eDelivery AS – Budbil og ekspresslevering</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-9.jpg" alt="eDelivery AS – Flytting og bedriftsflytting" loading="lazy" decoding="async"><figcaption>eDelivery AS – Flytting og bedriftsflytting</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
 </section>
 
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">eDelivery AS</p>
-        <p><strong>Telefon</strong><br><a href="tel:+4755708060">55 70 80 60</a></p>
-        <p><strong>E-post</strong><br><a href="mailto:post@edelivery.no">post@edelivery.no</a></p>
-        <p><strong>Område</strong><br>Stavanger</p>
-      </aside>
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="band avslor">
+      <div><h2>Skal vi kjøre for <em>deg</em>?</h2><p>Send hentested, leveringssted og når det skal fram. Du får pris og tid tilbake.</p></div>
+      <div class="knapper"><a class="knapp" href="kontakt.html">Bestill transport <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a></div>
     </div>
-    <form class="skjema" action="mailto:post@edelivery.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Gods- og partitransport</option><option>Budbil og ekspresslevering</option><option>Flytting og bedriftsflytting</option><option>Tredjepartslogistikk og lager</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
   </div>
 </section>
+
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">eDelivery AS</p>
-      <p class="bunn__tekst">Stavanger · 55 70 80 60 · post@edelivery.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div>
+        <h3>EDELIVERY AS</h3>
+        <p>Din totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser – nasjonalt og internasjonalt.</p>
+      </div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="losninger.html#distribusjon">Distribusjon</a></li>
+        <li><a href="losninger.html#linjebil">Linjebil</a></li>
+        <li><a href="losninger.html#budbil">Budbil</a></li>
+        <li><a href="losninger.html#ekspress">Ekspresslevering</a></li>
+        <li><a href="losninger.html#lager">Lager og logistikk</a></li>
+      </ul></div>
+      <div><h4>Selskapet</h4><ul>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="integrasjoner.html">Sporing og integrasjon</a></li>
+        <li><a href="om.html#jobb">Jobb hos oss</a></li>
+        <li><a href="panel.html">Forsendelser (demo)</a></li>
+      </ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+4755708060">+47 55 70 80 60</a></li>
+        <li><a href="mailto:post@edelivery.no">post@edelivery.no</a></li>
+        <li>Chr. August Thorings veg 7<br>4033 Stavanger</li>
+        <li><a href="kontakt.html">Bestill transport</a></li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 eDelivery AS</p>
+    <div class="bunn-bunn">
+      <span>© 2026 Edelivery AS</span>
+      <span>Stavanger · hele Norge</span>
+      <span>Demo: innhold hentet fra edelivery.no</span>
+    </div>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/edelivery-no-demo.js" defer></script>
 </body>
 </html>

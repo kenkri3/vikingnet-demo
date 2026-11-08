@@ -1,175 +1,30 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Aros Arkitekter AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Aros Arkitekter AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Prosjektpanel for faser | AROS arkitekter (demo)</title>
+<meta name="description" content="Demo av AROS arkitekters prosjektpanel: prosjekter per fase, flytt til neste fase, frister og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f3f1ec">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AROS arkitekter">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Prosjektpanel for faser | AROS arkitekter (demo)">
+<meta property="og:description" content="Demo av AROS arkitekters prosjektpanel: prosjekter per fase, flytt til neste fase, frister og hendelseslogg.">
+<meta property="og:image" content="assets/img/tomax.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/aros-no-demo.css">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Aros Arkitekter AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+<header class="hode"><div class="skal"><div class="hode__rad"><a class="merke" href="index.html"><span class="merke__navn">AROS<span>.</span> <span class="merke__slag">arkitekter</span></span></a><div class="hode__hoyre"><a class="hode__tlf" href="tel:+4747684000"><span>tlf</span> 476 84 000</a><a class="knapp knapp--liten" href="kontakt.html">Kontakt oss</a></div></div></div><nav class="faner" aria-label="Hovedmeny"><a class="fane" href="index.html"><span class="fane__nr">01</span><span class="fane__navn">Forside</span></a><a class="fane" href="prosjekter.html"><span class="fane__nr">02</span><span class="fane__navn">Prosjekter</span></a><a class="fane" href="prosess.html"><span class="fane__nr">03</span><span class="fane__navn">Prosess</span></a><a class="fane" href="team.html"><span class="fane__nr">04</span><span class="fane__navn">Team</span></a><a class="fane" href="om.html"><span class="fane__nr">05</span><span class="fane__navn">Om</span></a><a class="fane" href="kontakt.html"><span class="fane__nr">06</span><span class="fane__navn">Kontakt</span></a><a class="fane" href="panel.html" aria-current="page"><span class="fane__nr">07</span><span class="fane__navn">Panel</span></a></nav></header>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Sandnes</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Aros Arkitekter AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Aros Arkitekter AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Mulighetsstudier og skisseprosjekt</strong><span>Ny forespørsel via nettsiden · Sandnes</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Forprosjekt og byggesøknad</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Detaljprosjektering og oppfølging</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Transformasjon, interiør og landskap</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om mulighetsstudier og skisseprosjekt</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om forprosjekt og byggesøknad</strong><p>Kunde i Sandnes ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av detaljprosjektering og oppfølging</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Aros Arkitekter AS</p>
-      <p class="bunn__tekst">Sandnes · post@aros.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Aros Arkitekter AS</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html"><span class="merke__navn">AROS<span>.</span> <span class="merke__slag">prosjektpanel · demo</span></span></a><div class="hode__hoyre"><span class="paneltopp__bruker"><i>KA</i>Kari Aas · prosjektleder</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Prosjektfaser</h1><p>Uke 46 · 8 aktive prosjekter · status hentet fra prosjektmappen (eksempeldata)</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Nytt prosjekt</a></div></div><div class="kpi"><div class="kpi__kort"><span class="kpi__navn">Aktive prosjekter</span><span class="kpi__tall">8</span><span class="kpi__endring">i fem faser</span></div><div class="kpi__kort kpi__kort--tegl"><span class="kpi__navn">I byggefase</span><span class="kpi__tall" data-kpi-bygg>2</span><span class="kpi__endring">oppfølging på plass</span></div><div class="kpi__kort"><span class="kpi__navn">Ferdigstilt</span><span class="kpi__tall" data-kpi-ferdig>2</span><span class="kpi__endring">i år</span></div><div class="kpi__kort"><span class="kpi__navn">Timer denne uken</span><span class="kpi__tall">186</span><span class="kpi__endring">eksempeldata</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer prosjekter etter fase"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="skisse" aria-pressed="false">Skisse</button><button type="button" data-filter="forprosjekt" aria-pressed="false">Forprosjekt</button><button type="button" data-filter="soknad" aria-pressed="false">Søknad</button><button type="button" data-filter="byggefase" aria-pressed="false">Byggefase</button><button type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button></div><span class="verktoylinje__tall" data-antall>8 av 8 prosjekter</span></div><div class="prosjektliste" data-prosjekter><div class="prad" data-fase="byggefase"><div><p class="prad__navn">Madlamark skole – tilbygg</p><div class="prad__meta"><span>Skole</span><span>Stavanger</span><span>Fase 4</span></div><div class="fremdrift"><i style="width:66%"></i></div></div><span class="prad__fase">Byggefase</span><button class="prad__knapp" type="button" data-neste>Neste fase</button></div><div class="prad" data-fase="byggefase"><div><p class="prad__navn">Bryggene, Hommersåk</p><div class="prad__meta"><span>Bolig</span><span>Sandnes</span><span>Fase 5</span></div><div class="fremdrift"><i style="width:83%"></i></div></div><span class="prad__fase">Byggefase</span><button class="prad__knapp" type="button" data-neste>Neste fase</button></div><div class="prad" data-fase="ferdig"><div><p class="prad__navn">Kleppelunden skule</p><div class="prad__meta"><span>Skole</span><span>Rogaland</span><span>Fase 6</span></div><div class="fremdrift"><i style="width:100%"></i></div></div><span class="prad__fase">Ferdigstilt</span><button class="prad__knapp" type="button" data-neste disabled>Ferdig</button></div><div class="prad" data-fase="ferdig"><div><p class="prad__navn">Tomax – verksted</p><div class="prad__meta"><span>Næring</span><span>Rogaland</span><span>Fase 6</span></div><div class="fremdrift"><i style="width:100%"></i></div></div><span class="prad__fase">Ferdigstilt</span><button class="prad__knapp" type="button" data-neste disabled>Ferdig</button></div><div class="prad" data-fase="soknad"><div><p class="prad__navn">Ruten – byrom</p><div class="prad__meta"><span>Landskap</span><span>Sandnes</span><span>Fase 3</span></div><div class="fremdrift"><i style="width:50%"></i></div></div><span class="prad__fase">Søknad</span><button class="prad__knapp" type="button" data-neste>Neste fase</button></div><div class="prad" data-fase="forprosjekt"><div><p class="prad__navn">Villaer i Skibmannsvegen</p><div class="prad__meta"><span>Bolig</span><span>Sandnes</span><span>Fase 3</span></div><div class="fremdrift"><i style="width:40%"></i></div></div><span class="prad__fase">Forprosjekt</span><button class="prad__knapp" type="button" data-neste>Neste fase</button></div><div class="prad" data-fase="skisse"><div><p class="prad__navn">Flerbrukshall Sandnes</p><div class="prad__meta"><span>Idrett</span><span>Sandnes</span><span>Fase 2</span></div><div class="fremdrift"><i style="width:25%"></i></div></div><span class="prad__fase">Skisseprosjekt</span><button class="prad__knapp" type="button" data-neste>Neste fase</button></div><div class="prad" data-fase="skisse"><div><p class="prad__navn">Barnehage Klepp</p><div class="prad__meta"><span>Barnehage</span><span>Klepp</span><span>Fase 2</span></div><div class="fremdrift"><i style="width:25%"></i></div></div><span class="prad__fase">Skisseprosjekt</span><button class="prad__knapp" type="button" data-neste>Neste fase</button></div></div><div class="panelkort" style="margin-top:.9rem"><h2>Hendelseslogg</h2><div data-logg></div></div></div><div><div class="panelkort"><h2>Frister denne uken</h2><div class="logglinje"><time>tir</time><span>Rammesøknad Ruten sendes</span></div><div class="logglinje"><time>tor</time><span>Befaring Bryggene · Hommersåk</span></div><div class="logglinje"><time>fre</time><span>Skissegjennomgang Flerbrukshall</span></div></div><div class="panelkort" style="margin-top:.9rem"><h2>Faser</h2><div class="logglinje"><time>01</time><span>Idéutvikling</span></div><div class="logglinje"><time>02</time><span>Skisseprosjekt</span></div><div class="logglinje"><time>03</time><span>Forprosjekt</span></div><div class="logglinje"><time>04</time><span>Søknad</span></div><div class="logglinje"><time>05</time><span>Byggefase</span></div><div class="logglinje"><time>06</time><span>Ferdigstillelse</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">AROS arkitekter</p><p>Havnegata 15, 4306 Sandnes. Vi tegner bygg og byrom, og følger prosjektene fra idéutvikling til ferdigstillelse.</p></div><div><h2>Sider</h2><ul><li><a href="prosjekter.html">Prosjekter</a></li><li><a href="prosess.html">Prosess</a></li><li><a href="team.html">Team</a></li><li><a href="om.html">Om oss</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4747684000">476 84 000</a></li><li><a href="mailto:post@aros.no">post@aros.no</a></li><li><a href="kontakt.html">Havnegata 15, Sandnes</a></li><li><a href="panel.html">Prosjektpanel (demo)</a></li></ul></div><div><h2>Sertifisert</h2><ul><li>Miljøfyrtårn-sertifisert virksomhet</li><li>Prosjekter i Rogaland</li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> AROS arkitekter</span><span>Sandnes · Rogaland</span></div></div></footer>
+<script src="assets/js/aros-no-demo.js" defer></script>
 </body>
 </html>

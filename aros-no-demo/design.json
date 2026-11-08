@@ -1,0 +1,36 @@
+{
+  "slug": "aros-no-demo",
+  "firma": "AROS arkitekter",
+  "navType": "nummererte toppfaner",
+  "fonts": [
+    "Syne",
+    "Raleway"
+  ],
+  "palette": [
+    "#f3f1ec",
+    "#14171a",
+    "#b8462a",
+    "#d7d3c8"
+  ],
+  "motion": [
+    "css3d",
+    "scroll",
+    "svg"
+  ],
+  "sections": [
+    "hero",
+    "prosjekter",
+    "prosess",
+    "sitat",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "prosess.html",
+    "team.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

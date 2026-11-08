@@ -1,0 +1,36 @@
+{
+  "slug": "easylife-no-demo",
+  "firma": "EasyLife",
+  "navType": "dock-med-sok",
+  "fonts": [
+    "Geologica",
+    "Kumbh Sans"
+  ],
+  "palette": [
+    "#14261c",
+    "#7cb342",
+    "#7b2d6b",
+    "#fbf7f1"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "program",
+    "fordeler",
+    "tall",
+    "referanser",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "program.html",
+    "fordeler.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

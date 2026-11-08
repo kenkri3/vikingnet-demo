@@ -1,0 +1,35 @@
+{
+  "slug": "edelivery-no-demo",
+  "firma": "Edelivery AS",
+  "navType": "splittmeny-to-kolonner",
+  "fonts": [
+    "Zilla Slab",
+    "Schibsted Grotesk"
+  ],
+  "palette": [
+    "#14161a",
+    "#ff7a18",
+    "#f4f2ee",
+    "#5b6570"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik",
+    "tall",
+    "sporing",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "losninger.html",
+    "integrasjoner.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

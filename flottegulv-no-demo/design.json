@@ -1,0 +1,36 @@
+{
+  "slug": "flottegulv-no-demo",
+  "firma": "Flotte Gulv AS",
+  "navType": "flislagt-grid-nav",
+  "fonts": [
+    "Petrona",
+    "Anek Latin"
+  ],
+  "palette": [
+    "#2e211a",
+    "#f0e9df",
+    "#6b7350",
+    "#b08d57"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "utvalg",
+    "gulvtyper",
+    "montering",
+    "prosjekter",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "gulvtyper.html",
+    "prosess.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

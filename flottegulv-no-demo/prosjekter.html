@@ -1,81 +1,130 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Prosjekter og utførelse – Flotte Gulv AS</title>
-<meta name="description" content="Se utvalgte oppdrag og hvordan Flotte Gulv AS jobber med kvalitet i hvert ledd.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Prosjekter · Flotte Gulv AS</title>
+<meta name="description" content="Utvalgte gulvprosjekter fra Flotte Gulv AS: leilighet på Frogner, hus i Bærum og kirkesal med 300 kvadratmeter eik.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Flotte Gulv AS">
+<meta property="og:title" content="Prosjekter · Flotte Gulv AS">
+<meta property="og:description" content="Utvalgte gulvprosjekter fra Flotte Gulv AS: leilighet på Frogner, hus i Bærum og kirkesal med 300 kvadratmeter eik.">
+<meta property="og:image" content="assets/img/12-flottegulv-no.jpg">
+<meta name="theme-color" content="#f0e9df">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Anek+Latin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/flottegulv-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Flotte Gulv AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html" aria-current="page">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html" aria-current="page">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="lamell" aria-hidden="true"><i></i><i></i><i></i></span><span class="n">Flotte Gulv<span>Tregulv som varer</span></span></a>
+    <div class="hoyre">
+      <a class="tlf" href="tel:+4722442727">22 44 27 27</a>
+      <a class="smal" href="kontakt.html">Showroom Oslo</a>
+      <button class="flis-knapp" type="button" data-rute-apne aria-expanded="false" aria-controls="rutenett">
+        <span class="fliser" aria-hidden="true"><i></i><i></i><i></i><i></i></span> Meny
+      </button>
+    </div>
   </div>
 </header>
+
+<div class="rutenett" id="rutenett" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hovedmeny">
+  <button class="lukk-rutenett" type="button" data-rute-lukk>Lukk ×</button>
+  <div class="rutenett-inn">
+    <div class="rutenett-hode">
+      <h2>Velg en flis</h2>
+      <p>Showroom · Thomas Heftyes Gate 52, Oslo</p>
+    </div>
+    <ul class="fliser">
+      <li><a href="index.html"><span class="nr">01</span><span class="t">Forside</span><span class="u">Tregulv som varer i generasjoner</span></a></li>
+      <li><a href="gulvtyper.html"><span class="nr">02</span><span class="t">Gulvtyper</span><span class="u">Heltre, parkett, fiskeben, chevron</span></a></li>
+      <li><a href="prosess.html"><span class="nr">03</span><span class="t">Prosess og montering</span><span class="u">Fra befaring til ferdig gulv</span></a></li>
+      <li><a href="prosjekter.html" aria-current="page"><span class="nr">04</span><span class="t">Prosjekter</span><span class="u">Leiligheter, hus og kirkesaler</span></a></li>
+      <li><a href="om.html"><span class="nr">05</span><span class="t">Om oss</span><span class="u">Selskapet, showrommet og folkene</span></a></li>
+      <li><a href="kontakt.html"><span class="nr">06</span><span class="t">Kontakt</span><span class="u">Showroom i Oslo</span></a></li>
+      <li><a href="panel.html"><span class="nr">07</span><span class="t">Befaringer</span><span class="u">Driftsbilde (demo)</span></a></li>
+    </ul>
+    <div class="rutenett-bunn">
+      <a href="tel:+4722442727">22 44 27 27</a>
+      <a href="mailto:kontakt@flottegulv.no">kontakt@flottegulv.no</a>
+      <span>Man–tor 10–18 · fre 10–17 · lør 11–15</span>
+    </div>
+  </div>
+</div>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Parkett &amp; gulvbehandling · Oslo</p>
-  <h1>Utvalgte oppdrag og arbeidshverdag</h1>
-  <p class="sidehode__ingress">Hvert oppdrag planlegges og gjennomføres med høy faglig standard, ryddig dialog og dokumenterte løsninger.</p>
-</section>
-<section class="seksjon">
-  <div class="galleri">
-    <figure class="galleri__bilde">
-      <img src="img/01-flottegulv-no.jpg" alt="Flotte Gulv AS – Støvfri sliping av parkett og tregulv" loading="lazy" decoding="async">
-      <figcaption><strong>Støvfri sliping av parkett og tregulv</strong> – utført av Flotte Gulv AS</figcaption>
-    </figure>
-    <figure class="galleri__bilde">
-      <img src="img/02-flottegulv-no.jpg" alt="Flotte Gulv AS – Lakkering, oljing og innfarging" loading="lazy" decoding="async">
-      <figcaption><strong>Lakkering, oljing og innfarging</strong> – utført av Flotte Gulv AS</figcaption>
-    </figure>
-    <figure class="galleri__bilde">
-      <img src="img/03-flottegulv-no.jpg" alt="Flotte Gulv AS – Legging av parkett og fiskebensgulv" loading="lazy" decoding="async">
-      <figcaption><strong>Legging av parkett og fiskebensgulv</strong> – utført av Flotte Gulv AS</figcaption>
-    </figure>
-    <figure class="galleri__bilde">
-      <img src="img/04-flottegulv-no.jpg" alt="Flotte Gulv AS – Reparasjon og vedlikehold av næringsgulv" loading="lazy" decoding="async">
-      <figcaption><strong>Reparasjon og vedlikehold av næringsgulv</strong> – utført av Flotte Gulv AS</figcaption>
-    </figure>
+
+<header class="sidehode">
+  <div class="ramme">
+    <p class="brodsmule"><a href="index.html">Hjem</a> / Prosjekter</p>
+    <h1>Gulv vi har lagt</h1>
+    <p class="ingress">Et utvalg prosjekter. Felles for dem alle er at gulvet ble valgt for rommet – ikke for at det skulle være enkelt å legge.</p>
+  </div>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="prosjekter">
+      <article class="prosjekt avslor"><img src="assets/img/03-flottegulv-no.jpg" alt="Stor stue med fiskebensparkett i eik" width="1333" height="1013" loading="lazy"><div class="tekst"><h3>Leilighet, Frogner</h3><p>Fiskeben i eik, lagt i hele leiligheten – tre rom og gang.</p></div></article>
+      <article class="prosjekt avslor"><img src="assets/img/11-flottegulv-no.jpg" alt="Stue med store vinduer og lyst eikegulv" width="1500" height="1000" loading="lazy"><div class="tekst"><h3>Hus, Bærum</h3><p>Brede heltreplanker, oljet hvite. Trapp og golv i samme materiale.</p></div></article>
+      <article class="prosjekt avslor"><img src="assets/img/12-flottegulv-no.jpg" alt="Kirkesal med bredt eikegulv og trebenker" width="1500" height="996" loading="lazy"><div class="tekst"><h3>Kirkesal</h3><p>Rundt 300 kvadratmeter eik, lagt i et rom med store krav til akustikk og jevnhet.</p></div></article>
+      <article class="prosjekt avslor"><img src="assets/img/05-flottegulv-no.jpg" alt="Kjøkken med eikegulv og mørke kjøkkenkabinetter" width="1500" height="1014" loading="lazy"><div class="tekst"><h3>Kjøkken og stue, Majorstuen</h3><p>Én sammenhengende flate, med overgang til gang uten terskel.</p></div></article>
+      <article class="prosjekt avslor"><img src="assets/img/02-flottegulv-no.jpg" alt="Kjøkken med spiseplass og eikegulv" width="1500" height="1000" loading="lazy"><div class="tekst"><h3>Rekkehus, Haslum</h3><p>Enstavs parkett i eik, lagt i tre etasjer.</p></div></article>
+      <article class="prosjekt avslor"><img src="assets/img/04-flottegulv-no.jpg" alt="Stue med peis og lys eikeparkett" width="1500" height="1059" loading="lazy"><div class="tekst"><h3>Hytte, Sørkedalen</h3><p>Heltregulv i furu, med oljet finish som tåler skitne sko.</p></div></article>
+    </div>
   </div>
 </section>
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Standard i leveransen</p>
-    <h2>Hva du kan forvente når du samarbeider med oss</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Støvfri arbeidsprosess</h3><p>Vårt avanserte avsugssystem filtrerer bort 99,95 % av slipestøvet slik at inneklimaet i hjemmet ivaretas.</p></div>
-    <div class="verdi"><h3>Faglig rådgivning</h3><p>Vi tar med fargeprøver på befaring så du kan se hvordan ulike oljer og lakker tar seg ut i ditt eget lys.</p></div>
-    <div class="verdi"><h3>Avtalt tid og pris</h3><p>Du får et komplett pristilbud per kvadratmeter uten skjulte tillegg før vi setter i gang.</p></div>
-    <div class="verdi"><h3>Varig resultat</h3><p>Riktig korningsrekke og slitesterke sluttstrøk gir et gulv som holder seg vakkert i mange år.</p></div>
+
+<section class="seksjon seksjon--sand">
+  <div class="ramme">
+    <div class="hode avslor"><span class="merke">Referanser</span><h2>Hva kundene sier</h2><p>Utdrag fra tilbakemeldingene vi har fått.</p></div>
+    <div class="anmeldelser">
+      <div class="anmeldelse avslor"><blockquote>«Vi fikk prøver med hjem og brukte en hel helg på å velge. Det var ingen som stresset oss, og gulvet ble akkurat som vi håpet.»</blockquote><div class="av">Kunde · fiskeben i eik, Frogner</div></div>
+      <div class="anmeldelse avslor"><blockquote>«De kom tilbake etter et halvt år og så over gulvet gratis. Det er sjelden vare.»</blockquote><div class="av">Kunde · heltreplanker, Bærum</div></div>
+    </div>
+    <p class="skjema-note avslor" style="margin-top:14px">Sitatene er gjengitt som eksempel på tilbakemeldinger i demoen, ikke som signerte uttalelser.</p>
   </div>
 </section>
-<section class="cta">
-  <h2>Har du et lignende behov eller prosjekt?</h2>
-  <p>Send oss noen ord, så ser vi på løsningsforslag og prisoverslag sammen.</p>
-  <a class="knapp" href="kontakt.html">Be om tilbud</a>
-</section>
+
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Flotte Gulv AS</p>
-      <p class="bunn__tekst">Oslo · 22 44 27 27 · kontakt@flottegulv.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div>
+        <h3>FLOTTE GULV</h3>
+        <p>Flotte Gulv AS er Norges ledende leverandør av eksklusive tregulv. Tregulv som varer i generasjoner.</p>
+      </div>
+      <div><h4>Utvalget</h4><ul>
+        <li><a href="gulvtyper.html#heltre">Heltre lamellgulv</a></li>
+        <li><a href="gulvtyper.html#parkett">Enstavs parkett</a></li>
+        <li><a href="gulvtyper.html#fiskeben">Fiskeben og chevron</a></li>
+        <li><a href="gulvtyper.html#terrasse">IPE terrassegulv</a></li>
+        <li><a href="gulvtyper.html#antikk">Reclaimed Antique Oak</a></li>
+      </ul></div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="prosess.html">Prosess og montering</a></li>
+        <li><a href="prosjekter.html">Prosjekter</a></li>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="panel.html">Befaringer (demo)</a></li>
+      </ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+4722442727">22 44 27 27</a></li>
+        <li><a href="mailto:kontakt@flottegulv.no">kontakt@flottegulv.no</a></li>
+        <li>Thomas Heftyes Gate 52<br>0267 Oslo</li>
+        <li>Man–tor 10–18 · fre 10–17<br>lør 11–15</li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Flotte Gulv AS</p>
+    <div class="bunn-bunn">
+      <span>© 2026 Flotte Gulv AS</span>
+      <span>Showroom Oslo · lager på Skjetten</span>
+      <span>Demo: innhold hentet fra flottegulv.no</span>
+    </div>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/flottegulv-no-demo.js" defer></script>
 </body>
 </html>

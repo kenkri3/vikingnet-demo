@@ -1,175 +1,231 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>eDelivery AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos eDelivery AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Forsendelser · Edelivery AS</title>
+<meta name="description" content="Demo av Edelivery sitt forsendelsesbilde: sendinger med status, rute og handlinger – hentet, underveis og levert.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Edelivery AS">
+<meta property="og:title" content="Forsendelser · Edelivery AS">
+<meta property="og:description" content="Demo av Edelivery sitt forsendelsesbilde: sendinger med status, rute og handlinger – hentet, underveis og levert.">
+<meta property="og:image" content="assets/img/09-edelivery-no.jpg">
+<meta name="theme-color" content="#14161a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/edelivery-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="eDelivery AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="flis" aria-hidden="true">E</span>EDELIVERY<span>.AS</span></a>
+    <div class="kontakt">
+      <a class="tlf" href="tel:+4755708060">+47 55 70 80 60</a>
+      <a class="smal" href="kontakt.html">Bestill transport</a>
+      <button class="meny-knapp" type="button" data-splitt-apne aria-expanded="false" aria-controls="splitt">
+        <span class="streker" aria-hidden="true"><i></i><i></i><i></i></span> Meny
+      </button>
+    </div>
   </div>
 </header>
+
+<div class="splitt" id="splitt" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hovedmeny">
+  <button class="lukk-splitt" type="button" data-splitt-lukk>Lukk ×</button>
+  <div class="splitt-inn">
+    <div class="kolonne">
+      <h2>Sidene</h2>
+      <ul>
+        <li><a href="index.html"><span class="nr">01</span>Forside</a></li>
+        <li><a href="losninger.html"><span class="nr">02</span>Løsninger</a></li>
+        <li><a href="integrasjoner.html"><span class="nr">03</span>Sporing og integrasjon</a></li>
+        <li><a href="om.html"><span class="nr">04</span>Om oss</a></li>
+        <li><a href="kontakt.html"><span class="nr">05</span>Kontakt og bestilling</a></li>
+        <li><a href="panel.html"><span class="nr">06</span>Forsendelser (demo)</a></li>
+      </ul>
+      <div class="splitt-bunn">
+        <a href="tel:+4755708060">+47 55 70 80 60</a>
+        <a href="mailto:post@edelivery.no">post@edelivery.no</a>
+        <span>Stavanger</span>
+      </div>
+    </div>
+    <div class="kolonne kolonne--tjenester">
+      <h2>Tjenester</h2>
+      <ul>
+        <li><a href="losninger.html#distribusjon"><span class="nr">a</span>Distribusjon</a></li>
+        <li><a href="losninger.html#linjebil"><span class="nr">b</span>Linjebil</a></li>
+        <li><a href="losninger.html#budbil"><span class="nr">c</span>Budbil</a></li>
+        <li><a href="losninger.html#ekspress"><span class="nr">d</span>Ekspresslevering</a></li>
+        <li><a href="losninger.html#lager"><span class="nr">e</span>Lager og logistikk</a></li>
+      </ul>
+      <div class="splitt-cta">
+        <a class="knapp" href="kontakt.html">Bestill transport</a>
+        <a class="knapp knapp--lys" href="om.html#jobb">Søk jobb</a>
+      </div>
+    </div>
+  </div>
+</div>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Stavanger</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos eDelivery AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>eDelivery AS</div>
+
+<header class="panelhode">
+  <div class="ramme">
+    <div class="rad">
+      <p class="brodsmule"><a href="index.html">Hjem</a> / Forsendelser (demo)</p>
+      <span class="drift">Terminalen er åpen</span>
+    </div>
+    <h1>Forsendelser i dag</h1>
+    <p class="ingress" style="max-width:60ch">Dette er driftsbildet vårt: hva som er hentet, hva som er på vei og hva som er levert. Trykk på knappene – status, nøkkeltall og logg oppdaterer seg. Alt er eksempeldata.</p>
+  </div>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="kpier">
+      <div class="kpi"><span class="l">Aktive sendinger</span><span class="v" data-kpi-aktive>4</span><span class="d">2 underveis, 2 venter på lasting</span></div>
+      <div class="kpi"><span class="l">Levert i dag</span><span class="v" data-kpi-levert>2</span><span class="d">Signert og kvittert</span></div>
+      <div class="kpi"><span class="l">Til henting</span><span class="v" data-kpi-lager>2</span><span class="d">Klar hos kunde</span></div>
+      <div class="kpi"><span class="l">Avvik</span><span class="v">0</span><span class="d">Ingen forsinkelser registrert</span></div>
     </div>
 
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
+    <div class="faner" role="group" aria-label="Filtrer forsendelser">
+      <button class="fane" type="button" data-filter="alle" aria-pressed="true">Alle <span class="antall">6</span></button>
+      <button class="fane" type="button" data-filter="hentet" aria-pressed="false">Hentet <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="underveis" aria-pressed="false">Underveis <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="levert" aria-pressed="false">Levert <span class="antall">2</span></button>
     </div>
 
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+    <div class="forsendelser" data-forsendelser>
+      <article class="forsendelse" data-id="ED-8842" data-status="hentet">
+        <div class="id">ED-8842</div>
+        <div class="hoved"><div class="t">Stykk gods</div><div class="m">Nordic Sport AS</div></div>
+        <div class="rute"><span class="k">Rute</span><span>Stavanger → Bergen</span></div>
+        <span class="status" data-status="hentet">Hentet</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="hent">Hent</button>
+          <button class="mini" type="button" data-handling="kjor">Kjør</button>
+          <button class="mini mini--full" type="button" data-handling="lever">Lever</button>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Gods- og partitransport</strong><span>Ny forespørsel via nettsiden · Stavanger</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Budbil og ekspresslevering</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Flytting og bedriftsflytting</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Tredjepartslogistikk og lager</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
+      </article>
+      <article class="forsendelse" data-id="ED-8841" data-status="underveis">
+        <div class="id">ED-8841</div>
+        <div class="hoved"><div class="t">2 paller</div><div class="m">Kystbutikk AS</div></div>
+        <div class="rute"><span class="k">Rute</span><span>Stavanger → Kristiansand</span></div>
+        <span class="status" data-status="underveis">Underveis</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="hent" disabled>Hent</button>
+          <button class="mini" type="button" data-handling="kjor" disabled>Kjør</button>
+          <button class="mini mini--full" type="button" data-handling="lever">Lever</button>
+        </div>
+      </article>
+      <article class="forsendelse" data-id="ED-8840" data-status="underveis">
+        <div class="id">ED-8840</div>
+        <div class="hoved"><div class="t">Ekspress: dokumenter</div><div class="m">Havblikk Reklame</div></div>
+        <div class="rute"><span class="k">Rute</span><span>Sandnes → Oslo</span></div>
+        <span class="status" data-status="underveis">Underveis</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="hent" disabled>Hent</button>
+          <button class="mini" type="button" data-handling="kjor" disabled>Kjør</button>
+          <button class="mini mini--full" type="button" data-handling="lever">Lever</button>
+        </div>
+      </article>
+      <article class="forsendelse" data-id="ED-8839" data-status="hentet">
+        <div class="id">ED-8839</div>
+        <div class="hoved"><div class="t">3 paller</div><div class="m">Bølgen Interiør</div></div>
+        <div class="rute"><span class="k">Rute</span><span>Stavanger → Haugesund</span></div>
+        <span class="status" data-status="hentet">Hentet</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="hent">Hent</button>
+          <button class="mini" type="button" data-handling="kjor">Kjør</button>
+          <button class="mini mini--full" type="button" data-handling="lever">Lever</button>
+        </div>
+      </article>
+      <article class="forsendelse forsendelse--levert" data-id="ED-8838" data-status="levert">
+        <div class="id">ED-8838</div>
+        <div class="hoved"><div class="t">1 kolli</div><div class="m">Sirdal Hytter</div></div>
+        <div class="rute"><span class="k">Rute</span><span>Forus → Sirdal</span></div>
+        <span class="status" data-status="levert">Levert</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="hent" disabled>Hent</button>
+          <button class="mini" type="button" data-handling="kjor" disabled>Kjør</button>
+          <button class="mini mini--full" type="button" data-handling="lever" disabled>Lever</button>
+        </div>
+      </article>
+      <article class="forsendelse forsendelse--levert" data-id="ED-8837" data-status="levert">
+        <div class="id">ED-8837</div>
+        <div class="hoved"><div class="t">Fast rute, 12 pall</div><div class="m">Rogaland Grossist</div></div>
+        <div class="rute"><span class="k">Rute</span><span>Stavanger → Egersund</span></div>
+        <span class="status" data-status="levert">Levert</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="hent" disabled>Hent</button>
+          <button class="mini" type="button" data-handling="kjor" disabled>Kjør</button>
+          <button class="mini mini--full" type="button" data-handling="lever" disabled>Lever</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="panel-to">
+      <div class="panel-kort">
+        <h2>Ruter i dag</h2>
+        <p class="under">Eksempeldata for demoen</p>
+        <ul style="list-style:none;margin:0;padding:0">
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>Stavanger → Bergen</span><span style="color:var(--dempet)">avgang 09:00</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>Stavanger → Kristiansand</span><span style="color:var(--dempet)">avgang 11:30</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;font-size:14px"><span>Sandnes → Oslo</span><span style="color:var(--dempet)">ekspress 13:00</span></li>
         </ul>
       </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="panel-kort">
+        <h2>Hendelser</h2>
+        <p class="under">Siste aktivitet i terminalen</p>
+        <div class="logg" data-logg>
+          <div><b>11:52</b> ED-8841 lastet og underveis</div>
+          <div><b>11:10</b> ED-8838 levert og signert</div>
+          <div><b>10:05</b> ED-8842 hentet hos kunde</div>
+          <div><b>09:00</b> første rute gikk fra terminalen</div>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om gods- og partitransport</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om budbil og ekspresslevering</strong><p>Kunde i Stavanger ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av flytting og bedriftsflytting</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+        <a class="knapp knapp--lys" href="losninger.html" style="margin-top:14px;border-color:#c9c4bb;color:var(--blekk)">Til løsningene <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">eDelivery AS</p>
-      <p class="bunn__tekst">Stavanger · 55 70 80 60 · post@edelivery.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div>
+        <h3>EDELIVERY AS</h3>
+        <p>Din totalleverandør innen distribusjon, budbiltjeneste, logistikk og ekspressleveranser – nasjonalt og internasjonalt.</p>
+      </div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="losninger.html#distribusjon">Distribusjon</a></li>
+        <li><a href="losninger.html#linjebil">Linjebil</a></li>
+        <li><a href="losninger.html#budbil">Budbil</a></li>
+        <li><a href="losninger.html#ekspress">Ekspresslevering</a></li>
+        <li><a href="losninger.html#lager">Lager og logistikk</a></li>
+      </ul></div>
+      <div><h4>Selskapet</h4><ul>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="integrasjoner.html">Sporing og integrasjon</a></li>
+        <li><a href="om.html#jobb">Jobb hos oss</a></li>
+        <li><a href="panel.html">Forsendelser (demo)</a></li>
+      </ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+4755708060">+47 55 70 80 60</a></li>
+        <li><a href="mailto:post@edelivery.no">post@edelivery.no</a></li>
+        <li>Chr. August Thorings veg 7<br>4033 Stavanger</li>
+        <li><a href="kontakt.html">Bestill transport</a></li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 eDelivery AS</p>
+    <div class="bunn-bunn">
+      <span>© 2026 Edelivery AS</span>
+      <span>Stavanger · hele Norge</span>
+      <span>Demo: innhold hentet fra edelivery.no</span>
+    </div>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/edelivery-no-demo.js" defer></script>
 </body>
 </html>
