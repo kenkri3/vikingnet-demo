@@ -1,0 +1,35 @@
+{
+  "slug": "dybedahl-no-demo",
+  "firma": "Dybedahl Telekommunikasjon AS",
+  "navType": "vertikal tekstmeny med tall",
+  "fonts": [
+    "Onest",
+    "Be Vietnam Pro"
+  ],
+  "palette": [
+    "#1a2733",
+    "#a8d8e8",
+    "#f2f5f6",
+    "#c96b42"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "tjenester",
+    "dekning",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "dekning.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "arcointerpharma-no-demo",
+  "firma": "Arco Interpharma AS",
+  "navType": "accordion-sidepanel",
+  "fonts": [
+    "EB Garamond",
+    "Cabin"
+  ],
+  "palette": [
+    "#152420",
+    "#f7f4ec",
+    "#cfe3d6",
+    "#bfa14a"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "bruksomrader",
+    "virkning",
+    "anmeldelser",
+    "bitbybit",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "virkning.html",
+    "bruk.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

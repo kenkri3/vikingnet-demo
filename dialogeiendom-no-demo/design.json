@@ -1,0 +1,35 @@
+{
+  "slug": "dialogeiendom-no-demo",
+  "firma": "Dialog Eiendomsmegling",
+  "navType": "faner i bunn av hero, sticky",
+  "fonts": [
+    "Gantari",
+    "Ubuntu Mono"
+  ],
+  "palette": [
+    "#1d2b26",
+    "#c8a06a",
+    "#f3efe7",
+    "#6d7d72"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "eiendommer",
+    "prosess",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "eiendommer.html",
+    "prosess.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
