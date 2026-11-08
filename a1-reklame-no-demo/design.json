@@ -1,0 +1,37 @@
+{
+  "slug": "a1-reklame-no-demo",
+  "firma": "A1 Reklame AS",
+  "navType": "marquee-tape",
+  "fonts": [
+    "Anton",
+    "Figtree"
+  ],
+  "palette": [
+    "#12100f",
+    "#f6f2ec",
+    "#f26f21",
+    "#e2231a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "produkt",
+    "arbeid",
+    "tal",
+    "prosess",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "arbeid.html",
+    "prosess.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
