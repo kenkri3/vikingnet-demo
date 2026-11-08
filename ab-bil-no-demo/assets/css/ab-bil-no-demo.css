@@ -1,0 +1,433 @@
+
+/* ==========================================================================
+   AB Bil AS — ab-bil-no-demo
+   Egen stil, skrevet fra grunn. Fast venstre verktøyrail, grafitt + signalgul.
+   ========================================================================== */
+
+:root{
+  --grafitt:#141414;
+  --grafitt-dyp:#0b0b0b;
+  --stal:#1d1d1d;
+  --stal-lys:#2a2a28;
+  --gul:#f5c400;
+  --gul-dyp:#c99f00;
+  --papir:#f4f1ea;
+  --tekst:#dedbd2;
+  --tekst-svak:#9b978c;
+  --rail-w:62px;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --kondens:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --kant:1px solid #2c2c28;
+  --maxw:1180px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  padding-left:var(--rail-w);
+  background:var(--grafitt);
+  color:var(--tekst);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gul);text-decoration:none}
+a:hover{color:var(--papir)}
+h1,h2,h3,h4{font-family:var(--kondens);text-transform:uppercase;letter-spacing:.01em;line-height:.95;margin:0;color:var(--papir);font-weight:600}
+h1{font-size:clamp(2.3rem,9.6vw,6.3rem)}
+h2{font-size:clamp(1.9rem,6.4vw,3.6rem)}
+h3{font-size:clamp(1.25rem,3.4vw,1.8rem)}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+strong{color:var(--papir)}
+::selection{background:var(--gul);color:var(--grafitt)}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--gul);color:var(--grafitt);padding:12px 18px;font-weight:600}
+.skip:focus{left:var(--rail-w);top:8px}
+:focus-visible{outline:2px solid var(--gul);outline-offset:3px}
+
+/* ---------- verktøyrail ---------- */
+.rail{
+  position:fixed;left:0;top:0;bottom:0;width:var(--rail-w);z-index:40;
+  background:var(--grafitt-dyp);
+  border-right:1px solid #262622;
+  display:flex;flex-direction:column;align-items:center;
+  padding:14px 0 10px;
+  overflow-y:auto;overflow-x:hidden;
+}
+.rail__merke{
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  font-family:var(--kondens);font-size:23px;font-weight:700;letter-spacing:.04em;
+  color:var(--papir);line-height:1;margin-bottom:10px;
+}
+.rail__merke b{color:var(--gul)}
+.rail__merke span{font-family:var(--sans);font-size:7px;letter-spacing:.16em;color:var(--tekst-svak)}
+.rail__nav{display:flex;flex-direction:column;gap:1px;width:100%;margin-top:4px}
+.rail__lenke{
+  position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;
+  padding:10px 2px;color:var(--tekst-svak);
+  transition:color .18s ease,background .18s ease;
+}
+.rail__lenke svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.rail__lenke span{font-family:var(--kondens);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.rail__lenke:hover{color:var(--gul);background:#151513}
+.rail__lenke[aria-current="page"]{color:var(--gul);background:#171714}
+.rail__lenke[aria-current="page"]::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;background:var(--gul)}
+.rail__bunn{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:10px;padding-top:14px}
+.rail__ring{
+  writing-mode:vertical-rl;transform:rotate(180deg);
+  font-family:var(--kondens);font-size:11px;letter-spacing:.14em;color:var(--gul);
+  border:1px solid #3a3a2c;padding:10px 5px;background:#191914;
+}
+.rail__ring:hover{background:var(--gul);color:var(--grafitt)}
+.rail__prikk{width:6px;height:6px;border-radius:50%;background:var(--gul)}
+
+/* ---------- toppstripe ---------- */
+.topp{
+  display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;
+  padding:9px clamp(14px,3vw,34px);
+  border-bottom:var(--kant);background:var(--stal);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--tekst-svak);font-family:var(--kondens);
+}
+.topp b{color:var(--gul);font-weight:600}
+.topp a{color:var(--tekst)}
+.topp a:hover{color:var(--gul)}
+
+/* ---------- struktur ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(14px,4vw,40px)}
+.sek{padding:clamp(38px,7vw,86px) 0;position:relative}
+.sek--papir{background:var(--papir);color:#2a2a26}
+.sek--papir h2,.sek--papir h3{color:var(--grafitt)}
+.sek--papir strong{color:var(--grafitt)}
+.sek--papir a{color:#6b5500}
+.sek--papir a:hover{color:var(--grafitt)}
+.sek--kant{border-top:var(--kant)}
+.eyebrow{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--kondens);font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gul);margin-bottom:18px;
+}
+.sek--papir .eyebrow{color:#7a6200}
+.eyebrow::before{content:"";width:26px;height:2px;background:currentColor;flex:none}
+.sek-hode{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:flex-end;justify-content:space-between;margin-bottom:clamp(26px,4vw,48px)}
+.sek-hode p{max-width:46ch;margin:0;color:var(--tekst-svak)}
+.sek--papir .sek-hode p{color:#57544c}
+.bly{max-width:62ch}
+.bly--stor{font-size:clamp(1.02rem,2.2vw,1.2rem);color:var(--tekst)}
+.sek--papir .bly--stor{color:#3a3831}
+
+/* ---------- knapper ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--kondens);font-size:15px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
+  padding:13px 22px;border:1px solid var(--gul);background:var(--gul);color:var(--grafitt);
+  cursor:pointer;transition:background .16s ease,color .16s ease,transform .16s ease;
+}
+.btn:hover{background:var(--papir);border-color:var(--papir);color:var(--grafitt);transform:translateY(-1px)}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.btn--ghost{background:transparent;color:var(--papir);border-color:#4a4a44}
+.btn--ghost:hover{background:transparent;border-color:var(--gul);color:var(--gul)}
+.btn--mork{background:var(--grafitt);border-color:var(--grafitt);color:var(--papir)}
+.btn--mork:hover{background:#2e2e2a;border-color:#2e2e2a;color:var(--papir)}
+.btn--liten{padding:8px 13px;font-size:12.5px;letter-spacing:.09em}
+.btn-rad{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;background:var(--grafitt);border-bottom:var(--kant)}
+.hero__glow{position:absolute;inset:0;background:
+  radial-gradient(120% 80% at 78% 18%,rgba(245,196,0,.13),transparent 58%),
+  radial-gradient(90% 70% at 8% 100%,rgba(245,196,0,.05),transparent 60%);pointer-events:none}
+.hero__indre{position:relative;display:grid;grid-template-columns:1fr;min-height:min(88svh,760px);padding:clamp(26px,5vw,60px) 0 clamp(30px,5vw,54px)}
+.hero__tekst{position:relative;z-index:2;align-self:center;max-width:46ch}
+.hero__merke{
+  display:inline-flex;align-items:center;gap:9px;font-family:var(--kondens);font-size:12px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gul);border:1px solid rgba(245,196,0,.4);padding:6px 12px;margin-bottom:20px;
+}
+.hero__merke i{width:5px;height:5px;background:var(--gul);border-radius:50%;font-style:normal;animation:puls 2.6s infinite}
+@keyframes puls{0%,100%{opacity:1}50%{opacity:.25}}
+.hero h1{margin:0 0 18px}
+.hero h1 em{font-style:normal;color:var(--gul);display:block}
+.hero__ingress{font-size:clamp(.98rem,2.3vw,1.14rem);color:#bdb8ac;max-width:40ch;margin-bottom:8px}
+.hero__fakta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.fakta-boks{border-left:2px solid var(--gul);padding:2px 0 2px 11px}
+.fakta-boks b{display:block;font-family:var(--kondens);font-size:clamp(1.3rem,4vw,1.9rem);color:var(--papir);line-height:1;font-weight:600}
+.fakta-boks span{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--tekst-svak)}
+.hero__hjul{position:absolute;z-index:1;right:-14%;top:50%;transform:translateY(-50%);width:min(520px,92vw);aspect-ratio:1;pointer-events:none}
+.hero__hjul canvas,.hero__hjul svg{position:absolute;inset:0;width:100%;height:100%}
+.hjul-fallback{display:none}
+html.no-webgl .hjul-fallback{display:block}
+html.no-webgl .hjul-gl{display:none}
+.hero__rull{
+  position:absolute;right:0;bottom:16px;display:none;align-items:center;gap:8px;
+  font-family:var(--kondens);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--tekst-svak);
+}
+.hero__rull span{width:1px;height:34px;background:linear-gradient(var(--gul),transparent);animation:drip 2.2s infinite}
+@keyframes drip{0%{transform:scaleY(.2);opacity:0}45%{opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- tjenestegrid ---------- */
+.grid{display:grid;gap:14px}
+.grid--2{grid-template-columns:1fr}
+.grid--3{grid-template-columns:1fr}
+.grid--4{grid-template-columns:1fr}
+.kort{
+  position:relative;border:var(--kant);background:#181816;padding:clamp(18px,3vw,26px);
+  transition:border-color .2s ease,transform .2s ease,background .2s ease;
+}
+.kort:hover{border-color:rgba(245,196,0,.55);transform:translateY(-3px);background:#1c1c19}
+.kort__nr{font-family:var(--kondens);font-size:11px;letter-spacing:.2em;color:var(--gul);display:block;margin-bottom:12px}
+.kort h3{margin-bottom:9px;font-size:clamp(1.3rem,3.6vw,1.6rem)}
+.kort p{color:var(--tekst-svak);margin:0 0 12px;font-size:14.5px}
+.kort ul{display:flex;flex-direction:column;gap:5px;margin-top:10px}
+.kort li{font-size:13.5px;color:#b6b2a7;padding-left:16px;position:relative}
+.kort li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;background:var(--gul)}
+.kort__ikon{width:34px;height:34px;stroke:var(--gul);fill:none;stroke-width:1.6;margin-bottom:14px;stroke-linecap:round;stroke-linejoin:round}
+.sek--papir .kort{background:#fffdf8;border-color:#ddd8cb}
+.sek--papir .kort p,.sek--papir .kort li{color:#514e46}
+.sek--papir .kort:hover{background:#fff}
+
+/* ---------- bildeblokk ---------- */
+.splitt{display:grid;gap:clamp(18px,3vw,34px);grid-template-columns:1fr;align-items:center}
+.bilde{position:relative;overflow:hidden;border:1px solid #2c2c28;background:#1a1a18}
+.bilde img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.bilde:hover img{transform:scale(1.03)}
+.bilde--hoy{aspect-ratio:4/5}
+.bilde--vid{aspect-ratio:16/10}
+.bilde__tekst{
+  position:absolute;left:0;bottom:0;right:0;padding:16px 18px;font-size:12px;letter-spacing:.05em;
+  background:linear-gradient(transparent,rgba(10,10,9,.88));color:#dedbd2;
+}
+.bilde__merke{
+  position:absolute;top:12px;left:12px;background:var(--gul);color:var(--grafitt);
+  font-family:var(--kondens);font-size:11px;font-weight:600;letter-spacing:.15em;padding:4px 9px;
+}
+.splitt__tekst h2{margin-bottom:16px}
+
+/* ---------- jobbkø-teaser ---------- */
+.ko{border:var(--kant);background:#171715}
+.ko__topp{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:var(--kant);font-family:var(--kondens);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--tekst-svak)}
+.ko__topp i{width:6px;height:6px;border-radius:50%;background:var(--gul);display:inline-block;margin-right:7px}
+.ko__rad{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto;gap:2px 12px;padding:12px 16px;border-bottom:1px solid #232320;align-items:center}
+.ko__rad:last-child{border-bottom:0}
+.ko__rad b{font-weight:500;color:var(--papir);font-size:14px;grid-column:2;grid-row:1}
+.ko__rad small{color:var(--tekst-svak);font-size:12px;grid-column:2;grid-row:2;font-family:var(--sans)}
+.stempel{
+  grid-row:1/3;grid-column:1;align-self:center;font-family:var(--kondens);font-size:10.5px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;padding:4px 8px;border:1px solid;white-space:nowrap;
+}
+.stempel--paa{color:var(--gul);border-color:rgba(245,196,0,.5);background:rgba(245,196,0,.08)}
+.stempel--klar{color:#7fdca4;border-color:rgba(127,220,164,.4);background:rgba(127,220,164,.07)}
+.stempel--vent{color:var(--tekst-svak);border-color:#3a3a34}
+
+/* ---------- pristabell ---------- */
+.pris{border:var(--kant);background:#191917}
+.pris__rad{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;justify-content:space-between;padding:15px 18px;border-bottom:1px solid #262622}
+.pris__rad:last-child{border-bottom:0}
+.pris__navn{font-family:var(--kondens);font-size:clamp(1.05rem,3vw,1.3rem);text-transform:uppercase;color:var(--papir);letter-spacing:.03em}
+.pris__navn small{display:block;font-family:var(--sans);font-size:11.5px;letter-spacing:0;text-transform:none;color:var(--tekst-svak);margin-top:3px;font-weight:400}
+.sek--papir .pris__navn small{color:#57544c}
+.pris__sum{font-family:var(--kondens);font-size:clamp(1.15rem,3.2vw,1.5rem);color:var(--gul);font-weight:600;white-space:nowrap}
+.pris__sum small{font-family:var(--sans);font-size:10.5px;color:var(--tekst-svak);letter-spacing:.04em}
+.sek--papir .pris{background:#fffdf8;border-color:#ddd8cb}
+.sek--papir .pris__rad{border-color:#e3ded1}
+.sek--papir .pris__navn{color:var(--grafitt)}
+.sek--papir .pris__sum{color:#6b5500}
+.merknad{font-size:12px;color:var(--tekst-svak);margin-top:14px;max-width:58ch}
+
+/* ---------- sitat ---------- */
+.sitat{display:grid;gap:18px;grid-template-columns:1fr;border-top:3px solid var(--gul);padding-top:clamp(20px,4vw,34px);margin:0}
+.sitat blockquote{margin:0;max-width:34ch;font-family:var(--kondens);font-size:clamp(1.5rem,5.2vw,2.7rem);line-height:1.06;color:var(--papir);text-transform:none;letter-spacing:0;font-weight:500}
+.sitat figcaption{font-size:12.5px;color:var(--tekst-svak);letter-spacing:.06em;text-transform:uppercase;font-family:var(--kondens)}
+.sitat__stjerne{color:var(--gul);letter-spacing:.22em;font-size:14px}
+.sek--papir .sitat blockquote{color:var(--grafitt)}
+.sek--papir .sitat figcaption{color:#5b5850}
+.sek--papir .sitat__stjerne{color:#7a6200}
+
+/* ---------- prosess ---------- */
+.steg{display:grid;gap:16px;grid-template-columns:1fr;counter-reset:s}
+.steg li{position:relative;padding:20px 20px 20px 62px;border:var(--kant);background:#181816}
+.steg li::before{
+  counter-increment:s;content:counter(s,decimal-leading-zero);
+  position:absolute;left:16px;top:16px;font-family:var(--kondens);font-size:24px;font-weight:700;color:var(--gul);
+}
+.steg b{display:block;font-family:var(--kondens);font-size:1.22rem;text-transform:uppercase;color:var(--papir);margin-bottom:4px;letter-spacing:.03em}
+.steg p{margin:0;font-size:14px;color:var(--tekst-svak)}
+.sek--papir .steg li{background:#fffdf8;border-color:#ddd8cb}
+.sek--papir .steg b{color:var(--grafitt)}
+.sek--papir .steg p{color:#57544c}
+
+/* ---------- kontakt ---------- */
+.kontakt-grid{display:grid;gap:clamp(20px,3vw,34px);grid-template-columns:1fr}
+.info-liste{display:flex;flex-direction:column;gap:0;border-top:var(--kant)}
+.info-liste div{display:grid;grid-template-columns:88px 1fr;gap:10px;padding:13px 0;border-bottom:var(--kant);align-items:start}
+.info-liste dt,.info-liste span:first-child{font-family:var(--kondens);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--tekst-svak);padding-top:3px}
+.info-liste b{color:var(--papir);font-weight:500;font-size:15px}
+.info-liste em{font-style:normal;color:var(--tekst-svak);font-size:13px}
+
+.skjema{display:grid;gap:15px}
+.felt{display:flex;flex-direction:column;gap:6px}
+.felt label{font-family:var(--kondens);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--tekst-svak)}
+.felt input,.felt select,.felt textarea{
+  font-family:var(--sans);font-size:16px;color:var(--papir);background:#101010;
+  border:1px solid #34342e;padding:11px 13px;width:100%;border-radius:0;
+}
+.felt input:focus,.felt select:focus,.felt textarea:focus{border-color:var(--gul);outline:none}
+.felt textarea{min-height:120px;resize:vertical}
+.felt--to{display:grid;gap:15px;grid-template-columns:1fr}
+.skjema__svar{border-left:3px solid var(--gul);background:#1b1b16;padding:13px 16px;font-size:14px;display:none}
+.skjema__svar.vis{display:block}
+.skjema__svar b{display:block;font-family:var(--kondens);text-transform:uppercase;letter-spacing:.1em;color:var(--gul);margin-bottom:3px}
+
+/* ---------- CTA-stripe ---------- */
+.cta{background:var(--gul);color:var(--grafitt);padding:clamp(30px,6vw,58px) 0}
+.cta h2{color:var(--grafitt);margin-bottom:12px}
+.cta p{max-width:52ch;color:#3a3200;margin-bottom:0}
+.cta .knapper{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.cta .btn{background:var(--grafitt);border-color:var(--grafitt);color:var(--papir)}
+.cta .btn:hover{background:#2b2b28;border-color:#2b2b28}
+.cta .btn--linje{background:transparent;color:var(--grafitt);border-color:var(--grafitt)}
+.cta .btn--linje:hover{background:var(--grafitt);color:var(--papir)}
+
+/* ---------- footer ---------- */
+.bunn{background:var(--grafitt-dyp);border-top:1px solid #242420;padding:clamp(28px,5vw,50px) 0 22px;font-size:13.5px}
+.bunn__grid{display:grid;gap:24px;grid-template-columns:1fr}
+.bunn h4{font-family:var(--kondens);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gul);margin:0 0 10px}
+.bunn ul{display:flex;flex-direction:column;gap:7px}
+.bunn a{color:var(--tekst);font-size:13.5px}
+.bunn a:hover{color:var(--gul)}
+.bunn p{color:var(--tekst-svak);margin:0}
+.bunn__lang{border-top:1px solid #232320;margin-top:26px;padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;font-size:11.5px;color:#7d7a72;letter-spacing:.04em}
+
+/* ---------- panel ---------- */
+.panel-hode{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;padding:clamp(20px,4vw,34px) 0 18px}
+.panel-hode h1{font-size:clamp(1.9rem,6vw,3rem)}
+.panel-hode p{margin:6px 0 0;font-size:13.5px;color:var(--tekst-svak);max-width:60ch}
+.kpi{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);margin-bottom:18px}
+.kpi__boks{border:var(--kant);background:#181816;padding:14px 15px;position:relative;overflow:hidden}
+.kpi__boks::after{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:var(--gul)}
+.kpi__boks b{display:block;font-family:var(--kondens);font-size:clamp(1.7rem,5vw,2.3rem);line-height:1;color:var(--papir);font-weight:600}
+.kpi__boks span{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--tekst-svak);font-family:var(--kondens)}
+.kpi__boks em{font-style:normal;display:block;font-size:11px;color:#7fdca4;margin-top:4px}
+.verktoy{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.filter{
+  font-family:var(--kondens);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+  padding:7px 13px;border:1px solid #35352f;background:transparent;color:var(--tekst-svak);cursor:pointer;
+}
+.filter:hover{color:var(--papir);border-color:#4a4a42}
+.filter[aria-pressed="true"]{background:var(--gul);border-color:var(--gul);color:var(--grafitt)}
+.verktoy__sok{margin-left:auto;display:flex;align-items:center;gap:8px}
+.verktoy__sok input{
+  font-family:var(--sans);font-size:13.5px;background:#101010;border:1px solid #34342e;color:var(--papir);
+  padding:8px 11px;width:140px;
+}
+.rutenett{display:grid;gap:10px;grid-template-columns:1fr}
+.jobb{border:var(--kant);background:#181816;padding:14px 15px;display:grid;gap:8px;grid-template-columns:1fr auto;align-items:start}
+.jobb__topp{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;justify-content:space-between}
+.jobb__id{font-family:var(--kondens);font-size:11px;letter-spacing:.16em;color:var(--tekst-svak)}
+.jobb h3{font-size:1.18rem;margin:0;letter-spacing:.02em}
+.jobb__meta{display:flex;flex-wrap:wrap;gap:3px 14px;font-size:12.5px;color:var(--tekst-svak);grid-column:1/-1}
+.jobb__meta b{color:var(--tekst);font-weight:400}
+.jobb__handlinger{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.jobb--ferdig{opacity:.62}
+.jobb--ferdig h3{text-decoration:line-through;text-decoration-color:#5a5a52}
+.tom{border:1px dashed #35352f;padding:24px;text-align:center;color:var(--tekst-svak);font-size:13.5px}
+.logg{border:var(--kant);background:#151513;margin-top:18px}
+.logg__hode{padding:10px 15px;border-bottom:var(--kant);font-family:var(--kondens);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--tekst-svak)}
+.logg ul{padding:8px 15px 12px;display:flex;flex-direction:column;gap:7px;max-height:216px;overflow:auto}
+.logg li{font-size:12.5px;color:#b3afa4;display:grid;grid-template-columns:52px 1fr;gap:9px}
+.logg time{font-family:var(--kondens);color:var(--gul);font-size:11.5px;letter-spacing:.06em;padding-top:2px}
+
+/* ---------- avsløring ---------- */
+html.js .reveal{transform:translateY(18px);transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+html.js .reveal.er-inne{transform:none}
+
+/* ---------- media ---------- */
+@media (min-width:520px){
+  .felt--to{grid-template-columns:1fr 1fr}
+  .grid--2{grid-template-columns:1fr 1fr}
+  .kpi{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:640px){
+  :root{--rail-w:78px}
+  .grid--3{grid-template-columns:repeat(2,1fr)}
+  .grid--4{grid-template-columns:repeat(2,1fr)}
+  .info-liste div{grid-template-columns:110px 1fr}
+  .rutenett{grid-template-columns:1fr 1fr}
+  .bunn__grid{grid-template-columns:1.4fr 1fr 1fr}
+  .steg{grid-template-columns:1fr 1fr}
+  .hero__rull{display:flex}
+}
+@media (min-width:900px){
+  :root{--rail-w:96px}
+  .hero__indre{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:min(92svh,820px)}
+  .hero__hjul{position:absolute;right:-2%;top:50%;transform:translateY(-50%);width:min(660px,58vw)}
+  .grid--3{grid-template-columns:repeat(3,1fr)}
+  .grid--4{grid-template-columns:repeat(4,1fr)}
+  .splitt{grid-template-columns:1fr 1fr}
+  .splitt--vend .bilde{order:2}
+  .kontakt-grid{grid-template-columns:1fr 1fr}
+  .sitat{grid-template-columns:1.5fr 1fr;align-items:end}
+  .steg{grid-template-columns:repeat(4,1fr)}
+  .kpi{grid-template-columns:repeat(4,1fr)}
+  .bunn__grid{grid-template-columns:1.6fr 1fr 1fr 1fr}
+  .rutenett{grid-template-columns:1fr 1fr}
+  .panel-skall{display:grid;grid-template-columns:220px minmax(0,1fr);gap:22px;align-items:start}
+  .panel-skall .kpi{grid-template-columns:repeat(2,1fr)}
+}
+@media (min-width:1200px){
+  :root{--rail-w:104px}
+  .rail__lenke span{font-size:9.5px}
+  .rutenett{grid-template-columns:1fr 1fr 1fr}
+  .panel-skall{grid-template-columns:240px minmax(0,1fr)}
+  .panel-skall .kpi{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  html.js .reveal{transform:none}
+  .hero__hjul{transform:translateY(-50%)}
+}
+
+/* ---------- undersider ---------- */
+.sidehode{
+  position:relative;overflow:hidden;
+  padding:clamp(28px,6vw,66px) 0 clamp(24px,4vw,40px);
+  border-bottom:var(--kant);
+  background:linear-gradient(180deg,#191917,var(--grafitt));
+}
+.sidehode::after{
+  content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;
+  border:1px solid rgba(245,196,0,.16);pointer-events:none;
+}
+.sidehode__sti{font-family:var(--kondens);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--tekst-svak);margin:0 0 14px}
+.sidehode__sti a{color:var(--tekst-svak)}
+.sidehode__sti a:hover{color:var(--gul)}
+.sidehode h1{font-size:clamp(2.2rem,9vw,4.6rem);max-width:22ch;margin:0 0 16px}
+.sidehode p{max-width:60ch;margin:0}
+
+/* ---------- ko teaser-avstand ---------- */
+.ko--topp{margin-top:clamp(20px,3vw,32px);margin-bottom:20px}
+
+/* ---------- spørsmål og svar ---------- */
+.faq{border-top:var(--kant)}
+.faq details{border-bottom:var(--kant)}
+.faq summary{
+  cursor:pointer;padding:16px 0;list-style:none;
+  display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  font-family:var(--kondens);font-size:clamp(1.05rem,3vw,1.3rem);text-transform:uppercase;
+  letter-spacing:.03em;color:var(--papir);
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--gul)}
+.faq summary::after{content:"+";color:var(--gul);font-size:1.35rem;line-height:1;flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 0 18px;font-size:14px;color:var(--tekst-svak);max-width:72ch}
+
+/* ---------- panel: sidekolonne ---------- */
+.panel-side{display:grid;gap:16px;align-content:start;margin-bottom:20px}
+.panel-side .merknad{margin:0}
+@media (min-width:900px){
+  .panel-side{margin-bottom:0;position:sticky;top:16px}
+}
+

@@ -1,175 +1,196 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Abelone Brud &amp; Selskap – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Abelone Brud &amp; Selskap.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<meta name="robots" content="noindex">
+<title>Panel — salongen i dag | ABELONE.NO</title>
+<meta name="description" content="Driftspanel for ABELONE.NO: dagens prøvetimer, ukeskalender og sømoppdrag med status.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="ABELONE.NO Brudesalong &amp; Nettbutikk">
+<meta property="og:title" content="Panel — salongen i dag | ABELONE.NO">
+<meta property="og:description" content="Driftspanel for ABELONE.NO: dagens prøvetimer, ukeskalender og sømoppdrag med status.">
+<meta property="og:image" content="assets/img/02-abelone-no.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/abelone-no-demo.css">
 </head>
-<body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Abelone Brud &amp; Selskap" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Abelone Brud &amp; Selskap. Klikk på en oppgave for å oppdatere status.</p>
+
+<div class="panel">
+  <header class="panel__topp">
+    <div class="wrap">
+      <a class="panel__merke" href="index.html"><strong>ABELONE</strong><span>Salongpanel</span></a>
+      <div class="panel__handling">
+        <span class="panel__hvem">Innlogget: salong · Lørenfallet</span>
+        <a class="knapp knapp--flat knapp--liten" href="index.html">Til siden</a>
       </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Abelone Brud &amp; Selskap</div>
     </div>
+  </header>
 
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+  <div class="panel__hoved">
+    <div class="wrap">
+      <div class="panel__intro">
+        <div>
+          <h1>Salongen i dag</h1>
+          <p class="panel__dato" data-fremdrift>0 av 0 fullført i dag</p>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Kuratert utvalg og kjente merkevarer</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Personlig veiledning og prøving</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Spesialbestilling og tilpasning</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Kundeservice og rask levering</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
+        <p class="panel__dato">Fredag 6. november · uke 45</p>
       </div>
 
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="kpi">
+        <div class="kpi__kort">
+          <p class="kpi__merke">Prøvetimer i dag</p>
+          <p class="kpi__tall">5</p>
+          <p class="kpi__hjelp">Første kl. 09.00</p>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om kuratert utvalg og kjente merkevarer</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om personlig veiledning og prøving</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av spesialbestilling og tilpasning</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+        <div class="kpi__kort" data-kpi="venter">
+          <p class="kpi__merke">Venter på behandling</p>
+          <p class="kpi__tall">9</p>
+          <p class="kpi__hjelp">Prøving og søm</p>
+        </div>
+        <div class="kpi__kort" data-kpi="ferdig">
+          <p class="kpi__merke">Fullført i dag</p>
+          <p class="kpi__tall">0</p>
+          <p class="kpi__hjelp">Oppdateres når du merker ferdig</p>
+        </div>
+        <div class="kpi__kort">
+          <p class="kpi__merke">Kjoler til levering</p>
+          <p class="kpi__tall">2</p>
+          <p class="kpi__hjelp">Begge klare til henting</p>
+        </div>
       </div>
-    </div>
 
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
+      <div class="faner" role="tablist" aria-label="Visninger">
+        <button class="fane" role="tab" id="fane-kalender" aria-controls="vis-kalender" aria-selected="true">Kalender</button>
+        <button class="fane" role="tab" id="fane-provetime" aria-controls="vis-provetime" aria-selected="false">Prøvetimer</button>
+        <button class="fane" role="tab" id="fane-som" aria-controls="vis-som" aria-selected="false">Sømoppdrag</button>
+      </div>
+
+      <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+
+      <section class="panel__vis" id="vis-kalender" role="tabpanel" aria-labelledby="fane-kalender">
+        <div class="panel__topprad">
+          <h2>Uke 45</h2>
+          <span class="dato">Kun etter avtale</span>
+        </div>
+        <div class="uke">
+          <div class="dag">
+            <p class="dag__navn"><span>Mandag</span><span>2</span></p>
+            <div class="avtale" id="m1"><strong>10.00 · Ingrid Solberg</strong><span>Prøvetime brudekjole</span></div>
+            <div class="avtale" id="m2"><strong>13.30 · Tone Fjeld</strong><span>Søm: sy inn liv</span></div>
+          </div>
+          <div class="dag">
+            <p class="dag__navn"><span>Tirsdag</span><span>3</span></p>
+            <div class="avtale" id="ti1"><strong>09.30 · Anne Bakken</strong><span>Redesign til dåpskjole</span></div>
+            <div class="avtale" id="ti2"><strong>15.00 · Live Nygård</strong><span>Brodering navn og dato</span></div>
+          </div>
+          <div class="dag">
+            <p class="dag__navn"><span>Onsdag</span><span>4</span></p>
+            <div class="avtale" id="o1"><strong>11.00 · Nora Kvamme</strong><span>Prøvetime brudekjole</span></div>
+            <p class="dag__tom">Resten av dagen ledig</p>
+          </div>
+          <div class="dag">
+            <p class="dag__navn"><span>Torsdag</span><span>5</span></p>
+            <div class="avtale" id="to1"><strong>12.00 · Kari Ødegård</strong><span>Søm: legge opp slep</span></div>
+            <div class="avtale" id="to2"><strong>14.30 · Hanne Bråten</strong><span>Tilbehør og slør</span></div>
+          </div>
+          <div class="dag">
+            <p class="dag__navn"><span>Fredag</span><span>6</span></p>
+            <div class="avtale" id="a1"><strong>09.00 · Ingrid Solberg</strong><span>Prøvetime brudekjole</span> <span data-avtale-status hidden>Venter</span></div>
+            <div class="avtale" id="a2"><strong>10.30 · Marte Lindqvist</strong><span>Dåpskjole, leie</span> <span data-avtale-status hidden>Venter</span></div>
+            <div class="avtale" id="a3"><strong>12.00 · Silje Aas</strong><span>Tilpasning, andregang</span> <span data-avtale-status hidden>Venter</span></div>
+            <div class="avtale" id="a4"><strong>14.00 · Hanne Bråten</strong><span>Brudetilbehør</span> <span data-avtale-status hidden>Venter</span></div>
+            <div class="avtale" id="a5"><strong>15.30 · Nora Kvamme</strong><span>Prøvetime brudekjole</span> <span data-avtale-status hidden>Venter</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel__vis" id="vis-provetime" role="tabpanel" aria-labelledby="fane-provetime" hidden>
+        <div class="panel__topprad">
+          <h2>Dagens prøvetimer</h2>
+          <label class="eyebrow" for="panelfilter" style="margin:0">Vis
+            <select id="panelfilter" data-panelfilter style="margin-left:.5rem;padding:.4rem .6rem;border:1px solid var(--kant);background:var(--hvit);font:inherit;font-size:.8rem">
+              <option value="alle">alle</option>
+              <option value="venter">venter</option>
+              <option value="ferdig">ferdig</option>
+            </select>
+          </label>
+        </div>
+
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Ingrid Solberg<small>Brudekjole · str. 38</small></div>
+          <div class="rad__meta"><strong>09.00</strong>Salongen, andre etasje</div>
+          <span class="status status--vent">Venter</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="a1">Merk ferdig</button></div>
+        </article>
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Marte Lindqvist<small>Dåpskjole, leie · str. 62</small></div>
+          <div class="rad__meta"><strong>10.30</strong>Utleie, tre dager</div>
+          <span class="status status--vent">Venter</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="a2">Merk ferdig</button></div>
+        </article>
+        <article class="rad" data-status="paa">
+          <div class="rad__navn">Silje Aas<small>Tilpasning, andregang</small></div>
+          <div class="rad__meta"><strong>12.00</strong>Syatelier</div>
+          <span class="status status--paa">I arbeid</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="a3">Merk ferdig</button></div>
+        </article>
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Hanne Bråten<small>Brudetilbehør og slør</small></div>
+          <div class="rad__meta"><strong>14.00</strong>Salongen</div>
+          <span class="status status--vent">Venter</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="a4">Merk ferdig</button></div>
+        </article>
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Nora Kvamme<small>Brudekjole · prøvetime</small></div>
+          <div class="rad__meta"><strong>15.30</strong>Salongen</div>
+          <span class="status status--vent">Venter</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="a5">Merk ferdig</button></div>
+        </article>
+      </section>
+
+      <section class="panel__vis" id="vis-som" role="tabpanel" aria-labelledby="fane-som" hidden>
+        <div class="panel__topprad">
+          <h2>Sømoppdrag i kø</h2>
+          <span class="dato">Sortert etter frist</span>
+        </div>
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Kari Ødegård<small>Legge opp slep · kjole fra Lilly</small></div>
+          <div class="rad__meta"><strong>Frist 12.11</strong>Syatelier</div>
+          <span class="status status--hoy">Haster</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="to1">Merk ferdig</button></div>
+        </article>
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Tone Fjeld<small>Sy inn liv · egen kjole</small></div>
+          <div class="rad__meta"><strong>Frist 14.11</strong>Syatelier</div>
+          <span class="status status--vent">Venter</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="m2">Merk ferdig</button></div>
+        </article>
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Anne Bakken<small>Redesign til dåpskjole</small></div>
+          <div class="rad__meta"><strong>Frist 20.11</strong>Syatelier</div>
+          <span class="status status--vent">Venter</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="ti1">Merk ferdig</button></div>
+        </article>
+        <article class="rad" data-status="venter">
+          <div class="rad__navn">Live Nygård<small>Brodering av navn og dato</small></div>
+          <div class="rad__meta"><strong>Frist 22.11</strong>Syatelier</div>
+          <span class="status status--vent">Venter</span>
+          <div class="rad__handling"><button class="knapp knapp--flat knapp--liten" type="button" data-ferdig="ti2">Merk ferdig</button></div>
+        </article>
+      </section>
     </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Abelone Brud &amp; Selskap</p>
-      <p class="bunn__tekst">Norge · post@abelone.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Abelone Brud &amp; Selskap</p>
   </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+</div>
+</main>
+
+
+<script src="assets/js/abelone-no-demo.js" defer></script>
 </body>
 </html>

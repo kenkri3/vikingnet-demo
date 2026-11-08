@@ -1,0 +1,37 @@
+{
+  "slug": "elektrisk-no-demo",
+  "firma": "AS Elektrisk",
+  "navType": "terminal-linje",
+  "fonts": [
+    "Oswald",
+    "Roboto Mono"
+  ],
+  "palette": [
+    "#0a0e12",
+    "#2f5aa1",
+    "#b8f24d",
+    "#e8eef4"
+  ],
+  "motion": [
+    "canvas",
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "sikkerhet",
+    "prosjekter",
+    "folk",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "sikkerhet.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "slug": "abelone-no-demo",
+  "firma": "ABELONE.NO Brudesalong & Nettbutikk",
+  "navType": "buet ikonmeny",
+  "fonts": [
+    "Italiana",
+    "Jost"
+  ],
+  "palette": [
+    "#f8f4ee",
+    "#241f1b",
+    "#b08d57",
+    "#6e6259"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "kolleksjon",
+    "provetime",
+    "syatelier",
+    "dap",
+    "kunst",
+    "merker",
+    "sitat",
+    "besok"
+  ],
+  "pages": [
+    "index.html",
+    "brudekjoler.html",
+    "provetime.html",
+    "som-og-tilpasning.html",
+    "priser.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

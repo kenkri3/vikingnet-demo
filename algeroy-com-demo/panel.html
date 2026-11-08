@@ -1,175 +1,281 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Algerøy Rådgivning – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Algerøy Rådgivning.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Saksportalen — Advokatfirmaet Algeroy AS</title>
+<meta name="description" content="Demoversjon av saksportalen til Advokatfirmaet Algeroy AS: aktive saker, frister og dokumenter med mulighet for å legge til notater og filtrere sakslisten.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Advokatfirmaet Algeroy AS">
+<meta property="og:title" content="Saksportalen — Advokatfirmaet Algeroy AS">
+<meta property="og:description" content="Demoversjon av saksportalen til Advokatfirmaet Algeroy AS: aktive saker, frister og dokumenter med mulighet for å legge til notater og filtrere sakslisten.">
+<meta property="og:image" content="assets/img/hero-bransje.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/algeroy-com-demo.css">
+<script>
+(function () {
+  var d = document, r = d.documentElement;
+  r.classList.add("js");
+  var s = d.createElement("script");
+  s.src = "assets/js/algeroy-com-demo.js";
+  s.onerror = function () { r.classList.remove("js"); };
+  (d.head || d.documentElement).appendChild(s);
+})();
+</script>
 </head>
-<body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Algerøy Rådgivning" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
+<body data-meny="lukket">
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<div class="slør" aria-hidden="true"></div>
+<header class="topplinje">
+  <a class="merke" href="index.html"><span class="merke-navn">Algeroy</span></a>
+  <button class="meny-knapp" type="button" data-meny-knapp aria-expanded="false" aria-controls="kapittel">Kapittel <span aria-hidden="true"></span></button>
 </header>
-<main id="innhold">
+<aside class="kapittel" id="kapittel" aria-label="Kapitler">
+  <a class="merke" href="index.html">
+    <span class="merke-navn">Algeroy</span>
+    <span class="merke-under">Advokatfirmaet AS<br>Notodden</span>
+  </a>
+  <nav aria-label="Hovedmeny">
+    <p class="kapittel-tittel">Innhold</p>
+    <ol class="kapittel-liste">
+      <li><a class="kapittel-lenke" href="index.html"><span class="romertall">I</span><span>Firmaet</span></a></li>
+      <li><a class="kapittel-lenke" href="fagomrader.html"><span class="romertall">II</span><span>Fagområder</span></a></li>
+      <li><a class="kapittel-lenke" href="team.html"><span class="romertall">III</span><span>Advokatene</span></a></li>
+      <li><a class="kapittel-lenke" href="prosess.html"><span class="romertall">IV</span><span>Prosessen</span></a></li>
+      <li><a class="kapittel-lenke" href="om.html"><span class="romertall">V</span><span>Om Algerøy</span></a></li>
+      <li><a class="kapittel-lenke" href="kontakt.html"><span class="romertall">VI</span><span>Kontakt</span></a></li>
+      <li><a class="kapittel-lenke" href="panel.html" aria-current="page"><span class="romertall">VII</span><span>Saksportalen</span></a></li>
+    </ol>
+  </nav>
+  <div class="kapittel-fot">
+    <a href="tel:+4796912692">+47 96 91 26 92</a>
+    <a href="mailto:pa@algeroy.com">pa@algeroy.com</a>
+    <span class="sted">Heddalsvegen 11<br>3674 Notodden</span>
+  </div>
+  <div class="stilles" aria-hidden="true"><span></span></div>
+</aside>
+<div class="innhold">
+<main id="hoved">
   <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Algerøy Rådgivning. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Algerøy Rådgivning</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+    <div class="ramme">
+      <div class="panel-topp">
+        <div>
+          <p class="eyebrow">Kapittel VII · Internt</p>
+          <h1>Saksportalen</h1>
+          <p>Saker, frister og dokumenter for Advokatfirmaet Algeroy AS. Demoversjon med eksempeldata.</p>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Forretningsjus og arbeidsrett</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Fast eiendom, entreprise og boligrett</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Familie, arv og skifte</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Trygderett, erstatning og prosedyre</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
+        <span class="panel-merke">Demo · eksempeldata</span>
       </div>
 
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="kpi-rad" aria-label="Nøkkeltall">
+        <div class="kpi">
+          <p class="navn">Aktive saker</p>
+          <p class="verdi">8</p>
+          <p class="endring">2 nye denne uken</p>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om forretningsjus og arbeidsrett</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om fast eiendom, entreprise og boligrett</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av familie, arv og skifte</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+        <div class="kpi">
+          <p class="navn">Frister neste 7 dager</p>
+          <p class="verdi">2</p>
+          <p class="endring">neste: 11. november</p>
+        </div>
+        <div class="kpi">
+          <p class="navn">Timer denne måneden</p>
+          <p class="verdi">87</p>
+          <p class="endring">61 % fakturerbart</p>
+        </div>
+        <div class="kpi">
+          <p class="navn">Notater i dag</p>
+          <p class="verdi" id="kpi-notater">4</p>
+          <p class="endring">sist kl. 14.12</p>
+        </div>
       </div>
-    </div>
 
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
+      <div class="panel-rutenett">
+        <div class="panel-boks">
+          <div class="panel-boks-hode">
+            <h2>Saker</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer saker">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="selskapsrett" aria-pressed="false">Selskap</button>
+              <button class="filter" type="button" data-filter="arbeidsrett" aria-pressed="false">Arbeid</button>
+              <button class="filter" type="button" data-filter="kontraktsrett" aria-pressed="false">Kontrakt</button>
+              <button class="filter" type="button" data-filter="tvist" aria-pressed="false">Tvist</button>
+            </div>
+          </div>
+          <div class="panel-boks-hode" style="border-top:0;padding-top:.7rem;padding-bottom:.7rem">
+            <p style="margin:0;font-size:.76rem;color:var(--graa)" id="sak-antall">8 saker</p>
+            <button class="liten-knapp" type="button" id="eksporter">Last ned saksliste</button>
+          </div>
+          <ul class="sak-liste" id="sak-liste">
+        <li class="sak" data-sak="S-1042" data-type="arbeidsrett" data-tittel="Nedbemanning – 14 ansatte" data-klient="Vestre Slidre Entreprenør AS" data-type-navn="Arbeidsrett" data-frist="11.11.2026">
+          <div>
+            <p class="sak-tittel">Nedbemanning – 14 ansatte</p>
+            <p class="sak-meta"><span>Vestre Slidre Entreprenør AS</span><span class="skille">/</span><span>Arbeidsrett</span><span class="skille">/</span><span>S-1042</span><span class="skille">/</span><span data-notater="3">3 notater</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato" data-haster="ja">11.11.2026</span>
+            <span class="status" data-status="frist">Frist nær</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+        <li class="sak" data-sak="S-1039" data-type="tvist" data-tittel="Kontraktsbrudd etter entreprise" data-klient="Bø Tekniske AS" data-type-navn="Tvisteløsning" data-frist="14.11.2026">
+          <div>
+            <p class="sak-tittel">Kontraktsbrudd etter entreprise</p>
+            <p class="sak-meta"><span>Bø Tekniske AS</span><span class="skille">/</span><span>Tvisteløsning</span><span class="skille">/</span><span>S-1039</span><span class="skille">/</span><span data-notater="7">7 notater</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato">14.11.2026</span>
+            <span class="status" data-status="domstol">For retten</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+        <li class="sak" data-sak="S-1044" data-type="selskapsrett" data-tittel="Fusjon med heleid datterselskap" data-klient="Granli Gruppen AS" data-type-navn="Selskapsrett" data-frist="18.11.2026">
+          <div>
+            <p class="sak-tittel">Fusjon med heleid datterselskap</p>
+            <p class="sak-meta"><span>Granli Gruppen AS</span><span class="skille">/</span><span>Selskapsrett</span><span class="skille">/</span><span>S-1044</span><span class="skille">/</span><span data-notater="1">1 notat</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato">18.11.2026</span>
+            <span class="status" data-status="aktiv">Aktiv</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+        <li class="sak" data-sak="S-1046" data-type="kontraktsrett" data-tittel="Rammeavtale med underleverandør" data-klient="Notodden Industriservice AS" data-type-navn="Kontraktsrett" data-frist="21.11.2026">
+          <div>
+            <p class="sak-tittel">Rammeavtale med underleverandør</p>
+            <p class="sak-meta"><span>Notodden Industriservice AS</span><span class="skille">/</span><span>Kontraktsrett</span><span class="skille">/</span><span>S-1046</span><span class="skille">/</span><span data-notater="2">2 notater</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato">21.11.2026</span>
+            <span class="status" data-status="aktiv">Aktiv</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+        <li class="sak" data-sak="S-1048" data-type="arbeidsrett" data-tittel="Sluttavtale for mellomleder" data-klient="Fossum Helse AS" data-type-navn="Arbeidsrett" data-frist="25.11.2026">
+          <div>
+            <p class="sak-tittel">Sluttavtale for mellomleder</p>
+            <p class="sak-meta"><span>Fossum Helse AS</span><span class="skille">/</span><span>Arbeidsrett</span><span class="skille">/</span><span>S-1048</span><span class="skille">/</span><span data-notater="0">0 notater</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato">25.11.2026</span>
+            <span class="status" data-status="aktiv">Aktiv</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+        <li class="sak" data-sak="S-1041" data-type="selskapsrett" data-tittel="Oppdatering av aksjonæravtale" data-klient="Tinn Teknologi AS" data-type-navn="Selskapsrett" data-frist="02.12.2026">
+          <div>
+            <p class="sak-tittel">Oppdatering av aksjonæravtale</p>
+            <p class="sak-meta"><span>Tinn Teknologi AS</span><span class="skille">/</span><span>Selskapsrett</span><span class="skille">/</span><span>S-1041</span><span class="skille">/</span><span data-notater="4">4 notater</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato">02.12.2026</span>
+            <span class="status" data-status="aktiv">Aktiv</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+        <li class="sak" data-sak="S-1049" data-type="kontraktsrett" data-tittel="Brukervilkår for ny app" data-klient="Fjellheim App AS" data-type-navn="Kontraktsrett" data-frist="09.12.2026">
+          <div>
+            <p class="sak-tittel">Brukervilkår for ny app</p>
+            <p class="sak-meta"><span>Fjellheim App AS</span><span class="skille">/</span><span>Kontraktsrett</span><span class="skille">/</span><span>S-1049</span><span class="skille">/</span><span data-notater="1">1 notat</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato">09.12.2026</span>
+            <span class="status" data-status="aktiv">Aktiv</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+        <li class="sak" data-sak="S-1043" data-type="tvist" data-tittel="Tvist om timesats ved innleie" data-klient="Rjukan Bygg AS" data-type-navn="Tvisteløsning" data-frist="05.12.2026">
+          <div>
+            <p class="sak-tittel">Tvist om timesats ved innleie</p>
+            <p class="sak-meta"><span>Rjukan Bygg AS</span><span class="skille">/</span><span>Tvisteløsning</span><span class="skille">/</span><span>S-1043</span><span class="skille">/</span><span data-notater="5">5 notater</span></p>
+          </div>
+          <div class="sak-hoyre">
+            <span class="frist-dato">05.12.2026</span>
+            <span class="status" data-status="domstol">For retten</span>
+            <button class="liten-knapp" type="button" data-notat>Legg til notat</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+
+        <div style="display:grid;gap:1.2rem">
+          <div class="panel-boks">
+            <div class="panel-boks-hode">
+              <h2>Kommende frister</h2>
+              <span style="font-size:.68rem;color:var(--graa)">november</span>
+            </div>
+            <ul class="frist-liste">
+        <li class="frist">
+          <button class="frist-dag" type="button" data-frist-sak="S-1042" style="background:none;border:0;padding:0;cursor:pointer;font-family:var(--serif);color:var(--blekk);text-align:left">11</button>
+          <span class="frist-tittel">Drøftingsmøte – nedbemanning</span>
+          <span class="frist-mnd">nov · S-1042</span>
+        </li>
+        <li class="frist">
+          <button class="frist-dag" type="button" data-frist-sak="S-1039" style="background:none;border:0;padding:0;cursor:pointer;font-family:var(--serif);color:var(--blekk);text-align:left">14</button>
+          <span class="frist-tittel">Sluttinnlegg til tingretten</span>
+          <span class="frist-mnd">nov · S-1039</span>
+        </li>
+        <li class="frist">
+          <button class="frist-dag" type="button" data-frist-sak="S-1044" style="background:none;border:0;padding:0;cursor:pointer;font-family:var(--serif);color:var(--blekk);text-align:left">18</button>
+          <span class="frist-tittel">Signering av fusjonsplan</span>
+          <span class="frist-mnd">nov · S-1044</span>
+        </li>
+        <li class="frist">
+          <button class="frist-dag" type="button" data-frist-sak="S-1046" style="background:none;border:0;padding:0;cursor:pointer;font-family:var(--serif);color:var(--blekk);text-align:left">21</button>
+          <span class="frist-tittel">Frist for merknader fra motpart</span>
+          <span class="frist-mnd">nov · S-1046</span>
+        </li>
+            </ul>
+          </div>
+          <div class="panel-boks">
+            <div class="panel-boks-hode">
+              <h2>Dokumenter til gjennomgang</h2>
+            </div>
+            <ul class="dokument-liste">
+              <li class="dokument"><span>Fusjonsplan – utkast 2</span><span class="typen">Utkast</span></li>
+              <li class="dokument"><span>Sluttavtale – Fossum Helse</span><span class="typen">Signert</span></li>
+              <li class="dokument"><span>Stevning – Bø Tekniske</span><span class="typen">Innsendt</span></li>
+              <li class="dokument"><span>Protokoll – drøftingsmøte</span><span class="typen">Må leses</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <dialog class="notat-dialog" id="notat-dialog" aria-labelledby="notat-overskrift">
+    <form method="dialog">
+      <p class="dialog-meta">Nytt notat</p>
+      <h2 id="notat-overskrift">Sak: <span id="notat-sak">saken</span></h2>
+      <div class="felt">
+        <label for="notat-tekst">Notatet</label>
+        <textarea id="notat-tekst" rows="5" placeholder="Hva ble sagt, avtalt eller besluttet?"></textarea>
+      </div>
+      <div class="dialog-handlinger">
+        <button class="knapp knapp--stille knapp--liten" type="button" data-lukk>Avbryt</button>
+        <button class="knapp knapp--liten" type="submit">Lagre notat</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
 </main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Algerøy Rådgivning</p>
-      <p class="bunn__tekst">Norge · 96 91 26 92 · pa@algeroy.com</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Algerøy Rådgivning</p>
+</div>
+<footer class="fot">
+  <div class="fot-inn">
+    <p>© 2026 Advokatfirmaet Algeroy AS · Heddalsvegen 11, 3674 Notodden</p>
+    <p class="fot-lenker">
+      <a href="fagomrader.html">Fagområder</a>
+      <a href="team.html">Advokatene</a>
+      <a href="prosess.html">Prosessen</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Saksportalen</a>
+    </p>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
 </body>
 </html>

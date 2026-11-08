@@ -1,175 +1,28 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>AS Elektrisk – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos AS Elektrisk.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Driftspanel for oppdrag og avvik | AS Elektrisk (demo)</title>
+<meta name="description" content="Demo av AS Elektrisk sitt driftspanel: oppdrag i dag, statusendring, åpne avvik som lukkes, fakturerbare timer og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a0e12">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AS Elektrisk">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Driftspanel for oppdrag og avvik | AS Elektrisk (demo)">
+<meta property="og:description" content="Demo av AS Elektrisk sitt driftspanel: oppdrag i dag, statusendring, åpne avvik som lukkes, fakturerbare timer og hendelseslogg.">
+<meta property="og:image" content="assets/img/06-elektrisk-no.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/elektrisk-no-demo.css">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="AS Elektrisk" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos AS Elektrisk. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>AS Elektrisk</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Elbillading og smart strømstyring</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Sikringsskap og el-kontroll</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Belysning og smarthusløsninger</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Serviceavtaler for næring og industri</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om elbillading og smart strømstyring</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om sikringsskap og el-kontroll</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av belysning og smarthusløsninger</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">AS Elektrisk</p>
-      <p class="bunn__tekst">Norge · 98 26 96 26 · post@elektrisk.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 AS Elektrisk</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html"><span class="merke__symbol">A/S</span><span class="merke__navn">AS Elektrisk<small>Driftspanel · demo</small></span></a><div class="topp__hoyre"><span class="paneltopp__bruker"><i>VS</i>Viktor Schaug · daglig leder</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Oppdrag og avvik</h1><p>Serviceuke 46 · 9 oppdrag i planen · 3 åpne avvik</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Nytt oppdrag</a></div></div><div class="kpi"><div class="kpi__kort kpi__kort--aktiv"><span class="kpi__navn">Oppdrag i dag</span><span class="kpi__tall">9</span><span class="kpi__endring">2 service, 7 prosjekt</span></div><div class="kpi__kort"><span class="kpi__navn">Ferdigstilt</span><span class="kpi__tall" data-kpi-ferdig>2</span><span class="kpi__endring">av 9 i dag</span></div><div class="kpi__kort"><span class="kpi__navn">Åpne avvik</span><span class="kpi__tall" data-kpi-avvik>3</span><span class="kpi__endring">HMS · må lukkes</span></div><div class="kpi__kort"><span class="kpi__navn">Fakturerbare timer</span><span class="kpi__tall" data-kpi-timer>162</span><span class="kpi__endring">denne uken</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer oppdrag"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="aktiv" aria-pressed="false">Aktive</button><button type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button></div><span class="verktoylinje__tall" data-antall>9 av 9 oppdrag</span></div><div class="oppdrag" data-oppdrag><div class="oppdrag__rad" data-status="aktiv"><div><p class="oppdrag__tittel">Myrens verksted 3A – tavle 2B</p><div class="oppdrag__meta"><span>Service</span><span>2 mann</span><span>07:30–11:00</span><span>Termografering</span></div></div><span class="oppdrag__status">Aktiv</span><button class="oppdrag__knapp" type="button" data-ferdig>Merk ferdig</button></div><div class="oppdrag__rad" data-status="aktiv"><div><p class="oppdrag__tittel">Lakkegata 23 – etasje 4</p><div class="oppdrag__meta"><span>Prosjekt</span><span>3 mann</span><span>07:30–15:00</span><span>Kurs og belysning</span></div></div><span class="oppdrag__status">Aktiv</span><button class="oppdrag__knapp" type="button" data-ferdig>Merk ferdig</button></div><div class="oppdrag__rad" data-status="aktiv"><div><p class="oppdrag__tittel">Hurum Helsehus – nødlys</p><div class="oppdrag__meta"><span>Service</span><span>2 mann</span><span>08:00–12:00</span><span>Årskontroll</span></div></div><span class="oppdrag__status">Aktiv</span><button class="oppdrag__knapp" type="button" data-ferdig>Merk ferdig</button></div><div class="oppdrag__rad" data-status="aktiv"><div><p class="oppdrag__tittel">Langhusbadet – teknisk rom</p><div class="oppdrag__meta"><span>Prosjekt</span><span>4 mann</span><span>08:00–16:00</span><span>Styreskap</span></div></div><span class="oppdrag__status">Aktiv</span><button class="oppdrag__knapp" type="button" data-ferdig>Merk ferdig</button></div><div class="oppdrag__rad" data-status="aktiv"><div><p class="oppdrag__tittel">Hieronymus Heyerdahls gate 1</p><div class="oppdrag__meta"><span>Prosjekt</span><span>5 mann</span><span>07:00–15:30</span><span>Idriftsettelse KNX</span></div></div><span class="oppdrag__status">Aktiv</span><button class="oppdrag__knapp" type="button" data-ferdig>Merk ferdig</button></div><div class="oppdrag__rad" data-status="aktiv"><div><p class="oppdrag__tittel">Bispevika – utskifting av vern</p><div class="oppdrag__meta"><span>Service</span><span>2 mann</span><span>09:00–13:00</span><span>Tavle 1A</span></div></div><span class="oppdrag__status">Aktiv</span><button class="oppdrag__knapp" type="button" data-ferdig>Merk ferdig</button></div><div class="oppdrag__rad" data-status="aktiv"><div><p class="oppdrag__tittel">Skøyen – feilsøking jordfeil</p><div class="oppdrag__meta"><span>Service</span><span>1 mann</span><span>10:00–12:00</span><span>Boligselskap</span></div></div><span class="oppdrag__status">Aktiv</span><button class="oppdrag__knapp" type="button" data-ferdig>Merk ferdig</button></div><div class="oppdrag__rad" data-status="ferdig"><div><p class="oppdrag__tittel">Myrens verksted 3A – lager</p><div class="oppdrag__meta"><span>Internt</span><span>2 mann</span><span>Ferdig 09:40</span><span>Rydding og merking</span></div></div><span class="oppdrag__status">Ferdig</span><button class="oppdrag__knapp" type="button" data-ferdig disabled>Ferdig</button></div><div class="oppdrag__rad" data-status="ferdig"><div><p class="oppdrag__tittel">Nydalen – servicekontrakt</p><div class="oppdrag__meta"><span>Service</span><span>2 mann</span><span>Ferdig 11:20</span><span>Årsgjennomgang</span></div></div><span class="oppdrag__status">Ferdig</span><button class="oppdrag__knapp" type="button" data-ferdig disabled>Ferdig</button></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Avvik og HMS</h2><div style="margin-bottom:.6rem"><button class="oppdrag__knapp" type="button" data-lukk-alle>Lukk alle etter gjennomgang</button></div><div class="avvik" data-avvik><div class="avvik__rad" data-lukket="false"><div class="avvik__topp"><p class="avvik__navn">Manglende merking i tavle 2B</p><span class="pille pille--varsel">Åpent</span></div><div class="avvik__meta"><span>Myrens verksted 3A</span><span>Meldt 07:55</span><span>Ansvarlig: M. Lyseng</span></div><div><button class="oppdrag__knapp" type="button" data-lukk-avvik>Lukk avvik</button></div></div><div class="avvik__rad" data-lukket="false"><div class="avvik__topp"><p class="avvik__navn">Kabelbunt uten avlastning</p><span class="pille pille--varsel">Åpent</span></div><div class="avvik__meta"><span>Lakkegata 23</span><span>Meldt 09:10</span><span>Ansvarlig: A. Bodding</span></div><div><button class="oppdrag__knapp" type="button" data-lukk-avvik>Lukk avvik</button></div></div><div class="avvik__rad" data-lukket="false"><div class="avvik__topp"><p class="avvik__navn">Jordfeilbryter løser ut ved test</p><span class="pille pille--varsel">Åpent</span></div><div class="avvik__meta"><span>Skøyen</span><span>Meldt 10:05</span><span>Ansvarlig: F.C. Johansen</span></div><div><button class="oppdrag__knapp" type="button" data-lukk-avvik>Lukk avvik</button></div></div><div class="avvik__rad" data-lukket="true"><div class="avvik__topp"><p class="avvik__navn">Rydding etter kabeltrekk</p><span class="pille ">Lukket</span></div><div class="avvik__meta"><span>Hurum Helsehus</span><span>Lukket 08:40</span><span>Ansvarlig: K.I. Kristiansen</span></div><div><button class="oppdrag__knapp" type="button" data-lukk-avvik disabled>Lukket</button></div></div></div></div></div><div><div class="panelkort"><h2>Dagens vaktliste</h2><div class="logglinje"><time>07:30</time><span>2 biler ute · Myrens verksted</span></div><div class="fremdrift"><i style="width:64%"></i></div><div class="logglinje" style="margin-top:.6rem"><time>11:00</time><span>Lakkegata 23 · etasje 4 halvferdig</span></div><div class="fremdrift"><i style="width:38%"></i></div><div class="logglinje" style="margin-top:.6rem"><time>15:30</time><span>Hieronymus · KNX idriftsettes</span></div><div class="fremdrift"><i style="width:22%"></i></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Hendelseslogg</h2><div data-logg></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Servicekontrakter som venter</h2><div class="logglinje"><time>12:00</time><span>Nydalen Eiendom · årskontroll</span></div><div class="logglinje"><time>14:00</time><span>Bispevika BRL · termografering</span></div><div class="logglinje"><time>16:00</time><span>Skøyen borettslag · feilsøking</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">AS Elektrisk</p><p>Autorisert el-installasjonsbedrift etablert 1983. Myrens verksted 3A, 0476 Oslo. En del av Instalco.</p></div><div><h2>Snarveier</h2><ul><li><a href="tjenester.html">Tjenester</a></li><li><a href="sikkerhet.html">Sikkerhet og internkontroll</a></li><li><a href="prosjekter.html">Referanseprosjekter</a></li><li><a href="om.html">Om oss</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4722871600">22 87 16 00</a></li><li><a href="mailto:post@elektrisk.no">post@elektrisk.no</a></li><li><a href="kontakt.html">Kontaktpersoner</a></li><li><a href="panel.html">Driftspanel (demo)</a></li></ul></div><div><h2>Åpningstider</h2><ul><li>Man–fre 07:30–15:30</li><li>Service etter avtale</li><li>Vakttelefon for avtaler</li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> AS Elektrisk</span><span>Anlegg · Service · KNX · Termografering</span></div></div></footer>
+<script src="assets/js/elektrisk-no-demo.js" defer></script>
 </body>
 </html>

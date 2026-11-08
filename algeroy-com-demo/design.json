@@ -1,0 +1,38 @@
+{
+  "slug": "algeroy-com-demo",
+  "firma": "Advokatfirmaet Algeroy AS",
+  "navType": "nummerert kapittelliste",
+  "fonts": [
+    "Libre Baskerville",
+    "Libre Franklin"
+  ],
+  "palette": [
+    "#0f1b2a",
+    "#f3ede1",
+    "#8a3a2e",
+    "#5f574c"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "firmaet",
+    "fagomrader",
+    "arbeidsrett",
+    "erfaring",
+    "team",
+    "prosess",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "fagomrader.html",
+    "team.html",
+    "prosess.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,175 +1,119 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>AB Bil AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos AB Bil AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Verkstedpanel – jobbkø og status | AB Bil AS</title>
+<meta name="description" content="Verkstedpanelet til AB Bil AS: jobbkø med status, kunde, bil og frist. Flytt jobber fra kø til pågår og merk dem ferdige.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Verkstedpanel – jobbkø og status | AB Bil AS">
+<meta property="og:description" content="Verkstedpanelet til AB Bil AS: jobbkø med status, kunde, bil og frist. Flytt jobber fra kø til pågår og merk dem ferdige.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/hero-bransje.jpg">
+<meta name="theme-color" content="#141414">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/ab-bil-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
-<body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="AB Bil AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<body class="">
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<aside class="rail" aria-label="Hovedmeny">
+  <a class="rail__merke" href="index.html" aria-label="AB Bil AS forside"><b>AB</b><span>BIL AS</span></a>
+  <nav class="rail__nav">
+    <a class="rail__lenke" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l2-5h14l2 5v5h-3"/><circle cx="7.5" cy="17.6" r="1.6"/><circle cx="16.5" cy="17.6" r="1.6"/><path d="M3 18h2M19 18h2M5 13h14"/></svg><span>Hjem</span></a>
+    <a class="rail__lenke" href="verksted.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 6.3a4.2 4.2 0 01-5.6 5.6l-7.7 7.7a2 2 0 01-2.8-2.8l7.7-7.7a4.2 4.2 0 015.6-5.6l-2.5 2.5 2.8 2.8 2.5-2.5z"/></svg><span>Verksted</span></a>
+    <a class="rail__lenke" href="tjenester.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg><span>Tjenester</span></a>
+    <a class="rail__lenke" href="priser.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h8l8 8-8 8-8-8z"/><circle cx="8.6" cy="8.6" r="1.3"/></svg><span>Priser</span></a>
+    <a class="rail__lenke" href="om.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><span>Om oss</span></a>
+    <a class="rail__lenke" href="kontakt.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2 1.5a12 12 0 005.5 5.5L16 13l5 2v3a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z"/></svg><span>Kontakt</span></a>
+    <a class="rail__lenke" href="panel.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v4h-7zM13 10h7v10h-7zM4 13h7v7H4z"/></svg><span>Panel</span></a>
+  </nav>
+  <div class="rail__bunn">
+    <a class="rail__ring" href="tel:+4755915555">55 91 55 55</a>
+    <span class="rail__prikk" aria-hidden="true"></span>
   </div>
-</header>
+</aside>
+<div class="topp">
+  <span><b>Fyllingsdalen</b> · Spelhaugen 4, 5147 Bergen</span>
+  <span><a href="tel:+4755915555">55 91 55 55</a> · <a href="mailto:kontakt@ab-bil.no">kontakt@ab-bil.no</a></span>
+  <span>Man–fre 09:00–17:00 · lør–søn etter avtale</span>
+</div>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos AB Bil AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>AB Bil AS</div>
+<div class="wrap">
+  <div class="panel-hode">
+    <div>
+      <p class="eyebrow">Internt · Spelhaugen 4</p>
+      <h1>Verkstedpanel</h1>
+      <p>Jobbkøen for hallen. Flytt jobben fra kø til pågår når bilen kommer inn, og merk den ferdig når den er klar for henting.</p>
     </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Kjøp og salg av kvalitetsbiler</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Innbytte og kommisjonssalg</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Finansiering, leasing og forsikring</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Garanti, klargjøring og verkstedoppfølging</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
+    <p class="merknad" data-dato></p>
+  </div>
+  <div class="panel-skall">
+    <aside class="panel-side">
+      <div class="ko">
+        <div class="ko__topp"><span><i aria-hidden="true"></i>Båser</span><span>3 av 3</span></div>
+        <div class="ko__rad"><span class="stempel stempel--paa">Opptatt</span><b>Løftebukk 1</b><small>AB-2418 · EU-kontroll</small></div>
+        <div class="ko__rad"><span class="stempel stempel--paa">Opptatt</span><b>Løftebukk 2</b><small>AB-2419 · Service</small></div>
+        <div class="ko__rad"><span class="stempel stempel--vent">Ledig</span><b>Løftebukk 3</b><small>Klargjøres etter 14:00</small></div>
       </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om kjøp og salg av kvalitetsbiler</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om innbytte og kommisjonssalg</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av finansiering, leasing og forsikring</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+      <div class="ko">
+        <div class="ko__topp"><span><i aria-hidden="true"></i>Neste frister</span></div>
+        <div class="ko__rad"><b>10:00 · AB-2418</b><small>EU-kontroll, Volvo V70</small></div>
+        <div class="ko__rad"><b>12:30 · AB-2419</b><small>Service, Toyota Avensis</small></div>
+        <div class="ko__rad"><b>13:00 · AB-2420</b><small>Hjulskift, VW Golf</small></div>
+      </div>
+      <p class="merknad">Dette er en demonstrasjon av et verkstedpanel. Endringene lagres bare i nettleseren din.</p>
+    </aside>
+    <div>
+      <div class="kpi">
+        <div class="kpi__boks"><b id="kpi-ko">4</b><span>I kø</span><em>Venter på ledig bås</em></div>
+        <div class="kpi__boks"><b id="kpi-paa">3</b><span>Pågår nå</span><em>I hallen</em></div>
+        <div class="kpi__boks"><b id="kpi-ferdig">2</b><span>Ferdig i dag</span><em>Klare for henting</em></div>
+        <div class="kpi__boks"><b id="kpi-sum">3 980 kr</b><span>Fakturert i dag</span><em>Ferdigstilte jobber</em></div>
+      </div>
+      <div class="verktoy" role="group" aria-label="Filtrer jobber">
+        <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+        <button class="filter" type="button" data-filter="venter" aria-pressed="false">I kø</button>
+        <button class="filter" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+        <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button>
+        <div class="verktoy__sok"><input id="jobb-sok" type="search" placeholder="Søk kunde, bil eller nummer" aria-label="Søk i jobbene"></div>
+      </div>
+      <div class="rutenett" id="jobbkø" aria-live="polite"></div>
+      <div class="logg">
+        <div class="logg__hode">Hendelseslogg</div>
+        <ul id="logg-liste"></ul>
       </div>
     </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
+  </div>
+</div>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">AB Bil AS</p>
-      <p class="bunn__tekst">Norge · 72 88 55 55 · kontakt@ab-bil.no</p>
+  <div class="wrap">
+    <div class="bunn__grid">
+      <div>
+        <h4>AB Bil AS</h4>
+        <p>Bruktbiler, innbytte og verksted i Fyllingsdalen. Vi kjøper bilen din, tar den i innbytte eller selger den for deg – med samme ryddighet hele veien.</p>
+        <p style="margin-top:10px"><a href="tel:+4755915555">55 91 55 55</a> · <a href="mailto:kontakt@ab-bil.no">kontakt@ab-bil.no</a></p>
+      </div>
+      <div>
+        <h4>Sider</h4>
+        <ul><li><a href="index.html">Hjem</a></li><li><a href="verksted.html">Verksted</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="priser.html">Priser</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+      </div>
+      <div>
+        <h4>Tjenester</h4>
+        <ul><li><a href="tjenester.html">Kjøpe bruktbil</a></li><li><a href="tjenester.html#innbytte">Innbytte</a></li><li><a href="tjenester.html#selge">Selge bilen din</a></li><li><a href="verksted.html">Service og EU-kontroll</a></li><li><a href="verksted.html#klargjoring">Klargjøring</a></li></ul>
+      </div>
+      <div>
+        <h4>Besøk oss</h4>
+        <p>Spelhaugen 4<br>5147 Fyllingsdalen<br><br>Man–fre 09:00–17:00<br>Lør–søn etter avtale</p>
+      </div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 AB Bil AS</p>
+    <div class="bunn__lang"><span>© 2026 AB Bil AS</span><span>Forside laget som demonstrasjon for AB Bil AS</span><a href="panel.html">Verkstedpanel</a></div>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<script src="assets/js/ab-bil-no-demo.js" defer></script>
 </body>
 </html>
