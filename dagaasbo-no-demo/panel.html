@@ -1,175 +1,28 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Dag Aasbø Travel AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Dag Aasbø Travel AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Reisepanel for bookinger og reiseruter | Dag Aasbø Travel (demo)</title>
+<meta name="description" content="Demo av Dag Aasbø Travel sitt reisepanel: bookinger i dag, setebekreftelse, reiseruter med avganger og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#17558c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dag Aasbø Travel">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Reisepanel for bookinger og reiseruter | Dag Aasbø Travel (demo)">
+<meta property="og:description" content="Demo av Dag Aasbø Travel sitt reisepanel: bookinger i dag, setebekreftelse, reiseruter med avganger og hendelseslogg.">
+<meta property="og:image" content="assets/img/07-dagaasbo-no.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/dagaasbo-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Dag Aasbø Travel AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
-<main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Oslo</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Dag Aasbø Travel AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Dag Aasbø Travel AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Konferanser, møter og bedriftsarrangement</strong><span>Ny forespørsel via nettsiden · Oslo</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Reiser, opphold og naturopplevelser</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Selskap, kultur og spesielle anledninger</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Gruppereservasjon og skreddersøm</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om konferanser, møter og bedriftsarrangement</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om reiser, opphold og naturopplevelser</strong><p>Kunde i Oslo ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av selskap, kultur og spesielle anledninger</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Dag Aasbø Travel AS</p>
-      <p class="bunn__tekst">Oslo · 37 15 70 31 · post@dagaasbo.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Dag Aasbø Travel AS</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+<div class="kompass" data-kompass data-aapen="false"><div class="kompass__bakgrunn" aria-hidden="true"></div><span class="kompass__etikett">Meny</span><button class="kompass__knapp" type="button" aria-expanded="false" aria-controls="kompassmeny" aria-label="Åpne menyen"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.1" opacity=".45"/><circle cx="24" cy="24" r="14.5" stroke="currentColor" stroke-width=".8" opacity=".28"/><path class="kompass__naal" d="M24 7.5 L28.4 20.2 L40.5 24 L28.4 27.8 L24 40.5 L19.6 27.8 L7.5 24 L19.6 20.2 Z" fill="currentColor"/><circle cx="24" cy="24" r="2.1" fill="#fbf7ef"/><path d="M24 3.5 V7 M24 41 V44.5 M3.5 24 H7 M41 24 H44.5" stroke="currentColor" stroke-width="1.3"/></svg></button><nav class="kompass__ring" id="kompassmeny" aria-label="Hovedmeny"><a href="index.html">Hjem</a><a href="reiser.html">Reiser</a><a href="grupper.html">Grupper</a><a href="inspirasjon.html">Inspirasjon</a><a href="om.html">Om</a><a href="kontakt.html">Kontakt</a><a href="panel.html" aria-current="page">Panel</a></nav></div><main id="innhold">
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html"><span class="merke__merke"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.1" opacity=".45"/><circle cx="24" cy="24" r="14.5" stroke="currentColor" stroke-width=".8" opacity=".28"/><path class="kompass__naal" d="M24 7.5 L28.4 20.2 L40.5 24 L28.4 27.8 L24 40.5 L19.6 27.8 L7.5 24 L19.6 20.2 Z" fill="currentColor"/><circle cx="24" cy="24" r="2.1" fill="#fbf7ef"/><path d="M24 3.5 V7 M24 41 V44.5 M3.5 24 H7 M41 24 H44.5" stroke="currentColor" stroke-width="1.3"/></svg></span><span class="merke__tekst">Dag Aasbø Travel<small>Reisepanel · demo</small></span></a><div class="topp__hoyre"><span class="paneltopp__bruker"><i>IB</i>Inger Aasbø · reiseleder</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Bookinger og reiseruter</h1><p>Tirsdag 10. november · 8 bookinger i dag · 3 venter på sete</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Ny booking</a></div></div><div class="kpi"><div class="kpi__kort kpi__kort--aktiv"><span class="kpi__navn">Bookinger i dag</span><span class="kpi__tall">8</span><span class="kpi__endring">4 reiser</span></div><div class="kpi__kort"><span class="kpi__navn">Bekreftet sete</span><span class="kpi__tall" data-kpi-bekreftet>5</span><span class="kpi__endring">av 8 i dag</span></div><div class="kpi__kort kpi__kort--sol"><span class="kpi__navn">Venter på sete</span><span class="kpi__tall" data-kpi-venter>3</span><span class="kpi__endring">må følges opp</span></div><div class="kpi__kort"><span class="kpi__navn">Reisende totalt</span><span class="kpi__tall">164</span><span class="kpi__endring">på de fire neste turene</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer bookinger"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="venter" aria-pressed="false">Venter</button><button type="button" data-filter="bekreftet" aria-pressed="false">Bekreftet</button></div><span class="verktoylinje__tall" data-antall>8 av 8 bookinger</span></div><div class="bookinger" data-bookinger><div class="booking" data-status="venter"><div><p class="booking__navn">Kari Solberg</p><div class="booking__meta"><span>Julemarked i Gdansk</span><span>08.12.2026</span><span>2 reisende</span><span>Dobbeltrom</span></div></div><span class="booking__status">Venter</span><button class="booking__knapp" type="button" data-bekreft>Bekreft sete</button></div><div class="booking" data-status="bekreftet"><div><p class="booking__navn">Per Aas</p><div class="booking__meta"><span>Vinterpause på Costa Blanca</span><span>05.01.2027</span><span>2 reisende</span><span>Havutsikt</span></div></div><span class="booking__status">Sete bekreftet</span><button class="booking__knapp" type="button" data-bekreft disabled>Bekreftet</button></div><div class="booking" data-status="venter"><div><p class="booking__navn">Anne Lise Berg</p><div class="booking__meta"><span>Julemarked i Krakow</span><span>08.12.2026</span><span>1 reisende</span><span>Enkeltrom</span></div></div><span class="booking__status">Venter</span><button class="booking__knapp" type="button" data-bekreft>Bekreft sete</button></div><div class="booking" data-status="bekreftet"><div><p class="booking__navn">Sandefjord Pensjonistlag</p><div class="booking__meta"><span>Flensburg og Lübeck</span><span>01.12.2026</span><span>34 reisende</span><span>Gruppe</span></div></div><span class="booking__status">Sete bekreftet</span><button class="booking__knapp" type="button" data-bekreft disabled>Bekreftet</button></div><div class="booking" data-status="bekreftet"><div><p class="booking__navn">Tone og Arne Lie</p><div class="booking__meta"><span>Julecruise på Rhinen</span><span>20.12.2026</span><span>2 reisende</span><span>Dobbeltrom</span></div></div><span class="booking__status">Sete bekreftet</span><button class="booking__knapp" type="button" data-bekreft disabled>Bekreftet</button></div><div class="booking" data-status="bekreftet"><div><p class="booking__navn">Vestfold Sangkor</p><div class="booking__meta"><span>Korpstur Krakow</span><span>08.12.2026</span><span>21 reisende</span><span>Gruppe</span></div></div><span class="booking__status">Sete bekreftet</span><button class="booking__knapp" type="button" data-bekreft disabled>Bekreftet</button></div><div class="booking" data-status="venter"><div><p class="booking__navn">Morten Haug</p><div class="booking__meta"><span>Cruise fra Rio</span><span>23.01.2027</span><span>2 reisende</span><span>Balkong</span></div></div><span class="booking__status">Venter</span><button class="booking__knapp" type="button" data-bekreft>Bekreft sete</button></div><div class="booking" data-status="bekreftet"><div><p class="booking__navn">Randi Nilsen</p><div class="booking__meta"><span>Nyttår på Brattrein</span><span>30.12.2026</span><span>1 reisende</span><span>Enkeltrom</span></div></div><span class="booking__status">Sete bekreftet</span><button class="booking__knapp" type="button" data-bekreft disabled>Bekreftet</button></div></div><div class="panelkort" style="margin-top:.9rem"><h2>Dagens oppfølging</h2><div class="logglinje"><time>09:30</time><span>Ring Kari Solberg om romvalg i Gdansk</span></div><div class="logglinje"><time>11:00</time><span>Sjekk setebekreftelse for Krakow-avgangen</span></div><div class="logglinje"><time>13:00</time><span>Send program til Vestfold Sangkor</span></div></div></div><div><div class="panelkort"><h2>Reiseruter</h2><div class="ruter"><div class="rute"><div class="rute__topp"><span class="rute__navn">Gdansk · julemarked</span><span class="rute__antall">34 reisende</span></div><div class="spor"><span>Torp 06:40</span><i></i><span>Gdansk 09:10</span></div><div class="spor"><span>Hotell 4 netter</span><i></i><span>Retur 12.12</span></div></div><div class="rute"><div class="rute__topp"><span class="rute__navn">Costa Blanca · Albir</span><span class="rute__antall">28 reisende</span></div><div class="spor"><span>Torp 07:15</span><i></i><span>Alicante 11:05</span></div><div class="spor"><span>Hotell 8 netter</span><i></i><span>Retur 13.01</span></div></div><div class="rute"><div class="rute__topp"><span class="rute__navn">Rhinen · julecruise</span><span class="rute__antall">46 reisende</span></div><div class="spor"><span>Gardermoen 08:00</span><i></i><span>Düsseldorf 10:20</span></div><div class="spor"><span>Skip 4 netter</span><i></i><span>Retur 24.12</span></div></div></div></div><div class="panelkort" style="margin-top:.9rem"><h2>Hendelseslogg</h2><div data-logg></div></div><div class="panelkort" style="margin-top:.9rem"><h2>Reiseledere ute</h2><div class="logglinje"><time>Nå</time><span>Inger Aasbø · Gdansk · 34 reisende</span></div><div class="logglinje"><time>Nå</time><span>Erik Lund · Rhinen · 46 reisende</span></div><div class="logglinje"><time>I morgen</time><span>Maja Solberg · Krakow · 21 reisende</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">Dag Aasbø Travel AS</p><p>Vi har skapt gode og varige ferieminner siden 1934. Skolegata 3, 3210 Sandefjord. Org.nr 889 181 842.</p></div><div><h2>Reiser</h2><ul><li><a href="reiser.html">Alle reiser</a></li><li><a href="reiser.html#forjul">Førjul og julemarkeder</a></li><li><a href="grupper.html">Gruppereiser</a></li><li><a href="inspirasjon.html">Reiseinspirasjon</a></li></ul></div><div><h2>Om oss</h2><ul><li><a href="om.html">90 år med reiser</a></li><li><a href="kontakt.html">Kontakt oss</a></li><li><a href="inspirasjon.html#gavekort">Gavekort</a></li><li><a href="panel.html">Reisepanel (demo)</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4737157031">37 15 70 31</a></li><li><a href="mailto:post@dagaasbo.no">post@dagaasbo.no</a></li><li>Skolegata 3, 3210 Sandefjord</li><li>Hverdager 09–15</li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> Dag Aasbø Travel AS</span><span>Sandefjord · turer i Norge og Europa</span></div></div></footer>
+<script src="assets/js/dagaasbo-no-demo.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,515 @@
+/* ==========================================================================
+   Dag Aasbø Travel — egen stil. Reisedagbok i 3D, kompassrose, varm papirflate.
+   ========================================================================== */
+
+:root {
+  --hav: #17558c;
+  --hav-dyp: #0d3a63;
+  --himmel: #7fc0e0;
+  --sand: #f6efe2;
+  --krem: #fbf7ef;
+  --krem-2: #f2ebdd;
+  --sol: #d98b4a;
+  --blekk: #1d2a33;
+  --gra: #5f6f79;
+  --strek: #e0d6c4;
+  --hvit: #fffdf8;
+  --playfair: "Playfair Display", Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --brei: 1150px;
+  --luft: clamp(2.6rem, 6vw, 5rem);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--krem);
+  color: var(--blekk);
+  font-family: var(--sans);
+  font-size: clamp(1rem, .96rem + .18vw, 1.08rem);
+  line-height: 1.72;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, h4 {
+  font-family: var(--playfair); font-weight: 500;
+  line-height: 1.12; letter-spacing: -.01em;
+  margin: 0 0 .55em; text-wrap: balance;
+}
+h1 { font-size: clamp(2.2rem, 1.35rem + 3.6vw, 3.85rem); }
+h2 { font-size: clamp(1.6rem, 1.2rem + 1.9vw, 2.5rem); }
+h3 { font-size: clamp(1.1rem, 1rem + .5vw, 1.3rem); }
+h1 em, h2 em { font-style: italic; color: var(--hav); }
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+a { color: var(--hav); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--sol); }
+:focus-visible { outline: 3px solid var(--sol); outline-offset: 3px; }
+
+.skjul { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.hopp {
+  position: absolute; left: 1rem; top: -4rem; z-index: 999;
+  background: var(--hav); color: var(--hvit); padding: .7rem 1.1rem;
+  font-family: var(--sans); font-size: .88rem; text-decoration: none;
+}
+.hopp:focus { top: .7rem; }
+
+.skal { width: min(100% - 2rem, var(--brei)); margin-inline: auto; }
+.smal { width: min(100% - 2rem, 720px); margin-inline: auto; }
+
+/* ---------- Topp ---------- */
+
+.topp {
+  position: sticky; top: 0; z-index: 60;
+  background: rgba(251, 247, 239, .95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--strek);
+}
+.topp__inn { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 0; }
+.merke { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; }
+.merke__merke {
+  width: 2.4rem; height: 2.4rem; display: grid; place-items: center;
+  color: var(--hav);
+}
+.merke__merke svg { width: 100%; height: 100%; }
+.merke__tekst { font-family: var(--playfair); font-size: 1.12rem; color: var(--hav-dyp); line-height: 1.1; }
+.merke__tekst small {
+  display: block; font-family: var(--sans); font-size: .58rem;
+  letter-spacing: .22em; text-transform: uppercase; color: var(--gra); margin-top: .2rem;
+}
+.topp__hoyre { display: flex; align-items: center; gap: .9rem; }
+.topp__tlf { font-size: .92rem; color: var(--hav-dyp); text-decoration: none; white-space: nowrap; }
+.topp__tlf:hover { color: var(--sol); }
+
+.knapp {
+  display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+  font-family: var(--sans); font-size: .92rem; font-weight: 600;
+  padding: .7rem 1.2rem; border-radius: 999px;
+  border: 1px solid var(--hav); background: var(--hav); color: var(--hvit);
+  text-decoration: none; cursor: pointer;
+  transition: background .16s ease, color .16s ease, transform .16s ease;
+}
+.knapp:hover { background: var(--hav-dyp); color: var(--hvit); transform: translateY(-1px); }
+.knapp--sol { background: var(--sol); border-color: var(--sol); color: #fff9f1; }
+.knapp--sol:hover { background: #c27838; color: #fff; }
+.knapp--tom { background: transparent; color: var(--hav-dyp); border-color: #cbbfa9; }
+.knapp--tom:hover { background: var(--hav-dyp); border-color: var(--hav-dyp); color: var(--hvit); }
+.knapp--liten { padding: .48rem .9rem; font-size: .82rem; }
+
+/* ---------- Kompassrose ---------- */
+
+.kompass {
+  position: fixed; right: clamp(.8rem, 2vw, 1.6rem); bottom: clamp(.8rem, 2vw, 1.6rem);
+  z-index: 200; width: 0; height: 0;
+}
+.kompass__knapp {
+  position: absolute; right: 0; bottom: 0;
+  width: 3.6rem; height: 3.6rem; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(23, 85, 140, .35); background: var(--hvit);
+  color: var(--hav); display: grid; place-items: center;
+  box-shadow: 0 10px 30px -14px rgba(13, 58, 99, .55);
+  transition: transform .35s cubic-bezier(.2, .9, .2, 1), background .2s ease, color .2s ease;
+}
+.kompass__knapp:hover { background: var(--hav); color: var(--hvit); }
+.kompass__knapp svg { width: 2.1rem; height: 2.1rem; }
+.kompass__knapp .kompass__naal { transition: transform .5s cubic-bezier(.2, .9, .2, 1); transform-origin: 50% 50%; }
+.kompass[data-aapen="true"] .kompass__knapp { transform: rotate(-45deg); background: var(--hav); color: var(--hvit); }
+.kompass__etikett {
+  position: absolute; right: 4.2rem; bottom: .9rem;
+  font-family: var(--sans); font-size: .72rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--hav); background: rgba(251, 247, 239, .9);
+  padding: .2rem .5rem; border-radius: 2px; white-space: nowrap;
+  pointer-events: none; opacity: 1; transition: opacity .2s ease;
+}
+.kompass[data-aapen="true"] .kompass__etikett { opacity: 0; }
+
+.kompass__ring {
+  position: absolute; right: 1.8rem; bottom: 1.8rem; width: 0; height: 0;
+}
+.kompass__ring a {
+  position: absolute; left: 0; top: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 2.6rem; height: 2.6rem; padding: 0 .7rem;
+  transform: translate(-50%, -50%) translate(0, 0) scale(.4);
+  border-radius: 999px; background: var(--hvit); color: var(--hav-dyp);
+  border: 1px solid var(--strek); text-decoration: none;
+  font-family: var(--sans); font-size: .84rem; font-weight: 600; white-space: nowrap;
+  opacity: 0; pointer-events: none;
+  box-shadow: 0 8px 20px -12px rgba(13, 58, 99, .5);
+  transition: transform .38s cubic-bezier(.2, .9, .2, 1), opacity .28s ease, background .16s ease, color .16s ease;
+  transition-delay: var(--d, 0ms);
+}
+.kompass[data-aapen="true"] .kompass__ring a {
+  opacity: 1; pointer-events: auto;
+  transform: translate(-50%, -50%) translate(var(--x), var(--y)) scale(1);
+}
+.kompass__ring a:hover, .kompass__ring a:focus-visible { background: var(--hav); color: var(--hvit); }
+.kompass__ring a[aria-current="page"] { background: var(--hav); color: var(--hvit); border-color: var(--hav); }
+.kompass__bakgrunn {
+  position: fixed; inset: 0; z-index: 0; opacity: 0; pointer-events: none;
+  background: rgba(29, 42, 51, .18); transition: opacity .3s ease;
+}
+.kompass__knapp, .kompass__ring, .kompass__etikett { z-index: 2; }
+.kompass[data-aapen="true"] .kompass__bakgrunn { opacity: 1; pointer-events: auto; }
+
+/* ---------- Hero ---------- */
+
+.hero { position: relative; overflow: hidden; padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(2rem, 4vw, 3.2rem); }
+.hero__inn { display: grid; gap: clamp(1.8rem, 4vw, 3rem); align-items: center; }
+.hero__merke {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-family: var(--sans); font-size: .7rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--sol); margin-bottom: .9rem;
+}
+.hero__merke::before { content: ""; width: 2rem; height: 1px; background: currentColor; }
+.hero h1 { color: var(--hav-dyp); margin-bottom: .4em; }
+.hero__ingress { max-width: 44ch; color: #3a4a54; font-size: clamp(1.02rem, .98rem + .3vw, 1.14rem); }
+.hero__handlinger { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+.hero__fakta {
+  display: flex; flex-wrap: wrap; gap: .6rem 1.8rem; margin-top: 1.9rem;
+  padding-top: 1.2rem; border-top: 1px solid var(--strek);
+}
+.hero__fakta b { display: block; font-family: var(--playfair); font-size: 1.5rem; color: var(--hav); line-height: 1.1; }
+.hero__fakta span { font-size: .78rem; color: var(--gra); }
+
+/* ---------- Reisedagbok i 3D ---------- */
+
+.bokscene {
+  position: relative; min-height: 380px;
+  perspective: 1600px; perspective-origin: 50% 40%;
+  display: grid; place-items: center;
+}
+.bok {
+  position: relative; width: min(100%, 380px); aspect-ratio: 4 / 5;
+  transform-style: preserve-3d;
+  transform: rotateX(7deg) rotateY(-16deg) rotateZ(-1.5deg);
+  transition: transform .2s ease-out;
+}
+.bok__rygg {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 14px;
+  background: linear-gradient(90deg, #0d3a63, #17558c);
+  box-shadow: inset -2px 0 6px rgba(0, 0, 0, .35);
+  border-radius: 3px 0 0 3px;
+}
+.bok__side {
+  position: absolute; left: 14px; right: 0; top: 0; bottom: 0;
+  transform-origin: left center; transform-style: preserve-3d;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(160deg, #fffdf8, #f6efe2);
+  box-shadow: 0 22px 50px -30px rgba(13, 58, 99, .6), inset 0 0 40px rgba(217, 139, 74, .06);
+  padding: 1.3rem 1.25rem 1.2rem;
+  overflow: hidden;
+  transition: transform .55s cubic-bezier(.3, .8, .25, 1), box-shadow .4s ease;
+}
+.bok__side::after {
+  content: ""; position: absolute; right: 0; top: 0; bottom: 0; width: 1px;
+  background: var(--strek);
+}
+.bok__side--1 { z-index: 5; }
+.bok__side--2 { z-index: 4; }
+.bok__side--3 { z-index: 3; }
+.bok__side--4 { z-index: 2; }
+.bok__dag {
+  font-family: var(--sans); font-size: .64rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--sol); margin-bottom: .5rem;
+}
+.bok__side h3 {
+  font-family: var(--playfair); font-size: 1.22rem; color: var(--hav-dyp);
+  margin: 0 0 .45rem; line-height: 1.2;
+}
+.bok__side p { font-size: .88rem; color: #3d4b55; line-height: 1.6; }
+.bok__bilde { margin: .7rem 0 0; border: 1px solid var(--strek); overflow: hidden; }
+.bok__bilde img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.bok__sidenr {
+  position: absolute; bottom: .7rem; right: 1rem;
+  font-family: var(--playfair); font-style: italic; font-size: .78rem; color: var(--gra);
+}
+.bok__hint {
+  position: absolute; bottom: -.2rem; left: 50%; translate: -50% 0;
+  font-family: var(--sans); font-size: .7rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--gra); white-space: nowrap;
+}
+
+/* ---------- Seksjoner ---------- */
+
+.seksjon { padding: var(--luft) 0; }
+.seksjon--sand { background: var(--krem-2); }
+.seksjon--hav { background: var(--hav-dyp); color: #e9f1f5; }
+.seksjon--hav h2, .seksjon--hav h3 { color: #fbf7ef; }
+.seksjon--hav p { color: #b9d2de; }
+.seksjon--kant { border-top: 1px solid var(--strek); }
+
+.seksjonshode { display: grid; gap: .6rem 2rem; margin-bottom: clamp(1.4rem, 3vw, 2.2rem); }
+.seksjonshode h2 { margin: 0; max-width: 26ch; }
+.seksjonshode p { margin: 0; color: var(--gra); max-width: 46ch; font-size: .96rem; }
+.seksjon--hav .seksjonshode p { color: #a9c6d6; }
+.merkelapp {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-family: var(--sans); font-size: .68rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--sol); margin-bottom: .6rem;
+}
+.merkelapp::before { content: ""; width: 1.3rem; height: 1px; background: currentColor; }
+
+/* reisekort */
+.reiser { display: grid; gap: 1rem; }
+.reise {
+  background: var(--hvit); border: 1px solid var(--strek);
+  display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.reise:hover { transform: translateY(-3px); box-shadow: 0 18px 34px -26px rgba(13, 58, 99, .55); }
+.reise img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.reise__tekst { padding: 1rem 1.05rem 1.1rem; display: flex; flex-direction: column; gap: .3rem; flex: 1; }
+.reise__sted { font-family: var(--sans); font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sol); }
+.reise h3 { margin: 0; font-size: 1.1rem; color: var(--hav-dyp); }
+.reise__meta { display: flex; flex-wrap: wrap; gap: .2rem .9rem; font-size: .82rem; color: var(--gra); margin-top: .2rem; }
+.reise__pris { font-family: var(--playfair); font-size: 1.15rem; color: var(--hav); margin-top: auto; padding-top: .5rem; }
+.reise__pris small { font-family: var(--sans); font-size: .72rem; color: var(--gra); }
+.reise__merke {
+  align-self: flex-start; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+  color: #8a5a2b; background: #f4e3cf; padding: .12rem .45rem; border-radius: 2px;
+}
+
+/* grupper */
+.grupper { display: grid; gap: 1rem; }
+.gruppe { border: 1px solid var(--strek); background: var(--hvit); padding: 1.2rem 1.15rem; }
+.gruppe h3 { margin: 0 0 .3rem; color: var(--hav-dyp); }
+.gruppe p { font-size: .92rem; color: var(--gra); margin: 0; }
+.gruppe ul { margin: .7rem 0 0; padding-left: 1.1rem; font-size: .88rem; color: #3d4b55; }
+
+/* sitat */
+.sitat {
+  border-left: 2px solid var(--sol); padding: .3rem 0 .3rem 1.2rem;
+  font-family: var(--playfair); font-style: italic; font-size: clamp(1.15rem, 1rem + .8vw, 1.6rem);
+  color: var(--hav-dyp); line-height: 1.4; max-width: 40ch;
+}
+.sitat cite { display: block; font-family: var(--sans); font-style: normal; font-size: .8rem; color: var(--gra); margin-top: .7rem; letter-spacing: .06em; }
+
+/* steg / prosess */
+.steg { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+.steg li { display: grid; grid-template-columns: auto 1fr; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--strek); }
+.seksjon--hav .steg li { border-color: rgba(127, 192, 224, .22); }
+.steg li:last-child { border-bottom: 0; }
+.steg__nr { counter-increment: s; font-family: var(--playfair); font-size: 1rem; color: var(--sol); min-width: 1.6rem; }
+.steg__nr::before { content: "0" counter(s); }
+.steg h3 { margin: 0 0 .2rem; font-size: 1.02rem; color: var(--hav-dyp); }
+.seksjon--hav .steg h3 { color: #fbf7ef; }
+.steg p { margin: 0; font-size: .92rem; color: var(--gra); }
+.seksjon--hav .steg p { color: #a9c6d6; }
+
+/* duo */
+.duo { display: grid; gap: 1.6rem; align-items: center; }
+.duo--speil .duo__bilde { order: -1; }
+.ramme { overflow: hidden; background: var(--krem-2); }
+.ramme img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ramme--brei img { aspect-ratio: 16 / 8; }
+.ramme figcaption { font-size: .78rem; color: var(--gra); padding: .5rem .1rem 0; font-style: italic; }
+.seksjon--hav .ramme figcaption { color: #a9c6d6; }
+
+.haker { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: .55rem; }
+.haker li { display: grid; grid-template-columns: auto 1fr; gap: .6rem; font-size: .95rem; }
+.haker li::before { content: "✦"; color: var(--sol); font-size: .8rem; margin-top: .2rem; }
+.seksjon--hav .haker li { color: #c8dbe5; }
+
+/* tabell */
+.tabellramme { overflow-x: auto; border: 1px solid var(--strek); background: var(--hvit); }
+table { border-collapse: collapse; width: 100%; min-width: 33rem; font-size: .94rem; }
+caption { text-align: left; padding: .8rem .9rem 0; font-size: .82rem; color: var(--gra); font-style: italic; }
+th, td { text-align: left; padding: .75rem .9rem; border-bottom: 1px solid #eee5d6; vertical-align: top; }
+thead th { font-family: var(--sans); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gra); background: var(--krem-2); white-space: nowrap; }
+tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
+tbody th { font-family: var(--playfair); font-weight: 500; color: var(--hav-dyp); font-size: 1rem; }
+
+/* nyhetsbrev / skjema */
+.befaring { display: grid; gap: 1.6rem; align-items: start; }
+.skjema { display: grid; gap: .9rem; }
+.felt { display: grid; gap: .3rem; }
+.felt label { font-family: var(--sans); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gra); }
+.felt input, .felt select, .felt textarea {
+  font-family: var(--sans); font-size: .98rem; color: var(--blekk);
+  background: var(--hvit); border: 1px solid #d6cbb7; border-radius: 3px;
+  padding: .65rem .75rem; width: 100%;
+}
+.felt input:focus, .felt select:focus, .felt textarea:focus { border-color: var(--hav); outline: 2px solid rgba(23, 85, 140, .16); }
+.felt textarea { min-height: 6.5rem; resize: vertical; }
+.felt--to { display: grid; gap: .9rem; }
+.samtykke { display: grid; grid-template-columns: auto 1fr; gap: .55rem; font-size: .84rem; color: var(--gra); }
+.samtykke input { width: 1rem; height: 1rem; margin-top: .25rem; accent-color: var(--hav); }
+.skjemasvar { font-size: .9rem; color: var(--hav-dyp); background: #eaf2e6; border-left: 3px solid #6b9a58; padding: .6rem .8rem; }
+.skjemasvar[hidden] { display: none; }
+
+.kontaktkort { border: 1px solid var(--strek); background: var(--hvit); }
+.kontaktkort > div { padding: 1rem 1.1rem; border-bottom: 1px solid var(--strek); }
+.kontaktkort > div:last-child { border-bottom: 0; }
+.kontaktkort h3 { font-family: var(--sans); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gra); margin: 0 0 .2rem; font-weight: 600; }
+.kontaktkort p, .kontaktkort a { margin: 0; font-size: .98rem; color: var(--hav-dyp); text-decoration: none; }
+.kontaktkort a:hover { text-decoration: underline; }
+.kontaktkort .aapning { font-size: .9rem; color: var(--gra); line-height: 1.7; }
+
+/* sidetopp */
+.sidetopp { padding: clamp(1.6rem, 3.4vw, 2.6rem) 0 clamp(1.6rem, 3vw, 2.2rem); border-bottom: 1px solid var(--strek); }
+.smuler { display: flex; flex-wrap: wrap; gap: .4rem; font-size: .78rem; color: var(--gra); margin-bottom: 1rem; }
+.smuler a { color: var(--gra); text-decoration: none; }
+.smuler a:hover { color: var(--hav); text-decoration: underline; }
+.sidetopp h1 { max-width: 24ch; color: var(--hav-dyp); }
+.sidetopp__ingress { max-width: 56ch; color: #3a4a54; font-size: 1.04rem; }
+.sidetopp__bilde { margin-top: 1.3rem; }
+
+/* CTA */
+.cta {
+  background: var(--hav-dyp); color: #eaf2f6; padding: clamp(1.6rem, 4vw, 2.6rem);
+  display: grid; gap: 1rem; position: relative; overflow: hidden;
+}
+.cta::after {
+  content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px;
+  border: 1px solid rgba(127, 192, 224, .35); border-radius: 50%;
+}
+.cta h2 { margin: 0; color: #fbf7ef; max-width: 24ch; }
+.cta p { margin: 0; color: #b9d2de; max-width: 44ch; }
+.cta__handlinger { display: flex; flex-wrap: wrap; gap: .6rem; position: relative; }
+
+/* bunn */
+.bunn { background: var(--krem-2); border-top: 1px solid var(--strek); padding: var(--luft) 0 1.4rem; }
+.bunn__rutenett { display: grid; gap: 1.6rem; }
+.bunn h2 { font-family: var(--sans); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gra); margin: 0 0 .6rem; font-weight: 600; }
+.bunn ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+.bunn a { color: var(--hav-dyp); text-decoration: none; font-size: .9rem; }
+.bunn a:hover { text-decoration: underline; }
+.bunn p { font-size: .88rem; color: var(--gra); }
+.bunn__merke { font-family: var(--playfair); font-size: 1.1rem; color: var(--hav-dyp); margin-bottom: .35rem; }
+.bunn__slutt {
+  margin-top: 1.8rem; padding-top: 1rem; border-top: 1px solid var(--strek);
+  display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; justify-content: space-between;
+  font-size: .78rem; color: var(--gra);
+}
+
+/* ---------- Panel ---------- */
+
+.paneltopp { background: var(--hav-dyp); color: #e6f0f4; padding: .7rem 0; }
+.paneltopp__inn { display: flex; flex-wrap: wrap; gap: .7rem 1.2rem; align-items: center; justify-content: space-between; }
+.paneltopp .merke__tekst { color: #fbf7ef; }
+.paneltopp .merke__tekst small { color: #9dc0d4; }
+.paneltopp .merke__merke { color: var(--himmel); }
+.paneltopp__bruker { font-size: .82rem; color: #b9d2de; display: flex; align-items: center; gap: .45rem; }
+.paneltopp__bruker i {
+  width: 1.8rem; height: 1.8rem; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(127, 192, 224, .18); color: #d6eaf3; font-style: normal; font-size: .68rem;
+}
+.panel { padding: clamp(1.2rem, 3vw, 2.2rem) 0 var(--luft); }
+.panel__hode { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; justify-content: space-between; margin-bottom: 1.3rem; }
+.panel__hode h1 { font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.1rem); margin: 0 0 .2rem; }
+.panel__hode p { margin: 0; color: var(--gra); font-size: .88rem; }
+
+.kpi { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin-bottom: 1.3rem; }
+.kpi__kort { background: var(--hvit); border: 1px solid var(--strek); padding: .9rem 1rem; }
+.kpi__kort--aktiv { border-top: 2px solid var(--hav); }
+.kpi__kort--sol { border-top: 2px solid var(--sol); }
+.kpi__navn { font-size: .66rem; letter-spacing: .13em; text-transform: uppercase; color: var(--gra); display: block; margin-bottom: .2rem; }
+.kpi__tall { font-family: var(--playfair); font-size: clamp(1.5rem, 1.2rem + 1vw, 1.95rem); color: var(--hav-dyp); line-height: 1; }
+.kpi__endring { font-size: .74rem; color: var(--gra); display: block; margin-top: .25rem; }
+
+.verktoylinje { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; justify-content: space-between; margin-bottom: .8rem; }
+.filter { display: flex; flex-wrap: wrap; gap: .3rem; }
+.filter button {
+  font-family: var(--sans); font-size: .78rem; padding: .35rem .7rem;
+  border-radius: 999px; cursor: pointer; border: 1px solid #d6cbb7;
+  background: transparent; color: var(--hav-dyp);
+}
+.filter button:hover { border-color: var(--hav); }
+.filter button[aria-pressed="true"] { background: var(--hav); border-color: var(--hav); color: var(--hvit); }
+.verktoylinje__tall { font-size: .8rem; color: var(--gra); }
+
+.bookinger { display: grid; gap: .55rem; }
+.booking {
+  background: var(--hvit); border: 1px solid var(--strek); border-left: 3px solid var(--himmel);
+  padding: .75rem .9rem; display: grid; gap: .5rem .9rem; grid-template-columns: 1fr auto;
+}
+.booking[data-status="bekreftet"] { border-left-color: #6b9a58; }
+.booking[data-status="venter"] { border-left-color: var(--sol); }
+.booking__navn { font-family: var(--playfair); font-size: 1rem; color: var(--hav-dyp); margin: 0 0 .15rem; }
+.booking__meta { display: flex; flex-wrap: wrap; gap: .15rem .8rem; font-size: .8rem; color: var(--gra); }
+.booking__status { font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--himmel); }
+.booking[data-status="bekreftet"] .booking__status { color: #5b8550; }
+.booking[data-status="venter"] .booking__status { color: var(--sol); }
+.booking__knapp {
+  font-family: var(--sans); font-size: .78rem; padding: .35rem .7rem;
+  border-radius: 999px; border: 1px solid var(--hav); background: var(--hav);
+  color: var(--hvit); cursor: pointer; white-space: nowrap;
+}
+.booking__knapp:hover { background: var(--hav-dyp); }
+.booking__knapp:disabled { background: transparent; border-color: #d6cbb7; color: #93876f; cursor: default; }
+
+.ruter { display: grid; gap: .6rem; }
+.rute {
+  background: var(--hvit); border: 1px solid var(--strek); padding: .7rem .85rem;
+}
+.rute__topp { display: flex; flex-wrap: wrap; gap: .3rem .8rem; justify-content: space-between; align-items: baseline; }
+.rute__navn { font-family: var(--playfair); font-size: .96rem; color: var(--hav-dyp); }
+.rute__antall { font-size: .76rem; color: var(--gra); }
+.spor { display: flex; align-items: center; gap: 0; margin-top: .5rem; }
+.spor span {
+  font-size: .66rem; letter-spacing: .06em; color: var(--gra);
+  display: flex; align-items: center; gap: .25rem; white-space: nowrap;
+}
+.spor span::before { content: ""; width: .38rem; height: .38rem; border-radius: 50%; background: var(--himmel); }
+.spor span + span { margin-left: auto; }
+.spor span:last-child::before { background: var(--sol); }
+.spor i { flex: 1; height: 1px; background: repeating-linear-gradient(90deg, #d6cbb7 0 4px, transparent 4px 8px); margin: 0 .4rem; }
+
+.panelkort { background: var(--hvit); border: 1px solid var(--strek); padding: .9rem 1rem; }
+.panelkort > h2 { font-family: var(--sans); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gra); margin: 0 0 .7rem; font-weight: 600; }
+.logglinje { display: flex; gap: .6rem; font-size: .84rem; padding: .4rem 0; border-bottom: 1px solid #f0e8da; color: #3d4b55; }
+.logglinje:last-child { border-bottom: 0; }
+.logglinje time { color: #93876f; flex-shrink: 0; font-size: .78rem; }
+.panelrutenett { display: grid; gap: 1rem; align-items: start; }
+
+/* ---------- Bevegelse ---------- */
+/* Innhold er alltid synlig. JS legger på .js-reveal kun når IntersectionObserver
+   finnes, og da glir seksjonene på plass – aldri tomme felt. */
+.js-reveal .avslor { transform: translateY(18px); transition: transform .65s cubic-bezier(.2,.8,.2,1); }
+.js-reveal .avslor.er-inne { transform: none; }
+
+@media (max-width: 599px) {
+  .topp__tlf { display: none; }
+  .kompass__knapp { width: 3.2rem; height: 3.2rem; }
+  .kompass__ring a { font-size: .78rem; height: 2.4rem; padding: 0 .6rem; }
+  .bokscene { min-height: 330px; }
+  .bok__side { padding: 1.05rem 1rem 1rem; }
+  .bok__side h3 { font-size: 1.08rem; }
+  .bok__side p { font-size: .84rem; }
+}
+
+@media (min-width: 640px) {
+  .felt--to { grid-template-columns: 1fr 1fr; }
+  .reiser { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpi { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .grupper { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 900px) {
+  .hero__inn { grid-template-columns: 1.05fr .95fr; }
+  .seksjonshode { grid-template-columns: 1.15fr .85fr; align-items: end; }
+  .reiser { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .duo { grid-template-columns: 1fr 1fr; gap: clamp(1.6rem, 4vw, 3.2rem); }
+  .duo--speil .duo__bilde { order: 0; }
+  .duo--speil .duo__tekst { order: -1; }
+  .bunn__rutenett { grid-template-columns: 1.4fr .8fr .8fr .9fr; }
+  .cta { grid-template-columns: 1.3fr auto; align-items: center; }
+  .cta__handlinger { justify-content: flex-end; }
+  .befaring { grid-template-columns: 1.08fr .92fr; }
+  .panelrutenett { grid-template-columns: 1.5fr 1fr; }
+  .booking { grid-template-columns: 1fr auto auto; align-items: center; }
+  .bokscene { min-height: 440px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .avslor, .js-reveal .avslor { transform: none; }
+  .bok { transform: none; }
+  .bok__side { transition: none; }
+  .kompass__ring a { transition: none; }
+}

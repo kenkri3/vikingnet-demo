@@ -1,0 +1,36 @@
+{
+  "slug": "dagaasbo-no-demo",
+  "firma": "Dag Aasbø Travel AS",
+  "navType": "kompassrose",
+  "fonts": [
+    "Playfair Display",
+    "Source Sans 3"
+  ],
+  "palette": [
+    "#17558c",
+    "#7fc0e0",
+    "#f6efe2",
+    "#d98b4a"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "anbefalte",
+    "julemarkeder",
+    "gruppereiser",
+    "om",
+    "nyhetsbrev"
+  ],
+  "pages": [
+    "index.html",
+    "reiser.html",
+    "grupper.html",
+    "inspirasjon.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
