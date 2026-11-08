@@ -1,0 +1,38 @@
+{
+  "slug": "datelco-no-demo",
+  "firma": "Datelco AS",
+  "navType": "kortstokk-nav (flip)",
+  "fonts": [
+    "Spline Sans",
+    "Cairo"
+  ],
+  "palette": [
+    "#0a1f2a",
+    "#2fe0a8",
+    "#f4f7f5",
+    "#d8a13a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "tjenester",
+    "fag",
+    "kunder",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "nett.html",
+    "support.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

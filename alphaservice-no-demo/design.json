@@ -1,0 +1,35 @@
+{
+  "slug": "alphaservice-no-demo",
+  "firma": "Alpha Service AS",
+  "navType": "fullskjerm-grid-overlay",
+  "fonts": [
+    "DM Serif Display",
+    "Mulish"
+  ],
+  "palette": [
+    "#241f1b",
+    "#f2e9dc",
+    "#8a3b23"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "maling",
+    "hvorfor",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bransjer.html",
+    "prosess.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

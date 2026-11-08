@@ -1,0 +1,34 @@
+{
+  "slug": "arbeidsfolk-no-demo",
+  "firma": "Arbeidsfolk",
+  "navType": "prikk-rail",
+  "fonts": [
+    "Unbounded",
+    "Source Serif 4"
+  ],
+  "palette": [
+    "#23281c",
+    "#ebe9dd",
+    "#b4552a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "utvalg",
+    "logo",
+    "kategorier",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "arbeidsklaer.html",
+    "verneutstyr.html",
+    "bedrift.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
