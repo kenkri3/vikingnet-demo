@@ -1,0 +1,37 @@
+{
+  "slug": "industristillas-no-demo",
+  "firma": "Industristillas AS",
+  "navType": "sideindeks med fremdriftslinje",
+  "fonts": [
+    "Bricolage Grotesque",
+    "Archivo"
+  ],
+  "palette": [
+    "#12161a",
+    "#ff5a1f",
+    "#e6e2d8",
+    "#4a5560"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "tjenester",
+    "prosjekter",
+    "hms",
+    "gaselle",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "stillas.html",
+    "bemanning.html",
+    "hms.html",
+    "prosjekter.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

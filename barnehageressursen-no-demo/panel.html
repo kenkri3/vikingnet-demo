@@ -1,175 +1,221 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Barnehageressursen AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Barnehageressursen AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Vikarpanelet — Barnehageressursen AS</title>
+<meta name="description" content="Demoversjon av vikarpanelet til Barnehageressursen: dagens vikaroppdrag, avdelinger, ledige vikarer og tildeling av vikar.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Barnehageressursen AS">
+<meta property="og:title" content="Vikarpanelet — Barnehageressursen AS">
+<meta property="og:description" content="Demoversjon av vikarpanelet til Barnehageressursen: dagens vikaroppdrag, avdelinger, ledige vikarer og tildeling av vikar.">
+<meta property="og:image" content="assets/img/09-barnehageressursen-no.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/barnehageressursen-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Barnehageressursen AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="topp-inn">
+    <a class="merke" href="index.html">
+      <span class="merke-ikon" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="merke-tekst"><strong>Barnehageressursen</strong><small>Ressursbyrået for barnehager</small></span>
+    </a>
+    <nav aria-label="Boblemeny">
+      <ul class="bobler">
+        <li><a class="boble" href="index.html"><span class="boble-ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M4 11.2 12 4l8 7.2V20a1 1 0 0 1-1 1h-4.6v-6.2H9.6V21H5a1 1 0 0 1-1-1z"/></svg></span><span class="boble-tekst">Forside</span></a></li>
+        <li><a class="boble" href="vikarer.html"><span class="boble-ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><circle cx="12" cy="8" r="3.3"/><path d="M4.8 20.5c.4-3.7 3.4-6 7.2-6s6.8 2.3 7.2 6"/></svg></span><span class="boble-tekst">Vikarer</span></a></li>
+        <li><a class="boble" href="fag.html"><span class="boble-ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M5 4.5h5.4v15H5zM13.6 4.5H19v15h-5.4z"/><path d="M10.4 12h3.2"/></svg></span><span class="boble-tekst">Fag</span></a></li>
+        <li><a class="boble" href="kommuner.html"><span class="boble-ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M3.5 20.5V9.4l4.8-2.6v13.7M8.3 20.5V6.2l6.2 2.7v11.6M14.5 20.5v-8l6 2.2v5.8"/></svg></span><span class="boble-tekst">Kommuner</span></a></li>
+        <li><a class="boble" href="om.html"><span class="boble-ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M12 20.3S4.6 15.6 4.6 10.6A4.2 4.2 0 0 1 12 7.6a4.2 4.2 0 0 1 7.4 3c0 5-7.4 9.7-7.4 9.7z"/></svg></span><span class="boble-tekst">Om oss</span></a></li>
+        <li><a class="boble" href="kontakt.html"><span class="boble-ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M6 3.4h3l2 5-2.4 1.4a12.4 12.4 0 0 0 5.1 5.1l1.4-2.4 5 2v3a2 2 0 0 1-2.1 2A16.2 16.2 0 0 1 4 5.5a2 2 0 0 1 2-2.1z"/></svg></span><span class="boble-tekst">Kontakt</span></a></li>
+        <li><a class="boble" href="panel.html" aria-current="page"><span class="boble-ikon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M4 4h6.6v6.6H4zM13.4 4H20v4.4h-6.6zM13.4 10.4H20V20h-6.6zM4 12.6h6.6V20H4z"/></svg></span><span class="boble-tekst">Panel</span></a></li>
+      </ul>
+    </nav>
   </div>
 </header>
-<main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Barnehageressursen AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Barnehageressursen AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+<main id="hoved">  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div>
+          <p class="merkelapp">Internt · bemanning</p>
+          <h1>Vikaroppdrag i dag</h1>
+          <p>Oversikt over bestillinger, avdelinger og ledige vikarer. Demoversjon med eksempeldata.</p>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Fast rekruttering av spesialister og fagfolk</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Fleksibel bemanning og vikarutleie</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Executive Search og styreutvelgelse</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Rådgivning og kandidatutvikling</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
+        <span class="panel-merke">Demo · eksempeldata</span>
       </div>
 
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Oppdrag i dag</p><p class="verdi">4</p><p class="endring">3 før kl. 08.00</p></div>
+        <div class="kpi"><p class="navn">Venter på vikar</p><p class="verdi" id="kpi-venter">3</p><p class="endring">eldste: 22 min</p></div>
+        <div class="kpi"><p class="navn">Ledige vikarer</p><p class="verdi">6</p><p class="endring">2 med småbarnserfaring</p></div>
+        <div class="kpi"><p class="navn">Fyllingsgrad</p><p class="verdi">96 %</p><p class="endring">+4 % mot forrige uke</p></div>
+      </div>
+
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Oppdrag</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer oppdrag">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="tildelt" aria-pressed="false">Tildelt</button>
+              <button class="filter" type="button" data-filter="planlagt" aria-pressed="false">Planlagt</button>
+            </div>
+          </div>
+          <div class="boks-hode" style="border-top:0;padding-top:.6rem;padding-bottom:.6rem">
+            <p style="margin:0;font-size:.74rem;color:var(--blekk-70)" id="oppdrag-antall">6 oppdrag · 3 uten vikar</p>
+            <span style="font-size:.7rem;color:var(--blekk-45)">oppdatert kl. 07.42</span>
+          </div>
+          <ul class="oppdrag-liste" id="oppdrag-liste">
+        <li class="oppdrag" data-status="venter" data-navn="Vikar – 3 avdelinger · Fjellstua barnehage">
+          <div>
+            <p class="oppdrag-navn" style="margin:0">Vikar – 3 avdelinger</p>
+            <p class="oppdrag-meta"><span>Fjellstua barnehage</span><span class="skille">/</span><span>I dag 07.00–16.00</span><span class="skille">/</span><span class="oppdrag-vikar">Ikke tildelt</span></p>
+          </div>
+          <div class="oppdrag-hoyre">
+            <span class="status" data-status="venter">Venter på vikar</span>
+            <button class="liten-knapp" type="button" data-tildel>Tildel vikar</button>
+          </div>
+        </li>
+        <li class="oppdrag" data-status="venter" data-navn="Sykdom – storbarnsavdeling · Lund barnehage">
+          <div>
+            <p class="oppdrag-navn" style="margin:0">Sykdom – storbarnsavdeling</p>
+            <p class="oppdrag-meta"><span>Lund barnehage</span><span class="skille">/</span><span>I dag 08.00–15.30</span><span class="skille">/</span><span class="oppdrag-vikar">Ikke tildelt</span></p>
+          </div>
+          <div class="oppdrag-hoyre">
+            <span class="status" data-status="venter">Venter på vikar</span>
+            <button class="liten-knapp" type="button" data-tildel>Tildel vikar</button>
+          </div>
+        </li>
+        <li class="oppdrag" data-status="venter" data-navn="Vikar – kjøkken · Lund barnehage">
+          <div>
+            <p class="oppdrag-navn" style="margin:0">Vikar – kjøkken</p>
+            <p class="oppdrag-meta"><span>Lund barnehage</span><span class="skille">/</span><span>I dag 09.00–13.00</span><span class="skille">/</span><span class="oppdrag-vikar">Ikke tildelt</span></p>
+          </div>
+          <div class="oppdrag-hoyre">
+            <span class="status" data-status="venter">Venter på vikar</span>
+            <button class="liten-knapp" type="button" data-tildel>Tildel vikar</button>
+          </div>
+        </li>
+        <li class="oppdrag" data-status="tildelt" data-navn="Vikar – småbarnsavdeling · Granlia barnehage">
+          <div>
+            <p class="oppdrag-navn" style="margin:0">Vikar – småbarnsavdeling</p>
+            <p class="oppdrag-meta"><span>Granlia barnehage</span><span class="skille">/</span><span>I morgen 07.00–16.00</span><span class="skille">/</span><span class="oppdrag-vikar">Ida M.</span></p>
+          </div>
+          <div class="oppdrag-hoyre">
+            <span class="status" data-status="tildelt">Tildelt</span>
+            <button class="liten-knapp" type="button" data-tildel disabled>Tildelt</button>
+          </div>
+        </li>
+        <li class="oppdrag" data-status="tildelt" data-navn="Ferie – pedagogisk leder · Bjørkåsen barnehage">
+          <div>
+            <p class="oppdrag-navn" style="margin:0">Ferie – pedagogisk leder</p>
+            <p class="oppdrag-meta"><span>Bjørkåsen barnehage</span><span class="skille">/</span><span>11.11 07.30–16.30</span><span class="skille">/</span><span class="oppdrag-vikar">Sara K.</span></p>
+          </div>
+          <div class="oppdrag-hoyre">
+            <span class="status" data-status="tildelt">Tildelt</span>
+            <button class="liten-knapp" type="button" data-tildel disabled>Tildelt</button>
+          </div>
+        </li>
+        <li class="oppdrag" data-status="planlagt" data-navn="Planleggingsdag · Solbakken barnehage">
+          <div>
+            <p class="oppdrag-navn" style="margin:0">Planleggingsdag</p>
+            <p class="oppdrag-meta"><span>Solbakken barnehage</span><span class="skille">/</span><span>I morgen 07.30–16.30</span><span class="skille">/</span><span class="oppdrag-vikar">Ikke bestilt</span></p>
+          </div>
+          <div class="oppdrag-hoyre">
+            <span class="status" data-status="planlagt">Planlagt</span>
+            <button class="liten-knapp" type="button" data-tildel disabled>Tildelt</button>
+          </div>
+        </li>
+          </ul>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om fast rekruttering av spesialister og fagfolk</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om fleksibel bemanning og vikarutleie</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av executive search og styreutvelgelse</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Avdelinger og bemanning</h2>
+          </div>
+          <ul class="avdeling-liste" id="avdeling-liste">
+        <li class="avdeling" data-navn="Fjellstua barnehage" data-behov="4 avdelinger · 1 vikar i dag">
+          <div><p class="avdeling-navn" style="margin:0">Fjellstua barnehage</p><p class="avdeling-meta" style="margin:0">4 avdelinger · 1 vikar i dag</p></div>
+          <span class="prikk-status" style="background:var(--rod)"></span>
+        </li>
+        <li class="avdeling" data-navn="Lund barnehage" data-behov="6 avdelinger · 2 vikarer i dag">
+          <div><p class="avdeling-navn" style="margin:0">Lund barnehage</p><p class="avdeling-meta" style="margin:0">6 avdelinger · 2 vikarer i dag</p></div>
+          <span class="prikk-status" style="background:var(--rod)"></span>
+        </li>
+        <li class="avdeling" data-navn="Solbakken barnehage" data-behov="3 avdelinger · planleggingsdag i morgen">
+          <div><p class="avdeling-navn" style="margin:0">Solbakken barnehage</p><p class="avdeling-meta" style="margin:0">3 avdelinger · planleggingsdag i morgen</p></div>
+          <span class="prikk-status" style="background:var(--bla)"></span>
+        </li>
+        <li class="avdeling" data-navn="Granlia barnehage" data-behov="5 avdelinger · dekket">
+          <div><p class="avdeling-navn" style="margin:0">Granlia barnehage</p><p class="avdeling-meta" style="margin:0">5 avdelinger · dekket</p></div>
+          <span class="prikk-status" style="background:var(--gronn)"></span>
+        </li>
+        <li class="avdeling" data-navn="Bjørkåsen barnehage" data-behov="4 avdelinger · dekket">
+          <div><p class="avdeling-navn" style="margin:0">Bjørkåsen barnehage</p><p class="avdeling-meta" style="margin:0">4 avdelinger · dekket</p></div>
+          <span class="prikk-status" style="background:var(--gronn)"></span>
+        </li>
+          </ul>
+          <div style="padding:1rem 1.1rem;border-top:1px solid var(--kant)">
+            <p style="font-size:.78rem;color:var(--blekk-70);margin:0">Ring 400 70 900 for endringer etter kl. 16.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
+  <dialog class="dialog" id="tildel-dialog" aria-labelledby="tildel-overskrift">
+    <form method="dialog">
+      <p class="dialog-meta">Tildel vikar</p>
+      <h2 id="tildel-overskrift"><span id="tildel-oppdrag">Oppdraget</span></h2>
+      <div class="felt">
+        <label for="tildel-vikar">Ledige vikarer</label>
+        <select id="tildel-vikar">
+          <option>Ida M. · småbarnserfaring</option>
+          <option>Sara K. · førskolelærer</option>
+          <option>Jonas P. · storbarnserfaring</option>
+          <option>Mina L. · småbarnserfaring</option>
+          <option>Ola H. · kjøkken og praktisk arbeid</option>
+          <option>Rebekka T. · førskolelærer</option>
+        </select>
+      </div>
+      <p style="font-size:.8rem;color:var(--blekk-70);margin:0">Vikaren får oppdragsbekreftelse på SMS, og barnehagen får navn og ankomsttid.</p>
+      <div class="dialog-handlinger">
+        <button class="knapp knapp--hvit knapp--liten" type="button" data-lukk>Avbryt</button>
+        <button class="knapp knapp--liten" type="submit">Tildel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
 </main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Barnehageressursen AS</p>
-      <p class="bunn__tekst">Norge · post@barnehageressursen.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Barnehageressursen AS</p>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 Barnehageressursen AS · Ressursbyrået for barnehager</p>
+    <p class="fot-lenker">
+      <a href="vikarer.html">Vikarer</a>
+      <a href="fag.html">Fag</a>
+      <a href="kommuner.html">Kommuner</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </p>
   </div>
 </footer>
 <script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
+(function () {
+  var d = document, r = d.documentElement;
+  var s = d.createElement("script");
+  s.src = "assets/js/barnehageressursen-no-demo.js";
+  s.onload = function () { r.classList.add("js"); };
+  s.onerror = function () { r.classList.remove("js"); };
+  (d.head || d.documentElement).appendChild(s);
+})();
 </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+{
+  "slug": "barnehageressursen-no-demo",
+  "firma": "Barnehageressursen AS",
+  "navType": "boble-ikoner",
+  "fonts": [
+    "Baloo 2",
+    "Nunito Sans"
+  ],
+  "palette": [
+    "#d94a4a",
+    "#6fa83c",
+    "#3f7fb8",
+    "#fdf6ea"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "lofte",
+    "bok",
+    "tall",
+    "stemmer",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "vikarer.html",
+    "fag.html",
+    "kommuner.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

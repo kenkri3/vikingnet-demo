@@ -1,0 +1,34 @@
+{
+  "slug": "innvihome-no-demo",
+  "firma": "INNVI Home",
+  "navType": "sticky-venstre-nummerert-innholdsfortegnelse",
+  "fonts": [
+    "Cormorant Garamond",
+    "Karla"
+  ],
+  "palette": [
+    "#22231e",
+    "#f2ede3",
+    "#8fa79a"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "hvorfor",
+    "kolleksjon",
+    "kundeord",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "kolleksjon.html",
+    "prosess.html",
+    "inspirasjon.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
