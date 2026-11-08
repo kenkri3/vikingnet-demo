@@ -1,182 +1,115 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Impact Rekruttering &amp; Bemanning AS – Rekruttering &amp; bemanning</title>
-<meta name="description" content="Vi har erfart at grundighet varer lengst, repetisjon og kompromissløst søkelys på kvalitet gir solide kandidater til beste for våre oppdragsgivere.">
-<meta property="og:title" content="Impact Rekruttering &amp; Bemanning AS – Rekruttering &amp; bemanning">
-<meta property="og:description" content="Vi har erfart at grundighet varer lengst, repetisjon og kompromissløst søkelys på kvalitet gir solide kandidater til beste for våre oppdragsgivere.">
-<meta property="og:image" content="img/01-impact-no.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Impact AS – rekruttering, lederrekruttering og executive search i Oslo</title>
+<meta name="description" content="Impact AS i Oslo: rekruttering, lederrekruttering, executive search, HR-tjenester og karriereveiledning. Vi har erfart at grundighet varer lengst.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Impact AS – rekruttering, lederrekruttering og executive search i Oslo">
+<meta property="og:description" content="Impact AS i Oslo: rekruttering, lederrekruttering, executive search, HR-tjenester og karriereveiledning. Vi har erfart at grundighet varer lengst.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/01-impact-no.jpg">
+<meta name="theme-color" content="#101010">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/impact-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">Impact Rekruttering &amp; Bemanning AS</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="stripe">
+  <a class="stripe__merke" href="index.html">Impact<b>.</b></a>
+  <div class="stripe__vindu" aria-label="Hovedmeny">
+    <div class="stripe__spor"><div class="stripe__sett"><a href="index.html" aria-current="page">Forside</a><i>/</i><a href="tjenester.html">Tjenester</a><i>/</i><a href="case.html">Case</a><i>/</i><a href="om.html">Om</a><i>/</i><a href="kontakt.html">Kontakt</a><i>/</i><a href="panel.html">Panel</a><i>/</i></div><div class="stripe__sett" aria-hidden="true"><a href="index.html" tabindex="-1">Forside</a><i>/</i><a href="tjenester.html" tabindex="-1">Tjenester</a><i>/</i><a href="case.html" tabindex="-1">Case</a><i>/</i><a href="om.html" tabindex="-1">Om</a><i>/</i><a href="kontakt.html" tabindex="-1">Kontakt</a><i>/</i><a href="panel.html" tabindex="-1">Panel</a><i>/</i></div></div>
   </div>
+  <a class="stripe__cta" href="kontakt.html">Ta en prat</a>
 </header>
+<nav class="sr-only" aria-label="Meny for skjermleser"><ul><li><a href="index.html">Forside</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="case.html">Case</a></li><li><a href="om.html">Om</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Panel</a></li></ul></nav>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/01-impact-no.jpg" alt="Impact Rekruttering &amp; Bemanning AS" loading="eager" decoding="async">
-    <figcaption><strong>Impact Rekruttering &amp; Bemanning AS</strong><span>Rekruttering &amp; bemanning · Oslo</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Rekruttering &amp; bemanning · Oslo</p>
-    <h1>Rett kompetanse på rett plass – når virksomheten trenger det</h1>
-    <p class="helt__ingress">Vi har erfart at grundighet varer lengst, repetisjon og kompromissløst søkelys på kvalitet gir solide kandidater til beste for våre oppdragsgivere.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tel:+4723067050">Ring 23 06 70 50</a>
+<section class="hero">
+  <canvas class="hero__lerret" id="felt" aria-hidden="true"></canvas>
+  <div class="hero__dekk" aria-hidden="true"></div>
+  <div class="inn hero__inn">
+    <span class="hero__merke"><b>IMPACT AS</b>Rekruttering og ledelse · Oslo</span>
+    <h1>Grundighet<em>varer lengst.</em></h1>
+    <p class="hero__ingress">Vi har erfart at repetisjon og kompromissløst søkelys på kvalitet gir solide kandidater til beste for våre oppdragsgivere. Det er hele metoden vår.</p>
+    <div class="hero__knapper"><a class="knapp" href="tjenester.html">Se tjenestene <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="case.html">Ledige stillinger</a></div>
+    <div class="hero__tall">
+      <div><b>Oslo</b><span>Brynsengveien 2</span></div>
+      <div><b>8</b><span>Tjenesteområder</span></div>
+      <div><b>Privat + offentlig</b><span>Oppdragsgivere</span></div>
     </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">Grundig kvalitetssikring og referansesjekk</li>
-      <li class="tillit__punkt">Sterkt kandidatnettverk</li>
-      <li class="tillit__punkt">Tett oppfølging av både kunde og ansatt</li>
+  </div>
+  <span class="hero__hint"><i aria-hidden="true"></i>Beveg pekeren – strømmen følger</span>
+</section>
+<section class="sek sek--strek">
+  <div class="inn">
+    <div class="hode2">
+      <div><div class="merkelinje">01 — Det vi gjør</div><h2>Rekruttering og rådgivning</h2></div>
+      <p>IMPACT har spesialisert seg innen rekruttering, lederrekruttering, executive search og HR-tjenester. Konsulentene våre har tung kompetanse fra ulike deler av næringslivet – og fra offentlig forvaltning.</p>
+    </div>
+    <ul class="tjlist">
+      <li><a href="tjenester.html#rekruttering"><span class="nr">01</span><span><b>Rekruttering</b><small>Utvelgelse av kandidater til ledelses-, salgs- og markedsstillinger, i privat og offentlig sektor.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="tjenester.html#leder"><span class="nr">02</span><span><b>Lederrekruttering</b><small>Når feil ansettelse koster mest, og prosessen må tåle å bli sett på.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="tjenester.html#search"><span class="nr">03</span><span><b>Executive search</b><small>Direkte søk etter kandidater som ikke sitter og venter på en annonse.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="tjenester.html#hr"><span class="nr">04</span><span><b>HR-tjenester og organisasjonsutvikling</b><small>Støtte i endringsprosesser, lederstøtte og kompetansekartlegging.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="tjenester.html#outplacement"><span class="nr">05</span><span><b>Outplacement og karriereveiledning</b><small>Når noen skal videre: verdig avslutning og hjelp til neste steg.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
     </ul>
   </div>
 </section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
-  </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/02-impact-no.jpg" alt="Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Fast rekruttering av spesialister og fagfolk</h3>
-      <p>Helhetlig rekrutteringsprosess med kravprofil, aktivt kandidatsøk, strukturerte intervjuer, testing og grundig referansekontroll.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/03-impact-no.jpg" alt="Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Fleksibel bemanning og vikarutleie</h3>
-      <p>Rask tilgang på kvalifiserte medarbeidere ved sesongtopper, prosjekter, sykdom eller midlertidige bemanningsbehov.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/04-impact-no.jpg" alt="Executive Search og styreutvelgelse" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Executive Search og styreutvelgelse</h3>
-      <p>Konfidensielt søk og utvelgelse av toppledere, mellomledere og styremedlemmer som skaper langsiktig utvikling og resultater.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/05-impact-no.jpg" alt="Rådgivning og kandidatutvikling" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Rådgivning og kandidatutvikling</h3>
-      <p>Støtte ved organisasjonsutvikling, onboarding, karriererådgivning og kompetansekartlegging for bedrifter og jobbsøkere.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Mennesker før CV-er</h3><p>Vi legger like stor vekt på personlig egnethet, motivasjon og kulturmatch som på formell bakgrunn.</p></div>
-    <div class="verdi"><h3>Kvalitet og etterlevelse</h3><p>Som seriøs bemannings- og rekrutteringsaktør sikrer vi ryddige arbeidsforhold og full etterlevelse av lovverket.</p></div>
-    <div class="verdi"><h3>Bransjekunnskap</h3><p>Våre rådgivere kjenner kompetansekravene i bransjen og vet hva som skal til for å lykkes i rollen.</p></div>
-    <div class="verdi"><h3>Forpliktende oppfølging</h3><p>Vi følger opp både oppdragsgiver og nyansatt etter oppstart for å sikre en god og varig match.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/seksjon-6.jpg" alt="Impact Rekruttering &amp; Bemanning AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Sterke team bygges når faglig kompetanse og personlig drivkraft møter riktig arbeidsplass.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Oversiktlig rekrutteringsløp</p>
-      <h2>Henvendelsen som ikke blir liggende</h2>
-      <p>Fra avklart kravprofil til signert arbeidsavtale har både oppdragsgiver og kandidater tydelig oversikt over hvor prosessen står.</p>
+<section class="sek sek--mork">
+  <div class="inn">
+    <div class="hode2">
+      <div><div class="merkelinje">02 — Ledige stillinger</div><h2>Aktuelle oppdrag</h2></div>
+      <p>Vi legger regelmessig ut nye stillinger for deg som er jobbsøker. Her er noen av oppdragene vi jobber med nå.</p>
     </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Status i oppdraget</p>
-      <div class="drom__rad"><span>Kravprofil og kandidatsøk</span><span>Fullført</span></div><div class="drom__rad"><span>Intervjuer og faglig vurdering</span><span>Pågår</span></div><div class="drom__rad"><span>Referansesjekk og innstilling</span><span>Klar</span></div>
+    <div class="ngrid">
+      <article class="stilling" style="border-color:rgba(243,240,234,.4)"><span class="stilling__firma">Optronics Technology AS</span><h3 style="color:var(--papir)">General manager</h3><p style="color:rgba(243,240,234,.66)">Vil du lede et norsk teknologimiljø med internasjonale ambisjoner?</p><a class="lenk" href="kontakt.html" style="color:var(--papir)">Meld interesse <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></article>
+      <article class="stilling" style="border-color:rgba(243,240,234,.4)"><span class="stilling__firma">Würth Norge AS</span><h3 style="color:var(--papir)">Produktsjef bygg</h3><p style="color:rgba(243,240,234,.66)">Kombiner byggfaglig kompetanse med produktutvikling og kommersielt arbeid.</p><a class="lenk" href="kontakt.html" style="color:var(--papir)">Meld interesse <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></article>
+      <article class="stilling" style="border-color:rgba(243,240,234,.4)"><span class="stilling__firma">Bademiljø AS</span><h3 style="color:var(--papir)">Kjededirektør bademiljø</h3><p style="color:rgba(243,240,234,.66)">Vil du lede og videreutvikle Norges ledende baderomskjede?</p><a class="lenk" href="kontakt.html" style="color:var(--papir)">Meld interesse <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></article>
+      <article class="stilling" style="border-color:rgba(243,240,234,.4)"><span class="stilling__firma">IMPACT AS</span><h3 style="color:var(--papir)">Rekrutteringsrådgiver / partner</h3><p style="color:rgba(243,240,234,.66)">Hos oss får du friheten ved å være selvstendig – og styrken ved å være en del av noe større.</p><a class="lenk" href="kontakt.html" style="color:var(--papir)">Meld interesse <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a></article>
+    </div>
+    <div class="hero__knapper"><a class="knapp knapp--lys" href="case.html">Se alle stillinger</a></div>
+  </div>
+</section>
+<section class="sek">
+  <div class="inn">
+    <div class="media">
+      <figure class="ramme ramme--43 avslor"><img src="assets/img/01-impact-no.jpg" width="1500" height="1125" alt="Rekrutteringskonsulent presenterer for kunder i et møterom hos Impact"><figcaption>Kartlegging og presentasjon – der vi blir enige om hva stillingen faktisk krever.</figcaption></figure>
+      <div class="kropp avslor">
+        <div class="merkelinje">03 — Metoden</div>
+        <h2>Kompromissløst søkelys på kvalitet</h2>
+        <p>Vi er opptatt av å levere løsninger som er tilpasset våre oppdragsgiveres behov, og alltid med respekt for mennesker og verdier. Det betyr at vi sier nei til kandidater som ikke holder – også når prosessen har gått langt.</p>
+        <ul class="punkter">
+          <li><b>Repetisjon</b> – vi går gjennom kandidatbildet flere ganger, ikke bare én.</li>
+          <li><b>Referanser som sjekkes</b> – ikke bare samles inn.</li>
+          <li><b>Ærlig tilbakemelding</b> – til kandidater så vel som oppdragsgivere.</li>
+        </ul>
+        <a class="knapp knapp--mork" href="om.html">Om Impact <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a>
+      </div>
     </div>
   </div>
 </section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
-  </div>
-  <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
-  </ol>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
-  </div>
-  <div class="galleri galleri--tre">
-    <figure class="galleri__bilde"><img src="img/seksjon-7.jpg" alt="Impact Rekruttering &amp; Bemanning AS – Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"><figcaption>Impact Rekruttering &amp; Bemanning AS – Fast rekruttering av spesialister og fagfolk</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-8.jpg" alt="Impact Rekruttering &amp; Bemanning AS – Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"><figcaption>Impact Rekruttering &amp; Bemanning AS – Fleksibel bemanning og vikarutleie</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-9.jpg" alt="Impact Rekruttering &amp; Bemanning AS – Executive Search og styreutvelgelse" loading="lazy" decoding="async"><figcaption>Impact Rekruttering &amp; Bemanning AS – Executive Search og styreutvelgelse</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
-</section>
-
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">Impact Rekruttering &amp; Bemanning AS</p>
-        <p><strong>Telefon</strong><br><a href="tel:+4723067050">23 06 70 50</a></p>
-        <p><strong>E-post</strong><br><a href="mailto:firmapost@impact.no">firmapost@impact.no</a></p>
-        <p><strong>Område</strong><br>Oslo</p>
-      </aside>
-    </div>
-    <form class="skjema" action="mailto:firmapost@impact.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Fast rekruttering av spesialister og fagfolk</option><option>Fleksibel bemanning og vikarutleie</option><option>Executive Search og styreutvelgelse</option><option>Rådgivning og kandidatutvikling</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
-  </div>
-</section>
+<section class="cta"><div class="inn">
+  <h2>Skal du ansette noen som varer?</h2>
+  <p>Fortell oss hva stillingen krever, så sier vi ærlig om vi kan finne den rette – og hvordan vi ville gått fram.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta en prat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tel:+4723067050">Ring 23 06 70 50</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Impact Rekruttering &amp; Bemanning AS</p>
-      <p class="bunn__tekst">Oslo · 23 06 70 50 · firmapost@impact.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Impact AS</span><p>Rekruttering, lederrekruttering, executive search og HR-tjenester. Vi har erfart at grundighet varer lengst.</p><p><a href="tel:+4723067050">23 06 70 50</a> · <a href="mailto:firmapost@impact.no">firmapost@impact.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Forside</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="case.html">Case</a></li><li><a href="om.html">Om</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="tjenester.html#rekruttering">Rekruttering</a></li><li><a href="tjenester.html#leder">Lederrekruttering</a></li><li><a href="tjenester.html#search">Executive search</a></li><li><a href="tjenester.html#hr">HR-tjenester</a></li><li><a href="tjenester.html#outplacement">Outplacement</a></li></ul></div>
+      <div><h4>Besøk oss</h4><p>Brynsengveien 2<br>0667 Oslo</p><p style="margin-top:8px"><a href="panel.html">Rekrutteringspanel</a></p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Impact Rekruttering &amp; Bemanning AS</p>
+    <div class="bunn__bunn"><span>© 2026 Impact AS</span><span>Nettsiden er en demonstrasjon laget for Impact AS</span><a href="kontakt.html">Ta kontakt</a></div>
   </div>
 </footer>
+<script src="assets/js/impact-no-demo.js" defer></script>
 </body>
 </html>

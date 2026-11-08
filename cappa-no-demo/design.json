@@ -1,0 +1,37 @@
+{
+  "slug": "cappa-no-demo",
+  "firma": "Cappa AS",
+  "navType": "segmented topp med rollebytte",
+  "fonts": [
+    "Plus Jakarta Sans",
+    "Inter Tight"
+  ],
+  "palette": [
+    "#0c2136",
+    "#f4f1ea",
+    "#1f6f5c",
+    "#c9a45c"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "skiftkort",
+    "tenester",
+    "bransjar",
+    "tal",
+    "kundeord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "bemanning.html",
+    "bransjer.html",
+    "kandidater.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
