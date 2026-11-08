@@ -783,3 +783,40 @@ td b { font-family: var(--sora); color: var(--bla-dyp); }
   .kassestabel { transform: rotateX(-12deg) rotateY(-26deg); }
   .rutelinje--tegn { stroke-dashoffset: 0 !important; }
 }
+
+
+/* ==========================================================================
+   MOBILRUNDE — tilpasninger for 360 / 390 / 768 (målt med verktoy/mobilmaal.mjs)
+   Headeren er ikke klebrig på mobil, så den aldri legger seg over h1 eller ankre.
+   ========================================================================== */
+@media (max-width: 899px) {
+  .topp { position: static; }
+  html { scroll-padding-top: .75rem; }
+  .hero__rutenett { gap: 1.6rem; }
+  .hero__rute { padding: 1rem; }
+  .rute__stopp { font-size: .72rem; }
+  .topp__inn { padding-block: .75rem; }
+  .kassescene { min-height: 320px; }
+  .kassestabel { width: min(300px, 84vw); }
+  .paneltopp { position: static; }
+}
+
+@media (min-width: 900px) {
+  html { scroll-padding-top: 9rem; }
+}
+
+
+/* Mobil: rutemenyen brytes i tre kolonner slik at ingen navn kuttes.
+   Forbindelseslinjene skjules, prikkene bærer ruten. */
+@media (max-width: 599px) {
+  .rute__spor { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: .5rem; }
+  .rute__spor li::before { display: none; }
+  .rute__stopp { font-size: .74rem; gap: .35rem; }
+  .rute__stopp span {
+    white-space: normal; overflow: visible; text-overflow: clip;
+    line-height: 1.15; hyphens: auto;
+  }
+  .rute__stopp i { width: 1.55rem; height: 1.55rem; }
+  .topp__handling .knapp { padding: .42rem .65rem; font-size: .72rem; white-space: nowrap; }
+}
+

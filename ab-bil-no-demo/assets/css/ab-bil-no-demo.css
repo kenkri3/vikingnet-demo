@@ -88,7 +88,7 @@ strong{color:var(--papir)}
 /* ---------- toppstripe ---------- */
 .topp{
   display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;
-  padding:9px clamp(14px,3vw,34px);
+  padding:9px clamp(16px,3vw,34px);
   border-bottom:var(--kant);background:var(--stal);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
   color:var(--tekst-svak);font-family:var(--kondens);
 }
@@ -97,7 +97,7 @@ strong{color:var(--papir)}
 .topp a:hover{color:var(--gul)}
 
 /* ---------- struktur ---------- */
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(14px,4vw,40px)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,4vw,40px)}
 .sek{padding:clamp(38px,7vw,86px) 0;position:relative}
 .sek--papir{background:var(--papir);color:#2a2a26}
 .sek--papir h2,.sek--papir h3{color:var(--grafitt)}
@@ -431,3 +431,25 @@ html.js .reveal.er-inne{transform:none}
   .panel-side{margin-bottom:0;position:sticky;top:16px}
 }
 
+
+
+/* ==========================================================================
+   MOBILRETTINGER (runde 2) — hjul inne på skjermen, ingen klipping
+   ========================================================================== */
+html{scroll-padding-top:12px}
+@media (max-width:899px){
+  /* WebGL-hjulet skal ligge helt innenfor skjermkanten på mobil/nettbrett */
+  .hero__hjul{right:0;width:100%;max-width:none}
+  /* helt smale skjermer: litt mindre luft, men aldri under 16 px */
+  .topp{padding-left:16px;padding-right:16px}
+}
+@media (max-width:460px){
+  /* jobbkort: stempel på egen linje, så tittel og frist får full bredde */
+  .ko__rad{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:3px}
+  .ko__rad .stempel{grid-row:1;grid-column:1;justify-self:start}
+  .ko__rad b{grid-row:2;grid-column:1}
+  .ko__rad small{grid-row:3;grid-column:1}
+  .ko__topp{flex-wrap:wrap;gap:4px 10px}
+  .hero__merke{font-size:10px}
+  .fakta-boks b{font-size:1.25rem}
+}

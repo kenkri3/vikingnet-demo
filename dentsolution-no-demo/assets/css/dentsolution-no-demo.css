@@ -385,3 +385,32 @@ button{font:inherit;color:inherit}
 }
 
 .topp .midt{font-size:9.5px;letter-spacing:.18em;overflow:visible;position:relative;z-index:2}
+
+/* ============================================================
+   MOBILBLOKK — mobilrunde 360/390/768
+   Topplinjen blir absolutt på mobil, kapittelindeksen får egen
+   topp-padding, og scroll-padding holder ankre fri av headeren.
+   ============================================================ */
+@media (max-width:768px){
+  html{scroll-padding-top:72px}
+  .topp{position:absolute;top:0;left:0;right:0;width:100%}
+  .hero{padding:84px 0 34px}
+  .hero h1{font-size:clamp(2.05rem,9.8vw,3rem);letter-spacing:-.02em}
+  .hero .ingress{font-size:15px}
+  .sidehode{padding:84px 0 26px}
+  .sidehode h1{font-size:clamp(1.9rem,8.6vw,2.8rem)}
+  .indeks-inn{padding:70px var(--side) 30px}
+  .seksjon{padding:clamp(38px,6.5vh,60px) 0}
+  .blokk{padding:18px 0}
+  .flyt > div{padding:18px}
+  .kategori{padding:16px 0}
+  .sak{padding:14px 0}
+  .band{padding:22px 18px}
+  .fakta > div{grid-template-columns:1fr;gap:2px}
+  .fakta dt{padding-top:0}
+  .panel-kort h2{font-size:1.15rem}
+}
+@media (max-width:420px){
+  .mini{padding:7px 9px;font-size:9px}
+  .status{font-size:9px;padding:4px 8px}
+}

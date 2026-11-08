@@ -79,6 +79,12 @@
     holder.appendChild(canvas);
     var gl = canvas.getContext('webgl', { antialias: true, alpha: false, powerPreference: 'high-performance' });
     if (!gl) { canvas.remove(); holder.classList.add('uten-webgl'); return; }
+    // programvare-renderer: bruk den statiske fallbacken i stedet for feil bilde
+    try {
+      var dbg2 = gl.getExtension('WEBGL_debug_renderer_info');
+      var rend2 = dbg2 ? String(gl.getParameter(dbg2.UNMASKED_RENDERER_WEBGL)) : String(gl.getParameter(gl.RENDERER));
+      if (/swiftshader|software|llvmpipe|softpipe/i.test(rend2)) { canvas.remove(); holder.classList.add('uten-webgl'); return; }
+    } catch (e) { /* fortsetter */ }
     function k(type, src) {
       var s = gl.createShader(type);
       gl.shaderSource(s, src); gl.compileShader(s);
@@ -121,6 +127,13 @@
       gl.drawArrays(gl.TRIANGLES, 0, 3);
     }
     tegn();
+    // sanity: hvis shaderen rendres som hvitt (uten GPU), skjul lerretet og bruk CSS-fallback
+    try {
+      var px = new Uint8Array(4);
+      gl.readPixels(Math.floor(w / 2), Math.floor(h / 2), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px);
+      var lum = (px[0] * 0.2126 + px[1] * 0.7152 + px[2] * 0.0722) / 255;
+      if (lum > 0.72) { kjorer = false; cancelAnimationFrame(raf); canvas.remove(); holder.classList.add('uten-webgl'); }
+    } catch (e) { /* beholder lerretet */ }
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) { kjorer = false; cancelAnimationFrame(raf); }
       else { kjorer = true; tegn(); }

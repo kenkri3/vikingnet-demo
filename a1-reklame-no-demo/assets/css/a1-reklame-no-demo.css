@@ -359,3 +359,35 @@ a{color:inherit}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
   .teip__spor,.band__spor{animation:none !important}
 }
+
+
+/* ============================================================
+   MOBILRUNDE — rettelser etter måling på 360/390 (mobilmaal.mjs)
+   ============================================================ */
+@media(max-width:900px){
+  /* teipen blir to rolege rader som faktisk bryt, i staden for ei rullande stripe */
+  .teip{padding-inline:1rem}
+  .teip__spor{animation:none;display:flex;flex-wrap:wrap;justify-content:center;width:100%;padding:.2rem 0}
+  .teip__del{flex:1 1 100%;max-width:100%;min-width:0;display:flex;flex-wrap:wrap;justify-content:center;gap:.1rem .15rem}
+  .teip__del[aria-hidden="true"]{display:none}
+  .teip::before,.teip::after{display:none}
+  .teip__lenke{padding:.42rem .5rem;font-size:.8rem}
+  .teip__stjerne{font-size:.7rem;opacity:.55}
+  .teip-ramme{position:static}
+  html{scroll-padding-top:24px}
+}
+@media(max-width:640px){
+  /* det dekorative rullebandet tek for mykje plass på telefon */
+  .band{display:none}
+}
+@media(max-width:520px){
+  .wrap{width:min(100% - 2rem,var(--maks))}
+  .helt{padding-top:1.4rem}
+  .helt__merkelapp{font-size:.62rem;padding:.35rem .55rem}
+  .helt__tal{gap:.9rem 1.6rem}
+  .produkt__kort{padding:1.2rem 1.1rem 1.5rem}
+  .steg li{border-left:0;border-top:3px solid var(--blekk);padding:0 0 0 0}
+  .seksjon--blekk .steg li{border-top-color:var(--oransje)}
+  .kampanje{padding:.9rem}
+  .kpi__tal{font-size:1.9rem}
+}

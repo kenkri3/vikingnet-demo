@@ -228,8 +228,8 @@ html.gl-klar .hero__foto{opacity:0;transition:opacity .5s ease}
 .ramme--52{aspect-ratio:3/2}
 .ramme--hoy{aspect-ratio:4/5}
 .ramme figcaption{
-  position:absolute;left:0;right:0;bottom:0;padding:16px 18px;font-size:12px;letter-spacing:.03em;
-  color:#f7f2e8;background:linear-gradient(transparent,rgba(13,37,31,.85));
+  position:absolute;left:0;right:0;bottom:0;padding:11px 14px;font-size:11.5px;letter-spacing:.03em;
+  color:#f7f2e8;background:rgba(20,53,46,.93);
 }
 .tekst-blokk h2{margin-bottom:16px}
 .tekst-blokk p{color:var(--gra);max-width:56ch}
@@ -392,4 +392,15 @@ html.js .avslor.er-inne{transform:none}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html.js .avslor{transform:none}
+}
+
+
+/* ==========================================================================
+   MOBILRETTINGER (runde 2) — anker skal ikke havne under fast toppmeny
+   ========================================================================== */
+html{scroll-padding-top:calc(var(--hode-h) + 12px)}
+@media (max-width:400px){
+  .hode__indre{padding-left:16px;padding-right:16px;gap:10px}
+  .merke__tekst b{font-size:16px}
+  .hero__merke{font-size:9.5px;letter-spacing:.18em}
 }

@@ -536,3 +536,34 @@ td { color: #bcc8d3; }
   .trafo__scene { animation: none; transform: rotateX(-14deg) rotateY(-28deg); }
   .avslor { opacity: 1; transform: none; }
 }
+
+
+/* ==========================================================================
+   MOBILRUNDE — 360 / 390 / 768. Headeren er statisk på mobil, terminal-linjen
+   ligger rett under og legger seg aldri over h1 eller anker-mål.
+   ========================================================================== */
+@media (max-width: 899px) {
+  .topp { position: static; }
+  html { scroll-padding-top: .75rem; }
+  .hero { padding-top: 1.6rem; }
+  .hero__fakta { gap: .5rem 1rem; }
+  .hero__fakta b { font-size: 1.2rem; }
+  .trafo { min-height: 240px; }
+  .trafo__scene { width: 132px; height: 132px; }
+  .terminalrad, .term__felt { flex-basis: 100%; }
+  .paneltopp { position: static; }
+  .panel__hode h1 { font-size: 1.45rem; }
+}
+
+@media (min-width: 900px) {
+  html { scroll-padding-top: 9.5rem; }
+}
+
+
+@media (max-width: 380px) {
+  .topp__hoyre .knapp { padding: .4rem .55rem; font-size: .62rem; white-space: nowrap; }
+  .merke__navn { font-size: .88rem; }
+  .hero h1 { font-size: 1.95rem; }
+  .hero__ingress { font-size: .93rem; }
+}
+

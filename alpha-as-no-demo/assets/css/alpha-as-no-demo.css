@@ -311,3 +311,29 @@ a{color:inherit}
   html{scroll-behavior:auto}
   *,*::before,*::after{transition-duration:.001ms !important;animation-duration:.001ms !important}
 }
+
+
+/* ============================================================
+   MOBILRUNDE — rettelser etter måling på 360/390 (mobilmaal.mjs)
+   ============================================================ */
+@media(max-width:899px){
+  /* indeksen står fast berre på store skjermar — på mobil ligg ho i toppen */
+  .topp{position:static}
+  .topp__mobil{flex-wrap:wrap;overflow:visible;gap:.1rem 1.1rem;padding-bottom:.55rem}
+  html{scroll-padding-top:24px}
+}
+@media(min-width:900px){
+  html{scroll-padding-top:108px}
+}
+@media(max-width:520px){
+  .wrap{width:min(100% - 2rem,var(--maks))}
+  .helt h1{font-size:clamp(2rem,8.4vw,2.6rem)}
+  .topp__indre{gap:.8rem}
+  .merke img{width:32px;height:32px}
+  .merke__namn{font-size:1.02rem}
+  .graf{padding:.9rem .9rem .8rem}
+  .graf__tal{font-size:1.35rem}
+  .graf__badge{display:inline-block;margin-left:.3rem}
+  .tal{gap:1rem}
+  .skjema .felt--to{gap:.8rem}
+}

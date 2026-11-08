@@ -45,7 +45,7 @@
       });
     }, { rootMargin: "0px 0px 10% 0px", threshold: 0.05 });
     ting.forEach(function (el) { if (!el.classList.contains("synlig")) io.observe(el); });
-    window.setTimeout(function () { ting.forEach(function (el) { el.classList.add("synlig"); }); }, 1600);
+    window.setTimeout(function () { ting.forEach(function (el) { el.classList.add("synlig"); }); }, 550);
   }
 
   /* ---------- 3. Skjema ---------- */

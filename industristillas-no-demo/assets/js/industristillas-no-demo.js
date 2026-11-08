@@ -42,7 +42,7 @@
         lavere = window.requestAnimationFrame(function () { lavere = null; parallakse(); });
       }, { passive: true });
       parallakse();
-      window.setTimeout(function () { scene.classList.add("montert"); }, 180);
+      window.setTimeout(function () { scene.classList.add("montert"); }, 40);
     } else {
       scene.classList.add("montert");
     }
@@ -68,7 +68,7 @@
     ting.forEach(function (el) { if (!el.classList.contains("synlig")) io.observe(el); });
     window.setTimeout(function () {
       ting.forEach(function (el) { el.classList.add("synlig"); });
-    }, 1600);
+    }, 550);
   }
 
   /* ---------- 4. Skjema ---------- */

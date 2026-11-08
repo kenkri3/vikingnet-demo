@@ -45,6 +45,12 @@
     holder.appendChild(canvas);
     var gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' }) || canvas.getContext('experimental-webgl');
     if (!gl) { canvas.remove(); return; }
+    // programvare-renderer gir hvitt/feil bilde: bruk CSS-fallbacken i stedet
+    try {
+      var dbg = gl.getExtension('WEBGL_debug_renderer_info');
+      var rend = dbg ? String(gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL)) : String(gl.getParameter(gl.RENDERER));
+      if (/swiftshader|software|llvmpipe|softpipe/i.test(rend)) { canvas.remove(); return; }
+    } catch (e) { /* uten debug-info fortsetter vi */ }
     function kompiler(type, kilde) {
       var s = gl.createShader(type);
       gl.shaderSource(s, kilde); gl.compileShader(s);
@@ -92,6 +98,14 @@
       else if (!redusert) { kjorer = true; tegn(); }
     });
     tegn();
+    // sanity: noen hodelose miljoer rendrer shaderen som hvitt. Da skjuler vi lerretet
+    // og lar CSS-fallbacken ta over, slik at heroen aldri blir hvit.
+    try {
+      var px = new Uint8Array(4);
+      gl.readPixels(Math.floor(bredde / 2), Math.floor(hoyde / 2), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px);
+      var lum = (px[0] * 0.2126 + px[1] * 0.7152 + px[2] * 0.0722) / 255;
+      if (lum > 0.6) { kjorer = false; cancelAnimationFrame(bilde); canvas.remove(); }
+    } catch (e) { /* readPixels blokkert – beholder lerretet */ }
   }
   startShader();
 

@@ -350,3 +350,34 @@ h3 { font-size: clamp(1.08rem, 1.5vw, 1.3rem); line-height: 1.25; }
   .js .avslor { opacity: 1 !important; transform: none !important; }
   .lag { transform: translate3d(0, 0, var(--z)) !important; }
 }
+
+/* ============================================================
+   MOBILRUNDE 360/390/768 — toppen er statisk slik at muren ikke
+   dekker h1, teglflisene brytes til to rader, og alt innhold har
+   minst 16 px luft til sidekanten.
+   ============================================================ */
+@media (max-width: 1000px) {
+  html { scroll-padding-top: 12px; }
+  .topp { position: static; }
+  .topp-inn { padding: .8rem 1rem .45rem; }
+  .mur { padding: 0 1rem .7rem; }
+  .mur ul { gap: 4px; }
+  .ramme { padding-left: 1rem; padding-right: 1rem; }
+  .hero { padding-top: 1.6rem; }
+}
+@media (max-width: 640px) {
+  .flis { padding: .34rem .55rem; }
+}
+@media (max-width: 1000px) {
+  .stein { overflow: hidden; }
+  .stein-scene { transform: none; }
+  .lag { left: 0; right: 0; transform: translate3d(0, calc(var(--p, 0) * var(--f, 8) * -1px), 0); }
+  .stein-merke { right: 1rem; }
+}
+
+/* MOBILRUNDE: flisene beholder egen bredde og brytes til to rader, slik at
+   siste lenke ikke blir en fullbredde-flis eller klippes. */
+@media (max-width: 640px) {
+  .mur li { flex: 0 0 auto; }
+  .mur ul { justify-content: flex-start; }
+}

@@ -520,3 +520,53 @@ input[type="range"].temp::-moz-range-thumb{width:18px;height:18px;border-radius:
 .bølge-slør{position:absolute;inset:0;background:radial-gradient(60% 70% at 26% 45%,#ffffffd9 0%,#ffffff00 72%);pointer-events:none;z-index:1}
 
 @media (max-width:720px){ .diagram-vann{display:none} }
+
+/* ============================================================
+   MOBILBLOKK — mobilrunde 360/390/768
+   Temperaturskalaen er en horisontal scroller. Den får tydelig
+   sveip-indikator og kantfade, og headeren går fra sticky til
+   relativ slik at den ikke legger seg over h1 og ankre.
+   ============================================================ */
+@media (max-width:960px){
+  .skala-topp{position:relative;top:auto}
+  .skala-hint{
+    display:block;margin:2px 0 0;padding:0 var(--side) 8px;
+    font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--heat);
+  }
+  .skala-topp::after{
+    content:"";position:absolute;right:0;top:44px;bottom:16px;width:54px;z-index:3;pointer-events:none;
+    background:linear-gradient(to right,#ffffff00,#ffffff 76%);
+  }
+  .skala-lenker a{scroll-snap-align:center}
+  .skala{scroll-snap-type:x proximity}
+}
+@media (min-width:961px){
+  .skala-hint{display:none}
+}
+@media (max-width:768px){
+  html{scroll-padding-top:24px}
+  .hero-inn{padding-top:22px}
+  .hero h1{font-size:clamp(2rem,9.4vw,2.9rem)}
+  .hero-grid{gap:20px}
+  .tank{width:186px;height:274px}
+  .temp-kontroll{padding:14px}
+  .seksjon{padding:clamp(40px,7vh,66px) 0}
+  .seksjon--tett{padding:32px 0}
+  .steg > div,.produkt-inn,.kort{padding:18px 18px}
+  .kategori{padding:16px 0}
+  .tabell{font-size:13.5px}
+  .tabell th,.tabell td{padding:9px 8px}
+  .panel-kort{padding:18px}
+  .sak{padding:14px 0}
+}
+@media (max-width:420px){
+  .tabell th,.tabell td{padding:8px 6px;font-size:13px}
+  .sak-handling .mini{padding:7px 9px;font-size:9.5px}
+}
+
+/* mobilrunde: skjul den lille etiketten som lå bak 3D-tanken på smale skjermer */
+@media (max-width:768px){
+  .tank-etikett{display:none}
+  .tank-scene{min-height:300px}
+  .hero-lead{font-size:15px}
+}

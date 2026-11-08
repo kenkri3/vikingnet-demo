@@ -326,3 +326,25 @@ html.js .avslor.er-inne{transform:none}
   .stripe__spor{animation:none}
   html.js .avslor{transform:none}
 }
+
+
+/* ==========================================================================
+   MOBILRETTINGER (runde 2).
+   Scroll-stripa er menyen og skal rulle – også når den går utenfor kanten.
+   Her justeres bare sidepadding og ankerposisjon under den faste stripa.
+   ========================================================================== */
+html{scroll-padding-top:calc(var(--stripe) + 12px)}
+@media (max-width:640px){
+  .stripe__sett a{padding:0 14px}
+  .stripe__sett i{font-size:9px}
+  .hero__tall{gap:12px 24px}
+}
+@media (max-width:400px){
+  .stripe__sett a{padding:0 12px;font-size:10.5px;letter-spacing:.12em}
+  .inn{padding-left:16px;padding-right:16px}
+  .hero__merke{font-size:9px;letter-spacing:.14em;padding:6px 10px;gap:7px;flex-wrap:wrap;row-gap:2px}
+  .hero__merke b{white-space:nowrap}
+  .hero__tall{gap:10px 20px}
+  .hero__tall div b{font-size:1.3rem}
+  .hero h1{font-size:clamp(2.2rem,11vw,3rem)}
+}

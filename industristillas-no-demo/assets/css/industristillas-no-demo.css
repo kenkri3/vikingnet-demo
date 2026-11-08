@@ -215,7 +215,7 @@ h3 { font-size: clamp(1.15rem, 1.7vw, 1.4rem); line-height: 1.15; }
   transform: rotateX(5deg) rotateY(calc(-27deg + var(--p, 0) * 13deg)) translateZ(-40px) scale(var(--skala, 1.07));
   transition: transform .25s linear;
 }
-.del { position: absolute; opacity: 0; transition: opacity .55s ease, transform .8s cubic-bezier(.2,.85,.2,1); transition-delay: calc(var(--i, 0) * 85ms); }
+.del { position: absolute; opacity: 0; transition: opacity .55s ease, transform .8s cubic-bezier(.2,.85,.2,1); transition-delay: calc(var(--i, 0) * 34ms); }
 .stillas.montert .del { opacity: 1; }
 
 .stolpe {
@@ -560,4 +560,22 @@ h3 { font-size: clamp(1.15rem, 1.7vw, 1.4rem); line-height: 1.15; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .del, .avslor { opacity: 1 !important; transform: none !important; }
   .stillas-scene { transform: rotateX(5deg) rotateY(-22deg) translateZ(-40px); }
+}
+
+/* ============================================================
+   MOBILRUNDE 360/390/768 — toppen er statisk slik at den ikke
+   dekker h1, sideindeksen ligger som fast bunnbar med plass
+   under, og innholdet har minst 16 px kant.
+   ============================================================ */
+@media (max-width: 1100px) {
+  html { scroll-padding-top: 12px; }
+  .topp { position: static; }
+  .topp-inn { padding: .8rem 1rem; }
+  .ramme { padding-left: 1rem; padding-right: 1rem; }
+  .indeks { padding-left: .5rem; padding-right: .5rem; }
+  body { padding-bottom: 52px; }
+  .hero { padding-top: 1.6rem; }
+}
+@media (max-width: 640px) {
+  .hero-tall div { padding: 1rem .8rem 1.1rem; }
 }

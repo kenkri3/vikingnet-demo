@@ -404,3 +404,40 @@ button{font:inherit;color:inherit}
   .meny-liste a{transform:none}
   .fold-inn{transform:none}
 }
+
+/* ============================================================
+   MOBILBLOKK — mobilrunde 360/390/768
+   ============================================================ */
+@media (max-width:768px){
+  html{scroll-padding-top:74px}
+  .topp{position:absolute;top:0;left:0;right:0;width:100%}
+  .hero{min-height:auto;padding:88px 0 30px}
+  .hero h1{font-size:clamp(2.1rem,10.2vw,3.1rem);letter-spacing:-.035em}
+  .hero-lead{font-size:15px;margin-top:16px}
+  .hero-handling{gap:10px;margin-top:22px}
+  .hero-rull{margin-top:24px;color:var(--blekk)}
+  .fold{opacity:.5;width:34vw}
+  .meny-inn{padding:78px var(--side) 26px;gap:20px}
+  .meny-liste a{font-size:clamp(1.7rem,8.4vw,2.4rem);padding:4px 0}
+  .seksjon{padding:clamp(38px,6.5vh,60px) 0}
+  .editorial-bilde{aspect-ratio:4/3}
+  .produkt-bilde{aspect-ratio:3/4}
+  .storrelse-tabell{font-size:13px}
+  .storrelse-tabell th,.storrelse-tabell td{padding:9px 7px}
+  .ordre{padding:14px 0}
+  .panel-kort{padding:0}
+}
+@media (max-width:420px){
+  .storrelse-tabell th,.storrelse-tabell td{padding:8px 5px;font-size:12.5px}
+  .mini{padding:7px 9px;font-size:9px}
+}
+
+/* mobilrunde: på smale skjermer blir topplinjen for trang med kasse-lenken.
+   Den skjules under 520 px, og merkevaren får mer plass. */
+@media (max-width:520px){
+  .topp{padding:0 18px}
+  .topp .hoyre{display:none}
+  .topp .midt{font-size:13px;letter-spacing:.13em}
+  .meny-knapp{font-size:9.5px;letter-spacing:.16em}
+  .meny-knapp .streker{width:16px}
+}

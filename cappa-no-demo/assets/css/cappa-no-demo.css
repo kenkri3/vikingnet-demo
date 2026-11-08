@@ -355,3 +355,22 @@ body[data-rolle="kandidat"] .skift__indre{transform:rotateY(180deg)}
   *,*::before,*::after{transition-duration:.001ms !important;animation-duration:.001ms !important}
   .skift__indre{transition:none !important}
 }
+
+
+/* ============================================================
+   MOBILRUNDE — rettelser etter måling på 360/390 (mobilmaal.mjs)
+   ============================================================ */
+@media(max-width:899px){
+  /* mobilmenyen bryt til to rader i staden for å rulle sidelengs */
+  .topp__mobil{flex-wrap:wrap;overflow:visible;gap:.1rem 1.1rem;padding-bottom:.55rem}
+  html{scroll-padding-top:70px}
+}
+@media(max-width:520px){
+  .wrap{width:min(100% - 2rem,var(--maks))}
+  .helt__bilete::before{inset:-8px -8px 8px 8px}
+  .helt h1{font-size:clamp(2rem,9vw,2.6rem)}
+  .segment__knapp{padding:.5rem 1.1rem;font-size:.78rem}
+  .skift__kort{min-height:320px}
+  .kpi__tal{font-size:1.8rem}
+  .rad{padding:.8rem .9rem}
+}

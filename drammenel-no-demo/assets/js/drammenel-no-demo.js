@@ -28,7 +28,7 @@
     "  float t=smoothstep(0.12,0.95,f*0.72+g*0.5);",
     "  vec3 col=mix(c1,c2,t);",
     "  col=mix(col,c3,smoothstep(0.38,0.95,g));",
-    "  col=mix(col,c4,pow(smoothstep(0.6,1.0,g),1.7)*0.7);",
+    "  col=mix(col,c4,pow(smoothstep(0.6,1.0,g),1.7)*0.4);",
     "  float bane=uv.y*7.0+f*3.2+u_t*0.12;",
     "  float streak=smoothstep(0.055,0.0,abs(sin(bane)));",
     "  col+=streak*0.055;",

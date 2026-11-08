@@ -534,3 +534,41 @@ h3 { font-size: clamp(1.1rem, 1.6vw, 1.35rem); line-height: 1.2; }
   .js .avslor { opacity: 1 !important; transform: none !important; }
   .bok-ark { transform: rotateY(-12deg) !important; }
 }
+
+/* ============================================================
+   MOBILRUNDE 360/390/768 — toppen er statisk (ikke sticky),
+   boblene brytes til én fast rad med 7 like kolonner, og alt
+   innhold har minst 16 px luft til sidekanten.
+   ============================================================ */
+@media (max-width: 1024px) {
+  html { scroll-padding-top: 12px; }
+  .topp { position: static; }
+  .topp-inn { padding: .7rem 1rem; gap: .5rem; }
+  .ramme { padding-left: 1rem; padding-right: 1rem; }
+  .bok-faner { right: 6px; top: 16%; gap: .35rem; }
+  .bok-fane { width: 24px; height: 24px; }
+}
+@media (max-width: 640px) {
+  .bobler {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: .08rem;
+    width: 100%;
+    overflow: visible;
+  }
+  .boble { min-width: 0; padding: .25rem 0; }
+  .boble-ikon { width: 32px; height: 32px; }
+  .boble-ikon svg { width: 16px; height: 16px; }
+  .boble-tekst { font-size: .46rem; white-space: normal; line-height: 1.15; text-align: center; }
+  .merke-tekst strong { font-size: .95rem; }
+}
+
+/* MOBILRUNDE: fargetabulatorene skjules når boken er smal, slik at de ikke
+   legger seg over teksten i boken. */
+@media (max-width: 860px) {
+  .bok-faner { display: none; }
+  .bok-flate-tekst { width: 52%; padding: .85rem .9rem; }
+  .bok-flate-tekst strong { font-size: clamp(.95rem, 3.6vw, 1.15rem); }
+  .bok-flate-tekst span { font-size: .74rem; }
+  .bok-flate img { width: 48%; }
+}

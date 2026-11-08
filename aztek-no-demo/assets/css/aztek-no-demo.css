@@ -515,3 +515,33 @@ button{font:inherit;color:inherit}
   .stripe-inn{animation:none}
   .hero-slør{background:linear-gradient(to top,var(--ink),transparent)}
 }
+
+/* ============================================================
+   MOBILBLOKK — mobilrunde 360/390/768
+   Topplinjen ligger absolutt på mobil slik at den ikke dekker
+   innhold, og scroll-padding holder ankre klar av den.
+   ============================================================ */
+@media (max-width:768px){
+  html{scroll-padding-top:76px}
+  .topp{position:absolute;top:0;left:0;right:0;width:100%}
+  .hero{min-height:auto;padding-top:96px;padding-bottom:34px}
+  .hero h1{font-size:clamp(2.15rem,10.4vw,3.2rem);letter-spacing:-.03em}
+  .hero-slør{background-size:auto,auto}
+  .stripe-inn{
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%);
+    mask-image:linear-gradient(to right,transparent 0,#000 26px,#000 calc(100% - 26px),transparent 100%);
+  }
+  .hero-teknisk div{gap:10px}
+  .hero-rull{display:none}
+  .seksjon{padding:clamp(40px,7vh,64px) 0}
+  .tjeneste{min-height:0}
+  .sak{gap:8px}
+  .palett{padding:10px}
+  .palett-boks{max-height:calc(100svh - 20px)}
+  .panel-to .kort,.leveranse > article{padding:22px 18px}
+  .diagram{padding:10px}
+}
+@media (max-width:400px){
+  .sak-alv{font-size:9.5px}
+  .mini{padding:7px 9px;font-size:9.5px}
+}

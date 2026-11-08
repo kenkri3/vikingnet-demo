@@ -505,3 +505,46 @@ tbody th { font-family: var(--grotesk); font-weight: 500; color: var(--dyp); }
   .hero__fallback { animation: none; }
   .avslor, .js-reveal .avslor { transform: none; }
 }
+
+
+/* ==========================================================================
+   MOBILRUNDE — 360 / 390 / 768. Fanestripen brytes til to rader i stedet for
+   å bli en avkuttet horisontal stripe, og toppfeltet er statisk på mobil.
+   ========================================================================== */
+@media (max-width: 899px) {
+  .loft { position: static; }
+  html { scroll-padding-top: .75rem; }
+  .fanestripe {
+    flex-wrap: wrap; overflow: visible;
+    gap: .35rem .3rem; padding: .55rem 0 .65rem;
+  }
+  .fanestripe a { font-size: .78rem; padding: .32rem .55rem; }
+  .hero { min-height: 380px; }
+  .hero__inn { padding: 1.6rem 0 1.6rem; }
+  .hero__fakta { gap: .5rem 1.2rem; }
+  .paneltopp { position: static; }
+  .kpi__tall { font-size: 1.4rem; }
+}
+
+@media (min-width: 900px) {
+  html { scroll-padding-top: 7rem; }
+}
+
+
+/* Hero: sløret er sterkere, så hvit tekst har kontrast også der elven er lys
+   (svak GPU, swiftshader eller redusert motion kan gi et lysere bilde). */
+.hero__slør {
+  background:
+    linear-gradient(180deg, rgba(7, 30, 41, .72) 0%, rgba(7, 30, 41, .52) 45%, rgba(7, 30, 41, .9) 100%);
+}
+.hero h1 { text-shadow: 0 2px 18px rgba(7, 30, 41, .45); max-width: 100%; overflow-wrap: break-word; hyphens: auto; }
+.hero__ingress, .hero__merke { text-shadow: 0 1px 12px rgba(7, 30, 41, .5); }
+.hero__fakta div b, .hero__fakta div span { text-shadow: 0 1px 10px rgba(7, 30, 41, .55); }
+
+@media (max-width: 420px) {
+  .loft__hoyre .knapp { padding: .42rem .6rem; font-size: .7rem; white-space: nowrap; }
+  .ordmerke { font-size: .92rem; }
+  .hero h1 { font-size: clamp(1.75rem, 1.1rem + 4vw, 2.3rem); }
+  .hero__fakta { gap: .45rem 1.1rem; }
+}
+

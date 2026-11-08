@@ -115,10 +115,7 @@ a{color:inherit}
 /* --- myk inngang: innhold er alltid synlig, bevegelsen er en bonus --- */
 .avsloer{opacity:1;transition:opacity .9s var(--tid),transform .9s var(--tid)}
 .avsloer.inn{transform:none}
-@media(prefers-reduced-motion:no-preference){
-  .helt .avsloer,.helt__rutenett > div{animation:sti-inn .9s var(--tid) both}
-  @keyframes sti-inn{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
-}
+
 
 /* --- typografi --- */
 .eyebrow{
@@ -489,4 +486,36 @@ h3{font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.2}
   .avsloer{opacity:1;transform:none}
   .flipp:hover .flipp__indre,.flipp:focus-within .flipp__indre{transform:none}
   .flipp.snu .flipp__indre{transform:rotateY(180deg)}
+}
+
+
+/* ============================================================
+   MOBILRUNDE — rettelser etter måling på 360/390 (mobilmaal.mjs)
+   ============================================================ */
+@media(max-width:640px){
+  /* minst 16 px luft til sidekanten */
+  .wrap{width:min(100% - 2rem,var(--maks))}
+  .bue-ramme .bue{width:calc(100% - 2rem)}
+  /* gullramma og merkelappen skal ikkje klippast av skjermkanten */
+  .helt__bilde::before{inset:12px -4px -4px 12px}
+  .helt__merkelapp{left:4px;bottom:14px;padding:.6rem .8rem}
+  .split__bilde--bue::before{inset:10px -4px -4px 10px}
+  /* hopp til anker hamnar ikkje under den sticky buen */
+  html{scroll-padding-top:104px}
+  .steg li{grid-template-columns:2.6rem 1fr;gap:.9rem}
+  .pris th,.pris td{padding:.75rem .3rem;font-size:.9rem}
+  .bunn__indre{gap:1.6rem}
+}
+@media(max-width:640px){
+  /* fakta-raden blir to ryddige kolonnar i staden for ein samanbrote flex-rad */
+  .helt__fakta{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.4rem}
+  .helt__fakta div{font-size:.64rem}
+  .helt__fakta strong{font-size:1.3rem}
+  .topp__handling .knapp{font-size:.6rem;padding:.55rem .8rem;letter-spacing:.1em}
+}
+@media(max-width:400px){
+  .helt h1{font-size:clamp(2rem,9.6vw,2.6rem)}
+  .seksjon h2{font-size:clamp(1.6rem,7vw,2rem)}
+  .merke__navn{font-size:1.05rem}
+  .topp__handling .knapp{font-size:.56rem;padding:.5rem .65rem}
 }

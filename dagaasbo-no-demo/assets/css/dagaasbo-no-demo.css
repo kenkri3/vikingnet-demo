@@ -513,3 +513,47 @@ tbody th { font-family: var(--playfair); font-weight: 500; color: var(--hav-dyp)
   .bok__side { transition: none; }
   .kompass__ring a { transition: none; }
 }
+
+
+/* ==========================================================================
+   MOBILRUNDE — 360 / 390 / 768. Toppfeltet er statisk på mobil, og
+   kompassrosen holder seg innenfor skjermkanten.
+   ========================================================================== */
+@media (max-width: 899px) {
+  .topp { position: static; }
+  html { scroll-padding-top: .75rem; }
+  .hero { padding-top: 1.2rem; }
+  .hero h1 { font-size: clamp(1.95rem, 1.2rem + 4vw, 2.6rem); }
+  .hero__fakta { gap: .5rem 1.4rem; }
+  .bokscene { perspective: 1100px; min-height: 330px; }
+  .bok { transform: rotateX(4deg) rotateY(-9deg); }
+  .kompass__etikett { font-size: .66rem; right: 3.9rem; }
+  .paneltopp { position: static; }
+}
+
+@media (min-width: 900px) {
+  html { scroll-padding-top: 6rem; }
+}
+
+
+/* Boken ligger flatt og innenfor skjermen på mobil – ingen klipping av ryggen. */
+@media (max-width: 620px) {
+  .bokscene { perspective: none; min-height: 0; padding: .6rem 0 .9rem; }
+  .bok { width: min(100%, 320px); margin: 0 auto; transform: none; }
+  .bok__side { padding: 1rem .95rem 1.1rem; }
+  .bok__hint { position: static; transform: none; left: auto; bottom: auto; margin-top: .6rem; text-align: center; }
+}
+@media (max-width: 420px) {
+  .topp__hoyre .knapp { padding: .42rem .6rem; font-size: .72rem; white-space: nowrap; }
+  .merke__tekst { font-size: 1rem; }
+  .hero h1 { font-size: 1.9rem; }
+}
+
+
+
+/* HINT-FIKS 2026-11-08 — hint-teksten under den flate boken hadde fortsatt
+   translate:-50% og startet 70 px utenfor skjermkanten på mobil. */
+@media (max-width: 900px){
+  .bok__hint{ position:static; transform:none; translate:none; left:auto; bottom:auto;
+    margin-top:.6rem; text-align:center; white-space:normal; max-width:100%; }
+}

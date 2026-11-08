@@ -89,7 +89,7 @@
           el.removeAttribute("data-skjul");
         }
       });
-    }, 1500);
+    }, 550);
   }
 
   /* ---------- 4. Blekk i vann (WebGL) ---------- */
