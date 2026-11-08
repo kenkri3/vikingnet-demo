@@ -273,6 +273,14 @@ a{color:inherit}
 .skjema__kvittering.vis{display:block}
 .skjema__kvittering strong{font-family:var(--vis);font-size:1.3rem;display:block;text-transform:uppercase;margin-bottom:.3rem}
 
+/* --- veiledande prisar --- */
+.prisvarsel{
+  border:2px solid var(--blekk);border-left-width:6px;background:#efe8dc;
+  padding:.9rem 1.1rem;margin:1.2rem 0 1.4rem;font-size:.92rem;color:var(--blekk);max-width:70ch;
+  font-weight:500;
+}
+.prisvarsel strong{font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;display:block;margin-bottom:.25rem}
+
 /* --- ofte spurt --- */
 .faq{border-top:2px solid var(--blekk)}
 .faq details{border-bottom:1px solid var(--kant)}

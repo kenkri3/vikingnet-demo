@@ -459,8 +459,10 @@ tbody th { font-family: var(--grotesk); font-weight: 500; color: var(--dyp); }
 .fremdrift i { display: block; height: 100%; background: linear-gradient(90deg, var(--elv), var(--elv-lys)); width: 30%; transition: width .4s ease; }
 
 /* ---------- Bevegelse ---------- */
-.avslor { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-.avslor.er-inne { opacity: 1; transform: none; }
+/* Innhold er synlig som standard. JS legger på .js-reveal kun når IntersectionObserver
+   finnes, og da glir seksjonene på plass – aldri skjult, aldri tomme felt. */
+.js-reveal .avslor { transform: translateY(18px); transition: transform .65s cubic-bezier(.2,.8,.2,1); }
+.js-reveal .avslor.er-inne { transform: none; }
 
 @media (max-width: 599px) {
   .loft__tlf { display: none; }
@@ -501,5 +503,5 @@ tbody th { font-family: var(--grotesk); font-weight: 500; color: var(--dyp); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .hero__fallback { animation: none; }
-  .avslor { opacity: 1; transform: none; }
+  .avslor, .js-reveal .avslor { transform: none; }
 }

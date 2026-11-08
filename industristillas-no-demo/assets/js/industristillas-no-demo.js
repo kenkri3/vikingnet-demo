@@ -227,6 +227,7 @@
   }
 
   function start() {
+    document.documentElement.classList.add("js");
     fremdrift();
     stillas();
     avslor();

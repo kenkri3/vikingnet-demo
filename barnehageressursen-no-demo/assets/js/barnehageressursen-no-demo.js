@@ -205,6 +205,7 @@
   }
 
   function start() {
+    document.documentElement.classList.add("js");
     bok();
     leksikon();
     avslor();

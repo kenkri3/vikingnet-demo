@@ -109,6 +109,11 @@ a{color:inherit}
 .graf__linje{fill:none;stroke:var(--kopar);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 .graf__flate{fill:url(#flategrad)}
 .graf__punkt{fill:var(--kopar)}
+.graf__badge{
+  font-style:normal;display:inline-block;margin-left:.45rem;padding:.1rem .35rem;
+  border:1px solid var(--kopar);color:var(--kopar);border-radius:2px;
+  font-size:.47rem;font-weight:700;letter-spacing:.12em;vertical-align:middle;
+}
 .graf__merke{font-family:var(--tekst);font-size:9px;fill:var(--gra);letter-spacing:.06em}
 @media(prefers-reduced-motion:no-preference){
   @supports (animation-timeline:view()){

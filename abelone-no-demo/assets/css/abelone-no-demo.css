@@ -74,6 +74,7 @@ a{color:inherit}
 .knapp--linje{background:transparent;color:var(--ink)}
 .knapp--linje:hover{background:var(--ink);color:var(--lin);border-color:var(--ink)}
 .knapp--liten{padding:.62rem 1.05rem;font-size:.66rem;letter-spacing:.16em}
+.knapp{white-space:nowrap}
 .knapp__pil{transition:transform .3s var(--tid)}
 .knapp:hover .knapp__pil{transform:translateX(4px)}
 
@@ -355,6 +356,11 @@ h3{font-size:clamp(1.2rem,2vw,1.55rem);line-height:1.2}
 .skjema__kvittering strong{font-family:var(--serif);font-size:1.2rem;display:block;margin-bottom:.3rem}
 
 /* --- priser --- */
+.prisvarsel{
+  border:1px solid var(--gull);background:#fbf7ef;border-left-width:4px;
+  padding:1rem 1.2rem;margin:0 0 2rem;font-size:.95rem;color:var(--ink);max-width:78ch;
+}
+.prisvarsel strong{font-family:var(--sans);font-weight:500;letter-spacing:.02em}
 .pris{width:100%;border-collapse:collapse;margin-bottom:1.2rem}
 .pris caption{text-align:left;font-family:var(--serif);font-size:1.35rem;padding-bottom:.9rem}
 .pris th,.pris td{padding:.95rem .4rem;border-bottom:1px solid var(--kant);text-align:left;vertical-align:top}

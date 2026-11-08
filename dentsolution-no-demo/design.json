@@ -1,0 +1,39 @@
+{
+  "slug": "dentsolution-no-demo",
+  "firma": "Dent Solution AS",
+  "navType": "mork-kapittelindeks",
+  "fonts": [
+    "Instrument Serif",
+    "Albert Sans"
+  ],
+  "palette": [
+    "#0a0f12",
+    "#f7f3ec",
+    "#9ed0e2",
+    "#c8a86a"
+  ],
+  "motion": [
+    "webgl",
+    "scroll",
+    "svg"
+  ],
+  "sections": [
+    "hero",
+    "kategorier",
+    "arbeidsflyt",
+    "levering",
+    "tall",
+    "ordre",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "kroner-og-broer.html",
+    "implantater.html",
+    "fasetter.html",
+    "arbeidsflyt.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

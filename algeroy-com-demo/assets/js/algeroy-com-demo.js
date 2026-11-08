@@ -454,6 +454,7 @@
 
   /* ---------- start ---------- */
   function start() {
+    document.documentElement.classList.add("js");
     meny();
     fremdrift();
     avslor();

@@ -12,8 +12,8 @@
     if (!n || !bue.clientWidth) return;
     var W = bue.clientWidth, H = bue.clientHeight;
     var smal = W < 620;
-    var pad = smal ? 30 : 74;
-    var yEnde = smal ? 42 : 60;
+    var pad = smal ? 22 : 74;
+    var yEnde = smal ? 38 : 60;
     var yMid = smal ? -2 : -4;
     var p0 = { x: pad, y: yEnde }, c = { x: W / 2, y: yMid }, p2 = { x: W - pad, y: yEnde };
     var strek = bue.querySelector('.bue__strek');

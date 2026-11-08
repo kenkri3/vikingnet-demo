@@ -142,12 +142,15 @@
 
   /* ---------- 3. Avsløring ---------- */
   function avslor() {
+    if (rolig || !("IntersectionObserver" in window)) return;
     var ting = document.querySelectorAll(".avslor");
-    if (!ting.length) return;
-    if (rolig || !("IntersectionObserver" in window)) {
-      Array.prototype.forEach.call(ting, function (t) { t.classList.add("er-inne"); });
-      return;
+    if (!ting.length) {
+      /* sett ikke klasse på seksjonene før vi vet at IO virker – da er de synlige */
+      Array.prototype.forEach.call(document.querySelectorAll(".seksjon > .skal"), function (s) { s.classList.add("avslor"); });
+      ting = document.querySelectorAll(".avslor");
     }
+    if (!ting.length) return;
+    document.documentElement.classList.add("js-reveal");
     var io = new IntersectionObserver(function (o) {
       o.forEach(function (x) {
         if (x.isIntersecting) { x.target.classList.add("er-inne"); io.unobserve(x.target); }
