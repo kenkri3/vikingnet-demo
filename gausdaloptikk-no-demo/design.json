@@ -1,0 +1,36 @@
+{
+  "slug": "gausdaloptikk-no-demo",
+  "firma": "Gausdal Optikk",
+  "navType": "gjennomsiktig-toppmeny-med-megameny",
+  "fonts": [
+    "Fraunces",
+    "Work Sans"
+  ],
+  "palette": [
+    "#14352e",
+    "#f7f2e8",
+    "#b8863b"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "time",
+    "briller",
+    "avdelinger",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "synsundersokelse.html",
+    "briller.html",
+    "kontaktlinser.html",
+    "arbeidsplass.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

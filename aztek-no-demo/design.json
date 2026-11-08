@@ -1,0 +1,37 @@
+{
+  "slug": "aztek-no-demo",
+  "firma": "Accelerate",
+  "navType": "kommandopalett",
+  "fonts": [
+    "Chakra Petch",
+    "Space Mono"
+  ],
+  "palette": [
+    "#07090c",
+    "#4de8b0",
+    "#e8ede6"
+  ],
+  "motion": [
+    "webgl",
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "tjenester",
+    "plattform",
+    "kundehistorier",
+    "dna",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "plattform.html",
+    "case.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
