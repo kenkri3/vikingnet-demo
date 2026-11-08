@@ -1,0 +1,39 @@
+{
+  "slug": "cjtransport-no-demo",
+  "firma": "CJ Transport og Flyttebyrå AS",
+  "navType": "segmentert rute-navigasjon",
+  "fonts": [
+    "Sora",
+    "Manrope"
+  ],
+  "palette": [
+    "#0a1f59",
+    "#c8925a",
+    "#f6f2e9",
+    "#101733"
+  ],
+  "motion": [
+    "svg",
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "prosess",
+    "tjenester",
+    "pris",
+    "pakking",
+    "omtale",
+    "omrader",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "privatflytting.html",
+    "kontorflytting.html",
+    "pris.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
