@@ -1,0 +1,36 @@
+{
+  "slug": "drammenel-no-demo",
+  "firma": "Drammen Elektro AS",
+  "navType": "vertikale sidefaner",
+  "fonts": [
+    "Space Grotesk",
+    "DM Sans"
+  ],
+  "palette": [
+    "#0c2c3b",
+    "#2f9db8",
+    "#efe7d8",
+    "#c9683f"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "fastpris",
+    "befaring",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "el-installasjon.html",
+    "lading.html",
+    "smarthjem.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

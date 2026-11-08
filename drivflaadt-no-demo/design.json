@@ -1,0 +1,39 @@
+{
+  "slug": "drivflaadt-no-demo",
+  "firma": "Drivflaadt AS",
+  "navType": "horisontal-temperaturskala",
+  "fonts": [
+    "Exo 2",
+    "Rubik"
+  ],
+  "palette": [
+    "#0d1417",
+    "#007a29",
+    "#e2571c",
+    "#ffffff"
+  ],
+  "motion": [
+    "canvas",
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "temperatur",
+    "produkter",
+    "slik-virker-det",
+    "tall",
+    "kunder",
+    "service",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "montering.html",
+    "service.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
