@@ -1,0 +1,36 @@
+{
+  "slug": "ave-no-demo",
+  "firma": "AVE Systemer AS",
+  "navType": "sidepanel med søk",
+  "fonts": [
+    "Rajdhani",
+    "Open Sans"
+  ],
+  "palette": [
+    "#16252c",
+    "#d9a419",
+    "#f1f4f3",
+    "#1d3138"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "systemer",
+    "service",
+    "hvorfor",
+    "proff",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "systemer.html",
+    "drift.html",
+    "integrasjoner.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

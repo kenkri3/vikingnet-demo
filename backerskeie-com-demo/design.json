@@ -1,0 +1,36 @@
+{
+  "slug": "backerskeie-com-demo",
+  "firma": "BackerSkeie",
+  "navType": "horisontal pill-dock",
+  "fonts": [
+    "Lora",
+    "Lexend"
+  ],
+  "palette": [
+    "#241d2b",
+    "#a9852f",
+    "#f7f4ee",
+    "#ece5d8"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "ekspertise",
+    "sitater",
+    "radgivere",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "search.html",
+    "prosess.html",
+    "team.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

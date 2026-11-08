@@ -1,175 +1,31 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>AVE Systemer AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos AVE Systemer AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Servicepanel for ordrer | AVE Systemer (demo)</title>
+<meta name="description" content="Demo av AVE Systemers servicepanel: dagens ordrer, send montør, fullfør, filter, ruter og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#16252c">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AVE Systemer">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Servicepanel for ordrer | AVE Systemer (demo)">
+<meta property="og:description" content="Demo av AVE Systemers servicepanel: dagens ordrer, send montør, fullfør, filter, ruter og hendelseslogg.">
+<meta property="og:image" content="assets/img/montor.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/ave-no-demo.css">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="AVE Systemer AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
-<main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Bergen</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos AVE Systemer AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>AVE Systemer AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Prosjektering og tekniske leveranser</strong><span>Ny forespørsel via nettsiden · Bergen</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Montering, idriftsettelse og integrasjon</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Service, vedlikehold og sakkyndig kontroll</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Energioptimalisering og oppgradering</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om prosjektering og tekniske leveranser</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om montering, idriftsettelse og integrasjon</strong><p>Kunde i Bergen ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av service, vedlikehold og sakkyndig kontroll</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">AVE Systemer AS</p>
-      <p class="bunn__tekst">Bergen · 31 16 44 02 · post@ave.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 AVE Systemer AS</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+<aside class="sidepanel" data-sidepanel data-aapen="false" aria-label="Hovedmeny"><div class="sidepanel__topp"><a class="sidepanel__merke" href="index.html">AVE Systemer</a><button class="sidepanel__lukk" type="button" data-lukk>Lukk</button></div><div class="sok"><label for="sok-felt">Søk i menyen</label><div class="sok__felt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg><input id="sok-felt" type="search" data-sok placeholder="f.eks. service eller luft" autocomplete="off"></div><p class="sok__tom" data-sok-tom hidden>Ingen treff. Prøv «service» eller «kontakt».</p></div><ul class="panelmeny"><li><a href="index.html"><span>01</span>Forside</a></li><li><a href="systemer.html"><span>02</span>Systemer</a></li><li><a href="drift.html"><span>03</span>Drift</a></li><li><a href="integrasjoner.html"><span>04</span>Integrasjoner</a></li><li><a href="om.html"><span>05</span>Om</a></li><li><a href="kontakt.html"><span>06</span>Kontakt</a></li><li><a href="panel.html" aria-current="page"><span>07</span>Panel</a></li></ul><div class="sidepanel__bunn"><p>40 40 20 33<br><a href="mailto:post@ave.no">post@ave.no</a></p><p style="margin-top:.4rem">Nærbø og Stavanger</p></div></aside><div class="slør" data-slor data-aapen="false" aria-hidden="true"></div><header class="topp"><div class="skal topp__rad"><a class="merke" href="index.html"><img src="assets/img/logo.png" alt="AVE Systemer" width="64" height="64"><span class="merke__tekst">AVE Systemer<small>Varmepumper i Rogaland</small></span></a><div class="topp__hoyre"><a class="topp__tlf" href="tel:+4740402033">40 40 20 33</a><a class="knapp knapp--liten" href="kontakt.html">Bestill befaring</a></div></div></header>
+<div class="innhold"><main id="innhold">
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html" style="text-decoration:none"><span class="merke__tekst" style="color:#fff">AVE Systemer<small style="color:#8ea4a2">Servicepanel · demo</small></span></a><div class="topp__hoyre"><span class="paneltopp__bruker"><i>MH</i>Marius Håland · service</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Serviceordrer</h1><p>Uke 46 · 9 ordrer · Rogaland (eksempeldata)</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Ny ordre</a></div></div><div class="kpi"><div class="kpi__kort"><span class="kpi__navn">Ordrer i dag</span><span class="kpi__tall">9</span><span class="kpi__endring">3 montører ute</span></div><div class="kpi__kort kpi__kort--gul"><span class="kpi__navn">Montør på vei</span><span class="kpi__tall" data-kpi-vei>3</span><span class="kpi__endring">aktive oppdrag</span></div><div class="kpi__kort"><span class="kpi__navn">Fullført</span><span class="kpi__tall" data-kpi-ferdig>2</span><span class="kpi__endring">i dag</span></div><div class="kpi__kort"><span class="kpi__navn">Befaringer</span><span class="kpi__tall">4</span><span class="kpi__endring">denne uken</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer ordrer"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="ny" aria-pressed="false">Nye</button><button type="button" data-filter="paa-vei" aria-pressed="false">På vei</button><button type="button" data-filter="ferdig" aria-pressed="false">Fullført</button></div><span class="verktoyl__tall verktoylinje__tall" data-antall>9 av 9 ordrer</span></div><div class="ordrer" data-ordrer><div class="ordre" data-status="ferdig"><div><p class="ordre__navn">Nærbø – service luft/luft</p><div class="ordre__meta"><span>Service</span><span>2 år siden sist</span><span>08:00–09:30</span></div></div><span class="ordre__status">Fullført</span><button class="ordre__knapp" type="button" data-status-knapp disabled>Fullført</button></div><div class="ordre" data-status="paa-vei"><div><p class="ordre__navn">Klepp – ny luft/luft</p><div class="ordre__meta"><span>Montering</span><span>Befart</span><span>09:00–12:00</span></div></div><span class="ordre__status">Montør på vei</span><button class="ordre__knapp" type="button" data-status-knapp>Fullfør</button></div><div class="ordre" data-status="paa-vei"><div><p class="ordre__navn">Sandnes – service luft/vann</p><div class="ordre__meta"><span>Service</span><span>Enebolig</span><span>10:00–11:30</span></div></div><span class="ordre__status">Montør på vei</span><button class="ordre__knapp" type="button" data-status-knapp>Fullfør</button></div><div class="ordre" data-status="ny"><div><p class="ordre__navn">Stavanger – feilsøking</p><div class="ordre__meta"><span>Reparasjon</span><span>Forus</span><span>11:00–12:00</span></div></div><span class="ordre__status">Ny</span><button class="ordre__knapp" type="button" data-status-knapp>Send montør</button></div><div class="ordre" data-status="ny"><div><p class="ordre__navn">Bryne – ny luft/vann</p><div class="ordre__meta"><span>Montering</span><span>Befart</span><span>12:00–16:00</span></div></div><span class="ordre__status">Ny</span><button class="ordre__knapp" type="button" data-status-knapp>Send montør</button></div><div class="ordre" data-status="ny"><div><p class="ordre__navn">Borettslag Forus – kjøleanlegg</p><div class="ordre__meta"><span>Proff</span><span>36 boenheter</span><span>13:00–15:00</span></div></div><span class="ordre__status">Ny</span><button class="ordre__knapp" type="button" data-status-knapp>Send montør</button></div><div class="ordre" data-status="ny"><div><p class="ordre__navn">Egersund – service væske/vann</p><div class="ordre__meta"><span>Service</span><span>4 år siden sist</span><span>14:00–15:30</span></div></div><span class="ordre__status">Ny</span><button class="ordre__knapp" type="button" data-status-knapp>Send montør</button></div><div class="ordre" data-status="ferdig"><div><p class="ordre__navn">Sola – garantiutbedring</p><div class="ordre__meta"><span>Garanti</span><span>Innedel</span><span>Ferdig 10:20</span></div></div><span class="ordre__status">Fullført</span><button class="ordre__knapp" type="button" data-status-knapp disabled>Fullført</button></div><div class="ordre" data-status="paa-vei"><div><p class="ordre__navn">Hafrsfjord – service luft/luft</p><div class="ordre__meta"><span>Service</span><span>1 år siden sist</span><span>Ferdig 13:40</span></div></div><span class="ordre__status">Montør på vei</span><button class="ordre__knapp" type="button" data-status-knapp>Fullfør</button></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Hendelseslogg</h2><div data-logg></div></div></div><div><div class="panelkort"><h2>Dagens rute</h2><div class="logglinje"><time>08:00</time><span>Nærbø · ferdig</span></div><div class="logglinje"><time>09:00</time><span>Klepp · montering</span></div><div class="logglinje"><time>10:00</time><span>Sandnes · service</span></div><div class="logglinje"><time>11:00</time><span>Forus · feilsøking</span></div><div class="logglinje"><time>12:00</time><span>Bryne · montering</span></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Befaringer</h2><div class="logglinje"><time>i morgen</time><span>Sandnes · luft/vann</span></div><div class="logglinje"><time>tor</time><span>Stavanger · borettslag</span></div><div class="logglinje"><time>fre</time><span>Bryne · luft/luft</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">AVE Systemer AS</p><p>Din lokale leverandør av varmepumper i Rogaland. Stolt forhandler av Daikin varmepumper, og F-Gass sertifisert bedrift.</p></div><div><h2>Systemer</h2><ul><li><a href="systemer.html#luft-luft">Luft/luft</a></li><li><a href="systemer.html#luft-vann">Luft/vann</a></li><li><a href="systemer.html#vaeske-vann">Væske/vann</a></li><li><a href="drift.html">Service</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4740402033">40 40 20 33</a></li><li><a href="mailto:post@ave.no">post@ave.no</a></li><li><a href="kontakt.html">Jærvegen 67, Nærbø</a></li><li><a href="kontakt.html">Maskinveien 6, Stavanger</a></li></ul></div><div><h2>Avdelinger</h2><ul><li>Jæren · Nærbø</li><li>Forus · Stavanger</li><li>Hverdager 8–15</li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> AVE Systemer AS</span><span>Nærbø · Stavanger</span></div></div></footer>
+<script src="assets/js/ave-no-demo.js" defer></script>
 </body>
 </html>
+</div>

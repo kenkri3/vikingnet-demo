@@ -1,0 +1,35 @@
+{
+  "slug": "b2blogistics-no-demo",
+  "firma": "B2B Logistics AS",
+  "navType": "steg/breadcrumb-nav",
+  "fonts": [
+    "Chivo",
+    "Roboto Slab"
+  ],
+  "palette": [
+    "#0f2f1f",
+    "#e2622f",
+    "#f2f0e6",
+    "#e7e3d4"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "hvorfor",
+    "slik-jobber-vi",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "lager.html",
+    "transport.html",
+    "sporing.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
