@@ -1,0 +1,36 @@
+{
+  "slug": "aloalabel-no-demo",
+  "firma": "ALOA The Label",
+  "navType": "vertikal-typografisk-liste",
+  "fonts": [
+    "Bodoni Moda",
+    "Hanken Grotesk"
+  ],
+  "palette": [
+    "#f4efe6",
+    "#141110",
+    "#a8261b",
+    "#dcd0bd"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "nyheter",
+    "marbella",
+    "klubben",
+    "storrelser",
+    "atelier"
+  ],
+  "pages": [
+    "index.html",
+    "kolleksjon.html",
+    "atelier.html",
+    "storrelser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
