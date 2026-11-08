@@ -1,0 +1,35 @@
+{
+  "slug": "branchservice-com-demo",
+  "firma": "Branch Group AS",
+  "navType": "ikon-rail med etiketter",
+  "fonts": [
+    "Josefin Sans",
+    "Fira Sans"
+  ],
+  "palette": [
+    "#f2efe7",
+    "#0f3b36",
+    "#d9603f",
+    "#8fa8a0"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "markeder",
+    "tall",
+    "prosess",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bransjer.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

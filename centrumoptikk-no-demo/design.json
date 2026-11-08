@@ -1,0 +1,36 @@
+{
+  "slug": "centrumoptikk-no-demo",
+  "firma": "Centrum Optikk",
+  "navType": "delt topp + scroll-spy",
+  "fonts": [
+    "Crimson Pro",
+    "Titillium Web"
+  ],
+  "palette": [
+    "#f7f5f1",
+    "#17262b",
+    "#2f7f8a",
+    "#d9a441"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "linser",
+    "besok",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "synsundersokelse.html",
+    "briller.html",
+    "linser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

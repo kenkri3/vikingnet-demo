@@ -1,0 +1,35 @@
+{
+  "slug": "bisletsnekker-no-demo",
+  "firma": "Bislet Snekker AS",
+  "navType": "rullegardin-akkordeon",
+  "fonts": [
+    "Marcellus",
+    "PT Sans"
+  ],
+  "palette": [
+    "#f4efe6",
+    "#2b211b",
+    "#a8672f",
+    "#6f7a58"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "reising",
+    "prosjekter",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
