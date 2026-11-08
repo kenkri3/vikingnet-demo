@@ -1,66 +1,132 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – Murmester Eirik Hansen AS</title>
-<meta name="description" content="Ta kontakt med Murmester Eirik Hansen AS på e-post murmester@eirikhansen.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Kontakt Murmester Eirik Hansen AS — Nesttun, Bergen</title>
+<meta name="description" content="Kontakt Murmester Eirik Hansen AS: Hardangervegen 74, 5224 Nesttun. Telefon 94 42 11 11, e-post murmester@eirikhansen.no. Be om befaring eller tilbud.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Murmester Eirik Hansen AS">
+<meta property="og:title" content="Kontakt Murmester Eirik Hansen AS — Nesttun, Bergen">
+<meta property="og:description" content="Kontakt Murmester Eirik Hansen AS: Hardangervegen 74, 5224 Nesttun. Telefon 94 42 11 11, e-post murmester@eirikhansen.no. Be om befaring eller tilbud.">
+<meta property="og:image" content="assets/img/01-eirikhansen-no.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/eirikhansen-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Murmester Eirik Hansen AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>Murmester Eirik Hansen</strong> <span>AS · Bergen</span></a>
+    <a class="ring" href="tel:+4794421111">94 42 11 11</a>
   </div>
+  <nav class="mur" aria-label="Hovedmeny">
+    <ul>
+      <li><a class="flis" href="index.html"><span class="nr">01</span><span>Forside</span></a></li>
+      <li><a class="flis" href="tjenester.html"><span class="nr">02</span><span>Tjenester</span></a></li>
+      <li><a class="flis" href="prosjekter.html"><span class="nr">03</span><span>Prosjekter</span></a></li>
+      <li><a class="flis" href="om.html"><span class="nr">04</span><span>Om oss</span></a></li>
+      <li><a class="flis" href="kontakt.html" aria-current="page"><span class="nr">05</span><span>Kontakt</span></a></li>
+      <li><a class="flis" href="panel.html"><span class="nr">06</span><span>Panel</span></a></li>
+    </ul>
+  </nav>
 </header>
-<main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Mur, flis &amp; våtrom · Nesttun</p>
-  <h1>Ta kontakt med Murmester Eirik Hansen AS</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
-  <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">Murmester Eirik Hansen AS</p>
-      <p><strong>Telefon</strong><br><a href="tel:+4794421111">94 42 11 11</a></p>
-      <p><strong>E-post</strong><br><a href="mailto:murmester@eirikhansen.no">murmester@eirikhansen.no</a></p>
-      <p><strong>Område</strong><br>Nesttun</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
-  </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:murmester@eirikhansen.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Bad og våtromsrehabilitering</option><option>Flislegging og naturstein</option><option>Murarbeid og fasaderehabilitering</option><option>Peis, pipe og ildsteder</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
-  </form>
-</section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Murmester Eirik Hansen AS</p>
-      <p class="bunn__tekst">Nesttun · 94 42 11 11 · murmester@eirikhansen.no</p>
+<main id="hoved">  <section class="sidehode">
+    <div class="ramme">
+      <p class="merkelapp">Kontakt</p>
+      <h1>Ta kontakt om prosjektet ditt.</h1>
+      <p class="ingress">Ikke nøl med å ta kontakt via skjemaet eller e-post, så kommer vi tilbake til deg. Eller ring for en hyggelig og uforpliktende samtale.</p>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Murmester Eirik Hansen AS</p>
+  </section>
+
+  <section class="seksjon">
+    <div class="ramme">
+      <div class="to-kolonner">
+        <div>
+          <h2 style="margin-bottom:1rem">Send en henvendelse</h2>
+          <form class="skjema" data-skjema novalidate>
+            <div class="felt-par">
+              <div class="felt"><label for="navn">Ditt navn</label><input type="text" id="navn" name="navn" autocomplete="name" placeholder="Fornavn og etternavn"></div>
+              <div class="felt"><label for="epost">Din e-post</label><input type="email" id="epost" name="epost" autocomplete="email" placeholder="navn@epost.no"></div>
+            </div>
+            <div class="felt-par">
+              <div class="felt"><label for="telefon">Telefon</label><input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+47 000 00 000"></div>
+              <div class="felt"><label for="adresse">Adresse</label><input type="text" id="adresse" name="adresse" placeholder="Gate og sted"></div>
+            </div>
+            <div class="felt">
+              <label for="emne">Hva gjelder det?</label>
+              <select id="emne" name="emne">
+                <option>Bad og våtrom</option>
+                <option>Bolig i mur</option>
+                <option>Gulv: støping og avretting</option>
+                <option>Naturstein</option>
+                <option>Pipe og ildsted</option>
+                <option>Puss av fasade</option>
+                <option>Vintervedlikehold</option>
+                <option>Noe annet</option>
+              </select>
+            </div>
+            <div class="felt">
+              <label for="melding">Melding</label>
+              <textarea id="melding" name="melding" rows="6" placeholder="Beskriv jobben: hva som skal gjøres, omtrentlig størrelse og når du ønsker å starte."></textarea>
+            </div>
+            <p class="skjema-melding" role="status" aria-live="polite"></p>
+            <div><button class="knapp" type="submit">Send henvendelsen</button></div>
+            <p style="font-size:.78rem;color:var(--mortel);margin-top:.4rem">Dette er en demonstrasjonsside. Ingenting sendes, og opplysningene lagres ikke.</p>
+          </form>
+        </div>
+        <div>
+          <dl class="fakta">
+            <div><dt>Firma</dt><dd>Murmester Eirik Hansen AS</dd></div>
+            <div><dt>Besøk</dt><dd>Hardangervegen 74<br>5224 Nesttun</dd></div>
+            <div><dt>Telefon</dt><dd><a href="tel:+4794421111">94 42 11 11</a></dd></div>
+            <div><dt>E-post</dt><dd><a href="mailto:murmester@eirikhansen.no">murmester@eirikhansen.no</a></dd></div>
+            <div><dt>Område</dt><dd>Bergen og omegn</dd></div>
+          </dl>
+          <div class="kort" style="margin-top:1rem">
+            <p class="merke-liten">Vinter</p>
+            <h3>Snø i vente?</h3>
+            <p>Vi tar både enkeltbrøyting og rammeavtaler for næringsbygg og borettslag. Ring — ikke send skjema — når det haster.</p>
+            <p style="margin-top:.8rem"><a href="tel:+4794421111">Ring 94 42 11 11 →</a></p>
+          </div>
+          <div class="kort" style="margin-top:1rem">
+            <p class="merke-liten">Befaring</p>
+            <h3>Vi kommer til deg</h3>
+            <p>De fleste jobber starter med en befaring. Den er uforpliktende, og du får et skriftlig tilbud etterpå.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon">
+    <div class="ramme">
+      <div class="cta">
+        <div>
+          <h2>Ring 94 42 11 11</h2>
+          <p>Vi tar telefonen i arbeidstiden, og ringer tilbake hvis vi står i en støp.</p>
+        </div>
+        <div><a class="knapp" href="tel:+4794421111">Ring nå</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 Murmester Eirik Hansen AS · Hardangervegen 74, 5224 Nesttun</p>
+    <p class="fot-lenker">
+      <a href="tjenester.html">Tjenester</a>
+      <a href="prosjekter.html">Prosjekter</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </p>
   </div>
 </footer>
-<script src="app.js"></script>
+<script src="assets/js/eirikhansen-no-demo.js" defer></script>
 </body>
 </html>

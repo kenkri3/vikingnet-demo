@@ -1,0 +1,35 @@
+{
+  "slug": "eirikhansen-no-demo",
+  "firma": "Murmester Eirik Hansen AS",
+  "navType": "murningsmønster med forskjøvne fliser",
+  "fonts": [
+    "Bitter",
+    "Assistant"
+  ],
+  "palette": [
+    "#221d1a",
+    "#a8452c",
+    "#efe7db",
+    "#8d8378"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "prosjekter",
+    "sertifisering",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
