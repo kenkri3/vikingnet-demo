@@ -1,0 +1,35 @@
+{
+  "slug": "96000-no-demo",
+  "firma": "Brekke Sanitær AS (VVS Eksperten)",
+  "navType": "fast-bunn-dock",
+  "fonts": [
+    "Outfit",
+    "JetBrains Mono"
+  ],
+  "palette": [
+    "#0a2740",
+    "#22c6d6",
+    "#f2f6f8"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "bad",
+    "trygghet",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "varmepumper.html",
+    "bad.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

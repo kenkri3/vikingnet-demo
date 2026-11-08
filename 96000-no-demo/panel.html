@@ -1,175 +1,87 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>VVS Eksperten / Brekke Sanitær – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos VVS Eksperten / Brekke Sanitær.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Servicepanel – serviceordrer og status | Brekke Sanitær AS</title>
+<meta name="description" content="Servicepanelet til Brekke Sanitær AS: serviceordrer med kunde, adresse, montør og status, med filter og statusknapper.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Servicepanel – serviceordrer og status | Brekke Sanitær AS">
+<meta property="og:description" content="Servicepanelet til Brekke Sanitær AS: serviceordrer med kunde, adresse, montør og status, med filter og statusknapper.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/01-96000-no.jpg">
+<meta name="theme-color" content="#0a2740">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/96000-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="VVS Eksperten / Brekke Sanitær" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<div class="topp"><div class="inn"><span><b>VVS Eksperten</b> · Brekke Sanitær AS · Holmestrand</span><span><a href="tel:+4733096000">330 96 000</a> · man–fre 09–16</span></div></div>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Holmestrand</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos VVS Eksperten / Brekke Sanitær. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>VVS Eksperten / Brekke Sanitær</div>
+<section class="pthode"><div class="inn">
+  <div class="merkelinje">Internt</div>
+  <h1>Serviceordrer</h1>
+  <p>Ordrene som er meldt inn. Planlegg jobben, start den når montøren er på vei, og merk den ferdig når arbeidet er utført.</p>
+  <p style="margin-top:9px;font-family:var(--mono);font-size:11px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>Dagens kø</h4><ul><li>Totalt<b>8 ordrer</b></li><li>Mottatt i dag<b>3</b></li><li>Ferdig i dag<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Montører</h4><ul><li>Kim<b>3 ordrer</b></li><li>Arild<b>2 ordrer</b></li><li>Ola<b>2 ordrer</b></li><li>Team bad<b>1 prosjekt</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:12.5px;color:var(--gra);margin:0">Demonstrasjon av et servicepanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div>
+    <div class="pkpi">
+      <div class="pkpi__boks"><b id="kpi-total">8</b><span>Ordrer i dag</span><em>Alle i systemet</em></div>
+      <div class="pkpi__boks"><b id="kpi-mottatt">3</b><span>Mottatt</span><em>Venter på plan</em></div>
+      <div class="pkpi__boks"><b id="kpi-paagar">2</b><span>Pågår</span><em>Montør i arbeid</em></div>
+      <div class="pkpi__boks"><b id="kpi-ferdig">2</b><span>Ferdig</span><em>Kvittert ut</em></div>
     </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
+    <div class="pfilter" role="group" aria-label="Filtrer serviceordrer">
+      <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+      <button class="filt" type="button" data-filter="mottatt" aria-pressed="false">Mottatt</button>
+      <button class="filt" type="button" data-filter="planlagt" aria-pressed="false">Planlagt</button>
+      <button class="filt" type="button" data-filter="paagar" aria-pressed="false">Pågår</button>
+      <button class="filt" type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button>
     </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Prosjektering og tekniske leveranser</strong><span>Ny forespørsel via nettsiden · Holmestrand</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Montering, idriftsettelse og integrasjon</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Service, vedlikehold og sakkyndig kontroll</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Energioptimalisering og oppgradering</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om prosjektering og tekniske leveranser</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om montering, idriftsettelse og integrasjon</strong><p>Kunde i Holmestrand ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av service, vedlikehold og sakkyndig kontroll</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
+    <div class="ordrer" id="ordreliste" aria-live="polite"></div>
+    <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+  </div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">VVS Eksperten / Brekke Sanitær</p>
-      <p class="bunn__tekst">Holmestrand · 92 61 54 57 · post@96000.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Brekke Sanitær AS</span><p>Rørlegger'n på Gullhaug. Siden 1980 har vi levert rørleggertjenester med fokus på kvalitet og punktlighet.</p><p><a href="tel:+4733096000">330 96 000</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Forside</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="varmepumper.html">Varme</a></li><li><a href="bad.html">Bad</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="tjenester.html">Service og vakttelefon</a></li><li><a href="varmepumper.html">Varmepumper</a></li><li><a href="bad.html">Baderomsrenovering</a></li><li><a href="tjenester.html#sanitaer">Sanitær og utstyr</a></li><li><a href="tjenester.html#naring">Næring og VA</a></li></ul></div>
+      <div><h4>Besøk oss</h4><p>Hvittingfossveien 212<br>3089 Holmestrand</p><p style="margin-top:8px">Man–fre 09:00–16:00</p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 VVS Eksperten / Brekke Sanitær</p>
+    <div class="bunn__bunn"><span>© 2026 Brekke Sanitær AS</span><span>Nettsiden er en demonstrasjon laget for Brekke Sanitær AS</span><a href="panel.html">Servicepanel</a></div>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<nav class="dock" aria-label="Hovedmeny">
+  <div class="dock__indre">
+    <a class="dock__lenke" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1z"/></svg><span>Hjem</span></a>
+    <a class="dock__lenke" href="tjenester.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7a4 4 0 01-5.5 5.5L7 20l-3-3 7.5-7.5A4 4 0 0117 4l-2.5 2.5 3 3L20 7z"/></svg><span>Tjenester</span></a>
+    <a class="dock__lenke" href="varmepumper.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s5 5 5 9a5 5 0 01-10 0c0-4 5-9 5-9z"/><path d="M12 17a2.5 2.5 0 002.5-2.5"/></svg><span>Varme</span></a>
+    <a class="dock__lenke" href="bad.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16v3a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M7 12V6a2 2 0 012-2h1"/><path d="M7 20l-1 2M17 20l1 2"/></svg><span>Bad</span></a>
+    <a class="dock__lenke dock__lenke--skjul" href="om.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5M12 8h.01"/></svg><span>Om oss</span></a>
+    <a class="dock__lenke" href="kontakt.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2 1.5a12 12 0 005.5 5.5L16 13l5 2v3a2 2 0 01-2 2A16 16 0 014 6a2 2 0 012-2z"/></svg><span>Kontakt</span></a>
+    <a class="dock__lenke dock__lenke--skjul" href="panel.html" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v4h-7zM13 10h7v10h-7zM4 13h7v7H4z"/></svg><span>Panel</span></a>
+  <button class="dock__mer" type="button" id="dock-mer" aria-expanded="false" aria-controls="dock-ark"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></svg><span>Mer</span></button>
+  </div>
+</nav>
+<div class="dock__ark" id="dock-ark" hidden>
+  <ul>
+    <li><a href="om.html">Om oss</a></li>
+    <li><a href="panel.html">Panel</a></li>
+  </ul>
+</div>
+<script src="assets/js/96000-no-demo.js" defer></script>
 </body>
 </html>

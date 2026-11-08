@@ -1,0 +1,37 @@
+{
+  "slug": "barde-ai-demo",
+  "firma": "Barde Software AS",
+  "navType": "flytende hjørneknapp + overlay",
+  "fonts": [
+    "Fira Code",
+    "Noto Sans"
+  ],
+  "palette": [
+    "#0a0d0d",
+    "#ff5a1f",
+    "#e7ecea",
+    "#37c2b1"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "verktoy",
+    "bruksomrade",
+    "maskindata",
+    "integrasjoner",
+    "vision",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "verktoy.html",
+    "anlegg.html",
+    "priser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

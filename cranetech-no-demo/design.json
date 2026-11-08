@@ -1,0 +1,37 @@
+{
+  "slug": "cranetech-no-demo",
+  "firma": "Crane Tech AS",
+  "navType": "side-piler med indeks",
+  "fonts": [
+    "IBM Plex Serif",
+    "Ubuntu"
+  ],
+  "palette": [
+    "#0e1216",
+    "#f4b41a",
+    "#f2efe9",
+    "#5a6a75"
+  ],
+  "motion": [
+    "webgl",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "tjenester",
+    "kontroll",
+    "prosjekter",
+    "sertifisering",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "hms.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
