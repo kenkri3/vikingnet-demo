@@ -1,0 +1,36 @@
+{
+  "slug": "alpha-as-no-demo",
+  "firma": "Alpha Økonomi AS",
+  "navType": "to-kolonners indeks",
+  "fonts": [
+    "Newsreader",
+    "Public Sans"
+  ],
+  "palette": [
+    "#005587",
+    "#f4f1e9",
+    "#0f2233",
+    "#c07a3e"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tenester",
+    "graf",
+    "system",
+    "kundeord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "regnskap.html",
+    "lonn.html",
+    "radgivning.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
