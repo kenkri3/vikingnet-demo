@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordrekø · Rått & Sanselig (demo)</title>
+<meta name="description" content="Demo av butikkens ordrekø: bestillinger med status, kunde og handlinger.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rått & Sanselig">
+<meta property="og:title" content="Ordrekø · Rått & Sanselig (demo)">
+<meta property="og:description" content="Demo av butikkens ordrekø: bestillinger med status, kunde og handlinger.">
+<meta name="theme-color" content="#f6f1e8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/rattogsanselig-no.css">
+</head>
+<body>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<header class="topp">
+  <div class="indre">
+    <a class="logo" href="index.html">Rått &amp; Sanselig<span>Interiør og klær · siden 2004</span></a>
+    <div class="hoyre"><a href="kontakt.html">Kontakt</a></div>
+  </div>
+</header>
+<nav class="kat" aria-label="Hovedmeny">
+  <div class="indre">
+    <a href="index.html">Hjem</a>
+    <a href="klaer.html">Klær</a>
+    <a href="interior.html">Interiør</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="panel.html" aria-current="page">Panel</a>
+  </div>
+</nav>
+<main id="innhold">
+<header class="panelhode">
+  <div class="ramme">
+    <div class="rad"><p class="brodsmule"><a href="index.html">Hjem</a> / Panel</p><span class="drift">Ordrekøen er åpen</span></div>
+    <h1>Ordrekøen</h1>
+    <p class="ingress">Slik ser køen ut internt. Trykk på knappene – status, nøkkeltall og logg oppdaterer seg. Alt er eksempeldata.</p>
+  </div>
+</header>
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="kpier">
+      <div class="kpi"><span class="l">Nye</span><span class="v" data-kpi-ny>2</span><span class="d">Venter på pakking</span></div>
+      <div class="kpi"><span class="l">Pakkes</span><span class="v" data-kpi-loper>2</span><span class="d">Under arbeid</span></div>
+      <div class="kpi"><span class="l">Sendt</span><span class="v" data-kpi-ferdig>2</span><span class="d">Med sporing</span></div>
+      <div class="kpi"><span class="l">Frakt</span><span class="v">1500</span><span class="d">Gratis over, i kr</span></div>
+    </div>
+    <div class="faner" role="group" aria-label="Filtrer">
+      <button class="fane" type="button" data-filter="alle" aria-pressed="true">Alle <span class="antall">6</span></button>
+      <button class="fane" type="button" data-filter="ny" aria-pressed="false">Nye <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="loper" aria-pressed="false">Pakkes <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="ferdig" aria-pressed="false">Sendt <span class="antall">2</span></button>
+    </div>
+    <div class="saker" data-saker>
+      <article class="sak" data-id="RS-612" data-status="ny">
+        <div class="id">RS-612</div>
+        <div class="hoved"><div class="t">Ordre, klær</div><div class="m">Privat · Oslo</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ny</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak" data-id="RS-611" data-status="loper">
+        <div class="id">RS-611</div>
+        <div class="hoved"><div class="t">Ordre, interiør</div><div class="m">Privat · Bergen</div></div>
+        <div class="meta"><span class="k">Status</span><span>Pakkes</span></div>
+        <span class="status" data-status="loper">Pakkes</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak" data-id="RS-610" data-status="loper">
+        <div class="id">RS-610</div>
+        <div class="hoved"><div class="t">Retur, bytte av størrelse</div><div class="m">Privat · Trondheim</div></div>
+        <div class="meta"><span class="k">Status</span><span>Pakkes</span></div>
+        <span class="status" data-status="loper">Pakkes</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak" data-id="RS-609" data-status="ny">
+        <div class="id">RS-609</div>
+        <div class="hoved"><div class="t">Spørsmål om lagerstatus</div><div class="m">Privat</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ny</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="RS-608" data-status="ferdig">
+        <div class="id">RS-608</div>
+        <div class="hoved"><div class="t">Ordre, gave</div><div class="m">Privat · Stavanger</div></div>
+        <div class="meta"><span class="k">Status</span><span>Sendt 05.11</span></div>
+        <span class="status" data-status="ferdig">Sendt</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Send</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="RS-607" data-status="ferdig">
+        <div class="id">RS-607</div>
+        <div class="hoved"><div class="t">Ordre, tekstiler</div><div class="m">Privat · Tromsø</div></div>
+        <div class="meta"><span class="k">Status</span><span>Sendt 28.10</span></div>
+        <span class="status" data-status="ferdig">Sendt</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Send</button>
+        </div>
+      </article>
+    </div>
+    <div class="panel-to">
+      <div class="panel-kort">
+        <h2>Dagens pakking</h2>
+        <p class="under">Eksempeldata</p>
+        <ul style="list-style:none;margin:0;padding:0">
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--linje);font-size:13.5px"><span>RS-611 · interiør</span><span style="color:var(--graa)">i dag</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--linje);font-size:13.5px"><span>RS-610 · retur</span><span style="color:var(--graa)">i dag</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-size:13.5px"><span>RS-612 · klær</span><span style="color:var(--graa)">i morgen</span></li>
+        </ul>
+      </div>
+      <div class="panel-kort">
+        <h2>Hendelser</h2>
+        <p class="under">Siste aktivitet</p>
+        <div class="logg" data-logg>
+          <div><b>11:30</b> RS-611 pakkes</div>
+          <div><b>10:00</b> RS-608 sendt</div>
+          <div><b>09:00</b> ny ordre RS-612</div>
+          <div><b>08:00</b> køen åpnet</div>
+        </div>
+        <a class="knapp knapp--lys" href="klaer.html" style="margin-top:11px">Til klær <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bunn">
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Rått &amp; Sanselig AS</h3><p>En stor interiør- og klesbutikk som ble etablert i 2004. Gratis frakt over 1500 kr, og varer sendes innen 48 timer.</p></div>
+      <div><h4>Butikk</h4><ul><li><a href="klaer.html">Klær</a></li><li><a href="interior.html">Interiør</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Ordrekø (demo)</a></li></ul></div>
+      <div><h4>Vilkår</h4><ul><li>Gratis frakt over 1500 kr</li><li>Sendes innen 48 timer</li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="kontakt.html">Send en henvendelse</a></li><li>Netthandel siden 2004</li></ul></div>
+    </div>
+    <div class="bunn-bunn"><span>© 2026 Rått &amp; Sanselig AS</span><span>Etablert 2004</span><span>Demo: innhold hentet fra rattogsanselig.no</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/rattogsanselig-no.js" defer></script>
+</body>
+</html>

@@ -171,3 +171,7 @@ tbody th { font-family: var(--saira); font-weight: 600; font-size: 1rem; }
 @media (min-width: 780px) { :root { --kant: 1.5rem; } .hero__inn { grid-template-columns: 1.06fr .94fr; gap: 2.1rem; } .seksjonshode { grid-template-columns: 1.1fr .9fr; align-items: end; } .tjenester { grid-template-columns: repeat(3, minmax(0,1fr)); } .duo { grid-template-columns: 1fr 1fr; gap: 2.1rem; } .duo--speil .duo__bilde { order: -1; } .bunn__rutenett { grid-template-columns: 1.4fr 1fr 1fr 1fr; } .cta { grid-template-columns: 1.3fr auto; align-items: center; } .cta__handlinger { justify-content: flex-end; } .panelrutenett { grid-template-columns: 1.5fr 1fr; } .sak { grid-template-columns: 1fr 105px auto; align-items: center; } .modulmeny { grid-template-columns: repeat(6, minmax(0,1fr)); } .telefon__kropp { width: 200px; height: 360px; } }
 @media (max-width: 560px) { table { min-width: 0; font-size: .82rem; } th, td { padding: .48rem .52rem; } caption { padding: .55rem .5rem 0; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; } }
+.seksjon .knapp--tom { border-color: #c6bfcc; color: #241a44; background: transparent; }
+.seksjon .knapp--tom:hover { background: #241a44; border-color: #241a44; color: #fff; }
+.seksjon--mork .knapp--tom { border-color: #423761; color: #e4e0ee; }
+.seksjon--mork .knapp--tom:hover { background: #fff; border-color: #fff; color: #241a44; }

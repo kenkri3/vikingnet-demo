@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — manus og utgivelser | Bonnier Norsk Forlag</title>
+<meta name="description" content="Redaksjonelt panel for Bonnier Norsk Forlag: manus, utgivelser og korrektur.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Bonnier Norsk Forlag">
+<meta property="og:title" content="Panel — manus og utgivelser | Bonnier Norsk Forlag">
+<meta property="og:description" content="Redaksjonelt panel for Bonnier Norsk Forlag: manus, utgivelser og korrektur.">
+<meta property="og:image" content="assets/img/2-bonnierforlag-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bonnierforlag-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Bonnier</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Manus og utgivelser</h1><p class="panel__dato" data-framdrift>0 av 0 manus behandla</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Manus i kø</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til vurdering</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Første lesing</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Utgivelser</p><p class="kpi__tal">6</p><p class="kpi__hjelp">Neste kvartal</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Behandla i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du behandler</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-manus" aria-controls="vis-manus" aria-selected="true">Manus</button>
+      <button class="fane" role="tab" id="fane-utg" aria-controls="vis-utg" aria-selected="false">Utgivelser</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-manus" role="tabpanel" aria-labelledby="fane-manus">
+      <div class="panel__topprad"><h2>Manus</h2><span class="merknad">Sortert etter mottak</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Sakprosa · familieliv<small>Fullt manus, 240 sider</small></div>
+  <div class="rad__meta"><strong>Mottatt 03.11</strong>Redaktør: Kari</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Roman · norsk<small>Del 1 av 3</small></div>
+  <div class="rad__meta"><strong>Pågår</strong>Redaktør: Ola</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Barnebok · bildebok<small>Manus og skisser</small></div>
+  <div class="rad__meta"><strong>Mottatt 05.11</strong>Redaktør: Ida</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Oversatt · krim<small>Prøveoversettelse</small></div>
+  <div class="rad__meta"><strong>Mottatt 06.11</strong>Redaktør: Per</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-utg" role="tabpanel" aria-labelledby="fane-utg" hidden>
+      <div class="panel__topprad"><h2>Utgivelser</h2><span class="merknad">Neste kvartal</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Roman · februar<small>Korrektur runde 2</small></div>
+  <div class="rad__meta"><strong>Frist 14.11</strong>Ansvarlig: Ola</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Sakprosa · mars<small>Omslag til godkjenning</small></div>
+  <div class="rad__meta"><strong>Frist 20.11</strong>Ansvarlig: Kari</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Barnebok · april<small>Trykk klar</small></div>
+  <div class="rad__meta"><strong>Frist 28.11</strong>Ansvarlig: Ida</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/bonnierforlag-no.js" defer></script>
+</body>
+</html>

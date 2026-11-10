@@ -1,0 +1,34 @@
+{
+  "slug": "arm-com",
+  "firma": "Arm",
+  "navType": "megameny-stripe",
+  "fonts": [
+    "Oswald",
+    "Changa"
+  ],
+  "palette": [
+    "#08131f",
+    "#00c2b2",
+    "#f4f7f8",
+    "#6b7c8f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "lisensiering",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "lisensiering.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "rattogsanselig-no",
+  "firma": "Rått & Sanselig",
+  "navType": "kategori-stripe-to-rad",
+  "fonts": [
+    "Cormorant",
+    "Poppins"
+  ],
+  "palette": [
+    "#f6f1e8",
+    "#231f1c",
+    "#b06a53",
+    "#8a9b8e"
+  ],
+  "motion": [
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "stripe",
+    "klaer",
+    "interior",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "klaer.html",
+    "interior.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

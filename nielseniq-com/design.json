@@ -1,0 +1,33 @@
+{
+  "slug": "nielseniq-com",
+  "firma": "NIQ",
+  "navType": "toppmeny med språkchip",
+  "fonts": [
+    "Archivo Black",
+    "PT Sans"
+  ],
+  "palette": [
+    "#f7f6f3",
+    "#0b0b0f",
+    "#ff4d2d",
+    "#e2e0da"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "losninger",
+    "full-view",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "losninger.html",
+    "bransjer.html",
+    "innsikt.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "move-no",
+  "firma": "Move",
+  "navType": "megameny",
+  "fonts": [
+    "Michroma",
+    "Asap"
+  ],
+  "palette": [
+    "#f4f7fa",
+    "#0b1b33",
+    "#00c2a8",
+    "#dbe3ea"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "fagomrader",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "fagomrader.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "bonnierforlag-no",
+  "firma": "Bonnier Norsk Forlag AS",
+  "navType": "bokrygg-meny",
+  "fonts": [
+    "Libre Caslon Text",
+    "Hind"
+  ],
+  "palette": [
+    "#f6f2ea",
+    "#241d1a",
+    "#8a2b3a",
+    "#c9a227"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "bok",
+    "boker",
+    "forfattere",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "boker.html",
+    "forfattere.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

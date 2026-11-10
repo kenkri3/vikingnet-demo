@@ -1,0 +1,33 @@
+{
+  "slug": "eda-no",
+  "firma": "EDA Elektro Data",
+  "navType": "kvadratmeny",
+  "fonts": [
+    "Chivo",
+    "IBM Plex Sans"
+  ],
+  "palette": [
+    "#14181d",
+    "#f2f4f6",
+    "#f2b705",
+    "#3d4d5c"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "krets",
+    "tjenester",
+    "selskaper",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

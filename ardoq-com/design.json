@@ -1,0 +1,33 @@
+{
+  "slug": "ardoq-com",
+  "firma": "Ardoq",
+  "navType": "topp-og-statuslinje",
+  "fonts": [
+    "Epilogue",
+    "Inconsolata"
+  ],
+  "palette": [
+    "#1a1233",
+    "#f5f2fb",
+    "#7a5cf0",
+    "#e0b7ff"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "graf",
+    "plattform",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "plattform.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

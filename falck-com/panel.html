@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oppdragspanel — Falck</title>
+<meta name="description" content="Demoversjon av oppdragspanelet til Falck: saker innen bedriftshelsetjeneste, arbeidsmiljø og beredskap med status og filter.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Falck">
+<meta property="og:title" content="Oppdragspanel — Falck">
+<meta property="og:description" content="Demoversjon av oppdragspanelet til Falck: saker innen bedriftshelsetjeneste, arbeidsmiljø og beredskap med status og filter.">
+<meta property="og:image" content="assets/img/01-falck.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/falck-com.css">
+<script src="assets/js/falck-com.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><span class="kors" aria-hidden="true"></span><span><strong>Falck</strong> <span>helse og beredskap</span></span></a>
+    <div class="topp-hoyre">
+      <a class="topp-tel" href="tel:+4721492415">21 49 24 15</a>
+      <a class="beredskap" href="beredskap.html">Beredskap</a>
+    </div>
+  </div>
+  <nav class="menyrad" aria-label="Hovedmeny">
+    <ul>
+      <li><a href="index.html">Forside</a></li>
+      <li><a href="tjenester.html">Tjenester</a></li>
+      <li><a href="beredskap.html">Beredskap</a></li>
+      <li><a href="om.html">Om Falck</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="panel.html" aria-current="page">Panel</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · oppdrag</p><h1>Saker og oppdrag</h1><p>Oversikt over saker. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne saker</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Pågående</p><p class="verdi">2</p><p class="endring">undersøkelse + opplæring</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">avtales</p></div>
+        <div class="kpi"><p class="navn">Svartid</p><p class="verdi">1 dag</p><p class="endring">snitt</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Saker</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer saker">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Pågår</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Løst</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="pagaar" data-navn="Helseundersøkelse – avdeling">
+          <div><p class="ordre-navn">Helseundersøkelse – avdeling</p><p class="ordre-meta"><span>Kunde A</span><span class="skille">/</span><span>BHT</span><span class="skille">/</span><span>denne uken</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk løst</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Arbeidsmiljøkartlegging">
+          <div><p class="ordre-navn">Arbeidsmiljøkartlegging</p><p class="ordre-meta"><span>Kunde B</span><span class="skille">/</span><span>Arbeidsmiljø</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta sak</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Sykefraværsoppfølging">
+          <div><p class="ordre-navn">Sykefraværsoppfølging</p><p class="ordre-meta"><span>Kunde C</span><span class="skille">/</span><span>BHT</span><span class="skille">/</span><span>avtales</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta sak</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Beredskapsplan – gjennomgang">
+          <div><p class="ordre-navn">Beredskapsplan – gjennomgang</p><p class="ordre-meta"><span>Kunde D</span><span class="skille">/</span><span>Beredskap</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta sak</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Opplæring – ledere">
+          <div><p class="ordre-navn">Opplæring – ledere</p><p class="ordre-meta"><span>Kunde E</span><span class="skille">/</span><span>Arbeidsmiljø</span><span class="skille">/</span><span>uke 46</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk løst</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Ergonomi – vurdering">
+          <div><p class="ordre-navn">Ergonomi – vurdering</p><p class="ordre-meta"><span>Kunde F</span><span class="skille">/</span><span>BHT</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Løst</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Løst</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Fag</h2><span style="font-size:.62rem;color:var(--graa)">denne uken</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Bedriftshelsetjeneste</p><p class="ordre-meta"><span>3 saker</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Arbeidsmiljø</p><p class="ordre-meta"><span>2 saker</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Beredskap</p><p class="ordre-meta"><span>1 sak</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 Falck · Norge: 21 49 24 15 · fga@no.falck.com</p>
+    <p class="fot-lenker"><a href="tjenester.html">Tjenester</a><a href="beredskap.html">Beredskap</a><a href="om.html">Om Falck</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

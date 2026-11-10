@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — oppgaver og utrulling | Cepheo</title>
+<meta name="description" content="Prosjektpanel for Cepheo: oppgaver, utrulling og kundestøtte.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Cepheo">
+<meta property="og:title" content="Panel — oppgaver og utrulling | Cepheo">
+<meta property="og:description" content="Prosjektpanel for Cepheo: oppgaver, utrulling og kundestøtte.">
+<meta property="og:image" content="assets/img/1-cepheo-com.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Chivo+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/cepheo-com.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Cepheo</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Oppgaver og utrulling</h1><p class="panel__dato" data-framdrift>0 av 0 oppgåver fullførte</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Aktive prosjekt</p><p class="kpi__tal">4</p><p class="kpi__hjelp">To land</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til godkjenning</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Støttesaker</p><p class="kpi__tal">9</p><p class="kpi__hjelp">Åpne i dag</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Fullført i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-opp" aria-controls="vis-opp" aria-selected="true">Oppgaver</button>
+      <button class="fane" role="tab" id="fane-stotte" aria-controls="vis-stotte" aria-selected="false">Støtte</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-opp" role="tabpanel" aria-labelledby="fane-opp">
+      <div class="panel__topprad"><h2>Oppgaver</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">ERP · utrulling fase 2<small>Test av økonomimodul</small></div>
+  <div class="rad__meta"><strong>Frist 12.11</strong>Ansvarlig: MK</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">CRM · tilpasning<small>Skjermbilde for salg</small></div>
+  <div class="rad__meta"><strong>Pågår</strong>Ansvarlig: LH</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Data · rapport<small>Dashbord for ledelsen</small></div>
+  <div class="rad__meta"><strong>Frist 18.11</strong>Ansvarlig: SA</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Integrasjon · HR<small>Feltmapping</small></div>
+  <div class="rad__meta"><strong>Frist 21.11</strong>Ansvarlig: PK</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-stotte" role="tabpanel" aria-labelledby="fane-stotte" hidden>
+      <div class="panel__topprad"><h2>Støttesaker</h2><span class="merknad">Åpne saker</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Kunde A · innlogging<small>Feil ved pålogging</small></div>
+  <div class="rad__meta"><strong>Kategori: tilgang</strong>Alvor: middels</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Kunde B · faktura<small>Spørsmål om faktura</small></div>
+  <div class="rad__meta"><strong>Kategori: faktura</strong>Alvor: lav</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Kunde C · rapport<small>Tall avviker</small></div>
+  <div class="rad__meta"><strong>Kategori: data</strong>Alvor: høy</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/cepheo-com.js" defer></script>
+</body>
+</html>

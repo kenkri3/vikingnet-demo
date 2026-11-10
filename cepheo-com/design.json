@@ -1,0 +1,35 @@
+{
+  "slug": "cepheo-com",
+  "firma": "Cepheo",
+  "navType": "modul-meny",
+  "fonts": [
+    "Golos Text",
+    "Chivo Mono"
+  ],
+  "palette": [
+    "#16202e",
+    "#f4f5f8",
+    "#5a4bda",
+    "#22b8a6"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "moduler",
+    "graf",
+    "tjenester",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "losninger.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

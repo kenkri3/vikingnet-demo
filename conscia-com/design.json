@@ -1,0 +1,33 @@
+{
+  "slug": "conscia-com",
+  "firma": "Conscia Norge",
+  "navType": "venstre-tre",
+  "fonts": [
+    "Spline Sans",
+    "JetBrains Mono"
+  ],
+  "palette": [
+    "#0d1f2d",
+    "#eef2f5",
+    "#2f7fd1",
+    "#58c3b1"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "rack",
+    "tjenester",
+    "land",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
