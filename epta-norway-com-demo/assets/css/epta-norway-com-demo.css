@@ -1,6 +1,6 @@
 
 /* Eid Elektro — sikringsskap i toppen, Kanit + Sarabun, kull/kritt/oransje, canvas straumkrins */
-:root{--kull:#123238;--kull2:#1a4148;--kritt:#eef2ef;--kritt2:#e2eae6;--oransje:#57c2a8;--gra:#5b6b68;--strek:#c9d6d1;--hf:"Red Hat Display",system-ui,sans-serif;--bf:"Red Hat Text",system-ui,sans-serif;--navh:0px;--maks:1120px}
+:root{--kull:#123238;--kull2:#1a4148;--kritt:#eef2ef;--kritt2:#e2eae6;--oransje:#57c2a8;--gra:#5b6b68;--strek:#c9d6d1;--hf:"Gloock",Georgia,serif;--bf:"Tenor Sans",system-ui,sans-serif;--navh:0px;--maks:1120px}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--navh) + 12px)}
 body{margin:0;background:var(--kritt);color:var(--kull);font-family:var(--bf);font-size:16px;line-height:1.7;padding-top:var(--navh);overflow-x:hidden}

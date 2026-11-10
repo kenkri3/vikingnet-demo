@@ -1,0 +1,35 @@
+{
+  "slug": "hordalandasfalt-no-demo",
+  "firma": "Hordaland Asfalt AS",
+  "navType": "to-rads-kategorimeny",
+  "fonts": [
+    "Abril Fatface",
+    "Sofia Sans"
+  ],
+  "palette": [
+    "#1b1a17",
+    "#efe9dc",
+    "#7d6cae"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tenester",
+    "erfaring",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "asfaltering.html",
+    "reasfaltering.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

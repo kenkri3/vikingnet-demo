@@ -1,0 +1,35 @@
+{
+  "slug": "eldevikbygg-no-demo",
+  "firma": "Eldevik Bygg AS",
+  "navType": "sticky stripe-meny",
+  "fonts": [
+    "Cardo",
+    "Nunito Sans"
+  ],
+  "palette": [
+    "#f4f0e8",
+    "#232323",
+    "#2f6f6a",
+    "#e1dbcd"
+  ],
+  "motion": [
+    "scroll",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "husrekke",
+    "tjenester",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "hus.html",
+    "hytte.html",
+    "salg.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

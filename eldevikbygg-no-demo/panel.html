@@ -1,175 +1,29 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Eldevik Bygg AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Eldevik Bygg AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Boligpanel | Eldevik Bygg (demo)</title>
+<meta name="description" content="Demo av boligpanelet: prosjekter fra planlegging til bygging, ferdig og solgt, med filter og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f4f0e8">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Eldevik Bygg AS">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Boligpanel | Eldevik Bygg (demo)">
+<meta property="og:description" content="Demo av boligpanelet: prosjekter fra planlegging til bygging, ferdig og solgt, med filter og hendelseslogg.">
+<meta property="og:image" content="assets/img/hus2.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/eldevikbygg-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Eldevik Bygg AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
-<main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Barkåker</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Eldevik Bygg AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Eldevik Bygg AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Nybygg, tilbygg og påbygg</strong><span>Ny forespørsel via nettsiden · Barkåker</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Totalrenovering og rehabilitering</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Innvendig ombygging og innredning</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Vedlikehold og rammeavtaler</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om nybygg, tilbygg og påbygg</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om totalrenovering og rehabilitering</strong><p>Kunde i Barkåker ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av innvendig ombygging og innredning</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Eldevik Bygg AS</p>
-      <p class="bunn__tekst">Barkåker · post@eldevikbygg.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Eldevik Bygg AS</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+<header class="hode"><div class="skal hode__rad"><a class="merke" href="index.html"><span class="merke__symbol">EB</span><span class="merke__tekst">Eldevik Bygg<small>Systemhus · Barkåker</small></span></a><div class="hode__hoyre"><a class="hode__tlf" href="tel:+4738564421">38 56 44 21</a><a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a></div></div></header>
+<nav class="stripe" aria-label="Hovedmeny"><div class="skal"><ul><li><a href="index.html">Forside</a></li><li><a href="hus.html">Bygge hus</a></li><li><a href="hytte.html">Bygge hytte</a></li><li><a href="salg.html">Til salgs</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html" aria-current="page">Panel</a></li></ul></div></nav><main id="innhold">
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html" style="text-decoration:none"><span class="merke__symbol" style="border-color:var(--gronn-lys);color:var(--gronn-lys)">EB</span><span class="merke__tekst" style="color:#fff">Eldevik Bygg<small style="color:#a5a196">Boligpanel · demo</small></span></a><div class="hode__hoyre"><span class="paneltopp__bruker"><i>EB</i>Prosjekt · Barkåker</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Boliger</h1><p>Uke 46 · 9 boliger i løp · eksempeldata</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Nytt prosjekt</a></div></div><div class="kpi"><div class="kpi__kort"><span class="kpi__navn">Prosjekter</span><span class="kpi__tall">9</span><span class="kpi__endring">hus og hytter</span></div><div class="kpi__kort kpi__kort--gronn"><span class="kpi__navn">Bygging</span><span class="kpi__tall" data-kpi-bygging>2</span><span class="kpi__endring">pågår</span></div><div class="kpi__kort"><span class="kpi__navn">Ferdig</span><span class="kpi__tall" data-kpi-ferdig>2</span><span class="kpi__endring">klare for overtakelse</span></div><div class="kpi__kort"><span class="kpi__navn">Solgt</span><span class="kpi__tall">3</span><span class="kpi__endring">siste 30 dager</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer boliger"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="planlegging" aria-pressed="false">Planlegging</button><button type="button" data-filter="bygging" aria-pressed="false">Bygging</button><button type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button><button type="button" data-filter="solgt" aria-pressed="false">Solgt</button></div><span class="verktoylinje__tall" data-antall>9 av 9 boliger</span></div><div class="boliger" data-boliger><div class="bolig" data-steg="planlegging"><div><p class="bolig__navn">Skaug · funkishus</p><div class="bolig__meta"><span>Hus</span><span>Tomt klar</span><span>Start uke 47</span></div></div><span class="bolig__steg">Planlegging</span><button class="bolig__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="bolig" data-steg="planlegging"><div><p class="bolig__navn">Hytte Veggli</p><div class="bolig__meta"><span>Hytte</span><span>Tomt klar</span><span>Start uke 48</span></div></div><span class="bolig__steg">Planlegging</span><button class="bolig__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="bolig" data-steg="bygging"><div><p class="bolig__navn">Moholt · arealeffektiv</p><div class="bolig__meta"><span>Hus</span><span>Bygging 06.11</span><span>Ferdig uke 3</span></div></div><span class="bolig__steg">Bygging</span><button class="bolig__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="bolig" data-steg="bygging"><div><p class="bolig__navn">Hytte Gimre</p><div class="bolig__meta"><span>Hytte</span><span>Bygging 05.11</span><span>Ferdig uke 2</span></div></div><span class="bolig__steg">Bygging</span><button class="bolig__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="bolig" data-steg="ferdig"><div><p class="bolig__navn">Hytteveien 12</p><div class="bolig__meta"><span>Bolig</span><span>Ferdig 04.11</span><span>Overtakelse</span></div></div><span class="bolig__steg">Ferdig</span><button class="bolig__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="bolig" data-steg="ferdig"><div><p class="bolig__navn">Banebakken 23</p><div class="bolig__meta"><span>Bolig</span><span>Ferdig 02.11</span><span>Overtakelse</span></div></div><span class="bolig__steg">Ferdig</span><button class="bolig__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="bolig" data-steg="solgt"><div><p class="bolig__navn">Skallevold · enebolig</p><div class="bolig__meta"><span>Bolig</span><span>Solgt 28.10</span><span>Overtatt</span></div></div><span class="bolig__steg">Solgt</span><button class="bolig__knapp" type="button" data-neste-steg disabled>Solgt</button></div><div class="bolig" data-steg="solgt"><div><p class="bolig__navn">Nøtterøy · rekkehus</p><div class="bolig__meta"><span>Bolig</span><span>Solgt 24.10</span><span>Overtatt</span></div></div><span class="bolig__steg">Solgt</span><button class="bolig__knapp" type="button" data-neste-steg disabled>Solgt</button></div><div class="bolig" data-steg="solgt"><div><p class="bolig__navn">Barkåker · tomannsbolig</p><div class="bolig__meta"><span>Bolig</span><span>Solgt 20.10</span><span>Overtatt</span></div></div><span class="bolig__steg">Solgt</span><button class="bolig__knapp" type="button" data-neste-steg disabled>Solgt</button></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Hendelseslogg</h2><div data-logg></div></div></div><div><div class="panelkort"><h2>Frister denne uken</h2><div class="logglinje"><time>tir</time><span>Befaring Skaug</span></div><div class="logglinje"><time>ons</time><span>Overtakelse Hytteveien</span></div><div class="logglinje"><time>fre</time><span>Katalogutsending</span></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Prosjekter</h2><div class="logglinje"><time>4</time><span>Hus</span></div><div class="logglinje"><time>3</time><span>Hytter</span></div><div class="logglinje"><time>2</time><span>Næringsbygg</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">Eldevik Bygg AS</p><p>Forhandler av Systemhus og en av de fremste boligbyggerne i regionen. Unike hjem – i samarbeid med deg.</p></div><div><h2>Bygge</h2><ul><li><a href="hus.html">Bygge hus</a></li><li><a href="hytte.html">Bygge hytte</a></li><li><a href="salg.html">Til salgs</a></li><li><a href="hus.html#katalog">Bestill katalog</a></li></ul></div><div><h2>Selskapet</h2><ul><li><a href="om.html">Om Eldevik Bygg</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Boligpanel (demo)</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4738564421">38 56 44 21</a></li><li>Korniveien 11, 3157 Barkåker</li><li><a href="kontakt.html">Send henvendelse</a></li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> Eldevik Bygg AS</span><span>Forhandler av Systemhus</span></div></div></footer>
+<script src="assets/js/eldevikbygg-no-demo.js" defer></script>
 </body>
 </html>
