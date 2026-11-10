@@ -1,0 +1,34 @@
+{
+  "slug": "midtbyenregnskap-no-demo",
+  "firma": "Midtbyen Regnskap AS",
+  "navType": "mappefaner",
+  "fonts": [
+    "Inria Serif",
+    "Gantari"
+  ],
+  "palette": [
+    "#262b3a",
+    "#6f8f72",
+    "#f7f6f2",
+    "#9aa3b8"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "frister",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "frister.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

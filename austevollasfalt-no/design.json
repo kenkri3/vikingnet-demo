@@ -1,0 +1,35 @@
+{
+  "slug": "austevollasfalt-no",
+  "firma": "Austevoll Asfalt AS",
+  "navType": "asfaltband-meny med vegmerking",
+  "fonts": [
+    "Rajdhani",
+    "Sarala"
+  ],
+  "palette": [
+    "#f2f4f5",
+    "#17181a",
+    "#f0a03c",
+    "#3a4147"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tverrsnitt",
+    "tjenester",
+    "om",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "befaring.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

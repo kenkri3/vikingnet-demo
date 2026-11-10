@@ -1,0 +1,34 @@
+{
+  "slug": "getacademy-no-demo",
+  "firma": "GET Academy",
+  "navType": "karrierestige",
+  "fonts": [
+    "Platypi",
+    "Hanken Grotesk"
+  ],
+  "palette": [
+    "#1a1030",
+    "#f5c451",
+    "#f7f5ff",
+    "#8f8ab3"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "utdanninger",
+    "bedrifter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "utdanninger.html",
+    "bedrifter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

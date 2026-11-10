@@ -1,0 +1,35 @@
+{
+  "slug": "atg-no",
+  "firma": "ATG AS",
+  "navType": "breie faner med overkant",
+  "fonts": [
+    "Quattrocento",
+    "Palanquin"
+  ],
+  "palette": [
+    "#f5f2ee",
+    "#241f1c",
+    "#b5623a",
+    "#6f7d5c"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "gulv",
+    "tjenester",
+    "prosjekt",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "rammeavtaler.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

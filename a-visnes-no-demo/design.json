@@ -1,0 +1,34 @@
+{
+  "slug": "a-visnes-no-demo",
+  "firma": "A. Visnes Transport A/S",
+  "navType": "rute med stopp",
+  "fonts": [
+    "Crete Round",
+    "Gantari"
+  ],
+  "palette": [
+    "#12171c",
+    "#f2b705",
+    "#f4f5f6",
+    "#5b6b78"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "ruter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "ruter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

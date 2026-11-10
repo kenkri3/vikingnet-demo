@@ -1,0 +1,35 @@
+{
+  "slug": "2helektro-no",
+  "firma": "2H Elektro",
+  "navType": "toppmeny med telefonboks",
+  "fonts": [
+    "Ubuntu Condensed",
+    "Maitree"
+  ],
+  "palette": [
+    "#f7f7f5",
+    "#111417",
+    "#f2b134",
+    "#2b6ea8"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "sikring",
+    "tjenester",
+    "omrader",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "omrader.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

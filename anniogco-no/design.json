@@ -1,0 +1,34 @@
+{
+  "slug": "anniogco-no",
+  "firma": "Anni&Co",
+  "navType": "sentrert merke over meny",
+  "fonts": [
+    "Young Serif",
+    "Palanquin"
+  ],
+  "palette": [
+    "#f8f2ef",
+    "#45263a",
+    "#c9a227",
+    "#e8dcd7"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "kolleksjoner",
+    "butikken",
+    "merker",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "kolleksjoner.html",
+    "merker.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

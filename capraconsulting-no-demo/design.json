@@ -1,0 +1,33 @@
+{
+  "slug": "capraconsulting-no-demo",
+  "firma": "Capra Consulting",
+  "navType": "terminal-vindu-topp",
+  "fonts": [
+    "Racing Sans One",
+    "M PLUS 1"
+  ],
+  "palette": [
+    "#101820",
+    "#eff2f0",
+    "#f9c74f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenesteomrader",
+    "om-capra",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kompetanse.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

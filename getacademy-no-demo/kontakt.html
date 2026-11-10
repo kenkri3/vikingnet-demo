@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt GET Academy</title>
+<meta name="description" content="Kontakt GET Academy: send en henvendelse om opptak, utdanningene intro og frontend, eller samarbeid med bedrifter.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="GET Academy">
+<meta property="og:title" content="Kontakt GET Academy">
+<meta property="og:description" content="Kontakt GET Academy: send en henvendelse om opptak, utdanningene intro og frontend, eller samarbeid med bedrifter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Platypi:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/getacademy-no-demo.css">
+<script src="assets/js/getacademy-no-demo.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>GET Academy</strong> <span>fagskole · IT</span></a>
+    <a class="topp-cta" href="kontakt.html">Søk plass</a>
+  </div>
+  <nav class="stige" aria-label="Hovedmeny">
+    <ul>
+      <li><a href="index.html"><b>01</b>Start</a></li>
+      <li><a href="utdanninger.html"><b>02</b>Utdanninger</a></li>
+      <li><a href="bedrifter.html"><b>03</b>For bedrifter</a></li>
+      <li><a href="om.html"><b>04</b>Om oss</a></li>
+      <li><a href="kontakt.html" aria-current="page"><b>05</b>Kontakt</a></li>
+      <li><a href="panel.html"><b>06</b>Panel</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="sidehode">
+    <div class="ramme">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Ta kontakt.</h1>
+      <p class="ingress">Bruk skjemaet for spørsmål om opptak, utdanninger eller samarbeid.</p>
+    </div>
+  </section>
+
+  <section class="seksjon">
+    <div class="ramme">
+      <div class="to-kolonner">
+        <form class="skjema" data-skjema novalidate>
+          <div class="felt-par">
+            <div class="felt"><label for="navn">Navn</label><input type="text" id="navn" name="navn" autocomplete="name" placeholder="Fornavn og etternavn"></div>
+            <div class="felt"><label for="epost">E-post</label><input type="email" id="epost" name="epost" autocomplete="email" placeholder="navn@epost.no"></div>
+          </div>
+          <div class="felt-par">
+            <div class="felt"><label for="telefon">Telefon</label><input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+47 000 00 000"></div>
+            <div class="felt"><label for="emne">Hva gjelder det?</label><select id="emne" name="emne"><option>Opptak og søknad</option><option>Utdanningen intro</option><option>Utdanningen frontend</option><option>Samarbeid for bedrifter</option><option>Annet</option></select></div>
+          </div>
+          <div class="felt"><label for="melding">Melding</label><textarea id="melding" name="melding" rows="6" placeholder="Skriv hva du lurer på."></textarea></div>
+          <p class="skjema-melding" role="status" aria-live="polite"></p>
+          <div><button class="knapp" type="submit">Send henvendelsen</button></div>
+          <p style="font-size:.8rem;color:var(--graa);margin-top:.4rem">Dette er en demonstrasjonsside. Ingenting sendes, og opplysningene lagres ikke.</p>
+        </form>
+        <div>
+          <dl class="fakta">
+            <div><dt>Skole</dt><dd>GET Academy</dd></div>
+            <div><dt>Undervisning</dt><dd>Nett, med klasse og faglærere</dd></div>
+            <div><dt>Omfang</dt><dd>Et halvt år, 30 studiepoeng</dd></div>
+          </dl>
+          <div class="kort" style="margin-top:1rem">
+            <p class="merke-liten">Tips</p>
+            <h3>Skriv litt om deg selv</h3>
+            <p>Hva du er interessert i, og hvor mye tid du kan bruke på studiene.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 GET Academy · fagskole i IT · fra IT-interesse til IT-jobb</p>
+    <p class="fot-lenker"><a href="utdanninger.html">Utdanninger</a><a href="bedrifter.html">For bedrifter</a><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

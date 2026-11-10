@@ -1,0 +1,34 @@
+{
+  "slug": "silverlinenorge-no-demo",
+  "firma": "JG Nordic",
+  "navType": "katalogindeks",
+  "fonts": [
+    "Inria Serif",
+    "Albert Sans"
+  ],
+  "palette": [
+    "#17181a",
+    "#9fb3c8",
+    "#f6f7f8",
+    "#4b5563"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "teknologi",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "teknologi.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

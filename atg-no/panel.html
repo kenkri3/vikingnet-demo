@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — jobbar og mannskap | ATG AS</title>
+<meta name="description" content="Driftspanel for ATG AS: jobbar, mannskap og leveransar.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="ATG AS">
+<meta property="og:title" content="Panel — jobbar og mannskap | ATG AS">
+<meta property="og:description" content="Driftspanel for ATG AS: jobbar, mannskap og leveransar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&family=Palanquin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/atg-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">ATG</a><a class="knapp knapp--liten" href="index.html">Til sida</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Jobbar og mannskap</h1><p class="panel__dato" data-framdrift>0 av 0 jobbar ferdige</p></div><p class="panel__dato">Fredag 6. november · veke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Jobbar i dag</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til oppstart</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Mannskap</p><p class="kpi__tal">5</p><p class="kpi__hjelp">Ute</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Ferdige i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner-panel" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-jobb" aria-controls="vis-jobb" aria-selected="true">Jobbar</button>
+      <button class="fane" role="tab" id="fane-lager" aria-controls="vis-lager" aria-selected="false">Materiale</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-jobb" role="tabpanel" aria-labelledby="fane-jobb">
+      <div class="panel__topprad"><h2>Jobbar</h2><span class="merknad">Sortert etter tid</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Lørenskog · næringsbygg<small>Vinyl</small></div>
+  <div class="rad__meta"><strong>Kl. 08.00</strong>Mannskap: 2</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Oslo · kontor<small>Teppeflis</small></div>
+  <div class="rad__meta"><strong>Kl. 09.30</strong>Mannskap: 1</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Bærum · våtrom<small>Veggbelegg</small></div>
+  <div class="rad__meta"><strong>Kl. 11.00</strong>Mannskap: 1</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Asker · bustad<small>Flytsparkling</small></div>
+  <div class="rad__meta"><strong>Kl. 13.00</strong>Mannskap: 2</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-lager" role="tabpanel" aria-labelledby="fane-lager" hidden>
+      <div class="panel__topprad"><h2>Materiale</h2><span class="merknad">Etterfylling</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Vinyl<small>Rullar</small></div>
+  <div class="rad__meta"><strong>På lager</strong>Nok til 2 jobbar</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Teppeflis<small>Fargar</small></div>
+  <div class="rad__meta"><strong>Bestilt</strong>Kjem 12.11</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Sparkel<small>Sekker</small></div>
+  <div class="rad__meta"><strong>Lågt lager</strong>Bestill meir</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/atg-no.js" defer></script>
+</body>
+</html>

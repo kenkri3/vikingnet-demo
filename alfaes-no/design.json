@@ -1,0 +1,34 @@
+{
+  "slug": "alfaes-no",
+  "firma": "Alfa Eiendomsservice AS",
+  "navType": "glidende understrek",
+  "fonts": [
+    "Philosopher",
+    "B612"
+  ],
+  "palette": [
+    "#f2f4f6",
+    "#0f2b46",
+    "#b87333",
+    "#dbe2e8"
+  ],
+  "motion": [
+    "css3d",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "eiendom.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "anko-no",
+  "firma": "Anko AS",
+  "navType": "toppmeny med koordinatstripe",
+  "fonts": [
+    "Aleo",
+    "Cabin"
+  ],
+  "palette": [
+    "#eef3f4",
+    "#12262b",
+    "#2f7f8a",
+    "#e0813c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "punktsky",
+    "tjenester",
+    "regionar",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "karriere.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

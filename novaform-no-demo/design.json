@@ -1,0 +1,34 @@
+{
+  "slug": "novaform-no-demo",
+  "firma": "Novaform",
+  "navType": "fremdriftslinje-topp",
+  "fonts": [
+    "Trispace",
+    "Lexend Deca"
+  ],
+  "palette": [
+    "#202733",
+    "#f3f4f6",
+    "#e05a3a",
+    "#6b7f96"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "gantt",
+    "tjenester",
+    "avdelinger",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

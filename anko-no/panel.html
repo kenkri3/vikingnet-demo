@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — oppdrag og målingar | Anko</title>
+<meta name="description" content="Driftspanel for Anko: oppdrag, målingar og felt.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Anko AS">
+<meta property="og:title" content="Panel — oppdrag og målingar | Anko">
+<meta property="og:description" content="Driftspanel for Anko: oppdrag, målingar og felt.">
+<meta property="og:image" content="assets/img/01-anko.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;600;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/anko-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Anko</a><a class="knapp knapp--liten" href="index.html">Til sida</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Oppdrag og målingar</h1><p class="panel__dato" data-framdrift>0 av 0 oppdrag ferdige</p></div><p class="panel__dato">Fredag 6. november · veke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Oppdrag</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til oppstart</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Felt</p><p class="kpi__tal">3</p><p class="kpi__hjelp">Mannskap ute</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Ferdige i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-opp" aria-controls="vis-opp" aria-selected="true">Oppdrag</button>
+      <button class="fane" role="tab" id="fane-felt" aria-controls="vis-felt" aria-selected="false">Felt</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-opp" role="tabpanel" aria-labelledby="fane-opp">
+      <div class="panel__topprad"><h2>Oppdrag</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Landmåling · bygg<small>Utsetting</small></div>
+  <div class="rad__meta"><strong>Frist 13.11</strong>Ansvarlig: felt</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">3D-skanning · anlegg<small>Skanning</small></div>
+  <div class="rad__meta"><strong>Frist 18.11</strong>Ansvarlig: skanning</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Industrimåling<small>Kontroll</small></div>
+  <div class="rad__meta"><strong>Frist 21.11</strong>Ansvarlig: felt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Positionsmonitorering<small>Overvaking</small></div>
+  <div class="rad__meta"><strong>Frist 27.11</strong>Ansvarlig: data</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-felt" role="tabpanel" aria-labelledby="fane-felt" hidden>
+      <div class="panel__topprad"><h2>Felt</h2><span class="merknad">Mannskap</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Mannskap A<small>Oslo</small></div>
+  <div class="rad__meta"><strong>Landmåling</strong>Klar 08.00</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Mannskap B<small>Bergen</small></div>
+  <div class="rad__meta"><strong>Skanning</strong>Klar 09.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Mannskap C<small>Trondheim</small></div>
+  <div class="rad__meta"><strong>Drone</strong>Klar 10.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/anko-no.js" defer></script>
+</body>
+</html>

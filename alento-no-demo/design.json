@@ -1,0 +1,34 @@
+{
+  "slug": "alento-no-demo",
+  "firma": "Alento AS",
+  "navType": "vertikale faner på høyre side",
+  "fonts": [
+    "Bellefair",
+    "Lexend"
+  ],
+  "palette": [
+    "#1b2226",
+    "#e0b34c",
+    "#f4f5f2",
+    "#6f7d78"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "prosjekter",
+    "tjenester",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

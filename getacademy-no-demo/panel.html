@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opptakspanel — GET Academy</title>
+<meta name="description" content="Demoversjon av opptakspanelet til GET Academy: søknader, praksis og klassestatus med filter.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="GET Academy">
+<meta property="og:title" content="Opptakspanel — GET Academy">
+<meta property="og:description" content="Demoversjon av opptakspanelet til GET Academy: søknader, praksis og klassestatus med filter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&family=Platypi:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/getacademy-no-demo.css">
+<script src="assets/js/getacademy-no-demo.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>GET Academy</strong> <span>fagskole · IT</span></a>
+    <a class="topp-cta" href="kontakt.html">Søk plass</a>
+  </div>
+  <nav class="stige" aria-label="Hovedmeny">
+    <ul>
+      <li><a href="index.html"><b>01</b>Start</a></li>
+      <li><a href="utdanninger.html"><b>02</b>Utdanninger</a></li>
+      <li><a href="bedrifter.html"><b>03</b>For bedrifter</a></li>
+      <li><a href="om.html"><b>04</b>Om oss</a></li>
+      <li><a href="kontakt.html"><b>05</b>Kontakt</a></li>
+      <li><a href="panel.html" aria-current="page"><b>06</b>Panel</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · opptak</p><h1>Søknader og klasser</h1><p>Oversikt over opptak og oppfølging. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne søknader</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Følges opp</p><p class="verdi">2</p><p class="endring">intervju + klasse</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">kandidat svarer</p></div>
+        <div class="kpi"><p class="navn">Fullført i år</p><p class="verdi">24</p><p class="endring">30 studiepoeng</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Søknader</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer søknader">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Følges opp</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Fullført</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="ny" data-navn="Søknad – intro">
+          <div><p class="ordre-navn">Søknad – intro</p><p class="ordre-meta"><span>Kandidat A</span><span class="skille">/</span><span>Opptak</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Følg opp</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Søknad – frontend">
+          <div><p class="ordre-navn">Søknad – frontend</p><p class="ordre-meta"><span>Kandidat B</span><span class="skille">/</span><span>Opptak</span><span class="skille">/</span><span>denne uken</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Følges opp</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk fullført</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Praksis – bedrift">
+          <div><p class="ordre-navn">Praksis – bedrift</p><p class="ordre-meta"><span>Bedrift C</span><span class="skille">/</span><span>Samarbeid</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Følg opp</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Intervju – kandidat">
+          <div><p class="ordre-navn">Intervju – kandidat</p><p class="ordre-meta"><span>Kandidat D</span><span class="skille">/</span><span>Opptak</span><span class="skille">/</span><span>kandidat svarer</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Følg opp</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Klasse – oppstart">
+          <div><p class="ordre-navn">Klasse – oppstart</p><p class="ordre-meta"><span>Kull E</span><span class="skille">/</span><span>Drift</span><span class="skille">/</span><span>neste uke</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Følges opp</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk fullført</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Fullført – frontend">
+          <div><p class="ordre-navn">Fullført – frontend</p><p class="ordre-meta"><span>Kandidat F</span><span class="skille">/</span><span>Opptak</span><span class="skille">/</span><span>forrige uke</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Fullført</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Fullført</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Utdanninger</h2><span style="font-size:.66rem;color:var(--graa)">kull</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Intro</p><p class="ordre-meta"><span>grunnlag</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Frontend</p><p class="ordre-meta"><span>praksis</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">For bedrifter</p><p class="ordre-meta"><span>praksis og rekruttering</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 GET Academy · fagskole i IT · fra IT-interesse til IT-jobb</p>
+    <p class="fot-lenker"><a href="utdanninger.html">Utdanninger</a><a href="bedrifter.html">For bedrifter</a><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

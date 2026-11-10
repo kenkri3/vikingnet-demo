@@ -1,0 +1,34 @@
+{
+  "slug": "atriumpeople-no",
+  "firma": "Atrium People AS",
+  "navType": "faner som henger ned",
+  "fonts": [
+    "Alegreya",
+    "Lato"
+  ],
+  "palette": [
+    "#f4f7f9",
+    "#123a4d",
+    "#4a90a4",
+    "#dbe6ea"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "kontorer",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "jobber.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

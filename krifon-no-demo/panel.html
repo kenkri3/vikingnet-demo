@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordrepanel – bestillinger | Krifon</title>
+<meta name="description" content="Ordrepanelet til Krifon AS: ordrer på gjerde, levegg og rekkverk med status, filter og 4 KPI-er.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Ordrepanel – bestillinger | Krifon">
+<meta property="og:description" content="Ordrepanelet til Krifon AS: ordrer på gjerde, levegg og rekkverk med status, filter og 4 KPI-er.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/gjerde.webp">
+<meta name="theme-color" content="#24361f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Passion+One:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/krifon-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="trell">
+  <div class="trell__indre">
+    <a class="merke" href="index.html"><b>Kri<i>fon</i></b><small>hage og interiør</small></a>
+    <nav class="spalier" aria-label="Hovedmeny">
+      <a class="spile" href="index.html">Hjem</a>
+      <a class="spile" href="produkter.html">Produkter</a>
+      <a class="spile" href="kalkulator.html">Kalkulatorer</a>
+      <a class="spile" href="om.html">Om oss</a>
+      <a class="spile" href="kontakt.html">Kontakt</a>
+      <a class="spile" href="panel.html" aria-current="page">Panel</a>
+    </nav>
+  </div>
+</header>
+<div class="topp"><div class="inn"><span>Moderne kvalitetsprodukter til hage og interiør</span><span><a href="tel:+4733304400">+47 33 30 44 00</a> · <a href="mailto:kundeservice@krifon.no">kundeservice@krifon.no</a></span></div></div>
+<main id="innhold">
+<section class="pthode"><div class="inn"><div class="merkelinje">Internt</div>
+  <h1>Ordrepanel</h1>
+  <p>Ordrer i systemet. Send tilbud, start plukk, og merk sendt når varen går.</p>
+  <p style="margin-top:7px;font-size:10px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>I dag</h4><ul><li>Ordrer totalt<b>8</b></li><li>Tilbud<b>2</b></li><li>Pågår<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Type</h4><ul><li>Gjerde<b>4</b></li><li>Levegg<b>2</b></li><li>Rekkverk<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:10.5px;color:var(--gra);margin:0">Demonstrasjon av et ordrepanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div><div class="pkpi">
+    <div class="pkpi__boks"><b id="kpi-total">8</b><span>Ordrer</span><em>Alle i systemet</em></div>
+    <div class="pkpi__boks"><b id="kpi-tilbud">2</b><span>Tilbud</span><em>Venter svar</em></div>
+    <div class="pkpi__boks"><b id="kpi-paagaar">2</b><span>Pågår</span><em>Plukk</em></div>
+    <div class="pkpi__boks"><b id="kpi-levert">2</b><span>Sendt</span><em>Ferdig</em></div>
+  </div>
+  <div class="pfilter" role="group" aria-label="Filtrer ordrer">
+    <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+    <button class="filt" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+    <button class="filt" type="button" data-filter="tilbud" aria-pressed="false">Tilbud</button>
+    <button class="filt" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+    <button class="filt" type="button" data-filter="levert" aria-pressed="false">Sendt</button>
+  </div>
+  <div class="oppdrag" id="oppdrag" aria-live="polite"></div>
+  <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+</div></div></section>
+</main>
+<footer class="bunn">
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Krifon AS</span><p>Kvalitetsprodukter til hage og interiør – gjerde og stakitt, levegg og rekkverk.</p><p><a href="mailto:kundeservice@krifon.no">kundeservice@krifon.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="produkter.html">Produkter</a></li><li><a href="kalkulator.html">Kalkulatorer</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Produkter</h4><ul><li><a href="produkter.html#gjerde">Gjerde og stakitt</a></li><li><a href="produkter.html#levegg">Levegg</a></li><li><a href="produkter.html#rekkverk">Rekkverk</a></li><li><a href="kalkulator.html">Kalkulatorer</a></li></ul></div>
+      <div><h4>Kontakt</h4><p>Borgeskogen 43A<br>3160 Stokke</p><p style="margin-top:8px"><a href="tel:+4733304400">+47 33 30 44 00</a></p></div>
+    </div>
+    <div class="bunn__bunn"><span>© 2026 Krifon AS</span><span>Nettsiden er en demonstrasjon laget for Krifon AS</span><a href="panel.html">Ordrepanel</a></div>
+  </div>
+</footer>
+<script src="assets/js/krifon-no-demo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "slug": "eda-no-demo",
+  "firma": "EDA Elektro Data AS",
+  "navType": "kretskort-pads-topp",
+  "fonts": [
+    "Dela Gothic One",
+    "Martian Mono"
+  ],
+  "palette": [
+    "#0e1116",
+    "#f3f4f2",
+    "#25d0a0"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "el-kontroll.html",
+    "prosjekt.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

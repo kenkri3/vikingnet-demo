@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — saker og selskaper | Altor</title>
+<meta name="description" content="Driftspanel for Altor: saker, selskaper og oppfølging.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Altor">
+<meta property="og:title" content="Panel — saker og selskaper | Altor">
+<meta property="og:description" content="Driftspanel for Altor: saker, selskaper og oppfølging.">
+<meta property="og:image" content="assets/img/01-altor.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:ital,wght@0,400;0,700;1,400&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/altor-com.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Altor</a><a class="knapp knapp--liten" href="index.html">Til sida</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Saker og selskaper</h1><p class="panel__dato" data-framdrift>0 av 0 saker klare</p></div><p class="panel__dato">Fredag 6. november · veke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Saker</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til gjennomgang</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Kontor</p><p class="kpi__tal">6</p><p class="kpi__hjelp">I Europa</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Klare i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner-panel" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-sak" aria-controls="vis-sak" aria-selected="true">Saker</button>
+      <button class="fane" role="tab" id="fane-sel" aria-controls="vis-sel" aria-selected="false">Selskaper</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-sak" role="tabpanel" aria-labelledby="fane-sak">
+      <div class="panel__topprad"><h2>Saker</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Screening · Business Services<small>Ny sak</small></div>
+  <div class="rad__meta"><strong>Frist 13.11</strong>Ansvar: Oslo</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Due diligence · Consumer<small>Gjennomgang</small></div>
+  <div class="rad__meta"><strong>Frist 20.11</strong>Ansvar: Stockholm</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Financial Services<small>Vurdering</small></div>
+  <div class="rad__meta"><strong>Frist 24.11</strong>Ansvar: København</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Industrial Tech<small>Oppfølging</small></div>
+  <div class="rad__meta"><strong>Frist 27.11</strong>Ansvar: Helsinki</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-sel" role="tabpanel" aria-labelledby="fane-sel" hidden>
+      <div class="panel__topprad"><h2>Selskaper</h2><span class="merknad">Sektor</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Business Services<small>Sektor</small></div>
+  <div class="rad__meta"><strong>Aktiv</strong>Oppfølging: Oslo</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Consumer<small>Sektor</small></div>
+  <div class="rad__meta"><strong>Aktiv</strong>Oppfølging: Stockholm</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Industrial Tech<small>Sektor</small></div>
+  <div class="rad__meta"><strong>Aktiv</strong>Oppfølging: Helsinki</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/altor-com.js" defer></script>
+</body>
+</html>

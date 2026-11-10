@@ -1,0 +1,34 @@
+{
+  "slug": "avella-no-demo",
+  "firma": "Avella",
+  "navType": "overlegg-to-kolonner",
+  "fonts": [
+    "Gabarito",
+    "Nunito"
+  ],
+  "palette": [
+    "#101a2c",
+    "#f0f3f7",
+    "#5b6bd6",
+    "#48b39b"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "bro",
+    "integrasjon",
+    "referanser",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "integrasjon.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

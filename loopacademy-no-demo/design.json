@@ -1,0 +1,33 @@
+{
+  "slug": "loopacademy-no-demo",
+  "firma": "Loop Academy",
+  "navType": "lokke-bane-topp",
+  "fonts": [
+    "Zen Maru Gothic",
+    "Kode Mono"
+  ],
+  "palette": [
+    "#17133a",
+    "#f5f3ff",
+    "#8b7bf7"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "loypet",
+    "om-loop",
+    "slik-soker-du",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "kandidater.html",
+    "bedrifter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
