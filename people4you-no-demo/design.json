@@ -1,0 +1,34 @@
+{
+  "slug": "people4you-no-demo",
+  "firma": "People4you",
+  "navType": "topp-og-modusbryter",
+  "fonts": [
+    "Sora",
+    "Inter"
+  ],
+  "palette": [
+    "#0e2f3a",
+    "#f2f6f4",
+    "#e8543f",
+    "#55a08e"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "modus",
+    "kort",
+    "fagomrader",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "jobb.html",
+    "bedrift.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — anlegg og service | AKTIV-IT</title>
+<meta name="description" content="Driftspanel for AKTIV-IT: anlegg, servicemeldinger og planlagte besøk.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="AKTIV-IT AS">
+<meta property="og:title" content="Panel — anlegg og service | AKTIV-IT">
+<meta property="og:description" content="Driftspanel for AKTIV-IT: anlegg, servicemeldinger og planlagte besøk.">
+<meta property="og:image" content="assets/img/1-aktiv-it-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;600;700&family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/aktiv-it-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">AKTIV-IT</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Anlegg og service</h1><p class="panel__dato" data-framdrift>0 av 0 oppdrag fullførte</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Anlegg i drift</p><p class="kpi__tal">42</p><p class="kpi__hjelp">Nord-Norge</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Servicemeldinger</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Planlagte besøk</p><p class="kpi__tal">3</p><p class="kpi__hjelp">Neste sju dagar</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Fullført i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-service" aria-controls="vis-service" aria-selected="true">Service</button>
+      <button class="fane" role="tab" id="fane-besok" aria-controls="vis-besok" aria-selected="false">Besøk</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-service" role="tabpanel" aria-labelledby="fane-service">
+      <div class="panel__topprad"><h2>Servicemeldinger</h2><span class="merknad">Sortert etter mottak</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Bygg · Sjøvegan<small>Kamera 3 er nede</small></div>
+  <div class="rad__meta"><strong>Mottatt 08:20</strong>Sjekk nettverk</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Lager · Tromsø<small>Dør 2 gir ikke tilgang</small></div>
+  <div class="rad__meta"><strong>Pågår</strong>Kort leses ikkje</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Kontor · Sjøvegan<small>Alarm går ved lukking</small></div>
+  <div class="rad__meta"><strong>Mottatt 09:45</strong>Magnetkontakt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Butikk · Tromsø<small>Varmepumpe varslar</small></div>
+  <div class="rad__meta"><strong>Mottatt 10:10</strong>Service tilsett</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-besok" role="tabpanel" aria-labelledby="fane-besok" hidden>
+      <div class="panel__topprad"><h2>Planlagte besøk</h2><span class="merknad">Neste sju dagar</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Sjøvegan · kontor<small>Årskontroll anlegg</small></div>
+  <div class="rad__meta"><strong>Tirsdag 10.11</strong>Kl. 08.30</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Tromsø · lager<small>Utviding av adgang</small></div>
+  <div class="rad__meta"><strong>Onsdag 11.11</strong>To dører</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Tromsø · butikk<small>Service varmepumpe</small></div>
+  <div class="rad__meta"><strong>Torsdag 12.11</strong>Kl. 09.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/aktiv-it-no.js" defer></script>
+</body>
+</html>

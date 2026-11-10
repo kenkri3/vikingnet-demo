@@ -1,0 +1,33 @@
+{
+  "slug": "betongbygg-no-demo",
+  "firma": "AS Betongbygg",
+  "navType": "hero-fliser",
+  "fonts": [
+    "Zilla Slab",
+    "Fira Sans"
+  ],
+  "palette": [
+    "#2b2b28",
+    "#efece4",
+    "#b4552f",
+    "#7d8a85"
+  ],
+  "motion": [
+    "css3d",
+    "svg"
+  ],
+  "sections": [
+    "hero",
+    "fliser",
+    "stopeform",
+    "prosjekter",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "aktiv-it-no",
+  "firma": "AKTIV-IT AS",
+  "navType": "høgre ikonstolpe-meny",
+  "fonts": [
+    "Sono",
+    "Saira"
+  ],
+  "palette": [
+    "#0c1418",
+    "#e6eef0",
+    "#3ec6a0",
+    "#2b6f8a"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "rack",
+    "produkter",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "produkter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

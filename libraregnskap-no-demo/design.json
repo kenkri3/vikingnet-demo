@@ -1,0 +1,33 @@
+{
+  "slug": "libraregnskap-no-demo",
+  "firma": "Libra Regnskap",
+  "navType": "tallinje-hoyre",
+  "fonts": [
+    "Bodoni Moda",
+    "Rubik"
+  ],
+  "palette": [
+    "#1b2140",
+    "#f7f5ef",
+    "#c9a24a",
+    "#6b7fa3"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "vekt",
+    "tjenester",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

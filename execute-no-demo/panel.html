@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oppdragspanel – utviklingsprosjekter | Execute Consult</title>
+<meta name="description" content="Oppdragspanelet til Execute Consult AS: utviklingsprosjekter med type, status, filter og 4 KPI-er.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Oppdragspanel – utviklingsprosjekter | Execute Consult">
+<meta property="og:description" content="Oppdragspanelet til Execute Consult AS: utviklingsprosjekter med type, status, filter og 4 KPI-er.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/kode.webp">
+<meta name="theme-color" content="#101418">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Lusitana:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/execute-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="kodelinje">
+  <div class="kodelinje__indre">
+    <a class="merke" href="index.html"><b>Execute<i>.</i></b><small>consult as</small></a>
+    <nav class="filer" aria-label="Hovedmeny">
+      <a class="fil" href="index.html">hjem</a>
+      <a class="fil" href="tjenester.html">tjenester</a>
+      <a class="fil" href="teknologi.html">teknologi</a>
+      <a class="fil" href="om.html">om</a>
+      <a class="fil" href="kontakt.html">kontakt</a>
+      <a class="fil" href="panel.html" aria-current="page">panel</a>
+    </nav>
+  </div>
+</header>
+<div class="topp"><div class="inn"><span>IT-konsulentselskap · Oslo</span><span><a href="mailto:epost@execute.no">epost@execute.no</a></span></div></div>
+<main id="innhold">
+<section class="pthode"><div class="inn"><div class="merkelinje">Internt</div>
+  <h1>Oppdragspanel</h1>
+  <p>Prosjekter i systemet. Send tilbud, start utviklingen, og merk levert ved overlevering.</p>
+  <p style="margin-top:7px;font-size:10px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>I dag</h4><ul><li>Oppdrag totalt<b>8</b></li><li>Tilbud<b>2</b></li><li>Pågår<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Type</h4><ul><li>Web<b>4</b></li><li>Mobil<b>2</b></li><li>Sky/API<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:10.5px;color:var(--gra);margin:0">Demonstrasjon av et oppdragspanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div><div class="pkpi">
+    <div class="pkpi__boks"><b id="kpi-total">8</b><span>Oppdrag</span><em>Alle i systemet</em></div>
+    <div class="pkpi__boks"><b id="kpi-tilbud">2</b><span>Tilbud</span><em>Venter svar</em></div>
+    <div class="pkpi__boks"><b id="kpi-paagaar">2</b><span>Pågår</span><em>Utvikling</em></div>
+    <div class="pkpi__boks"><b id="kpi-levert">2</b><span>Levert</span><em>Overlevert</em></div>
+  </div>
+  <div class="pfilter" role="group" aria-label="Filtrer oppdrag">
+    <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+    <button class="filt" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+    <button class="filt" type="button" data-filter="tilbud" aria-pressed="false">Tilbud</button>
+    <button class="filt" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+    <button class="filt" type="button" data-filter="levert" aria-pressed="false">Levert</button>
+  </div>
+  <div class="oppdrag" id="oppdrag" aria-live="polite"></div>
+  <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+</div></div></section>
+</main>
+<footer class="bunn">
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Execute Consult AS</span><p>IT-konsulentselskap som leverer utviklingstjenester i Oslo-området, med fokus på Microsoft og .NET.</p><p><a href="mailto:epost@execute.no">epost@execute.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">hjem</a></li><li><a href="tjenester.html">tjenester</a></li><li><a href="teknologi.html">teknologi</a></li><li><a href="om.html">om</a></li><li><a href="kontakt.html">kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="tjenester.html#web">Webløsninger</a></li><li><a href="tjenester.html#mobil">Mobilløsninger</a></li><li><a href="tjenester.html#sky">Skytjenester</a></li><li><a href="teknologi.html">.NET og API</a></li></ul></div>
+      <div><h4>Kontakt</h4><p>Hyllveien 11<br>0274 Oslo</p><p style="margin-top:8px">Org.nr 917 064 598</p></div>
+    </div>
+    <div class="bunn__bunn"><span>© 2026 Execute Consult AS</span><span>Nettsiden er en demonstrasjon laget for Execute Consult AS</span><a href="panel.html">Oppdragspanel</a></div>
+  </div>
+</footer>
+<script src="assets/js/execute-no-demo.js" defer></script>
+</body>
+</html>

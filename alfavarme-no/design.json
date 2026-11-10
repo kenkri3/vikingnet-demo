@@ -1,0 +1,34 @@
+{
+  "slug": "alfavarme-no",
+  "firma": "Alfa Varme og Pipeteknikk AS",
+  "navType": "serifmeny med ildprikk",
+  "fonts": [
+    "Instrument Serif",
+    "Karla"
+  ],
+  "palette": [
+    "#f7f1e8",
+    "#1d1512",
+    "#d96a3b",
+    "#e6dbcb"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "piperehabilitering.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

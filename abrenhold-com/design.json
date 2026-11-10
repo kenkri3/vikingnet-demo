@@ -1,0 +1,34 @@
+{
+  "slug": "abrenhold-com",
+  "firma": "A-B Renhold AS",
+  "navType": "delt meny med merke i midten",
+  "fonts": [
+    "Fraunces",
+    "Nunito Sans"
+  ],
+  "palette": [
+    "#f2f8fb",
+    "#123f5a",
+    "#2f80c9",
+    "#d8e6ee"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "vinduspuss.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

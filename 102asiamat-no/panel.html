@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — bestillinger | 102 Asia Mat</title>
+<meta name="description" content="Bestillingspanel for 102 Asia Mat: bestillinger, varer og henting.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="102 Asia Mat AS">
+<meta property="og:title" content="Panel — bestillinger | 102 Asia Mat">
+<meta property="og:description" content="Bestillingspanel for 102 Asia Mat: bestillinger, varer og henting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;1,400&family=Darker+Grotesque:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/102asiamat-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">102 Asia Mat</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Bestillinger</h1><p class="panel__dato" data-framdrift>0 av 0 bestillingar klare</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Bestillinger</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Denne veka</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til klargjering</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Kundeklubb</p><p class="kpi__tal">34</p><p class="kpi__hjelp">Nye denne månaden</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Klare</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-best" aria-controls="vis-best" aria-selected="true">Bestillinger</button>
+      <button class="fane" role="tab" id="fane-vare" aria-controls="vis-vare" aria-selected="false">Varer</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-best" role="tabpanel" aria-labelledby="fane-best">
+      <div class="panel__topprad"><h2>Bestillinger</h2><span class="merknad">Sortert etter henting</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Ris og nudler<small>5 kg jasminris</small></div>
+  <div class="rad__meta"><strong>Henting laurdag</strong>Kunde: M. Hansen</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Sauser<small>Soja og chili</small></div>
+  <div class="rad__meta"><strong>Henting fredag</strong>Kunde: A. Johansen</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Frysevarer<small>Dumplings, 3 pakkar</small></div>
+  <div class="rad__meta"><strong>Henting måndag</strong>Kunde: Nordvik</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Snacks<small>Blanding til fest</small></div>
+  <div class="rad__meta"><strong>Henting sundag</strong>Kunde: S. Berg</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-vare" role="tabpanel" aria-labelledby="fane-vare" hidden>
+      <div class="panel__topprad"><h2>Varer</h2><span class="merknad">Etterfylling</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Hylle 2<small>Saus og krydder</small></div>
+  <div class="rad__meta"><strong>Sjekk lager</strong>Ansvar: vakt</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Frys<small>Dumplings</small></div>
+  <div class="rad__meta"><strong>Etterfyll</strong>Ansvar: vakt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Grønt<small>Ferskvarer</small></div>
+  <div class="rad__meta"><strong>Mottak i dag</strong>Ansvar: butikk</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/102asiamat-no.js" defer></script>
+</body>
+</html>

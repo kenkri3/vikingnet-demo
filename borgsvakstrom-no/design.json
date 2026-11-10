@@ -1,0 +1,34 @@
+{
+  "slug": "borgsvakstrom-no",
+  "firma": "Borg Svakstrøm Telecom & Sikkerhet",
+  "navType": "boksmeny",
+  "fonts": [
+    "Bricolage Grotesque",
+    "IBM Plex Sans"
+  ],
+  "palette": [
+    "#eef2f5",
+    "#0e2233",
+    "#3d6f9e",
+    "#c9d7e2"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "sikkerhet.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

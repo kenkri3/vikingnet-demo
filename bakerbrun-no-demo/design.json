@@ -1,0 +1,34 @@
+{
+  "slug": "bakerbrun-no-demo",
+  "firma": "Baker Brun",
+  "navType": "stempel med skrå hjørner",
+  "fonts": [
+    "Bree Serif",
+    "Red Hat Text"
+  ],
+  "palette": [
+    "#2a1d16",
+    "#d98c5f",
+    "#fbf6ef",
+    "#7d9a6b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "meny",
+    "bestill",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "meny.html",
+    "bestill.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

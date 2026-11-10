@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — saker og faser | ABO</title>
+<meta name="description" content="Prosjektpanel for ABO Plan & Arkitektur: saker, faser og byggesøknader.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="ABO Plan &amp; Arkitektur">
+<meta property="og:title" content="Panel — saker og faser | ABO">
+<meta property="og:description" content="Prosjektpanel for ABO Plan & Arkitektur: saker, faser og byggesøknader.">
+<meta property="og:image" content="assets/img/abo1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&family=Bai+Jamjuree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/abo-ark-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">ABO</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Saker og faser</h1><p class="panel__dato" data-framdrift>0 av 0 oppgåver klare</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Aktive saker</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Bolig og næring</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til gjennomgang</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Byggesøknader</p><p class="kpi__tal">2</p><p class="kpi__hjelp">Til kommunen</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Fullført i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-sak" aria-controls="vis-sak" aria-selected="true">Saker</button>
+      <button class="fane" role="tab" id="fane-plan" aria-controls="vis-plan" aria-selected="false">Plan</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-sak" role="tabpanel" aria-labelledby="fane-sak">
+      <div class="panel__topprad"><h2>Saker</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Enebolig · Os<small>Skisseprosjekt</small></div>
+  <div class="rad__meta"><strong>Frist 13.11</strong>Ansvar: arkitekt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Næringsbygg · Bergen<small>Byggesøknad</small></div>
+  <div class="rad__meta"><strong>Pågår</strong>Ansvar: søker</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Reguleringsplan · Bjørnafjorden<small>Planforslag</small></div>
+  <div class="rad__meta"><strong>Frist 20.11</strong>Ansvar: plan</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Tilbygg · Os<small>Søknad klar</small></div>
+  <div class="rad__meta"><strong>Frist 27.11</strong>Ansvar: søker</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-plan" role="tabpanel" aria-labelledby="fane-plan" hidden>
+      <div class="panel__topprad"><h2>Plan</h2><span class="merknad">Neste sju dagar</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Befaring · Os<small>Tomt og adkomst</small></div>
+  <div class="rad__meta"><strong>Tirsdag 10.11</strong>Kl. 09.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Møte · Bergen<small>Gjennomgang med byggherre</small></div>
+  <div class="rad__meta"><strong>Onsdag 11.11</strong>Kl. 13.00</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Innsending · kommunen<small>Byggesøknad</small></div>
+  <div class="rad__meta"><strong>Torsdag 12.11</strong>Klar til sending</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/abo-ark-no.js" defer></script>
+</body>
+</html>

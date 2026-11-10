@@ -1,0 +1,34 @@
+{
+  "slug": "birkelundkran-no",
+  "firma": "Birkelund Kran & Transport AS",
+  "navType": "skrå chipmeny",
+  "fonts": [
+    "Bebas Neue",
+    "Fira Sans"
+  ],
+  "palette": [
+    "#f5f3ef",
+    "#1b1b1b",
+    "#3f6d8f",
+    "#e2ded5"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "utstyr",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "kraning.html",
+    "transport.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

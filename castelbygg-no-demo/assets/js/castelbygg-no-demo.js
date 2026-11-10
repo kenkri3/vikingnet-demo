@@ -121,7 +121,7 @@
       var navn = form.querySelector("#navn");
       if (svar) {
         svar.innerHTML = "<b>Takk" + (navn && navn.value ? ", " + navn.value.split(" ")[0] : "") + "!</b>" +
-          "Dette er en demonstrasjon av nettsiden, så ingenting er sendt. Ring 934 90 848 eller skriv til post@castelbygg.no.";
+          "Dette er en demonstrasjon av nettsiden, så ingenting er sendt. Ring 934 90 848 eller skriv til christian@castelbygg.no.";
         svar.classList.add("vis"); svar.setAttribute("tabindex", "-1"); svar.focus();
       }
       form.querySelectorAll("input, textarea, select").forEach(function (f) { if (f.type !== "submit") f.value = ""; });

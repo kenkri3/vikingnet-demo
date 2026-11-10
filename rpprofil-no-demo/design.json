@@ -1,0 +1,33 @@
+{
+  "slug": "rpprofil-no-demo",
+  "firma": "Rp Profil AS",
+  "navType": "merkelapp-stripe",
+  "fonts": [
+    "Eczar",
+    "Tajawal"
+  ],
+  "palette": [
+    "#2a1a2e",
+    "#f7f2ea",
+    "#e8b04b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "erfaring",
+    "bestilling",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "logo.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

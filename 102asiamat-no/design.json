@@ -1,0 +1,35 @@
+{
+  "slug": "102asiamat-no",
+  "firma": "102 Asia Mat AS",
+  "navType": "topplinje med fast ringeknapp",
+  "fonts": [
+    "Noto Serif Display",
+    "Darker Grotesque"
+  ],
+  "palette": [
+    "#14100c",
+    "#f6efe3",
+    "#d94f2b",
+    "#e0b23c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "damp",
+    "meny",
+    "butikk",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "meny.html",
+    "butikk.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

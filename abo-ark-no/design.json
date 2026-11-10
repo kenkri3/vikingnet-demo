@@ -1,0 +1,35 @@
+{
+  "slug": "abo-ark-no",
+  "firma": "ABO Plan & Arkitektur AS",
+  "navType": "målestokk-meny",
+  "fonts": [
+    "Alegreya",
+    "Bai Jamjuree"
+  ],
+  "palette": [
+    "#f4f1ea",
+    "#232019",
+    "#8a6a4a",
+    "#4f6d78"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "plan",
+    "prosjekter",
+    "tjenester",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

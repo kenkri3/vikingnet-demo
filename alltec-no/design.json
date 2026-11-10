@@ -1,0 +1,35 @@
+{
+  "slug": "alltec-no",
+  "firma": "Alltec AS",
+  "navType": "måler-segmentmeny",
+  "fonts": [
+    "Antonio",
+    "K2D"
+  ],
+  "palette": [
+    "#f2f5f2",
+    "#10241c",
+    "#79c257",
+    "#d9a13b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "energi",
+    "tjenester",
+    "baerekraft",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "baerekraft.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

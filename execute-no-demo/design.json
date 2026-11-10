@@ -1,0 +1,33 @@
+{
+  "slug": "execute-no-demo",
+  "firma": "Execute Consult AS",
+  "navType": "kodelinje-faner",
+  "fonts": [
+    "JetBrains Mono",
+    "Lusitana"
+  ],
+  "palette": [
+    "#101418",
+    "#f1f0ec",
+    "#6ea8fe"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "ambisjon",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "teknologi.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

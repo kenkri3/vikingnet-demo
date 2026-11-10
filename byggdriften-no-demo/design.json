@@ -1,0 +1,33 @@
+{
+  "slug": "byggdriften-no-demo",
+  "firma": "Byggdriften",
+  "navType": "verktoyskrin-hylle",
+  "fonts": [
+    "Dosis",
+    "DM Mono"
+  ],
+  "palette": [
+    "#2b3a2e",
+    "#f4f2ec",
+    "#c4a35a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "tilsyn.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

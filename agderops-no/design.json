@@ -1,0 +1,34 @@
+{
+  "slug": "agderops-no",
+  "firma": "Agder OPS Vegselskap",
+  "navType": "veiskilt-meny",
+  "fonts": [
+    "Archivo",
+    "Figtree"
+  ],
+  "palette": [
+    "#f4f4f2",
+    "#2b3138",
+    "#4a7c59",
+    "#e8c34a"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "fakta",
+    "om",
+    "miljo",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "fakta.html",
+    "om.html",
+    "miljo.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
