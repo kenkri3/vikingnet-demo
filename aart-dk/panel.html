@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prosjektpanel — AART</title>
+<meta name="description" content="Demoversjon av prosjektpanelet til AART: prosjekter innen arkitektur, transformation og landskab med status og filter.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="AART">
+<meta property="og:title" content="Prosjektpanel — AART">
+<meta property="og:description" content="Demoversjon av prosjektpanelet til AART: prosjekter innen arkitektur, transformation og landskab med status og filter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Khula:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/aart-dk.css">
+<script src="assets/js/aart-dk.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="merke-bar">
+    <a class="merke" href="index.html"><strong>AART</strong> <span>Redefining Architecture™</span></a>
+    <a class="topp-kontakt" href="mailto:ss@aart.dk">ss@aart.dk</a>
+  </div>
+  <nav class="stormeny" aria-label="Hovedmeny">
+    <ul>
+      <li><a href="index.html">Forside</a></li>
+      <li><a href="projekter.html">Prosjekter</a></li>
+      <li><a href="ydelser.html">Ydelser</a></li>
+      <li><a href="om.html">Om AART</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="panel.html" aria-current="page">Panel</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · prosjekt</p><h1>Prosjekter og faser</h1><p>Oversikt over prosjekter og status. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne prosjekter</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Pågående</p><p class="verdi">2</p><p class="endring">transformation + nybygg</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">avklaring</p></div>
+        <div class="kpi"><p class="navn">Levert i år</p><p class="verdi">14</p><p class="endring">alle dokumentert</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Prosjekter</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer prosjekter">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Pågår</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Levert</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="pagaar" data-navn="Rigets Skatkammer – transformation">
+          <div><p class="ordre-navn">Rigets Skatkammer – transformation</p><p class="ordre-meta"><span>Danmark</span><span class="skille">/</span><span>Transformation</span><span class="skille">/</span><span>fase 2</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk levert</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Vannkanten – nybygg">
+          <div><p class="ordre-navn">Vannkanten – nybygg</p><p class="ordre-meta"><span>Norge</span><span class="skille">/</span><span>Arkitektur</span><span class="skille">/</span><span>skisse</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk levert</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Byrom – landskab">
+          <div><p class="ordre-navn">Byrom – landskab</p><p class="ordre-meta"><span>Norge</span><span class="skille">/</span><span>Landskab</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta prosjekt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Bolig – transformasjon">
+          <div><p class="ordre-navn">Bolig – transformasjon</p><p class="ordre-meta"><span>Danmark</span><span class="skille">/</span><span>Transformation</span><span class="skille">/</span><span>avklaring</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta prosjekt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Kulturbygg – skisse">
+          <div><p class="ordre-navn">Kulturbygg – skisse</p><p class="ordre-meta"><span>Norge</span><span class="skille">/</span><span>Arkitektur</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta prosjekt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Masterplan – bydel">
+          <div><p class="ordre-navn">Masterplan – bydel</p><p class="ordre-meta"><span>Danmark</span><span class="skille">/</span><span>Landskab</span><span class="skille">/</span><span>forrige måned</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Levert</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Levert</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Fag</h2><span style="font-size:.62rem;color:var(--graa)">denne uken</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Arkitektur</p><p class="ordre-meta"><span>2 prosjekter</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Transformation</p><p class="ordre-meta"><span>2 prosjekter</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Landskab</p><p class="ordre-meta"><span>2 prosjekter</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 AART · Oslo: St. Olavs Plass 5, 0165 Oslo · ss@aart.dk</p>
+    <p class="fot-lenker"><a href="projekter.html">Prosjekter</a><a href="ydelser.html">Ydelser</a><a href="om.html">Om AART</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

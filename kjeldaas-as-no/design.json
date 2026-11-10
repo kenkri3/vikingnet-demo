@@ -1,0 +1,33 @@
+{
+  "slug": "kjeldaas-as-no",
+  "firma": "Kjeldaas",
+  "navType": "glidende-understrek",
+  "fonts": [
+    "Antonio",
+    "Mulish"
+  ],
+  "palette": [
+    "#242a26",
+    "#eceee6",
+    "#d4a13a",
+    "#7f8c76"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "profil",
+    "tjenester",
+    "maskiner",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

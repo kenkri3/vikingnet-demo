@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt · Haavind</title>
+<meta name="description" content="Kontakt Haavind: telefon 22 43 30 00, post@haavind.no. Oslo: Haakon VIIs gate 10, 0161 Oslo. Også Bodø, Bergen og Svalbard.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haavind">
+<meta property="og:title" content="Kontakt · Haavind">
+<meta property="og:description" content="Kontakt Haavind: telefon 22 43 30 00, post@haavind.no. Oslo: Haakon VIIs gate 10, 0161 Oslo. Også Bodø, Bergen og Svalbard.">
+<meta property="og:image" content="assets/img/04-haavind-no.webp">
+<meta name="theme-color" content="#12202c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/haavind-no.css">
+</head>
+<body>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<header class="topp">
+  <div class="indre">
+    <a class="logo" href="index.html">Haavind<span>Advokatfirma</span></a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <button type="button" data-panel-knapp="p-komp" aria-expanded="false" aria-controls="p-komp">Kompetanse</button>
+      <button type="button" data-panel-knapp="p-om" aria-expanded="false" aria-controls="p-om">Om Haavind</button>
+      <button type="button" data-panel-knapp="p-kontakt" aria-expanded="false" aria-controls="p-kontakt">Kontakt</button>
+      <a href="index.html">Hjem</a>
+      <a href="panel.html">Panel</a>
+    </nav>
+    <button class="mobknapp" type="button" data-mob-apne aria-expanded="false" aria-controls="mobmeny">Meny</button>
+  </div>
+  <div class="panel" id="p-komp"><div class="indre"><a href="kompetanse.html">Alle fagområder</a><a href="kompetanse.html#bransjer">Bransjer</a><a href="kompetanse.html#digital">Haavind Digital</a><a href="kompetanse.html#tech">Tech Insight</a></div></div>
+  <div class="panel" id="p-om"><div class="indre"><a href="om.html">Om firmaet</a><a href="om.html#ledelse">Ledelse og styre</a><a href="om.html#ansvar">Samfunnsansvar</a><a href="om.html#baerekraft">Miljø og bærekraft</a></div></div>
+  <div class="panel" id="p-kontakt"><div class="indre"><a href="kontakt.html">Kontakt oss</a><a href="kontakt.html#kontorer">Kontorer</a><a href="kontakt.html#karriere">Karriere</a><a href="kontakt.html#arrangementer">Arrangementer</a></div></div>
+</header>
+<nav class="mobmeny" id="mobmeny" aria-label="Mobilmeny">
+  <a href="index.html">Hjem</a>
+  <a href="kompetanse.html">Kompetanse</a>
+  <a href="om.html">Om Haavind</a>
+  <a href="kontakt.html" aria-current="page">Kontakt</a>
+  <a href="panel.html">Panel</a>
+</nav>
+<main id="innhold">
+<header class="sidehode">
+  <div class="ramme">
+    <p class="brodsmule"><a href="index.html">Hjem</a> / Kontakt</p>
+    <h1>Kontakt <em>oss</em></h1>
+    <p class="ingress">Ring sentralbordet, eller send en henvendelse. Vi ruter deg til riktig team.</p>
+  </div>
+</header>
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="to-spalter">
+      <div class="avslor">
+        <h2 style="font-size:1.4rem;margin-bottom:10px">Send en henvendelse</h2>
+        <form class="skjema" data-skjema novalidate>
+          <div class="skjema-to">
+            <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
+            <div class="felt"><label for="firma">Firma</label><input id="firma" name="firma" type="text" autocomplete="organization"></div>
+          </div>
+          <div class="skjema-to">
+            <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
+            <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="felt"><label for="gjelder">Gjelder</label><select id="gjelder" name="gjelder"><option>Juridisk bistand</option><option>Bransjeteam</option><option>Haavind Digital</option><option>Karriere</option><option>Presse</option><option>Annet</option></select></div>
+          <div class="felt"><label for="melding">Melding</label><textarea id="melding" name="melding" placeholder="Beskriv saken kort. Ikke send konfidensielt materiale i dette skjemaet."></textarea></div>
+          <div><button class="knapp" type="submit">Send henvendelsen <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+          <div class="skjema-melding" role="status" aria-live="polite"></div>
+          <p class="skjema-note">Demo: skjemaet sender ingenting. I en ekte løsning går henvendelsen til sakslisten.</p>
+        </form>
+      </div>
+      <aside class="avslor">
+        <div class="kortrekke" style="grid-template-columns:1fr">
+          <div class="kort"><span class="merke">Sentralbord</span><h3><a href="tel:+4722433000">22 43 30 00</a></h3><p>Hverdag.</p></div>
+          <div class="kort"><span class="merke">E-post</span><h3><a href="mailto:post@haavind.no">post@haavind.no</a></h3><p>Vi ruter til riktig team.</p></div>
+          <div class="kort" id="kontorer"><span class="merke">Oslo</span><h3>Haakon VIIs gate 10<br>0161 Oslo</h3><p>Postboks 359 Sentrum, 0101 Oslo.</p></div>
+          <div class="kort"><span class="merke">Andre kontorer</span><h3>Bodø · Bergen · Svalbard</h3><p>Sjøgata 15, Vaskerelven 39, Vei 610.</p></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bunn">
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Haavind</h3><p>Haavind er et av Norges ledende advokatfirmaer. Vi er et fullservice advokatfirma og har mange av Norges største selskaper som kunder.</p></div>
+      <div><h4>Firmaet</h4><ul><li><a href="om.html">Om Haavind</a></li><li><a href="kompetanse.html">Kompetanse</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Saksliste (demo)</a></li></ul></div>
+      <div><h4>Kontorer</h4><ul><li>Oslo · Haakon VIIs gate 10</li><li>Bodø · Sjøgata 15</li><li>Bergen · Vaskerelven 39</li><li>Svalbard · Vei 610</li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+4722433000">22 43 30 00</a></li><li><a href="mailto:post@haavind.no">post@haavind.no</a></li><li>Haakon VIIs gate 10, 0161 Oslo</li><li>Postboks 359 Sentrum, 0101 Oslo</li></ul></div>
+    </div>
+    <div class="bunn-bunn"><span>© 2026 Haavind</span><span>Org.nr 986 420 177</span><span>Demo: innhold hentet fra haavind.no</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/haavind-no.js" defer></script>
+</body>
+</html>

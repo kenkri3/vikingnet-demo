@@ -1,0 +1,35 @@
+{
+  "slug": "getacademy-no",
+  "firma": "GET Academy",
+  "navType": "løpslinje-meny",
+  "fonts": [
+    "Anybody",
+    "Fira Mono"
+  ],
+  "palette": [
+    "#0b1220",
+    "#e8eef7",
+    "#4c8dff",
+    "#18c29c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "utdanninger",
+    "kodeflyt",
+    "veier",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "utdanninger.html",
+    "frontend.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

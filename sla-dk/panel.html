@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — prosjektfaser | SLA</title>
+<meta name="description" content="Prosjektpanel for SLA: fasar, plantar og befaringar.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="SLA">
+<meta property="og:title" content="Panel — prosjektfaser | SLA">
+<meta property="og:description" content="Prosjektpanel for SLA: fasar, plantar og befaringar.">
+<meta property="og:image" content="assets/img/3-sla-dk.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=Asap:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/sla-dk.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">SLA</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Prosjektfaser</h1><p class="panel__dato" data-framdrift>0 av 0 fasar fullførte</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Aktive prosjekt</p><p class="kpi__tal">4</p><p class="kpi__hjelp">To land</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Fasar som ventar</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til gjennomgang</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Befaringar</p><p class="kpi__tal">2</p><p class="kpi__hjelp">Denne veka</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Ferdige</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-fasar" aria-controls="vis-fasar" aria-selected="true">Fasar</button>
+      <button class="fane" role="tab" id="fane-befaring" aria-controls="vis-befaring" aria-selected="false">Befaringar</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-fasar" role="tabpanel" aria-labelledby="fane-fasar">
+      <div class="panel__topprad"><h2>Fasar i arbeid</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Byrom · Oslo<small>Skissefase</small></div>
+  <div class="rad__meta"><strong>Frist 14.11</strong>Ansvar: OSL</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fase ferdig</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Landskap · Århus<small>Planteliste</small></div>
+  <div class="rad__meta"><strong>Pågår</strong>Ansvar: AAR</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fase ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Klima · København<small>Vannhåndtering</small></div>
+  <div class="rad__meta"><strong>Frist 21.11</strong>Ansvar: CPH</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fase ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Strategi · Norge<small>Rammer for naturbasert</small></div>
+  <div class="rad__meta"><strong>Frist 28.11</strong>Ansvar: OSL</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fase ferdig</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-befaring" role="tabpanel" aria-labelledby="fane-befaring" hidden>
+      <div class="panel__topprad"><h2>Befaringar</h2><span class="merknad">Neste sju dagar</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Stad · Oslo<small>Befaring med byggherre</small></div>
+  <div class="rad__meta"><strong>Torsdag 12.11</strong>Kl. 09.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fase ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Stad · Århus<small>Synfaring av jord</small></div>
+  <div class="rad__meta"><strong>Fredag 13.11</strong>Kl. 11.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fase ferdig</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/sla-dk.js" defer></script>
+</body>
+</html>

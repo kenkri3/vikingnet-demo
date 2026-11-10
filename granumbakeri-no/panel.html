@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bestillingspanel — Granum Bakeri</title>
+<meta name="description" content="Demoversjon av bestillingspanelet til Granum Bakeri: kakebestillinger og brødordrer med status fra ny til hentet.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Granum Bakeri">
+<meta property="og:title" content="Bestillingspanel — Granum Bakeri">
+<meta property="og:description" content="Demoversjon av bestillingspanelet til Granum Bakeri: kakebestillinger og brødordrer med status fra ny til hentet.">
+<meta property="og:image" content="assets/img/01-granum.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ovo&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/granumbakeri-no.css">
+<script src="assets/js/granumbakeri-no.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-topp">
+    <a class="merke" href="index.html"><strong>Granum Bakeri</strong> <span>Lillehammer</span></a>
+    <a class="topp-tel" href="tel:+4761263810">61 26 38 10</a>
+  </div>
+  <nav class="tidslinje" aria-label="Hovedmeny">
+    <ul>
+      <li><a href="index.html"><span class="aar">1888</span><span class="navn">Forside</span></a></li>
+      <li><a href="bakst.html"><span class="aar">1900</span><span class="navn">Bakst</span></a></li>
+      <li><a href="om.html"><span class="aar">1970</span><span class="navn">Om bakeriet</span></a></li>
+      <li><a href="blogg.html"><span class="aar">2000</span><span class="navn">Bakerblogg</span></a></li>
+      <li><a href="kontakt.html"><span class="aar">Nå</span><span class="navn">Kontakt</span></a></li>
+      <li><a href="panel.html" aria-current="page"><span class="aar">Drift</span><span class="navn">Panel</span></a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · bakeri</p><h1>Bestillinger</h1><p>Fra bestilling til henting. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne bestillinger</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Til produksjon</p><p class="verdi">2</p><p class="endring">brød + kake</p></div>
+        <div class="kpi"><p class="navn">Klare</p><p class="verdi">1</p><p class="endring">hentes i dag</p></div>
+        <div class="kpi"><p class="navn">Dagens bakst</p><p class="verdi">6 slag</p><p class="endring">i disken</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Bestillinger</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer bestillinger">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="baker" aria-pressed="false">Bakes</button>
+              <button class="filter" type="button" data-filter="klar" aria-pressed="false">Klar</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Hentet</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="ny" data-navn="Bløtkake 10 stk">
+          <div><p class="ordre-navn">Bløtkake 10 stk</p><p class="ordre-meta"><span>Privat, Lillehammer</span><span class="skille">/</span><span>hentes fredag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="baker">Sett i produksjon</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="baker" data-navn="Brød x20">
+          <div><p class="ordre-navn">Brød x20</p><p class="ordre-meta"><span>Bedrift</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="baker">Bakes</span>
+            <button class="liten-knapp" type="button" data-handling="klar">Merk klar</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="klar" data-navn="Bursdagskake">
+          <div><p class="ordre-navn">Bursdagskake</p><p class="ordre-meta"><span>Privat</span><span class="skille">/</span><span>hentes i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="klar">Klar</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk hentet</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Rundstykker x50">
+          <div><p class="ordre-navn">Rundstykker x50</p><p class="ordre-meta"><span>Kunde</span><span class="skille">/</span><span>i morgen</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="baker">Sett i produksjon</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="baker" data-navn="Kake til konfirmasjon">
+          <div><p class="ordre-navn">Kake til konfirmasjon</p><p class="ordre-meta"><span>Privat</span><span class="skille">/</span><span>lørdag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="baker">Bakes</span>
+            <button class="liten-knapp" type="button" data-handling="klar">Merk klar</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Kanelboller x30">
+          <div><p class="ordre-navn">Kanelboller x30</p><p class="ordre-meta"><span>Kafé</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Hentet</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig" disabled>Hentet</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Dagens produksjon</h2><span style="font-size:.62rem;color:var(--graa)">i dag</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Brød</p><p class="ordre-meta"><span>første batch 05.30</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Bakst</p><p class="ordre-meta"><span>til disken</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Kaker</p><p class="ordre-meta"><span>2 bestillinger</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 Granum Bakeri · Storgata 112, 2615 Lillehammer · 61 26 38 10</p>
+    <p class="fot-lenker"><a href="bakst.html">Bakst</a><a href="om.html">Om bakeriet</a><a href="blogg.html">Bakerblogg</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

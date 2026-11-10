@@ -1,0 +1,33 @@
+{
+  "slug": "midtbyenregnskap-no",
+  "firma": "Midtbyen Regnskap",
+  "navType": "nummerert-stripe",
+  "fonts": [
+    "Gelasio",
+    "DM Sans"
+  ],
+  "palette": [
+    "#1d3b3a",
+    "#f7f3e8",
+    "#d98c3f",
+    "#6f8a80"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "soyler",
+    "tjenester",
+    "historie",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

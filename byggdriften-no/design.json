@@ -1,0 +1,34 @@
+{
+  "slug": "byggdriften-no",
+  "firma": "Byggdriften",
+  "navType": "billett-kort i toppen",
+  "fonts": [
+    "Fjalla One",
+    "Hammersmith One"
+  ],
+  "palette": [
+    "#1c1c1c",
+    "#ff7a1a",
+    "#f4f4f2",
+    "#6d8f3f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "prosjekter",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

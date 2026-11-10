@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — oppdrag og befaringer | Ze Bra</title>
+<meta name="description" content="Driftspanel for Ze Bra: oppdrag, befaringer og utstyr.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Ze Bra">
+<meta property="og:title" content="Panel — oppdrag og befaringer | Ze Bra">
+<meta property="og:description" content="Driftspanel for Ze Bra: oppdrag, befaringer og utstyr.">
+<meta property="og:image" content="assets/img/02-zebra-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/zebra-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Ze Bra</a><a class="knapp knapp--gul knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Oppdrag og befaringer</h1><p class="panel__dato" data-framdrift>0 av 0 oppdrag fullførte</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Oppdrag i kø</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Denne veka</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til oppstart</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Befaringer</p><p class="kpi__tal">3</p><p class="kpi__hjelp">Neste 7 dagar</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Fullført i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-opp" aria-controls="vis-opp" aria-selected="true">Oppdrag</button>
+      <button class="fane" role="tab" id="fane-bef" aria-controls="vis-bef" aria-selected="false">Befaringer</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-opp" role="tabpanel" aria-labelledby="fane-opp">
+      <div class="panel__topprad"><h2>Oppdrag</h2><span class="merknad">Sortert etter oppstart</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Parkeringsanlegg · Moss<small>Oppmerking 84 plasser</small></div>
+  <div class="rad__meta"><strong>Oppstart 09.11</strong>Mannskap: 3</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Vei · Fv. 118<small>Midtlinje og kantlinje</small></div>
+  <div class="rad__meta"><strong>Pågår</strong>Maskin: 1</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Handelsområde<small>HC-plasser og soner</small></div>
+  <div class="rad__meta"><strong>Oppstart 11.11</strong>Mannskap: 2</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Fresing · lager<small>Fres før nytt dekke</small></div>
+  <div class="rad__meta"><strong>Oppstart 13.11</strong>Maskin: 1</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-bef" role="tabpanel" aria-labelledby="fane-bef" hidden>
+      <div class="panel__topprad"><h2>Befaringer</h2><span class="merknad">Neste sju dagar</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Parkeringsplass · Rygge<small>Befaring med eier</small></div>
+  <div class="rad__meta"><strong>Tirsdag 10.11</strong>Kl. 09.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Næringsområde · Moss<small>Merking av uteareal</small></div>
+  <div class="rad__meta"><strong>Onsdag 11.11</strong>Kl. 13.00</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Vei · gangfelt<small>Vurdering av dekke</small></div>
+  <div class="rad__meta"><strong>Torsdag 12.11</strong>Kl. 08.30</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/zebra-no.js" defer></script>
+</body>
+</html>

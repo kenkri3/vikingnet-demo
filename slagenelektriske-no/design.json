@@ -1,0 +1,34 @@
+{
+  "slug": "slagenelektriske-no",
+  "firma": "Slagen Elektriske AS",
+  "navType": "sticky vaktstripe",
+  "fonts": [
+    "League Spartan",
+    "Roboto Condensed"
+  ],
+  "palette": [
+    "#f6f5f1",
+    "#111417",
+    "#d33f2f",
+    "#dedcd4"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "byggestrom",
+    "slik-jobber-vi",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "byggestrom.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

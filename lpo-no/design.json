@@ -1,0 +1,34 @@
+{
+  "slug": "lpo-no",
+  "firma": "LPO Arkitekter",
+  "navType": "bilde-grid-overlegg",
+  "fonts": [
+    "Tenor Sans",
+    "Libre Franklin"
+  ],
+  "palette": [
+    "#f2efe9",
+    "#1b1b18",
+    "#8a9a86",
+    "#c9a07a"
+  ],
+  "motion": [
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "prosjekter",
+    "metode",
+    "kontorer",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "metode.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

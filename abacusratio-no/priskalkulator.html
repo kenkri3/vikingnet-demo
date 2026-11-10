@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Priskalkulator | Abacus Ratio</title>
+<meta name="description" content="Fortell Abacus Ratio hva virksomheten trenger, så får du et veiledende tilbud på regnskap og lønn.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Abacus Ratio AS">
+<meta property="og:title" content="Priskalkulator | Abacus Ratio">
+<meta property="og:description" content="Fortell Abacus Ratio hva virksomheten trenger, så får du et veiledende tilbud på regnskap og lønn.">
+<meta property="og:image" content="assets/img/02-abacusratio-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/abacusratio-no.css">
+</head>
+<body class="">
+<a class="hopp" href="#innhold">Til innholdet</a>
+<header class="arktopp">
+  <div class="wrap">
+    <div class="arktopp__indre">
+      <a class="merke" href="index.html"><span class="merke__rute" aria-hidden="true"></span><b>Abacus Ratio</b><span>Slett Næringspark, Son</span></a>
+      <div class="arktopp__hogre">
+        <a href="tel:+4797871701">+47 978 71 701</a>
+        <a href="mailto:post@abacusratio.no">post@abacusratio.no</a>
+        <a class="knapp knapp--liten" href="kontakt.html">Kontakt</a>
+      </div>
+    </div>
+    <nav class="arkfaner" aria-label="Hovedmeny">
+      <a class="arkfane" href="index.html">Forside</a>
+      <a class="arkfane" href="tjenester.html">Tjenester</a>
+      <a class="arkfane" href="priskalkulator.html">Priskalkulator</a>
+      <a class="arkfane" href="om.html">Om oss</a>
+      <a class="arkfane" href="kontakt.html">Kontakt</a>
+      <a class="arkfane" href="panel.html">Panel</a>
+    </nav>
+  </div>
+</header>
+<main id="innhold">
+
+<section class="sidehode"><div class="wrap">
+  <p class="brodsmule"><a href="index.html">Forside</a> / Priskalkulator</p>
+  <h1>Priskalkulator</h1>
+  <p class="ingress">Svar på tre spørsmål, så vet vi nok til å sende et veiledende tilbud. Ingen priser er lagt inn i denne demoen — det er en bevisst avgjørelse.</p>
+</div></section>
+
+<section class="seksjon"><div class="wrap split">
+  <div>
+    <form class="skjema" data-kalkulator novalidate>
+      <div class="felt--to">
+        <div class="felt"><label for="ansatte">Antall ansatte</label><input id="ansatte" name="ansatte" type="text" inputmode="numeric" placeholder="f.eks. 6"></div>
+        <div class="felt"><label for="bilag">Bilag per måned</label><input id="bilag" name="bilag" type="text" inputmode="numeric" placeholder="f.eks. 120"></div>
+      </div>
+      <div class="felt">
+        <label for="behov">Hva trenger dere?</label>
+        <select id="behov" name="behov-velg"><option>Bare regnskap</option><option>Regnskap og lønn</option><option>Regnskap, lønn og controller</option><option>Økonomisjef-funksjon</option></select>
+      </div>
+      <div class="felt">
+        <label>Ta med</label>
+        <label style="display:flex;gap:.5rem;align-items:center;text-transform:none;letter-spacing:0;font-size:.92rem;color:var(--blekk)"><input type="checkbox" name="behov" value="Årsoppgjør" style="width:auto"> Årsoppgjør</label>
+        <label style="display:flex;gap:.5rem;align-items:center;text-transform:none;letter-spacing:0;font-size:.92rem;color:var(--blekk)"><input type="checkbox" name="behov" value="Lønn og a-melding" style="width:auto"> Lønn og a-melding</label>
+        <label style="display:flex;gap:.5rem;align-items:center;text-transform:none;letter-spacing:0;font-size:.92rem;color:var(--blekk)"><input type="checkbox" name="behov" value="Controller" style="width:auto"> Controller</label>
+      </div>
+      <p class="skjema__feil" role="alert" aria-live="polite"></p>
+      <div><button class="knapp" type="submit">Beregn behov <span class="pil" aria-hidden="true">→</span></button></div>
+      <p style="font-size:.8rem;color:#63707f;margin:.2rem 0 0">Kalkulatoren samler bare inn behovet. Priser er ikke lagt inn — Abacus Ratio gir veiledende tilbud etter en samtale.</p>
+    </form>
+    <div class="utrekning" tabindex="-1" role="status" data-utrekning>
+      <h3>Dette har vi notert</h3>
+      <p>Ansatte: <strong data-ut-ansatte>–</strong></p>
+      <p>Bilag per måned: <strong data-ut-bilag>–</strong></p>
+      <p>Behov: <strong data-ut-behov>–</strong></p>
+      <ul>
+        <li>Ingen priser er vist i denne demoen.</li>
+        <li>I den ekte løsningen hadde du fått et veiledende tilbud tilsendt.</li>
+      </ul>
+      <p style="margin-top:.6rem"><a class="knapp knapp--mork" href="kontakt.html">Snakk med oss <span class="pil" aria-hidden="true">→</span></a></p>
+    </div>
+  </div>
+  <div>
+    <div class="split__bilete" style="margin-bottom:1rem"><img src="assets/img/06-abacusratio-no.webp" width="1400" height="787" alt="To personer som ser på en skjerm sammen" loading="lazy"></div>
+    <div style="border-top:1px solid var(--kant);padding-top:.9rem">
+      <h3 style="font-size:1rem;margin-bottom:.35rem">Snakk med et menneske</h3>
+      <p style="color:#4d5a68;margin:0">Maria Johansson · dagtid<br><a href="tel:+4797871701" style="text-decoration:none;font-weight:600">+47 978 71 701</a></p>
+      <p style="color:#4d5a68;margin:.4rem 0 0">Geir Braathe · kveld og natt<br><a href="tel:+4790107751" style="text-decoration:none;font-weight:600">+47 901 07 751</a></p>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="botn">
+  <div class="wrap">
+    <div class="botn__indre">
+      <div>
+        <span style="font-weight:600;font-size:1.05rem;color:#fff">Abacus Ratio AS</span>
+        <p style="margin-top:.5rem">Hos Abacus Ratio er vi mer enn bare et regnskapsbyrå. Vi gjør ting på andre måter.</p>
+      </div>
+      <div>
+        <h4>Sidene</h4>
+        <ul><li><a href="tjenester.html">Tjenester</a></li><li><a href="priskalkulator.html">Priskalkulator</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Panel</a></li></ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <p>Postadresse: Brevikbråteveien 9<br>1553 Son</p>
+        <p>Besøk: Sletta Næringspark, 1553 Son</p>
+        <p><a href="mailto:post@abacusratio.no">post@abacusratio.no</a></p>
+      </div>
+    </div>
+    <p class="botn__kreditt">© Abacus Ratio AS · Orgnr 964 091 277 · Brevikbråteveien 9, 1553 Son</p>
+  </div>
+</footer>
+<script src="assets/js/abacusratio-no.js" defer></script>
+</body>
+</html>

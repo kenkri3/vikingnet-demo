@@ -1,0 +1,33 @@
+{
+  "slug": "haavind-no",
+  "firma": "Haavind",
+  "navType": "topplinje-panelmeny",
+  "fonts": [
+    "Libre Baskerville",
+    "Lato"
+  ],
+  "palette": [
+    "#12202c",
+    "#f6f4ef",
+    "#b08d4f",
+    "#56646f"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "bok",
+    "kompetanse",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "kompetanse.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

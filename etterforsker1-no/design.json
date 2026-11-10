@@ -1,0 +1,34 @@
+{
+  "slug": "etterforsker1-no",
+  "firma": "Etterforsker1",
+  "navType": "nummerert indeksmeny",
+  "fonts": [
+    "Teko",
+    "Roboto"
+  ],
+  "palette": [
+    "#14171b",
+    "#f1efea",
+    "#8c97a1",
+    "#1d2329"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "overvaking.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "aart-dk",
+  "firma": "AART",
+  "navType": "stor typografisk meny",
+  "fonts": [
+    "Abril Fatface",
+    "Khula"
+  ],
+  "palette": [
+    "#111111",
+    "#c2552f",
+    "#e9e4da",
+    "#f4f1ea"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "projekter",
+    "ydelser",
+    "effekt",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "projekter.html",
+    "ydelser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

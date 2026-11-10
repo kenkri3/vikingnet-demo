@@ -1,0 +1,37 @@
+{
+  "slug": "peri-no",
+  "firma": "PERI Norge",
+  "navType": "venstre-akkordeon",
+  "fonts": [
+    "Oswald",
+    "Source Sans 3"
+  ],
+  "palette": [
+    "#101c26",
+    "#f4f2ed",
+    "#e8b21c",
+    "#4a5a66"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "stillas",
+    "produkter",
+    "tjenester",
+    "referanser",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "tjenester.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

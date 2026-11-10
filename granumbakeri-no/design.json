@@ -1,0 +1,34 @@
+{
+  "slug": "granumbakeri-no",
+  "firma": "Granum Bakeri",
+  "navType": "årstall-tidslinje",
+  "fonts": [
+    "Ovo",
+    "Varela Round"
+  ],
+  "palette": [
+    "#2e2118",
+    "#d79a4e",
+    "#fdf8ef",
+    "#9a7b57"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "bakst",
+    "aapningstider",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "bakst.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html",
+    "blogg.html"
+  ]
+}

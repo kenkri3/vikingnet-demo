@@ -1,0 +1,33 @@
+{
+  "slug": "smartdok-com",
+  "firma": "SmartDok",
+  "navType": "modulrutenett-meny",
+  "fonts": [
+    "Saira Condensed",
+    "Roboto"
+  ],
+  "palette": [
+    "#f6f4f1",
+    "#241a44",
+    "#b8e04a",
+    "#e0dbe4"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "moduler",
+    "byggebransjen",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "moduler.html",
+    "funksjoner.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

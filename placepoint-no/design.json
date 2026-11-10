@@ -1,0 +1,34 @@
+{
+  "slug": "placepoint-no",
+  "firma": "Placepoint",
+  "navType": "kartpin-stripe",
+  "fonts": [
+    "Reddit Sans",
+    "Reddit Mono"
+  ],
+  "palette": [
+    "#0f1b2d",
+    "#f2f4f7",
+    "#4f9cf9"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "plattform",
+    "brukt-der-det-betyr-noe",
+    "kom-i-gang",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "plattform.html",
+    "losninger.html",
+    "kart.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

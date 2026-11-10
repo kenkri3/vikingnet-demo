@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prosjektpanel – infrastrukturprosjekter | NRC Group</title>
+<meta name="description" content="Prosjektpanelet til NRC Group: infrastrukturprosjekter med type, sted, status, filter og 4 KPI-er.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Prosjektpanel – infrastrukturprosjekter | NRC Group">
+<meta property="og:description" content="Prosjektpanelet til NRC Group: infrastrukturprosjekter med type, sted, status, filter og 4 KPI-er.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/infra-1.webp">
+<meta name="theme-color" content="#14171c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/nrcgroup-no.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="knute">
+  <div class="knute__indre">
+    <a class="merke" href="index.html"><b>NRC <i>Group</i></b><small>infrastruktur · Norge</small></a>
+    <nav class="knutar" aria-label="Hovedmeny">
+      <a class="knut" href="index.html">Hjem</a>
+      <a class="knut" href="tjenester.html">Tjenester</a>
+      <a class="knut" href="prosjekter.html">Prosjekter</a>
+      <a class="knut" href="baerekraft.html">Bærekraft</a>
+      <a class="knut" href="kontakt.html">Kontakt</a>
+      <a class="knut" href="panel.html" aria-current="page">Panel</a>
+    </nav>
+  </div>
+</header>
+<div class="topp"><div class="inn"><span>Infrastruktur · Norge, Sverige og Finland</span><span><a href="mailto:contact@nrcgroup.no">contact@nrcgroup.no</a></span></div></div>
+<main id="innhold">
+<section class="pthode"><div class="inn"><div class="merkelinje">Internt</div>
+  <h1>Prosjektpanel</h1>
+  <p>Prosjekter i systemet. Send tilbud, start prosjektet når det er tildelt, og merk levert ved overlevering.</p>
+  <p style="margin-top:7px;font-size:10px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>I dag</h4><ul><li>Prosjekter<b>8</b></li><li>Tilbud<b>2</b></li><li>Pågår<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Fag</h4><ul><li>Bane<b>3</b></li><li>Dam<b>2</b></li><li>Havn<b>2</b></li><li>Bro<b>1</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:10.5px;color:var(--gra);margin:0">Demonstrasjon av et prosjektpanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div><div class="pkpi">
+    <div class="pkpi__boks"><b id="kpi-total">8</b><span>Prosjekter</span><em>Alle i systemet</em></div>
+    <div class="pkpi__boks"><b id="kpi-tilbud">2</b><span>Tilbud</span><em>Venter svar</em></div>
+    <div class="pkpi__boks"><b id="kpi-paagaar">2</b><span>Pågår</span><em>Anlegg</em></div>
+    <div class="pkpi__boks"><b id="kpi-levert">2</b><span>Levert</span><em>Overlevert</em></div>
+  </div>
+  <div class="pfilter" role="group" aria-label="Filtrer prosjekter">
+    <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+    <button class="filt" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+    <button class="filt" type="button" data-filter="tilbud" aria-pressed="false">Tilbud</button>
+    <button class="filt" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+    <button class="filt" type="button" data-filter="levert" aria-pressed="false">Levert</button>
+  </div>
+  <div class="oppdrag" id="prosjekter" aria-live="polite"></div>
+  <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+</div></div></section>
+</main>
+<footer class="bunn">
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">NRC Group</span><p>Den mest ambisiøse infrastrukturbyggeren i Norden. Vi utvikler, bygger og vedlikeholder kompleks infrastruktur.</p><p><a href="mailto:contact@nrcgroup.no">contact@nrcgroup.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="prosjekter.html">Prosjekter</a></li><li><a href="baerekraft.html">Bærekraft</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Fagområder</h4><ul><li><a href="tjenester.html#bane">Jernbane</a></li><li><a href="tjenester.html#havn">Havn og kai</a></li><li><a href="tjenester.html#bro">Bro</a></li><li><a href="tjenester.html#dam">Dam og anlegg</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="mailto:contact@nrcgroup.no">contact@nrcgroup.no</a></p><p style="margin-top:8px">Norge</p></div>
+    </div>
+    <div class="bunn__bunn"><span>© 2026 NRC Group</span><span>Nettsiden er en demonstrasjon laget for NRC Group</span><a href="panel.html">Prosjektpanel</a></div>
+  </div>
+</footer>
+<script src="assets/js/nrcgroup-no.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — oppdrag og drift | Mesta</title>
+<meta name="description" content="Driftspanel for Mesta: oppdrag, vinterdrift og beredskap.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Mesta AS">
+<meta property="og:title" content="Panel — oppdrag og drift | Mesta">
+<meta property="og:description" content="Driftspanel for Mesta: oppdrag, vinterdrift og beredskap.">
+<meta property="og:image" content="assets/img/04-mesta-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;500;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/mesta-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Mesta</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Oppdrag og drift</h1><p class="panel__dato" data-framdrift>0 av 0 oppdrag fullførte</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Oppdrag i drift</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Tre fylker</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til oppstart</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Brøyting i natt</p><p class="kpi__tal">2</p><p class="kpi__hjelp">Vaktlag ute</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Fullført i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-opp" aria-controls="vis-opp" aria-selected="true">Oppdrag</button>
+      <button class="fane" role="tab" id="fane-vakt" aria-controls="vis-vakt" aria-selected="false">Vakt og vær</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-opp" role="tabpanel" aria-labelledby="fane-opp">
+      <div class="panel__topprad"><h2>Oppdrag</h2><span class="merknad">Sortert etter oppstart</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Drift · E6 nord<small>Brøyting og strøing</small></div>
+  <div class="rad__meta"><strong>Natt til laurdag</strong>Vaktlag: 2</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Vedlikehold · Fv. 32<small>Lapping etter teleløsning</small></div>
+  <div class="rad__meta"><strong>Oppstart 10.11</strong>Mannskap: 4</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Anlegg · gangveg<small>Utbedring av gangveg</small></div>
+  <div class="rad__meta"><strong>Oppstart 12.11</strong>Mannskap: 3</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Grunnundersøking<small>Kvikkleire, tomt</small></div>
+  <div class="rad__meta"><strong>Oppstart 14.11</strong>Fagfolk: 2</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-vakt" role="tabpanel" aria-labelledby="fane-vakt" hidden>
+      <div class="panel__topprad"><h2>Vakt og vær</h2><span class="merknad">Neste døgn</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Vaktlag nord<small>Beredskap natt</small></div>
+  <div class="rad__meta"><strong>Klar 22.00</strong>Ansvar: leder</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Vaktlag sør<small>Ingen hending</small></div>
+  <div class="rad__meta"><strong>Klar 22.00</strong>Ansvar: leder</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Vær · fjellovergang<small>Melding om snø</small></div>
+  <div class="rad__meta"><strong>Følg med 18.00</strong>Ansvarlig: trafikk</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk fullført</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/mesta-no.js" defer></script>
+</body>
+</html>

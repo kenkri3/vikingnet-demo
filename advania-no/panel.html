@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oppdragspanel – IT-prosjekter | Advania</title>
+<meta name="description" content="Oppdragspanelet til Advania: IT-prosjekter med type, kunde, status, filter og 4 KPI-er.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Oppdragspanel – IT-prosjekter | Advania">
+<meta property="og:description" content="Oppdragspanelet til Advania: IT-prosjekter med type, kunde, status, filter og 4 KPI-er.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/it-1.webp">
+<meta name="theme-color" content="#0f1724">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Prompt:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/advania-no.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="moduler">
+  <div class="moduler__indre">
+    <a class="merke" href="index.html"><b>Advania<i>.</i></b><small>IT og digitale løsninger</small></a>
+    <nav class="blokker" aria-label="Hovedmeny">
+      <a class="blokk" href="index.html">Hjem</a>
+      <a class="blokk" href="tjenester.html">Tjenester</a>
+      <a class="blokk" href="ai.html">AI</a>
+      <a class="blokk" href="om.html">Om oss</a>
+      <a class="blokk" href="kontakt.html">Kontakt</a>
+      <a class="blokk" href="panel.html" aria-current="page">Panel</a>
+    </nav>
+  </div>
+</header>
+<div class="topp"><div class="inn"><span>IT-selskap · teknologi, digitale løsninger og rådgivning</span><span>Norge</span></div></div>
+<main id="innhold">
+<section class="pthode"><div class="inn"><div class="merkelinje">Internt</div>
+  <h1>Oppdragspanel</h1>
+  <p>Prosjekter i systemet. Send tilbud, start prosjektet, og merk levert når løsningen er i drift.</p>
+  <p style="margin-top:7px;font-size:10px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>I dag</h4><ul><li>Oppdrag totalt<b>8</b></li><li>Tilbud<b>2</b></li><li>Pågår<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Type</h4><ul><li>Plattform<b>3</b></li><li>AI<b>2</b></li><li>Drift<b>2</b></li><li>Rådgivning<b>1</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:10.5px;color:var(--gra);margin:0">Demonstrasjon av et oppdragspanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div><div class="pkpi">
+    <div class="pkpi__boks"><b id="kpi-total">8</b><span>Oppdrag</span><em>Alle i systemet</em></div>
+    <div class="pkpi__boks"><b id="kpi-tilbud">2</b><span>Tilbud</span><em>Venter svar</em></div>
+    <div class="pkpi__boks"><b id="kpi-paagaar">2</b><span>Pågår</span><em>Under arbeid</em></div>
+    <div class="pkpi__boks"><b id="kpi-levert">2</b><span>Levert</span><em>I drift</em></div>
+  </div>
+  <div class="pfilter" role="group" aria-label="Filtrer oppdrag">
+    <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+    <button class="filt" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+    <button class="filt" type="button" data-filter="tilbud" aria-pressed="false">Tilbud</button>
+    <button class="filt" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+    <button class="filt" type="button" data-filter="levert" aria-pressed="false">Levert</button>
+  </div>
+  <div class="oppdrag" id="oppdrag" aria-live="polite"></div>
+  <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+</div></div></section>
+</main>
+<footer class="bunn">
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Advania</span><p>IT-selskap med teknologi, digitale løsninger og rådgivning. Én plattform. Et lag med muligheter.</p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="ai.html">AI</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Områder</h4><ul><li><a href="tjenester.html">Tjenester</a></li><li><a href="ai.html">AI som skaper verdi</a></li><li><a href="om.html">Om Advania</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Kontakt</h4><p>Kontakt oss via skjemaet<br>i kontaktseksjonen.</p><p style="margin-top:8px">Norge</p></div>
+    </div>
+    <div class="bunn__bunn"><span>© 2026 Advania</span><span>Nettsiden er en demonstrasjon laget for Advania</span><a href="panel.html">Oppdragspanel</a></div>
+  </div>
+</footer>
+<script src="assets/js/advania-no.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "slug": "tgs-com",
+  "firma": "TGS",
+  "navType": "datagrid-topp",
+  "fonts": [
+    "Roboto Flex",
+    "Chivo Mono"
+  ],
+  "palette": [
+    "#0a1622",
+    "#eef2f6",
+    "#8fd14f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "data-og-innsikt",
+    "teknologi",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "data.html",
+    "teknologi.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "virvelmedia-no",
+  "firma": "Virvel media AS",
+  "navType": "bue med ikoner",
+  "fonts": [
+    "Julius Sans One",
+    "Mada"
+  ],
+  "palette": [
+    "#1a1230",
+    "#b56cf0",
+    "#f7f5fb",
+    "#f0c419"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "virvelshop",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "virvelshop.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bestillingspanel – møtemat og kaker | Baker Brun</title>
+<meta name="description" content="Bestillingspanelet til Baker Brun: møtemat-, kake- og storhusholdningsbestillinger med status, filter og 4 KPI-er.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Bestillingspanel – møtemat og kaker | Baker Brun">
+<meta property="og:description" content="Bestillingspanelet til Baker Brun: møtemat-, kake- og storhusholdningsbestillinger med status, filter og 4 KPI-er.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/bakeri-1.webp">
+<meta name="theme-color" content="#4a2c1d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600;700&family=Gelasio:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bakerbrun-no.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="brett">
+  <div class="brett__indre">
+    <a class="merke" href="index.html"><b>Baker <i>Brun</i></b><small>Bergen · siden 1800-tallet</small></a>
+    <nav class="rist" aria-label="Hovedmeny">
+      <a class="bakst" href="index.html">Hjem</a>
+      <a class="bakst" href="tjenester.html">Tjenester</a>
+      <a class="bakst" href="kake.html">Kake</a>
+      <a class="bakst" href="om.html">Historien</a>
+      <a class="bakst" href="kontakt.html">Kontakt</a>
+      <a class="bakst" href="panel.html" aria-current="page">Panel</a>
+    </nav>
+  </div>
+</header>
+<div class="topp"><div class="inn"><span>25 bakerikaféer i Bergen og omegn</span><span><a href="tel:+4755349600">55 34 96 00</a> · <a href="mailto:kundeservice@bakerbrun.no">kundeservice@bakerbrun.no</a></span></div></div>
+<main id="innhold">
+<section class="pthode"><div class="inn"><div class="merkelinje">Internt</div>
+  <h1>Bestillingspanel</h1>
+  <p>Bestillinger i systemet. Send tilbud, start produksjon, og merk levert når kunden har hentet.</p>
+  <p style="margin-top:7px;font-size:10px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>I dag</h4><ul><li>Bestillinger<b>8</b></li><li>Tilbud<b>2</b></li><li>Pågår<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Type</h4><ul><li>Møtemat<b>3</b></li><li>Kake<b>3</b></li><li>Storhusholdning<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:10.5px;color:var(--gra);margin:0">Demonstrasjon av et bestillingspanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div><div class="pkpi">
+    <div class="pkpi__boks"><b id="kpi-total">8</b><span>Bestillinger</span><em>Alle i systemet</em></div>
+    <div class="pkpi__boks"><b id="kpi-tilbud">2</b><span>Tilbud</span><em>Venter svar</em></div>
+    <div class="pkpi__boks"><b id="kpi-paagaar">2</b><span>Pågår</span><em>Produksjon</em></div>
+    <div class="pkpi__boks"><b id="kpi-levert">2</b><span>Levert</span><em>Hentet</em></div>
+  </div>
+  <div class="pfilter" role="group" aria-label="Filtrer bestillinger">
+    <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+    <button class="filt" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+    <button class="filt" type="button" data-filter="tilbud" aria-pressed="false">Tilbud</button>
+    <button class="filt" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+    <button class="filt" type="button" data-filter="levert" aria-pressed="false">Levert</button>
+  </div>
+  <div class="oppdrag" id="bestillinger" aria-live="polite"></div>
+  <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+</div></div></section>
+</main>
+<footer class="bunn">
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Baker Brun</span><p>Hele Bergens favorittbakeri – 25 bakerikaféer i Bergen og omegn, og 6 Solbrød bakeriutsalg.</p><p><a href="mailto:kundeservice@bakerbrun.no">kundeservice@bakerbrun.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="kake.html">Kake</a></li><li><a href="om.html">Historien</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Bestill</h4><ul><li><a href="tjenester.html#motemat">Møtemat</a></li><li><a href="kake.html">Kake</a></li><li><a href="tjenester.html#storhusholdning">Storhusholdning</a></li><li><a href="tjenester.html#lokaler">Leie lokaler</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4755349600">55 34 96 00</a><br><a href="mailto:kundeservice@bakerbrun.no">kundeservice@bakerbrun.no</a></p><p style="margin-top:8px">Bergen</p></div>
+    </div>
+    <div class="bunn__bunn"><span>© 2026 Baker Brun</span><span>Nettsiden er en demonstrasjon laget for Baker Brun</span><a href="panel.html">Bestillingspanel</a></div>
+  </div>
+</footer>
+<script src="assets/js/bakerbrun-no.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — prosjekter og leveranser | Gexcon</title>
+<meta name="description" content="Prosjektpanel for Gexcon: analyser, simuleringer og leveranser.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Gexcon AS">
+<meta property="og:title" content="Panel — prosjekter og leveranser | Gexcon">
+<meta property="og:description" content="Prosjektpanel for Gexcon: analyser, simuleringer og leveranser.">
+<meta property="og:image" content="assets/img/1-gexcon-com.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/gexcon-com.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Gexcon</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Prosjekter og leveranser</h1><p class="panel__dato" data-framdrift>0 av 0 leveransar ferdige</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Aktive prosjekt</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Tre land</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til gjennomgang</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Simuleringer i kø</p><p class="kpi__tal">12</p><p class="kpi__hjelp">Klare til køyring</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Levert i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-pro" aria-controls="vis-pro" aria-selected="true">Prosjekter</button>
+      <button class="fane" role="tab" id="fane-kjor" aria-controls="vis-kjor" aria-selected="false">Simuleringer</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-pro" role="tabpanel" aria-labelledby="fane-pro">
+      <div class="panel__topprad"><h2>Prosjekter</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Anlegg Nord · QRA<small>Kvantitativ risiko</small></div>
+  <div class="rad__meta"><strong>Frist 14.11</strong>Fag: risiko</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--raud knapp--liten" type="button" data-ferdig>Merk levert</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Terminal · HAZOP<small>Gjennomgang med kunde</small></div>
+  <div class="rad__meta"><strong>Pågår</strong>Fag: prosess</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--raud knapp--liten" type="button" data-ferdig>Merk levert</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Lager · ERA<small>Eksplosjonsrisiko</small></div>
+  <div class="rad__meta"><strong>Frist 21.11</strong>Fag: analyse</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--raud knapp--liten" type="button" data-ferdig>Merk levert</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Testkampanje<small>Eksplosjonstest</small></div>
+  <div class="rad__meta"><strong>Frist 28.11</strong>Fag: test</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--raud knapp--liten" type="button" data-ferdig>Merk levert</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-kjor" role="tabpanel" aria-labelledby="fane-kjor" hidden>
+      <div class="panel__topprad"><h2>Simuleringer</h2><span class="merknad">Kø og status</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">FLACS · scenario 3<small>Dispersjon i prosessområde</small></div>
+  <div class="rad__meta"><strong>I kø</strong>Estimert 2 t</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--raud knapp--liten" type="button" data-ferdig>Merk levert</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">EFFECTS · jetbrann<small>Konsekvens</small></div>
+  <div class="rad__meta"><strong>Køyrer</strong>38 %</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--raud knapp--liten" type="button" data-ferdig>Merk levert</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">RISKCURVES · oppdatering<small>Nye frekvenser</small></div>
+  <div class="rad__meta"><strong>I kø</strong>Venter input</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--raud knapp--liten" type="button" data-ferdig>Merk levert</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/gexcon-com.js" defer></script>
+</body>
+</html>

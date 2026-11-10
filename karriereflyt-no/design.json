@@ -1,0 +1,34 @@
+{
+  "slug": "karriereflyt-no",
+  "firma": "Karriereflyt",
+  "navType": "flyt-bolge-topp",
+  "fonts": [
+    "Spline Sans",
+    "Quicksand"
+  ],
+  "palette": [
+    "#1b2f2b",
+    "#f3f7f4",
+    "#7bd389"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "kunder",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bedrifter.html",
+    "jobbsokere.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

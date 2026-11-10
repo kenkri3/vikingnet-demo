@@ -1,0 +1,35 @@
+{
+  "slug": "mesta-no",
+  "firma": "Mesta AS",
+  "navType": "veiskilt-meny",
+  "fonts": [
+    "Sofia Sans",
+    "DM Mono"
+  ],
+  "palette": [
+    "#f2f4ef",
+    "#1c2b22",
+    "#2f7d4f",
+    "#c8d94a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "tall",
+    "vei",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

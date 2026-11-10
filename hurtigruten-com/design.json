@@ -1,0 +1,33 @@
+{
+  "slug": "hurtigruten-com",
+  "firma": "Hurtigruten",
+  "navType": "topp-og-destinasjonsrull",
+  "fonts": [
+    "Vollkorn",
+    "Barlow"
+  ],
+  "palette": [
+    "#0b2b3c",
+    "#f7f4ec",
+    "#d94f3d",
+    "#4f9bb3"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "rute",
+    "reiser",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "reiser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

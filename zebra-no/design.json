@@ -1,0 +1,35 @@
+{
+  "slug": "zebra-no",
+  "firma": "Ze Bra",
+  "navType": "stripe-meny",
+  "fonts": [
+    "Wix Madefor Display",
+    "Instrument Serif"
+  ],
+  "palette": [
+    "#f5f5f3",
+    "#111111",
+    "#ffd400",
+    "#6b6b6b"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "stripe",
+    "referanser",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

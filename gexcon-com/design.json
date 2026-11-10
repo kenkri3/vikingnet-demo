@@ -1,0 +1,35 @@
+{
+  "slug": "gexcon-com",
+  "firma": "Gexcon AS",
+  "navType": "risikomatrise-meny",
+  "fonts": [
+    "Teko",
+    "Arimo"
+  ],
+  "palette": [
+    "#101418",
+    "#e8ecf1",
+    "#d1495b",
+    "#43aa8b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "plume",
+    "programvare",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "programvare.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

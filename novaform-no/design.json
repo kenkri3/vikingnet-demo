@@ -1,0 +1,33 @@
+{
+  "slug": "novaform-no",
+  "firma": "Novaform",
+  "navType": "toppmeny med firkantmarkør",
+  "fonts": [
+    "Overpass",
+    "Alegreya Sans"
+  ],
+  "palette": [
+    "#f4f1eb",
+    "#232a31",
+    "#7d9b8a",
+    "#ded9cf"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

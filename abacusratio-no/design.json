@@ -1,0 +1,35 @@
+{
+  "slug": "abacusratio-no",
+  "firma": "Abacus Ratio AS",
+  "navType": "regneark-faner",
+  "fonts": [
+    "Geist",
+    "Geist Mono"
+  ],
+  "palette": [
+    "#f7f6f2",
+    "#171d2b",
+    "#12857a",
+    "#c96b3a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "graf",
+    "tall",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "priskalkulator.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

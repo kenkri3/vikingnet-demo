@@ -1,0 +1,34 @@
+{
+  "slug": "geodata-no",
+  "firma": "Geodata AS",
+  "navType": "søkeførst header",
+  "fonts": [
+    "Encode Sans",
+    "Barlow Semi Condensed"
+  ],
+  "palette": [
+    "#f2f6f5",
+    "#0b2d3a",
+    "#8fd6c4",
+    "#12455a"
+  ],
+  "motion": [
+    "css3d",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "om",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "bransjer.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

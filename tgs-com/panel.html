@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oppdragspanel – dataleveranser | TGS</title>
+<meta name="description" content="Oppdragspanelet til TGS: dataleveranser og kundeoppdrag med status, filter og 4 KPI-er.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Oppdragspanel – dataleveranser | TGS">
+<meta property="og:description" content="Oppdragspanelet til TGS: dataleveranser og kundeoppdrag med status, filter og 4 KPI-er.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/data-1.webp">
+<meta name="theme-color" content="#0a1622">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500&family=Roboto+Flex:opsz,wght@8..144,400;8..144,600;8..144,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tgs-com.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="rutenett">
+  <div class="rutenett__indre">
+    <a class="merke" href="index.html"><b>TGS<i>.</i></b><small>energidata og innsikt</small></a>
+    <nav class="celler" aria-label="Hovedmeny">
+      <a class="celle" href="index.html">Hjem</a>
+      <a class="celle" href="data.html">Data</a>
+      <a class="celle" href="teknologi.html">Teknologi</a>
+      <a class="celle" href="om.html">Om oss</a>
+      <a class="celle" href="kontakt.html">Kontakt</a>
+      <a class="celle" href="panel.html" aria-current="page">Panel</a>
+    </nav>
+  </div>
+</header>
+<div class="topp"><div class="inn"><span>TGS ASA · Oslo</span><span><a href="tel:+4767526400">+47 67 52 64 00</a></span></div></div>
+<main id="innhold">
+<section class="pthode"><div class="inn"><div class="merkelinje">Internt</div>
+  <h1>Oppdragspanel</h1>
+  <p>Dataleveranser i systemet. Send tilbud, start leveransen, og merk levert når dataene er tilgjengelige.</p>
+  <p style="margin-top:7px;font-size:10px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>I dag</h4><ul><li>Oppdrag totalt<b>8</b></li><li>Tilbud<b>2</b></li><li>Pågår<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Type</h4><ul><li>Seismikk<b>3</b></li><li>Fornybar<b>3</b></li><li>Karbon<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:10.5px;color:var(--gra);margin:0">Demonstrasjon av et oppdragspanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div><div class="pkpi">
+    <div class="pkpi__boks"><b id="kpi-total">8</b><span>Oppdrag</span><em>Alle i systemet</em></div>
+    <div class="pkpi__boks"><b id="kpi-tilbud">2</b><span>Tilbud</span><em>Venter svar</em></div>
+    <div class="pkpi__boks"><b id="kpi-paagaar">2</b><span>Pågår</span><em>Leveranse</em></div>
+    <div class="pkpi__boks"><b id="kpi-levert">2</b><span>Levert</span><em>Ferdig</em></div>
+  </div>
+  <div class="pfilter" role="group" aria-label="Filtrer oppdrag">
+    <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+    <button class="filt" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+    <button class="filt" type="button" data-filter="tilbud" aria-pressed="false">Tilbud</button>
+    <button class="filt" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+    <button class="filt" type="button" data-filter="levert" aria-pressed="false">Levert</button>
+  </div>
+  <div class="oppdrag" id="oppdrag" aria-live="polite"></div>
+  <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+</div></div></section>
+</main>
+<footer class="bunn">
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">TGS</span><p>Energidata og innsikt for hele energispektret – gjennom innovasjon og datadrevne løsninger.</p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="data.html">Data</a></li><li><a href="teknologi.html">Teknologi</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Data og innsikt</h4><ul><li><a href="data.html#seismikk">Seismikk</a></li><li><a href="data.html#sol">Sol</a></li><li><a href="data.html#karbon">Karbon</a></li><li><a href="data.html#vind">Vind</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4767526400">+47 67 52 64 00</a></p><p style="margin-top:8px">Oslo<br>Norge</p></div>
+    </div>
+    <div class="bunn__bunn"><span>© 2026 TGS ASA</span><span>Nettsiden er en demonstrasjon laget for TGS</span><a href="panel.html">Oppdragspanel</a></div>
+  </div>
+</footer>
+<script src="assets/js/tgs-com.js" defer></script>
+</body>
+</html>

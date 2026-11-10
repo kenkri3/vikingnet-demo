@@ -1,0 +1,35 @@
+{
+  "slug": "veni-no",
+  "firma": "Veni",
+  "navType": "nodekart-meny",
+  "fonts": [
+    "Questrial",
+    "Jura"
+  ],
+  "palette": [
+    "#141b2e",
+    "#7e9cf5",
+    "#f5f6fb",
+    "#e06a8a"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "baerekraft",
+    "smarte-bygg",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "baerekraft.html",
+    "smarte-bygg.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

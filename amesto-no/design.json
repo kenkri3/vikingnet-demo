@@ -1,0 +1,35 @@
+{
+  "slug": "amesto-no",
+  "firma": "Amesto",
+  "navType": "datalinje-meny",
+  "fonts": [
+    "Gabarito",
+    "Crimson Text"
+  ],
+  "palette": [
+    "#f4f6f9",
+    "#101b2b",
+    "#e8542b",
+    "#2f6fb2"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "hus",
+    "globus",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "husene.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

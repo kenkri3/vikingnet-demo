@@ -1,0 +1,35 @@
+{
+  "slug": "sweetheart-no",
+  "firma": "Sweet Heart AS",
+  "navType": "konfekt-disk-meny",
+  "fonts": [
+    "Prata",
+    "Quicksand"
+  ],
+  "palette": [
+    "#fbf3ec",
+    "#3a2320",
+    "#b23a48",
+    "#d9a441"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "eske",
+    "utvalg",
+    "apningstider",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "utvalg.html",
+    "om.html",
+    "bestill.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

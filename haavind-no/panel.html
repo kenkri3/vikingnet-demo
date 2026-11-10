@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saksliste · Haavind (demo)</title>
+<meta name="description" content="Demo av Haavinds interne saksliste: saker med status, oppdrag og handlinger.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haavind">
+<meta property="og:title" content="Saksliste · Haavind (demo)">
+<meta property="og:description" content="Demo av Haavinds interne saksliste: saker med status, oppdrag og handlinger.">
+<meta property="og:image" content="assets/img/05-haavind-no.webp">
+<meta name="theme-color" content="#12202c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/haavind-no.css">
+</head>
+<body>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<header class="topp">
+  <div class="indre">
+    <a class="logo" href="index.html">Haavind<span>Advokatfirma</span></a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <button type="button" data-panel-knapp="p-komp" aria-expanded="false" aria-controls="p-komp">Kompetanse</button>
+      <button type="button" data-panel-knapp="p-om" aria-expanded="false" aria-controls="p-om">Om Haavind</button>
+      <button type="button" data-panel-knapp="p-kontakt" aria-expanded="false" aria-controls="p-kontakt">Kontakt</button>
+      <a href="index.html">Hjem</a>
+      <a href="panel.html" aria-current="page">Panel</a>
+    </nav>
+    <button class="mobknapp" type="button" data-mob-apne aria-expanded="false" aria-controls="mobmeny">Meny</button>
+  </div>
+  <div class="panel" id="p-komp"><div class="indre"><a href="kompetanse.html">Alle fagområder</a><a href="kompetanse.html#bransjer">Bransjer</a><a href="kompetanse.html#digital">Haavind Digital</a><a href="kompetanse.html#tech">Tech Insight</a></div></div>
+  <div class="panel" id="p-om"><div class="indre"><a href="om.html">Om firmaet</a><a href="om.html#ledelse">Ledelse og styre</a><a href="om.html#ansvar">Samfunnsansvar</a><a href="om.html#baerekraft">Miljø og bærekraft</a></div></div>
+  <div class="panel" id="p-kontakt"><div class="indre"><a href="kontakt.html">Kontakt oss</a><a href="kontakt.html#kontorer">Kontorer</a><a href="kontakt.html#karriere">Karriere</a><a href="kontakt.html#arrangementer">Arrangementer</a></div></div>
+</header>
+<nav class="mobmeny" id="mobmeny" aria-label="Mobilmeny">
+  <a href="index.html">Hjem</a>
+  <a href="kompetanse.html">Kompetanse</a>
+  <a href="om.html">Om Haavind</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="panel.html" aria-current="page">Panel</a>
+</nav>
+<main id="innhold">
+<header class="panelhode">
+  <div class="ramme">
+    <div class="rad"><p class="brodsmule"><a href="index.html">Hjem</a> / Panel</p><span class="drift">Sakslisten er åpen</span></div>
+    <h1>Sakslisten</h1>
+    <p class="ingress">Slik ser sakslisten ut internt. Trykk på knappene – status, nøkkeltall og logg oppdaterer seg. Alt er eksempeldata.</p>
+  </div>
+</header>
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="kpier">
+      <div class="kpi"><span class="l">Nye</span><span class="v" data-kpi-ny>2</span><span class="d">Venter på tildeling</span></div>
+      <div class="kpi"><span class="l">Løper</span><span class="v" data-kpi-loper>2</span><span class="d">Under arbeid</span></div>
+      <div class="kpi"><span class="l">Ferdig</span><span class="v" data-kpi-ferdig>2</span><span class="d">Avsluttet</span></div>
+      <div class="kpi"><span class="l">Kontorer</span><span class="v">4</span><span class="d">Oslo, Bodø, Bergen, Svalbard</span></div>
+    </div>
+    <div class="faner" role="group" aria-label="Filtrer">
+      <button class="fane" type="button" data-filter="alle" aria-pressed="true">Alle <span class="antall">6</span></button>
+      <button class="fane" type="button" data-filter="ny" aria-pressed="false">Nye <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="loper" aria-pressed="false">Løper <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="ferdig" aria-pressed="false">Ferdig <span class="antall">2</span></button>
+    </div>
+    <div class="saker" data-saker>
+      <article class="sak" data-id="HV-412" data-status="ny">
+        <div class="id">HV-412</div>
+        <div class="hoved"><div class="t">Kontraktsgjennomgang</div><div class="m">Teknologiselskap</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ny sak</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Avslutt</button>
+        </div>
+      </article>
+      <article class="sak" data-id="HV-411" data-status="loper">
+        <div class="id">HV-411</div>
+        <div class="hoved"><div class="t">Due diligence</div><div class="m">Oppkjøp · industri</div></div>
+        <div class="meta"><span class="k">Status</span><span>Loper</span></div>
+        <span class="status" data-status="loper">Løper</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Avslutt</button>
+        </div>
+      </article>
+      <article class="sak" data-id="HV-410" data-status="loper">
+        <div class="id">HV-410</div>
+        <div class="hoved"><div class="t">Havbruk til havs</div><div class="m">Aktør i havbruk</div></div>
+        <div class="meta"><span class="k">Status</span><span>Loper</span></div>
+        <span class="status" data-status="loper">Løper</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Avslutt</button>
+        </div>
+      </article>
+      <article class="sak" data-id="HV-409" data-status="ny">
+        <div class="id">HV-409</div>
+        <div class="hoved"><div class="t">Personvernvurdering</div><div class="m">Digital virksomhet</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ny sak</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Avslutt</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="HV-408" data-status="ferdig">
+        <div class="id">HV-408</div>
+        <div class="hoved"><div class="t">Tvist, forhandling</div><div class="m">Energiselskap</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ferdig 06.11</span></div>
+        <span class="status" data-status="ferdig">Ferdig</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Avslutt</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="HV-407" data-status="ferdig">
+        <div class="id">HV-407</div>
+        <div class="hoved"><div class="t">Ansettelsesrett</div><div class="m">Konsern</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ferdig 30.10</span></div>
+        <span class="status" data-status="ferdig">Ferdig</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Avslutt</button>
+        </div>
+      </article>
+    </div>
+    <div class="panel-to">
+      <div class="panel-kort">
+        <h2>Neste frist</h2>
+        <p class="under">Eksempeldata</p>
+        <ul style="list-style:none;margin:0;padding:0">
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>HV-411 · DD-rapport</span><span style="color:var(--graa)">12.11</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>HV-410 · uttalelse</span><span style="color:var(--graa)">14.11</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-size:14px"><span>HV-409 · vurdering</span><span style="color:var(--graa)">uke 47</span></li>
+        </ul>
+      </div>
+      <div class="panel-kort">
+        <h2>Hendelser</h2>
+        <p class="under">Siste aktivitet</p>
+        <div class="logg" data-logg>
+          <div><b>11:00</b> HV-411 dokumentasjon mottatt</div>
+          <div><b>10:00</b> HV-408 avsluttet</div>
+          <div><b>09:00</b> ny sak HV-412</div>
+          <div><b>08:00</b> sakslisten åpnet</div>
+        </div>
+        <a class="knapp knapp--lys" href="kompetanse.html" style="margin-top:11px">Til kompetansen <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bunn">
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Haavind</h3><p>Haavind er et av Norges ledende advokatfirmaer. Vi er et fullservice advokatfirma og har mange av Norges største selskaper som kunder.</p></div>
+      <div><h4>Firmaet</h4><ul><li><a href="om.html">Om Haavind</a></li><li><a href="kompetanse.html">Kompetanse</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Saksliste (demo)</a></li></ul></div>
+      <div><h4>Kontorer</h4><ul><li>Oslo · Haakon VIIs gate 10</li><li>Bodø · Sjøgata 15</li><li>Bergen · Vaskerelven 39</li><li>Svalbard · Vei 610</li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+4722433000">22 43 30 00</a></li><li><a href="mailto:post@haavind.no">post@haavind.no</a></li><li>Haakon VIIs gate 10, 0161 Oslo</li><li>Postboks 359 Sentrum, 0101 Oslo</li></ul></div>
+    </div>
+    <div class="bunn-bunn"><span>© 2026 Haavind</span><span>Org.nr 986 420 177</span><span>Demo: innhold hentet fra haavind.no</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/haavind-no.js" defer></script>
+</body>
+</html>

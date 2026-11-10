@@ -1,0 +1,34 @@
+{
+  "slug": "reinhartsen-no",
+  "firma": "Reinhartsen",
+  "navType": "toetasjes meny",
+  "fonts": [
+    "Trirong",
+    "Sarabun"
+  ],
+  "palette": [
+    "#f6f2ea",
+    "#0d2b33",
+    "#e2b96b",
+    "#e5ddcc"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "fiskebrygga",
+    "avdelinger",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "catering.html",
+    "engros.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

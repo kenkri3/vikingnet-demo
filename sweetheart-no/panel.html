@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — bestillinger | Sweet Heart</title>
+<meta name="description" content="Bestillingspanel for Sweet Heart: konfektesker, godteposer og gaver.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Sweet Heart AS">
+<meta property="og:title" content="Panel — bestillinger | Sweet Heart">
+<meta property="og:description" content="Bestillingspanel for Sweet Heart: konfektesker, godteposer og gaver.">
+<meta property="og:image" content="assets/img/02-sweetheart-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/sweetheart-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Sweet Heart</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Bestillinger</h1><p class="panel__dato" data-framdrift>0 av 0 bestillingar klare</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Bestillinger i kø</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Denne veka</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til klargjering</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Konfektesker</p><p class="kpi__tal">18</p><p class="kpi__hjelp">Bestilt denne veka</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Klare</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-best" aria-controls="vis-best" aria-selected="true">Bestillinger</button>
+      <button class="fane" role="tab" id="fane-butikk" aria-controls="vis-butikk" aria-selected="false">Butikk</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-best" role="tabpanel" aria-labelledby="fane-best">
+      <div class="panel__topprad"><h2>Bestillinger</h2><span class="merknad">Sortert etter hentedag</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Konfekteske · 24 stk<small>Hjerteforma, mørk sjokolade</small></div>
+  <div class="rad__meta"><strong>Henting laurdag</strong>Kunde: M. Hansen</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Godteposer · klasse<small>5. trinn, 26 poser</small></div>
+  <div class="rad__meta"><strong>Henting fredag</strong>Kunde: Tromsø skole</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Gave · konfekt<small>Med kort og bånd</small></div>
+  <div class="rad__meta"><strong>Henting måndag</strong>Kunde: Nordvik</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Smågodt · 3 kg<small>Blanding til bursdag</small></div>
+  <div class="rad__meta"><strong>Henting sundag</strong>Kunde: A. Johansen</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-butikk" role="tabpanel" aria-labelledby="fane-butikk" hidden>
+      <div class="panel__topprad"><h2>Butikk</h2><span class="merknad">Dagens drift</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Konfektdisk<small>Fyll opp hjerteesker</small></div>
+  <div class="rad__meta"><strong>Gjort kl. 09.10</strong>Ansvar: Kari</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Smågodtvegg<small>Etterfyll 6 hyller</small></div>
+  <div class="rad__meta"><strong>Gjort kl. 10.30</strong>Ansvar: Ola</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Softis<small>Sjekk blanding</small></div>
+  <div class="rad__meta"><strong>Daglig rutine</strong>Ansvar: vakt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/sweetheart-no.js" defer></script>
+</body>
+</html>

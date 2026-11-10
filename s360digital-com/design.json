@@ -1,0 +1,34 @@
+{
+  "slug": "s360digital-com",
+  "firma": "s360",
+  "navType": "pillmeny med indikator",
+  "fonts": [
+    "Bebas Neue",
+    "Yantramanav"
+  ],
+  "palette": [
+    "#0a0f1a",
+    "#4de0a5",
+    "#f2f5f8",
+    "#f5b942"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "cases",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "cases.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

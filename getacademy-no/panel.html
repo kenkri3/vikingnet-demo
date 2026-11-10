@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — søknader | GET Academy</title>
+<meta name="description" content="Søknadspanel for GET Academy: søknader, opptak og intervjuer.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="GET Academy">
+<meta property="og:title" content="Panel — søknader | GET Academy">
+<meta property="og:description" content="Søknadspanel for GET Academy: søknader, opptak og intervjuer.">
+<meta property="og:image" content="assets/img/hero-bransje.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;500;600;700&family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/getacademy-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">GET/ACADEMY</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Søknader og opptak</h1><p class="panel__dato" data-framdrift>0 av 0 søknader behandla</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Søknader i kø</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Frontend og intro</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til vurdering</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Intervjuer</p><p class="kpi__tal">3</p><p class="kpi__hjelp">Neste uke</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Behandla</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du behandler</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-sok" aria-controls="vis-sok" aria-selected="true">Søknader</button>
+      <button class="fane" role="tab" id="fane-intervju" aria-controls="vis-intervju" aria-selected="false">Intervjuer</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-sok" role="tabpanel" aria-labelledby="fane-sok">
+      <div class="panel__topprad"><h2>Søknader</h2><span class="merknad">Sortert etter mottak</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Frontend · høst<small>Søknad med vitnemål</small></div>
+  <div class="rad__meta"><strong>Mottatt 08.11</strong>Kandidat: A. Nilsen</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Intro · vår<small>Søknad uten vitnemål</small></div>
+  <div class="rad__meta"><strong>Mottatt 08.11</strong>Kandidat: M. Berg</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Frontend · høst<small>Søknad med praksis</small></div>
+  <div class="rad__meta"><strong>Mottatt 09.11</strong>Kandidat: S. Haugen</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Bedrift · prosjekt<small>Forespørsel om praksis</small></div>
+  <div class="rad__meta"><strong>Mottatt 09.11</strong>Firma: Nordkode AS</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-intervju" role="tabpanel" aria-labelledby="fane-intervju" hidden>
+      <div class="panel__topprad"><h2>Intervjuer</h2><span class="merknad">Neste uke</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">A. Nilsen<small>Frontend · intervju 1</small></div>
+  <div class="rad__meta"><strong>Tirsdag 10.11</strong>Kl. 10.00</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">M. Berg<small>Intro · samtale</small></div>
+  <div class="rad__meta"><strong>Onsdag 11.11</strong>Kl. 13.00</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">S. Haugen<small>Frontend · intervju 1</small></div>
+  <div class="rad__meta"><strong>Torsdag 12.11</strong>Kl. 09.30</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--mork knapp--liten" type="button" data-ferdig>Behandle</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/getacademy-no.js" defer></script>
+</body>
+</html>
