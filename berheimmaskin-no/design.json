@@ -1,0 +1,34 @@
+{
+  "slug": "berheimmaskin-no",
+  "firma": "Børheim Maskin AS",
+  "navType": "sidepanel-rail på desktop",
+  "fonts": [
+    "Francois One",
+    "Cabin"
+  ],
+  "palette": [
+    "#f1efe8",
+    "#20261f",
+    "#d4652a",
+    "#e0dcd1"
+  ],
+  "motion": [
+    "css3d",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "betong.html",
+    "grunn.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

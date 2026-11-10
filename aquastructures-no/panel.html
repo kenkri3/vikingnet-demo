@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — analysar og sertifisering | Aquastructures</title>
+<meta name="description" content="Driftspanel for Aquastructures: analysar, sertifiseringar og oppdrag.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Aquastructures AS">
+<meta property="og:title" content="Panel — analysar og sertifisering | Aquastructures">
+<meta property="og:description" content="Driftspanel for Aquastructures: analysar, sertifiseringar og oppdrag.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;600;700&family=Scada:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/aquastructures-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Aquastructures</a><a class="knapp knapp--liten" href="index.html">Til sida</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Analysar og sertifisering</h1><p class="panel__dato" data-framdrift>0 av 0 analysar ferdige</p></div><p class="panel__dato">Fredag 6. november · veke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Oppdrag</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til gjennomgang</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Sertifiseringar</p><p class="kpi__tal">2</p><p class="kpi__hjelp">I løp</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Ferdige i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-ana" aria-controls="vis-ana" aria-selected="true">Analysar</button>
+      <button class="fane" role="tab" id="fane-sert" aria-controls="vis-sert" aria-selected="false">Sertifisering</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-ana" role="tabpanel" aria-labelledby="fane-ana">
+      <div class="panel__topprad"><h2>Analysar</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Forankringsanalyse · lokalitet<small>Ring og forankring</small></div>
+  <div class="rad__meta"><strong>Frist 13.11</strong>Ansvar: ingeniør</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Globalanalyse · anlegg<small>Heile konstruksjonen</small></div>
+  <div class="rad__meta"><strong>Frist 18.11</strong>Ansvar: ingeniør</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Lokalanalse · innfesting<small>Detalj</small></div>
+  <div class="rad__meta"><strong>Frist 21.11</strong>Ansvar: ingeniør</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Stabilitet · lukka anlegg<small>Stabilitet</small></div>
+  <div class="rad__meta"><strong>Frist 27.11</strong>Ansvar: ingeniør</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-sert" role="tabpanel" aria-labelledby="fane-sert" hidden>
+      <div class="panel__topprad"><h2>Sertifisering</h2><span class="merknad">Status</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">NS 9415 · anlegg A<small>Produktsertifisering</small></div>
+  <div class="rad__meta"><strong>Dokumentasjon klar</strong>Til gjennomgang</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">NS 9416 · anlegg B<small>Produktsertifisering</small></div>
+  <div class="rad__meta"><strong>Venter dokumentasjon</strong>Frå kunde</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">AquaRapport · NYTEK23<small>Rapportering</small></div>
+  <div class="rad__meta"><strong>Klar for innsending</strong>Ansvar: rådgivar</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/aquastructures-no.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "slug": "asfaltmidt-no",
+  "firma": "AsfaltMidt",
+  "navType": "milepælmeny med prikker",
+  "fonts": [
+    "Bakbak One",
+    "Ruda"
+  ],
+  "palette": [
+    "#f2efe9",
+    "#2a2e33",
+    "#9bbf3f",
+    "#e2ded6"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "miljo",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "miljo.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

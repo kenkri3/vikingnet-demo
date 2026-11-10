@@ -1,0 +1,34 @@
+{
+  "slug": "fliskunstnerne-no-demo",
+  "firma": "Fliskunstnerne",
+  "navType": "flisemonster-meny",
+  "fonts": [
+    "Bricolage Grotesque",
+    "Instrument Sans"
+  ],
+  "palette": [
+    "#1f2a2e",
+    "#f2f0ea",
+    "#2f6f6a",
+    "#c9a227"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "fliser",
+    "tjenester",
+    "galleri",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "galleri.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

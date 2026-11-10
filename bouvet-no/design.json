@@ -1,0 +1,35 @@
+{
+  "slug": "bouvet-no",
+  "firma": "Bouvet Norge AS",
+  "navType": "nummerert toppmeny",
+  "fonts": [
+    "Onest",
+    "Space Mono"
+  ],
+  "palette": [
+    "#12202e",
+    "#f7f8fa",
+    "#e8543f",
+    "#2f6f8f"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "skjermar",
+    "tjenester",
+    "om",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bransjer.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

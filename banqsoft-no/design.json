@@ -1,0 +1,35 @@
+{
+  "slug": "banqsoft-no",
+  "firma": "Banqsoft AS",
+  "navType": "fast venstre sidemeny",
+  "fonts": [
+    "Cuprum",
+    "Telex"
+  ],
+  "palette": [
+    "#f6f4ef",
+    "#1b1f2a",
+    "#4b5bd6",
+    "#d94f4f"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "kort",
+    "losninger",
+    "om",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "losninger.html",
+    "om.html",
+    "karriere.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "jvdemolering-no",
+  "firma": "JV Demolering AS",
+  "navType": "tabellinje med ring-markør",
+  "fonts": [
+    "Titan One",
+    "Sintony"
+  ],
+  "palette": [
+    "#f0eeea",
+    "#1b1e22",
+    "#c9b37e",
+    "#e0ddd5"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "utstyr",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "kjerneboring.html",
+    "saging.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

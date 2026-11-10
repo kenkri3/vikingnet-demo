@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt · Pilar Personell</title>
+<meta name="description" content="Kontakt Pilar: 69 02 07 90, kontakt@pilarpeople.no. Mikkel H. Hafskjold (mikkel@pilarpeople.no, 466 22 339) og Jørgen (jorgen@pilarpeople.no, 992 91 930).">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pilar Personell">
+<meta property="og:title" content="Kontakt · Pilar Personell">
+<meta property="og:description" content="Kontakt Pilar: 69 02 07 90, kontakt@pilarpeople.no. Mikkel H. Hafskjold (mikkel@pilarpeople.no, 466 22 339) og Jørgen (jorgen@pilarpeople.no, 992 91 930).">
+<meta name="theme-color" content="#10283a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/pilarpersonell-no-demo.css">
+</head>
+<body>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<header class="topp">
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="m" aria-hidden="true">P</span><span><b>Pilar Personell</b><small>Rekruttering · bemanning</small></span></a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="rekruttering.html">Rekruttering</a>
+      <a href="bemanning.html">Bemanning</a>
+      <a href="om.html">Om Pilar</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </nav>
+    <a class="tlf" href="tel:+4769020790">69 02 07 90</a>
+    <button class="mobknapp" type="button" data-mob-apne aria-expanded="false" aria-controls="mobmeny">Meny</button>
+  </div>
+</header>
+<nav class="mobmeny" id="mobmeny" aria-label="Mobilmeny">
+  <a href="index.html">Hjem</a>
+  <a href="rekruttering.html">Rekruttering</a>
+  <a href="bemanning.html">Bemanning</a>
+  <a href="om.html">Om Pilar</a>
+  <a href="kontakt.html" aria-current="page">Kontakt</a>
+  <a href="panel.html">Panel</a>
+</nav>
+<main id="innhold">
+<header class="sidehode">
+  <div class="ramme">
+    <p class="brodsmule"><a href="index.html">Hjem</a> / Kontakt</p>
+    <h1>Kontakt <em>oss</em></h1>
+    <p class="ingress">Vi vil gjerne høre fra deg – om du trenger folk, eller leter etter ny jobb.</p>
+  </div>
+</header>
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="to-spalter">
+      <div class="avslor">
+        <h2 style="font-size:1.4rem;margin-bottom:10px">Send en henvendelse</h2>
+        <form class="skjema" data-skjema novalidate>
+          <div class="skjema-to">
+            <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
+            <div class="felt"><label for="firma">Firma</label><input id="firma" name="firma" type="text" autocomplete="organization"></div>
+          </div>
+          <div class="skjema-to">
+            <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
+            <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="felt"><label for="gjelder">Gjelder</label><select id="gjelder" name="gjelder"><option>Rekruttering</option><option>Bemanning</option><option>Jeg søker jobb</option><option>Annet</option></select></div>
+          <div class="felt"><label for="melding">Melding</label><textarea id="melding" name="melding" placeholder="Fortell kort om behovet eller hva du leter etter."></textarea></div>
+          <div><button class="knapp" type="submit">Send henvendelsen <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+          <div class="skjema-melding" role="status" aria-live="polite"></div>
+          <p class="skjema-note">Demo: skjemaet sender ingenting. I en ekte løsning går henvendelsen til bemanningskøen.</p>
+        </form>
+      </div>
+      <aside class="avslor">
+        <div class="kortrekke" style="grid-template-columns:1fr">
+          <div class="kort"><span class="merke">Sentralt</span><h3><a href="tel:+4769020790">69 02 07 90</a></h3><p><a href="mailto:kontakt@pilarpeople.no">kontakt@pilarpeople.no</a></p></div>
+          <div class="kort"><span class="merke">Rekruttering</span><h3>Mikkel H. Hafskjold</h3><p><a href="tel:+4746622339">466 22 339</a> · <a href="mailto:mikkel@pilarpeople.no">mikkel@pilarpeople.no</a></p></div>
+          <div class="kort"><span class="merke">Bemanning</span><h3>Jørgen</h3><p><a href="tel:+4799291930">992 91 930</a> · <a href="mailto:jorgen@pilarpeople.no">jorgen@pilarpeople.no</a></p></div>
+          <div class="kort"><span class="merke">Sted</span><h3>Asker</h3><p>Vi jobber i hele regionen.</p></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bunn">
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Pilar Personell</h3><p>Pilar er et norskeid rekrutteringsbyrå som tilbyr effektive tjenester av høy kvalitet innen rekruttering og bemanning.</p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="rekruttering.html">Rekruttering</a></li><li><a href="bemanning.html">Bemanning</a></li><li><a href="om.html">Om Pilar</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Panel</a></li></ul></div>
+      <div><h4>Segmenter</h4><ul><li>Transport, logistikk og produksjon</li><li>Økonomi, regnskap og administrasjon</li><li>Salg og markedsføring</li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+4769020790">69 02 07 90</a></li><li><a href="mailto:kontakt@pilarpeople.no">kontakt@pilarpeople.no</a></li><li>Asker</li></ul></div>
+    </div>
+    <div class="bunn-bunn"><span>© 2026 Pilar Personell</span><span>Norskeid rekrutteringsbyrå</span><span>Demo: innhold hentet fra pilarpeople.no</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/pilarpersonell-no-demo.js" defer></script>
+</body>
+</html>

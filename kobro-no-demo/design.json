@@ -1,0 +1,33 @@
+{
+  "slug": "kobro-no-demo",
+  "firma": "Lars U. Kobro AS",
+  "navType": "stempelband-topp",
+  "fonts": [
+    "EB Garamond",
+    "M PLUS Rounded 1c"
+  ],
+  "palette": [
+    "#1b3a3a",
+    "#f6f4ec",
+    "#c96f4a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "fag",
+    "om-meg",
+    "temaer",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "fag.html",
+    "foredrag.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

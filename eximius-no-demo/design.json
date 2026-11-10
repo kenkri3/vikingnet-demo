@@ -1,0 +1,33 @@
+{
+  "slug": "eximius-no-demo",
+  "firma": "Eximius AS",
+  "navType": "pikselgrid-meny",
+  "fonts": [
+    "Cutive Mono",
+    "Zen Kaku Gothic New"
+  ],
+  "palette": [
+    "#0d1b2a",
+    "#eef2f6",
+    "#4ea8de"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "tilnaerming",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordrepanelet — OSLO RAW</title>
+<meta name="description" content="Demoversjon av ordrepanelet til OSLO RAW: kakebestillinger, catering, gavekort og lokale med status og filter.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="OSLO RAW">
+<meta property="og:title" content="Ordrepanelet — OSLO RAW">
+<meta property="og:description" content="Demoversjon av ordrepanelet til OSLO RAW: kakebestillinger, catering, gavekort og lokale med status og filter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/osloraw-no-demo.css">
+<script src="assets/js/osloraw-no-demo.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>OSLO RAW</strong> <span>kafe · bakeri</span></a>
+    <a class="topp-mail" href="mailto:bakery@osloraw.no">bakery@osloraw.no</a>
+  </div>
+  <nav class="hylle" aria-label="Hovedmeny">
+    <ul>
+      <li><a class="etikett" href="index.html">Forside</a></li>
+      <li><a class="etikett" href="kaker.html">Kaker og godsaker</a></li>
+      <li><a class="etikett" href="catering.html">Catering</a></li>
+      <li><a class="etikett" href="om.html">Kafe og bakeri</a></li>
+      <li><a class="etikett" href="kontakt.html">Kontakt</a></li>
+      <li><a class="etikett" href="panel.html" aria-current="page">Panel</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · kjøkken</p><h1>Ordrer og leveranser</h1><p>Oversikt over bestillinger. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne ordrer</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Leveres</p><p class="verdi">2</p><p class="endring">catering + godsaker</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">lokale</p></div>
+        <div class="kpi"><p class="navn">Levert i uken</p><p class="verdi">9</p><p class="endring">alle avtalt</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Ordrer</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer ordrer">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Leveres</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Levert</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="ny" data-navn="Kake – bestilling">
+          <div><p class="ordre-navn">Kake – bestilling</p><p class="ordre-meta"><span>Privat</span><span class="skille">/</span><span>Kake</span><span class="skille">/</span><span>hentes fredag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta ordre</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Catering – lunsj 25">
+          <div><p class="ordre-navn">Catering – lunsj 25</p><p class="ordre-meta"><span>Bedrift</span><span class="skille">/</span><span>Catering</span><span class="skille">/</span><span>i dag 11.30</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Leveres</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk levert</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Gavekort">
+          <div><p class="ordre-navn">Gavekort</p><p class="ordre-meta"><span>Privat</span><span class="skille">/</span><span>Gavekort</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta ordre</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Leie lokale – møte">
+          <div><p class="ordre-navn">Leie lokale – møte</p><p class="ordre-meta"><span>Forening</span><span class="skille">/</span><span>Lokale</span><span class="skille">/</span><span>avtales</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta ordre</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Godsaker – brett">
+          <div><p class="ordre-navn">Godsaker – brett</p><p class="ordre-meta"><span>Kunde</span><span class="skille">/</span><span>Godsaker</span><span class="skille">/</span><span>i morgen</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Leveres</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk levert</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Catering – fest">
+          <div><p class="ordre-navn">Catering – fest</p><p class="ordre-meta"><span>Privat</span><span class="skille">/</span><span>Catering</span><span class="skille">/</span><span>forrige uke</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Levert</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Levert</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Kanalkilder</h2><span style="font-size:.66rem;color:var(--graa)">i dag</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Nettbutikk</p><p class="ordre-meta"><span>3 ordrer</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Kafeen</p><p class="ordre-meta"><span>2 ordrer</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Catering</p><p class="ordre-meta"><span>1 ordre</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 OSLO RAW · bakery@osloraw.no · Levering i Norge</p>
+    <p class="fot-lenker"><a href="kaker.html">Kaker</a><a href="catering.html">Catering</a><a href="om.html">Kafe og bakeri</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

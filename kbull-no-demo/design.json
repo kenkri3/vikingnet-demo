@@ -1,0 +1,34 @@
+{
+  "slug": "kbull-no-demo",
+  "firma": "K. Bull AS",
+  "navType": "krokmarkør-meny",
+  "fonts": [
+    "Archivo Black",
+    "Saira Condensed"
+  ],
+  "palette": [
+    "#101820",
+    "#f4b41a",
+    "#f2f3f4",
+    "#6b7f92"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "transport",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "transport.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

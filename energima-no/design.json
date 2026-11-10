@@ -1,0 +1,35 @@
+{
+  "slug": "energima-no",
+  "firma": "Energima Gruppen AS",
+  "navType": "prikk-separert toppmeny",
+  "fonts": [
+    "Belanosima",
+    "Sintony"
+  ],
+  "palette": [
+    "#f4f7f4",
+    "#14342a",
+    "#7fb069",
+    "#e0a33c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "luft",
+    "tjenester",
+    "selskap",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "jobbe.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

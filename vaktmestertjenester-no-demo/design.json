@@ -1,0 +1,34 @@
+{
+  "slug": "vaktmestertjenester-no-demo",
+  "firma": "A/S Alt i Vaktmestertjenester",
+  "navType": "sjekkliste-meny",
+  "fonts": [
+    "Rufina",
+    "Hind"
+  ],
+  "palette": [
+    "#1b2a33",
+    "#4f8a8b",
+    "#f5f3ee",
+    "#c9a227"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "skilt",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "skilt.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

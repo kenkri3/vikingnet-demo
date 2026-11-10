@@ -1,0 +1,34 @@
+{
+  "slug": "akari-no",
+  "firma": "Akari",
+  "navType": "tag-stripe",
+  "fonts": [
+    "Unbounded",
+    "Onest"
+  ],
+  "palette": [
+    "#f4f2ec",
+    "#17181c",
+    "#d4f26b",
+    "#e2ded4"
+  ],
+  "motion": [
+    "css3d",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

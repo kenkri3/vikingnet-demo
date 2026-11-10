@@ -1,0 +1,35 @@
+{
+  "slug": "pilarpersonell-no-demo",
+  "firma": "Pilar Personell",
+  "navType": "ramme-topplinje",
+  "fonts": [
+    "Schibsted Grotesk",
+    "Cabin"
+  ],
+  "palette": [
+    "#10283a",
+    "#f2f5f7",
+    "#37a3c0",
+    "#e0a33c"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "tidslinje",
+    "segmenter",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "rekruttering.html",
+    "bemanning.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

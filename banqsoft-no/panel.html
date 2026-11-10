@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — kundar og leveransar | Banqsoft</title>
+<meta name="description" content="Driftspanel for Banqsoft: kundar, leveransar og saker.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Banqsoft AS">
+<meta property="og:title" content="Panel — kundar og leveransar | Banqsoft">
+<meta property="og:description" content="Driftspanel for Banqsoft: kundar, leveransar og saker.">
+<meta property="og:image" content="assets/img/01-bq.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,600;0,700;1,400&family=Telex&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/banqsoft-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<div class="side">
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Banqsoft</a><a class="knapp knapp--liten" href="index.html">Til sida</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Kundar og leveransar</h1><p class="panel__dato" data-framdrift>0 av 0 saker klare</p></div><p class="panel__dato">Fredag 6. november · veke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Leveransar</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til godkjenning</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Kundar</p><p class="kpi__tal">12</p><p class="kpi__hjelp">I dialog</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Klare i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-lev" aria-controls="vis-lev" aria-selected="true">Leveransar</button>
+      <button class="fane" role="tab" id="fane-kund" aria-controls="vis-kund" aria-selected="false">Kundar</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-lev" role="tabpanel" aria-labelledby="fane-lev">
+      <div class="panel__topprad"><h2>Leveransar</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Kjernebank · kunde A<small>Digital banking</small></div>
+  <div class="rad__meta"><strong>Frist 13.11</strong>Ansvar: prosjekt</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Asset finance · kunde B<small>Foqus Finance</small></div>
+  <div class="rad__meta"><strong>Frist 20.11</strong>Ansvar: produkt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Credit · kunde C<small>Credit management</small></div>
+  <div class="rad__meta"><strong>Frist 24.11</strong>Ansvar: prosjekt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Integrasjon · kunde D<small>Open arkitektur</small></div>
+  <div class="rad__meta"><strong>Frist 27.11</strong>Ansvar: teknisk</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-kund" role="tabpanel" aria-labelledby="fane-kund" hidden>
+      <div class="panel__topprad"><h2>Kundar</h2><span class="merknad">Status</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Kunde A<small>Bank</small></div>
+  <div class="rad__meta"><strong>I drift</strong>Neste gjennomgang 14.11</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Kunde B<small>Finansiering</small></div>
+  <div class="rad__meta"><strong>Oppstart</strong>Kartlegging</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Kunde C<small>Inkasso</small></div>
+  <div class="rad__meta"><strong>I dialog</strong>Behov avklart</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+</div>
+<script src="assets/js/banqsoft-no.js" defer></script>
+</body>
+</html>

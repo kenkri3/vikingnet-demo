@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — leveranser | Bouvet</title>
+<meta name="description" content="Driftspanel for Bouvet: leveranser, team og oppgaver.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Bouvet">
+<meta property="og:title" content="Panel — leveranser | Bouvet">
+<meta property="og:description" content="Driftspanel for Bouvet: leveranser, team og oppgaver.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bouvet-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Bouvet</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Leveranser</h1><p class="panel__dato" data-framdrift>0 av 0 leveransar ferdige</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Leveranser</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til godkjenning</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Team</p><p class="kpi__tal">6</p><p class="kpi__hjelp">Fagmiljø</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Ferdige i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-lev" aria-controls="vis-lev" aria-selected="true">Leveranser</button>
+      <button class="fane" role="tab" id="fane-team" aria-controls="vis-team" aria-selected="false">Team</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-lev" role="tabpanel" aria-labelledby="fane-lev">
+      <div class="panel__topprad"><h2>Leveranser</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Digital tjeneste · offentlig<small>Design og utvikling</small></div>
+  <div class="rad__meta"><strong>Frist 13.11</strong>Team: 4</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Integrasjon · helse<small>Teknologi</small></div>
+  <div class="rad__meta"><strong>Frist 20.11</strong>Team: 3</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Sikkerheitsgjennomgang<small>Rådgiving</small></div>
+  <div class="rad__meta"><strong>Frist 24.11</strong>Team: 2</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Kurs · UX<small>Bouvet Kurs</small></div>
+  <div class="rad__meta"><strong>Frist 27.11</strong>Instruktør: 1</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-team" role="tabpanel" aria-labelledby="fane-team" hidden>
+      <div class="panel__topprad"><h2>Team</h2><span class="merknad">Fag</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Team A<small>Teknologi og sikkerheit</small></div>
+  <div class="rad__meta"><strong>4 personar</strong>Oslo</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Team B<small>Design og UX</small></div>
+  <div class="rad__meta"><strong>3 personar</strong>Oslo</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Team C<small>Rådgiving</small></div>
+  <div class="rad__meta"><strong>2 personar</strong>Oslo</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/bouvet-no.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — prøver og kundar | poLight</title>
+<meta name="description" content="Driftspanel for poLight: prøver, kundar og leveransar.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="poLight ASA">
+<meta property="og:title" content="Panel — prøver og kundar | poLight">
+<meta property="og:description" content="Driftspanel for poLight: prøver, kundar og leveransar.">
+<meta property="og:image" content="assets/img/01-pl.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unica+One&family=Nobile:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/polight-com.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">poLight</a><a class="knapp knapp--liten" href="index.html">Til sida</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Prøver og kundar</h1><p class="panel__dato" data-framdrift>0 av 0 saker klare</p></div><p class="panel__dato">Fredag 6. november · veke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Prøver</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til sending</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Kundar</p><p class="kpi__tal">7</p><p class="kpi__hjelp">I dialog</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Klare i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-pro" aria-controls="vis-pro" aria-selected="true">Prøver</button>
+      <button class="fane" role="tab" id="fane-kit" aria-controls="vis-kit" aria-selected="false">Kit</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-pro" role="tabpanel" aria-labelledby="fane-pro">
+      <div class="panel__topprad"><h2>Prøver</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Smarttelefon · kunde A<small>TLens Add-In 48MP</small></div>
+  <div class="rad__meta"><strong>Frist 13.11</strong>Ansvar: teknikk</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Wearable · kunde B<small>TLens 32MP</small></div>
+  <div class="rad__meta"><strong>Frist 20.11</strong>Ansvar: teknikk</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">AR · kunde C<small>Referansedesign</small></div>
+  <div class="rad__meta"><strong>Frist 24.11</strong>Ansvar: sal</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Industri · kunde D<small>Evalueringskit</small></div>
+  <div class="rad__meta"><strong>Frist 27.11</strong>Ansvar: teknikk</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-kit" role="tabpanel" aria-labelledby="fane-kit" hidden>
+      <div class="panel__topprad"><h2>Kit</h2><span class="merknad">Lager</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Evalueringskit<small>TLens + drivkrets</small></div>
+  <div class="rad__meta"><strong>5 på lager</strong>Klar til sending</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Drivkrets<small>TLens Driver ASIC</small></div>
+  <div class="rad__meta"><strong>12 på lager</strong>Klar</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Referansedesign<small>Add-In 48MP</small></div>
+  <div class="rad__meta"><strong>2 på lager</strong>Bestill meir</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/polight-com.js" defer></script>
+</body>
+</html>

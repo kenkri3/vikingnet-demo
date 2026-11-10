@@ -1,0 +1,34 @@
+{
+  "slug": "toprecruit-no-demo",
+  "firma": "Top Recruit",
+  "navType": "hoyre-stolpe-meny",
+  "fonts": [
+    "Geologica",
+    "Inter Tight"
+  ],
+  "palette": [
+    "#14342c",
+    "#f3f6f4",
+    "#e07a3c",
+    "#5c8f7f"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "stige",
+    "tjenester",
+    "referanser",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

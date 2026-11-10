@@ -1,0 +1,33 @@
+{
+  "slug": "legalis-no-demo",
+  "firma": "Advokatfirmaet Legalis",
+  "navType": "privat-bedrift-bryter",
+  "fonts": [
+    "Marcellus",
+    "Hanken Grotesk"
+  ],
+  "palette": [
+    "#1b2430",
+    "#f5f3ee",
+    "#9a7b3f",
+    "#5b6b7a"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "paragraf",
+    "tjenester",
+    "privat-bedrift",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

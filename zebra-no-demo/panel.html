@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oppdragspanel – merkeoppdrag | Ze Bra</title>
+<meta name="description" content="Oppdragspanelet til Ze Bra Vei AS: merke-, frese- og verkstedsoppdrag med status, filter og 4 KPI-er.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Oppdragspanel – merkeoppdrag | Ze Bra">
+<meta property="og:description" content="Oppdragspanelet til Ze Bra Vei AS: merke-, frese- og verkstedsoppdrag med status, filter og 4 KPI-er.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/veimerk.webp">
+<meta name="theme-color" content="#131313">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/zebra-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="veimerk">
+  <div class="veimerk__indre">
+    <a class="merke" href="index.html"><b>Ze <i>Bra</i></b><small>vei · parkering · dekor</small></a>
+    <nav class="stripefelt" aria-label="Hovedmeny">
+      <a class="merkeplate" href="index.html">Hjem</a>
+      <a class="merkeplate" href="tjenester.html">Tjenester</a>
+      <a class="merkeplate" href="veimerking.html">Veimerking</a>
+      <a class="merkeplate" href="referanser.html">Referanser</a>
+      <a class="merkeplate" href="kontakt.html">Kontakt</a>
+      <a class="merkeplate" href="panel.html" aria-current="page">Panel</a>
+    </nav>
+  </div>
+</header>
+<div class="topp"><div class="inn"><span>Veimerking · oppmerking · fresing</span><span><a href="tel:+4769240650">+47 69 24 06 50</a> · <a href="mailto:post@zebra.no">post@zebra.no</a></span></div></div>
+<main id="innhold">
+<section class="pthode"><div class="inn"><div class="merkelinje">Internt</div>
+  <h1>Oppdragspanel</h1>
+  <p>Oppdrag i systemet. Send tilbud, start arbeidet, og merk levert når jobben er kvittert.</p>
+  <p style="margin-top:7px;font-size:10px;color:var(--gra)"><span data-dato></span></p>
+</div></section>
+<section class="sek" style="padding-top:0"><div class="inn psam">
+  <aside class="paside">
+    <div class="pkort"><h4>I dag</h4><ul><li>Oppdrag totalt<b>8</b></li><li>Tilbud<b>2</b></li><li>Pågår<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Type</h4><ul><li>Veimerking<b>4</b></li><li>Oppmerking<b>2</b></li><li>Fresing<b>2</b></li></ul></div>
+    <div class="pkort"><h4>Om panelet</h4><p style="font-size:10.5px;color:var(--gra);margin:0">Demonstrasjon av et oppdragspanel. Endringene lagres bare i nettleseren din.</p></div>
+  </aside>
+  <div><div class="pkpi">
+    <div class="pkpi__boks"><b id="kpi-total">8</b><span>Oppdrag</span><em>Alle i systemet</em></div>
+    <div class="pkpi__boks"><b id="kpi-tilbud">2</b><span>Tilbud</span><em>Venter svar</em></div>
+    <div class="pkpi__boks"><b id="kpi-paagaar">2</b><span>Pågår</span><em>Under arbeid</em></div>
+    <div class="pkpi__boks"><b id="kpi-levert">2</b><span>Levert</span><em>Ferdig</em></div>
+  </div>
+  <div class="pfilter" role="group" aria-label="Filtrer oppdrag">
+    <button class="filt" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+    <button class="filt" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+    <button class="filt" type="button" data-filter="tilbud" aria-pressed="false">Tilbud</button>
+    <button class="filt" type="button" data-filter="paagaar" aria-pressed="false">Pågår</button>
+    <button class="filt" type="button" data-filter="levert" aria-pressed="false">Levert</button>
+  </div>
+  <div class="oppdrag" id="oppdrag" aria-live="polite"></div>
+  <div class="phend"><div class="phend__hode">Hendelser i dag</div><ul id="hendelser"></ul></div>
+</div></div></section>
+</main>
+<footer class="bunn">
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Ze Bra Vei AS</span><p>Din partner for merking av vei, parkering og offentlige plasser. Vår lange erfaring er din sikkerhet for et godt og varig produkt.</p><p><a href="mailto:post@zebra.no">post@zebra.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="veimerking.html">Veimerking</a></li><li><a href="referanser.html">Referanser</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="veimerking.html">Veimerking</a></li><li><a href="tjenester.html#oppmerking">Oppmerking</a></li><li><a href="tjenester.html#dekor">Dekor og utsmykking</a></li><li><a href="tjenester.html#fresing">Fresing av asfalt</a></li><li><a href="tjenester.html#verksted">Verksted</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4769240650">+47 69 24 06 50</a><br><a href="mailto:post@zebra.no">post@zebra.no</a></p><p style="margin-top:8px">ISO 9001 · 14001 · 45001</p></div>
+    </div>
+    <div class="bunn__bunn"><span>© 2026 Ze Bra Vei AS</span><span>Nettsiden er en demonstrasjon laget for Ze Bra Vei AS</span><a href="panel.html">Oppdragspanel</a></div>
+  </div>
+</footer>
+<script src="assets/js/zebra-no-demo.js" defer></script>
+</body>
+</html>

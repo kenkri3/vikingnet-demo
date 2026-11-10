@@ -1,0 +1,35 @@
+{
+  "slug": "aquastructures-no",
+  "firma": "Aquastructures AS",
+  "navType": "to-rads sitemap-stripe",
+  "fonts": [
+    "Rokkitt",
+    "Scada"
+  ],
+  "palette": [
+    "#f2f6f7",
+    "#0d2b33",
+    "#3fa9a0",
+    "#f0a03c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "not",
+    "tjenester",
+    "sertifisering",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "sertifisering.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

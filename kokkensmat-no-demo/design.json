@@ -1,0 +1,34 @@
+{
+  "slug": "kokkensmat-no-demo",
+  "firma": "Kokkens Mat",
+  "navType": "bento-bokser",
+  "fonts": [
+    "Young Serif",
+    "Assistant"
+  ],
+  "palette": [
+    "#24301f",
+    "#d1a24a",
+    "#fdfaf4",
+    "#7e9c72"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "catering",
+    "butikk",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "catering.html",
+    "butikk.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

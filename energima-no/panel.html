@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — serviceoppdrag | Energima</title>
+<meta name="description" content="Driftspanel for Energima: serviceoppdrag, anlegg og bemanning.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Energima Gruppen">
+<meta property="og:title" content="Panel — serviceoppdrag | Energima">
+<meta property="og:description" content="Driftspanel for Energima: serviceoppdrag, anlegg og bemanning.">
+<meta property="og:image" content="assets/img/01-en.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/energima-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Energima</a><a class="knapp knapp--liten" href="index.html">Til siden</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Serviceoppdrag</h1><p class="panel__dato" data-framdrift>0 av 0 oppdrag ferdige</p></div><p class="panel__dato">Fredag 6. november · uke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Oppdrag i dag</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Service</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til oppstart</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Anlegg</p><p class="kpi__tal">28</p><p class="kpi__hjelp">Under oppfølging</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Ferdige i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-opp" aria-controls="vis-opp" aria-selected="true">Oppdrag</button>
+      <button class="fane" role="tab" id="fane-anlegg" aria-controls="vis-anlegg" aria-selected="false">Anlegg</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-opp" role="tabpanel" aria-labelledby="fane-opp">
+      <div class="panel__topprad"><h2>Oppdrag</h2><span class="merknad">Sortert etter tid</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Service · Lysaker<small>Ventilasjon, årskontroll</small></div>
+  <div class="rad__meta"><strong>Kl. 08.30</strong>Montør: 1</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Service · Oslo sentrum<small>Filterbyte</small></div>
+  <div class="rad__meta"><strong>Kl. 10.00</strong>Montør: 2</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Prosjekt · Bærum<small>Igangkjøring</small></div>
+  <div class="rad__meta"><strong>Kl. 12.30</strong>Montør: 2</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Overvåkning · Asker<small>Avvikssjekk</small></div>
+  <div class="rad__meta"><strong>Kl. 14.00</strong>Montør: 1</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-anlegg" role="tabpanel" aria-labelledby="fane-anlegg" hidden>
+      <div class="panel__topprad"><h2>Anlegg</h2><span class="merknad">Status</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Anlegg A · kontorbygg<small>Ventilasjon</small></div>
+  <div class="rad__meta"><strong>Normalt</strong>Neste service 14.11</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Anlegg B · skole<small>Ventilasjon</small></div>
+  <div class="rad__meta"><strong>Filter byte</strong>Bestilt</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Anlegg C · næring<small>Overvåkning</small></div>
+  <div class="rad__meta"><strong>Avvik</strong>Undersøkast</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk ferdig</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/energima-no.js" defer></script>
+</body>
+</html>

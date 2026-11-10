@@ -1,0 +1,34 @@
+{
+  "slug": "mortenmur-no-demo",
+  "firma": "Murmester Morten P. Håkonsen",
+  "navType": "menyknapp-accordion",
+  "fonts": [
+    "Familjen Grotesk",
+    "Source Serif 4"
+  ],
+  "palette": [
+    "#2b2320",
+    "#f1ece4",
+    "#a4552f",
+    "#7d8b7a"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "forbandt",
+    "tjenester",
+    "arbeid",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "arbeid.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

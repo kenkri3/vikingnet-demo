@@ -1,0 +1,34 @@
+{
+  "slug": "muscletherapy-no-demo",
+  "firma": "Muscle Therapy",
+  "navType": "hangtag-etiketter",
+  "fonts": [
+    "Trispace",
+    "Figtree"
+  ],
+  "palette": [
+    "#241a2e",
+    "#8f6bd6",
+    "#f7f4fb",
+    "#b9c9a8"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkt",
+    "bruk",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "dekken.html",
+    "bruk.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

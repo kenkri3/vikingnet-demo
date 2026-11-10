@@ -1,0 +1,33 @@
+{
+  "slug": "bygghjemme-no-demo",
+  "firma": "Bygghjemme",
+  "navType": "handlevogn-stripe",
+  "fonts": [
+    "Baloo 2",
+    "Hind Siliguri"
+  ],
+  "palette": [
+    "#1e2a20",
+    "#f7f5ef",
+    "#f28f3b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "sortiment",
+    "hjelp",
+    "slik-handler-du",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "sortiment.html",
+    "kundeservice.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

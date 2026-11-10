@@ -1,0 +1,34 @@
+{
+  "slug": "osloraw-no-demo",
+  "firma": "OSLO RAW",
+  "navType": "hylleetiketter",
+  "fonts": [
+    "Bevan",
+    "Mulish"
+  ],
+  "palette": [
+    "#2b2118",
+    "#c96f4a",
+    "#faf6ef",
+    "#8fae7a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "kaker",
+    "catering",
+    "kafe",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "kaker.html",
+    "catering.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

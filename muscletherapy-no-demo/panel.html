@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordrepanelet — Muscle Therapy</title>
+<meta name="description" content="Demoversjon av ordrepanelet til Muscle Therapy: dekken, batteri og supporthenvendelser med status og filter.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Muscle Therapy">
+<meta property="og:title" content="Ordrepanelet — Muscle Therapy">
+<meta property="og:description" content="Demoversjon av ordrepanelet til Muscle Therapy: dekken, batteri og supporthenvendelser med status og filter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Trispace:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/muscletherapy-no-demo.css">
+<script src="assets/js/muscletherapy-no-demo.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>Muscle Therapy</strong> <span>massasje til hest</span></a>
+    <a class="topp-tel" href="tel:+4792924271">929 24 271</a>
+  </div>
+  <nav class="tags" aria-label="Hovedmeny">
+    <ul>
+      <li><a class="tag" href="index.html"><i aria-hidden="true"></i>Hjem</a></li>
+      <li><a class="tag" href="dekken.html"><i aria-hidden="true"></i>Dekkenet</a></li>
+      <li><a class="tag" href="bruk.html"><i aria-hidden="true"></i>Bruk</a></li>
+      <li><a class="tag" href="om.html"><i aria-hidden="true"></i>Om oss</a></li>
+      <li><a class="tag" href="kontakt.html"><i aria-hidden="true"></i>Kontakt</a></li>
+      <li><a class="tag" href="panel.html" aria-current="page"><i aria-hidden="true"></i>Panel</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · ordre</p><h1>Ordrer og henvendelser</h1><p>Oversikt over dekken, batteri og support. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne ordrer</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Pakkes</p><p class="verdi">2</p><p class="endring">dekken</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">kunde svarer</p></div>
+        <div class="kpi"><p class="navn">Sendt i uken</p><p class="verdi">6</p><p class="endring">alle sporet</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Ordrer</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer ordrer">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Pakkes</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Sendt</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="pagaar" data-navn="Dekken – ordre">
+          <div><p class="ordre-navn">Dekken – ordre</p><p class="ordre-meta"><span>Kunde A</span><span class="skille">/</span><span>Dekken</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pakkes</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk sendt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Høykapasitetsbatteri">
+          <div><p class="ordre-navn">Høykapasitetsbatteri</p><p class="ordre-meta"><span>Kunde B</span><span class="skille">/</span><span>Batteri</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta ordre</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Erstatningsbatteri">
+          <div><p class="ordre-navn">Erstatningsbatteri</p><p class="ordre-meta"><span>Kunde C</span><span class="skille">/</span><span>Batteri</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta ordre</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Spørsmål – bruk">
+          <div><p class="ordre-navn">Spørsmål – bruk</p><p class="ordre-meta"><span>Kunde D</span><span class="skille">/</span><span>Support</span><span class="skille">/</span><span>kunde svarer</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta ordre</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Dekken – ordre 2">
+          <div><p class="ordre-navn">Dekken – ordre 2</p><p class="ordre-meta"><span>Kunde E</span><span class="skille">/</span><span>Dekken</span><span class="skille">/</span><span>i morgen</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pakkes</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk sendt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Retur – batteri">
+          <div><p class="ordre-navn">Retur – batteri</p><p class="ordre-meta"><span>Kunde F</span><span class="skille">/</span><span>Batteri</span><span class="skille">/</span><span>forrige uke</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Sendt</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Sendt</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Produkter</h2><span style="font-size:.66rem;color:var(--graa)">i butikk</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Massasjedekken</p><p class="ordre-meta"><span>22 motorer</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Høykapasitetsbatteri</p><p class="ordre-meta"><span>tilbehør</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Erstatningsbatteri</p><p class="ordre-meta"><span>tilbehør</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 Muscle Therapy · info@muscletherapy.no · 929 24 271</p>
+    <p class="fot-lenker"><a href="dekken.html">Dekkenet</a><a href="bruk.html">Bruk</a><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>
