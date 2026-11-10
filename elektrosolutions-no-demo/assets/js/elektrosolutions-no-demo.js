@@ -60,7 +60,7 @@
         ctx.fillStyle = 'rgba(242,160,60,.14)'; ctx.fill();
       }
       ctx.fillStyle = 'rgba(247,246,244,.45)';
-      ctx.font = '10px "Red Hat Text", sans-serif';
+      ctx.font = '10px "Instrument Sans", sans-serif';
       ctx.fillText('230 V', W * 0.04, y1 - 10);
       ctx.fillText('400 V', W * 0.04, y2 - 10);
       t += 1;

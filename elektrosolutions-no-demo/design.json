@@ -3,8 +3,8 @@
   "firma": "Elektro Solutions AS",
   "navType": "ramme-meny med hjørnemerke",
   "fonts": [
-    "Red Hat Display",
-    "Red Hat Text"
+    "Familjen Grotesk",
+    "Instrument Sans"
   ],
   "palette": [
     "#f7f6f4",

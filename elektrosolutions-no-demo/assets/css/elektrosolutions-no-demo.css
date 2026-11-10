@@ -1,12 +1,12 @@
 
 /* ELEKTRO SOLUTIONS AS — lokal elektrikar i Oslo, vakt 24/7.
-   Eiga stil: Red Hat Display + Red Hat Text. Ramme-meny med hjørnemerke, canvas-straumkrets. */
+   Eiga stil: Familjen Grotesk + Instrument Sans. Ramme-meny med hjørnemerke, canvas-straumkrets. */
 :root{
   --papir:#f7f6f4; --kvit:#fff; --blekk:#121212; --blekk2:#1d1d1b;
   --amber:#f2a03c; --bla:#1f5f8b; --gra:#5f6368;
   --kant:rgba(18,18,18,.16); --kant-mork:rgba(18,18,18,.1);
   --maks:1180px; --tid:cubic-bezier(.2,.7,.28,1);
-  --vis:"Red Hat Display",system-ui,sans-serif; --les:"Red Hat Text",system-ui,sans-serif;
+  --vis:"Familjen Grotesk",system-ui,sans-serif; --les:"Instrument Sans",system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}

@@ -3,7 +3,7 @@
 :root {
   --sort: #161a17; --sort-2: #20261f; --gul: #f2c14e; --papir: #f0efe8; --salvie: #6f8b7d;
   --graa: #6d746c; --kant: rgba(22,26,23,.14); --kant-lys: rgba(240,239,232,.16); --tekst-lys: rgba(240,239,232,.8);
-  --display: "Alegreya", Georgia, serif; --brod: "Lato", "Segoe UI", Arial, sans-serif;
+  --display: "Squada One", "Arial Narrow", sans-serif; --brod: "Mulish", "Segoe UI", Arial, sans-serif;
 }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
 body { margin: 0; background: var(--papir); color: var(--sort); font-family: var(--brod); font-size: 1.0625rem; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
