@@ -1,0 +1,34 @@
+{
+  "slug": "blinq-no-demo",
+  "firma": "blinQ AS",
+  "navType": "splittmeny med logo i midten",
+  "fonts": [
+    "Chakra Petch",
+    "Figtree"
+  ],
+  "palette": [
+    "#101828",
+    "#7c5cff",
+    "#f6f7fb",
+    "#98a2b3"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "ai",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "ai.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

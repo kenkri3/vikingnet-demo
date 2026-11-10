@@ -1,0 +1,35 @@
+{
+  "slug": "flytten-no-demo",
+  "firma": "Flytten AS",
+  "navType": "kantede meny-knapper med ringeknapp",
+  "fonts": [
+    "Krona One",
+    "Manjari"
+  ],
+  "palette": [
+    "#fffdf9",
+    "#1b1b1b",
+    "#2f8f6b",
+    "#d9a13b"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "boksar",
+    "tjenester",
+    "omrader",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "flytting.html",
+    "renhold.html",
+    "omrader.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

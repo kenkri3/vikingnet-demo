@@ -1,0 +1,34 @@
+{
+  "slug": "denlillegarnbutikken-no-demo",
+  "firma": "Den lille garnbutikken",
+  "navType": "tråd med knuter",
+  "fonts": [
+    "Josefin Slab",
+    "Golos Text"
+  ],
+  "palette": [
+    "#2f2a3f",
+    "#e0719b",
+    "#faf7f4",
+    "#8aa899"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "garn",
+    "oppskrifter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "garn.html",
+    "oppskrifter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

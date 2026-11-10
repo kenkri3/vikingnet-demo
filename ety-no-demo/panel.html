@@ -1,175 +1,185 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Einar Tyholdt – Helhetlig Helse &amp; Terapi – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Einar Tyholdt – Helhetlig Helse &amp; Terapi.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Timebok — Einar Tyholdt (demo)</title>
+<meta name="description" content="Demoversjon av timeboken til Einar Tyholdt: forespørsler og behandlinger fra forespurt til fakturert, med filter og logg.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Einar Tyholdt">
+<meta property="og:title" content="Timebok — Einar Tyholdt (demo)">
+<meta property="og:description" content="Demoversjon av timeboken til Einar Tyholdt: forespørsler og behandlinger fra forespurt til fakturert, med filter og logg.">
+<meta property="og:image" content="assets/img/einar.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/ety-no-demo.css">
+<script src="assets/js/ety-no-demo.js" defer></script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">Einar Tyholdt – Helhetlig Helse &amp; Terapi</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="skal">
+    <div class="topp__rad">
+      <a class="merke" href="index.html">
+        <span class="merke__symbol">ETY</span>
+        <span class="merke__tekst">Einar Tyholdt<small>healer · Tønsberg og Asker</small></span>
+      </a>
+      <button class="menyknapp" type="button" data-panel-apne aria-expanded="false" aria-controls="meny">Meny</button>
+    </div>
   </div>
 </header>
-<main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Tønsberg</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Einar Tyholdt – Helhetlig Helse &amp; Terapi. Klikk på en oppgave for å oppdatere status.</p>
+
+<aside class="panel" id="meny" data-panel aria-label="Hovedmeny">
+  <button class="panel__lukk" type="button" data-panel-lukk aria-label="Lukk meny">×</button>
+  <a class="panel__merke" href="index.html">Einar Tyholdt<small>healer</small></a>
+  <details class="kap" open>
+    <summary>Healing</summary>
+    <div class="kap__inn">
+      <a href="index.html">Hjem</a>
+      <a href="healing.html">Healing og behandlinger</a>
+      <a href="priser.html">Priser og gavekort</a>
+    </div>
+  </details>
+  <details class="kap">
+    <summary>Skole og kurs</summary>
+    <div class="kap__inn">
+      <a href="om.html#inkaskolen">Inkaskolen 2026</a>
+      <a href="om.html#seremoni">Fullmåne og bålseremoni</a>
+    </div>
+  </details>
+  <details class="kap">
+    <summary>Om healer</summary>
+    <div class="kap__inn">
+      <a href="om.html">Om Einar Tyholdt</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Timebok (demo)</a>
+    </div>
+  </details>
+</aside>
+<main id="hoved">
+  <div class="paneltopp">
+    <div class="skal">
+      <div class="paneltopp__inn">
+        <span style="font-family:var(--poiret);font-size:1rem">Einar Tyholdt · timebok</span>
+        <span class="paneltopp__bruker"><i></i>demo · eksempeldata</span>
       </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Einar Tyholdt – Helhetlig Helse &amp; Terapi</div>
     </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+  </div>
+  <div class="demo">
+    <div class="skal">
+      <div class="demo__hode">
+        <div>
+          <h1>Timeboken</h1>
+          <p>Flytt en time videre fra forespurt til fakturert. Endringene skjer bare i denne demoen.</p>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Utredning, konsultasjon og rådgivning</strong><span>Ny forespørsel via nettsiden · Tønsberg</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Skreddersydd behandling og oppfølging</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Forebyggende helse og livsstil</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Samarbeid med bedrifter og fagmiljøer</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
+        <a class="knapp knapp--tom knapp--liten" href="kontakt.html">Til kontaktskjemaet</a>
       </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="kpi">
+        <div class="kpi__kort"><span class="kpi__navn">Bekreftet</span><span class="kpi__tall" data-kpi-bekreftet>0</span><span class="kpi__endring">avtalt med kunden</span></div>
+        <div class="kpi__kort kpi__kort--rose"><span class="kpi__navn">Utført</span><span class="kpi__tall" data-kpi-utfort>0</span><span class="kpi__endring">klare for faktura</span></div>
+        <div class="kpi__kort"><span class="kpi__navn">Timer i dag</span><span class="kpi__tall">3</span><span class="kpi__endring">Tønsberg og Asker</span></div>
+        <div class="kpi__kort"><span class="kpi__navn">Steder</span><span class="kpi__tall">2</span><span class="kpi__endring">Tønsberg · Asker</span></div>
+      </div>
+      <div class="verktoylinje">
+        <div class="filter" role="group" aria-label="Filtrer timer">
+          <button type="button" data-filter="alle" aria-pressed="true">Alle</button>
+          <button type="button" data-filter="forespurt" aria-pressed="false">Forespurt</button>
+          <button type="button" data-filter="bekreftet" aria-pressed="false">Bekreftet</button>
+          <button type="button" data-filter="utfort" aria-pressed="false">Utført</button>
+          <button type="button" data-filter="fakturert" aria-pressed="false">Fakturert</button>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om utredning, konsultasjon og rådgivning</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om skreddersydd behandling og oppfølging</strong><p>Kunde i Tønsberg ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av forebyggende helse og livsstil</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+        <span class="verktoylinje__tall" data-antall>6 av 6 timer</span>
+      </div>
+      <div class="demo-rutenett">
+        <div class="timer" data-timer>
+        <div class="time" data-steg="forespurt">
+          <div>
+            <p class="time__navn">Healing — ny time</p>
+            <div class="time__meta"><span>Tønsberg</span><span>tirsdag 14.00</span><span>60 min</span><span class="time__steg">Forespurt</span></div>
+          </div>
+          <button class="time__knapp" type="button" data-neste-steg>Bekreft</button>
+        </div>
+        <div class="time" data-steg="bekreftet">
+          <div>
+            <p class="time__navn">Buqi behandling</p>
+            <div class="time__meta"><span>Asker</span><span>onsdag 10.30</span><span>75 min</span><span class="time__steg">Bekreftet</span></div>
+          </div>
+          <button class="time__knapp" type="button" data-neste-steg>Merk utført</button>
+        </div>
+        <div class="time" data-steg="utfort">
+          <div>
+            <p class="time__navn">Thetahealing</p>
+            <div class="time__meta"><span>Tønsberg</span><span>onsdag 16.00</span><span>60 min</span><span class="time__steg">Utført</span></div>
+          </div>
+          <button class="time__knapp" type="button" data-neste-steg>Fakturer</button>
+        </div>
+        <div class="time" data-steg="forespurt">
+          <div>
+            <p class="time__navn">Inkahealing</p>
+            <div class="time__meta"><span>Asker</span><span>torsdag 12.00</span><span>90 min</span><span class="time__steg">Forespurt</span></div>
+          </div>
+          <button class="time__knapp" type="button" data-neste-steg>Bekreft</button>
+        </div>
+        <div class="time" data-steg="bekreftet">
+          <div>
+            <p class="time__navn">Inkaskolen — påmelding</p>
+            <div class="time__meta"><span>Tønsberg</span><span>lørdag 10.00</span><span>samling</span><span class="time__steg">Bekreftet</span></div>
+          </div>
+          <button class="time__knapp" type="button" data-neste-steg>Merk utført</button>
+        </div>
+        <div class="time" data-steg="fakturert">
+          <div>
+            <p class="time__navn">Gavekort — utstedelse</p>
+            <div class="time__meta"><span>Asker</span><span>forrige uke</span><span>60 min</span><span class="time__steg">Fakturert</span></div>
+          </div>
+          <button class="time__knapp" type="button" data-neste-steg disabled>Fakturert</button>
+        </div>
+        </div>
+        <div style="display:grid;gap:.8rem">
+          <div class="demo-kort">
+            <h2>Aktivitetslogg</h2>
+            <div data-logg></div>
+          </div>
+          <div class="demo-kort">
+            <h2>Slik fungerer demoen</h2>
+            <p style="margin:0;font-size:.86rem;color:var(--graa)">Hver time har et steg. Knappen flytter timen ett steg videre, og loggen viser hva som skjedde. Filteret viser bare timer i valgt steg.</p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
+  </div>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Einar Tyholdt – Helhetlig Helse &amp; Terapi</p>
-      <p class="bunn__tekst">Tønsberg · ety@ety.no</p>
+  <div class="skal">
+    <div class="bunn__rutenett">
+      <div>
+        <p class="bunn__merke">Einar Tyholdt</p>
+        <p>Healer i Tønsberg og Asker. Healing, Buqi, inkahealing og thetahealing — og kurs i inkaskolen.</p>
+      </div>
+      <div>
+        <h2>Behandlinger</h2>
+        <ul>
+          <li><a href="healing.html">Healing</a></li>
+          <li><a href="healing.html#buqi">Buqi behandling</a></li>
+          <li><a href="healing.html#inka">Inkahealing</a></li>
+          <li><a href="healing.html#theta">Thetahealing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontakt</h2>
+        <ul>
+          <li><a href="tel:+4790850853">908 50 853</a></li>
+          <li><a href="mailto:ety@ety.no">ety@ety.no</a></li>
+          <li><a href="kontakt.html">Bestill time</a></li>
+          <li><a href="panel.html">Timebok (demo)</a></li>
+        </ul>
+      </div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Einar Tyholdt – Helhetlig Helse &amp; Terapi</p>
+    <p class="bunn__slutt">© <span data-ar>2026</span> Einar Tyholdt · org.nr 966 049 596 · Denne siden er en demonstrasjon og sender ingen henvendelser.</p>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
 </body>
 </html>

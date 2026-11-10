@@ -1,0 +1,34 @@
+{
+  "slug": "ludvigkamperhaug-no-demo",
+  "firma": "Ludvig Kamperhaug AS",
+  "navType": "fast bunnmeny",
+  "fonts": [
+    "Alfa Slab One",
+    "Barlow"
+  ],
+  "palette": [
+    "#f1ece3",
+    "#2f2a26",
+    "#b08968",
+    "#e0d7c9"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "maskinpark",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

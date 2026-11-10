@@ -11,7 +11,10 @@ if(x+len>W-20)len=W-20-x;
 var lys=0.5+((i*37)%40)/100;
 c.fillStyle="rgba("+Math.round(120+lys*50)+","+Math.round(96+lys*40)+","+Math.round(66+lys*30)+",0.55)";
 c.fillRect(x,y,len,hoyde-6);
-c.strokeStyle="rgba(244,239,230,0.16)";c.lineWidth=1;c.strokeRect(x,y,len,hoyde-6);
+c.strokeStyle="rgba(244,239,230,0.22)";c.lineWidth=1;c.strokeRect(x,y,len,hoyde-6);
+// skjøt mellom bord
+var skjot=x+len*((i%3===0)?0.55:0.72);
+if(skjot<x+len-4){c.fillStyle="rgba(36,32,26,0.55)";c.fillRect(skjot,y,1.5,hoyde-6);}
 // fuge
 c.fillStyle="rgba(36,32,26,0.5)";c.fillRect(x,y+hoyde-6,len,2);
 // åreringer

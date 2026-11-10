@@ -1,66 +1,100 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – Gretes Håndarbeid</title>
-<meta name="description" content="Ta kontakt med Gretes Håndarbeid på e-post post@greteshandarbeid.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex">
+<title>Kontakt Gretes Håndarbeid</title>
+<meta name="description" content="Kontakt Gretes Håndarbeid via skjemaet — spørsmål om garn, garnpakker, oppskrifter og levering.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Gretes Håndarbeid">
+<meta property="og:title" content="Kontakt Gretes Håndarbeid">
+<meta property="og:description" content="Kontakt Gretes Håndarbeid via skjemaet — spørsmål om garn, garnpakker, oppskrifter og levering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/greteshandarbeid-no-demo.css">
 </head>
-<body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<body class="">
+<a class="hopp" href="#innhold">Til innholdet</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Gretes Håndarbeid" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="wrap">
+    <div class="topp__indre">
+      <a class="merke" href="index.html"><b>Gretes Håndarbeid</b><span>garn &amp; inspirasjon</span></a>
+      <span class="topp__meta">Fri frakt over 799,-</span>
+    </div>
+    <nav class="hekle" aria-label="Hovedmeny">
+      <a href="index.html">Forside</a>
+      <a href="garn.html">Garn</a>
+      <a href="oppskrifter.html">Oppskrifter</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </nav>
   </div>
 </header>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Faghandel, mote &amp; interiør · Leknes</p>
-  <h1>Ta kontakt med Gretes Håndarbeid</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
+
+<section class="sidehode"><div class="wrap">
+  <p class="brodsmule"><a href="index.html">Forside</a> / Kontakt</p>
+  <h1>Kontakt</h1>
+  <p class="ingress">Spørsmål om garn, garnpakker, oppskrifter eller levering? Send oss en melding, så svarer vi.</p>
+</div></section>
+
+<section class="seksjon"><div class="wrap split">
   <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">Gretes Håndarbeid</p>
-      <p><strong>Telefon</strong><br><a href="tel:+4750324800">50 32 48 00</a></p>
-      <p><strong>E-post</strong><br><a href="mailto:post@greteshandarbeid.no">post@greteshandarbeid.no</a></p>
-      <p><strong>Område</strong><br>Leknes</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
-  </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:post@greteshandarbeid.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Kuratert utvalg og kjente merkevarer</option><option>Personlig veiledning og prøving</option><option>Spesialbestilling og tilpasning</option><option>Kundeservice og rask levering</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
-  </form>
-</section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Gretes Håndarbeid</p>
-      <p class="bunn__tekst">Leknes · 50 32 48 00 · post@greteshandarbeid.no</p>
+    <form class="skjema" data-skjema novalidate>
+      <div class="felt--to">
+        <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" placeholder="Fornavn og etternavn"></div>
+        <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" placeholder="navn@epost.no"></div>
+      </div>
+      <div class="felt--to">
+        <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="900 00 000"></div>
+        <div class="felt"><label for="tema">Hva gjelder det?</label><select id="tema" name="tema"><option>Garn og garnvalg</option><option>Garnpakke</option><option>Oppskrift</option><option>Ordre og levering</option><option>Annet</option></select></div>
+      </div>
+      <div class="felt"><label for="melding">Melding</label><textarea id="melding" name="melding" placeholder="Skriv noen ord om hva du lurer på"></textarea></div>
+      <p class="skjema__feil" role="alert" aria-live="polite"></p>
+      <div><button class="knapp" type="submit">Send melding <span class="pil" aria-hidden="true">→</span></button></div>
+    </form>
+    <div class="skjema__kvittering" tabindex="-1" role="status">
+      <strong data-kvittering-navn>Takk!</strong>
+      Meldingen er registrert i denne demoen. I den ekte løsningen hadde du fått svar fra Gretes Håndarbeid.
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Gretes Håndarbeid</p>
+  </div>
+  <div>
+    <div class="noste-ramme" style="padding:.6rem">
+      <div class="noste-ramme__topp"><span>Butikken</span><span>nett</span></div>
+      <div class="noste-scene" style="height:190px"><div class="noste"><span class="noste__etikett">garn</span></div></div>
+      <div class="noste-ramme__fot"><span>greteshandarbeid.no</span><span>illustrasjon</span></div>
+    </div>
+    <div style="border-top:1px dashed var(--kant);padding-top:.9rem;margin-top:1rem">
+      <h3 style="font-size:1rem;margin-bottom:.3rem">Kontaktinformasjon</h3>
+      <p style="color:var(--gra);margin:0;font-size:.92rem">Nettbutikken oppgir ikke telefon, e-post eller besøksadresse i de sidene vi kan lese. Bruk skjemaet, så tar vi kontakt. Vi legger ikke inn opplysninger vi ikke kan verifisere.</p>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="botn">
+  <div class="wrap">
+    <div class="botn__indre">
+      <div>
+        <span style="font-family:var(--vis);font-weight:700;font-size:1.02rem;color:#fff">Gretes Håndarbeid</span>
+        <p style="margin-top:.5rem">Garn, garnpakker og oppskrifter — for deg som strikker, hekler og liker å lage ting selv.</p>
+      </div>
+      <div>
+        <h4>Sidene</h4>
+        <ul><li><a href="garn.html">Garn</a></li><li><a href="oppskrifter.html">Oppskrifter</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Panel</a></li></ul>
+      </div>
+      <div>
+        <h4>Butikken</h4>
+        <p>Nettbutikk med garn og garnpakker.</p>
+        <p style="font-size:.8rem">Kontakt oss via skjemaet på kontaktsiden.</p>
+      </div>
+    </div>
+    <p class="botn__kreditt">© Gretes Håndarbeid · greteshandarbeid.no</p>
   </div>
 </footer>
-<script src="app.js"></script>
+<script src="assets/js/greteshandarbeid-no-demo.js" defer></script>
 </body>
 </html>

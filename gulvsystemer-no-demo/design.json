@@ -1,0 +1,34 @@
+{
+  "slug": "gulvsystemer-no-demo",
+  "firma": "Gulvsystemer",
+  "navType": "fargeprøver som meny",
+  "fonts": [
+    "Bitter",
+    "Assistant"
+  ],
+  "palette": [
+    "#22303a",
+    "#e2703a",
+    "#f7f5f1",
+    "#6c8ea4"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "gulv",
+    "maling",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "gulv.html",
+    "maling.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

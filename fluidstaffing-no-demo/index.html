@@ -1,181 +1,92 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Fluid Staffing AS – Rekruttering &amp; bemanning</title>
-<meta name="description" content="Fluid Staffing kobler sammen tannklinikker som trenger kompetent personell og tannhelsepersonell som ønsker å arbeide mer – assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.">
-<meta property="og:title" content="Fluid Staffing AS – Rekruttering &amp; bemanning">
-<meta property="og:description" content="Fluid Staffing kobler sammen tannklinikker som trenger kompetent personell og tannhelsepersonell som ønsker å arbeide mer – assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.">
-<meta property="og:image" content="img/live-foto-1.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Fluid Staffing – bemanning for tannhelse</title>
+<meta name="description" content="Fluid Staffing AS kobler tannklinikker med tannhelsepersonell: assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Fluid Staffing – bemanning for tannhelse">
+<meta property="og:description" content="Fluid Staffing AS kobler tannklinikker med tannhelsepersonell: assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/vaktplan.webp">
+<meta name="theme-color" content="#33415c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Bungee&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/fluidstaffing-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Fluid Staffing AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="piller">
+  <div class="piller__indre">
+    <a class="merke" href="index.html"><b>Fluid<i>Staffing</i></b><small>bemanning for tannhelse</small></a>
+    <nav class="pilleliste" aria-label="Hovedmeny">
+      <a class="pille" href="index.html" aria-current="page">Hjem</a>
+      <a class="pille" href="klinikker.html">For klinikker</a>
+      <a class="pille" href="personell.html">For personell</a>
+      <a class="pille" href="hvordan.html">Hvordan det fungerer</a>
+      <a class="pille" href="kontakt.html">Kontakt</a>
+      <a class="pille" href="panel.html">Panel</a>
+    </nav>
   </div>
 </header>
+<div class="topp"><div class="inn"><span>Bemanning for tannhelse · Oslo</span><span><a href="tel:+4747368521">+47 47 36 85 21</a> · <a href="mailto:post@fluidstaffing.no">post@fluidstaffing.no</a></span></div></div>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/live-foto-1.jpg" alt="Fluid Staffing AS" loading="eager" decoding="async">
-    <figcaption><strong>Fluid Staffing AS</strong><span>Rekruttering &amp; bemanning · Norge</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Rekruttering &amp; bemanning · Norge</p>
-    <h1>Rett kompetanse på rett plass – når virksomheten trenger det</h1>
-    <p class="helt__ingress">Fluid Staffing kobler sammen tannklinikker som trenger kompetent personell og tannhelsepersonell som ønsker å arbeide mer – assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tel:+4747368521">Ring 47 36 85 21</a>
-    </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">Grundig kvalitetssikring og referansesjekk</li>
-      <li class="tillit__punkt">Sterkt kandidatnettverk</li>
-      <li class="tillit__punkt">Tett oppfølging av både kunde og ansatt</li>
-    </ul>
+<section class="hero mork">
+  <canvas class="hero__lerret" id="plan" aria-hidden="true"></canvas>
+  <div class="hero__dekk" aria-hidden="true"></div>
+  <div class="inn hero__inn">
+    <span class="hero__merke"><i></i>Bemanning for tannhelse</span>
+    <h1>Bemanning for tannhelse – <em>enkelt, fleksibelt</em> og kvalitetssikret.</h1>
+    <p class="hero__ingress">Fluid Staffing kobler sammen tannklinikker som trenger kompetent personell og tannhelsepersonell som ønsker å arbeide mer.</p>
+    <div class="hero__knapper"><a class="knapp" href="klinikker.html">Jeg trenger personell <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="personell.html">Jeg vil jobbe</a></div>
+    <div class="hero__fakta"><span>Assistenter</span><span>Tannpleiere</span><span>Tannleger</span></div>
   </div>
 </section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">01 — To spor</div><h2>Velg veien som passer ditt behov</h2></div><p>Vi kobler klinikker og tannhelsepersonell – med minimal administrasjon.</p></div>
+  <ul class="tjlist">
+    <li><a href="klinikker.html"><span class="nr">01</span><span><b>For klinikker</b><small>Kompetent personell når dere trenger det – kort eller langt.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="personell.html"><span class="nr">02</span><span><b>For personell</b><small>Jobb mer fleksibelt, på tvers av klinikker.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="hvordan.html"><span class="nr">03</span><span><b>Hvordan det fungerer</b><small>Fra behov til bekreftet vakt.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+  </ul>
+</div></section>
+<section class="sek sek--kritt2 sek--strek"><div class="inn media">
+  <figure class="ramme ramme--43 avslor"><img src="assets/img/vaktplan.webp" width="1200" height="800" alt="Vaktplan"><figcaption>Vaktplan som fylles.</figcaption></figure>
+  <div class="kropp avslor"><div class="merkelinje">02 — Kvalitet</div><h2>Kvalitetssikret match</h2>
+    <p>Vi kjenner hele tannhelsefeltet – assistenter, tannhelsesekretærer, tannpleiere, tannleger og spesialister. Det gjør at vi kan matche riktig kompetanse til riktig klinikk.</p>
+    <ul class="punkter"><li><b>Minimal administrasjon</b> – for begge parter.</li><li><b>Kvalitetssikret match</b> – riktig kompetanse.</li><li><b>Hele feltet</b> – alle roller.</li></ul>
   </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/hero.jpg" alt="Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Fast rekruttering av spesialister og fagfolk</h3>
-      <p>Helhetlig rekrutteringsprosess med kravprofil, aktivt kandidatsøk, strukturerte intervjuer, testing og grundig referansekontroll.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-3.jpg" alt="Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Fleksibel bemanning og vikarutleie</h3>
-      <p>Rask tilgang på kvalifiserte medarbeidere ved sesongtopper, prosjekter, sykdom eller midlertidige bemanningsbehov.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-4.jpg" alt="Executive Search og styreutvelgelse" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Executive Search og styreutvelgelse</h3>
-      <p>Konfidensielt søk og utvelgelse av toppledere, mellomledere og styremedlemmer som skaper langsiktig utvikling og resultater.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-5.jpg" alt="Rådgivning og kandidatutvikling" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Rådgivning og kandidatutvikling</h3>
-      <p>Støtte ved organisasjonsutvikling, onboarding, karriererådgivning og kompetansekartlegging for bedrifter og jobbsøkere.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Mennesker før CV-er</h3><p>Vi legger like stor vekt på personlig egnethet, motivasjon og kulturmatch som på formell bakgrunn.</p></div>
-    <div class="verdi"><h3>Kvalitet og etterlevelse</h3><p>Som seriøs bemannings- og rekrutteringsaktør sikrer vi ryddige arbeidsforhold og full etterlevelse av lovverket.</p></div>
-    <div class="verdi"><h3>Bransjekunnskap</h3><p>Våre rådgivere kjenner kompetansekravene i bransjen og vet hva som skal til for å lykkes i rollen.</p></div>
-    <div class="verdi"><h3>Forpliktende oppfølging</h3><p>Vi følger opp både oppdragsgiver og nyansatt etter oppstart for å sikre en god og varig match.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/seksjon-6.jpg" alt="Fluid Staffing AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Sterke team bygges når faglig kompetanse og personlig drivkraft møter riktig arbeidsplass.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Oversiktlig rekrutteringsløp</p>
-      <h2>Timene og avtalene, på ett sted</h2>
-      <p>Fra avklart kravprofil til signert arbeidsavtale har både oppdragsgiver og kandidater tydelig oversikt over hvor prosessen står.</p>
-    </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Status i oppdraget</p>
-      <div class="drom__rad"><span>Kravprofil og kandidatsøk</span><span>Fullført</span></div><div class="drom__rad"><span>Intervjuer og faglig vurdering</span><span>Pågår</span></div><div class="drom__rad"><span>Referansesjekk og innstilling</span><span>Klar</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
-  </div>
+</div></section>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">03 — Slik fungerer det</div><h2>Fire steg</h2></div><p>Kort vei fra behov til personell på plass.</p></div>
   <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
+    <li><b>Behov</b><p>Rolle, dato, sted og erfaring.</p></li>
+    <li><b>Match</b><p>Vi finner personell som passer.</p></li>
+    <li><b>Bekreft</b><p>Begge parter sier ja.</p></li>
+    <li><b>Vakt</b><p>Personellet møter, klinikken driver.</p></li>
   </ol>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
-  </div>
-  <div class="galleri galleri--to">
-    <figure class="galleri__bilde"><img src="img/seksjon-7.jpg" alt="Fluid Staffing AS – Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"><figcaption>Fluid Staffing AS – Fast rekruttering av spesialister og fagfolk</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-8.jpg" alt="Fluid Staffing AS – Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"><figcaption>Fluid Staffing AS – Fleksibel bemanning og vikarutleie</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
-</section>
-
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">Fluid Staffing AS</p>
-        <p><strong>Telefon</strong><br><a href="tel:+4747368521">47 36 85 21</a></p>
-        <p><strong>E-post</strong><br><a href="mailto:post@fluidstaffing.no">post@fluidstaffing.no</a></p>
-        <p><strong>Område</strong><br>Norge</p>
-      </aside>
-    </div>
-    <form class="skjema" action="mailto:post@fluidstaffing.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Fast rekruttering av spesialister og fagfolk</option><option>Fleksibel bemanning og vikarutleie</option><option>Executive Search og styreutvelgelse</option><option>Rådgivning og kandidatutvikling</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
-  </div>
-</section>
+</div></section>
+<section class="cta"><div class="inn">
+  <h2>La oss finne riktig løsning</h2>
+  <p>Enten du trenger personell raskt eller vil jobbe mer fleksibelt – send oss noen linjer.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="hvordan.html">Slik fungerer det</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Fluid Staffing AS</p>
-      <p class="bunn__tekst">Norge · 47 36 85 21 · post@fluidstaffing.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Fluid Staffing AS</span><p>Bemanning for tannhelse – enkelt, fleksibelt og kvalitetssikret. Vi kobler klinikker og tannhelsepersonell.</p><p><a href="mailto:post@fluidstaffing.no">post@fluidstaffing.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="klinikker.html">For klinikker</a></li><li><a href="personell.html">For personell</a></li><li><a href="hvordan.html">Hvordan det fungerer</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>For hvem</h4><ul><li><a href="klinikker.html">Klinikker</a></li><li><a href="personell.html">Tannhelsepersonell</a></li><li><a href="hvordan.html">Slik fungerer det</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4747368521">+47 47 36 85 21</a><br><a href="mailto:post@fluidstaffing.no">post@fluidstaffing.no</a></p><p style="margin-top:8px">Oslo</p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Fluid Staffing AS</p>
+    <div class="bunn__bunn"><span>© 2026 Fluid Staffing AS</span><span>Nettsiden er en demonstrasjon laget for Fluid Staffing AS</span><a href="panel.html">Bemanningspanel</a></div>
   </div>
 </footer>
+<script src="assets/js/fluidstaffing-no-demo.js" defer></script>
 </body>
 </html>

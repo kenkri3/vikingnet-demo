@@ -1,0 +1,33 @@
+{
+  "slug": "fluidstaffing-no-demo",
+  "firma": "Fluid Staffing AS",
+  "navType": "pille-stripe",
+  "fonts": [
+    "Bungee",
+    "Amiri"
+  ],
+  "palette": [
+    "#33415c",
+    "#f5f3ef",
+    "#4ecdc4"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "to-spor",
+    "kvalitet",
+    "slik-fungerer-det",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "klinikker.html",
+    "personell.html",
+    "hvordan.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -345,3 +345,10 @@ tbody th { font-family: var(--cardo); font-weight: 700; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; }
 }
+/* husrekken er et rutenett, ikke en avkuttet stripe */
+.rekke { overflow: visible; }
+.rekke__spor { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: auto; gap: .8rem; transform: none !important; padding-bottom: 0; }
+.huskort { width: auto; }
+@media (min-width: 900px) {
+  .rekke__spor { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}

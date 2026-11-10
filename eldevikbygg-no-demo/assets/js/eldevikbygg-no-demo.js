@@ -14,6 +14,7 @@
   }
 
   function rekke() {
+    if (true) return; /* rutenett, ikke stripe */
     var boks = document.querySelector("[data-rekke]");
     if (!boks) return;
     var spor = boks.querySelector(".rekke__spor");

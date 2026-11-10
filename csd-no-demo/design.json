@@ -1,0 +1,34 @@
+{
+  "slug": "csd-no-demo",
+  "firma": "CSD Sealing Systems",
+  "navType": "teknisk kategoristripe",
+  "fonts": [
+    "Exo 2",
+    "Nunito Sans"
+  ],
+  "palette": [
+    "#f2f5f7",
+    "#0f2733",
+    "#3f9a6b",
+    "#dae2e8"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "segmenter",
+    "slik-virker-det",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "losninger.html",
+    "produkter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

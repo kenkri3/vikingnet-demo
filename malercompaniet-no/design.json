@@ -1,0 +1,34 @@
+{
+  "slug": "malercompaniet-no",
+  "firma": "Tapet & MalerCompaniet AS",
+  "navType": "meny med fargeprikker",
+  "fonts": [
+    "Cormorant Garamond",
+    "Mulish"
+  ],
+  "palette": [
+    "#faf7f2",
+    "#3a322b",
+    "#c96f4a",
+    "#e9e1d6"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "farger",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

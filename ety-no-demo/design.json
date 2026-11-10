@@ -1,0 +1,33 @@
+{
+  "slug": "ety-no-demo",
+  "firma": "Einar Tyholdt",
+  "navType": "sidepanel med kapitler",
+  "fonts": [
+    "Poiret One",
+    "Quicksand"
+  ],
+  "palette": [
+    "#f4f0ea",
+    "#3a3348",
+    "#b48a9a",
+    "#fdfaf5"
+  ],
+  "motion": [
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "healing",
+    "priser",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "healing.html",
+    "priser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

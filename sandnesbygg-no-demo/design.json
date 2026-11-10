@@ -1,0 +1,34 @@
+{
+  "slug": "sandnesbygg-no-demo",
+  "firma": "AJ Sandnes Bygg AS",
+  "navType": "bunnfestet meny",
+  "fonts": [
+    "Alfa Slab One",
+    "Saira"
+  ],
+  "palette": [
+    "#1d2320",
+    "#c9a227",
+    "#f3f1ea",
+    "#6b7f6f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "hus",
+    "prosessen",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "hus.html",
+    "prosessen.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

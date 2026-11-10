@@ -1,0 +1,33 @@
+{
+  "slug": "busch-s-no-demo",
+  "firma": "Busch Sørensen",
+  "navType": "split-center-logo",
+  "fonts": [
+    "Jost",
+    "Assistant"
+  ],
+  "palette": [
+    "#123028",
+    "#f3f6f2",
+    "#7fb069",
+    "#4a6b5c"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "bobler",
+    "tjenester",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

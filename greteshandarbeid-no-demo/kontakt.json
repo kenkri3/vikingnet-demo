@@ -1,0 +1,10 @@
+{
+  "firma": "Gretes Håndarbeid",
+  "adresse": null,
+  "telefon": null,
+  "epost": null,
+  "org_nr": null,
+  "kilde_url": "https://www.greteshandarbeid.no/",
+  "notat": "Nettbutikken er JS-basert og oppgir ikke telefon, e-post, adresse eller org.nr i det vi kunne lese (og /personvern, /kjopsvilkar, /kundeservice svarar 404).",
+  "verifisert_dato": "2026-11-10"
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "euroressurs-com-demo",
+  "firma": "euroRessurs AS",
+  "navType": "toppmeny med skråstrek og filialstripe",
+  "fonts": [
+    "Spline Sans",
+    "Overlock"
+  ],
+  "palette": [
+    "#f5f6f7",
+    "#101a24",
+    "#2f6f9e",
+    "#e08b3c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "kraftlinje",
+    "tjenester",
+    "bransjer",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bransjer.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

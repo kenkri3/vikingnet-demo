@@ -175,3 +175,7 @@ tbody th { font-family: var(--barlow); font-weight: 600; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; } .jord__kule::after { animation: none; } }
 .jord { position: relative; overflow: hidden; }
 .jord__bue { inset: 6%; }
+.seksjon .knapp--tom { border-color: #b3c5c1; color: #1d2a2e; background: transparent; }
+.seksjon .knapp--tom:hover { background: #0b2d3a; border-color: #0b2d3a; color: #fff; }
+.seksjon--mork .knapp--tom { border-color: #33586a; color: #dcebee; }
+.seksjon--mork .knapp--tom:hover { background: #fff; border-color: #fff; color: #0b2d3a; }

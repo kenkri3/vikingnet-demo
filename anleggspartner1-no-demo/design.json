@@ -1,0 +1,34 @@
+{
+  "slug": "anleggspartner1-no-demo",
+  "firma": "Anleggspartner1 Midt Norge AS",
+  "navType": "horisontal scrollmeny med nummer",
+  "fonts": [
+    "Kanit",
+    "Work Sans"
+  ],
+  "palette": [
+    "#f2efe9",
+    "#2a2d31",
+    "#6b7f3a",
+    "#e0dbd1"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "miljo.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

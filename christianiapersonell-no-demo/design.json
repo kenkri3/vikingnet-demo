@@ -1,0 +1,33 @@
+{
+  "slug": "christianiapersonell-no-demo",
+  "firma": "Christiania Personell AS",
+  "navType": "kandidatkort-stripe",
+  "fonts": [
+    "Trirong",
+    "Silkscreen"
+  ],
+  "palette": [
+    "#1f3b4d",
+    "#f4f1ea",
+    "#f0a63a"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "to-veier-inn",
+    "om-oss",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "jobbsokere.html",
+    "bedrifter.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

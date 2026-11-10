@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Byggepanel — AJ Sandnes Bygg AS</title>
+<meta name="description" content="Demoversjon av byggepanelet til AJ Sandnes Bygg: prosjekter og faser med status, filter og fremdrift.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="AJ Sandnes Bygg AS">
+<meta property="og:title" content="Byggepanel — AJ Sandnes Bygg AS">
+<meta property="og:description" content="Demoversjon av byggepanelet til AJ Sandnes Bygg: prosjekter og faser med status, filter og fremdrift.">
+<meta property="og:image" content="assets/img/01-sandnes.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Saira:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/sandnesbygg-no-demo.css">
+<script src="assets/js/sandnesbygg-no-demo.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>AJ Sandnes Bygg</strong> <span>Røros</span></a>
+    <a class="topp-tel" href="tel:+4741660066">41 66 00 66</a>
+  </div>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · bygging</p><h1>Prosjekter og faser</h1><p>Oversikt over byggeprosjekter. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Aktive prosjekter</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Pågår</p><p class="verdi">2</p><p class="endring">reisning + overtakelse</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">tegning</p></div>
+        <div class="kpi"><p class="navn">Levert i år</p><p class="verdi">7</p><p class="endring">hus og hytter</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Prosjekter</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer prosjekter">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Pågår</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="pagaar" data-navn="Nybygg – enebolig">
+          <div><p class="ordre-navn">Nybygg – enebolig</p><p class="ordre-meta"><span>Røros</span><span class="skille">/</span><span>Nybygg</span><span class="skille">/</span><span>reisning</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk ferdig</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Hytte – grunnarbeid">
+          <div><p class="ordre-navn">Hytte – grunnarbeid</p><p class="ordre-meta"><span>Femund</span><span class="skille">/</span><span>Hytte</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta prosjekt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Skreddersøm – tilbygg">
+          <div><p class="ordre-navn">Skreddersøm – tilbygg</p><p class="ordre-meta"><span>Tolga</span><span class="skille">/</span><span>Skreddersøm</span><span class="skille">/</span><span>tegning</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta prosjekt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Huskatalog – forespørsel">
+          <div><p class="ordre-navn">Huskatalog – forespørsel</p><p class="ordre-meta"><span>Os</span><span class="skille">/</span><span>Salg</span><span class="skille">/</span><span>i går</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta prosjekt</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Overtakelse – enebolig">
+          <div><p class="ordre-navn">Overtakelse – enebolig</p><p class="ordre-meta"><span>Røros</span><span class="skille">/</span><span>Nybygg</span><span class="skille">/</span><span>uke 47</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk ferdig</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Tilbygg – garasje">
+          <div><p class="ordre-navn">Tilbygg – garasje</p><p class="ordre-meta"><span>Glåmos</span><span class="skille">/</span><span>Skreddersøm</span><span class="skille">/</span><span>forrige uke</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Ferdig</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Ferdig</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Fag</h2><span style="font-size:.62rem;color:var(--graa)">på prosjekt</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Tømrer</p><p class="ordre-meta"><span>4 mann</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Grunn</p><p class="ordre-meta"><span>2 mann</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Innredning</p><p class="ordre-meta"><span>2 mann</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 AJ Sandnes Bygg AS · Stamphusveien 7a, 7374 Røros · 41 66 00 66</p>
+    <p class="fot-lenker"><a href="hus.html">Hustyper</a><a href="prosessen.html">Byggeprosessen</a><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

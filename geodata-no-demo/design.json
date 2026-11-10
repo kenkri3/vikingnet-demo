@@ -1,0 +1,34 @@
+{
+  "slug": "geodata-no-demo",
+  "firma": "Geodata",
+  "navType": "to-trinns-fanemeny",
+  "fonts": [
+    "Chakra Petch",
+    "Commissioner"
+  ],
+  "palette": [
+    "#10242e",
+    "#eef2f0",
+    "#37a58c",
+    "#5b7f93"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "kartlag",
+    "produkter",
+    "bransjer",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

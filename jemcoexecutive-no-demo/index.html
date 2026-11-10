@@ -1,182 +1,93 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>JEMCO Executive AS – Rekruttering &amp; bemanning</title>
-<meta name="description" content="JEMCO Executive AS kobler dyktige fagfolk, spesialister og ledere med bedrifter gjennom målrettet rekruttering, fleksibel bemanning og lederutvelgelse.">
-<meta property="og:title" content="JEMCO Executive AS – Rekruttering &amp; bemanning">
-<meta property="og:description" content="JEMCO Executive AS kobler dyktige fagfolk, spesialister og ledere med bedrifter gjennom målrettet rekruttering, fleksibel bemanning og lederutvelgelse.">
-<meta property="og:image" content="img/01-jemcoexecutive-no.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Jemco Executive – executive search i Oslo</title>
+<meta name="description" content="Jemco Executive er din partner ved spesialist- og lederposisjoner: executive search, search express, outplacement og coaching, og styreverv.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Jemco Executive – executive search i Oslo">
+<meta property="og:description" content="Jemco Executive er din partner ved spesialist- og lederposisjoner: executive search, search express, outplacement og coaching, og styreverv.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/nettverk.webp">
+<meta name="theme-color" content="#17181c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,600;1,400&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/jemcoexecutive-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="JEMCO Executive AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="knuter">
+  <div class="knuter__indre">
+    <a class="merke" href="index.html"><b>Jemco<i> Executive</i></b><small>executive search · oslo</small></a>
+    <nav class="nett" aria-label="Hovedmeny">
+      <a href="index.html" aria-current="page">Hjem</a>
+      <a href="tjenester.html">Tjenester</a>
+      <a href="erfaring.html">Erfaring</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </nav>
   </div>
 </header>
+<div class="topp"><div class="inn"><span>Executive search · Oslo</span><span><a href="tel:+4723950149">23 95 01 49</a></span></div></div>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/01-jemcoexecutive-no.jpg" alt="JEMCO Executive AS" loading="eager" decoding="async">
-    <figcaption><strong>JEMCO Executive AS</strong><span>Rekruttering &amp; bemanning · Oslo</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Rekruttering &amp; bemanning · Oslo</p>
-    <h1>Rett kompetanse på rett plass – når virksomheten trenger det</h1>
-    <p class="helt__ingress">JEMCO Executive AS kobler dyktige fagfolk, spesialister og ledere med bedrifter gjennom målrettet rekruttering, fleksibel bemanning og lederutvelgelse.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tjenester.html">Se våre tjenester</a>
-    </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">Grundig kvalitetssikring og referansesjekk</li>
-      <li class="tillit__punkt">Sterkt kandidatnettverk</li>
-      <li class="tillit__punkt">Tett oppfølging av både kunde og ansatt</li>
-    </ul>
+<section class="hero mork">
+  <canvas class="hero__lerret" id="nett" aria-hidden="true"></canvas>
+  <div class="hero__dekk" aria-hidden="true"></div>
+  <div class="inn hero__inn">
+    <span class="hero__merke"><i></i>Executive search · Oslo</span>
+    <h1>Ledere og <em>spesialister</em> som gjør en forskjell.</h1>
+    <p class="hero__ingress">Jemco Executive er din profesjonelle partner ved spesialist- og lederposisjoner – med diskré tilnærming og bred erfaring.</p>
+    <div class="hero__knapper"><a class="knapp" href="tjenester.html">Se tjenestene <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="kontakt.html">Ta kontakt</a></div>
+    <div class="hero__fakta"><span>Executive Search</span><span>Search Express</span><span>Styreverv</span></div>
   </div>
 </section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">01 — Tjenester</div><h2>Søk, utvikling og styreverv</h2></div><p>Vi jobber med toppledere, spesialister og styreposisjoner.</p></div>
+  <ul class="tjlist">
+    <li><a href="tjenester.html#search"><span class="nr">01</span><span><b>Executive Search</b><small>Diskré søk etter ledere og spesialister.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="tjenester.html#express"><span class="nr">02</span><span><b>Search Express</b><small>Raskere søk når tiden er knapp.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="tjenester.html#outplacement"><span class="nr">03</span><span><b>Outplacement og coaching</b><small>Bistand når roller endres.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="tjenester.html#styre"><span class="nr">04</span><span><b>Styreverv</b><small>Rekruttering til styrer og råd.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+  </ul>
+</div></section>
+<section class="sek sek--kritt2 sek--strek"><div class="inn media">
+  <figure class="ramme ramme--43 avslor"><img src="assets/img/nettverk.webp" width="1200" height="800" alt="Nettverk av kandidater"><figcaption>Nettverket er metoden.</figcaption></figure>
+  <div class="kropp avslor"><div class="merkelinje">02 — Kunder</div><h2>Store og små virksomheter</h2>
+    <p>Våre kunder er større globale konsern med hovedkontor i Norge, OBX-noterte selskaper, mellomstore bedrifter og start-ups.</p>
+    <ul class="punkter"><li><b>Globale konsern</b> – med norsk hovedkontor.</li><li><b>OBX-noterte</b> – børsnoterte selskaper.</li><li><b>Start-ups</b> – i vekst.</li></ul>
   </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/02-jemcoexecutive-no.jpg" alt="Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Fast rekruttering av spesialister og fagfolk</h3>
-      <p>Helhetlig rekrutteringsprosess med kravprofil, aktivt kandidatsøk, strukturerte intervjuer, testing og grundig referansekontroll.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/03-jemcoexecutive-no.jpg" alt="Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Fleksibel bemanning og vikarutleie</h3>
-      <p>Rask tilgang på kvalifiserte medarbeidere ved sesongtopper, prosjekter, sykdom eller midlertidige bemanningsbehov.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/04-jemcoexecutive-no.jpg" alt="Executive Search og styreutvelgelse" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Executive Search og styreutvelgelse</h3>
-      <p>Konfidensielt søk og utvelgelse av toppledere, mellomledere og styremedlemmer som skaper langsiktig utvikling og resultater.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/05-jemcoexecutive-no.jpg" alt="Rådgivning og kandidatutvikling" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Rådgivning og kandidatutvikling</h3>
-      <p>Støtte ved organisasjonsutvikling, onboarding, karriererådgivning og kompetansekartlegging for bedrifter og jobbsøkere.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Mennesker før CV-er</h3><p>Vi legger like stor vekt på personlig egnethet, motivasjon og kulturmatch som på formell bakgrunn.</p></div>
-    <div class="verdi"><h3>Kvalitet og etterlevelse</h3><p>Som seriøs bemannings- og rekrutteringsaktør sikrer vi ryddige arbeidsforhold og full etterlevelse av lovverket.</p></div>
-    <div class="verdi"><h3>Bransjekunnskap</h3><p>Våre rådgivere kjenner kompetansekravene i bransjen og vet hva som skal til for å lykkes i rollen.</p></div>
-    <div class="verdi"><h3>Forpliktende oppfølging</h3><p>Vi følger opp både oppdragsgiver og nyansatt etter oppstart for å sikre en god og varig match.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/seksjon-6.jpg" alt="JEMCO Executive AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Sterke team bygges når faglig kompetanse og personlig drivkraft møter riktig arbeidsplass.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Oversiktlig rekrutteringsløp</p>
-      <h2>Avvik og fremdrift, oppdatert</h2>
-      <p>Fra avklart kravprofil til signert arbeidsavtale har både oppdragsgiver og kandidater tydelig oversikt over hvor prosessen står.</p>
-    </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Status i oppdraget</p>
-      <div class="drom__rad"><span>Kravprofil og kandidatsøk</span><span>Fullført</span></div><div class="drom__rad"><span>Intervjuer og faglig vurdering</span><span>Pågår</span></div><div class="drom__rad"><span>Referansesjekk og innstilling</span><span>Klar</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
-  </div>
+</div></section>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">03 — Slik jobber vi</div><h2>Fire steg</h2></div><p>Diskré prosess, tydelige milepæler.</p></div>
   <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
+    <li><b>Brief</b><p>Rolle, profil og kontekst.</p></li>
+    <li><b>Søk</b><p>Kartlegging i nettverket.</p></li>
+    <li><b>Intervju</b><p>Vurdering av kandidater.</p></li>
+    <li><b>Ansettelse</b><p>Oppfølging etter start.</p></li>
   </ol>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
-  </div>
-  <div class="galleri galleri--tre">
-    <figure class="galleri__bilde"><img src="img/seksjon-7.jpg" alt="JEMCO Executive AS – Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"><figcaption>JEMCO Executive AS – Fast rekruttering av spesialister og fagfolk</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-8.jpg" alt="JEMCO Executive AS – Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"><figcaption>JEMCO Executive AS – Fleksibel bemanning og vikarutleie</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-9.jpg" alt="JEMCO Executive AS – Executive Search og styreutvelgelse" loading="lazy" decoding="async"><figcaption>JEMCO Executive AS – Executive Search og styreutvelgelse</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
-</section>
-
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">JEMCO Executive AS</p>
-        
-        <p><strong>E-post</strong><br><a href="mailto:post@jemcoexecutive.no">post@jemcoexecutive.no</a></p>
-        <p><strong>Område</strong><br>Oslo</p>
-      </aside>
-    </div>
-    <form class="skjema" action="mailto:post@jemcoexecutive.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Fast rekruttering av spesialister og fagfolk</option><option>Fleksibel bemanning og vikarutleie</option><option>Executive Search og styreutvelgelse</option><option>Rådgivning og kandidatutvikling</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
-  </div>
-</section>
+</div></section>
+<section class="cta"><div class="inn">
+  <h2>Din profesjonelle partner</h2>
+  <p>Ved spesialist- og lederposisjoner – ta kontakt for en diskré samtale.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tel:+4723950149">Ring 23 95 01 49</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">JEMCO Executive AS</p>
-      <p class="bunn__tekst">Oslo · post@jemcoexecutive.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Jemco Executive</span><p>Din profesjonelle partner ved spesialist- og lederposisjoner – executive search, outplacement og coaching.</p><p>Org.nr 911 754 851</p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="erfaring.html">Erfaring</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="tjenester.html#search">Executive Search</a></li><li><a href="tjenester.html#express">Search Express</a></li><li><a href="tjenester.html#outplacement">Outplacement</a></li><li><a href="tjenester.html#styre">Styreverv</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4723950149">23 95 01 49</a></p><p style="margin-top:8px">Oslo</p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 JEMCO Executive AS</p>
+    <div class="bunn__bunn"><span>© 2026 Jemco Executive</span><span>Nettsiden er en demonstrasjon laget for Jemco Executive</span><a href="panel.html">Oppdragspanel</a></div>
   </div>
 </footer>
+<script src="assets/js/jemcoexecutive-no-demo.js" defer></script>
 </body>
 </html>

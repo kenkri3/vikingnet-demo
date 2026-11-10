@@ -1,0 +1,34 @@
+{
+  "slug": "slagenelektriske-no-demo",
+  "firma": "Slagen Elektriske AS",
+  "navType": "tabellhode med nummer",
+  "fonts": [
+    "Patua One",
+    "Encode Sans"
+  ],
+  "palette": [
+    "#0f1f2e",
+    "#ff7043",
+    "#eef4f6",
+    "#4a7a8c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "byggestrom",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "byggestrom.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

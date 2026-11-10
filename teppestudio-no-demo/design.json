@@ -1,0 +1,34 @@
+{
+  "slug": "teppestudio-no-demo",
+  "firma": "Orientalsk Teppestudio as",
+  "navType": "dobbeltlinje med ornamentskilletegn",
+  "fonts": [
+    "Cormorant",
+    "Wix Madefor Text"
+  ],
+  "palette": [
+    "#3b1f2b",
+    "#b8863b",
+    "#f6f1e7",
+    "#6d7f74"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tepper",
+    "renhold",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tepper.html",
+    "renhold.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

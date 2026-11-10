@@ -1,0 +1,35 @@
+{
+  "slug": "incubeat-no-demo",
+  "firma": "Incubeat AS",
+  "navType": "menyknapp med utvidbar stripe",
+  "fonts": [
+    "Fresca",
+    "Spline Sans Mono"
+  ],
+  "palette": [
+    "#f7f5f2",
+    "#101c2b",
+    "#e0643c",
+    "#2f6f5e"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "orbital",
+    "investeringer",
+    "team",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "investeringer.html",
+    "om.html",
+    "team.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

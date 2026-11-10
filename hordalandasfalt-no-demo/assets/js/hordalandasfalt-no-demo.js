@@ -12,9 +12,12 @@ c.fillStyle=grad;c.fillRect(x0,H*0.32,bredde,hoyde);
 c.strokeStyle="rgba(201,189,234,0.35)";c.lineWidth=1;c.strokeRect(x0,H*0.32,bredde,hoyde);
 // valse som beveger seg
 var pos=(t*0.16)%1;var vx=x0+bredde*pos;
-c.fillStyle="rgba(239,233,220,0.92)";c.fillRect(vx-5,H*0.24,10,H*0.56);
-c.beginPath();c.arc(vx,H*0.22,9,0,Math.PI*2);c.fillStyle="rgba(201,189,234,0.9)";c.fill();
-c.fillStyle="rgba(27,26,23,0.9)";c.beginPath();c.arc(vx,H*0.22,3.4,0,Math.PI*2);c.fill();
+// valsetrommel
+c.fillStyle="rgba(239,233,220,0.16)";c.fillRect(vx-13,H*0.24,26,H*0.58);
+c.fillStyle="rgba(239,233,220,0.9)";c.fillRect(vx-11,H*0.30,22,H*0.20);
+c.fillStyle="rgba(27,26,23,0.55)";c.fillRect(vx-11,H*0.34,22,2);
+c.beginPath();c.arc(vx,H*0.28,11,0,Math.PI*2);c.fillStyle="rgba(201,189,234,0.95)";c.fill();
+c.fillStyle="rgba(27,26,23,0.9)";c.beginPath();c.arc(vx,H*0.28,4,0,Math.PI*2);c.fill();
 // kantmarkering
 c.strokeStyle="rgba(239,233,220,0.18)";c.setLineDash([7,7]);c.beginPath();c.moveTo(x0,H*0.82);c.lineTo(x0+bredde,H*0.82);c.stroke();c.setLineDash([]);
 t+=0.006;ko=requestAnimationFrame(tegn);}

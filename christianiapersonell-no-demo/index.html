@@ -1,182 +1,92 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Christiania Personell AS – Rekruttering &amp; bemanning</title>
-<meta name="description" content="Christiania Personell AS kobler dyktige fagfolk, spesialister og ledere med bedrifter gjennom målrettet rekruttering, fleksibel bemanning og lederutvelgelse.">
-<meta property="og:title" content="Christiania Personell AS – Rekruttering &amp; bemanning">
-<meta property="og:description" content="Christiania Personell AS kobler dyktige fagfolk, spesialister og ledere med bedrifter gjennom målrettet rekruttering, fleksibel bemanning og lederutvelgelse.">
-<meta property="og:image" content="img/01-christianiapersonell-no.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Christiania Personell – rekruttering og bemanning siden 1998</title>
+<meta name="description" content="Christiania Personell AS driver rekruttering og bemanning i Innlandet og på Østlandet. Siden 1998 har vi bistått jobbsøkere og bedrifter.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Christiania Personell – rekruttering og bemanning siden 1998">
+<meta property="og:description" content="Christiania Personell AS driver rekruttering og bemanning i Innlandet og på Østlandet. Siden 1998 har vi bistått jobbsøkere og bedrifter.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/kort.webp">
+<meta name="theme-color" content="#1f3b4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Trirong:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/christianiapersonell-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">Christiania Personell AS</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="kortstripe">
+  <div class="kortstripe__indre">
+    <a class="merke" href="index.html"><b>Christiania <i>Personell</i></b><small>siden 1998</small></a>
+    <nav class="kortrekke" aria-label="Hovedmeny">
+      <a class="skort" href="index.html" aria-current="page"><i>Hjem</i></a>
+      <a class="skort" href="tjenester.html"><i>Tjenester</i></a>
+      <a class="skort" href="jobbsokere.html"><i>Jobbsøkere</i></a>
+      <a class="skort" href="bedrifter.html"><i>Bedrifter</i></a>
+      <a class="skort" href="kontakt.html"><i>Kontakt</i></a>
+      <a class="skort" href="panel.html"><i>Panel</i></a>
+    </nav>
   </div>
 </header>
+<div class="topp"><div class="inn"><span>Innlandet · Østlandet</span><span><a href="tel:+4794464099">94 46 40 99</a> · <a href="mailto:oslo@christianiapersonell.no">oslo@christianiapersonell.no</a></span></div></div>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/01-christianiapersonell-no.jpg" alt="Christiania Personell AS" loading="eager" decoding="async">
-    <figcaption><strong>Christiania Personell AS</strong><span>Rekruttering &amp; bemanning · Hvalstad</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Rekruttering &amp; bemanning · Hvalstad</p>
-    <h1>&quot;På jakt etter drømmejobben eller drømmeansatt?</h1>
-    <p class="helt__ingress">Christiania Personell AS kobler dyktige fagfolk, spesialister og ledere med bedrifter gjennom målrettet rekruttering, fleksibel bemanning og lederutvelgelse.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tel:+4722349000">Ring 22 34 90 00</a>
-    </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">Grundig kvalitetssikring og referansesjekk</li>
-      <li class="tillit__punkt">Sterkt kandidatnettverk</li>
-      <li class="tillit__punkt">Tett oppfølging av både kunde og ansatt</li>
-    </ul>
+<section class="hero mork">
+  <canvas class="hero__lerret" id="match" aria-hidden="true"></canvas>
+  <div class="hero__dekk" aria-hidden="true"></div>
+  <div class="inn hero__inn">
+    <span class="hero__merke"><i></i>Rekruttering og bemanning · siden 1998</span>
+    <h1>Vi finner den <em>perfekte</em> matchen.</h1>
+    <p class="hero__ingress">På jakt etter drømmejobben – eller drømmeansatt? Hos Christiania Personell finner vi matchen, enten du søker jobb eller skal ansette.</p>
+    <div class="hero__knapper"><a class="knapp" href="jobbsokere.html">Jeg søker jobb <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="bedrifter.html">Jeg skal ansette</a></div>
+    <div class="hero__fakta"><span>Siden 1998</span><span>Innlandet</span><span>Østlandet</span></div>
   </div>
 </section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">01 — Dette kan vi gjøre for deg</div><h2>To veier inn</h2></div><p>Enten du er på jakt etter ny jobb eller ny ansatt, er vi her for deg.</p></div>
+  <ul class="tjlist">
+    <li><a href="jobbsokere.html"><span class="nr">01</span><span><b>For jobbsøkere</b><small>Vi hjelper deg mot drømmejobben – med oppfølging hele veien.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="bedrifter.html"><span class="nr">02</span><span><b>For bedrifter</b><small>Vi finner kandidatene, fra små bedrifter til store konsern.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="tjenester.html"><span class="nr">03</span><span><b>Rekruttering og bemanning</b><small>Fast ansettelse eller innleie – tilpasset behovet.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+  </ul>
+</div></section>
+<section class="sek sek--kritt2 sek--strek"><div class="inn media">
+  <figure class="ramme ramme--43 avslor"><img src="assets/img/kort.webp" width="1200" height="800" alt="Kandidatkort"><figcaption>Kandidat og stilling, samlet.</figcaption></figure>
+  <div class="kropp avslor"><div class="merkelinje">02 — Om oss</div><h2>Ingen er for små eller store</h2>
+    <p>Siden 1998 har vi bistått mennesker med å finne drømmejobben sin, og bedrifter med å finne sine drømmeansatte. For oss er ingen bedrifter for små eller store, og alle oppdrag er like viktig.</p>
+    <ul class="punkter"><li><b>Siden 1998</b> – lang erfaring.</li><li><b>Innlandet og Østlandet</b> – lokalt nærvær.</li><li><b>Alle oppdrag</b> – like viktige.</li></ul>
   </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/02-christianiapersonell-no.jpg" alt="Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Fast rekruttering av spesialister og fagfolk</h3>
-      <p>Helhetlig rekrutteringsprosess med kravprofil, aktivt kandidatsøk, strukturerte intervjuer, testing og grundig referansekontroll.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/03-christianiapersonell-no.jpg" alt="Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Fleksibel bemanning og vikarutleie</h3>
-      <p>Rask tilgang på kvalifiserte medarbeidere ved sesongtopper, prosjekter, sykdom eller midlertidige bemanningsbehov.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/04-christianiapersonell-no.jpg" alt="Executive Search og styreutvelgelse" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Executive Search og styreutvelgelse</h3>
-      <p>Konfidensielt søk og utvelgelse av toppledere, mellomledere og styremedlemmer som skaper langsiktig utvikling og resultater.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/06-christianiapersonell-no.jpg" alt="Rådgivning og kandidatutvikling" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Rådgivning og kandidatutvikling</h3>
-      <p>Støtte ved organisasjonsutvikling, onboarding, karriererådgivning og kompetansekartlegging for bedrifter og jobbsøkere.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Mennesker før CV-er</h3><p>Vi legger like stor vekt på personlig egnethet, motivasjon og kulturmatch som på formell bakgrunn.</p></div>
-    <div class="verdi"><h3>Kvalitet og etterlevelse</h3><p>Som seriøs bemannings- og rekrutteringsaktør sikrer vi ryddige arbeidsforhold og full etterlevelse av lovverket.</p></div>
-    <div class="verdi"><h3>Bransjekunnskap</h3><p>Våre rådgivere kjenner kompetansekravene i bransjen og vet hva som skal til for å lykkes i rollen.</p></div>
-    <div class="verdi"><h3>Forpliktende oppfølging</h3><p>Vi følger opp både oppdragsgiver og nyansatt etter oppstart for å sikre en god og varig match.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/seksjon-6.jpg" alt="Christiania Personell AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Sterke team bygges når faglig kompetanse og personlig drivkraft møter riktig arbeidsplass.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Oversiktlig rekrutteringsløp</p>
-      <h2>Se hvem som er ledig nå</h2>
-      <p>Fra avklart kravprofil til signert arbeidsavtale har både oppdragsgiver og kandidater tydelig oversikt over hvor prosessen står.</p>
-    </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Status i oppdraget</p>
-      <div class="drom__rad"><span>Kravprofil og kandidatsøk</span><span>Fullført</span></div><div class="drom__rad"><span>Intervjuer og faglig vurdering</span><span>Pågår</span></div><div class="drom__rad"><span>Referansesjekk og innstilling</span><span>Klar</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
-  </div>
+</div></section>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">03 — Slik jobber vi</div><h2>Fire steg</h2></div><p>Fra første samtale til ansettelse.</p></div>
   <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
+    <li><b>Samtale</b><p>Behov, erfaring og ønsker.</p></li>
+    <li><b>Match</b><p>Vi finner kandidater eller stillinger som passer.</p></li>
+    <li><b>Intervju</b><p>Begge parter får møtes.</p></li>
+    <li><b>Oppstart</b><p>Vi følger opp også etter ansettelse.</p></li>
   </ol>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
-  </div>
-  <div class="galleri galleri--tre">
-    <figure class="galleri__bilde"><img src="img/seksjon-7.jpg" alt="Christiania Personell AS – Fast rekruttering av spesialister og fagfolk" loading="lazy" decoding="async"><figcaption>Christiania Personell AS – Fast rekruttering av spesialister og fagfolk</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-8.jpg" alt="Christiania Personell AS – Fleksibel bemanning og vikarutleie" loading="lazy" decoding="async"><figcaption>Christiania Personell AS – Fleksibel bemanning og vikarutleie</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-9.jpg" alt="Christiania Personell AS – Executive Search og styreutvelgelse" loading="lazy" decoding="async"><figcaption>Christiania Personell AS – Executive Search og styreutvelgelse</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
-</section>
-
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">Christiania Personell AS</p>
-        <p><strong>Telefon</strong><br><a href="tel:+4722349000">22 34 90 00</a></p>
-        <p><strong>E-post</strong><br><a href="mailto:post@christianiapersonell.no">post@christianiapersonell.no</a></p>
-        <p><strong>Område</strong><br>Hvalstad</p>
-      </aside>
-    </div>
-    <form class="skjema" action="mailto:post@christianiapersonell.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Fast rekruttering av spesialister og fagfolk</option><option>Fleksibel bemanning og vikarutleie</option><option>Executive Search og styreutvelgelse</option><option>Rådgivning og kandidatutvikling</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
-  </div>
-</section>
+</div></section>
+<section class="cta"><div class="inn">
+  <h2>På jakt etter drømmejobben – eller drømmeansatt?</h2>
+  <p>Vi finner den perfekte matchen. Ta kontakt, så tar vi det derfra.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tel:+4794464099">Ring 94 46 40 99</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Christiania Personell AS</p>
-      <p class="bunn__tekst">Hvalstad · 22 34 90 00 · post@christianiapersonell.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Christiania Personell AS</span><p>Siden 1998 har vi bistått mennesker med å finne drømmejobben, og bedrifter med å finne sine drømmeansatte.</p><p><a href="mailto:oslo@christianiapersonell.no">oslo@christianiapersonell.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="jobbsokere.html">Jobbsøkere</a></li><li><a href="bedrifter.html">Bedrifter</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Kontor</h4><ul><li>Vakåsveien 9<br>1395 Hvalstad</li><li>Kirkebakken 3<br>2317 Hamar</li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4794464099">94 46 40 99</a><br><a href="mailto:oslo@christianiapersonell.no">oslo@christianiapersonell.no</a><br><a href="mailto:hamar@christianiapersonell.no">hamar@christianiapersonell.no</a></p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Christiania Personell AS</p>
+    <div class="bunn__bunn"><span>© 2026 Christiania Personell AS</span><span>Nettsiden er en demonstrasjon laget for Christiania Personell AS</span><a href="panel.html">Oppdragspanel</a></div>
   </div>
 </footer>
+<script src="assets/js/christianiapersonell-no-demo.js" defer></script>
 </body>
 </html>

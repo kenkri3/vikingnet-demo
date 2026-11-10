@@ -1,0 +1,34 @@
+{
+  "slug": "skiltforum-no",
+  "firma": "Skiltforum",
+  "navType": "platemeny med skruer",
+  "fonts": [
+    "Pathway Gothic One",
+    "Lato"
+  ],
+  "palette": [
+    "#f4f4f5",
+    "#111827",
+    "#22d3ee",
+    "#dde3ea"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "produkter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

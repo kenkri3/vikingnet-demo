@@ -23,9 +23,9 @@
       if (Math.abs(maal - naa) < 0.002) naa = maal;
       var p = naa;
       if (indre) indre.style.transform = "rotateX(" + (58 - p * 8).toFixed(1) + "deg) rotateZ(" + (45 + p * 6).toFixed(1) + "deg) scale(" + (0.86 + p * 0.06).toFixed(3) + ")";
-      if (grunn) grunn.style.transform = "translateZ(" + ((1 - p) * -14).toFixed(1) + "px)";
-      if (vegg) vegg.style.transform = "translateZ(" + ((1 - p) * 26).toFixed(1) + "px)";
-      if (tak) tak.style.transform = "translateZ(" + ((1 - p) * 68).toFixed(1) + "px)";
+      if (grunn) grunn.style.transform = "translateZ(" + (0 + (1 - p) * 0).toFixed(1) + "px)";
+      if (vegg) vegg.style.transform = "translateZ(" + (20 + (1 - p) * 40).toFixed(1) + "px)";
+      if (tak) tak.style.transform = "translateZ(" + (44 + (1 - p) * 76).toFixed(1) + "px)";
       if (maal !== naa && !redusert) ko = requestAnimationFrame(tegn);
     }
     function onsk() { if (!ko) ko = requestAnimationFrame(tegn); }

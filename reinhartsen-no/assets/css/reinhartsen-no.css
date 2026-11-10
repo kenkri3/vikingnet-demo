@@ -52,10 +52,10 @@ a { color: #7a5a1c; text-underline-offset: 3px; } a:hover { color: var(--safran-
 .hero__fakta b { display: block; font-family: var(--trirong); font-size: 1.1rem; line-height: 1.2; color: #fff; }
 .hero__fakta span { font-size: .72rem; color: #9db0b4; }
 .bolger { position: absolute; left: 0; right: 0; bottom: -1px; height: 86px; overflow: hidden; }
-.bolger svg { width: 200%; height: 100%; display: block; }
+.bolger svg { width: 100%; height: 100%; display: block; }
 .bolger__lag { fill: rgba(226,185,107,.16); animation: driv 16s linear infinite; }
 .bolger__lag--2 { fill: rgba(226,185,107,.28); animation-duration: 11s; animation-direction: reverse; }
-@keyframes driv { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes driv { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 .seksjon { padding: var(--luft) 0; }
 .seksjon--hvit { background: var(--hvit); border-top: 1px solid var(--linje); border-bottom: 1px solid var(--linje); }
 .seksjon--mork { background: var(--flate); color: #e6ddcc; }
@@ -159,3 +159,8 @@ tbody th { font-family: var(--trirong); font-weight: 500; }
 @media (min-width: 780px) { :root { --kant: 1.5rem; } .hero__inn { grid-template-columns: 1.05fr .95fr; gap: 2.1rem; } .seksjonshode { grid-template-columns: 1.1fr .9fr; align-items: end; } .tjenester { grid-template-columns: repeat(3, minmax(0,1fr)); } .duo { grid-template-columns: 1fr 1fr; gap: 2.1rem; } .duo--speil .duo__bilde { order: -1; } .bunn__rutenett { grid-template-columns: 1.4fr 1fr 1fr 1fr; } .cta { grid-template-columns: 1.3fr auto; align-items: center; } .cta__handlinger { justify-content: flex-end; } .panelrutenett { grid-template-columns: 1.5fr 1fr; } .ordre { grid-template-columns: 1fr 105px auto; align-items: center; } .toetasjes a { font-size: .8rem; } .bolger { height: 120px; } }
 @media (max-width: 560px) { table { min-width: 0; font-size: .82rem; } th, td { padding: .48rem .52rem; } caption { padding: .55rem .5rem 0; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; } .bolger__lag { animation: none; } }
+.bolger svg { width: 100%; }
+.seksjon .knapp--tom { border-color: #c8bea9; color: #2b2a24; background: transparent; }
+.seksjon .knapp--tom:hover { background: #0d2b33; border-color: #0d2b33; color: #fff; }
+.seksjon--mork .knapp--tom { border-color: #3a5c66; color: #e6ddcc; }
+.seksjon--mork .knapp--tom:hover { background: #fff; border-color: #fff; color: #0d2b33; }

@@ -1,7 +1,7 @@
 {
   "slug": "elteknikk-no-demo",
   "firma": "Elteknikk",
-  "navType": "bunnstripe-kategorier",
+  "navType": "kategori-stripe",
   "fonts": [
     "Big Shoulders Display",
     "Overpass"

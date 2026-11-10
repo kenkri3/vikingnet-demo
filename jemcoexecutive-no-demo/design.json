@@ -1,0 +1,33 @@
+{
+  "slug": "jemcoexecutive-no-demo",
+  "firma": "Jemco Executive",
+  "navType": "nettverk-knute-topp",
+  "fonts": [
+    "Noto Serif Display",
+    "Rubik Mono One"
+  ],
+  "palette": [
+    "#17181c",
+    "#f6f4ef",
+    "#96a5b8"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "kunder",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "erfaring.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

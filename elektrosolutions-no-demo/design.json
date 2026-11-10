@@ -1,0 +1,35 @@
+{
+  "slug": "elektrosolutions-no-demo",
+  "firma": "Elektro Solutions AS",
+  "navType": "ramme-meny med hjørnemerke",
+  "fonts": [
+    "Red Hat Display",
+    "Red Hat Text"
+  ],
+  "palette": [
+    "#f7f6f4",
+    "#121212",
+    "#f2a03c",
+    "#1f5f8b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "krets",
+    "tjenester",
+    "vakt",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "privat.html",
+    "naering.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

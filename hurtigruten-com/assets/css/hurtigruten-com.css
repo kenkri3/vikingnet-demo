@@ -43,7 +43,12 @@ button{font:inherit;color:inherit}
 .destinasjoner a{flex:0 0 auto;padding:6px 12px;border:1px solid #2a5b73;border-radius:999px;font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.04em;color:#cfe0e7;transition:all var(--t)}
 .destinasjoner a:hover{background:var(--blaa);border-color:var(--blaa);color:#08222e}
 .destinasjoner a[aria-current]{background:var(--rod);border-color:var(--rod);color:#fff}
-@media (max-width:860px){.destinasjoner{top:60px}.destinasjoner .indre{padding:7px var(--side)}.destinasjoner a{font-size:11px;padding:5px 10px}}
+@media (max-width:900px){
+  .destinasjoner{top:60px}
+  .destinasjoner .indre{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:7px var(--side);overflow:visible}
+  .destinasjoner a{font-size:10.5px;padding:6px 8px;text-align:center}
+}
+@media (max-width:420px){.destinasjoner .indre{grid-template-columns:1fr}.destinasjoner a{font-size:10px}}
 
 .hero{background:var(--dyp);color:var(--krem);padding:clamp(26px,5.2vh,54px) 0 clamp(26px,5vh,50px);overflow:hidden}
 .hero-grid{display:grid;gap:clamp(20px,4vw,44px);align-items:center}

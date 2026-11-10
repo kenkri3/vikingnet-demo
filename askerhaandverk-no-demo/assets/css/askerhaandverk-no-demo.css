@@ -98,7 +98,7 @@ h1 em,h2 em{font-style:italic;color:#55663f}
 
 /* CSS 3D-hus */
 .hus{position:relative;perspective:900px;height:clamp(230px,32vw,320px)}
-.hus__indre{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(45deg) scale(.86)}
+.hus__indre{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(56deg) rotateZ(38deg) scale(.9)}
 .hus__lag{
   position:absolute;left:50%;top:50%;width:52%;aspect-ratio:1/1;
   margin-left:-26%;margin-top:-26%;transform-style:preserve-3d;
@@ -106,7 +106,7 @@ h1 em,h2 em{font-style:italic;color:#55663f}
 }
 .hus__lag--grunn{background:rgba(246,241,232,.1)}
 .hus__lag--vegg{background:rgba(185,200,164,.34);border-color:rgba(185,200,164,.75)}
-.hus__lag--tak{background:rgba(109,127,91,.62);border-color:rgba(185,200,164,.9)}
+.hus__lag--tak{background:rgba(109,127,91,.72);border-color:rgba(185,200,164,.95);box-shadow:0 0 0 1px rgba(43,38,34,.35)}
 .hus__lag--tak::after{content:"";position:absolute;inset:14%;border:1px solid rgba(246,241,232,.45)}
 .hus__lag span{
   position:absolute;left:8px;top:6px;font-family:var(--bf);font-size:7.5px;letter-spacing:.1em;
