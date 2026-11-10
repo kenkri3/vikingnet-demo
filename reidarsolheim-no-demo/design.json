@@ -1,0 +1,34 @@
+{
+  "slug": "reidarsolheim-no-demo",
+  "firma": "Byggmester Reidar Solheim AS",
+  "navType": "verkstedindeks",
+  "fonts": [
+    "Cinzel",
+    "Hind"
+  ],
+  "palette": [
+    "#2a2118",
+    "#b98b52",
+    "#f6f1e7",
+    "#5f7a63"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "prosjekter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt · EHRAB</title>
+<meta name="description" content="Kontakt EHRAB: info@ehrab.com. Vi bemannner byggeprosjekter og utdanner folk til bransjen – i Norge og Sverige.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EHRAB">
+<meta property="og:title" content="Kontakt · EHRAB">
+<meta property="og:description" content="Kontakt EHRAB: info@ehrab.com. Vi bemannner byggeprosjekter og utdanner folk til bransjen – i Norge og Sverige.">
+<meta name="theme-color" content="#14212e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/ehrab-com-demo.css">
+</head>
+<body>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<header class="topp">
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="m" aria-hidden="true">E</span><span><b>EHRAB</b><small>Byggbemanning</small></span></a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="byggbemanning.html">Byggbemanning</a>
+      <a href="utdanning.html">Utdanning</a>
+      <a href="om.html">Om EHRAB</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </nav>
+    <div class="hoyre">
+      <span class="sprak" aria-label="Språk"><a href="index.html" aria-current="page">NO</a><a href="index.html">SE</a></span>
+      <a class="knapp" href="kontakt.html">Kontakt</a>
+      <button class="mobknapp" type="button" data-mob-apne aria-expanded="false" aria-controls="mobmeny">Meny</button>
+    </div>
+  </div>
+</header>
+<nav class="mobmeny" id="mobmeny" aria-label="Mobilmeny">
+  <a href="index.html">Hjem</a>
+  <a href="byggbemanning.html">Byggbemanning</a>
+  <a href="utdanning.html">Utdanning</a>
+  <a href="om.html">Om EHRAB</a>
+  <a href="kontakt.html" aria-current="page">Kontakt</a>
+  <a href="panel.html">Panel</a>
+</nav>
+<main id="innhold">
+<header class="sidehode">
+  <div class="ramme">
+    <p class="brodsmule"><a href="index.html">Hjem</a> / Kontakt</p>
+    <h1>Kontakt <em>oss</em></h1>
+    <p class="ingress">Enten du søker arbeid eller personale – start her.</p>
+  </div>
+</header>
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="to-spalter">
+      <div class="avslor">
+        <h2 style="font-size:1.3rem;margin-bottom:10px">Send en henvendelse</h2>
+        <form class="skjema" data-skjema novalidate>
+          <div class="skjema-to">
+            <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
+            <div class="felt"><label for="firma">Firma</label><input id="firma" name="firma" type="text" autocomplete="organization"></div>
+          </div>
+          <div class="skjema-to">
+            <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
+            <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="felt"><label for="gjelder">Jeg</label><select id="gjelder" name="gjelder"><option>søker arbeid</option><option>søker personale</option><option>vil vite om utdanning</option><option>vil bli franchisetager</option><option>annet</option></select></div>
+          <div class="felt"><label for="melding">Melding</label><textarea id="melding" name="melding" placeholder="Fortell kort hva det gjelder."></textarea></div>
+          <div><button class="knapp" type="submit">Send henvendelsen <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+          <div class="skjema-melding" role="status" aria-live="polite"></div>
+          <p class="skjema-note">Demo: skjemaet sender ingenting. I en ekte løsning går henvendelsen til bemanningskøen.</p>
+        </form>
+      </div>
+      <aside class="avslor">
+        <div class="kortrekke" style="grid-template-columns:1fr">
+          <div class="kort"><span class="merke">E-post</span><h3><a href="mailto:info@ehrab.com">info@ehrab.com</a></h3><p>Felles for begge veier inn.</p></div>
+          <div class="kort"><span class="merke">Søker arbeid</span><h3>Jobba hos oss</h3><p>Registrer CV, så tar vi kontakt når noe passer.</p></div>
+          <div class="kort"><span class="merke">Søker personale</span><h3>Byggbemanning</h3><p>Fagfolk til prosjektet, med orden i ID06 og HMS.</p></div>
+          <div class="kort"><span class="merke">Utdanning</span><h3>EHRAB-skolan</h3><p>Vi utdanner folk til bransjen.</p></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bunn">
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>EHRAB</h3><p>Bærekraftig og trygg bemanning for byggebransjen. Vi er spesialister på å bemanne byggeprosjekter – og på å utdanne folk til faget.</p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="byggbemanning.html">Byggbemanning</a></li><li><a href="utdanning.html">Utdanning</a></li><li><a href="om.html">Om EHRAB</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Panel</a></li></ul></div>
+      <div><h4>Mer</h4><ul><li>Jobba hos oss</li><li>Registrera CV</li><li>Referenser</li><li>Nyheter</li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="mailto:info@ehrab.com">info@ehrab.com</a></li><li>EHRAB-skolan</li><li>Rusta och Matcha</li></ul></div>
+    </div>
+    <div class="bunn-bunn"><span>© 2026 EHRAB</span><span>Byggbemanning · NO/SE</span><span>Demo: innhold hentet fra ehrab.com</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/ehrab-com-demo.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "slug": "bube-no",
+  "firma": "Buksér og Berging AS",
+  "navType": "mørk maritim toppmeny",
+  "fonts": [
+    "Gantari",
+    "Anek Latin"
+  ],
+  "palette": [
+    "#0e1f2b",
+    "#f2f5f6",
+    "#2c8c94",
+    "#e8863c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "sjo",
+    "tjenester",
+    "kontor",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "om.html",
+    "karriere.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "ehrab-com-demo",
+  "firma": "EHRAB",
+  "navType": "sprakvalg-topp",
+  "fonts": [
+    "Archivo Narrow",
+    "Heebo"
+  ],
+  "palette": [
+    "#14212e",
+    "#f2f4f6",
+    "#f2b134",
+    "#5a6f82"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "kran",
+    "bemanning",
+    "utdanning",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "byggbemanning.html",
+    "utdanning.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

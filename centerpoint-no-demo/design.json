@@ -1,0 +1,34 @@
+{
+  "slug": "centerpoint-no-demo",
+  "firma": "Centerpoint",
+  "navType": "to-kolonne meny med oppdrag",
+  "fonts": [
+    "Marcellus",
+    "Assistant"
+  ],
+  "palette": [
+    "#1f2430",
+    "#c2a15a",
+    "#f6f5f2",
+    "#8b93a3"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "oppdrag",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "oppdrag.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

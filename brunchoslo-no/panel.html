@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Panel — oppdrag | Brunch.</title>
+<meta name="description" content="Driftspanel for Brunch: oppdrag, leveransar og kundar.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Brunch.">
+<meta property="og:title" content="Panel — oppdrag | Brunch.">
+<meta property="og:description" content="Driftspanel for Brunch: oppdrag, leveransar og kundar.">
+<meta property="og:image" content="assets/img/01-brunch.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/brunchoslo-no.css">
+</head>
+<body class="panel-side">
+<a class="hopp" href="#innhold">Til innholdet</a>
+
+<main id="innhold">
+
+<div class="panel">
+  <header class="panel__topp"><div class="wrap"><a class="panel__merke" href="index.html">Brunch.</a><a class="knapp knapp--liten" href="index.html">Til sida</a></div></header>
+  <div class="panel__hoved"><div class="wrap">
+    <div class="panel__intro"><div><h1>Oppdrag</h1><p class="panel__dato" data-framdrift>0 av 0 saker klare</p></div><p class="panel__dato">Fredag 6. november · veke 45</p></div>
+    <div class="kpi">
+      <div class="kpi__kort"><p class="kpi__merke">Oppdrag</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Aktive</p></div>
+      <div class="kpi__kort" data-kpi="ventar"><p class="kpi__merke">Venter</p><p class="kpi__tal">4</p><p class="kpi__hjelp">Til godkjenning</p></div>
+      <div class="kpi__kort"><p class="kpi__merke">Leveransar</p><p class="kpi__tal">2</p><p class="kpi__hjelp">Denne veka</p></div>
+      <div class="kpi__kort" data-kpi="ferdig"><p class="kpi__merke">Klare i dag</p><p class="kpi__tal">0</p><p class="kpi__hjelp">Oppdateres når du merker</p></div>
+    </div>
+    <div class="faner-panel" role="tablist" aria-label="Visninger">
+      <button class="fane" role="tab" id="fane-opp" aria-controls="vis-opp" aria-selected="true">Oppdrag</button>
+      <button class="fane" role="tab" id="fane-lev" aria-controls="vis-lev" aria-selected="false">Leveransar</button>
+    </div>
+    <p class="melding" data-panelmelding role="status" aria-live="polite"></p>
+    <section class="panel__vis" id="vis-opp" role="tabpanel" aria-labelledby="fane-opp">
+      <div class="panel__topprad"><h2>Oppdrag</h2><span class="merknad">Sortert etter frist</span></div>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Kampanje · kunde A<small>Konsept</small></div>
+  <div class="rad__meta"><strong>Frist 12.11</strong>Ansvar: Markus</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Magasin · kunde B<small>Innhald</small></div>
+  <div class="rad__meta"><strong>Frist 19.11</strong>Ansvar: Markus</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Hjertesak · kunde C<small>Kampanje</small></div>
+  <div class="rad__meta"><strong>Frist 24.11</strong>Ansvar: Markus</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Lyd · kunde D<small>Produksjon</small></div>
+  <div class="rad__meta"><strong>Frist 28.11</strong>Ansvar: Markus</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+    <section class="panel__vis" id="vis-lev" role="tabpanel" aria-labelledby="fane-lev" hidden>
+      <div class="panel__topprad"><h2>Leveransar</h2><span class="merknad">Status</span></div>
+      <article class="rad" data-status="ventar">
+  <div class="rad__namn">Kampanje · kunde A<small>Klar for godkjenning</small></div>
+  <div class="rad__meta"><strong>I dag</strong>Ferdig innhald</div>
+  <span class="status status--vent">Venter</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+      <article class="rad" data-status="paa">
+  <div class="rad__namn">Magasin · kunde B<small>Trykk</small></div>
+  <div class="rad__meta"><strong>Neste veke</strong>Under arbeid</div>
+  <span class="status status--paa">Pågår</span>
+  <div class="rad__handling"><button class="knapp knapp--liten" type="button" data-ferdig>Merk klar</button></div>
+</article>
+    </section>
+  </div></div>
+</div>
+</main>
+
+<script src="assets/js/brunchoslo-no.js" defer></script>
+</body>
+</html>

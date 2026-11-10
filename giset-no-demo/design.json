@@ -1,0 +1,34 @@
+{
+  "slug": "giset-no-demo",
+  "firma": "Optiker Giset",
+  "navType": "brillerail-meny",
+  "fonts": [
+    "Foldit",
+    "Overlock"
+  ],
+  "palette": [
+    "#1d2430",
+    "#8fb6c9",
+    "#f7f8f9",
+    "#7f8a99"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "synstest",
+    "briller",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "synstest.html",
+    "briller.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

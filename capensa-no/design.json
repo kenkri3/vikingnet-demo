@@ -1,0 +1,35 @@
+{
+  "slug": "capensa-no",
+  "firma": "Capensa AS",
+  "navType": "lys toppmeny med telefonknapp",
+  "fonts": [
+    "Trispace",
+    "Pridi"
+  ],
+  "palette": [
+    "#f5f6f7",
+    "#16202c",
+    "#e0b02f",
+    "#2f6f9e"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "ko",
+    "tjenester",
+    "prosess",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosessen.html",
+    "ledige.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

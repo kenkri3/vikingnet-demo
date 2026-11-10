@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Driftspanel — PBT Eiendomsdrift AS</title>
+<meta name="description" content="Demoversjon av driftspanelet til PBT Eiendomsdrift: oppdrag innen drift, renhold, vinter og sikkerhet med status og filter.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="PBT Eiendomsdrift AS">
+<meta property="og:title" content="Driftspanel — PBT Eiendomsdrift AS">
+<meta property="og:description" content="Demoversjon av driftspanelet til PBT Eiendomsdrift: oppdrag innen drift, renhold, vinter og sikkerhet med status og filter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Kumbh+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/pbt-no-demo.css">
+<script src="assets/js/pbt-no-demo.js" defer></script>
+</head>
+<body>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
+<header class="topp">
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>PBT Eiendomsdrift</strong> <span>drift · renhold · vinter</span></a>
+    <a class="topp-tel" href="tel:+4702513">Ring 02513</a>
+  </div>
+  <nav class="kortnav" aria-label="Hovedmeny">
+    <ul>
+      <li><a href="index.html"><b>01</b>Forside</a></li>
+      <li><a href="tjenester.html"><b>02</b>Tjenester</a></li>
+      <li><a href="vinter.html"><b>03</b>Vintertjenester</a></li>
+      <li><a href="om.html"><b>04</b>Om oss</a></li>
+      <li><a href="kontakt.html"><b>05</b>Kontakt</a></li>
+      <li><a href="panel.html" aria-current="page"><b>06</b>Panel</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="hoved">
+  <section class="panel">
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · drift</p><h1>Oppdrag og runder</h1><p>Oversikt over oppdrag per eiendom. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
+      </div>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne oppdrag</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Pågår</p><p class="verdi">2</p><p class="endring">drift + brannvern</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">vær</p></div>
+        <div class="kpi"><p class="navn">Ferdig i uken</p><p class="verdi">12</p><p class="endring">alle avtalt</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Oppdrag</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer oppdrag">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Pågår</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="pagaar" data-navn="Runde – byggdrift">
+          <div><p class="ordre-navn">Runde – byggdrift</p><p class="ordre-meta"><span>Eiendom A</span><span class="skille">/</span><span>Drift</span><span class="skille">/</span><span>denne uken</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk ferdig</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Snørydding – ekstra">
+          <div><p class="ordre-navn">Snørydding – ekstra</p><p class="ordre-meta"><span>Eiendom B</span><span class="skille">/</span><span>Vinter</span><span class="skille">/</span><span>i dag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta oppdrag</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Renhold – trappevask">
+          <div><p class="ordre-navn">Renhold – trappevask</p><p class="ordre-meta"><span>Eiendom C</span><span class="skille">/</span><span>Renhold</span><span class="skille">/</span><span>i morgen</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta oppdrag</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Fasadevask">
+          <div><p class="ordre-navn">Fasadevask</p><p class="ordre-meta"><span>Eiendom D</span><span class="skille">/</span><span>Utendørs</span><span class="skille">/</span><span>vær</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta oppdrag</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Brannvern – kontroll">
+          <div><p class="ordre-navn">Brannvern – kontroll</p><p class="ordre-meta"><span>Eiendom E</span><span class="skille">/</span><span>Sikkerhet</span><span class="skille">/</span><span>fredag</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk ferdig</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Plenklipp – ferdig">
+          <div><p class="ordre-navn">Plenklipp – ferdig</p><p class="ordre-meta"><span>Eiendom F</span><span class="skille">/</span><span>Utendørs</span><span class="skille">/</span><span>forrige uke</span></p></div>
+          <div class="ordre-hoyre"><span class="status" data-status="ferdig">Ferdig</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Ferdig</button>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="boks">
+          <div class="boks-hode"><h2>Tjenester</h2><span style="font-size:.66rem;color:var(--demp)">denne uken</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Drift og vaktmester</p><p class="ordre-meta"><span>2 oppdrag</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Renhold og utendørs</p><p class="ordre-meta"><span>2 oppdrag</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Vinter og sikkerhet</p><p class="ordre-meta"><span>2 oppdrag</span></p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 PBT Eiendomsdrift AS · 02513 · post@pbt.no</p>
+    <p class="fot-lenker"><a href="tjenester.html">Tjenester</a><a href="vinter.html">Vintertjenester</a><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
+  </div>
+</footer>
+</body>
+</html>

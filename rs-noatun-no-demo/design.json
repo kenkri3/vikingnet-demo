@@ -1,0 +1,33 @@
+{
+  "slug": "rs-noatun-no-demo",
+  "firma": "RS Noatun",
+  "navType": "menykort-topp",
+  "fonts": [
+    "Zen Old Mincho",
+    "M PLUS 2"
+  ],
+  "palette": [
+    "#1c2b2f",
+    "#f7f4ec",
+    "#b99a68"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tilbud",
+    "selskap",
+    "booking",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "hotell.html",
+    "konferanse.html",
+    "restaurant.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

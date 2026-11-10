@@ -1,0 +1,34 @@
+{
+  "slug": "batteri-no",
+  "firma": "batteri.no",
+  "navType": "ladestatus-meny",
+  "fonts": [
+    "Rokkitt",
+    "Istok Web"
+  ],
+  "palette": [
+    "#f2f3f1",
+    "#171a1c",
+    "#7ac943",
+    "#e0e4df"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "netthandel",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "slik-handler-du.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

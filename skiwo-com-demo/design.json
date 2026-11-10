@@ -1,0 +1,34 @@
+{
+  "slug": "skiwo-com-demo",
+  "firma": "Skiwo",
+  "navType": "innrammet-topp",
+  "fonts": [
+    "Kumbh Sans",
+    "Encode Sans"
+  ],
+  "palette": [
+    "#101828",
+    "#f5f6f8",
+    "#6c5ce7",
+    "#12b886"
+  ],
+  "motion": [
+    "css3d",
+    "scroll",
+    "svg"
+  ],
+  "sections": [
+    "hero",
+    "kort",
+    "metode",
+    "portefolje",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "portefolje.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

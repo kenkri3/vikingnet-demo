@@ -1,0 +1,34 @@
+{
+  "slug": "aktivgruppen-no",
+  "firma": "Aktivgruppen",
+  "navType": "trekolonne-meny",
+  "fonts": [
+    "Yanone Kaffeesatz",
+    "Signika Negative"
+  ],
+  "palette": [
+    "#f5f4f1",
+    "#1d2b3a",
+    "#2fa3a3",
+    "#e0e1dc"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "omrader",
+    "arbeidsgiver",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "omrader.html",
+    "jobber.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

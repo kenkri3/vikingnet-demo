@@ -1,0 +1,33 @@
+{
+  "slug": "bakerhansen-no-demo",
+  "firma": "Baker Hansen AS",
+  "navType": "kakeskive-meny",
+  "fonts": [
+    "Bowlby One SC",
+    "Gowun Batang"
+  ],
+  "palette": [
+    "#2b2a26",
+    "#f8f4ea",
+    "#e08b4f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "bestilling",
+    "prosess",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "kaker.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

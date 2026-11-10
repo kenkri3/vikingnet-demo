@@ -1,0 +1,33 @@
+{
+  "slug": "abchus-no-demo",
+  "firma": "ABChus",
+  "navType": "kapittel-stablet-meny",
+  "fonts": [
+    "Petrona",
+    "Nunito Sans"
+  ],
+  "palette": [
+    "#2f2b26",
+    "#f8f4ec",
+    "#b5763f",
+    "#7e8a70"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "hus",
+    "prosess",
+    "modeller",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "ferdighus.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

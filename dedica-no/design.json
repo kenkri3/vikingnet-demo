@@ -1,0 +1,35 @@
+{
+  "slug": "dedica-no",
+  "firma": "Dedica AS",
+  "navType": "menylinje med prikkmarkør",
+  "fonts": [
+    "Khand",
+    "Hanken Grotesk"
+  ],
+  "palette": [
+    "#f7f6f2",
+    "#22241f",
+    "#6f8f4a",
+    "#d9a441"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "signal",
+    "tjenester",
+    "konsulentar",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "konsulenter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "a-lab-no",
+  "firma": "A-lab AS",
+  "navType": "typografisk versalstripe",
+  "fonts": [
+    "Newsreader",
+    "Instrument Sans"
+  ],
+  "palette": [
+    "#f4f3ef",
+    "#1a1a18",
+    "#b4593a",
+    "#e2ded5"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "praksis",
+    "kontor",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "praksis.html",
+    "team.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ordrekø · Skau (demo)</title>
+<meta name="description" content="Demo av ordrekøen: vareprøver, gulvordrer og tilbehør med status og handlinger.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Skau">
+<meta property="og:title" content="Ordrekø · Skau (demo)">
+<meta property="og:description" content="Demo av ordrekøen: vareprøver, gulvordrer og tilbehør med status og handlinger.">
+<meta name="theme-color" content="#2c2a26">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/skau-com-demo.css">
+</head>
+<body>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<header class="topp">
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="m" aria-hidden="true">S</span><span><b>Skau</b><small>Tregulv · parkett</small></span></a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="index.html">Hjem</a>
+      <a href="tregulv.html">Tregulv</a>
+      <a href="inspirasjon.html">Inspirasjon</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="hoyre"><a class="pris" href="tel:+4740004008">400 04 008</a><a class="knapp" href="kontakt.html">Bestill vareprøve</a><button class="mobknapp" type="button" data-mob-apne aria-expanded="false" aria-controls="mobmeny">Meny</button></div>
+  </div>
+</header>
+<nav class="mobmeny" id="mobmeny" aria-label="Mobilmeny">
+  <a href="index.html">Hjem</a>
+  <a href="tregulv.html">Tregulv</a>
+  <a href="inspirasjon.html">Inspirasjon</a>
+  <a href="om.html">Om oss</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="panel.html" aria-current="page">Panel</a>
+</nav>
+<main id="innhold">
+<header class="panelhode">
+  <div class="ramme">
+    <div class="rad"><p class="brodsmule"><a href="index.html">Hjem</a> / Panel</p><span class="drift">Køen er åpen</span></div>
+    <h1>Ordrekøen</h1>
+    <p class="ingress">Slik ser køen ut internt. Trykk på knappene – status, nøkkeltall og logg oppdaterer seg. Alt er eksempeldata.</p>
+  </div>
+</header>
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="kpier">
+      <div class="kpi"><span class="l">Nye</span><span class="v" data-kpi-ny>2</span><span class="d">Venter på pakking</span></div>
+      <div class="kpi"><span class="l">Pakkes</span><span class="v" data-kpi-loper>2</span><span class="d">Under arbeid</span></div>
+      <div class="kpi"><span class="l">Sendt</span><span class="v" data-kpi-ferdig>2</span><span class="d">Ferdig</span></div>
+      <div class="kpi"><span class="l">Kundeservice</span><span class="v">8–18</span><span class="d">Hverdager</span></div>
+    </div>
+    <div class="faner" role="group" aria-label="Filtrer">
+      <button class="fane" type="button" data-filter="alle" aria-pressed="true">Alle <span class="antall">6</span></button>
+      <button class="fane" type="button" data-filter="ny" aria-pressed="false">Nye <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="loper" aria-pressed="false">Pakkes <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="ferdig" aria-pressed="false">Sendt <span class="antall">2</span></button>
+    </div>
+    <div class="saker" data-saker>
+      <article class="sak" data-id="SK-411" data-status="ny">
+        <div class="id">SK-411</div>
+        <div class="hoved"><div class="t">Vareprøve, parkett</div><div class="m">Privat · Oslo</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ny</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak" data-id="SK-410" data-status="loper">
+        <div class="id">SK-410</div>
+        <div class="hoved"><div class="t">Ordre, fiskeben</div><div class="m">Kunde · Bergen</div></div>
+        <div class="meta"><span class="k">Status</span><span>Pakkes</span></div>
+        <span class="status" data-status="loper">Pakkes</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak" data-id="SK-409" data-status="loper">
+        <div class="id">SK-409</div>
+        <div class="hoved"><div class="t">Tilbehør, fotlister</div><div class="m">Håndverker · Trondheim</div></div>
+        <div class="meta"><span class="k">Status</span><span>Pakkes</span></div>
+        <span class="status" data-status="loper">Pakkes</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak" data-id="SK-408" data-status="ny">
+        <div class="id">SK-408</div>
+        <div class="hoved"><div class="t">Spørsmål, underlag</div><div class="m">Privat · Stavanger</div></div>
+        <div class="meta"><span class="k">Status</span><span>Ny</span></div>
+        <span class="status" data-status="ny">Ny</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Send</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="SK-407" data-status="ferdig">
+        <div class="id">SK-407</div>
+        <div class="hoved"><div class="t">Ordre sendt</div><div class="m">Privat · Tromsø</div></div>
+        <div class="meta"><span class="k">Status</span><span>Sendt 05.11</span></div>
+        <span class="status" data-status="ferdig">Sendt</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Send</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="SK-406" data-status="ferdig">
+        <div class="id">SK-406</div>
+        <div class="hoved"><div class="t">Prøver sendt</div><div class="m">Kunde · Kristiansand</div></div>
+        <div class="meta"><span class="k">Status</span><span>Sendt 27.10</span></div>
+        <span class="status" data-status="ferdig">Sendt</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Pakk</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Send</button>
+        </div>
+      </article>
+    </div>
+    <div class="panel-to">
+      <div class="panel-kort">
+        <h2>Dagens utsendelser</h2>
+        <p class="under">Eksempeldata</p>
+        <ul style="list-style:none;margin:0;padding:0">
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>SK-410 · fiskeben</span><span style="color:#5c5649">11:00</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>SK-409 · fotlister</span><span style="color:#5c5649">13:00</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:7px 0;font-size:14px"><span>SK-411 · prøver</span><span style="color:#5c5649">15:30</span></li>
+        </ul>
+      </div>
+      <div class="panel-kort">
+        <h2>Hendelser</h2>
+        <p class="under">Siste aktivitet</p>
+        <div class="logg" data-logg>
+          <div><b>11:05</b> SK-410 pakket</div>
+          <div><b>10:00</b> SK-407 sendt</div>
+          <div><b>09:00</b> ny forespørsel SK-411</div>
+          <div><b>08:00</b> køen åpnet</div>
+        </div>
+        <a class="knapp knapp--lys" href="tregulv.html" style="margin-top:11px">Til tregulv <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="bunn">
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Skau</h3><p>Tregulv, parkett og andre gulvtyper – med tilbehør, inspirasjon og veiledning. Kundeservice 08:00–18:00.</p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tregulv.html">Tregulv</a></li><li><a href="inspirasjon.html">Inspirasjon</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Panel</a></li></ul></div>
+      <div><h4>Gulv</h4><ul><li>Tregulv · Parkett</li><li>Fiskebensparkett</li><li>Herdet tregulv</li><li>Laminat · Korkvinyl</li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+4740004008">+47 400 04 008</a></li><li><a href="mailto:post@skau.com">post@skau.com</a></li><li>Kundeservice 08:00–18:00</li></ul></div>
+    </div>
+    <div class="bunn-bunn"><span>© 2026 Skau</span><span>Gulv i tre</span><span>Demo: innhold hentet fra skau.com</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/skau-com-demo.js" defer></script>
+</body>
+</html>

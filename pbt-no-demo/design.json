@@ -1,0 +1,34 @@
+{
+  "slug": "pbt-no-demo",
+  "firma": "PBT Eiendomsdrift AS",
+  "navType": "tjenestekort-meny",
+  "fonts": [
+    "Gilda Display",
+    "Kumbh Sans"
+  ],
+  "palette": [
+    "#1e2b28",
+    "#7fb069",
+    "#f5f6f2",
+    "#7d8f88"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "vinter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "vinter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

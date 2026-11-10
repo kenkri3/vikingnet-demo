@@ -1,0 +1,34 @@
+{
+  "slug": "bandabutikken-no",
+  "firma": "Bandabutikken AS",
+  "navType": "hyllemeny med skillelinjer",
+  "fonts": [
+    "Raleway",
+    "Anek Latin"
+  ],
+  "palette": [
+    "#f7f5f0",
+    "#0f6b64",
+    "#e2725b",
+    "#e2ded3"
+  ],
+  "motion": [
+    "svg",
+    "motion"
+  ],
+  "sections": [
+    "hero",
+    "sortiment",
+    "veiledning",
+    "fakta",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "sortiment.html",
+    "blaresept.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

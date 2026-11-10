@@ -1,0 +1,35 @@
+{
+  "slug": "brunchoslo-no",
+  "firma": "Brunch",
+  "navType": "byråmeny med oransje markør",
+  "fonts": [
+    "Staatliches",
+    "Lexend"
+  ],
+  "palette": [
+    "#fffdf9",
+    "#111111",
+    "#ff4d2e",
+    "#3555ff"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "plakat",
+    "prosjekt",
+    "hjartesaker",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "hjertesaker.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

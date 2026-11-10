@@ -1,0 +1,34 @@
+{
+  "slug": "lunn-no-demo",
+  "firma": "Brødrene Lunn",
+  "navType": "skrastrek-meny",
+  "fonts": [
+    "Saira",
+    "Asap"
+  ],
+  "palette": [
+    "#1f2a1c",
+    "#f4f2ea",
+    "#c8862a",
+    "#6d7d5f"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "vei",
+    "tjenester",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "massetransport.html",
+    "asfalttransport.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
