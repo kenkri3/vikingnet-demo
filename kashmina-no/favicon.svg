@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Kashmina">
+  <rect width="64" height="64" rx="9" fill="#171210"/>
+  <path d="M21 15v34" fill="none" stroke="#d8ab7c" stroke-width="4.6" stroke-linecap="round"/>
+  <path d="M42 15 22.6 33.4 43 49" fill="none" stroke="#f4ebdf" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
