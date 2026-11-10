@@ -1,103 +1,83 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Tjenester – Castel Bygg AS</title>
-<meta name="description" content="Med lang erfaring i bagasjen utføres jobben med riktig kompetanse.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Tjenester – påbygg, renovering og rehabilitering | Castel</title>
+<meta name="description" content="Tjenestene til Castel Bygg: entreprise, påbygg og tilbygg, renovering og rehabilitering av bolig og næringsbygg.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Tjenester – påbygg, renovering og rehabilitering | Castel">
+<meta property="og:description" content="Tjenestene til Castel Bygg: entreprise, påbygg og tilbygg, renovering og rehabilitering av bolig og næringsbygg.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/bygg-2.webp">
+<meta name="theme-color" content="#2c2e2a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/castelbygg-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Castel Bygg AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html" aria-current="page">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html" aria-current="page">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<aside class="stige" aria-label="Hovedmeny">
+  <a class="stige__merke" href="index.html"><b>Castel<i> Bygg</i></b><span>I takt med tiden</span></a>
+  <nav class="stiger__nav" style="display:flex;flex-direction:column;gap:2px;padding:8px 0">
+      <a class="pinne" href="index.html"><span>Hjem</span></a>
+      <a class="pinne" href="tjenester.html" aria-current="page"><span>Tjenester</span></a>
+      <a class="pinne" href="entreprise.html"><span>Entreprise</span></a>
+      <a class="pinne" href="galleri.html"><span>Galleri</span></a>
+      <a class="pinne" href="om.html"><span>Om oss</span></a>
+      <a class="pinne" href="kontakt.html"><span>Kontakt</span></a>
+      <a class="pinne" href="panel.html"><span>Panel</span></a>
+  </nav>
+  <div class="stige__bunn"><a href="tel:+4793490848">934 90 848</a><a href="mailto:post@castelbygg.no">post@castelbygg.no</a><a class="knapp" href="kontakt.html">Prisoverslag</a></div>
+</aside>
+<div class="mobil">
+  <button class="mobil__knapp" type="button" id="mobilknapp" aria-expanded="false" aria-controls="mobilliste" data-mobil>Meny<i aria-hidden="true"></i></button>
+  <div class="mobil__liste" id="mobilliste" data-aapen="false">
+      <a href="index.html">Hjem</a>
+      <a href="tjenester.html" aria-current="page">Tjenester</a>
+      <a href="entreprise.html">Entreprise</a>
+      <a href="galleri.html">Galleri</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Panel</a>
   </div>
-</header>
+</div>
+<div class="topp"><div class="inn"><span>Asker · Bærum · Oslo</span><span><a href="tel:+4793490848">934 90 848</a> · <a href="mailto:post@castelbygg.no">post@castelbygg.no</a></span></div></div>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Bygg &amp; entreprenør · Norge</p>
-  <h1>Våre tjenester</h1>
-  <p class="sidehode__ingress">Med lang erfaring i bagasjen utføres jobben med riktig kompetanse.</p>
-</section>
-<section class="seksjon">
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/live-foto-1.jpg" alt="Nybygg, tilbygg og påbygg" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">01</div>
-      <h2>Nybygg, tilbygg og påbygg</h2>
-      <p>Vi bygger alt fra nøkkelferdige eneboliger og hytter til funksjonelle tilbygg som gir familien eller bedriften mer plass, tilpasset eksisterende arkitektur.</p>
-      <ul class="punkter">
-          <li>Helhetlig prosjektledelse</li>
-          <li>Byggesøknad og prosjektering</li>
-          <li>Levert til avtalt tid</li>
-      </ul>
-    </div>
-  </article>
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/live-foto-2.jpg" alt="Totalrenovering og rehabilitering" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">02</div>
-      <h2>Totalrenovering og rehabilitering</h2>
-      <p>Grundig oppgradering av eldre boliger og næringsbygg, inkludert etterisolering, utskifting av kledning, takomlegging og bytte av vinduer og dører.</p>
-      <ul class="punkter">
-          <li>Energioppgradering og etterisolering</li>
-          <li>Tak, fasade og vindusbytte</li>
-          <li>Varige kvalitetsmaterialer</li>
-      </ul>
-    </div>
-  </article>
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/live-foto-3.jpg" alt="Innvendig ombygging og innredning" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">03</div>
-      <h2>Innvendig ombygging og innredning</h2>
-      <p>Skreddersydde løsninger for rominndeling, kjøkkenmontering, listverk, gulvlegging og spesialtilpasset innredning med høy finish.</p>
-      <ul class="punkter">
-          <li>Nøyaktig tømrerhåndverk</li>
-          <li>Koordinering av alle fag</li>
-          <li>Ryddig byggeplass</li>
-      </ul>
-    </div>
-  </article>
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/live-foto-4.jpg" alt="Vedlikehold og rammeavtaler" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">04</div>
-      <h2>Vedlikehold og rammeavtaler</h2>
-      <p>Løpende bygningsmessig vedlikehold, ombygging av kontorlokaler og skadeutbedring for borettslag, sameier og næringseiendom.</p>
-      <ul class="punkter">
-          <li>Fast kontaktperson</li>
-          <li>Rask respons ved behov</li>
-          <li>Komplett FDV-dokumentasjon</li>
-      </ul>
-    </div>
-  </article>
-</section>
-<section class="cta">
-  <h2>Ønsker du et tilbud eller faglig vurdering?</h2>
-  <p>Ta kontakt for en uforpliktende samtale om hvordan vi kan løse ditt oppdrag.</p>
-  <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
-</section>
+<section class="pthode"><div class="inn"><div class="merkelinje">Tjenester</div>
+  <h1>Det vi gjør</h1>
+  <p>Vi tar oppdrag i Asker, Bærum, Oslo og omegn – med riktig kompetanse og tydelig fremdrift.</p>
+</div></section>
+<section class="sek sek--strek"><div class="inn">
+  <div class="ngrid">
+    <article class="kort avslor" id="paabygg"><span class="kort__merke">01</span><h3>Påbygg</h3><p>Ny etasje eller større areal – tilpasset konstruksjonen i huset.</p></article>
+    <article class="kort avslor"><span class="kort__merke">02</span><h3>Tilbygg</h3><p>Garasje, vindfang eller nytt rom, bygget sammen med huset.</p></article>
+    <article class="kort avslor" id="renovering"><span class="kort__merke">03</span><h3>Renovering</h3><p>Kjøkken, bad og overflater – oppgradert til dagens standard.</p></article>
+    <article class="kort avslor" id="rehab"><span class="kort__merke">04</span><h3>Rehabilitering</h3><p>Utbedring av konstruksjon, fasade og tekniske løsninger.</p></article>
+    <article class="kort avslor"><span class="kort__merke">05</span><h3>Eiendomsutvikling</h3><p>Fra tomt til ferdig prosjekt, med oss som byggende part.</p></article>
+    <article class="kort avslor"><span class="kort__merke">06</span><h3>Mer</h3><p>Vi tar også mindre oppdrag og bistår med råd underveis.</p></article>
+  </div>
+</div></section>
+<section class="cta"><div class="inn">
+  <h2>Trenger du prisoverslag eller gode råd?</h2>
+  <p>Ring oss, så ser vi på prosjektet og sier hva det krever – og hva det koster.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tel:+4793490848">Ring 934 90 848</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Castel Bygg AS</p>
-      <p class="bunn__tekst">Norge · post@castelbygg.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Castel Bygg</span><p>Entreprise, påbygg og tilbygg, renovering, rehabilitering og eiendomsutvikling. Kvalitet og håndverksmessig utførelse i fokus.</p><p><a href="mailto:post@castelbygg.no">post@castelbygg.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="entreprise.html">Entreprise</a></li><li><a href="galleri.html">Galleri</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="entreprise.html">Entreprise</a></li><li><a href="tjenester.html#paabygg">Påbygg og tilbygg</a></li><li><a href="tjenester.html#renovering">Renovering</a></li><li><a href="tjenester.html#rehab">Rehabilitering</a></li><li><a href="entreprise.html#utvikling">Eiendomsutvikling</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4793490848">934 90 848</a><br><a href="mailto:post@castelbygg.no">post@castelbygg.no</a></p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Castel Bygg AS</p>
+    <div class="bunn__bunn"><span>© 2026 Castel AS</span><span>Nettsiden er en demonstrasjon laget for Castel Bygg</span><a href="panel.html">Prosjektpanel</a></div>
   </div>
 </footer>
+<script src="assets/js/castelbygg-no-demo.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+{
+  "slug": "austadmaskin-no-demo",
+  "firma": "Austad Maskinstasjon AS",
+  "navType": "skrå kapitler",
+  "fonts": [
+    "Vollkorn",
+    "Hind"
+  ],
+  "palette": [
+    "#f2f1ec",
+    "#202325",
+    "#f0c419",
+    "#d8d9d4"
+  ],
+  "motion": [
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "kompetanse",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "hms.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

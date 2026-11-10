@@ -1,0 +1,35 @@
+{
+  "slug": "compel-no-demo",
+  "firma": "Compel",
+  "navType": "typografisk-linje-topp",
+  "fonts": [
+    "Vollkorn",
+    "Questrial"
+  ],
+  "palette": [
+    "#1d1b26",
+    "#f7f4ee",
+    "#9b6b9e"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "finansiering.html",
+    "innovasjon.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

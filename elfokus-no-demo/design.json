@@ -1,0 +1,34 @@
+{
+  "slug": "elfokus-no-demo",
+  "firma": "El Fokus AS",
+  "navType": "flisrutenett i toppen",
+  "fonts": [
+    "Kanit",
+    "Prompt"
+  ],
+  "palette": [
+    "#101820",
+    "#7fd1c0",
+    "#eef3f4",
+    "#5a7d8c"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "prosjekter",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "cariro-no-demo",
+  "firma": "Cariro",
+  "navType": "venstre-tallrail",
+  "fonts": [
+    "Literata",
+    "Figtree"
+  ],
+  "palette": [
+    "#10231f",
+    "#f4efe6",
+    "#c9a227",
+    "#5b6b64"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "bunke",
+    "erfaring",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "lonn.html",
+    "radgiving.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

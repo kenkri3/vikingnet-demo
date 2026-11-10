@@ -1,0 +1,29 @@
+(function(){var h=document.documentElement;h.classList.add("js");var red=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var l=document.getElementById("krins");if(l){var c=l.getContext("2d");if(c){var W=0,H=0,dpr=1,t=0,ko=null;
+function s(){dpr=Math.min(window.devicePixelRatio||1,2);W=l.clientWidth;H=l.clientHeight;if(!W||!H||W<80||H<80)return false;l.width=Math.round(W*dpr);l.height=Math.round(H*dpr);c.setTransform(dpr,0,0,dpr,0,0);return true;}
+function tegn(){if(!W||!H)return;c.clearRect(0,0,W,H);
+var n=5,pad=22;var gx=W/(n),gy=H/4;
+for(var i=0;i<n;i++){for(var j=0;j<4;j++){var x=pad+gx*i,y=pad+gy*j;
+c.strokeStyle="rgba(242,240,234,0.14)";c.lineWidth=1;c.strokeRect(x,y,gx*0.62,gy*0.52);
+c.beginPath();c.moveTo(x+gx*0.62,y+gy*0.26);c.lineTo(x+gx*0.9,y+gy*0.26);c.stroke();
+var p=(t*0.5+i*0.12+j*0.05)%1;var bx=x+gx*0.9+(0)-((t*30+i*19+j*11)%(gx*0.28));var by=y+gy*0.26;
+c.fillStyle="rgba(255,122,0,0.9)";c.beginPath();c.arc(bx,by,2,0,Math.PI*2);c.fill();
+c.fillStyle="rgba(255,122,0,"+(0.2+0.5*p)+")";c.beginPath();c.arc(bx,by,5,0,Math.PI*2);c.fill();}}
+t+=0.006;ko=requestAnimationFrame(tegn);}
+function start(){if(!ko&&!red)ko=requestAnimationFrame(tegn);}function stopp(){if(ko){cancelAnimationFrame(ko);ko=null;}}
+if(s()){if(red){tegn();if(ko){cancelAnimationFrame(ko);ko=null;}}else if("IntersectionObserver" in window){new IntersectionObserver(function(o){if(o[0].isIntersecting)start();else stopp();},{threshold:0.01}).observe(l);}else start();
+window.addEventListener("resize",function(){if(s()&&red){tegn();if(ko){cancelAnimationFrame(ko);ko=null;}}});}}}
+var av=document.querySelectorAll(".avslor");if(av.length&&"IntersectionObserver" in window&&!red){var io=new IntersectionObserver(function(o){o.forEach(function(e){if(e.isIntersecting){e.target.classList.add("er-inne");io.unobserve(e.target);}});},{rootMargin:"0px 0px -6% 0px",threshold:0.05});av.forEach(function(el){io.observe(el);});}else{av.forEach(function(el){el.classList.add("er-inne");});}
+document.querySelectorAll("form[data-demo]").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();var sv=f.querySelector(".skjema__svar");var n=f.querySelector("#navn");if(sv){sv.innerHTML="<b>Takk"+(n&&n.value?", "+n.value.split(" ")[0]:"")+"!</b>Dette er en demonstrasjon av nettsiden, så ingenting er sendt. Ring 57 86 47 60.";sv.classList.add("vis");sv.setAttribute("tabindex","-1");sv.focus();}f.querySelectorAll("input,textarea,select").forEach(function(x){if(x.type!=="submit")x.value="";});});});
+var li=document.getElementById("oppdrag");if(li){var o=[{nr:"EE-901",kunde:"Grunnskole",stad:"Eid",type:"Tavle",status:"paagaar",fase:"Bygg"},{nr:"EE-902",kunde:"Privat bustad",stad:"Nordfjordeid",type:"Varmepumpe",status:"tilbud",fase:"Tilbod sendt"},{nr:"EE-903",kunde:"Fjordhotell",stad:"Stryn",type:"El-kontroll",status:"ny",fase:"Befaring"},{nr:"EE-904",kunde:"Landbruk",stad:"Gloppen",type:"Installasjon",status:"ny",fase:"Befaring"},{nr:"EE-905",kunde:"Næringsbygg",stad:"Måløy",type:"Tavle",status:"paagaar",fase:"Montasje"},{nr:"EE-906",kunde:"Bustadlag",stad:"Volda",type:"Elbil-ladar",status:"levert",fase:"Ferdig"},{nr:"EE-907",kunde:"Verkstad",stad:"Ørsta",type:"Sikringsskap",status:"levert",fase:"Ferdig"},{nr:"EE-908",kunde:"Sjøbruk",stad:"Ulsteinvik",type:"El-kontroll",status:"tilbud",fase:"Tilbod sendt"}];
+var st={ny:"Ny",tilbud:"Tilbod",paagaar:"Pågår",levert:"Levert"},rk=["ny","tilbud","paagaar","levert"],fil="alle";
+function kpi(){var s2=function(id,v){var e=document.getElementById(id);if(e)e.textContent=v;};s2("kpi-total",o.length);s2("kpi-tilbud",o.filter(function(x){return x.status==="tilbud";}).length);s2("kpi-paagaar",o.filter(function(x){return x.status==="paagaar";}).length);s2("kpi-levert",o.filter(function(x){return x.status==="levert";}).length);}
+function stempl(s3){return '<span class="stempel stempel--'+s3+'">'+st[s3]+"</span>";}
+function tegn(){var vis=o.filter(function(x){return fil==="alle"||x.status===fil;});if(!vis.length){li.innerHTML='<div class="tom">Ingen oppdrag i dette utvalet.</div>';return;}
+li.innerHTML=vis.map(function(x){var i=rk.indexOf(x.status);var neste=rk[Math.min(i+1,rk.length-1)];var txt=x.status==="ny"?"Send tilbod":x.status==="tilbud"?"Start arbeid":"Merk levert";var k=x.status==="levert"?'<button class="knapp knapp--mork knapp--liten" data-opp="'+x.nr+'" data-til="ny">Gjenopne</button>':'<button class="knapp knapp--liten" data-opp="'+x.nr+'" data-til="'+neste+'">'+txt+"</button>";
+return '<article class="oppdrag__kort'+(x.status==="levert"?" oppdrag__kort--levert":"")+'"><div class="oppdrag__topp"><span class="oppdrag__nr">'+x.nr+"</span>"+stempl(x.status)+"</div><h3>"+x.kunde+'</h3><div class="oppdrag__meta"><span>'+x.stad+"</span><span>"+x.type+"</span><span>"+x.fase+'</span></div><div class="oppdrag__knapper">'+k+"</div></article>";}).join("");}
+function noter(t2){var ul=document.getElementById("hendelser");if(!ul)return;var el2=document.createElement("li");el2.innerHTML="<time>"+new Date().toTimeString().slice(0,5)+"</time><span>"+t2+"</span>";ul.insertBefore(el2,ul.firstChild);while(ul.children.length>12)ul.removeChild(ul.lastChild);}
+li.addEventListener("click",function(e){var b=e.target.closest("button[data-opp]");if(!b)return;var x=o.find(function(y){return y.nr===b.getAttribute("data-opp");});if(!x)return;x.status=b.getAttribute("data-til");kpi();tegn();noter(x.nr+" "+x.kunde+" → "+st[x.status]);});
+document.querySelectorAll("[data-filter]").forEach(function(kn){kn.addEventListener("click",function(){fil=kn.getAttribute("data-filter");document.querySelectorAll("[data-filter]").forEach(function(q){q.setAttribute("aria-pressed",q===kn?"true":"false");});tegn();});});
+kpi();tegn();noter("Dagen opna. 8 oppdrag i systemet.");}
+document.querySelectorAll("[data-dato]").forEach(function(el){el.textContent=new Date().toLocaleDateString("nb-NO",{weekday:"long",day:"numeric",month:"long",year:"numeric"});});})();

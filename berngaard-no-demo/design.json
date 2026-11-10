@@ -1,0 +1,35 @@
+{
+  "slug": "berngaard-no-demo",
+  "firma": "Advokatfirmaet Berngaard",
+  "navType": "innholdsfortegnelse med prikklinjer",
+  "fonts": [
+    "Tenor Sans",
+    "Barlow"
+  ],
+  "palette": [
+    "#241a1c",
+    "#b08d57",
+    "#f7f2e9",
+    "#6b5a52"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "omrader",
+    "kompetanse",
+    "aktuelt",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "kompetanse.html",
+    "mennesker.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

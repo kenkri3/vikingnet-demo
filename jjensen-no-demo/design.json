@@ -1,0 +1,34 @@
+{
+  "slug": "jjensen-no-demo",
+  "firma": "Jørn Jensen Lærhandel",
+  "navType": "søm-stripe",
+  "fonts": [
+    "Dosis",
+    "Bai Jamjuree"
+  ],
+  "palette": [
+    "#2a1f18",
+    "#b9763c",
+    "#f5efe6",
+    "#5f4a3b"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "sortiment",
+    "avdelinger",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "sortiment.html",
+    "avdelinger.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

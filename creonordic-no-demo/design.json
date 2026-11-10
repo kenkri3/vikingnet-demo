@@ -1,0 +1,35 @@
+{
+  "slug": "creonordic-no-demo",
+  "firma": "CreoNordic AS",
+  "navType": "typografisk blokkmeny",
+  "fonts": [
+    "Marcellus SC",
+    "Tajawal"
+  ],
+  "palette": [
+    "#f6f3ec",
+    "#101727",
+    "#8ea6ff",
+    "#ddd9cf"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "produksjon",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "prosjekter.html",
+    "produksjon.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

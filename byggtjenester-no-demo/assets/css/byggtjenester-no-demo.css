@@ -1,0 +1,204 @@
+/* byggtjenester-no-demo — AS Byggtjenester. Eget stilark: betong, oker og støv. */
+*, *::before, *::after { box-sizing: border-box; }
+:root {
+  --betong: #23201c; --betong-2: #302b25; --oker: #e2a25a; --kalk: #f5f1e9; --mose: #7c8a7f;
+  --graa: #6f6960; --kant: rgba(35,32,28,.15); --kant-lys: rgba(245,241,233,.16); --tekst-lys: rgba(245,241,233,.8);
+  --display: "Arvo", Georgia, serif; --brod: "Hind", "Segoe UI", Arial, sans-serif;
+}
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; }
+body { margin: 0; background: var(--kalk); color: var(--betong); font-family: var(--brod); font-size: 1.0625rem; line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+p { margin: 0 0 1.05em; }
+p:last-child { margin-bottom: 0; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; line-height: 1.16; letter-spacing: -.01em; text-wrap: balance; }
+h1 { font-size: clamp(2.05rem, 4.5vw, 3.6rem); }
+h2 { font-size: clamp(1.5rem, 2.8vw, 2.25rem); }
+h3 { font-size: clamp(1rem, 1.5vw, 1.15rem); }
+::selection { background: var(--oker); color: var(--betong); }
+:focus-visible { outline: 3px solid var(--oker); outline-offset: 3px; }
+.hopp { position: absolute; left: 1rem; top: -4rem; z-index: 95; background: var(--oker); color: var(--betong); padding: .7rem 1rem; text-decoration: none; font-weight: 700; }
+.hopp:focus { top: 1rem; }
+.visuelt-skjult { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* topp med byggetrinn-stepper */
+.topp { background: var(--betong); color: var(--kalk); position: relative; z-index: 30; }
+.topp-inn { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem clamp(1rem, 3vw, 2.2rem) .5rem; }
+.merke { display: flex; align-items: baseline; gap: .55rem; text-decoration: none; }
+.merke strong { font-family: var(--display); font-size: 1.1rem; letter-spacing: .01em; }
+.merke span { font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--mose); }
+.topp-tel { font-size: .8rem; text-decoration: none; border-bottom: 1px solid rgba(245,241,233,.3); padding-bottom: 2px; white-space: nowrap; }
+.topp-tel:hover { color: var(--oker); border-color: var(--oker); }
+.trinn { padding: 0 clamp(.7rem, 2.6vw, 1.8rem) .7rem; }
+.trinn ol { display: flex; flex-wrap: wrap; gap: .3rem; list-style: none; margin: 0; padding: 0; counter-reset: trinn; }
+.trinn li { flex: 1 1 auto; }
+.steg { display: flex; align-items: center; gap: .4rem; text-decoration: none; padding: .3rem .55rem .35rem; font-size: .78rem; color: rgba(245,241,233,.72); border-bottom: 2px solid rgba(245,241,233,.12); transition: color .2s, border-color .2s, background .2s; }
+.steg .tall { font-family: var(--display); font-size: .7rem; color: var(--oker); opacity: .8; }
+.steg:hover { color: var(--kalk); border-bottom-color: rgba(245,241,233,.35); }
+.steg[aria-current="page"] { color: var(--oker); border-bottom-color: var(--oker); background: rgba(226,162,90,.08); }
+.ramme { max-width: 1160px; margin: 0 auto; padding: 0 clamp(1rem, 3.4vw, 2.6rem); }
+/* knapper */
+.knapp { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; font-family: var(--brod); font-size: .86rem; font-weight: 600; text-decoration: none; padding: .9rem 1.35rem; border-radius: 2px; border: 1px solid var(--betong); background: var(--betong); color: var(--kalk); cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+.knapp:hover { background: var(--oker); border-color: var(--oker); color: var(--betong); transform: translateY(-2px); }
+.knapp--oker { background: var(--oker); border-color: var(--oker); color: var(--betong); }
+.knapp--oker:hover { background: var(--kalk); border-color: var(--kalk); }
+.knapp--lys { background: transparent; color: var(--kalk); border-color: rgba(245,241,233,.42); }
+.knapp--lys:hover { background: var(--kalk); color: var(--betong); border-color: var(--kalk); }
+.knapp--liten { padding: .55rem .85rem; font-size: .72rem; }
+/* hero med stableklosser */
+.hero { background: var(--betong); color: var(--kalk); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); gap: clamp(1.2rem, 3vw, 2.4rem); align-items: center; padding: clamp(2rem, 5vw, 3.6rem) clamp(1rem, 3.4vw, 2.6rem) clamp(2rem, 4.5vw, 3rem); max-width: 1160px; margin: 0 auto; }
+.eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .62rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--oker); margin: 0 0 1rem; }
+.eyebrow::before { content: ""; width: 1.5rem; height: 2px; background: var(--oker); }
+.hero h1 { margin: 0 0 1.1rem; }
+.hero h1 em { font-style: normal; color: var(--oker); }
+.hero .ingress { color: var(--tekst-lys); max-width: 31rem; }
+.hero-handlinger { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.6rem; }
+.hero-punkter { display: flex; flex-wrap: wrap; gap: .45rem 1rem; margin-top: 1.4rem; font-size: .74rem; color: var(--mose); }
+.hero-punkter span { display: inline-flex; align-items: center; gap: .4rem; }
+.hero-punkter span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--oker); }
+.hero-tall { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--kant-lys); border-top: 1px solid var(--kant-lys); }
+.hero-tall div { background: var(--betong); padding: .95rem 1rem 1.05rem; }
+.hero-tall dt { font-family: var(--display); font-size: clamp(1.15rem, 1.9vw, 1.5rem); line-height: 1; }
+.hero-tall dd { margin: .35rem 0 0; font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--mose); line-height: 1.5; }
+.blokker { position: relative; height: clamp(240px, 30vw, 320px); perspective: 1000px; perspective-origin: 50% 70%; }
+.blokk-scene { position: absolute; inset: 0; transform-style: preserve-3d; transform: rotateX(10deg) rotateY(-10deg) scale(.93); }
+.blokk { position: absolute; left: 12%; right: 12%; height: 21%; border: 1px solid rgba(35,32,28,.5); border-radius: 3px; background: linear-gradient(160deg, #cfc7b8, #a89f8e); box-shadow: 0 10px 18px -14px #000, inset 0 1px 0 rgba(255,255,255,.35); transition: transform .12s linear; }
+.blokk::after { content: ""; position: absolute; left: 6%; right: 6%; top: 26%; height: 1px; background: rgba(35,32,28,.25); }
+.blokk:nth-child(1) { bottom: 5%; transform: translateY(calc(var(--p, 0) * 0px)) translateZ(0); background: linear-gradient(160deg, #b9b0a0, #8f8676); }
+.blokk:nth-child(2) { bottom: 27%; transform: translateY(calc(var(--p, 0) * -6px)) translateZ(18px); }
+.blokk:nth-child(3) { bottom: 49%; transform: translateY(calc(var(--p, 0) * -14px)) translateZ(36px); }
+.blokk:nth-child(4) { bottom: 71%; transform: translateY(calc(var(--p, 0) * -24px)) translateZ(54px); background: linear-gradient(160deg, #e6d8c2, #cdb99a); }
+.blokk-merke { position: absolute; left: 0; bottom: -.4rem; font-size: .55rem; letter-spacing: .16em; text-transform: uppercase; color: var(--mose); }
+/* seksjoner */
+.seksjon { padding: clamp(2.2rem, 5vw, 3.6rem) 0; border-top: 1px solid var(--kant); }
+.seksjon--mork { background: var(--betong); color: var(--kalk); border-top: 0; }
+.seksjon--mork .seksjonshode p { color: var(--tekst-lys); }
+.seksjonshode { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .8fr); gap: 1rem 2rem; align-items: end; margin-bottom: clamp(1.2rem, 3vw, 1.9rem); }
+.seksjonshode .nr { display: block; font-size: .62rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--graa); margin-bottom: .55rem; }
+.seksjon--mork .seksjonshode .nr { color: var(--oker); }
+.seksjonshode p { margin: 0; color: var(--graa); max-width: 27rem; font-size: .95rem; }
+.to-kolonner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.1rem, 3vw, 2.3rem); align-items: start; }
+.tre-kolonner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.8rem, 1.8vw, 1.1rem); }
+.tjeneste { display: block; text-decoration: none; background: #fff; border: 1px solid var(--kant); border-left: 4px solid var(--oker); padding: 1.05rem 1.05rem 1.2rem; transition: transform .2s, box-shadow .2s; }
+.tjeneste:hover { transform: translateY(-3px); box-shadow: 0 16px 24px -22px rgba(35,32,28,.9); }
+.tjeneste .merke-liten { font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--graa); font-weight: 600; margin-bottom: .45rem; }
+.tjeneste h3 { margin-bottom: .35rem; }
+.tjeneste p { font-size: .9rem; color: var(--graa); margin: 0; }
+.seksjon--mork .tjeneste { background: var(--betong-2); border-color: var(--kant-lys); border-left-color: var(--oker); }
+.seksjon--mork .tjeneste p { color: var(--tekst-lys); }
+.bilde { margin: 0; }
+.bilde img { width: 100%; }
+.bilde figcaption { margin-top: .5rem; font-size: .72rem; color: var(--graa); }
+.seksjon--mork .bilde figcaption { color: rgba(245,241,233,.55); }
+.liste { list-style: none; margin: 0; padding: 0; }
+.liste li { display: grid; grid-template-columns: 1.9rem minmax(0, 1fr); gap: .7rem; padding: .85rem 0; border-bottom: 1px solid var(--kant); font-size: .96rem; }
+.seksjon--mork .liste li { border-color: var(--kant-lys); }
+.liste .tall { font-size: .7rem; font-weight: 600; color: var(--graa); padding-top: .2rem; }
+.seksjon--mork .liste .tall { color: var(--oker); }
+.liste strong { display: block; font-family: var(--display); font-size: 1rem; margin-bottom: .1rem; }
+.sitat { margin: 0; font-family: var(--display); font-size: clamp(1rem, 1.7vw, 1.3rem); line-height: 1.55; border-left: 3px solid var(--oker); padding-left: 1.1rem; }
+.sitat cite { display: block; font-family: var(--brod); font-style: normal; font-size: .64rem; letter-spacing: .14em; text-transform: uppercase; color: var(--graa); margin-top: .8rem; }
+.sidehode { padding: clamp(1.9rem, 4.2vw, 2.8rem) 0 clamp(1.1rem, 2.8vw, 1.7rem); border-bottom: 1px solid var(--kant); }
+.sidehode h1 { max-width: 40rem; }
+.sidehode .ingress { margin-top: .85rem; max-width: 37rem; color: var(--graa); }
+.sidehode--mork { background: var(--betong); color: var(--kalk); border-bottom: 0; }
+.sidehode--mork .ingress { color: var(--tekst-lys); }
+.fakta { margin: 0; border-top: 1px solid var(--kant); }
+.fakta div { display: grid; grid-template-columns: minmax(0, 8rem) minmax(0, 1fr); gap: 1rem; padding: .75rem 0; border-bottom: 1px solid var(--kant); font-size: .93rem; }
+.fakta dt { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--graa); padding-top: .2rem; }
+.fakta dd { margin: 0; }
+.fakta dd a { text-decoration: none; border-bottom: 1px solid var(--kant); }
+.fakta dd a:hover { border-color: var(--oker); }
+.kort { background: #fff; border: 1px solid var(--kant); padding: 1.05rem 1.05rem 1.15rem; }
+.kort .merke-liten { font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--graa); font-weight: 600; margin-bottom: .45rem; }
+.kort h3 { margin-bottom: .35rem; }
+.kort p { font-size: .9rem; color: var(--graa); margin: 0; }
+.seksjon--mork .kort { background: var(--betong-2); border-color: var(--kant-lys); }
+.seksjon--mork .kort p { color: var(--tekst-lys); }
+.skjema { display: grid; gap: .9rem; }
+.felt { display: grid; gap: .3rem; }
+.felt label { font-size: .6rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--graa); }
+.felt input, .felt textarea, .felt select { width: 100%; font-family: var(--brod); font-size: 1rem; color: var(--betong); background: #fff; border: 1px solid var(--kant); padding: .8rem .85rem; }
+.felt textarea { min-height: 7rem; resize: vertical; }
+.felt input:focus, .felt textarea:focus, .felt select:focus { outline: 2px solid var(--oker); border-color: var(--oker); }
+.felt-par { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; }
+.skjema-melding { display: none; border-left: 3px solid var(--oker); background: rgba(226,162,90,.2); padding: .8rem 1rem; font-size: .9rem; }
+.skjema-melding[data-vis="ja"] { display: block; }
+.stripe { background: var(--oker); color: var(--betong); padding: clamp(1.7rem, 3.8vw, 2.5rem) 0; }
+.stripe-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.2rem 2rem; align-items: center; }
+.stripe p { max-width: 36rem; margin: .55rem 0 0; }
+.stripe .knapp { background: var(--betong); border-color: var(--betong); color: var(--kalk); }
+.stripe .knapp:hover { background: var(--kalk); border-color: var(--kalk); color: var(--betong); }
+/* panel */
+.panel { padding: clamp(1.3rem, 3vw, 2.1rem) 0 clamp(1.9rem, 4.6vw, 3rem); }
+.panel-topp { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; padding-bottom: .95rem; border-bottom: 1px solid var(--kant); margin-bottom: 1rem; }
+.panel-topp h1 { font-size: clamp(1.5rem, 2.9vw, 2.2rem); }
+.panel-topp p { margin: .3rem 0 0; color: var(--graa); font-size: .85rem; }
+.panel-merke { font-size: .58rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; border: 1px solid var(--kant); padding: .4rem .65rem; }
+.kpi-rad { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--kant); border: 1px solid var(--kant); margin-bottom: 1rem; }
+.kpi { background: #fff; padding: .8rem .95rem .95rem; }
+.kpi .navn { font-size: .58rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--graa); margin: 0 0 .4rem; }
+.kpi .verdi { font-family: var(--display); font-size: clamp(1.35rem, 2.2vw, 1.9rem); line-height: 1; margin: 0; }
+.kpi .endring { font-size: .7rem; color: var(--graa); margin: .3rem 0 0; }
+.panel-rutenett { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
+.boks { border: 1px solid var(--kant); background: #fff; }
+.boks-hode { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem; padding: .65rem .95rem; border-bottom: 1px solid var(--kant); }
+.boks-hode h2 { font-family: var(--brod); font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.filter-rad { display: flex; flex-wrap: wrap; gap: .25rem; }
+.filter { font-family: var(--brod); font-size: .58rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; background: transparent; border: 1px solid var(--kant); color: var(--graa); padding: .3rem .5rem; cursor: pointer; }
+.filter[aria-pressed="true"] { background: var(--betong); border-color: var(--betong); color: var(--kalk); }
+.ordre-liste { list-style: none; margin: 0; padding: 0; }
+.ordre { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .3rem .8rem; align-items: center; padding: .8rem .95rem; border-bottom: 1px solid var(--kant); }
+.ordre:last-child { border-bottom: 0; }
+.ordre:hover { background: #faf7f1; }
+.ordre-navn { font-weight: 600; font-size: .93rem; margin: 0; line-height: 1.3; }
+.ordre-meta { font-size: .72rem; color: var(--graa); display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .12rem; }
+.ordre-meta .skille { color: rgba(35,32,28,.28); }
+.ordre-hoyre { display: flex; align-items: center; gap: .35rem; flex-wrap: wrap; justify-self: end; }
+.status { font-size: .54rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .28rem .45rem; border: 1px solid var(--kant); white-space: nowrap; color: var(--graa); }
+.status[data-status="ny"] { background: var(--oker); border-color: var(--oker); color: var(--betong); }
+.status[data-status="pagaar"] { background: var(--betong); border-color: var(--betong); color: var(--kalk); }
+.status[data-status="venter"] { background: rgba(124,138,127,.24); border-color: rgba(124,138,127,.6); color: #3f4b43; }
+.liten-knapp { font-family: var(--brod); font-size: .56rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; background: #fff; border: 1px solid var(--graa); color: var(--betong); padding: .3rem .5rem; cursor: pointer; white-space: nowrap; }
+.liten-knapp:hover { background: var(--betong); color: var(--kalk); border-color: var(--betong); }
+.liten-knapp[disabled] { opacity: .45; cursor: default; }
+.liten-knapp[disabled]:hover { background: #fff; color: var(--betong); border-color: var(--graa); }
+.varsel { position: fixed; left: 50%; bottom: 1rem; transform: translate(-50%, 220%); z-index: 90; background: var(--betong); color: var(--kalk); padding: .7rem 1.1rem; font-size: .76rem; border-left: 3px solid var(--oker); transition: transform .3s, opacity .3s; max-width: 92vw; opacity: 0; pointer-events: none; }
+.varsel[data-vis="ja"] { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+.fot { background: var(--betong); color: var(--graa); padding: 1.7rem 0; font-size: .78rem; }
+.fot-inn { display: flex; flex-wrap: wrap; gap: .7rem 2rem; justify-content: space-between; align-items: baseline; }
+.fot a { color: var(--kalk); text-decoration: none; border-bottom: 1px solid var(--kant-lys); }
+.fot a:hover { border-color: var(--oker); }
+.fot-lenker { display: flex; flex-wrap: wrap; gap: .9rem; }
+.avslor { animation: opp .7s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes opp { from { transform: translateY(14px); } to { transform: none; } }
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .blokker { order: -1; height: 210px; }
+  .to-kolonner { grid-template-columns: minmax(0, 1fr); }
+  .tre-kolonner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .seksjonshode { grid-template-columns: minmax(0, 1fr); align-items: start; }
+  .panel-rutenett { grid-template-columns: minmax(0, 1fr); }
+  .stripe-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+  body { font-size: 1rem; }
+  .merke span { display: none; }
+  .tre-kolonner { grid-template-columns: minmax(0, 1fr); }
+  .felt-par { grid-template-columns: minmax(0, 1fr); }
+  .kpi-rad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fakta div { grid-template-columns: minmax(0, 1fr); gap: .1rem; }
+  .hero-handlinger .knapp { flex: 1 1 auto; }
+  .ordre { grid-template-columns: minmax(0, 1fr); }
+  .ordre-hoyre { justify-self: start; }
+  .hero-tall { grid-template-columns: minmax(0, 1fr); }
+  .trinn ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .2rem; }
+  .steg { font-size: .72rem; }
+  .fot-inn { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .avslor { animation: none !important; }
+  .blokk { transform: none !important; }
+}

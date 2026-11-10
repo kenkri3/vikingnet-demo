@@ -1,0 +1,35 @@
+{
+  "slug": "bentzenbud-no-demo",
+  "firma": "Bentzen Bud AS",
+  "navType": "fullskjermmeny",
+  "fonts": [
+    "Gelasio",
+    "Nunito"
+  ],
+  "palette": [
+    "#f7f4ef",
+    "#16151a",
+    "#6f5f9c",
+    "#ddd7cc"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "referanser",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "ekspress.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

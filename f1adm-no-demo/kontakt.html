@@ -1,66 +1,89 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – F1 Administrasjon AS</title>
-<meta name="description" content="Ta kontakt med F1 Administrasjon AS på e-post alf.slettemoen@f1adm.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Kontakt F1 — 92 22 05 06</title>
+<meta name="description" content="Kontakt F1 på telefon 92 22 05 06. Send en henvendelse om budsjettering, forecasting, systemintegrasjon eller rapportering.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="F1">
+<meta property="og:title" content="Kontakt F1 — 92 22 05 06">
+<meta property="og:description" content="Kontakt F1 på telefon 92 22 05 06. Send en henvendelse om budsjettering, forecasting, systemintegrasjon eller rapportering.">
+<meta property="og:image" content="assets/img/03-f1adm-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600&family=Mukta:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/f1adm-no-demo.css">
+<script src="assets/js/f1adm-no-demo.js" defer></script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">F1 Administrasjon AS</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="topp-topp">
+    <a class="merke" href="index.html"><strong>F1</strong> <span>Budsjett og rapportering</span></a>
+    <a class="topp-tel" href="tel:+4792220506">92 22 05 06</a>
   </div>
+  <nav aria-label="Hovedmeny">
+    <ul class="faner">
+      <li><a class="fane" href="index.html"><span class="bokstav">A</span>Forside</a></li>
+      <li><a class="fane" href="tjenester.html"><span class="bokstav">B</span>Tjenester</a></li>
+      <li><a class="fane" href="modeller.html"><span class="bokstav">C</span>Modeller</a></li>
+      <li><a class="fane" href="om.html"><span class="bokstav">D</span>Om oss</a></li>
+      <li><a class="fane" href="kontakt.html" aria-current="page"><span class="bokstav">E</span>Kontakt</a></li>
+      <li><a class="fane" href="panel.html"><span class="bokstav">F</span>Panel</a></li>
+    </ul>
+  </nav>
+  <div class="fane-linje"></div>
 </header>
-<main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Regnskap &amp; økonomisk rådgivning · Norge</p>
-  <h1>Ta kontakt med F1 Administrasjon AS</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
-  <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">F1 Administrasjon AS</p>
-      <p><strong>Telefon</strong><br><a href="tel:+4792220506">92 22 05 06</a></p>
-      <p><strong>E-post</strong><br><a href="mailto:alf.slettemoen@f1adm.no">alf.slettemoen@f1adm.no</a></p>
-      <p><strong>Område</strong><br>Norge</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
-  </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:alf.slettemoen@f1adm.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Løpende regnskap og bokføring</option><option>Lønn og personaladministrasjon</option><option>Årsoppgjør og skattemelding</option><option>Økonomisk rådgivning og finansiering</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
-  </form>
-</section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">F1 Administrasjon AS</p>
-      <p class="bunn__tekst">Norge · 92 22 05 06 · alf.slettemoen@f1adm.no</p>
+<main id="hoved">
+  <section class="sidehode">
+    <div class="ramme">
+      <p class="eyebrow">Kontakt</p>
+      <h1>Ta kontakt.</h1>
+      <p class="ingress">Ring 92 22 05 06, eller send en henvendelse med hva dere trenger.</p>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 F1 Administrasjon AS</p>
+  </section>
+
+  <section class="seksjon">
+    <div class="ramme">
+      <div class="to-kolonner">
+        <form class="skjema" data-skjema novalidate>
+          <div class="felt-par">
+            <div class="felt"><label for="navn">Navn</label><input type="text" id="navn" name="navn" autocomplete="name" placeholder="Fornavn og etternavn"></div>
+            <div class="felt"><label for="epost">E-post</label><input type="email" id="epost" name="epost" autocomplete="email" placeholder="navn@firma.no"></div>
+          </div>
+          <div class="felt-par">
+            <div class="felt"><label for="telefon">Telefon</label><input type="tel" id="telefon" name="telefon" autocomplete="tel" placeholder="+47 000 00 00"></div>
+            <div class="felt"><label for="emne">Hva gjelder det?</label><select id="emne" name="emne"><option>Budsjettering og forecasting</option><option>Systemintegrasjon</option><option>Rapportering (QBE-report/RG)</option><option>Annet</option></select></div>
+          </div>
+          <div class="felt"><label for="melding">Melding</label><textarea id="melding" name="melding" rows="6" placeholder="Beskriv hva dere trenger, og hvilke systemer som er i bruk."></textarea></div>
+          <p class="skjema-melding" role="status" aria-live="polite"></p>
+          <div><button class="knapp" type="submit">Send henvendelsen</button></div>
+          <p style="font-size:.76rem;color:var(--graa);margin-top:.4rem">Dette er en demonstrasjonsside. Ingenting sendes, og opplysningene lagres ikke.</p>
+        </form>
+        <div>
+          <dl class="fakta">
+            <div><dt>Firma</dt><dd>F1</dd></div>
+            <div><dt>Telefon</dt><dd><a href="tel:+4792220506">92 22 05 06</a></dd></div>
+            <div><dt>Siden</dt><dd>2000</dd></div>
+            <div><dt>Leverer</dt><dd>Programvare og konsulenttjenester</dd></div>
+          </dl>
+          <div class="kort" style="margin-top:1rem">
+            <p class="merke-liten">Tips</p>
+            <h3>Hva vi trenger å vite</h3>
+            <p>Hvilke systemer dere henter data fra, og hvem som skal bruke modellen. Da kan vi gi et presist svar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 F1 · 92 22 05 06</p>
+    <p class="fot-lenker"><a href="tjenester.html">Tjenester</a><a href="modeller.html">Modeller</a><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a><a href="panel.html">Panel</a></p>
   </div>
 </footer>
-<script src="app.js"></script>
 </body>
 </html>

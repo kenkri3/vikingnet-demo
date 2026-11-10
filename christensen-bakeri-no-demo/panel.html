@@ -1,175 +1,29 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Christensen Bakeri &amp; Konditori – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Christensen Bakeri &amp; Konditori.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Bestillinger | Christensen Bakeri (demo)</title>
+<meta name="description" content="Demo av bestillingslisten: bestillinger fra mottatt til baking, klar og hentet, med filter, produksjon og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#faf5ec">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Christensen Bakeri og Konditori">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Bestillinger | Christensen Bakeri (demo)">
+<meta property="og:description" content="Demo av bestillingslisten: bestillinger fra mottatt til baking, klar og hentet, med filter, produksjon og hendelseslogg.">
+<meta property="og:image" content="assets/img/bakeri3.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:ital,wght@0,400;0,500;0,700;1,400&family=Signika:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/christensen-bakeri-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><span class="merke__flate merke__flate--lys"><img class="merke__logo" src="img/logo.png" alt="Christensen Bakeri &amp; Konditori" height="34"></span></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
-<main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Christensen Bakeri &amp; Konditori. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Christensen Bakeri &amp; Konditori</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Ferske håndverksbrød og rundstykker</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Selskapskaker og konditorhåndverk</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Møtemat, påsmurt og bedriftslevering</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Kafé og utsalg med god atmosfære</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om ferske håndverksbrød og rundstykker</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om selskapskaker og konditorhåndverk</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av møtemat, påsmurt og bedriftslevering</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Christensen Bakeri &amp; Konditori</p>
-      <p class="bunn__tekst">Norge · 69 35 16 00 · hanne@christensen-bakeri.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Christensen Bakeri &amp; Konditori</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+<header class="hode"><div class="skal"><div class="hode__rad"><a class="merke" href="index.html"><span class="merke__symbol">CB</span><span class="merke__tekst">Christensen<small>Bakeri og konditori · 1923</small></span></a><div class="hode__hoyre"><a class="hode__tlf" href="tel:+4769351600">69 35 16 00</a><button class="menyknapp" type="button" data-meny-apne aria-expanded="false" aria-controls="menyfelt">Meny</button></div></div><div class="delt"><ul class="delt__gruppe"><li><a href="om.html">Om oss</a></li><li><a href="butikker.html">Butikker</a></li><li><a href="produkter.html">Produkter</a></li></ul><div class="delt__merke"><a class="merke" href="index.html"><span class="merke__symbol">CB</span><span class="merke__tekst">Christensen<small>Bakeri og konditori · 1923</small></span></a></div><ul class="delt__gruppe delt__gruppe--hoyre"><li><a href="lunsj.html">Lunsj</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html" aria-current="page">Panel</a></li></ul></div></div></header>
+<div class="meny" data-meny aria-hidden="true" id="menyfelt" role="dialog" aria-modal="true" aria-label="Hovedmeny"><button class="meny__lukk" type="button" data-meny-lukk aria-label="Lukk menyen">×</button><a class="meny__lenke" href="index.html">Forside</a><a class="meny__lenke" href="om.html">Om oss</a><a class="meny__lenke" href="butikker.html">Butikker</a><a class="meny__lenke" href="produkter.html">Produkter</a><a class="meny__lenke" href="lunsj.html">Lunsj</a><a class="meny__lenke" href="kontakt.html">Kontakt</a><a class="meny__lenke" href="panel.html" aria-current="page">Panel</a><div class="meny__bunn"><a class="knapp" href="kontakt.html">Kontakt oss</a><a class="knapp knapp--lys" href="tel:+4769351600">69 35 16 00</a></div></div><main id="innhold">
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html" style="text-decoration:none"><span class="merke__symbol" style="background:var(--honning);color:var(--herb-2)">CB</span><span class="merke__tekst" style="color:#fff">Christensen<small style="color:#a8a597">Bestillinger · demo</small></span></a><div class="hode__hoyre"><span class="paneltopp__bruker"><i>CB</i>Butikk og nettbutikk</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Bestillinger</h1><p>Uke 46 · 9 bestillinger · eksempeldata</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Ny bestilling</a></div></div><div class="kpi"><div class="kpi__kort"><span class="kpi__navn">Bestillinger</span><span class="kpi__tall">9</span><span class="kpi__endring">nett og disk</span></div><div class="kpi__kort kpi__kort--honning"><span class="kpi__navn">Baking</span><span class="kpi__tall" data-kpi-baking>2</span><span class="kpi__endring">i ovnen</span></div><div class="kpi__kort"><span class="kpi__navn">Klare</span><span class="kpi__tall" data-kpi-klar>2</span><span class="kpi__endring">til henting</span></div><div class="kpi__kort"><span class="kpi__navn">Henting</span><span class="kpi__tall">97</span><span class="kpi__endring">prosent i tid (eksempeldata)</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer bestillinger"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="mottatt" aria-pressed="false">Mottatt</button><button type="button" data-filter="baking" aria-pressed="false">Baking</button><button type="button" data-filter="klar" aria-pressed="false">Klar</button><button type="button" data-filter="hentet" aria-pressed="false">Hentet</button></div><span class="verktoylinje__tall" data-antall>9 av 9 bestillinger</span></div><div class="bestillinger" data-bestillinger><div class="best" data-steg="mottatt"><div><p class="best__navn">Bursdagskake · 12 pers</p><div class="best__meta"><span>Nettbutikk</span><span>Mottatt 04.11</span><span>Hentes 08.11</span></div></div><span class="best__steg">Mottatt</span><button class="best__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="best" data-steg="mottatt"><div><p class="best__navn">Kanelknuter · 20 stk</p><div class="best__meta"><span>Nettbutikk</span><span>Mottatt 05.11</span><span>Hentes 07.11</span></div></div><span class="best__steg">Mottatt</span><button class="best__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="best" data-steg="baking"><div><p class="best__navn">Skolebrød · 30 stk</p><div class="best__meta"><span>Butikk</span><span>Baking 06.11</span><span>Hentes 07.11</span></div></div><span class="best__steg">Baking</span><button class="best__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="best" data-steg="baking"><div><p class="best__navn">Møtemat · 15 pers</p><div class="best__meta"><span>Rolvsøyveien</span><span>Baking 06.11</span><span>Hentes 07.11</span></div></div><span class="best__steg">Baking</span><button class="best__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="best" data-steg="klar"><div><p class="best__navn">Kake · konfirmasjon</p><div class="best__meta"><span>Nettbutikk</span><span>Klar 05.11</span><span>Hentes 06.11</span></div></div><span class="best__steg">Klar</span><button class="best__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="best" data-steg="klar"><div><p class="best__navn">Focaccia · lunsj</p><div class="best__meta"><span>Gressvik</span><span>Klar 05.11</span><span>Hentes 05.11</span></div></div><span class="best__steg">Klar</span><button class="best__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="best" data-steg="hentet"><div><p class="best__navn">Brød · 10 stk</p><div class="best__meta"><span>Butikk</span><span>Hentet 04.11</span><span>Kvittert</span></div></div><span class="best__steg">Hentet</span><button class="best__knapp" type="button" data-neste-steg disabled>Hentet</button></div><div class="best" data-steg="hentet"><div><p class="best__navn">Solboller · 24 stk</p><div class="best__meta"><span>Butikk</span><span>Hentet 03.11</span><span>Kvittert</span></div></div><span class="best__steg">Hentet</span><button class="best__knapp" type="button" data-neste-steg disabled>Hentet</button></div><div class="best" data-steg="hentet"><div><p class="best__navn">Snitter · 40 stk</p><div class="best__meta"><span>Rolvsøyveien</span><span>Hentet 02.11</span><span>Kvittert</span></div></div><span class="best__steg">Hentet</span><button class="best__knapp" type="button" data-neste-steg disabled>Hentet</button></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Hendelseslogg</h2><div data-logg></div></div></div><div><div class="panelkort"><h2>Frister denne uken</h2><div class="logglinje"><time>tir</time><span>Kake konfirmasjon</span></div><div class="logglinje"><time>ons</time><span>Møtemat Rolvsøyveien</span></div><div class="logglinje"><time>fre</time><span>Skolebrød til butikk</span></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Produksjon</h2><div class="logglinje"><time>3</time><span>Bakeovner</span></div><div class="logglinje"><time>2</time><span>Butikker</span></div><div class="logglinje"><time>1</time><span>Nettbutikk</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">Christensen Bakeri og Konditori</p><p>Historien startet i 1923, som et lite bakeri i et ombygd vognskjul. Over 100 år senere lever de gode tradisjonene videre.</p></div><div><h2>Produkter</h2><ul><li><a href="produkter.html#kaker">Kaker</a></li><li><a href="produkter.html#brod">Brød</a></li><li><a href="lunsj.html">Lunsj</a></li><li><a href="butikker.html">Butikker</a></li></ul></div><div><h2>Selskapet</h2><ul><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Bestillinger (demo)</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4769351600">69 35 16 00</a></li><li><a href="mailto:post@christensen-bakeri.no">post@christensen-bakeri.no</a></li><li>Gressvik Torg</li><li>Rolvsøyveien</li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> Christensen Bakeri og Konditori</span><span>Siden 1923</span></div></div></footer>
+<script src="assets/js/christensen-bakeri-no-demo.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+{
+  "slug": "dampbakeriet-no-demo",
+  "firma": "Naustdal dampbakeri",
+  "navType": "hylle med varer",
+  "fonts": [
+    "Trirong",
+    "Sarabun"
+  ],
+  "palette": [
+    "#1f2a24",
+    "#cfa25a",
+    "#f8f2e6",
+    "#8a9a7b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkt",
+    "kafear",
+    "bakeriet",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "bakeriet.html",
+    "kafear.html",
+    "produkt.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

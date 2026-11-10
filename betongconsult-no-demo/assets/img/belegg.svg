@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustrasjon: industrielt gulvbelegg i et verksted">
+<rect width="800" height="600" fill="#22242a"/>
+<path d="M120 470 L400 330 L680 470 L400 600Z" fill="#3a3d44"/>
+<path d="M120 470 L400 330 L680 470" stroke="#7d9c8e" stroke-width="6" fill="none"/>
+<g stroke="#7d9c8e" stroke-width="2" opacity=".5">
+<path d="M260 400L540 400M190 435L610 435M320 365L480 365"/>
+</g>
+<rect x="300" y="180" width="200" height="120" rx="6" fill="#d8d3c9"/>
+<text x="400" y="250" text-anchor="middle" font-family="monospace" font-size="20" fill="#22242a">EPOXY</text>
+<text x="400" y="290" text-anchor="middle" font-family="monospace" font-size="14" fill="#22242a">PU · ACRYL</text>
+</svg>

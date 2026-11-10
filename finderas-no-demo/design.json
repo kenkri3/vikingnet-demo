@@ -1,0 +1,36 @@
+{
+  "slug": "finderas-no-demo",
+  "firma": "Finder",
+  "navType": "stor-typografi-topp",
+  "fonts": [
+    "Urbanist",
+    "Gloock"
+  ],
+  "palette": [
+    "#1b1b3a",
+    "#f7f4ec",
+    "#e0b64a",
+    "#6c6aa8"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "karusell",
+    "fagbrev",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "fagbrev.html",
+    "rekruttering.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

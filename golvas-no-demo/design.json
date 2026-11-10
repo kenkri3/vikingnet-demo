@@ -1,0 +1,34 @@
+{
+  "slug": "golvas-no-demo",
+  "firma": "GøLv AS",
+  "navType": "fargeprove-topp",
+  "fonts": [
+    "Nunito",
+    "Merriweather"
+  ],
+  "palette": [
+    "#2b2721",
+    "#f4efe6",
+    "#c08a4e"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "gulv",
+    "showroom",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "sliping.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

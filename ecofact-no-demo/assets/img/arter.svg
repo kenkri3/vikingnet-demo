@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustrasjon: arter, vegetasjon og vann i et registreringsområde">
+<rect width="800" height="600" fill="#1f3d2b"/>
+<path d="M0 430c120-40 180-10 280-60s180-10 260-70 180-40 260-10v310H0z" fill="#2c5340"/>
+<path d="M0 470c140-30 200 10 300-40s200 10 280-40 140-20 220 0v210H0z" fill="#3d6b52"/>
+<g stroke="#eef0e4" stroke-width="3" fill="none">
+<path d="M180 400v-90M180 340l-26-26M180 350l30-30"/>
+<path d="M420 380v-110M420 320l-30-30M420 330l34-34"/>
+<path d="M620 410v-80M620 360l-24-24M620 370l26-26"/>
+</g>
+<circle cx="300" cy="210" r="26" fill="none" stroke="#b8873f" stroke-width="4"/>
+<circle cx="540" cy="180" r="20" fill="none" stroke="#b8873f" stroke-width="4"/>
+<text x="400" y="560" text-anchor="middle" font-family="monospace" font-size="20" fill="#eef0e4">BOTANIKK · ZOOLOGI · VANN</text>
+</svg>

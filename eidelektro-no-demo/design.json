@@ -1,0 +1,34 @@
+{
+  "slug": "eidelektro-no-demo",
+  "firma": "Eid Elektro",
+  "navType": "sikringsskap-topp",
+  "fonts": [
+    "Kanit",
+    "Sarabun"
+  ],
+  "palette": [
+    "#17171a",
+    "#f2f0ea",
+    "#ff7a00"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tenester",
+    "kvalitet",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "tavle.html",
+    "privat.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

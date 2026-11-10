@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Snittegning: betong med armering, membran og belegg">
+<rect width="800" height="600" fill="#d8d3c9"/>
+<rect x="90" y="300" width="620" height="150" fill="#a9a49a"/>
+<g stroke="#22242a" stroke-width="4"><path d="M90 300h620M90 450h620"/></g>
+<g stroke="#7d9c8e" stroke-width="6" fill="none"><path d="M120 350h560M120 400h560"/><circle cx="200" cy="350" r="3"/><circle cx="340" cy="400" r="3"/><circle cx="480" cy="350" r="3"/><circle cx="620" cy="400" r="3"/></g>
+<rect x="90" y="255" width="620" height="34" fill="#b4552e"/>
+<g stroke="#22242a" stroke-width="2"><path d="M90 255h620"/></g>
+<text x="400" y="200" text-anchor="middle" font-family="monospace" font-size="22" fill="#22242a">BELEGG</text>
+<text x="400" y="360" text-anchor="middle" font-family="monospace" font-size="20" fill="#f0eee9">ARMERING</text>
+<text x="400" y="425" text-anchor="middle" font-family="monospace" font-size="20" fill="#f0eee9">BETONG</text>
+</svg>

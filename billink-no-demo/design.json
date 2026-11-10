@@ -1,0 +1,35 @@
+{
+  "slug": "billink-no-demo",
+  "firma": "Billink",
+  "navType": "programfaner-topp",
+  "fonts": [
+    "Teko",
+    "Overpass"
+  ],
+  "palette": [
+    "#0b1220",
+    "#f4f6fa",
+    "#7c5cff"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "funksjoner",
+    "for-hvem",
+    "kom-i-gang",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "losning.html",
+    "annonsering.html",
+    "priser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

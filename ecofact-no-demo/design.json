@@ -1,0 +1,35 @@
+{
+  "slug": "ecofact-no-demo",
+  "firma": "Ecofact",
+  "navType": "natursti",
+  "fonts": [
+    "Spectral",
+    "Work Sans"
+  ],
+  "palette": [
+    "#1f3d2b",
+    "#eef0e4",
+    "#6f9c8b",
+    "#b8873f"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "kontur",
+    "kompetanse",
+    "steder",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "barummurogflis-no-demo",
+  "firma": "Bærum Mur og Flis",
+  "navType": "mursteinsmeny",
+  "fonts": [
+    "Bitter",
+    "Public Sans"
+  ],
+  "palette": [
+    "#e8e2d6",
+    "#2f3430",
+    "#a8492f",
+    "#6f7568"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "vegg",
+    "referanser",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bad.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

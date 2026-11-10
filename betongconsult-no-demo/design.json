@@ -1,0 +1,36 @@
+{
+  "slug": "betongconsult-no-demo",
+  "firma": "BetongConsult",
+  "navType": "armeringsmeny",
+  "fonts": [
+    "Saira Condensed",
+    "Saira"
+  ],
+  "palette": [
+    "#22242a",
+    "#d8d3c9",
+    "#7d9c8e",
+    "#b4552e"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "sjikt",
+    "belegg",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "rehabilitering.html",
+    "belegg.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

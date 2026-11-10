@@ -1,0 +1,35 @@
+{
+  "slug": "bksas-no-demo",
+  "firma": "BKS Industri AS",
+  "navType": "understreksmeny",
+  "fonts": [
+    "Domine",
+    "Varela Round"
+  ],
+  "palette": [
+    "#f4f1ea",
+    "#1c2226",
+    "#1b6e8c",
+    "#ddd8cd"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "tverrfaglig",
+    "bransjer",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bransjer.html",
+    "om.html",
+    "hms.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

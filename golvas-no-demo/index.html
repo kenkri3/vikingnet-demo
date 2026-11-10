@@ -1,181 +1,103 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Gølv AS – Parkett &amp; gulvbehandling</title>
-<meta name="description" content="GøLv AS leverer kvalitetsgulv og tilbyr profesjonell gulvsliping og behandling av både nye og eksisterende gulv.">
-<meta property="og:title" content="Gølv AS – Parkett &amp; gulvbehandling">
-<meta property="og:description" content="GøLv AS leverer kvalitetsgulv og tilbyr profesjonell gulvsliping og behandling av både nye og eksisterende gulv.">
-<meta property="og:image" content="img/live-foto-1.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>GøLv AS – kvalitetsgulv og gulvsliping i Valdres</title>
+<meta name="description" content="GøLv AS i Ryfoss leverer kvalitetsgulv – heltre, parkett, vinyl og laminat – og tilbyr profesjonell gulvsliping og behandling i Valdres.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="GøLv AS – kvalitetsgulv og gulvsliping i Valdres">
+<meta property="og:description" content="GøLv AS i Ryfoss leverer kvalitetsgulv – heltre, parkett, vinyl og laminat – og tilbyr profesjonell gulvsliping og behandling i Valdres.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/gulv-1.webp">
+<meta name="theme-color" content="#2b2721">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/golvas-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">Gølv AS</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="prov">
+  <div class="prov__indre">
+    <a class="merke" href="index.html"><b>Gø<i>Lv</i> AS</b><small>gulv · Ryfoss</small></a>
+    <nav class="prover" aria-label="Hovedmeny">
+      <a class="prove" href="index.html" aria-current="page">Hjem</a>
+      <a class="prove" href="produkter.html">Produkter</a>
+      <a class="prove" href="sliping.html">Sliping</a>
+      <a class="prove" href="om.html">Om</a>
+      <a class="prove" href="kontakt.html">Kontakt</a>
+      <a class="prove" href="panel.html">Panel</a>
+    </nav>
   </div>
 </header>
+<div class="topp"><div class="inn"><span>Showroom · Ryfoss i Valdres</span><span><a href="mailto:even@golvas.no">even@golvas.no</a></span></div></div>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/live-foto-1.jpg" alt="Gølv AS" loading="eager" decoding="async">
-    <figcaption><strong>Gølv AS</strong><span>Parkett &amp; gulvbehandling · Ryfoss</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Parkett &amp; gulvbehandling · Ryfoss</p>
-    <h1>Alt innen GøLv.</h1>
-    <p class="helt__ingress">GøLv AS leverer kvalitetsgulv og tilbyr profesjonell gulvsliping og behandling av både nye og eksisterende gulv.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tjenester.html">Se våre tjenester</a>
-    </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">99,9 % støvfri gulvsliping</li>
-      <li class="tillit__punkt">Lakk, olje og hardvoksolje i alle nyanser</li>
-      <li class="tillit__punkt">Gratis og uforpliktende befaring</li>
+<section class="hero mork">
+  <canvas class="hero__lerret" id="plank" aria-hidden="true"></canvas>
+  <div class="hero__dekk" aria-hidden="true"></div>
+  <div class="inn hero__inn">
+    <span class="hero__merke">Gulv · Ryfoss i Valdres</span>
+    <h1>Alt innen <em>GøLv</em>.</h1>
+    <p class="hero__ingress">GøLv AS leverer kvalitetsgulv og tilbyr profesjonell gulvsliping og behandling av både nye og eksisterende gulv.</p>
+    <div class="hero__knapper"><a class="knapp" href="produkter.html">Se gulvene <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="sliping.html">Sliping og behandling</a></div>
+    <div class="hero__fakta"><span>Heltre</span><span>Parkett</span><span>Vinyl og laminat</span></div>
+  </div>
+</section>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">01 — Gulv</div><h2>Det vi leverer</h2></div><p>Et nøye utvalgt sortiment av kvalitetsgulv, kombinert med personlig rådgivning og fagkunnskap.</p></div>
+  <ul class="tjlist">
+    <li><a href="produkter.html#heltre"><span class="nr">01</span><span><b>Heltre gulv</b><small>Massive tregulv med varme og levetid.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="produkter.html#parkett"><span class="nr">02</span><span><b>Parkett</b><small>Klassisk og moderne, i flere treslag og mønstre.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="produkter.html#vinyl"><span class="nr">03</span><span><b>Vinyl og laminat</b><small>Klikkvinyl og laminat som tåler hverdagen.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="sliping.html"><span class="nr">04</span><span><b>Sliping og behandling</b><small>Oppfrisking og overflatebehandling av tregulv.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+  </ul>
+</div></section>
+<section class="sek sek--kritt2 sek--strek"><div class="inn media">
+  <figure class="ramme ramme--43 avslor"><img src="assets/img/gulv-1.webp" width="1120" height="1400" alt="Tregulv i lys stue"><figcaption>Gulv som holder over tid.</figcaption></figure>
+  <div class="kropp avslor"><div class="merkelinje">02 — Showroom</div><h2>Se gulvet før du velger</h2>
+    <p>Hos oss finner du et nøye utvalgt sortiment av kvalitetsgulv, kombinert med personlig rådgivning og fagkunnskap. Vi tilbyr også gulvlister, spiler og tilbehør – og kundetilpassede løsninger.</p>
+    <ul class="punkter">
+      <li><b>Showroom</b> – i Ryfoss i Valdres.</li>
+      <li><b>Rådgivning</b> – personlig og faglig.</li>
+      <li><b>Tilbehør</b> – lister, spiler og tilpasning.</li>
     </ul>
   </div>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
-  </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/hero.jpg" alt="Støvfri sliping av parkett og tregulv" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Støvfri sliping av parkett og tregulv</h3>
-      <p>Vi sliper ned slitte og misfargede tregulv med lukkede støvsugersystemer som fanger opp støvet direkte, uten behov for tildekking eller storrengjøring.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-3.jpg" alt="Lakkering, oljing og innfarging" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Lakkering, oljing og innfarging</h3>
-      <p>Profesjonell overflatebehandling med matt lakk, naturolje, hvitpigmentering eller hardvoksolje som gir gulvet ønsket fargetone og lang levetid.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-4.jpg" alt="Legging av parkett og fiskebensgulv" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Legging av parkett og fiskebensgulv</h3>
-      <p>Nøyaktig montering av 1-stavs plank, klassisk fiskebensparkett, Chevron og laminat, inkludert avretting av undergulv og montering av gulvlister.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-5.jpg" alt="Reparasjon og vedlikehold av næringsgulv" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Reparasjon og vedlikehold av næringsgulv</h3>
-      <p>Utbedring av vannskader, utskifting av skadede bord samt periodisk rens og vedlikeholdsoljing av gulv i kontorer, butikker og idrettshaller.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Støvfri arbeidsprosess</h3><p>Vårt avanserte avsugssystem filtrerer bort 99,95 % av slipestøvet slik at inneklimaet i hjemmet ivaretas.</p></div>
-    <div class="verdi"><h3>Faglig rådgivning</h3><p>Vi tar med fargeprøver på befaring så du kan se hvordan ulike oljer og lakker tar seg ut i ditt eget lys.</p></div>
-    <div class="verdi"><h3>Avtalt tid og pris</h3><p>Du får et komplett pristilbud per kvadratmeter uten skjulte tillegg før vi setter i gang.</p></div>
-    <div class="verdi"><h3>Varig resultat</h3><p>Riktig korningsrekke og slitesterke sluttstrøk gir et gulv som holder seg vakkert i mange år.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/seksjon-6.jpg" alt="Gølv AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Nytt liv til tregulvet – utført støvfritt, presist og med varig finish.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Enkel gulvfornyelse</p>
-      <h2>Følg bygget fra første spadetak</h2>
-      <p>Vi kartlegger gulvets tilstand på befaring, hjelper deg å velge riktig glans og fargetone, og leverer et ferdig behandlet gulv til avtalt dag.</p>
-    </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Gjennomføring av gulvoppdrag</p>
-      <div class="drom__rad"><span>Befaring og valg av behandling</span><span>Avklart</span></div><div class="drom__rad"><span>Støvfri sliping og påføring</span><span>Utført</span></div><div class="drom__rad"><span>Herding og vedlikeholdsråd</span><span>Levert</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
-  </div>
+</div></section>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">03 — Slik jobber vi</div><h2>Fire steg</h2></div><p>Fra valg av gulv til ferdig lagt og behandlet flate.</p></div>
   <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
+    <li><b>Befaring</b><p>Underlag, fukt og forhold på stedet.</p></li>
+    <li><b>Valg</b><p>Gulvtype, treslag og overflate.</p></li>
+    <li><b>Legging</b><p>Montering etter produsentens krav.</p></li>
+    <li><b>Behandling</b><p>Sliping og overflate der det trengs.</p></li>
   </ol>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
-  </div>
-  <div class="galleri galleri--to">
-    <figure class="galleri__bilde"><img src="img/seksjon-7.jpg" alt="Gølv AS – Støvfri sliping av parkett og tregulv" loading="lazy" decoding="async"><figcaption>Gølv AS – Støvfri sliping av parkett og tregulv</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-8.jpg" alt="Gølv AS – Lakkering, oljing og innfarging" loading="lazy" decoding="async"><figcaption>Gølv AS – Lakkering, oljing og innfarging</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
-</section>
-
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">Gølv AS</p>
-        
-        <p><strong>E-post</strong><br><a href="mailto:even@golvas.no">even@golvas.no</a></p>
-        <p><strong>Område</strong><br>Ryfoss</p>
-      </aside>
-    </div>
-    <form class="skjema" action="mailto:even@golvas.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Støvfri sliping av parkett og tregulv</option><option>Lakkering, oljing og innfarging</option><option>Legging av parkett og fiskebensgulv</option><option>Reparasjon og vedlikehold av næringsgulv</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
-  </div>
-</section>
+</div></section>
+<section class="sek sek--mork"><div class="inn">
+  <figure class="sitat avslor">
+    <blockquote>«GøLv AS leverer kvalitetsgulv og tilbyr profesjonell gulvsliping og behandling.»</blockquote>
+    <figcaption>GøLv AS</figcaption>
+  </figure>
+</div></section>
+<section class="cta"><div class="inn">
+  <h2>Skal du legge nytt gulv?</h2>
+  <p>Kom innom showroomet i Ryfoss, eller ta kontakt for rådgivning og tilbud.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="produkter.html">Se produktene</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Gølv AS</p>
-      <p class="bunn__tekst">Ryfoss · even@golvas.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">GøLv AS</span><p>Gulvspesialist med showroom i Ryfoss i Valdres. Kvalitetsgulv, personlig rådgivning og profesjonell gulvsliping og behandling.</p><p><a href="mailto:even@golvas.no">even@golvas.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="produkter.html">Produkter</a></li><li><a href="sliping.html">Sliping</a></li><li><a href="om.html">Om</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Gulv</h4><ul><li><a href="produkter.html#heltre">Heltre</a></li><li><a href="produkter.html#parkett">Parkett</a></li><li><a href="produkter.html#vinyl">Vinyl og laminat</a></li><li><a href="sliping.html">Sliping og behandling</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="mailto:even@golvas.no">even@golvas.no</a></p><p style="margin-top:8px">Ryfoss<br>Valdres</p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Gølv AS</p>
+    <div class="bunn__bunn"><span>© 2026 GøLv AS</span><span>Nettsiden er en demonstrasjon laget for GøLv AS</span><a href="panel.html">Oppdragspanel</a></div>
   </div>
 </footer>
+<script src="assets/js/golvas-no-demo.js" defer></script>
 </body>
 </html>

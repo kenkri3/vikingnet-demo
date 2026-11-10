@@ -1,0 +1,36 @@
+{
+  "slug": "hjellebakeri-no-demo",
+  "firma": "Hjelle Bakeri",
+  "navType": "runde-knapper",
+  "fonts": [
+    "Playfair Display",
+    "Nunito Sans"
+  ],
+  "palette": [
+    "#3b2314",
+    "#fbf3e4",
+    "#c98b4b",
+    "#d94f3d"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "kake",
+    "bakervarer",
+    "tradisjon",
+    "butikker",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "bakervarer.html",
+    "bestill-kake.html",
+    "catering.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

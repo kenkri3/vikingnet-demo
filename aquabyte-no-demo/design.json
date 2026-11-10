@@ -1,0 +1,35 @@
+{
+  "slug": "aquabyte-no-demo",
+  "firma": "Aquabyte",
+  "navType": "ikonrail",
+  "fonts": [
+    "Saira",
+    "Maven Pro"
+  ],
+  "palette": [
+    "#071f1b",
+    "#4fd1a5",
+    "#eef4f1",
+    "#0e2b26"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "slik-virker-det",
+    "hydra-360",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "hydra-360.html",
+    "slik-virker-det.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

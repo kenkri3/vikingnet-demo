@@ -1,0 +1,36 @@
+{
+  "slug": "gnist-as-demo",
+  "firma": "Gnist",
+  "navType": "tre-grupper",
+  "fonts": [
+    "Wix Madefor Display",
+    "Wix Madefor Text"
+  ],
+  "palette": [
+    "#2b1a3d",
+    "#f7f2ea",
+    "#ff5a5f",
+    "#8fd6c4"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "hjul",
+    "tjenester",
+    "kompetanse",
+    "sitater",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "kompetanse.html",
+    "kurs.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

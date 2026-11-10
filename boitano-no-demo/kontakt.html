@@ -1,66 +1,101 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – Boitano AS</title>
-<meta name="description" content="Ta kontakt med Boitano AS på e-post hei@boitano.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Kontakt · Boitano</title>
+<meta name="description" content="Kontakt Boitano for rådgivning, AI-akselerasjon, produktutvikling eller venture. Send en henvendelse, så tar vi en samtale.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boitano">
+<meta property="og:title" content="Kontakt · Boitano">
+<meta property="og:description" content="Kontakt Boitano for rådgivning, AI-akselerasjon, produktutvikling eller venture. Send en henvendelse, så tar vi en samtale.">
+<meta property="og:image" content="assets/img/12-boitano-no.webp">
+<meta name="theme-color" content="#161515">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/boitano-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">Boitano AS</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <div class="gruppe"><a href="index.html">Hjem</a><a href="tjenester.html">Tjenester</a><a href="ai-akselerasjon.html">AI-akselerasjon</a></div>
+    <a class="logo" href="index.html">Boitano<span>.</span></a>
+    <div class="gruppe hoyre"><a href="produktutvikling.html">Produktutvikling</a><a href="om.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></div>
   </div>
 </header>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">IT, programvare &amp; digitalisering · Oslo</p>
-  <h1>Ta kontakt med Boitano AS</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
-  <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">Boitano AS</p>
-      
-      <p><strong>E-post</strong><br><a href="mailto:hei@boitano.no">hei@boitano.no</a></p>
-      <p><strong>Område</strong><br>Oslo</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
+<header class="sidehode">
+  <div class="ramme">
+    <p class="brodsmule"><a href="index.html">Hjem</a> / Kontakt</p>
+    <h1>Ta en <em>samtale</em></h1>
+    <p class="ingress">Beskriv kort hva du tenker på, så tar vi kontakt. Det trenger ikke være et ferdig prosjekt – ofte starter det med en samtale.</p>
   </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:hei@boitano.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Systemutvikling og skreddersydd programvare</option><option>Systemintegrasjon og automatisering</option><option>IT-drift, skyplattform og sikkerhet</option><option>Teknologiledelse og digital rådgivning</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
-  </form>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="to-spalter">
+      <div class="avslor">
+        <h2 style="font-size:1.15rem;margin-bottom:14px">Send en henvendelse</h2>
+        <form class="skjema" data-skjema novalidate>
+          <div class="skjema-to">
+            <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
+            <div class="felt"><label for="firma">Firma</label><input id="firma" name="firma" type="text" autocomplete="organization"></div>
+          </div>
+          <div class="skjema-to">
+            <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
+            <div class="felt"><label for="gjelder">Gjelder</label>
+              <select id="gjelder" name="gjelder">
+                <option>Konsulent</option><option>AI-akselerasjon</option><option>Produktutvikling</option>
+                <option>Rådgivning</option><option>Venture</option><option>Annet</option>
+              </select>
+            </div>
+          </div>
+          <div class="felt"><label for="melding">Hva tenker du på?</label><textarea id="melding" name="melding" placeholder="Beskriv utfordringen eller ideen med noen setninger."></textarea></div>
+          <div><button class="knapp" type="submit">Send henvendelsen <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+          <div class="skjema-melding" role="status" aria-live="polite"></div>
+          <p class="skjema-note">Demo: skjemaet sender ingenting. I en ekte løsning går henvendelsen til pipelinen i panelet.</p>
+        </form>
+      </div>
+      <aside class="avslor">
+        <div class="kortrekke" style="grid-template-columns:1fr">
+          <div class="kort"><span class="merke">Steder</span><h3>Oslo og Ålesund</h3><p>Over 70 teknologer, produktfolk og forretningsutviklere.</p></div>
+          <div class="kort"><span class="merke">Tjenester</span><h3>Fem områder</h3><p>Konsulent, AI-akselerasjon, produktutvikling, rådgivning og venture.</p></div>
+          <div class="kort"><span class="merke">Nyhetsbrev</span><h3><a href="om.html">Kaleidoskopet</a></h3><p>Teknologi og forretning i endring.</p></div>
+          <div class="kort"><span class="merke">Kunder</span><h3>Fra startup til konsern</h3><p>NRK, Equinor, If, Posten, Statnett, SINTEF og flere.</p></div>
+        </div>
+      </aside>
+    </div>
+  </div>
 </section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Boitano AS</p>
-      <p class="bunn__tekst">Oslo · hei@boitano.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Boitano</h3><p>Et menneskedrevet teknologiselskap. Strategiske rådgivere og utviklere i skjæringspunktet mellom teknologi og forretning.</p></div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="tjenester.html">Alle tjenester</a></li>
+        <li><a href="ai-akselerasjon.html">AI-akselerasjon</a></li>
+        <li><a href="produktutvikling.html">Produktutvikling</a></li>
+        <li><a href="tjenester.html#radgivning">Rådgivning</a></li>
+      </ul></div>
+      <div><h4>Selskapet</h4><ul>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="panel.html">Pipeline (demo)</a></li>
+      </ul></div>
+      <div><h4>Steder</h4><ul>
+        <li>Oslo</li><li>Ålesund</li>
+        <li>Over 70 teknologer og produktfolk</li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Boitano AS</p>
+    <div class="bunn-bunn"><span>© 2026 Boitano</span><span>Et menneskedrevet teknologiselskap</span><span>Demo: innhold hentet fra boitano.no</span></div>
   </div>
 </footer>
-<script src="app.js"></script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/boitano-no-demo.js" defer></script>
 </body>
 </html>

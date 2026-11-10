@@ -1,0 +1,36 @@
+{
+  "slug": "elteknikk-no-demo",
+  "firma": "Elteknikk",
+  "navType": "bunnstripe-kategorier",
+  "fonts": [
+    "Big Shoulders Display",
+    "Overpass"
+  ],
+  "palette": [
+    "#12222e",
+    "#eef3f5",
+    "#ffc53d",
+    "#3fb6a8"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "brytere",
+    "tjenester",
+    "kategorier",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bolig.html",
+    "naering.html",
+    "landbruk.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

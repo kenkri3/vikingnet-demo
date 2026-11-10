@@ -1,0 +1,35 @@
+{
+  "slug": "castelbygg-no-demo",
+  "firma": "Castel Bygg",
+  "navType": "stigemeny-venstre",
+  "fonts": [
+    "PT Serif",
+    "Oxygen"
+  ],
+  "palette": [
+    "#2c2e2a",
+    "#f4f1e9",
+    "#8a9a5b"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "entreprise.html",
+    "galleri.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

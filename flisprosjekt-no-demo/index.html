@@ -1,182 +1,104 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Flisprosjekt AS – Mur, flis &amp; våtrom</title>
-<meta name="description" content="Vi flislegger kommersielle bygg og tilpasser oss både store og små prosjekter.">
-<meta property="og:title" content="Flisprosjekt AS – Mur, flis &amp; våtrom">
-<meta property="og:description" content="Vi flislegger kommersielle bygg og tilpasser oss både store og små prosjekter.">
-<meta property="og:image" content="img/01-flisprosjekt-no.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Flis Prosjekt – flislegging for næringsbygg og bolig i Oslo</title>
+<meta name="description" content="Flis Prosjekt flislegger kommersielle bygg, naturstein og baderom i boligprosjekter – tilpasset byggets funksjon, bruk og krav. Oslo og omegn.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Flis Prosjekt – flislegging for næringsbygg og bolig i Oslo">
+<meta property="og:description" content="Flis Prosjekt flislegger kommersielle bygg, naturstein og baderom i boligprosjekter – tilpasset byggets funksjon, bruk og krav. Oslo og omegn.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/flis-1.webp">
+<meta name="theme-color" content="#262a30">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/flisprosjekt-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Flisprosjekt AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="fliser">
+  <div class="fliser__indre">
+    <a class="merke" href="index.html"><b>Flis Prosjekt</b><small>flislegging · Oslo</small></a>
+    <nav class="rutenett" aria-label="Hovedmeny">
+      <a class="flis" href="index.html" aria-current="page">Hjem</a>
+      <a class="flis" href="tjenester.html">Tjenester</a>
+      <a class="flis" href="naeringsbygg.html">Næring</a>
+      <a class="flis" href="naturstein.html">Naturstein</a>
+      <a class="flis" href="kontakt.html">Kontakt</a>
+      <a class="flis" href="panel.html">Panel</a>
+    </nav>
   </div>
 </header>
+<div class="topp"><div class="inn"><span>Oslo og omegn</span><span><a href="tel:+4732730057">32 73 00 57</a></span></div></div>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/01-flisprosjekt-no.jpg" alt="Flisprosjekt AS" loading="eager" decoding="async">
-    <figcaption><strong>Flisprosjekt AS</strong><span>Mur, flis &amp; våtrom · Oslo</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Mur, flis &amp; våtrom · Oslo</p>
-    <h1>Flislegging for ditt prosjekt</h1>
-    <p class="helt__ingress">Vi flislegger kommersielle bygg og tilpasser oss både store og små prosjekter.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tel:+4732730057">Ring 32 73 00 57</a>
-    </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">Godkjent våtromskompetanse</li>
-      <li class="tillit__punkt">Nøyaktig utførelse og varige materialer</li>
-      <li class="tillit__punkt">Skriftlig avtale og garanti</li>
+<section class="hero mork">
+  <img class="hero__bilde" src="assets/img/flis-2.webp" width="788" height="1400" alt="">
+  <canvas class="hero__lerret" id="fliser" aria-hidden="true"></canvas>
+  <div class="hero__dekk" aria-hidden="true"></div>
+  <div class="inn hero__inn">
+    <span class="hero__merke">Flislegging · Oslo</span>
+    <h1>Flislegging for <em>ditt prosjekt</em>.</h1>
+    <p class="hero__ingress">Vi flislegger kommersielle bygg og tilpasser oss både store og små prosjekter. Fra kontor- og næringslokaler til hotell og fellesarealer – tilpasset byggets funksjon, bruk og krav.</p>
+    <div class="hero__knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tjenester.html">Se tjenestene</a></div>
+    <div class="hero__fakta"><span>Næringsbygg</span><span>Naturstein</span><span>Våtrom</span></div>
+  </div>
+</section>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">01 — Tjenester</div><h2>Våre tjenester</h2></div><p>Vi leverer flislegging til byggets funksjon, bruk og krav.</p></div>
+  <ul class="tjlist">
+    <li><a href="naeringsbygg.html"><span class="nr">01</span><span><b>Næringsbygg</b><small>Kontor- og næringslokaler, hotell og fellesarealer.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="naturstein.html"><span class="nr">02</span><span><b>Naturstein</b><small>Marmor, granitt og kalkstein – inne og ute.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="tjenester.html#baderom"><span class="nr">03</span><span><b>Baderom i boligprosjekter</b><small>Nye baderom i boligprosjekter, med fokus på funksjon.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+    <li><a href="tjenester.html#rehab"><span class="nr">04</span><span><b>Rehabilitering av våtrom</b><small>For sameier og borettslag, med dokumentert utførelse.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+  </ul>
+</div></section>
+<section class="sek sek--kritt2 sek--strek"><div class="inn media">
+  <figure class="ramme ramme--43 avslor"><img src="assets/img/flis-1.webp" width="1024" height="559" alt="Flislagt areal i næringsbygg"><figcaption>Tilpasset byggets bruk.</figcaption></figure>
+  <div class="kropp avslor"><div class="merkelinje">02 — Slik jobber vi</div><h2>Presisjon i hver flis</h2>
+    <p>Et flisprosjekt står og faller på underlaget. Vi avklarer forholdene før vi starter, og legger flisen etter et mønster som er planlagt for arealet – ikke bare for bildet.</p>
+    <ul class="punkter">
+      <li><b>Underlag</b> – kontrollert før legging.</li>
+      <li><b>Mønster</b> – planlagt for arealet.</li>
+      <li><b>Fuger</b> – jevne og holdbare.</li>
     </ul>
   </div>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
-  </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/om.jpg" alt="Bad og våtromsrehabilitering" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Bad og våtromsrehabilitering</h3>
-      <p>Komplett oppbygging og flislegging av baderom og vaskerom med godkjente membransystemer, fall til sluk og tett koordinering med rørlegger og elektriker.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/hero.jpg" alt="Flislegging og naturstein" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Flislegging og naturstein</h3>
-      <p>Presis legging av keramiske fliser, skifer og naturstein i entré, kjøkken, trapper, terrasser og næringslokaler med slitesterkt resultat.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-4.jpg" alt="Murarbeid og fasaderehabilitering" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Murarbeid og fasaderehabilitering</h3>
-      <p>Murverk, tegl, Leca, pussarbeider og rehabilitering av murfasader, grunnmurer og balkonger som beskytter bygget mot fukt og frost.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/seksjon-5.jpg" alt="Peis, pipe og ildsteder" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Peis, pipe og ildsteder</h3>
-      <p>Muring, montering og rehabilitering av peiser, ovner og skorsteiner som gir trygg fyring og et vakkert blikkfang i boligen.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Fagmessig tetthet</h3><p>Vi følger våtromsnormen og bransjestandarder nøye slik at bad og murverk holder seg tette i tiår.</p></div>
-    <div class="verdi"><h3>Øye for detaljer</h3><p>Rette linjer, jevne fuger og gjennomtenkt flisutlegg gir et sluttresultat som tåler nærmere ettersyn.</p></div>
-    <div class="verdi"><h3>Fast kontaktperson</h3><p>Du forholder deg til én prosjektansvarlig fra første befaring til ferdig overlevert arbeid.</p></div>
-    <div class="verdi"><h3>Dokumentert kvalitet</h3><p>Alle skjulte lag, membraner og materialvalg dokumenteres med bilder og produktdatablader.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/seksjon-6.jpg" alt="Flisprosjekt AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Nøyaktig mur- og flishåndverk som forener estetikk og varig slitestyrke.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Trygg våtromsprosess</p>
-      <h2>Følg bygget fra første spadetak</h2>
-      <p>Fra riving og membranlegging til ferdig flislagt overflate dokumenteres arbeidet med sjekklister og bilder slik at verdien på boligen ivaretas.</p>
-    </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Kvalitetskontroll i prosjektet</p>
-      <div class="drom__rad"><span>Underlag, fall og membran</span><span>Kontrollert</span></div><div class="drom__rad"><span>Flislegging og fuging</span><span>Utført</span></div><div class="drom__rad"><span>Bildedokumentasjon og FDV</span><span>Overlevert</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
-  </div>
+</div></section>
+<section class="sek"><div class="inn">
+  <div class="hode2"><div><div class="merkelinje">03 — Prosessen</div><h2>Fire steg</h2></div><p>Vi avklarer omfang og tid før vi starter.</p></div>
   <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
+    <li><b>Befaring</b><p>Areal, underlag og krav.</p></li>
+    <li><b>Tilbud</b><p>Omfang, materialer og pris.</p></li>
+    <li><b>Legging</b><p>Flis, mønster og fuging.</p></li>
+    <li><b>Overlevering</b><p>Gjennomgang og rydding.</p></li>
   </ol>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
-  </div>
-  <div class="galleri galleri--tre">
-    <figure class="galleri__bilde"><img src="img/seksjon-7.jpg" alt="Flisprosjekt AS – Bad og våtromsrehabilitering" loading="lazy" decoding="async"><figcaption>Flisprosjekt AS – Bad og våtromsrehabilitering</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-8.jpg" alt="Flisprosjekt AS – Flislegging og naturstein" loading="lazy" decoding="async"><figcaption>Flisprosjekt AS – Flislegging og naturstein</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/seksjon-9.jpg" alt="Flisprosjekt AS – Murarbeid og fasaderehabilitering" loading="lazy" decoding="async"><figcaption>Flisprosjekt AS – Murarbeid og fasaderehabilitering</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
-</section>
-
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">Flisprosjekt AS</p>
-        <p><strong>Telefon</strong><br><a href="tel:+4732730057">32 73 00 57</a></p>
-        <p><strong>E-post</strong><br><a href="mailto:janerik@flisprosjekt.no">janerik@flisprosjekt.no</a></p>
-        <p><strong>Område</strong><br>Oslo</p>
-      </aside>
-    </div>
-    <form class="skjema" action="mailto:janerik@flisprosjekt.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Bad og våtromsrehabilitering</option><option>Flislegging og naturstein</option><option>Murarbeid og fasaderehabilitering</option><option>Peis, pipe og ildsteder</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
-  </div>
-</section>
+</div></section>
+<section class="sek sek--mork"><div class="inn">
+  <figure class="sitat avslor">
+    <blockquote>«Vi leverer flislegging tilpasset byggets funksjon, bruk og krav.»</blockquote>
+    <figcaption>Flis Prosjekt</figcaption>
+  </figure>
+</div></section>
+<section class="cta"><div class="inn">
+  <h2>Har du et flisprosjekt?</h2>
+  <p>Kontakt oss, vi bistår gjerne i prosjektet – stort eller lite.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tjenester.html">Se tjenestene</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Flisprosjekt AS</p>
-      <p class="bunn__tekst">Oslo · 32 73 00 57 · janerik@flisprosjekt.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Flis Prosjekt</span><p>Vi flislegger kommersielle bygg og tilpasser oss både store og små prosjekter – fra kontor- og næringslokaler til hotell og fellesarealer.</p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="naeringsbygg.html">Næring</a></li><li><a href="naturstein.html">Naturstein</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="naeringsbygg.html">Næringsbygg</a></li><li><a href="naturstein.html">Naturstein</a></li><li><a href="tjenester.html#baderom">Baderom</a></li><li><a href="tjenester.html#rehab">Våtrom rehab</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4732730057">32 73 00 57</a></p><p style="margin-top:8px">Oslo</p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Flisprosjekt AS</p>
+    <div class="bunn__bunn"><span>© 2026 Flis Prosjekt</span><span>Nettsiden er en demonstrasjon laget for Flis Prosjekt</span><a href="panel.html">Oppdragspanel</a></div>
   </div>
 </footer>
+<script src="assets/js/flisprosjekt-no-demo.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+{
+  "slug": "aurskogpower-no-demo",
+  "firma": "Aurskog Power AS",
+  "navType": "batteristripe-topp",
+  "fonts": [
+    "Saira Condensed",
+    "Fira Mono"
+  ],
+  "palette": [
+    "#101820",
+    "#f1f3f2",
+    "#f2c200"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "hvorfor-kontroll",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "ups.html",
+    "batteri.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

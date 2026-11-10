@@ -1,175 +1,29 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>BKS Industri AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos BKS Industri AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Oppdragspanel | BKS Industri AS (demo)</title>
+<meta name="description" content="Demo av oppdragspanelet: oppdrag fra mottatt til produksjon, kontroll og levering, med filter, kapasitet og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f4f1ea">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BKS Industri AS">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Oppdragspanel | BKS Industri AS (demo)">
+<meta property="og:description" content="Demo av oppdragspanelet: oppdrag fra mottatt til produksjon, kontroll og levering, med filter, kapasitet og hendelseslogg.">
+<meta property="og:image" content="assets/img/anlegg.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bksas-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">BKS Industri AS</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+<header class="hode"><div class="skal hode__rad"><a class="merke" href="index.html"><span class="merke__symbol">BKS</span><span class="merke__tekst">BKS Industri AS<small>Teknisk totalleverandør</small></span></a><div class="hode__hoyre"><a class="hode__tlf" href="tel:+4756126300">56 12 63 00</a><a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a></div></div><nav aria-label="Hovedmeny"><ul class="streks skal"><li><a class="strek" href="index.html">Forside</a></li><li><a class="strek" href="tjenester.html">Tjenester</a></li><li><a class="strek" href="bransjer.html">Bransjer</a></li><li><a class="strek" href="om.html">Om oss</a></li><li><a class="strek" href="hms.html">HMS og kvalitet</a></li><li><a class="strek" href="kontakt.html">Kontakt</a></li><li><a class="strek" href="panel.html" aria-current="page">Panel</a></li></ul></nav></header>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos BKS Industri AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>BKS Industri AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Prosjektering og tekniske leveranser</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Montering, idriftsettelse og integrasjon</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Service, vedlikehold og sakkyndig kontroll</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Energioptimalisering og oppgradering</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om prosjektering og tekniske leveranser</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om montering, idriftsettelse og integrasjon</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av service, vedlikehold og sakkyndig kontroll</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">BKS Industri AS</p>
-      <p class="bunn__tekst">Norge · 56 12 63 00 · post@bksas.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 BKS Industri AS</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html" style="text-decoration:none"><span class="merke__symbol">BKS</span><span class="merke__tekst" style="color:#fff">BKS Industri<small style="color:#a29f97">Oppdragspanel · demo</small></span></a><div class="hode__hoyre"><span class="paneltopp__bruker"><i>BK</i>Produksjon</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Oppdrag</h1><p>Uke 46 · 9 oppdrag i produksjon · eksempeldata</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Nytt oppdrag</a></div></div><div class="kpi"><div class="kpi__kort"><span class="kpi__navn">Oppdrag i kø</span><span class="kpi__tall">9</span><span class="kpi__endring">tre bransjer</span></div><div class="kpi__kort kpi__kort--petrol"><span class="kpi__navn">Produksjon</span><span class="kpi__tall" data-kpi-produksjon>2</span><span class="kpi__endring">i maskin</span></div><div class="kpi__kort"><span class="kpi__navn">Kontroll</span><span class="kpi__tall" data-kpi-kontroll>2</span><span class="kpi__endring">til måling</span></div><div class="kpi__kort"><span class="kpi__navn">Levering</span><span class="kpi__tall">94</span><span class="kpi__endring">prosent i tid (eksempeldata)</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer oppdrag"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="mottatt" aria-pressed="false">Mottatt</button><button type="button" data-filter="produksjon" aria-pressed="false">Produksjon</button><button type="button" data-filter="kontroll" aria-pressed="false">Kontroll</button><button type="button" data-filter="levert" aria-pressed="false">Levert</button></div><span class="verktoylinje__tall" data-antall>9 av 9 oppdrag</span></div><div class="oppdrag" data-oppdrag><div class="opp" data-steg="mottatt"><div><p class="opp__navn">Flenssett · maritim</p><div class="opp__meta"><span>Maskinering</span><span>Mottatt 04.11</span><span>Frist 11.11</span></div></div><span class="opp__steg">Mottatt</span><button class="opp__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="opp" data-steg="mottatt"><div><p class="opp__navn">Slitedeler · smelteverk</p><div class="opp__meta"><span>Maskinering</span><span>Mottatt 03.11</span><span>Frist 08.11</span></div></div><span class="opp__steg">Mottatt</span><button class="opp__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="opp" data-steg="produksjon"><div><p class="opp__navn">Skjærte plater · akvakultur</p><div class="opp__meta"><span>Vasskjæring</span><span>Produksjon</span><span>Frist 09.11</span></div></div><span class="opp__steg">Produksjon</span><button class="opp__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="opp" data-steg="produksjon"><div><p class="opp__navn">Akselkomponent · offshore</p><div class="opp__meta"><span>Maskinering</span><span>Produksjon</span><span>Frist 10.11</span></div></div><span class="opp__steg">Produksjon</span><button class="opp__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="opp" data-steg="kontroll"><div><p class="opp__navn">Turbinhjul · fornybar</p><div class="opp__meta"><span>Maskinering</span><span>Kontroll</span><span>Frist 07.11</span></div></div><span class="opp__steg">Kontroll</span><button class="opp__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="opp" data-steg="kontroll"><div><p class="opp__navn">Rørbend · prosessindustri</p><div class="opp__meta"><span>Vasskjæring</span><span>Kontroll</span><span>Frist 07.11</span></div></div><span class="opp__steg">Kontroll</span><button class="opp__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="opp" data-steg="levert"><div><p class="opp__navn">Dokumentasjon · engineering</p><div class="opp__meta"><span>Engineering</span><span>Levert 01.11</span><span>Kvittert</span></div></div><span class="opp__steg">Levert</span><button class="opp__knapp" type="button" data-neste-steg disabled>Levert</button></div><div class="opp" data-steg="levert"><div><p class="opp__navn">Flens · maritim</p><div class="opp__meta"><span>Maskinering</span><span>Levert 29.10</span><span>Kvittert</span></div></div><span class="opp__steg">Levert</span><button class="opp__knapp" type="button" data-neste-steg disabled>Levert</button></div><div class="opp" data-steg="levert"><div><p class="opp__navn">Plater · bygg og anlegg</p><div class="opp__meta"><span>Vasskjæring</span><span>Levert 24.10</span><span>Kvittert</span></div></div><span class="opp__steg">Levert</span><button class="opp__knapp" type="button" data-neste-steg disabled>Levert</button></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Hendelseslogg</h2><div data-logg></div></div></div><div><div class="panelkort"><h2>Frister denne uken</h2><div class="logglinje"><time>tir</time><span>Kontroll turbinhjul</span></div><div class="logglinje"><time>ons</time><span>Levering flenssett</span></div><div class="logglinje"><time>fre</time><span>Dokumentasjon aksel</span></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Kapasitet</h2><div class="logglinje"><time>3</time><span>Maskiner i drift</span></div><div class="logglinje"><time>1</time><span>Skjæreanlegg</span></div><div class="logglinje"><time>2</time><span>Kontrollmålere</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">BKS Industri AS</p><p>Teknisk totalleverandør for skip, offshore og landbasert industri. Vi leverer som avtalt – i alt fra mindre oppdrag til komplekse totalleveranser.</p></div><div><h2>Tjenester</h2><ul><li><a href="tjenester.html">Maskinering og vasskjæring</a></li><li><a href="tjenester.html#engineering">Engineering</a></li><li><a href="bransjer.html">Bransjer</a></li><li><a href="hms.html">HMS og kvalitet</a></li></ul></div><div><h2>Selskapet</h2><ul><li><a href="om.html">Om BKS Industri</a></li><li><a href="bransjer.html">Smelteverk og akvakultur</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Oppdragspanel (demo)</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4756126300">56 12 63 00</a></li><li><a href="mailto:post@bksas.no">post@bksas.no</a></li><li>Norge</li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> BKS Industri AS</span><span>Industri · maritim · offshore</span></div></div></footer>
+<script src="assets/js/bksas-no-demo.js" defer></script>
 </body>
 </html>

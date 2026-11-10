@@ -1,0 +1,34 @@
+{
+  "slug": "f1adm-no-demo",
+  "firma": "F1",
+  "navType": "regnearkfaner",
+  "fonts": [
+    "K2D",
+    "Mukta"
+  ],
+  "palette": [
+    "#10161f",
+    "#8fb8f0",
+    "#f4f7fb",
+    "#d97b4f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "modeller",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "modeller.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,175 +1,29 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Brødrene Ringstad AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Brødrene Ringstad AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Ordrepanel | Brødr. Ringstad AS (demo)</title>
+<meta name="description" content="Demo av ordrepanelet: ordrer fra mottatt til pakking, klar og hentet, med filter, kapasitet og hendelseslogg.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f5f0e6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brødr. Ringstad AS">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Ordrepanel | Brødr. Ringstad AS (demo)">
+<meta property="og:description" content="Demo av ordrepanelet: ordrer fra mottatt til pakking, klar og hentet, med filter, kapasitet og hendelseslogg.">
+<meta property="og:image" content="assets/img/mat.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Questrial&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/brodr-ringstad-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="Brødrene Ringstad AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
-  </div>
-</header>
+<a class="hopp" href="#innhold">Hopp til innholdet</a>
+<header class="hode"><div class="skal hode__rad"><div class="hode__venstre"><a class="merke" href="index.html"><span class="merke__symbol">BR</span><span class="merke__tekst">Brødr. Ringstad<small>Rakkestad · siden 1934</small></span></a></div><div class="hode__hoyre" style="justify-content:center"><a class="merke__tekst" href="index.html" style="text-decoration:none;font-size:.98rem">Kjøtt &amp; håndverk</a></div><div class="hode__hoyre"><a class="hode__tlf" href="tel:+4769221900">69 22 19 00</a><a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a></div></div><nav aria-label="Hovedmeny"><ul class="meny skal"><li><a href="index.html">Forside</a></li><li><a href="om.html">Om oss</a></li><li><a href="butikk.html">Butikkutsalg</a></li><li><a href="catering.html">Catering</a></li><li><a href="grill.html">Grill</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html" aria-current="page">Panel</a></li></ul></nav></header>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Rakkestad</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Brødrene Ringstad AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Brødrene Ringstad AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
-        </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Catering, tapas og selskapsmenyer</strong><span>Ny forespørsel via nettsiden · Rakkestad</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Spesialiteter, sjømat og delikatesser</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Bedriftslunsj, møtemat og kantine</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Gavepakker og sesongprodukter</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
-        </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om catering, tapas og selskapsmenyer</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om spesialiteter, sjømat og delikatesser</strong><p>Kunde i Rakkestad ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av bedriftslunsj, møtemat og kantine</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Brødrene Ringstad AS</p>
-      <p class="bunn__tekst">Rakkestad · 69 22 19 00 · post@brodr-ringstad.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Brødrene Ringstad AS</p>
-  </div>
-</footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<header class="paneltopp"><div class="skal paneltopp__inn"><a class="merke" href="index.html" style="text-decoration:none"><span class="merke__symbol" style="border-color:var(--sienna-lys);color:var(--sienna-lys)">BR</span><span class="merke__tekst" style="color:#fff">Brødr. Ringstad<small style="color:#a89f92">Ordrepanel · demo</small></span></a><div class="hode__hoyre"><span class="paneltopp__bruker"><i>BR</i>Utsalg og catering</span><a class="knapp knapp--liten" href="index.html">Til nettsiden</a></div></div></header><div class="panel"><div class="skal"><div class="panel__hode"><div><h1>Ordrer</h1><p>Uke 46 · 9 ordrer · eksempeldata</p></div><div><a class="knapp knapp--tom knapp--liten" href="kontakt.html">Ny ordre</a></div></div><div class="kpi"><div class="kpi__kort"><span class="kpi__navn">Ordrer i dag</span><span class="kpi__tall">9</span><span class="kpi__endring">utsalg og catering</span></div><div class="kpi__kort kpi__kort--sienna"><span class="kpi__navn">Pakking</span><span class="kpi__tall" data-kpi-pakking>2</span><span class="kpi__endring">under arbeid</span></div><div class="kpi__kort"><span class="kpi__navn">Klare</span><span class="kpi__tall" data-kpi-klar>2</span><span class="kpi__endring">til henting</span></div><div class="kpi__kort"><span class="kpi__navn">Levering</span><span class="kpi__tall">96</span><span class="kpi__endring">prosent i tid (eksempeldata)</span></div></div><div class="panelrutenett"><div><div class="verktoylinje"><div class="filter" role="group" aria-label="Filtrer ordrer"><button type="button" data-filter="alle" aria-pressed="true">Alle</button><button type="button" data-filter="mottatt" aria-pressed="false">Mottatt</button><button type="button" data-filter="pakking" aria-pressed="false">Pakking</button><button type="button" data-filter="klar" aria-pressed="false">Klar</button><button type="button" data-filter="hentet" aria-pressed="false">Hentet</button></div><span class="verktoylinje__tall" data-antall>9 av 9 ordrer</span></div><div class="ordrer" data-ordrer><div class="ordre" data-steg="mottatt"><div><p class="ordre__navn">Catering · 20 pers</p><div class="ordre__meta"><span>Catering</span><span>Mottatt 04.11</span><span>Hentes 11.11</span></div></div><span class="ordre__steg">Mottatt</span><button class="ordre__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="ordre" data-steg="mottatt"><div><p class="ordre__navn">Utsalg · helgehandel</p><div class="ordre__meta"><span>Utsalg</span><span>Mottatt 05.11</span><span>Hentes 08.11</span></div></div><span class="ordre__steg">Mottatt</span><button class="ordre__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="ordre" data-steg="pakking"><div><p class="ordre__navn">Catering · møte 12 pers</p><div class="ordre__meta"><span>Catering</span><span>Pakking 06.11</span><span>Hentes 07.11</span></div></div><span class="ordre__steg">Pakking</span><button class="ordre__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="ordre" data-steg="pakking"><div><p class="ordre__navn">Grillmeny · 40 pers</p><div class="ordre__meta"><span>Grill</span><span>Pakking 06.11</span><span>Hentes 09.11</span></div></div><span class="ordre__steg">Pakking</span><button class="ordre__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="ordre" data-steg="klar"><div><p class="ordre__navn">Utsalg · bestilling</p><div class="ordre__meta"><span>Utsalg</span><span>Klar 05.11</span><span>Hentes 06.11</span></div></div><span class="ordre__steg">Klar</span><button class="ordre__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="ordre" data-steg="klar"><div><p class="ordre__navn">Minnestund · 25 pers</p><div class="ordre__meta"><span>Catering</span><span>Klar 04.11</span><span>Hentes 05.11</span></div></div><span class="ordre__steg">Klar</span><button class="ordre__knapp" type="button" data-neste-steg>Flytt til neste steg</button></div><div class="ordre" data-steg="hentet"><div><p class="ordre__navn">Bedrift · lunsj</p><div class="ordre__meta"><span>Bedrift</span><span>Hentet 03.11</span><span>Kvittert</span></div></div><span class="ordre__steg">Hentet</span><button class="ordre__knapp" type="button" data-neste-steg disabled>Hentet</button></div><div class="ordre" data-steg="hentet"><div><p class="ordre__navn">Utsalg · helg</p><div class="ordre__meta"><span>Utsalg</span><span>Hentet 02.11</span><span>Kvittert</span></div></div><span class="ordre__steg">Hentet</span><button class="ordre__knapp" type="button" data-neste-steg disabled>Hentet</button></div><div class="ordre" data-steg="hentet"><div><p class="ordre__navn">Catering · selskap</p><div class="ordre__meta"><span>Catering</span><span>Hentet 31.10</span><span>Kvittert</span></div></div><span class="ordre__steg">Hentet</span><button class="ordre__knapp" type="button" data-neste-steg disabled>Hentet</button></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Hendelseslogg</h2><div data-logg></div></div></div><div><div class="panelkort"><h2>Frister denne uken</h2><div class="logglinje"><time>tir</time><span>Catering møte</span></div><div class="logglinje"><time>ons</time><span>Grillmeny befaring</span></div><div class="logglinje"><time>fre</time><span>Utsalg helgehandel</span></div></div><div class="panelkort" style="margin-top:.8rem"><h2>Kapasitet</h2><div class="logglinje"><time>2</time><span>Kokker</span></div><div class="logglinje"><time>1</time><span>Cateringbil</span></div><div class="logglinje"><time>1</time><span>Grillvogn</span></div></div></div></div></div></div></main>
+<footer class="bunn"><div class="skal"><div class="bunn__rutenett"><div><p class="bunn__merke">Brødr. Ringstad AS</p><p>Startet i 1934 på en liten gård i Rakkestad. Over 90 år og tre generasjoner senere holder vi fortsatt fast ved arven: faglig dyktighet og ekte stolthet for det vi gjør.</p></div><div><h2>Utvalg</h2><ul><li><a href="butikk.html">Butikkutsalg</a></li><li><a href="catering.html">Catering</a></li><li><a href="grill.html">Grill</a></li><li><a href="catering.html#bedrift">Bli bedriftskunde</a></li></ul></div><div><h2>Selskapet</h2><ul><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Ordrepanel (demo)</a></li></ul></div><div><h2>Kontakt</h2><ul><li><a href="tel:+4769221900">69 22 19 00</a></li><li>Sarpsborgveien 1</li><li>Rakkestad</li></ul></div></div><div class="bunn__slutt"><span>© <span data-ar>2026</span> Brødr. Ringstad AS</span><span>Rakkestad · 1934</span></div></div></footer>
+<script src="assets/js/brodr-ringstad-no-demo.js" defer></script>
 </body>
 </html>

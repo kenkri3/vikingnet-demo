@@ -1,175 +1,177 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Boitano AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Boitano AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Pipeline · Boitano (demo)</title>
+<meta name="description" content="Demo av Boitanos pipeline: kundedialoger og leveranser med status, kunde og handlinger.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Boitano">
+<meta property="og:title" content="Pipeline · Boitano (demo)">
+<meta property="og:description" content="Demo av Boitanos pipeline: kundedialoger og leveranser med status, kunde og handlinger.">
+<meta property="og:image" content="assets/img/10-boitano-no.webp">
+<meta name="theme-color" content="#161515">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/boitano-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html">Boitano AS</a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <div class="gruppe"><a href="index.html">Hjem</a><a href="tjenester.html">Tjenester</a><a href="ai-akselerasjon.html">AI-akselerasjon</a></div>
+    <a class="logo" href="index.html">Boitano<span>.</span></a>
+    <div class="gruppe hoyre"><a href="produktutvikling.html">Produktutvikling</a><a href="om.html">Om oss</a><a href="kontakt.html">Kontakt</a></div>
   </div>
 </header>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Oslo</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Boitano AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Boitano AS</div>
+<header class="panelhode">
+  <div class="ramme">
+    <div class="rad">
+      <p class="brodsmule"><a href="index.html">Hjem</a> / Panel</p>
+      <span class="drift">Pipelinen er åpen</span>
+    </div>
+    <h1>Pipelinen</h1>
+    <p class="ingress">Slik ser pipelinen ut internt: hvilke dialoger som pågår, hvilke leveranser som er i gang og hvilke som er ferdige. Trykk på knappene – status, nøkkeltall og logg oppdaterer seg. Alt er eksempeldata.</p>
+  </div>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="kpier">
+      <div class="kpi"><span class="l">Dialog</span><span class="v" data-kpi-dialog>2</span><span class="d">Venter på avklaring</span></div>
+      <div class="kpi"><span class="l">Levering</span><span class="v" data-kpi-levering>2</span><span class="d">Team i arbeid</span></div>
+      <div class="kpi"><span class="l">Ferdig</span><span class="v" data-kpi-ferdig>2</span><span class="d">Klar for faktura</span></div>
+      <div class="kpi"><span class="l">Folk</span><span class="v">70+</span><span class="d">Teknologer og produktfolk</span></div>
     </div>
 
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
+    <div class="faner" role="group" aria-label="Filtrer saker">
+      <button class="fane" type="button" data-filter="alle" aria-pressed="true">Alle <span class="antall">6</span></button>
+      <button class="fane" type="button" data-filter="dialog" aria-pressed="false">Dialog <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="levering" aria-pressed="false">Levering <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="ferdig" aria-pressed="false">Ferdig <span class="antall">2</span></button>
     </div>
 
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+    <div class="saker" data-saker>
+      <article class="sak" data-id="BO-441" data-status="dialog">
+        <div class="id">BO-441</div>
+        <div class="hoved"><div class="t">AI-akselerasjon, pilot</div><div class="m">Nordisk finans</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Oppstart uke 47</span></div>
+        <span class="status" data-status="dialog">Dialog</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Meld ferdig</button>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Systemutvikling og skreddersydd programvare</strong><span>Ny forespørsel via nettsiden · Oslo</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Systemintegrasjon og automatisering</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>IT-drift, skyplattform og sikkerhet</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Teknologiledelse og digital rådgivning</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
+      </article>
+      <article class="sak" data-id="BO-440" data-status="levering">
+        <div class="id">BO-440</div>
+        <div class="hoved"><div class="t">Produktteam, 3 utviklere</div><div class="m">Helseplattform</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Levering · uke 45–50</span></div>
+        <span class="status" data-status="levering">Levering</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Meld ferdig</button>
+        </div>
+      </article>
+      <article class="sak" data-id="BO-439" data-status="dialog">
+        <div class="id">BO-439</div>
+        <div class="hoved"><div class="t">Rådgivning, teknologistrategi</div><div class="m">Industrikonsern</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Workshop 12.11</span></div>
+        <span class="status" data-status="dialog">Dialog</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start">Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Meld ferdig</button>
+        </div>
+      </article>
+      <article class="sak" data-id="BO-438" data-status="levering">
+        <div class="id">BO-438</div>
+        <div class="hoved"><div class="t">Design og utvikling, MVP</div><div class="m">Startup</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Levering · uke 46</span></div>
+        <span class="status" data-status="levering">Levering</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig">Meld ferdig</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="BO-437" data-status="ferdig">
+        <div class="id">BO-437</div>
+        <div class="hoved"><div class="t">AI-workshop for ledelsen</div><div class="m">Offentlig etat</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ferdig 06.11</span></div>
+        <span class="status" data-status="ferdig">Ferdig</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Meld ferdig</button>
+        </div>
+      </article>
+      <article class="sak sak--ferdig" data-id="BO-436" data-status="ferdig">
+        <div class="id">BO-436</div>
+        <div class="hoved"><div class="t">Teknisk due diligence</div><div class="m">Vekstfond</div></div>
+        <div class="meta"><span class="k">Detaljer</span><span>Ferdig 29.10</span></div>
+        <span class="status" data-status="ferdig">Ferdig</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="start" disabled>Start</button>
+          <button class="mini mini--full" type="button" data-handling="ferdig" disabled>Meld ferdig</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="panel-to">
+      <div class="panel-kort">
+        <h2>Neste samtale</h2>
+        <p class="under">Eksempeldata</p>
+        <ul style="list-style:none;margin:0;padding:0">
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>BO-439 · workshop</span><span style="color:var(--graa)">12.11</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>BO-441 · pilotstart</span><span style="color:var(--graa)">uke 47</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:9px 0;font-size:14px"><span>BO-438 · demo</span><span style="color:var(--graa)">14.11</span></li>
         </ul>
       </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="panel-kort">
+        <h2>Hendelser</h2>
+        <p class="under">Siste aktivitet</p>
+        <div class="logg" data-logg>
+          <div><b>11:35</b> BO-440 sprint planlagt</div>
+          <div><b>10:20</b> BO-437 fakturert</div>
+          <div><b>09:02</b> ny dialog BO-441</div>
+          <div><b>08:15</b> pipelinen åpnet</div>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om systemutvikling og skreddersydd programvare</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om systemintegrasjon og automatisering</strong><p>Kunde i Oslo ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av it-drift, skyplattform og sikkerhet</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+        <a class="knapp knapp--mork" href="tjenester.html" style="margin-top:12px">Til tjenestene <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
       </div>
     </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
+  </div>
+</section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Boitano AS</p>
-      <p class="bunn__tekst">Oslo · hei@boitano.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Boitano</h3><p>Et menneskedrevet teknologiselskap. Strategiske rådgivere og utviklere i skjæringspunktet mellom teknologi og forretning.</p></div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="tjenester.html">Alle tjenester</a></li>
+        <li><a href="ai-akselerasjon.html">AI-akselerasjon</a></li>
+        <li><a href="produktutvikling.html">Produktutvikling</a></li>
+        <li><a href="tjenester.html#radgivning">Rådgivning</a></li>
+      </ul></div>
+      <div><h4>Selskapet</h4><ul>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="panel.html">Pipeline (demo)</a></li>
+      </ul></div>
+      <div><h4>Steder</h4><ul>
+        <li>Oslo</li><li>Ålesund</li>
+        <li>Over 70 teknologer og produktfolk</li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Boitano AS</p>
+    <div class="bunn-bunn"><span>© 2026 Boitano</span><span>Et menneskedrevet teknologiselskap</span><span>Demo: innhold hentet fra boitano.no</span></div>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/boitano-no-demo.js" defer></script>
 </body>
 </html>

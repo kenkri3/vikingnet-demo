@@ -1,66 +1,81 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – BE Mur og Flis AS</title>
-<meta name="description" content="Ta kontakt med BE Mur og Flis AS på e-post post@bemur.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Kontakt Bakke Mur og Varme AS – 934 34 225</title>
+<meta name="description" content="Kontakt Bakke Mur og Varme AS: post@bemur.no, telefon 934 34 225, Danholmen 25B, 3128 Nøtterøy. Gratis befaring.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Kontakt Bakke Mur og Varme AS – 934 34 225">
+<meta property="og:description" content="Kontakt Bakke Mur og Varme AS: post@bemur.no, telefon 934 34 225, Danholmen 25B, 3128 Nøtterøy. Gratis befaring.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/mur-1.webp">
+<meta name="theme-color" content="#3a2a24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&family=Asap:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bemur-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="BE Mur og Flis AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="band">
+  <div class="band__indre">
+    <a class="merke" href="index.html"><b>Bakke Mur &amp; Varme</b><small>AS · mur, flis og ildsted</small></a>
+    <nav style="display:flex;flex:1;gap:2px;height:100%;align-items:center" aria-label="Hovedmeny">
+      <a class="stein" href="index.html"><span>Hjem</span></a>
+      <a class="stein" href="tjenester.html"><span>Tjenester</span></a>
+      <a class="stein" href="flis.html"><span>Flis</span></a>
+      <a class="stein" href="pipe-ildsted.html"><span>Pipe</span></a>
+      <a class="stein" href="om.html"><span>Om</span></a>
+      <a class="stein" href="kontakt.html" aria-current="page"><span>Kontakt</span></a>
+      <a class="stein" href="panel.html"><span>Panel</span></a>
+    </nav>
   </div>
 </header>
+<div class="topp"><div class="inn"><span>Nøtterøy · Vestfold</span><span><a href="tel:+4793434225">934 34 225</a> · <a href="mailto:post@bemur.no">post@bemur.no</a></span></div></div>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Mur, flis &amp; våtrom · Norge</p>
-  <h1>Ta kontakt med BE Mur og Flis AS</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
-  <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">BE Mur og Flis AS</p>
-      
-      <p><strong>E-post</strong><br><a href="mailto:post@bemur.no">post@bemur.no</a></p>
-      <p><strong>Område</strong><br>Norge</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
-  </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:post@bemur.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Bad og våtromsrehabilitering</option><option>Flislegging og naturstein</option><option>Murarbeid og fasaderehabilitering</option><option>Peis, pipe og ildsteder</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
+<section class="pthode"><div class="inn"><div class="merkelinje">Kontakt</div>
+  <h1>Bestill befaring</h1>
+  <p>Vi kommer på befaring til avtalt tid, og gir deg råd og veiledning om hvordan prosjektet best kan gjennomføres.</p>
+</div></section>
+<section class="sek sek--strek"><div class="inn kontakt">
+  <div><div class="kliste">
+    <div><span>E-post</span><p><b><a href="mailto:post@bemur.no">post@bemur.no</a></b></p></div>
+    <div><span>Telefon</span><p><b><a href="tel:+4793434225">934 34 225</a></b><em>og 928 36 116</em></p></div>
+    <div><span>Besøk</span><p><b>Danholmen 25B</b><em>3128 Nøtterøy</em></p></div>
+    <div><span>Område</span><p><b>Vestfold</b><em>og omegn</em></p></div>
+  </div></div>
+  <form class="skjema" data-demo novalidate>
+    <div class="felt--to">
+      <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" placeholder="Fornavn etternavn" required></div>
+      <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="900 00 000" required></div>
+    </div>
+    <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" placeholder="navn@epost.no" required></div>
+    <div class="felt"><label for="emne">Hva gjelder det?</label><select id="emne" name="emne"><option>Flislegging og våtrom</option><option>Pipe og ildsted</option><option>Mur og støp</option><option>Rehabilitering</option><option>Annet</option></select></div>
+    <div class="felt"><label for="melding">Melding</label><textarea id="melding" name="melding" placeholder="Kort om prosjektet – send gjerne bilder på e-post"></textarea></div>
+    <button class="knapp" type="submit">Send melding <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></button>
+    <div class="skjema__svar" role="status" aria-live="polite"></div>
   </form>
-</section>
+</div></section>
+<section class="cta"><div class="inn">
+  <h2>Skal noe mures, flises eller settes inn?</h2>
+  <p>Vi kommer på gratis befaring og gir deg et uforpliktende tilbud med full oversikt over arbeid og kostnader.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Bestill befaring <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tjenester.html">Se tjenestene</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">BE Mur og Flis AS</p>
-      <p class="bunn__tekst">Norge · post@bemur.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">Bakke Mur og Varme AS</span><p>Din lokale murmester i Vestfold. Alt innen flislegging, mur og støp – og piper og ildsteder.</p><p><a href="mailto:post@bemur.no">post@bemur.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="flis.html">Flis</a></li><li><a href="pipe-ildsted.html">Pipe</a></li><li><a href="om.html">Om</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="flis.html">Flislegging</a></li><li><a href="pipe-ildsted.html">Pipe og ildsted</a></li><li><a href="tjenester.html#mur">Mur og støp</a></li><li><a href="kontakt.html">Gratis befaring</a></li></ul></div>
+      <div><h4>Kontakt</h4><p><a href="tel:+4793434225">934 34 225</a><br><a href="tel:+4792836116">928 36 116</a><br><a href="mailto:post@bemur.no">post@bemur.no</a></p><p style="margin-top:8px">Danholmen 25B<br>3128 Nøtterøy</p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 BE Mur og Flis AS</p>
+    <div class="bunn__bunn"><span>© 2026 Bakke Mur og Varme AS</span><span>Nettsiden er en demonstrasjon laget for Bakke Mur og Varme AS</span><a href="panel.html">Oppdragspanel</a></div>
   </div>
 </footer>
-<script src="app.js"></script>
+<script src="assets/js/bemur-no-demo.js" defer></script>
 </body>
 </html>

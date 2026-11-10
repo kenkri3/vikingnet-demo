@@ -1,0 +1,36 @@
+{
+  "slug": "boitano-no-demo",
+  "firma": "Boitano",
+  "navType": "splittet-sentrert-meny",
+  "fonts": [
+    "Space Grotesk",
+    "Plus Jakarta Sans"
+  ],
+  "palette": [
+    "#161515",
+    "#f2ead9",
+    "#ff8467",
+    "#ffdff3"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "kaleidoskop",
+    "kunder",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "ai-akselerasjon.html",
+    "produktutvikling.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

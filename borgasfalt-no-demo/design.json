@@ -1,0 +1,35 @@
+{
+  "slug": "borgasfalt-no-demo",
+  "firma": "Borg Asfalt AS",
+  "navType": "veistripe-topp",
+  "fonts": [
+    "Fjalla One",
+    "Roboto Mono"
+  ],
+  "palette": [
+    "#1a1b1d",
+    "#efece3",
+    "#6c8ebf"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "godkjenninger",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "privat.html",
+    "bedrift.html",
+    "maskinpark.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

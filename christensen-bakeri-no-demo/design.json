@@ -1,0 +1,35 @@
+{
+  "slug": "christensen-bakeri-no-demo",
+  "firma": "Christensen Bakeri og Konditori",
+  "navType": "delt meny",
+  "fonts": [
+    "Frank Ruhl Libre",
+    "Signika"
+  ],
+  "palette": [
+    "#faf5ec",
+    "#2f3b31",
+    "#e2a33c",
+    "#e4dccb"
+  ],
+  "motion": [
+    "motion",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "historie",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "om.html",
+    "butikker.html",
+    "produkter.html",
+    "lunsj.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustrasjon: bilag og regnskapsbøker med grønn bunnlinje">
+<rect width="800" height="600" fill="#f4efe6"/>
+<g transform="rotate(-4 400 300)">
+<rect x="120" y="150" width="240" height="310" rx="6" fill="#ffffff" stroke="#10231f" stroke-width="3"/>
+<g stroke="#c9a227" stroke-width="8"><path d="M160 210h150M160 260h150M160 310h100"/></g>
+<g stroke="#10231f" stroke-width="3" opacity=".35"><path d="M160 360h160M160 390h160M160 420h120"/></g>
+</g>
+<g transform="rotate(5 480 320)">
+<rect x="420" y="120" width="250" height="330" rx="6" fill="#ffffff" stroke="#10231f" stroke-width="3"/>
+<g stroke="#5b6b64" stroke-width="7"><path d="M460 180h120M460 220h120M460 260h120M460 300h120"/></g>
+<path d="M460 360 L510 330 L560 350 L610 300" stroke="#c9a227" stroke-width="6" fill="none"/>
+</g>
+<path d="M120 500h560" stroke="#10231f" stroke-width="4"/>
+<text x="400" y="545" text-anchor="middle" font-family="serif" font-size="24" fill="#10231f">FRIST · BILAG · OVERSIKT</text>
+</svg>

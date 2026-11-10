@@ -1,0 +1,36 @@
+{
+  "slug": "commfides-com-demo",
+  "firma": "Commfides",
+  "navType": "sertifikatstripe",
+  "fonts": [
+    "Manrope",
+    "Lora"
+  ],
+  "palette": [
+    "#0b2a4a",
+    "#eef2f7",
+    "#3f7fd6",
+    "#7fd1c8"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "produkter",
+    "kortflipp",
+    "eid",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "e-id.html",
+    "ssl.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "claussenelektro-no-demo",
+  "firma": "Claussen Elektro AS",
+  "navType": "skjema-bus med forgreninger",
+  "fonts": [
+    "Chonburi",
+    "KoHo"
+  ],
+  "palette": [
+    "#0f1418",
+    "#f2b33d",
+    "#eef1f2",
+    "#4f7a8a"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "sikringsskap",
+    "prosjekter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

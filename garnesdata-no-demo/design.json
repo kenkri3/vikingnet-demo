@@ -1,0 +1,34 @@
+{
+  "slug": "garnesdata-no-demo",
+  "firma": "Garnes Data",
+  "navType": "stabel med moduler",
+  "fonts": [
+    "Share Tech Mono",
+    "Asap"
+  ],
+  "palette": [
+    "#0d1117",
+    "#39d353",
+    "#eef2f0",
+    "#2f81f7"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "om",
+    "kundehistorier",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "kundehistorier.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}
