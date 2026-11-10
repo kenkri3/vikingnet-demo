@@ -1,0 +1,36 @@
+{
+  "slug": "aexs-no-demo",
+  "firma": "ÆXS AS",
+  "navType": "høyre skuff-meny",
+  "fonts": [
+    "Oxanium",
+    "Lato"
+  ],
+  "palette": [
+    "#0d0f0e",
+    "#e9eae4",
+    "#b6ff2e",
+    "#5b615c"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "problem",
+    "konsortium",
+    "tjenester",
+    "metodikk",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "konsortium.html",
+    "tjenester.html",
+    "metodikk.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

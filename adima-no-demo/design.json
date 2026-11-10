@@ -1,0 +1,36 @@
+{
+  "slug": "adima-no-demo",
+  "firma": "Adima",
+  "navType": "radiell-ringmeny",
+  "fonts": [
+    "Archivo",
+    "Azeret Mono"
+  ],
+  "palette": [
+    "#131820",
+    "#ec008c",
+    "#f2f0ec",
+    "#5c6670"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "to-veier",
+    "tjenester",
+    "sertifisering",
+    "slik-jobber-vi",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "ledige-stillinger.html",
+    "kandidater.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

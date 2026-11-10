@@ -1,0 +1,35 @@
+{
+  "slug": "atomelektro-no-demo",
+  "firma": "Atom Elektro",
+  "navType": "skraa-fliker",
+  "fonts": [
+    "Tomorrow",
+    "Inter Tight"
+  ],
+  "palette": [
+    "#14161b",
+    "#7c5cff",
+    "#f2f0ea",
+    "#5b5f68"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "skap",
+    "prosjekter",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

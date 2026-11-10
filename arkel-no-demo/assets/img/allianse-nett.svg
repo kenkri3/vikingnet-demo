@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Skjema: fire elektrobedrifter koblet sammen i en allianse">
+<rect width="800" height="600" fill="#161326"/>
+<g stroke="#7ef0c8" stroke-width="3" fill="none">
+<path d="M400 300 L180 170M400 300 L620 170M400 300 L180 440M400 300 L620 440"/>
+</g>
+<circle cx="400" cy="300" r="58" fill="#7ef0c8"/>
+<text x="400" y="308" text-anchor="middle" font-family="monospace" font-size="20" fill="#161326">ARKEL</text>
+<g fill="#f5f2ea">
+<rect x="90" y="130" width="180" height="80" rx="6"/><rect x="530" y="130" width="180" height="80" rx="6"/>
+<rect x="90" y="400" width="180" height="80" rx="6"/><rect x="530" y="400" width="180" height="80" rx="6"/>
+</g>
+<g font-family="monospace" font-size="15" fill="#161326" text-anchor="middle">
+<text x="180" y="178">ASKER OG BÆRUM</text><text x="620" y="178">OSLO</text>
+<text x="180" y="448">ROMERIKE</text><text x="620" y="448">INNLANDET</text>
+</g>
+</svg>

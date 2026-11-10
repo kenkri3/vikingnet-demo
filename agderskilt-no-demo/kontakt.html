@@ -1,66 +1,114 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – Agder Skilt &amp; Dekor</title>
-<meta name="description" content="Ta kontakt med Agder Skilt &amp; Dekor på e-post salg@dekorshop.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Kontakt · DekorShop</title>
+<meta name="description" content="Kontakt DekorShop: telefon 959 32 123 og salg@dekorshop.no. Be om tilbud på bildekor, båtnavn, vindufolie eller klær.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DekorShop">
+<meta property="og:title" content="Kontakt · DekorShop">
+<meta property="og:description" content="Kontakt DekorShop: telefon 959 32 123 og salg@dekorshop.no. Be om tilbud på bildekor, båtnavn, vindufolie eller klær.">
+<meta property="og:image" content="assets/img/bildekor-bil.svg">
+<meta name="theme-color" content="#0f0f14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/agderskilt-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Agder Skilt &amp; Dekor" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="flis" aria-hidden="true">DS</span><span class="n">DekorShop<span>Klistremerker siden 2008</span></span></a>
+    <div class="hoyre">
+      <a class="tlf" href="tel:+4795932123">959 32 123</a>
+      <a class="smal" href="kontakt.html">Kontakt</a>
+      <a class="fane-knapp" href="kontakt.html">Be om tilbud</a>
+    </div>
   </div>
 </header>
+<nav class="faner" aria-label="Hovedmeny">
+  <a href="index.html"><span>Forside</span></a>
+  <a href="bil.html"><span>Bil</span></a>
+  <a href="bat.html"><span>Båt</span></a>
+  <a href="vindu-og-skilt.html"><span>Vindu og skilt</span></a>
+  <a href="klaer.html"><span>Klær</span></a>
+  <a href="om.html"><span>Om oss</span></a>
+  <a href="kontakt.html" aria-current="page"><span>Kontakt</span></a>
+</nav>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Profilering, skilt &amp; markedsføring · Norge</p>
-  <h1>Ta kontakt med Agder Skilt &amp; Dekor</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
-  <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">Agder Skilt &amp; Dekor</p>
-      
-      <p><strong>E-post</strong><br><a href="mailto:salg@dekorshop.no">salg@dekorshop.no</a></p>
-      <p><strong>Område</strong><br>Norge</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
+<header class="sidehode">
+  <div class="ramme">
+    <p class="brodsmule"><a href="index.html">Hjem</a> / Kontakt</p>
+    <h1>Send oss <em>teksten</em></h1>
+    <p class="ingress">Skriv hva du skal merke og hvor det skal sitte, så svarer vi med pris og mål. Har du et bilde av flaten, legg det ved – det sparer oss begge for en runde.</p>
   </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:salg@dekorshop.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Bilfoliering, bildekor og transportreklame</option><option>Fasadeskilt, lysskilt og vindusdekor</option><option>Profilklær, arbeidstøy og gaveartikler</option><option>Grafisk design, kampanjer og rådgivning</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
-  </form>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="to-spalter">
+      <div class="avslor">
+        <h2 style="font-size:1.1rem;margin-bottom:16px">Send en forespørsel</h2>
+        <form class="skjema" data-skjema novalidate>
+          <div class="skjema-to">
+            <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" required></div>
+            <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="skjema-to">
+            <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel"></div>
+            <div class="felt"><label for="gjelder">Hva gjelder det?</label>
+              <select id="gjelder" name="gjelder">
+                <option>Bil og firmabil</option><option>Båt</option><option>Vindu og butikk</option>
+                <option>Skilt</option><option>Klær, trykk og brodering</option><option>Noe annet</option>
+              </select>
+            </div>
+          </div>
+          <div class="felt"><label for="melding">Tekst og mål</label><textarea id="melding" name="melding" placeholder="Skriv teksten du vil ha, hvor den skal sitte, og cirka hvor stor den skal være."></textarea></div>
+          <div><button class="knapp" type="submit">Send forespørselen <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></button></div>
+          <div class="skjema-melding" role="status" aria-live="polite"></div>
+          <p class="skjema-note">Demo: skjemaet sender ingenting. I en ekte løsning havner forespørselen i produksjonskøen i panelet.</p>
+        </form>
+      </div>
+      <aside class="avslor">
+        <div class="kortrekke" style="grid-template-columns:1fr">
+          <div class="kort"><span class="merke">Telefon</span><h3><a href="tel:+4795932123">959 32 123</a></h3><p>Ring gjerne – det går ofte raskere enn e-post.</p></div>
+          <div class="kort"><span class="merke">E-post</span><h3><a href="mailto:salg@dekorshop.no">salg@dekorshop.no</a></h3><p>Send logo eller bilde av flaten du skal merke.</p></div>
+          <div class="kort"><span class="merke">Verksted</span><h3>Eget verksted i Norge</h3><p>Produksjonen skjer hos oss, ikke hos en underleverandør.</p></div>
+          <div class="kort"><span class="merke">Levering</span><h3>Sendes neste virkedag</h3><p>Gratis frakt over 1495 kr inkl. mva.</p></div>
+        </div>
+      </aside>
+    </div>
+  </div>
 </section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Agder Skilt &amp; Dekor</p>
-      <p class="bunn__tekst">Norge · salg@dekorshop.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>DekorShop</h3><p>Klistremerker og dekor til bil, båt, vindu og butikk – skåret i eget verksted i Norge siden 2008. Levert klar til montering på tape.</p></div>
+      <div><h4>Kategorier</h4><ul>
+        <li><a href="bil.html">Bil og firmabil</a></li><li><a href="bat.html">Båt</a></li>
+        <li><a href="vindu-og-skilt.html">Vindu og skilt</a></li><li><a href="klaer.html">Klær og brodering</a></li>
+      </ul></div>
+      <div><h4>Handler du hos oss</h4><ul>
+        <li><a href="kontakt.html">Lag teksten din</a></li>
+        <li><a href="om.html">Om verkstedet</a></li>
+        <li><a href="panel.html">Produksjonskø (demo)</a></li>
+        <li><a href="kontakt.html">Kontakt oss</a></li>
+      </ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+4795932123">959 32 123</a></li>
+        <li><a href="mailto:salg@dekorshop.no">salg@dekorshop.no</a></li>
+        <li>Eget verksted i Norge</li>
+        <li>Sendes normalt samme eller neste virkedag</li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Agder Skilt &amp; Dekor</p>
+    <div class="bunn-bunn"><span>© 2026 DekorShop</span><span>Produsert i Norge · ingen importavgift</span><span>Demo: innhold hentet fra dekorshop.no (agderskilt.no)</span></div>
   </div>
 </footer>
-<script src="app.js"></script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/agderskilt-no-demo.js" defer></script>
 </body>
 </html>

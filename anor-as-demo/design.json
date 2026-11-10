@@ -1,0 +1,35 @@
+{
+  "slug": "anor-as-demo",
+  "firma": "Anor AS",
+  "navType": "arkfaner i sidekanten",
+  "fonts": [
+    "Prata",
+    "Poppins"
+  ],
+  "palette": [
+    "#12211f",
+    "#d7c9a7",
+    "#f7f4ec",
+    "#7c9a92"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "omrader",
+    "bransjer",
+    "slik",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "bransjer.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "agarasje-no-demo",
+  "firma": "Agarasje",
+  "navType": "målestokk-linjal",
+  "fonts": [
+    "Merriweather",
+    "Epilogue"
+  ],
+  "palette": [
+    "#241c14",
+    "#c97b3d",
+    "#f7f2e8",
+    "#7d8a6a"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "modeller",
+    "slik",
+    "garasjetips",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

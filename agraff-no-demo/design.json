@@ -1,0 +1,35 @@
+{
+  "slug": "agraff-no-demo",
+  "firma": "agraff arkitektur",
+  "navType": "mappe-faner",
+  "fonts": [
+    "Gloock",
+    "Commissioner"
+  ],
+  "palette": [
+    "#f2efe9",
+    "#1e2420",
+    "#6f8b5f",
+    "#c2603f"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "prosjekter",
+    "modell",
+    "tema",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "prosjekter.html",
+    "tema.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

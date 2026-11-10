@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Båt med navn og hjemmehavn i dekor">
+<rect width="800" height="600" fill="#0f0f14"/>
+<path d="M120 380h560l-70 110H190z" fill="#f4f4ef"/>
+<path d="M120 380h560" stroke="#c8ff2e" stroke-width="8"/>
+<text x="400" y="330" text-anchor="middle" font-family="serif" font-size="64" fill="#f4f4ef" font-style="italic">SOLVEIG</text>
+<text x="400" y="368" text-anchor="middle" font-family="monospace" font-size="20" fill="#c8ff2e">HJEMHAVN · ÅLESUND</text>
+<path d="M300 150v110M500 150v110M300 200h200" stroke="#6b6b76" stroke-width="3"/>
+</svg>

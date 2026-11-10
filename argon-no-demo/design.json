@@ -1,0 +1,35 @@
+{
+  "slug": "argon-no-demo",
+  "firma": "Argon Elektro AS",
+  "navType": "to-trinns kategoristripe",
+  "fonts": [
+    "Roboto Serif",
+    "Heebo"
+  ],
+  "palette": [
+    "#171c2b",
+    "#b7c4ff",
+    "#f5f6fa",
+    "#e06c4f"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "omrader",
+    "prosjekter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustrasjon: elektrisk fordelingsskap med kurser">
+<rect width="800" height="600" fill="#f5f2ea"/>
+<rect x="200" y="80" width="400" height="440" rx="10" fill="#161326"/>
+<g fill="#7ef0c8">
+<rect x="240" y="130" width="140" height="26" rx="3"/><rect x="400" y="130" width="140" height="26" rx="3"/>
+<rect x="240" y="180" width="140" height="26" rx="3"/><rect x="400" y="180" width="140" height="26" rx="3"/>
+<rect x="240" y="230" width="140" height="26" rx="3"/><rect x="400" y="230" width="140" height="26" rx="3"/>
+</g>
+<g fill="#f5f2ea">
+<circle cx="270" cy="320" r="14"/><circle cx="330" cy="320" r="14"/><circle cx="390" cy="320" r="14"/>
+<circle cx="450" cy="320" r="14"/><circle cx="510" cy="320" r="14"/>
+</g>
+<rect x="240" y="380" width="300" height="10" rx="5" fill="#5d5a72"/>
+<rect x="240" y="420" width="220" height="10" rx="5" fill="#5d5a72"/>
+<text x="400" y="480" text-anchor="middle" font-family="monospace" font-size="16" fill="#7ef0c8">FORDELING</text>
+</svg>

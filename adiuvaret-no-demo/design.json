@@ -1,0 +1,35 @@
+{
+  "slug": "adiuvaret-no-demo",
+  "firma": "Adiuvaret",
+  "navType": "saksmappe-faner",
+  "fonts": [
+    "Spectral",
+    "Wix Madefor Display"
+  ],
+  "palette": [
+    "#24211d",
+    "#ece4d6",
+    "#7d1f2e"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "slik-jobber-vi",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "konkursbo.html",
+    "dodsbo.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

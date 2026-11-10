@@ -1,175 +1,159 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Argon Elektro AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Argon Elektro AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Servicepanel — Argon Elektro AS</title>
+<meta name="description" content="Demoversjon av servicepanelet til Argon Elektro AS: saker, status og fag med filter, «ta sak» og «merk ferdig».">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Argon Elektro AS">
+<meta property="og:title" content="Servicepanel — Argon Elektro AS">
+<meta property="og:description" content="Demoversjon av servicepanelet til Argon Elektro AS: saker, status og fag med filter, «ta sak» og «merk ferdig».">
+<meta property="og:image" content="assets/img/03-argon-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/argon-no-demo.css">
+<script src="assets/js/argon-no-demo.js" defer></script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#hoved">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><span class="merke__flate merke__flate--mork"><img class="merke__logo" src="img/logo.svg" alt="Argon Elektro AS" height="34"></span></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="topp-inn">
+    <a class="merke" href="index.html"><strong>Argon Elektro</strong> <span>Trondheim</span></a>
+    <a class="topp-tel" href="tel:+4773924400">73 92 44 00</a>
   </div>
+  <nav class="trinn1" aria-label="Fagområder">
+    <ul>
+      <li><a href="tjenester.html#hus">Hus & hytte</a></li>
+      <li><a href="tjenester.html#naering">Næring</a></li>
+      <li><a href="tjenester.html#maritim">Maritim</a></li>
+    </ul>
+  </nav>
+  <nav class="trinn2" aria-label="Hovedmeny">
+    <ul>
+      <li><a href="index.html"><span class="nr">01</span><span>Forside</span></a></li>
+      <li><a href="tjenester.html"><span class="nr">02</span><span>Tjenester</span></a></li>
+      <li><a href="prosjekter.html"><span class="nr">03</span><span>Prosjekter</span></a></li>
+      <li><a href="om.html"><span class="nr">04</span><span>Om oss</span></a></li>
+      <li><a href="kontakt.html"><span class="nr">05</span><span>Kontakt</span></a></li>
+      <li><a href="panel.html" aria-current="page"><span class="nr">06</span><span>Panel</span></a></li>
+    </ul>
+  </nav>
 </header>
-<main id="innhold">
+<main id="hoved">
   <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Trondheim</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Argon Elektro AS. Klikk på en oppgave for å oppdatere status.</p>
+    <div class="ramme">
+      <div class="panel-topp">
+        <div><p class="eyebrow" style="margin-bottom:.6rem">Internt · service</p><h1>Saker og oppdrag</h1><p>Oversikt over saker og status. Demoversjon med eksempeldata.</p></div>
+        <span class="panel-merke">Demo · eksempeldata</span>
       </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Argon Elektro AS</div>
-    </div>
-
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
-    </div>
-
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+      <div class="kpi-rad">
+        <div class="kpi"><p class="navn">Åpne saker</p><p class="verdi" id="kpi-apne">5</p><p class="endring">2 nye i dag</p></div>
+        <div class="kpi"><p class="navn">Pågående</p><p class="verdi">2</p><p class="endring">1 maritim</p></div>
+        <div class="kpi"><p class="navn">Venter</p><p class="verdi">1</p><p class="endring">alarm, Byåsen</p></div>
+        <div class="kpi"><p class="navn">Timer denne uken</p><p class="verdi">214</p><p class="endring">76 % fakturerbart</p></div>
+      </div>
+      <div class="panel-rutenett">
+        <div class="boks">
+          <div class="boks-hode">
+            <h2>Saker</h2>
+            <div class="filter-rad" role="group" aria-label="Filtrer saker">
+              <button class="filter" type="button" data-filter="alle" aria-pressed="true">Alle</button>
+              <button class="filter" type="button" data-filter="ny" aria-pressed="false">Ny</button>
+              <button class="filter" type="button" data-filter="pagaar" aria-pressed="false">Pågår</button>
+              <button class="filter" type="button" data-filter="venter" aria-pressed="false">Venter</button>
+              <button class="filter" type="button" data-filter="ferdig" aria-pressed="false">Ferdig</button>
+            </div>
+          </div>
+          <ul class="ordre-liste" id="ordre-liste">
+        <li class="ordre" data-status="pagaar" data-navn="Elbillader – 12 plasser">
+          <div>
+            <p class="ordre-navn">Elbillader – 12 plasser</p>
+            <p class="ordre-meta"><span>Borettslag, Trondheim</span><span class="skille">/</span><span>Lading</span><span class="skille">/</span><span>uke 45–46</span></p>
+          </div>
+          <div class="ordre-hoyre">
+            <span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk ferdig</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="Feilsøking – kurs 4">
+          <div>
+            <p class="ordre-navn">Feilsøking – kurs 4</p>
+            <p class="ordre-meta"><span>Privat, Heimdal</span><span class="skille">/</span><span>Service</span><span class="skille">/</span><span>i dag 08.30</span></p>
+          </div>
+          <div class="ordre-hoyre">
+            <span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta sak</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="venter" data-navn="Boligalarm – installasjon">
+          <div>
+            <p class="ordre-navn">Boligalarm – installasjon</p>
+            <p class="ordre-meta"><span>Privat, Byåsen</span><span class="skille">/</span><span>Alarm</span><span class="skille">/</span><span>i morgen</span></p>
+          </div>
+          <div class="ordre-hoyre">
+            <span class="status" data-status="venter">Venter</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta sak</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ny" data-navn="El-kontroll – næringsbygg">
+          <div>
+            <p class="ordre-navn">El-kontroll – næringsbygg</p>
+            <p class="ordre-meta"><span>Næring, Ranheim</span><span class="skille">/</span><span>Kontroll</span><span class="skille">/</span><span>i dag 10.10</span></p>
+          </div>
+          <div class="ordre-hoyre">
+            <span class="status" data-status="ny">Ny</span>
+            <button class="liten-knapp" type="button" data-handling="ta">Ta sak</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="pagaar" data-navn="Maritim installasjon">
+          <div>
+            <p class="ordre-navn">Maritim installasjon</p>
+            <p class="ordre-meta"><span>Rederei</span><span class="skille">/</span><span>Maritim</span><span class="skille">/</span><span>løpende</span></p>
+          </div>
+          <div class="ordre-hoyre">
+            <span class="status" data-status="pagaar">Pågår</span>
+            <button class="liten-knapp" type="button" data-handling="ferdig">Merk ferdig</button>
+          </div>
+        </li>
+        <li class="ordre" data-status="ferdig" data-navn="Oppgradering – sikringsskap">
+          <div>
+            <p class="ordre-navn">Oppgradering – sikringsskap</p>
+            <p class="ordre-meta"><span>Privat, Tiller</span><span class="skille">/</span><span>Bolig</span><span class="skille">/</span><span>i går</span></p>
+          </div>
+          <div class="ordre-hoyre">
+            <span class="status" data-status="ferdig">Ferdig</span>
+            <button class="liten-knapp" type="button" data-handling="ta" disabled>Ferdig</button>
+          </div>
+        </li>
+          </ul>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Elbillading og smart strømstyring</strong><span>Ny forespørsel via nettsiden · Trondheim</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Sikringsskap og el-kontroll</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Belysning og smarthusløsninger</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Serviceavtaler for næring og industri</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+        <div class="boks">
+          <div class="boks-hode"><h2>Fag</h2><span style="font-size:.62rem;color:var(--graa)">denne uken</span></div>
+          <ul class="ordre-liste">
+            <li class="ordre"><div><p class="ordre-navn">Hus &amp; hytte</p><p class="ordre-meta"><span>3 oppdrag</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Næring</p><p class="ordre-meta"><span>2 oppdrag</span></p></div></li>
+            <li class="ordre"><div><p class="ordre-navn">Maritim</p><p class="ordre-meta"><span>1 oppdrag</span></p></div></li>
+          </ul>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om elbillading og smart strømstyring</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om sikringsskap og el-kontroll</strong><p>Kunde i Trondheim ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av belysning og smarthusløsninger</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
       </div>
-    </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
     </div>
   </section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Argon Elektro AS</p>
-      <p class="bunn__tekst">Trondheim · 73 92 44 00 · kundeservice@argon.no</p>
-    </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Argon Elektro AS</p>
+  <div class="varsel" id="varsel" role="status" aria-live="polite"></div>
+<footer class="fot">
+  <div class="ramme fot-inn">
+    <p>© 2026 Argon Elektro AS · Trondheim · 73 92 44 00</p>
+    <p class="fot-lenker">
+      <a href="tjenester.html">Tjenester</a>
+      <a href="prosjekter.html">Prosjekter</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </p>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+{
+  "slug": "airflow-no-demo",
+  "firma": "Airflow",
+  "navType": "rørledning med ventiler",
+  "fonts": [
+    "Spectral",
+    "IBM Plex Sans"
+  ],
+  "palette": [
+    "#10222b",
+    "#8ad7e0",
+    "#f3f7f8",
+    "#e0a458"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "kategorier",
+    "filter",
+    "slik",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "produkter.html",
+    "filterguide.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

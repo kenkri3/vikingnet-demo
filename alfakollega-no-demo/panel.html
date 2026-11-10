@@ -1,175 +1,188 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Alfa Kollega AS – Kunde- og oppdragspanel</title>
-<meta name="description" content="Interaktiv oversikt over oppdrag, fremdrift og kundehenvendelser hos Alfa Kollega AS.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
-<style>
-.panel{max-width:min(var(--max,1240px),94vw);margin:0 auto;padding:2.5rem 1.25rem 1rem}
-.panel__topp{display:flex;gap:1rem;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;margin-bottom:1.6rem}
-.panel__bruker{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;background:color-mix(in srgb,var(--blekk) 6%,var(--bak));padding:.45rem .85rem;border-radius:999px;border:1px solid var(--kant)}
-.panel__prikk{width:.5rem;height:.5rem;border-radius:50%;background:var(--aksent)}
-.panel__kpi-rad{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.5rem}
-.panel__kpi{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:14px;padding:1.1rem}
-.panel__kpi-tall{display:block;font-family:var(--serif);font-size:1.65rem;line-height:1.1;margin-bottom:.2rem}
-.panel__kpi-navn{color:var(--dempet);font-size:.86rem}
-.panel__rutenett{display:grid;grid-template-columns:1fr;gap:1.25rem}
-@media(min-width:900px){.panel__rutenett{grid-template-columns:1.15fr .85fr}}
-.panel__boks{background:color-mix(in srgb,var(--bak) 94%,var(--blekk) 3%);border:1px solid var(--kant);border-radius:16px;padding:1.25rem}
-.panel__boks-topp{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.8rem}
-.panel__boks-topp h2{font-size:1.12rem;margin:0}
-.panel__teller{font-size:.85rem;color:var(--dempet)}
-.oppgaver,.meldinger{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
-.oppgave{display:flex;align-items:center;gap:.75rem;padding:.7rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.oppgave__hake{width:1.25rem;height:1.25rem;border-radius:6px;border:1.5px solid var(--kant);background:transparent;cursor:pointer;flex:0 0 auto}
-.oppgave[data-status="ferdig"] .oppgave__hake{background:var(--aksent);border-color:var(--aksent)}
-.oppgave[data-status="ferdig"] .oppgave__tekst strong{text-decoration:line-through;opacity:.7}
-.oppgave__tekst{display:flex;flex-direction:column;line-height:1.35;flex:1}
-.oppgave__tekst span{color:var(--dempet);font-size:.84rem}
-.status{font-size:.75rem;padding:.2rem .6rem;border-radius:999px;white-space:nowrap;border:1px solid var(--kant);font-weight:600}
-.status--haster{background:color-mix(in srgb,#c0392b 14%,var(--bak))}
-.status--venter{background:color-mix(in srgb,#b7791f 16%,var(--bak))}
-.status--pagar{background:color-mix(in srgb,var(--aksent) 16%,var(--bak))}
-.status--ferdig{background:color-mix(in srgb,#1e7a48 16%,var(--bak))}
-.melding{display:flex;justify-content:space-between;gap:.75rem;align-items:center;padding:.75rem .8rem;border-radius:10px;background:var(--bak);border:1px solid var(--kant)}
-.melding p{margin:.15rem 0 0;color:var(--dempet);font-size:.88rem}
-.melding[data-status="lest"]{opacity:.65}
-.melding__knapp{font:inherit;font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--kant);background:var(--bak);color:var(--blekk);cursor:pointer;white-space:nowrap;font-weight:500}
-.panel__forklaring{margin-top:1.6rem;padding:1.35rem;border-radius:16px;background:color-mix(in srgb,var(--aksent) 10%,var(--bak));border:1px solid var(--kant)}
-.panel__forklaring h2{font-size:1.08rem;margin:0 0 .4rem}
-.panel__forklaring p{margin:0}
-</style>
+<title>Vaktpanel · Alfa Kollega (demo)</title>
+<meta name="description" content="Demo av Alfa Kollegas vaktpanel: vakter med kunde, status og handlinger – besett vakt eller fullfør.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alfa Kollega">
+<meta property="og:title" content="Vaktpanel · Alfa Kollega (demo)">
+<meta property="og:description" content="Demo av Alfa Kollegas vaktpanel: vakter med kunde, status og handlinger – besett vakt eller fullfør.">
+<meta property="og:image" content="assets/img/sykepleie.svg">
+<meta name="theme-color" content="#0b4f4a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/alfakollega-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Alfa Kollega AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html" aria-current="page">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="n">Alfa Kollega<span>Helsepersonell og omsorg</span></span></a>
+    <div class="hoyre">
+      <a class="tlf" href="tel:+4792095746">+47 920 95 746</a>
+      <a class="smal" href="om.html">Karriere</a>
+      <a class="smal" href="kontakt.html">Kontakt</a>
+    </div>
   </div>
 </header>
+<nav class="akkordeon" aria-label="Hovedmeny">
+  <a href="index.html"><span class="nr">01</span><span class="t">Hjem</span></a>
+  <a href="tjenester.html"><span class="nr">02</span><span class="t">Tjenester</span></a>
+  <a href="sykepleier.html"><span class="nr">03</span><span class="t">Sykepleier</span></a>
+  <a href="bpa.html"><span class="nr">04</span><span class="t">BPA</span></a>
+  <a href="trygghetsalarm.html"><span class="nr">05</span><span class="t">Trygghetsalarm</span></a>
+  <a href="om.html"><span class="nr">06</span><span class="t">Om oss</span></a>
+  <a href="kontakt.html"><span class="nr">07</span><span class="t">Kontakt</span></a>
+</nav>
 <main id="innhold">
-  <section class="panel">
-    <div class="panel__topp">
-      <div>
-        <p class="merkelapp">Digital oppdragsflyt · Norge</p>
-        <h1>Dagens oppdrag og henvendelser</h1>
-        <p class="innledning">Interaktiv visning av aktive oppdrag, fremdrift og innkommende forespørsler hos Alfa Kollega AS. Klikk på en oppgave for å oppdatere status.</p>
-      </div>
-      <div class="panel__bruker"><span class="panel__prikk"></span>Alfa Kollega AS</div>
+<header class="panelhode">
+  <div class="ramme">
+    <div class="rad">
+      <p class="brodsmule"><a href="index.html">Hjem</a> / Panel</p>
+      <span class="drift">Vaktlisten er åpen</span>
+    </div>
+    <h1>Vaktlisten</h1>
+    <p class="ingress">Slik ser bemanningen ut internt: hvilke vakter som mangler folk, hvilke som er besatt og hvilke som er gjennomført. Trykk på knappene – status, nøkkeltall og logg oppdaterer seg. Alt er eksempeldata.</p>
+  </div>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="kpier">
+      <div class="kpi"><span class="l">Åpne vakter</span><span class="v" data-kpi-apen>2</span><span class="d">Mangler fagperson</span></div>
+      <div class="kpi"><span class="l">Besatt</span><span class="v" data-kpi-besatt>2</span><span class="d">Bekreftet med fagperson</span></div>
+      <div class="kpi"><span class="l">Fullført</span><span class="v" data-kpi-full>2</span><span class="d">Klar for timeliste</span></div>
+      <div class="kpi"><span class="l">Fagpersoner</span><span class="v">36</span><span class="d">Eksempeldata</span></div>
     </div>
 
-    <div class="panel__kpi-rad">
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>12</span><span class="panel__kpi-navn">Aktive henvendelser</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>3</span><span class="panel__kpi-navn">Under utførelse</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>8</span><span class="panel__kpi-navn">Fullført denne uken</span></div>
-      <div class="panel__kpi"><span class="panel__kpi-tall" data-kpi>100 %</span><span class="panel__kpi-navn">Dokumentert leveranse</span></div>
+    <div class="faner" role="group" aria-label="Filtrer vakter">
+      <button class="fane" type="button" data-filter="alle" aria-pressed="true">Alle <span class="antall">6</span></button>
+      <button class="fane" type="button" data-filter="apen" aria-pressed="false">Åpne <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="besatt" aria-pressed="false">Besatt <span class="antall">2</span></button>
+      <button class="fane" type="button" data-filter="fullfort" aria-pressed="false">Fullført <span class="antall">2</span></button>
     </div>
 
-    <div class="panel__rutenett">
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Planlagte og pågående oppdrag</h2>
-          <span class="panel__teller"><span data-igjen>3</span> aktive</span>
+    <div class="vakter" data-vakter>
+      <article class="vakt" data-id="AK-2041" data-status="apen">
+        <div class="id">AK-2041</div>
+        <div class="hoved"><div class="t">Sykepleier, hjemmesykepleie</div><div class="m">Bærum kommune</div></div>
+        <div class="meta"><span class="k">Når</span><span>Uke 46 · dagvakter</span></div>
+        <span class="status" data-status="apen">Åpen</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="besett">Besett</button>
+          <button class="mini mini--full" type="button" data-handling="fullfor">Fullfør</button>
         </div>
-        <ul class="oppgaver" data-oppgaver>
-          <li class="oppgave" data-status="haster">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Fast rekruttering av spesialister og fagfolk</strong><span>Ny forespørsel via nettsiden · Norge</span></div>
-            <span class="status status--haster">Ny</span>
-          </li>
-          <li class="oppgave" data-status="pagar">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Fleksibel bemanning og vikarutleie</strong><span>Befaring og tilbud bekreftet</span></div>
-            <span class="status status--pagar">Pågår</span>
-          </li>
-          <li class="oppgave" data-status="venter">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Executive Search og styreutvelgelse</strong><span>Planlagt gjennomføring denne uken</span></div>
-            <span class="status status--venter">Planlagt</span>
-          </li>
-          <li class="oppgave" data-status="ferdig">
-            <button class="oppgave__hake" type="button" aria-label="Merk som ferdig" data-hake></button>
-            <div class="oppgave__tekst"><strong>Rådgivning og kandidatutvikling</strong><span>Ferdigstilt og dokumentert for kunde</span></div>
-            <span class="status status--ferdig">Ferdig</span>
-          </li>
+      </article>
+      <article class="vakt" data-id="AK-2040" data-status="besatt">
+        <div class="id">AK-2040</div>
+        <div class="hoved"><div class="t">Helsefagarbeider, institusjon</div><div class="m">Slependen bo- og servicesenter</div></div>
+        <div class="meta"><span class="k">Når</span><span>Uke 46–48 · kveld</span></div>
+        <span class="status" data-status="besatt">Besatt</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="besett" disabled>Besett</button>
+          <button class="mini mini--full" type="button" data-handling="fullfor">Fullfør</button>
+        </div>
+      </article>
+      <article class="vakt" data-id="AK-2039" data-status="besatt">
+        <div class="id">AK-2039</div>
+        <div class="hoved"><div class="t">BPA-assistent</div><div class="m">Privat bruker, Asker</div></div>
+        <div class="meta"><span class="k">Når</span><span>Fast · hverdager</span></div>
+        <span class="status" data-status="besatt">Besatt</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="besett" disabled>Besett</button>
+          <button class="mini mini--full" type="button" data-handling="fullfor">Fullfør</button>
+        </div>
+      </article>
+      <article class="vakt" data-id="AK-2038" data-status="apen">
+        <div class="id">AK-2038</div>
+        <div class="hoved"><div class="t">Sykepleier, natt</div><div class="m">Bærum kommune</div></div>
+        <div class="meta"><span class="k">Når</span><span>Uke 47 · natt</span></div>
+        <span class="status" data-status="apen">Åpen</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring">Ring</button>
+          <button class="mini" type="button" data-handling="besett">Besett</button>
+          <button class="mini mini--full" type="button" data-handling="fullfor">Fullfør</button>
+        </div>
+      </article>
+      <article class="vakt vakt--fullfort" data-id="AK-2037" data-status="fullfort">
+        <div class="id">AK-2037</div>
+        <div class="hoved"><div class="t">Omsorgsarbeider</div><div class="m">Privat bruker, Oslo</div></div>
+        <div class="meta"><span class="k">Når</span><span>Fullført 07.11</span></div>
+        <span class="status" data-status="fullfort">Fullført</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="besett" disabled>Besett</button>
+          <button class="mini mini--full" type="button" data-handling="fullfor" disabled>Fullfør</button>
+        </div>
+      </article>
+      <article class="vakt vakt--fullfort" data-id="AK-2036" data-status="fullfort">
+        <div class="id">AK-2036</div>
+        <div class="hoved"><div class="t">Alarmoperatør, helg</div><div class="m">Alfa Kollega sentral</div></div>
+        <div class="meta"><span class="k">Når</span><span>Fullført 02.11</span></div>
+        <span class="status" data-status="fullfort">Fullført</span>
+        <div class="handlinger">
+          <button class="mini" type="button" data-handling="ring" disabled>Ring</button>
+          <button class="mini" type="button" data-handling="besett" disabled>Besett</button>
+          <button class="mini mini--full" type="button" data-handling="fullfor" disabled>Fullfør</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="panel-to">
+      <div class="panel-kort">
+        <h2>Neste vakt</h2>
+        <p class="under">Eksempeldata</p>
+        <ul style="list-style:none;margin:0;padding:0">
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>Bærum · hjemmesykepleie</span><span style="color:var(--graa)">i morgen 07:30</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--linje);font-size:14px"><span>Slependen · kveld</span><span style="color:var(--graa)">i dag 15:00</span></li>
+          <li style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;font-size:14px"><span>Asker · BPA</span><span style="color:var(--graa)">fast</span></li>
         </ul>
       </div>
-
-      <div class="panel__boks">
-        <div class="panel__boks-topp">
-          <h2>Siste kundehenvendelser</h2>
-          <span class="panel__teller"><span data-ulest>2</span> nye</span>
+      <div class="panel-kort">
+        <h2>Hendelser</h2>
+        <p class="under">Siste aktivitet</p>
+        <div class="logg" data-logg>
+          <div><b>11:20</b> AK-2040 besatt med helsefagarbeider</div>
+          <div><b>10:05</b> AK-2037 fullført og timelistet</div>
+          <div><b>09:12</b> ny vakt AK-2041 lagt ut</div>
+          <div><b>08:00</b> vaktlisten åpnet</div>
         </div>
-        <ul class="meldinger">
-          <li class="melding" data-status="ulest">
-            <div><strong>Forespørsel om fast rekruttering av spesialister og fagfolk</strong><p>Ønsker pristilbud og forslag til oppstartsdato.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="ulest">
-            <div><strong>Spørsmål om fleksibel bemanning og vikarutleie</strong><p>Kunde i Norge ber om uforpliktende befaring.</p></div>
-            <button class="melding__knapp" type="button" data-les>Merk besvart</button>
-          </li>
-          <li class="melding" data-status="lest">
-            <div><strong>Oppfølging av executive search og styreutvelgelse</strong><p>Tilbud akseptert og tidspunkt bekreftet.</p></div>
-            <button class="melding__knapp" type="button" data-les>Besvart</button>
-          </li>
-        </ul>
+        <a class="knapp knapp--lys" href="tjenester.html" style="margin-top:14px;border-color:#cfc6b6;color:var(--dyp)">Til tjenestene <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
       </div>
     </div>
-
-    <div class="panel__forklaring">
-      <h2>Full oversikt fra første henvendelse til ferdig oppdrag</h2>
-      <p>Alle henvendelser fra kontaktskjemaet organiseres oversiktlig med tydelig status, ansvarlig fagperson og dokumentert oppfølging.</p>
-    </div>
-  </section>
+  </div>
+</section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Alfa Kollega AS</p>
-      <p class="bunn__tekst">Norge · 92 09 57 46 · post@alfakollega.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Alfa Kollega</h3><p>Bemanningsbyrå for helsepersonell. Vi tilbyr private omsorgstjenester, sykepleietjenester, BPA og har over 10 års erfaring med trygghetsalarmtjenester.</p></div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="tjenester.html">Alle tjenester</a></li><li><a href="sykepleier.html">Sykepleiertjenester</a></li>
+        <li><a href="bpa.html">BPA</a></li><li><a href="trygghetsalarm.html">Trygghetsalarm</a></li>
+      </ul></div>
+      <div><h4>Selskapet</h4><ul>
+        <li><a href="om.html">Om oss</a></li><li><a href="om.html#karriere">Karriere</a></li>
+        <li><a href="om.html#stillinger">Ledige stillinger</a></li>
+        <li><a href="panel.html">Vaktpanel (demo)</a></li>
+      </ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+4792095746">+47 920 95 746</a></li>
+        <li><a href="mailto:post@alfakollega.no">post@alfakollega.no</a></li>
+        <li>Åsløkkveien 18B<br>1341 Slependen</li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Alfa Kollega AS</p>
+    <div class="bunn-bunn"><span>© 2026 Alfa Kollega</span><span>Helsepersonell med lang erfaring</span><span>Demo: innhold hentet fra alfakollega.no</span></div>
   </div>
 </footer>
-<script>
-document.querySelectorAll('[data-hake]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.oppgave');
-    var ferdig = li.getAttribute('data-status') === 'ferdig';
-    li.setAttribute('data-status', ferdig ? 'pagar' : 'ferdig');
-    var badge = li.querySelector('.status');
-    if (badge) {
-      badge.textContent = ferdig ? 'Pågår' : 'Ferdig';
-      badge.className = 'status ' + (ferdig ? 'status--pagar' : 'status--ferdig');
-    }
-    var igjen = document.querySelectorAll('.oppgave:not([data-status="ferdig"])').length;
-    var el = document.querySelector('[data-igjen]');
-    if (el) el.textContent = igjen;
-  });
-});
-document.querySelectorAll('[data-les]').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var li = btn.closest('.melding');
-    li.setAttribute('data-status', 'lest');
-    btn.textContent = 'Besvart';
-    var ulest = document.querySelectorAll('.melding[data-status="ulest"]').length;
-    var el = document.querySelector('[data-ulest]');
-    if (el) el.textContent = ulest;
-  });
-});
-</script>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/alfakollega-no-demo.js" defer></script>
 </body>
 </html>

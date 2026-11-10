@@ -1,0 +1,34 @@
+{
+  "slug": "abyss-no-demo",
+  "firma": "Abyss",
+  "navType": "symmetrisk mast-meny",
+  "fonts": [
+    "Montserrat",
+    "Merriweather"
+  ],
+  "palette": [
+    "#071c26",
+    "#e6eff0",
+    "#1f7a8c",
+    "#d97742"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "fartoy",
+    "slik-jobber-vi",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "fartoy.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

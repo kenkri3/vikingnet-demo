@@ -1,0 +1,38 @@
+{
+  "slug": "alfakollega-no-demo",
+  "firma": "Alfa Kollega",
+  "navType": "horisontal-akkordeonmeny",
+  "fonts": [
+    "Newsreader",
+    "Assistant"
+  ],
+  "palette": [
+    "#0b4f4a",
+    "#f6f1e7",
+    "#e9a178",
+    "#1a1a18"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "hvorfor",
+    "puls",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "sykepleier.html",
+    "bpa.html",
+    "trygghetsalarm.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

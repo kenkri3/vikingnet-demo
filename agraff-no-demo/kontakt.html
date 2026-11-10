@@ -1,66 +1,114 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – Agraff Arkitektur AS</title>
-<meta name="description" content="Ta kontakt med Agraff Arkitektur AS på e-post firmapost@agraff.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex">
+<title>Kontakt oss | agraff arkitektur Trondheim</title>
+<meta name="description" content="Kontakt agraff arkitektur: Olav Tryggvasons gate 19, 7011 Trondheim. Telefon 73 84 13 10, firmapost@agraff.no.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="agraff arkitektur">
+<meta property="og:title" content="Kontakt oss | agraff arkitektur Trondheim">
+<meta property="og:description" content="Kontakt agraff arkitektur: Olav Tryggvasons gate 19, 7011 Trondheim. Telefon 73 84 13 10, firmapost@agraff.no.">
+<meta property="og:image" content="assets/img/03-agraff-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/agraff-no-demo.css">
 </head>
-<body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<body class="">
+<a class="hopp" href="#innhold">Til innholdet</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><span class="merke__flate merke__flate--mork"><img class="merke__logo" src="img/logo.svg" alt="Agraff Arkitektur AS" height="34"></span></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="wrap topp__indre">
+    <a class="merke" href="index.html">
+      <img src="assets/img/logo.svg" width="120" height="26" alt="agraff arkitektur">
+      <span class="merke__namn">agraff</span><span class="merke__suffiks">arkitektur</span>
+    </a>
+    <span class="topp__meta">Olav Tryggvasons gate 19 · Trondheim</span>
   </div>
+  <nav class="wrap faner" aria-label="Hovedmeny">
+    <a class="fane" href="index.html">Forside</a>
+    <a class="fane" href="prosjekter.html">Prosjekter</a>
+    <a class="fane" href="tema.html">Tema</a>
+    <a class="fane" href="om.html">Om oss</a>
+    <a class="fane" href="kontakt.html">Kontakt</a>
+    <a class="fane" href="panel.html">Panel</a>
+  </nav>
 </header>
 <main id="innhold">
+
 <section class="sidehode">
-  <p class="merkelapp">Arkitektur &amp; planlegging · Trondheim</p>
-  <h1>Ta kontakt med Agraff Arkitektur AS</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
-  <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">Agraff Arkitektur AS</p>
-      <p><strong>Telefon</strong><br><a href="tel:+4773841310">73 84 13 10</a></p>
-      <p><strong>E-post</strong><br><a href="mailto:firmapost@agraff.no">firmapost@agraff.no</a></p>
-      <p><strong>Område</strong><br>Trondheim</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
+  <div class="wrap">
+    <p class="brodsmule"><a href="index.html">Forside</a> / Kontakt oss</p>
+    <h1>Kontakt oss</h1>
+    <p class="ingress">Skriv noen ord, så svarer vi så raskt vi kan. Du trenger ikke vite detaljene på forhånd.</p>
   </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:firmapost@agraff.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Mulighetsstudier og skisseprosjekt</option><option>Forprosjekt og byggesøknad</option><option>Detaljprosjektering og oppfølging</option><option>Transformasjon, interiør og landskap</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
-  </form>
+</section>
+
+<section class="seksjon">
+  <div class="wrap split">
+    <div>
+      <form class="skjema" data-skjema novalidate>
+        <div class="felt--to">
+          <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" placeholder="Fornavn og etternavn"></div>
+          <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" placeholder="navn@epost.no"></div>
+        </div>
+        <div class="felt--to">
+          <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="900 00 000"></div>
+          <div class="felt">
+            <label for="type">Hva gjelder det?</label>
+            <select id="type" name="type"><option>Enebolig eller hytte</option><option>Tilbygg eller rehabilitering</option><option>Landskap og uteområde</option><option>Plan og fortetting</option><option>Annet</option></select>
+          </div>
+        </div>
+        <div class="felt"><label for="melding">Kort om prosjektet</label><textarea id="melding" name="melding" placeholder="Hva planlegger du, og hvor er tomta?"></textarea></div>
+        <p class="skjema__feil" role="alert" aria-live="polite"></p>
+        <div><button class="knapp" type="submit">Send henvendelsen <span class="pil" aria-hidden="true">→</span></button></div>
+      </form>
+      <div class="skjema__kvittering" tabindex="-1" role="status">
+        <strong data-kvittering-navn>Takk!</strong>
+        Henvendelsen er registrert i denne demoen. I den ekte løsningen hadde du fått svar fra agraff arkitektur.
+      </div>
+    </div>
+    <div>
+      <div class="split__bilete" style="margin-bottom:1.1rem"><img src="assets/img/12-agraff-no.webp" width="1400" height="935" alt="Byrom med mennesker og trær" loading="lazy"></div>
+      <div style="border-top:1px solid var(--kant);padding-top:.9rem">
+        <h3 style="font-size:1.05rem;margin-bottom:.4rem">agraff arkitektur</h3>
+        <p style="color:var(--dempa);margin:0">Olav Tryggvasons gate 19<br>7011 Trondheim</p>
+        <p style="margin:.5rem 0 0"><a href="tel:+4773841310" style="text-decoration:none;font-weight:600">73 84 13 10</a><br><a href="mailto:firmapost@agraff.no" style="text-decoration:none">firmapost@agraff.no</a></p>
+        <p style="color:var(--dempa);margin:.4rem 0 0;font-size:.84rem">MVA 982 787 033</p>
+      </div>
+    </div>
+  </div>
 </section>
 </main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Agraff Arkitektur AS</p>
-      <p class="bunn__tekst">Trondheim · 73 84 13 10 · firmapost@agraff.no</p>
+<footer class="botn">
+  <div class="wrap">
+    <div class="botn__indre">
+      <div>
+        <span style="font-family:var(--vis);font-size:1.2rem;color:var(--papir)">agraff arkitektur</span>
+        <p style="margin-top:.6rem">Vi skaper steder, hus og landskap der det er godt å bo, arbeide, leke og leve.</p>
+      </div>
+      <div>
+        <h4>Sidene</h4>
+        <ul>
+          <li><a href="prosjekter.html">Prosjekter</a></li>
+          <li><a href="tema.html">Tema</a></li>
+          <li><a href="om.html">Om oss</a></li>
+          <li><a href="kontakt.html">Kontakt oss</a></li>
+          <li><a href="panel.html">Panel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <p>Olav Tryggvasons gate 19<br>7011 Trondheim</p>
+        <p><a href="tel:+4773841310">73 84 13 10</a><br><a href="mailto:firmapost@agraff.no">firmapost@agraff.no</a></p>
+        <p>MVA 982 787 033</p>
+      </div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Agraff Arkitektur AS</p>
+    <p class="botn__kreditt">© agraff arkitektur · Olav Tryggvasons gate 19, 7011 Trondheim · MVA 982 787 033</p>
   </div>
 </footer>
-<script src="app.js"></script>
+<script src="assets/js/agraff-no-demo.js" defer></script>
 </body>
 </html>

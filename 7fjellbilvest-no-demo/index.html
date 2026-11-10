@@ -1,182 +1,121 @@
-<!DOCTYPE html>
-<html lang="no">
+<!doctype html>
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>7 Fjell Bil Vest AS – Bilforhandler i Bergen</title>
-<meta name="description" content="7 Fjell Bil Vest AS gjør bilhandelen trygg og oversiktlig med teknisk kontrollerte bruktbiler, rettferdig innbyttepris og fleksible finansieringsløsninger.">
-<meta property="og:title" content="7 Fjell Bil Vest AS – Bilforhandler i Bergen">
-<meta property="og:description" content="7 Fjell Bil Vest AS gjør bilhandelen trygg og oversiktlig med teknisk kontrollerte bruktbiler, rettferdig innbyttepris og fleksible finansieringsløsninger.">
-<meta property="og:image" content="img/01-7fjellbilvest-no.jpg">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>7 Fjell Bil Vest AS – kjøp og selg bruktbil i Bergen</title>
+<meta name="description" content="7 Fjell Bil Vest AS på Nesttun: kjøp og salg av bruktbil, innbytte, raskt oppgjør, formidlingssalg, finans og forsikring.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="7 Fjell Bil Vest AS – kjøp og selg bruktbil i Bergen">
+<meta property="og:description" content="7 Fjell Bil Vest AS på Nesttun: kjøp og salg av bruktbil, innbytte, raskt oppgjør, formidlingssalg, finans og forsikring.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:image" content="assets/img/bil-1.webp">
+<meta name="theme-color" content="#16233a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500&family=Gabarito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/7fjellbilvest-no-demo.css">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.svg" alt="7 Fjell Bil Vest AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html" aria-current="page">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<a class="skip" href="#innhold">Hopp til innhold</a>
+<header class="nokkelband">
+  <div class="nokkelband__indre">
+    <a class="merke" href="index.html"><b>7 FJELL<span>.</span></b><small>Bil Vest AS</small></a>
+    <nav class="nokler" aria-label="Hovedmeny">
+      <a class="nokkel" href="index.html" aria-current="page">Hjem</a>
+      <a class="nokkel" href="tjenester.html">Tjenester</a>
+      <a class="nokkel" href="selg-bil.html">Selg bil</a>
+      <a class="nokkel" href="innbytte.html">Innbytte</a>
+      <a class="nokkel" href="om.html">Om oss</a>
+      <a class="nokkel" href="kontakt.html">Kontakt</a>
+      <a class="nokkel" href="panel.html">Panel</a>
+    </nav>
   </div>
 </header>
 <main id="innhold">
-<section class="helt helt--splitt">
-  <figure class="helt__kort">
-    <img src="img/01-7fjellbilvest-no.jpg" alt="7 Fjell Bil Vest AS" loading="eager" decoding="async">
-    <figcaption><strong>7 Fjell Bil Vest AS</strong><span>Bilforhandler i Bergen · Nesttun</span></figcaption>
-  </figure>
-  <div class="helt__tekst">
-    <p class="merkelapp">Bilforhandler i Bergen · Nesttun</p>
-    <h1>Kjøp, salg og innbytte av kvalitetsbiler i Bergen</h1>
-    <p class="helt__ingress">7 Fjell Bil Vest AS gjør bilhandelen trygg og oversiktlig med teknisk kontrollerte bruktbiler, rettferdig innbyttepris og fleksible finansieringsløsninger.</p>
-    <div class="knapper">
-      <a class="knapp" href="kontakt.html">Ta kontakt</a>
-      <a class="knapp knapp--tom" href="tjenester.html">Se våre tjenester</a>
+<section class="hero">
+  <canvas class="hero__lerret" id="turteller" aria-hidden="true"></canvas>
+  <div class="hero__dekk" aria-hidden="true"></div>
+  <div class="inn hero__inn">
+    <span class="hero__merke">Bruktbil · Nesttun i Bergen</span>
+    <h1>Kjøp og selg bruktbil <em>i Bergen</em>.</h1>
+    <p class="hero__ingress">Enkel bilhandel med mulighet for innbytte, finansiering og forsikring på ett sted. Vi hjelper deg enten du vil selge raskt eller oppnå best mulig pris.</p>
+    <div class="hero__knapper"><a class="knapp" href="selg-bil.html">Selg bilen din <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="tjenester.html">Se tjenestene</a></div>
+    <div class="hero__tall">
+      <div><b>1 dag</b><span>Raskt oppgjør</span></div>
+      <div><b>Innbytte</b><span>Trygg bilhandel</span></div>
+      <div><b>Brage</b><span>Finans og forsikring</span></div>
     </div>
-    <ul class="tillit">
-      <li class="tillit__punkt">Kvalitetskontrollerte bruktbiler</li>
-      <li class="tillit__punkt">Rask verdivurdering ved innbytte</li>
-      <li class="tillit__punkt">Trygge garantier og ryddig oppgjør</li>
+  </div>
+</section>
+<section class="sek">
+  <div class="inn">
+    <div class="hode2">
+      <div><div class="merkelinje">01 — Tjenester</div><h2>Alt som gjør bilhandelen enkel</h2></div>
+      <p>Vi klargjør bilen, annonserer, organiserer visning og gjennomfører salget. Du har én kontakt gjennom hele saken.</p>
+    </div>
+    <ul class="tjlist">
+      <li><a href="selg-bil.html"><span class="nr">01</span><span><b>Raskt oppgjør</b><small>Selg bilen til oss og få oppgjøret gjennomført med en gang. Du slipper ventetid, usikkerhet og videre ansvar.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="selg-bil.html#formidling"><span class="nr">02</span><span><b>Vi tar hele salget</b><small>Formidlingssalg: vi klargjør, annonserer, organiserer visning og gjennomfører salget for deg.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="innbytte.html#finans"><span class="nr">03</span><span><b>Finans og forsikring</b><small>Finansiering gjennom Brage Finans, og forsikringsløsninger via IF og Gjensidige.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="innbytte.html"><span class="nr">04</span><span><b>Bilhandel gjort enkelt</b><small>Innbytte, og vi sørger for at finansiering og forsikring er på plass når du kjøper bil.</small></span><span class="pil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></span></a></li>
     </ul>
   </div>
 </section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Tjenester</p>
-    <h2>Dette hjelper vi deg med</h2>
-    <p class="innledning">Vi leverer fagmessige løsninger med tydelig avklaring i forkant, ryddig gjennomføring og dokumentert kvalitet.</p>
-  </div>
-  <div class="rutenett rutenett--2x2">
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/live-foto-1.jpg" alt="Kjøp og salg av kvalitetsbiler" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">01</span>
-      <h3>Kjøp og salg av kvalitetsbiler</h3>
-      <p>Et nøye utvalgt sortiment av nyere bruktbiler som er teknisk gjennomgått, klargjort og levert med dokumentert servicehistorikk.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/live-foto-2.jpg" alt="Innbytte og kommisjonssalg" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">02</span>
-      <h3>Innbytte og kommisjonssalg</h3>
-      <p>Vi gir deg en rask og rettferdig innbyttepris på din nåværende bil, eller tar hånd om hele salgsprosessen for deg gjennom kommisjon.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/live-foto-2.webp" alt="Finansiering, leasing og forsikring" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">03</span>
-      <h3>Finansiering, leasing og forsikring</h3>
-      <p>Skreddersydde finansierings- og forsikringsløsninger i samarbeid med ledende banker og forsikringsselskaper, ordnet på stedet.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-    <article class="kort">
-      <div class="kort__bilde"><img src="img/live-foto-3.jpg" alt="Garanti, klargjøring og verkstedoppfølging" loading="lazy" decoding="async"></div>
-      <span class="kort__nr">04</span>
-      <h3>Garanti, klargjøring og verkstedoppfølging</h3>
-      <p>Utvidede bruktbilgarantier, profesjonell bilpleie og oppfølging etter kjøpet som sikrer et trygt og forutsigbart bilhold.</p>
-      <a class="tekstlenke" href="tjenester.html">Les mer om tjenesten →</a>
-    </article>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="tjenester.html">Se alle tjenester i detalj →</a></p>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Derfor velger kundene oss</p>
-    <h2>Kvalitet og forutsigbarhet i hvert oppdrag</h2>
-  </div>
-  <div class="verdier">
-    <div class="verdi"><h3>Full åpenhet</h3><p>Hos oss får du ærlige opplysninger om bilens tilstand, historikk og utstyr før du bestemmer deg.</p></div>
-    <div class="verdi"><h3>Enkel og effektiv handel</h3><p>Vi håndterer alt det praktiske med kontrakt, finansiering, forsikring, innbytte og registrering i Statens vegvesen.</p></div>
-    <div class="verdi"><h3>Trygghet etter overlevering</h3><p>Et godt bilkjøp måles også i hvordan du blir ivaretatt dersom det skulle dukke opp spørsmål i etterkant.</p></div>
-    <div class="verdi"><h3>Skreddersydd rådgivning</h3><p>Vi hjelper deg å finne bilen og finansieringsformen som faktisk passer ditt kjøremønster og budsjett.</p></div>
-  </div>
-</section>
-
-<section class="bildebande">
-  <img src="img/live-foto-1.jpg" alt="7 Fjell Bil Vest AS" loading="lazy" decoding="async">
-  <div class="bildebande__tekst"><p>Kvalitetsbiler, ryddige avtaler og trygghet på veien videre.</p></div>
-</section>
-
-<section class="drom">
-  <div class="drom__indre">
-    <div>
-      <p class="merkelapp">Smidig bilhandel og verkstedavtale</p>
-      <h2>Verkstedavtalen uten telefonkø</h2>
-      <p>Velg tidspunkt som passer deg, legg inn registreringsnummer på eventuell innbyttebil, og møt til klargjort bil og ferdig forslag.</p>
-    </div>
-    <div class="drom__kort">
-      <p class="drom__korttittel">Status på din henvendelse</p>
-      <div class="drom__rad"><span>Valg av bil eller tjeneste</span><span>Mottatt</span></div><div class="drom__rad"><span>Innbytte- og finansieringsforslag</span><span>Klargjort</span></div><div class="drom__rad"><span>Prøvekjøring og overlevering</span><span>Avtalt</span></div>
+<section class="sek sek--kritt2 sek--strek">
+  <div class="inn media">
+    <figure class="ramme ramme--43 avslor"><img src="assets/img/bil-1.webp" width="1018" height="680" alt="Bruktbil klar for levering hos 7 Fjell Bil Vest"><figcaption>Biler klare for levering.</figcaption></figure>
+    <div class="kropp avslor">
+      <div class="merkelinje">02 — Slik jobber vi</div>
+      <h2>From handel til nøkler</h2>
+      <p>Hos 7 Fjell Bil Vest kjøper og selger du bruktbil på en ryddig og effektiv måte. Vi tilbyr innbytte, og sørger for at både finansiering og forsikring er på plass dersom du kjøper bil.</p>
+      <ul class="punkter">
+        <li><b>Én kontakt</b> – samme person fra første samtale til overlevering.</li>
+        <li><b>Ryddig oppgjør</b> – ingen overraskelser etter at bilen er levert.</li>
+        <li><b>Utvalg via samarbeidspartner</b> – bilene presenteres via vår samarbeidspartner.</li>
+      </ul>
+      <a class="knapp knapp--mork" href="om.html">Om oss <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Prosessen vår</p>
-    <h2>Slik foregår et oppdrag</h2>
-  </div>
+<section class="sek">
+  <div class="inn">
+    <div class="hode2"><div><div class="merkelinje">03 — Prosessen</div><h2>Fire steg, ingen overraskelser</h2></div><p>Du trenger ikke vite detaljene på forhånd – vi avklarer omfang og tid før vi starter.</p></div>
   <ol class="steg">
-    <li><span class="steg__nr">01</span><h3>Ta kontakt</h3><p>Beskriv kort hva du ønsker hjelp til på skjema, e-post eller telefon, så tar vi raskt kontakt.</p></li>
-    <li><span class="steg__nr">02</span><h3>Kartlegging og tilbud</h3><p>Vi avklarer omfang, gjennomfører eventuell befaring og gir deg et ryddig og forutsigbart tilbud.</p></li>
-    <li><span class="steg__nr">03</span><h3>Fagmessig utførelse</h3><p>Oppdraget gjennomføres til avtalt tid og kvalitet, med tett oppfølging helt til alt er ferdig levert.</p></li>
+    <li><b>Ta kontakt</b><p>Send en melding med bilmerke, årsmodell og kilometerstand.</p></li>
+    <li><b>Verdivurdering</b><p>Vi ser på bilen og gir deg et svar på hva den er verdt.</p></li>
+    <li><b>Du velger</b><p>Raskt oppgjør eller formidlingssalg – vi sier hva som lønner seg.</p></li>
+    <li><b>Oppgjør</b><p>Vi ordner papirene og gjennomfører oppgjøret på avtalt måte.</p></li>
   </ol>
-</section>
-
-<section class="seksjon">
-  <div class="seksjon__hode">
-    <p class="merkelapp">Utvalgte glimt</p>
-    <h2>Fra vår arbeidshverdag</h2>
-  </div>
-  <div class="galleri galleri--tre">
-    <figure class="galleri__bilde"><img src="img/01-7fjellbilvest-no.jpg" alt="7 Fjell Bil Vest AS – Kjøp og salg av kvalitetsbiler" loading="lazy" decoding="async"><figcaption>7 Fjell Bil Vest AS – Kjøp og salg av kvalitetsbiler</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/live-foto-1.jpg" alt="7 Fjell Bil Vest AS – Innbytte og kommisjonssalg" loading="lazy" decoding="async"><figcaption>7 Fjell Bil Vest AS – Innbytte og kommisjonssalg</figcaption></figure>
-    <figure class="galleri__bilde"><img src="img/live-foto-2.jpg" alt="7 Fjell Bil Vest AS – Finansiering, leasing og forsikring" loading="lazy" decoding="async"><figcaption>7 Fjell Bil Vest AS – Finansiering, leasing og forsikring</figcaption></figure>
-  </div>
-  <p class="seksjon__mer"><a class="tekstlenke" href="prosjekter.html">Se flere bilder og prosjekter →</a></p>
-</section>
-
-<section class="seksjon seksjon--kontakt" id="kontakt">
-  <div class="seksjon--kontakt__grid">
-    <div>
-      <p class="merkelapp">Kontakt oss</p>
-      <h2>Klar for en uforpliktende prat?</h2>
-      <p class="innledning">Fortell oss kort hva du trenger hjelp til, så svarer vi deg raskt med faglige råd, prisoverslag eller avtale om befaring.</p>
-      <aside class="kontaktkort">
-        <p class="kontaktkort__navn">7 Fjell Bil Vest AS</p>
-        
-        <p><strong>E-post</strong><br><a href="mailto:didrik@7fjellbil.no">didrik@7fjellbil.no</a></p>
-        <p><strong>Område</strong><br>Nesttun</p>
-      </aside>
-    </div>
-    <form class="skjema" action="mailto:didrik@7fjellbil.no" method="post" enctype="text/plain">
-      <label>Navn<input name="navn" type="text" required placeholder="Fornavn Etternavn"></label>
-      <label>E-post<input name="epost" type="email" required placeholder="navn@epost.no"></label>
-      <label>Telefon<input name="telefon" type="tel" placeholder="900 00 000"></label>
-      <label>Hva gjelder henvendelsen?<select name="type"><option>Kjøp og salg av kvalitetsbiler</option><option>Innbytte og kommisjonssalg</option><option>Finansiering, leasing og forsikring</option><option>Garanti, klargjøring og verkstedoppfølging</option><option>Annet</option></select></label>
-      <label>Melding<textarea name="beskrivelse" rows="4" required placeholder="Beskriv kort hva vi kan hjelpe deg med..."></textarea></label>
-      <button class="knapp" type="submit">Send henvendelse</button>
-    </form>
   </div>
 </section>
+<section class="sek sek--mork">
+  <div class="inn">
+    <figure class="sitat avslor">
+      <blockquote>«Vi hjelper deg enten du ønsker et raskt salg eller vil oppnå best mulig pris gjennom formidling.»</blockquote>
+      <figcaption>7 Fjell Bil Vest AS · slik jobber vi</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="cta"><div class="inn">
+  <h2>Skal bilen selges? Ta en prat først.</h2>
+  <p>Vi gir deg et svar på hva bilen er verdt, og hva som lønner seg – raskt oppgjør eller formidlingssalg. Uten forpliktelse.</p>
+  <div class="knapper"><a class="knapp" href="kontakt.html">Ta kontakt <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M14 6l6 6-6 6"/></svg></a><a class="knapp knapp--lys" href="selg-bil.html">Selg bilen</a></div>
+</div></section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">7 Fjell Bil Vest AS</p>
-      <p class="bunn__tekst">Nesttun · didrik@7fjellbil.no</p>
+  <div class="inn">
+    <div class="bunn__grid">
+      <div><span class="bunn__merke">7 Fjell Bil Vest AS</span><p>Kjøp og selg bruktbil i Bergen. Innbytte, finansiering og forsikring på ett sted – med raskt oppgjør og formidlingssalg.</p><p><a href="mailto:didrik@7fjellbil.no">didrik@7fjellbil.no</a></p></div>
+      <div><h4>Sider</h4><ul><li><a href="index.html">Hjem</a></li><li><a href="tjenester.html">Tjenester</a></li><li><a href="selg-bil.html">Selg bil</a></li><li><a href="innbytte.html">Innbytte</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><h4>Tjenester</h4><ul><li><a href="selg-bil.html">Raskt oppgjør</a></li><li><a href="selg-bil.html#formidling">Formidlingssalg</a></li><li><a href="innbytte.html#finans">Finans</a></li><li><a href="innbytte.html#forsikring">Forsikring</a></li><li><a href="innbytte.html">Innbytte</a></li></ul></div>
+      <div><h4>Finn oss</h4><p>Nesttun<br>Bergen</p><p style="margin-top:8px">Man–fre etter avtale</p></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 7 Fjell Bil Vest AS</p>
+    <div class="bunn__bunn"><span>© 2026 7 Fjell Bil Vest AS</span><span>Nettsiden er en demonstrasjon laget for 7 Fjell Bil Vest AS</span><a href="panel.html">Salgspanel</a></div>
   </div>
 </footer>
+<script src="assets/js/7fjellbilvest-no-demo.js" defer></script>
 </body>
 </html>

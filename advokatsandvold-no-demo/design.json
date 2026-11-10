@@ -1,0 +1,35 @@
+{
+  "slug": "advokatsandvold-no-demo",
+  "firma": "Advokat Sandvold AS",
+  "navType": "avis-masthead",
+  "fonts": [
+    "Spectral",
+    "Catamaran"
+  ],
+  "palette": [
+    "#f3f0e9",
+    "#1f2328",
+    "#6d2632",
+    "#e9e4d8"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "rettsomrader",
+    "om-advokaten",
+    "priser",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "rettsomrader.html",
+    "trygderett.html",
+    "klage.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

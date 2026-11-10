@@ -1,0 +1,35 @@
+{
+  "slug": "arexa-no-demo",
+  "firma": "Arexa AS",
+  "navType": "keypad-meny",
+  "fonts": [
+    "Poppins",
+    "PT Serif"
+  ],
+  "palette": [
+    "#0f1720",
+    "#eef1f0",
+    "#f2a20c",
+    "#5a6a72"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "soner",
+    "avdelinger",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "avdelinger.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

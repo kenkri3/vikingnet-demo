@@ -1,0 +1,35 @@
+{
+  "slug": "acomelektro-no-demo",
+  "firma": "Acom Elektro AS",
+  "navType": "statuslinje med LED-prikker",
+  "fonts": [
+    "Literata",
+    "Readex Pro"
+  ],
+  "palette": [
+    "#0b1c2c",
+    "#ffd166",
+    "#eef3f7",
+    "#5aa9c9"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "tjenester",
+    "om",
+    "sertifisering",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

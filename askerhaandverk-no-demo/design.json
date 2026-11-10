@@ -1,0 +1,35 @@
+{
+  "slug": "askerhaandverk-no-demo",
+  "firma": "Asker Håndverk Bolig AS",
+  "navType": "trappetrinn-topp",
+  "fonts": [
+    "Prata",
+    "Alegreya Sans"
+  ],
+  "palette": [
+    "#2b2622",
+    "#f6f1e8",
+    "#6d7f5b"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tre-grunner",
+    "hustyper",
+    "slik-jobber-vi",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "bygge-bolig.html",
+    "boligpartner.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

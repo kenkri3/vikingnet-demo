@@ -1,0 +1,37 @@
+{
+  "slug": "arkel-no-demo",
+  "firma": "ARKEL",
+  "navType": "tabell-linje",
+  "fonts": [
+    "Red Hat Display",
+    "Red Hat Text"
+  ],
+  "palette": [
+    "#161326",
+    "#7ef0c8",
+    "#f5f2ea",
+    "#5d5a72"
+  ],
+  "motion": [
+    "svg",
+    "scroll",
+    "css3d"
+  ],
+  "sections": [
+    "hero",
+    "tall",
+    "selskaper",
+    "fordeler",
+    "nett",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "alliansen.html",
+    "tjenester.html",
+    "selskaper.html",
+    "etablering.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

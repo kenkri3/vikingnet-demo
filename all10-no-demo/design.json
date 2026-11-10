@@ -1,0 +1,35 @@
+{
+  "slug": "all10-no-demo",
+  "firma": "ALL10 Bemanning AS",
+  "navType": "tidslinje-skinne",
+  "fonts": [
+    "Anybody",
+    "IBM Plex Mono"
+  ],
+  "palette": [
+    "#14201c",
+    "#f4f2ea",
+    "#a8d400"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "fagomrader",
+    "slik-jobber-vi",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "arbeidsgiver.html",
+    "arbeidstaker.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "baker-nilsen-no-demo",
+  "firma": "Baker Nilsen AS",
+  "navType": "lapp-rail med prislapper",
+  "fonts": [
+    "DM Serif Text",
+    "Overpass"
+  ],
+  "palette": [
+    "#2a1c14",
+    "#d9a86c",
+    "#fbf7f0",
+    "#8c5a3c"
+  ],
+  "motion": [
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "utvalg",
+    "aapningstider",
+    "om",
+    "bestill",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "sortiment.html",
+    "utsalg.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

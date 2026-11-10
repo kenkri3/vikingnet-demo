@@ -1,0 +1,35 @@
+{
+  "slug": "assanering-no-demo",
+  "firma": "AS Sanering",
+  "navType": "stensil-bånd",
+  "fonts": [
+    "Bebas Neue",
+    "Epilogue"
+  ],
+  "palette": [
+    "#1b1b18",
+    "#f4f2ea",
+    "#e0c33f",
+    "#7b7870"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "helt",
+    "tjenester",
+    "prosess",
+    "referanser",
+    "ord",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "referanser.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

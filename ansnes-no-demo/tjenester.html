@@ -1,103 +1,124 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Tjenester – Ansnes Entreprenør AS</title>
-<meta name="description" content="Ansnes Entreprenør AS er et etablert entreprenørfirma i Asker - vi har over 30 års erfaring.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<title>Tjenester · Ansnes Entreprenør</title>
+<meta name="description" content="Nybygg, hytter, arkitekttegnede boliger, rehabilitering, restaurering av vernede bygg og skreddersøm – Ansnes Entreprenør i Asker.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ansnes Entreprenør">
+<meta property="og:title" content="Tjenester · Ansnes Entreprenør">
+<meta property="og:description" content="Nybygg, hytter, arkitekttegnede boliger, rehabilitering, restaurering av vernede bygg og skreddersøm – Ansnes Entreprenør i Asker.">
+<meta property="og:image" content="assets/img/04-ansnes-no.webp">
+<meta name="theme-color" content="#0e0e0c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/ansnes-no-demo.css">
 </head>
 <body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
+<a class="hopp" href="#innhold">Hopp til innhold</a>
 <header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Ansnes Entreprenør AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html" aria-current="page">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html" aria-current="page">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+  <div class="indre">
+    <a class="logo" href="index.html"><span class="merke-boks" aria-hidden="true">a</span><span class="n">Ansnes<span>Entreprenør · Asker</span></span></a>
+    <div class="hoyre">
+      <a class="tlf" href="tel:+4766776300">66 77 63 00</a>
+      <a class="smal" href="prosjekter.html">Prosjekter</a>
+      <a class="smal" href="kontakt.html">Kontakt</a>
+      <button class="skuff-knapp" type="button" data-skuff-apne aria-expanded="false" aria-controls="skuff"><span class="skuff-ikon" aria-hidden="true"><i></i><i></i><i></i></span> Meny</button>
+    </div>
   </div>
 </header>
+<div class="skuff" id="skuff" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hovedmeny">
+  <div class="skuff-topp"><span class="t">Ansnes Entreprenør · meny</span><button class="skuff-lukk" type="button" data-skuff-lukk>Lukk</button></div>
+  <nav>
+    <a href="index.html"><span class="nr">01</span><span class="t">Hjem</span><span class="p" aria-hidden="true">→</span></a>
+    <a href="tjenester.html" aria-current="page"><span class="nr">02</span><span class="t">Tjenester</span><span class="p" aria-hidden="true">→</span></a>
+    <a href="prosjekter.html"><span class="nr">03</span><span class="t">Prosjekter</span><span class="p" aria-hidden="true">→</span></a>
+    <a href="eiendomsutvikling.html"><span class="nr">04</span><span class="t">Eiendomsutvikling</span><span class="p" aria-hidden="true">→</span></a>
+    <a href="om.html"><span class="nr">05</span><span class="t">Om oss</span><span class="p" aria-hidden="true">→</span></a>
+    <a href="kontakt.html"><span class="nr">06</span><span class="t">Kontakt</span><span class="p" aria-hidden="true">→</span></a>
+    <a href="panel.html"><span class="nr">07</span><span class="t">Panel</span><span class="p" aria-hidden="true">→</span></a>
+  </nav>
+  <div class="skuff-bunn"><span>Nye Vakås vei 12A · Asker</span><span>Man–fre 07:00–16:00</span><span>66 77 63 00</span></div>
+</div>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Bygg &amp; entreprenør · Norge</p>
-  <h1>Våre tjenester</h1>
-  <p class="sidehode__ingress">Ansnes Entreprenør AS er et etablert entreprenørfirma i Asker - vi har over 30 års erfaring.</p>
+<header class="sidehode">
+  <div class="ramme">
+    <p class="brodsmule"><a href="index.html">Hjem</a> / Tjenester</p>
+    <h1>Tjenester for <em>hele</em> bygget</h1>
+    <p class="ingress">Vi tar oppdrag for private og kommunale byggherrer i Asker og omegn. Noen ganger er jobben å reise noe nytt, andre ganger å ta vare på det som står.</p>
+  </div>
+</header>
+
+<section class="seksjon seksjon--tett">
+  <div class="ramme">
+    <div class="to-spalter">
+      <div class="prosa avslor">
+        <h2>Nybygg</h2>
+        <p>Vi bygger private og kommunale nybygg, og tar ansvar fra grunnarbeid til innflytting. Er huset tegnet av arkitekt, bygger vi etter tegningene og tar dialogen med arkitekt underveis.</p>
+        <h2 id="hytter" style="margin-top:26px">Hytter</h2>
+        <p>Sommer- og vinterhytter, tilpasset tomta, bruken og kravene som gjelder. Vi hjelper med det praktiske rundt byggesøknad og fremdrift.</p>
+        <h2 id="rehabilitering" style="margin-top:26px">Rehabilitering</h2>
+        <p>Krevende bygg er ofte der vi kommer inn. Vi går gjennom hva som må gjøres, hva som kan bevares, og hva det koster – før vi begynner.</p>
+        <h2 style="margin-top:26px">Vernet og fredet bygg</h2>
+        <p>Restaurering av vernet og fredet bygg krever både håndtverk og dokumentasjon. Vi jobber med materialer og metoder som passer byggets alder.</p>
+        <h2 style="margin-top:26px">Skreddersøm</h2>
+        <p>Når standardløsningen ikke er god nok, lager vi det som trengs – i tre, mur eller stål.</p>
+        <a class="knapp knapp--mork" href="kontakt.html" style="margin-top:20px">Be om tilbud <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      </div>
+      <aside class="avslor">
+        <div class="bilde"><img src="assets/img/04-ansnes-no.webp" alt="Snekker som arbeider ved en benk i verkstedet" width="1087" height="500"></div>
+        <div class="fakta">
+          <div><dt>Område</dt><dd>Asker og omegn</dd></div>
+          <div><dt>Oppdrag</dt><dd>Private og kommunale byggherrer</dd></div>
+          <div><dt>Telefon</dt><dd><a href="tel:+4766776300">66 77 63 00</a></dd></div>
+          <div><dt>Åpningstid</dt><dd>Man–fre 07:00–16:00</dd></div>
+        </div>
+      </aside>
+    </div>
+  </div>
 </section>
-<section class="seksjon">
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/02-ansnes-no.jpg" alt="Nybygg, tilbygg og påbygg" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">01</div>
-      <h2>Nybygg, tilbygg og påbygg</h2>
-      <p>Vi bygger alt fra nøkkelferdige eneboliger og hytter til funksjonelle tilbygg som gir familien eller bedriften mer plass, tilpasset eksisterende arkitektur.</p>
-      <ul class="punkter">
-          <li>Helhetlig prosjektledelse</li>
-          <li>Byggesøknad og prosjektering</li>
-          <li>Levert til avtalt tid</li>
-      </ul>
+
+<section class="seksjon seksjon--mork">
+  <div class="ramme">
+    <div class="hode avslor"><span class="merke">Slik jobber vi</span><h2>Tre steg, ingen overraskelser</h2></div>
+    <div class="steg">
+      <article class="avslor"><span class="n">01</span><h3>Vi ser på det</h3><p>Du beskriver prosjektet, og vi kommer på befaring eller ber om tegninger.</p></article>
+      <article class="avslor"><span class="n">02</span><h3>Du får et tilbud</h3><p>Et tilbud du kan lese, med hva som er med og hva som ikke er det.</p></article>
+      <article class="avslor"><span class="n">03</span><h3>Vi bygger</h3><p>Fast kontaktperson, avtalt fremdrift og gjennomgang før vi avslutter.</p></article>
     </div>
-  </article>
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/03-ansnes-no.jpg" alt="Totalrenovering og rehabilitering" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">02</div>
-      <h2>Totalrenovering og rehabilitering</h2>
-      <p>Grundig oppgradering av eldre boliger og næringsbygg, inkludert etterisolering, utskifting av kledning, takomlegging og bytte av vinduer og dører.</p>
-      <ul class="punkter">
-          <li>Energioppgradering og etterisolering</li>
-          <li>Tak, fasade og vindusbytte</li>
-          <li>Varige kvalitetsmaterialer</li>
-      </ul>
-    </div>
-  </article>
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/04-ansnes-no.jpg" alt="Innvendig ombygging og innredning" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">03</div>
-      <h2>Innvendig ombygging og innredning</h2>
-      <p>Skreddersydde løsninger for rominndeling, kjøkkenmontering, listverk, gulvlegging og spesialtilpasset innredning med høy finish.</p>
-      <ul class="punkter">
-          <li>Nøyaktig tømrerhåndverk</li>
-          <li>Koordinering av alle fag</li>
-          <li>Ryddig byggeplass</li>
-      </ul>
-    </div>
-  </article>
-  <article class="tjeneste tjeneste--med-bilde">
-    <div class="tjeneste__bilde"><img src="img/05-ansnes-no.jpg" alt="Vedlikehold og rammeavtaler" loading="lazy" decoding="async"></div>
-    <div>
-      <div class="tjeneste__nr">04</div>
-      <h2>Vedlikehold og rammeavtaler</h2>
-      <p>Løpende bygningsmessig vedlikehold, ombygging av kontorlokaler og skadeutbedring for borettslag, sameier og næringseiendom.</p>
-      <ul class="punkter">
-          <li>Fast kontaktperson</li>
-          <li>Rask respons ved behov</li>
-          <li>Komplett FDV-dokumentasjon</li>
-      </ul>
-    </div>
-  </article>
-</section>
-<section class="cta">
-  <h2>Ønsker du et tilbud eller faglig vurdering?</h2>
-  <p>Ta kontakt for en uforpliktende samtale om hvordan vi kan løse ditt oppdrag.</p>
-  <a class="knapp" href="kontakt.html">Ta kontakt med oss</a>
+  </div>
 </section>
 </main>
 <footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Ansnes Entreprenør AS</p>
-      <p class="bunn__tekst">Norge · 66 77 63 00 · firmapost@ansnes.no</p>
+  <div class="ramme">
+    <div class="bunn-topp">
+      <div><h3>Ansnes Entreprenør AS</h3><p>Etablert entreprenørfirma i Asker med over 30 års erfaring. Vi bygger boliger, hytter og næringsbygg – og rehabiliterer det som allerede står.</p></div>
+      <div><h4>Tjenester</h4><ul>
+        <li><a href="tjenester.html">Nybygg og rehabilitering</a></li>
+        <li><a href="tjenester.html#hytter">Hytter</a></li>
+        <li><a href="tjenester.html#rehabilitering">Rehabilitering</a></li>
+        <li><a href="eiendomsutvikling.html">Eiendomsutvikling</a></li>
+      </ul></div>
+      <div><h4>Selskapet</h4><ul>
+        <li><a href="om.html">Om oss</a></li>
+        <li><a href="prosjekter.html">Prosjekter</a></li>
+        <li><a href="om.html#jobb">Jobb hos oss</a></li>
+        <li><a href="panel.html">Prosjektkø (demo)</a></li>
+      </ul></div>
+      <div><h4>Kontakt</h4><ul>
+        <li><a href="tel:+4766776300">66 77 63 00</a></li>
+        <li><a href="mailto:firmapost@ansnes.no">firmapost@ansnes.no</a></li>
+        <li>Nye Vakås vei 12A, Asker</li>
+        <li>Man–fre 07:00–16:00</li>
+      </ul></div>
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Ansnes Entreprenør AS</p>
+    <div class="bunn-bunn"><span>© 2026 Ansnes Entreprenør AS</span><span>Over 30 års erfaring</span><span>Demo: innhold hentet fra ansnes.no</span></div>
   </div>
 </footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/ansnes-no-demo.js" defer></script>
 </body>
 </html>

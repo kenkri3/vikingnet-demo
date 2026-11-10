@@ -1,0 +1,38 @@
+{
+  "slug": "agderskilt-no-demo",
+  "firma": "DekorShop",
+  "navType": "kantfaner",
+  "fonts": [
+    "Krona One",
+    "Karla"
+  ],
+  "palette": [
+    "#0f0f14",
+    "#c8ff2e",
+    "#f4f4ef",
+    "#6b6b76"
+  ],
+  "motion": [
+    "css3d",
+    "svg",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "kategorier",
+    "slik",
+    "verksted",
+    "galleri",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "bil.html",
+    "bat.html",
+    "vindu-og-skilt.html",
+    "klaer.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

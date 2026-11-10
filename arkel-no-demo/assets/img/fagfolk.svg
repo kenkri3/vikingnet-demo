@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Illustrasjon: fagfolk fra flere bedrifter samlet">
+<rect width="800" height="600" fill="#f5f2ea"/>
+<g>
+<circle cx="220" cy="230" r="46" fill="#161326"/><path d="M150 420c0-40 31-72 70-72s70 32 70 72v60H150z" fill="#161326"/>
+<circle cx="400" cy="200" r="52" fill="#7ef0c8"/><path d="M320 420c0-45 36-82 80-82s80 37 80 82v60H320z" fill="#7ef0c8"/>
+<circle cx="580" cy="230" r="46" fill="#5d5a72"/><path d="M510 420c0-40 31-72 70-72s70 32 70 72v60H510z" fill="#5d5a72"/>
+</g>
+<path d="M220 500h360" stroke="#161326" stroke-width="4" stroke-dasharray="12 10"/>
+</svg>

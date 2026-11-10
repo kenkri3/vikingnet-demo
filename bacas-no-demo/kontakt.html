@@ -1,66 +1,108 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="dark">
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
-<title>Kontakt – Bacas AS</title>
-<meta name="description" content="Ta kontakt med Bacas AS på e-post post@bacas.no.">
-<link rel="stylesheet" href="theme.css">
-<link rel="stylesheet" href="styles.css">
+<meta name="robots" content="noindex">
+<title>Kontakt Bacas AS — post@bacas.no</title>
+<meta name="description" content="Kontakt Bacas AS i Stokke: post@bacas.no. Service, reklamasjon eller nye prosjekter innen ventilasjon.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Bacas AS">
+<meta property="og:title" content="Kontakt Bacas AS — post@bacas.no">
+<meta property="og:description" content="Kontakt Bacas AS i Stokke: post@bacas.no. Service, reklamasjon eller nye prosjekter innen ventilasjon.">
+<meta property="og:image" content="assets/img/09-bacas-no.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/bacas-no-demo.css">
 </head>
-<body>
-<a class="hopp" href="#innhold">Gå til innholdet</a>
-<header class="topp">
-  <div class="topp__indre">
-    <a class="merke" href="index.html"><img class="merke__logo" src="img/logo.png" alt="Bacas AS" height="34"></a>
-    <details class="mobilmeny">
-      <summary aria-label="Meny"><span></span><span></span><span></span></summary>
-      <nav class="mobilmeny__liste"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    </details>
-    <nav class="meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html" aria-current="page">Kontakt</a></nav>
-    <a class="knapp knapp--liten" href="kontakt.html">Ta kontakt</a>
+<body class="">
+<a class="hopp" href="#innhold">Til innholdet</a>
+<header class="kanaltopp">
+  <div class="wrap">
+    <div class="kanaltopp__indre">
+      <a class="merke" href="index.html"><b>Bacas</b><span>ventilasjon</span></a>
+      <span class="kanaltopp__meta">Stokke · post@bacas.no · org.nr 984 912 471</span>
+      <nav class="kanaler" aria-label="Hovedmeny">
+        <a class="kanal-lenke" href="index.html">Forside</a>
+        <a class="kanal-lenke" href="tjenester.html">Tjenester</a>
+        <a class="kanal-lenke" href="referanser.html">Referanser</a>
+        <a class="kanal-lenke" href="om.html">Om oss</a>
+        <a class="kanal-lenke" href="kontakt.html">Kontakt</a>
+        <a class="kanal-lenke" href="panel.html">Panel</a>
+      </nav>
+    </div>
+    <nav class="kanaltopp__mobil" aria-label="Mobilmeny">
+      <a href="index.html">Forside</a>
+      <a href="tjenester.html">Tjenester</a>
+      <a href="referanser.html">Referanser</a>
+      <a href="om.html">Om oss</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="panel.html">Panel</a>
+    </nav>
   </div>
 </header>
 <main id="innhold">
-<section class="sidehode">
-  <p class="merkelapp">Industri, maskin &amp; tekniske systemer · Stokke</p>
-  <h1>Ta kontakt med Bacas AS</h1>
-  <p class="sidehode__ingress">Send oss en henvendelse via skjemaet eller ta direkte kontakt, så svarer vi deg raskt.</p>
-</section>
-<section class="seksjon seksjon--to">
+
+<section class="sidehode"><div class="wrap">
+  <p class="brodsmule"><a href="index.html">Forside</a> / Kontakt</p>
+  <h1>Kontakt</h1>
+  <p class="ingress">Har du en utfordring med en leveranse, eller trenger du service på anlegget? Send oss en henvendelse, så tar vi kontakt.</p>
+</div></section>
+
+<section class="seksjon"><div class="wrap split">
   <div>
-    <p class="innledning">Beskriv gjerne kort hva du ønsker hjelp til, så gir vi deg en ryddig tilbakemelding med prisoverslag, tidspunkt eller forslag til løsning.</p>
-    <aside class="kontaktkort">
-      <p class="kontaktkort__navn">Bacas AS</p>
-      
-      <p><strong>E-post</strong><br><a href="mailto:post@bacas.no">post@bacas.no</a></p>
-      <p><strong>Område</strong><br>Stokke</p>
-      <p><strong>Responstid</strong><br>Vi svarer normalt innen én arbeidsdag.</p>
-    </aside>
-  </div>
-  <form class="skjema" id="skjema" method="post" action="mailto:post@bacas.no" enctype="text/plain">
-    <label>Navn<input type="text" name="navn" required placeholder="Fornavn Etternavn"></label>
-    <label>E-post<input type="email" name="epost" required placeholder="navn@epost.no"></label>
-    <label>Telefon<input type="tel" name="telefon" placeholder="900 00 000"></label>
-    <label>Tjenesteområde<select name="type"><option>Prosjektering og tekniske leveranser</option><option>Montering, idriftsettelse og integrasjon</option><option>Service, vedlikehold og sakkyndig kontroll</option><option>Energioptimalisering og oppgradering</option><option>Annet</option></select></label>
-    <label>Hva gjelder henvendelsen?<textarea name="melding" rows="5" required placeholder="Fortell kort om oppdraget eller spørsmålet ditt..."></textarea></label>
-    <button class="knapp" type="submit">Send henvendelsen</button>
-    <p class="skjema__hjelp">Vi behandler alle henvendelser konfidensielt og uforpliktende.</p>
-  </form>
-</section>
-</main>
-<footer class="bunn">
-  <div class="bunn__indre">
-    <div>
-      <p class="bunn__navn">Bacas AS</p>
-      <p class="bunn__tekst">Stokke · post@bacas.no</p>
+    <form class="skjema" data-skjema novalidate>
+      <div class="felt--to">
+        <div class="felt"><label for="navn">Navn</label><input id="navn" name="navn" type="text" autocomplete="name" placeholder="Fornavn og etternavn"></div>
+        <div class="felt"><label for="epost">E-post</label><input id="epost" name="epost" type="email" autocomplete="email" placeholder="navn@firma.no"></div>
+      </div>
+      <div class="felt--to">
+        <div class="felt"><label for="telefon">Telefon</label><input id="telefon" name="telefon" type="tel" autocomplete="tel" placeholder="900 00 000"></div>
+        <div class="felt"><label for="type">Type henvendelse</label><select id="type" name="type"><option>Service</option><option>Reklamasjon</option><option>Nytt prosjekt</option><option>Annet</option></select></div>
+      </div>
+      <div class="felt"><label for="melding">Beskrivelse</label><textarea id="melding" name="melding" placeholder="Hva gjelder det, og hvilket anlegg?"></textarea></div>
+      <p class="skjema__feil" role="alert" aria-live="polite"></p>
+      <div><button class="knapp" type="submit">Send henvendelsen <span class="pil" aria-hidden="true">→</span></button></div>
+    </form>
+    <div class="skjema__kvittering" tabindex="-1" role="status">
+      <strong data-kvittering-navn>Takk!</strong>
+      Henvendelsen er registrert i denne demoen. I den ekte løsningen hadde du fått svar fra Bacas.
     </div>
-    <nav class="bunn__meny"><a href="index.html">Forside</a><a href="tjenester.html">Tjenester</a><a href="prosjekter.html">Prosjekter</a><a href="panel.html">Panel</a><a href="om-oss.html">Om oss</a><a href="kontakt.html">Kontakt</a></nav>
-    <p class="bunn__krav">© 2026 Bacas AS</p>
+  </div>
+  <div>
+    <div class="split__bilete" style="margin-bottom:1rem"><img src="assets/img/12-bacas-no.webp" width="1136" height="1515" alt="Medarbeider i Bacas-arbeidstøy" loading="lazy"></div>
+    <div style="border-top:1px solid var(--kant);padding-top:.9rem">
+      <h3 style="font-size:1rem;margin-bottom:.35rem">Bacas AS</h3>
+      <p style="color:var(--dempa);margin:0">Stokke, Vestfold</p>
+      <p style="margin:.45rem 0 0"><a href="mailto:post@bacas.no" style="text-decoration:none;font-weight:800">post@bacas.no</a></p>
+      <p style="color:var(--dempa);margin:.4rem 0 0;font-size:.82rem">Org.nr 984 912 471</p>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer class="botn">
+  <div class="wrap">
+    <div class="botn__indre">
+      <div>
+        <span style="font-family:var(--vis);font-size:1.15rem;color:var(--kvit)">Bacas AS</span>
+        <p style="margin-top:.5rem">Totalleverandør av ventilasjon og inneklimaløsninger for næringsbygg og boliger — fra prosjektering til service.</p>
+      </div>
+      <div>
+        <h4>Sidene</h4>
+        <ul><li><a href="tjenester.html">Tjenester</a></li><li><a href="referanser.html">Referanser</a></li><li><a href="om.html">Om oss</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="panel.html">Panel</a></li></ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <p>Stokke, Vestfold</p>
+        <p><a href="mailto:post@bacas.no">post@bacas.no</a></p>
+        <p style="font-size:.78rem">Org.nr 984 912 471</p>
+      </div>
+    </div>
+    <p class="botn__kreditt">© Bacas AS · Stokke · Org.nr 984 912 471</p>
   </div>
 </footer>
-<script src="app.js"></script>
+<script src="assets/js/bacas-no-demo.js" defer></script>
 </body>
 </html>

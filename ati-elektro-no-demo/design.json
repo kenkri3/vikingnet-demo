@@ -1,0 +1,35 @@
+{
+  "slug": "ati-elektro-no-demo",
+  "firma": "ATI Elektro",
+  "navType": "sikringsskap med brytere",
+  "fonts": [
+    "Alegreya",
+    "Lato"
+  ],
+  "palette": [
+    "#161a17",
+    "#f2c14e",
+    "#f0efe8",
+    "#6f8b7d"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "fag",
+    "tjenester",
+    "prosjekter",
+    "om",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

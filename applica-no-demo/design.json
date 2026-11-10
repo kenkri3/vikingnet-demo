@@ -1,0 +1,35 @@
+{
+  "slug": "applica-no-demo",
+  "firma": "Applica Group",
+  "navType": "stripe-akkordeon",
+  "fonts": [
+    "Saira",
+    "Inconsolata"
+  ],
+  "palette": [
+    "#0a0d12",
+    "#e8eef2",
+    "#3d7bfd"
+  ],
+  "motion": [
+    "canvas",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenesteomrader",
+    "slik-jobber-vi",
+    "prosess",
+    "sitat",
+    "cta"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "roboter.html",
+    "testing.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

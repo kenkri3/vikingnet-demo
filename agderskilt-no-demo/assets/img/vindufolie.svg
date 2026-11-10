@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Butikkvindu med åpningstider og firmanavn i folie">
+<rect width="800" height="600" fill="#f4f4ef"/>
+<rect x="80" y="80" width="640" height="440" fill="#0f0f14"/>
+<rect x="110" y="110" width="580" height="380" fill="none" stroke="#6b6b76" stroke-width="2"/>
+<text x="400" y="210" text-anchor="middle" font-family="monospace" font-size="40" fill="#c8ff2e">KAFFEBAREN</text>
+<text x="400" y="280" text-anchor="middle" font-family="monospace" font-size="26" fill="#f4f4ef">MAN–FRE 07–17</text>
+<text x="400" y="330" text-anchor="middle" font-family="monospace" font-size="26" fill="#f4f4ef">LØR 09–15</text>
+<path d="M150 400h500" stroke="#c8ff2e" stroke-width="4" stroke-dasharray="18 12"/>
+</svg>

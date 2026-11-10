@@ -1,0 +1,36 @@
+{
+  "slug": "ansnes-no-demo",
+  "firma": "Ansnes Entreprenør",
+  "navType": "skuffmeny-fra-toppen",
+  "fonts": [
+    "Jost",
+    "Source Serif 4"
+  ],
+  "palette": [
+    "#0e0e0c",
+    "#ffd60a",
+    "#f7f5ef",
+    "#6f6f68"
+  ],
+  "motion": [
+    "css3d",
+    "scroll"
+  ],
+  "sections": [
+    "hero",
+    "tjenester",
+    "reise",
+    "prosjekter",
+    "tall",
+    "kontakt"
+  ],
+  "pages": [
+    "index.html",
+    "tjenester.html",
+    "prosjekter.html",
+    "eiendomsutvikling.html",
+    "om.html",
+    "kontakt.html",
+    "panel.html"
+  ]
+}

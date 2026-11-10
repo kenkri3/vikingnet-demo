@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Bil med dekor og tekst på døren">
+<rect width="800" height="600" fill="#0f0f14"/>
+<path d="M120 400h560l-40-90c-10-22-30-34-54-34H240c-26 0-48 14-58 38l-30 66z" fill="#f4f4ef"/>
+<path d="M250 290h180l30 66H220z" fill="#0f0f14" opacity=".18"/>
+<circle cx="230" cy="420" r="44" fill="#0f0f14" stroke="#c8ff2e" stroke-width="6"/>
+<circle cx="590" cy="420" r="44" fill="#0f0f14" stroke="#c8ff2e" stroke-width="6"/>
+<rect x="330" y="330" width="180" height="26" fill="#c8ff2e"/>
+<rect x="330" y="366" width="120" height="14" fill="#0f0f14"/>
+<text x="400" y="180" text-anchor="middle" font-family="monospace" font-size="26" fill="#c8ff2e">DEKOR · BIL</text>
+</svg>
